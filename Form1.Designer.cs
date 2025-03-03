@@ -36,6 +36,7 @@
             this.concertiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripMenuItem();
             this.teatroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.musicalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prosaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cabaretToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.liricaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,6 @@
             this.altreManifestazioniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventiInternazionaliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cinemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.musicalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -95,6 +95,7 @@
             this.menuStrip1.BackColor = System.Drawing.Color.MidnightBlue;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -119,7 +120,7 @@
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(51, 45);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(63, 45);
             this.toolStripMenuItem1.Text = "Eventi";
             // 
             // concertiToolStripMenuItem
@@ -127,7 +128,7 @@
             this.concertiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripTextBox1});
             this.concertiToolStripMenuItem.Name = "concertiToolStripMenuItem";
-            this.concertiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.concertiToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.concertiToolStripMenuItem.Text = "Concerti";
             // 
             // toolStripTextBox1
@@ -138,7 +139,7 @@
             this.toolStripTextBox1.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.toolStripTextBox1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(119, 26);
             this.toolStripTextBox1.Text = "POP";
             // 
             // teatroToolStripMenuItem
@@ -151,49 +152,55 @@
             this.ballettoClassicoEModernoToolStripMenuItem,
             this.concertiMusicaClassicaToolStripMenuItem});
             this.teatroToolStripMenuItem.Name = "teatroToolStripMenuItem";
-            this.teatroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.teatroToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.teatroToolStripMenuItem.Text = "Teatro";
+            // 
+            // musicalToolStripMenuItem
+            // 
+            this.musicalToolStripMenuItem.Name = "musicalToolStripMenuItem";
+            this.musicalToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.musicalToolStripMenuItem.Text = "Musical";
             // 
             // prosaToolStripMenuItem
             // 
             this.prosaToolStripMenuItem.Name = "prosaToolStripMenuItem";
-            this.prosaToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.prosaToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.prosaToolStripMenuItem.Text = "Prosa";
             // 
             // cabaretToolStripMenuItem
             // 
             this.cabaretToolStripMenuItem.Name = "cabaretToolStripMenuItem";
-            this.cabaretToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.cabaretToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.cabaretToolStripMenuItem.Text = "Cabaret";
             // 
             // liricaToolStripMenuItem
             // 
             this.liricaToolStripMenuItem.Name = "liricaToolStripMenuItem";
-            this.liricaToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.liricaToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.liricaToolStripMenuItem.Text = "Lirica";
             // 
             // ballettoClassicoEModernoToolStripMenuItem
             // 
             this.ballettoClassicoEModernoToolStripMenuItem.Name = "ballettoClassicoEModernoToolStripMenuItem";
-            this.ballettoClassicoEModernoToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.ballettoClassicoEModernoToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.ballettoClassicoEModernoToolStripMenuItem.Text = "Balletto Classico / Moderno";
             // 
             // concertiMusicaClassicaToolStripMenuItem
             // 
             this.concertiMusicaClassicaToolStripMenuItem.Name = "concertiMusicaClassicaToolStripMenuItem";
-            this.concertiMusicaClassicaToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.concertiMusicaClassicaToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.concertiMusicaClassicaToolStripMenuItem.Text = "Concerti Musica Classica";
             // 
             // sportToolStripMenuItem
             // 
             this.sportToolStripMenuItem.Name = "sportToolStripMenuItem";
-            this.sportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sportToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.sportToolStripMenuItem.Text = "Sport";
             // 
             // mostreMuseiToolStripMenuItem
             // 
             this.mostreMuseiToolStripMenuItem.Name = "mostreMuseiToolStripMenuItem";
-            this.mostreMuseiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mostreMuseiToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.mostreMuseiToolStripMenuItem.Text = "Mostre / Musei";
             // 
             // altreManifestazioniToolStripMenuItem
@@ -202,26 +209,20 @@
             this.eventiInternazionaliToolStripMenuItem,
             this.cinemaToolStripMenuItem});
             this.altreManifestazioniToolStripMenuItem.Name = "altreManifestazioniToolStripMenuItem";
-            this.altreManifestazioniToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altreManifestazioniToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.altreManifestazioniToolStripMenuItem.Text = "Altre Manifestazioni";
             // 
             // eventiInternazionaliToolStripMenuItem
             // 
             this.eventiInternazionaliToolStripMenuItem.Name = "eventiInternazionaliToolStripMenuItem";
-            this.eventiInternazionaliToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eventiInternazionaliToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.eventiInternazionaliToolStripMenuItem.Text = "Eventi Internazionali";
             // 
             // cinemaToolStripMenuItem
             // 
             this.cinemaToolStripMenuItem.Name = "cinemaToolStripMenuItem";
-            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.cinemaToolStripMenuItem.Text = "Cinema";
-            // 
-            // musicalToolStripMenuItem
-            // 
-            this.musicalToolStripMenuItem.Name = "musicalToolStripMenuItem";
-            this.musicalToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.musicalToolStripMenuItem.Text = "Musical";
             // 
             // Form1
             // 
