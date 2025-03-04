@@ -43,7 +43,6 @@
             this.toolStripMenuItem25 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem26 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem27 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem28 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem29 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem30 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem31 = new System.Windows.Forms.ToolStripMenuItem();
@@ -160,6 +159,10 @@
             this.rapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jazzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calcioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pallavoloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.basketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rugbyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -233,7 +236,6 @@
             this.toolStripMenuItem18,
             this.toolStripMenuItem20,
             this.toolStripMenuItem27,
-            this.toolStripMenuItem28,
             this.toolStripMenuItem29});
             this.toolStripMenuItem17.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripMenuItem17.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -315,15 +317,14 @@
             // 
             // toolStripMenuItem27
             // 
+            this.toolStripMenuItem27.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calcioToolStripMenuItem,
+            this.pallavoloToolStripMenuItem,
+            this.basketToolStripMenuItem,
+            this.rugbyToolStripMenuItem});
             this.toolStripMenuItem27.Name = "toolStripMenuItem27";
             this.toolStripMenuItem27.Size = new System.Drawing.Size(225, 26);
             this.toolStripMenuItem27.Text = "Sport";
-            // 
-            // toolStripMenuItem28
-            // 
-            this.toolStripMenuItem28.Name = "toolStripMenuItem28";
-            this.toolStripMenuItem28.Size = new System.Drawing.Size(225, 26);
-            this.toolStripMenuItem28.Text = "Mostre / Musei";
             // 
             // toolStripMenuItem29
             // 
@@ -1162,6 +1163,30 @@
             this.jazzToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.jazzToolStripMenuItem.Text = "Jazz";
             // 
+            // calcioToolStripMenuItem
+            // 
+            this.calcioToolStripMenuItem.Name = "calcioToolStripMenuItem";
+            this.calcioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.calcioToolStripMenuItem.Text = "Calcio";
+            // 
+            // pallavoloToolStripMenuItem
+            // 
+            this.pallavoloToolStripMenuItem.Name = "pallavoloToolStripMenuItem";
+            this.pallavoloToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pallavoloToolStripMenuItem.Text = "Pallavolo";
+            // 
+            // basketToolStripMenuItem
+            // 
+            this.basketToolStripMenuItem.Name = "basketToolStripMenuItem";
+            this.basketToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.basketToolStripMenuItem.Text = "Basket";
+            // 
+            // rugbyToolStripMenuItem
+            // 
+            this.rugbyToolStripMenuItem.Name = "rugbyToolStripMenuItem";
+            this.rugbyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rugbyToolStripMenuItem.Text = "Rugby";
+            // 
             // search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1310,7 +1335,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem25;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem26;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem27;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem28;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem29;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem30;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem31;
@@ -1318,6 +1342,10 @@
         private System.Windows.Forms.ToolStripMenuItem rapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem classicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jazzToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calcioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pallavoloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem basketToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rugbyToolStripMenuItem;
     }
 }
 
