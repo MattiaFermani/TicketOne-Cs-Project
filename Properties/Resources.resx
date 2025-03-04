@@ -118,10 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="andrea-pezzi-intelligenza-naturale-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\andrea-pezzi-intelligenza-naturale-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tony-effe-roma-milano-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tony-effe-roma-milano-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ticketone_4c_pos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ticketone_4c_pos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo_ticketone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_ticketone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="balloon-roma-biglietti-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balloon-roma-biglietti-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="art-play-roma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\art-play-roma.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giorgia-fumo-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giorgia-fumo-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tim-burton-milano" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tim-burton-milano.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="games-concert-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\games-concert-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sophie-giants-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sophie-giants-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="palajova2025-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\palajova2025-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jimmy-sax-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jimmy-sax-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LRDL-summertour-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LRDL-summertour-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morrissey-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morrissey-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prova-prendermi-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prova-prendermi-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blackpink-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blackpink-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

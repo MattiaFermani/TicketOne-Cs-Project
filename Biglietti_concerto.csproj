@@ -86,5 +86,47 @@
   <ItemGroup>
     <None Include="Resources\logo_ticketone.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LRDL-summertour-biglietti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palajova2025-biglietti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sophie-giants-biglietti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tony-effe-roma-milano-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\games-concert-biglietti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tim-burton-milano.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\art-play-roma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balloon-roma-biglietti-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prova-prendermi-biglietti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giorgia-fumo-biglietti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\andrea-pezzi-intelligenza-naturale-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\morrissey-biglietti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jimmy-sax-biglietti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackpink-biglietti.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
