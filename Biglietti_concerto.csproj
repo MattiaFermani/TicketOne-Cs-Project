@@ -131,5 +131,23 @@
   <ItemGroup>
     <None Include="Resources\Screenshot 2025-03-04 090615.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sophie-giants-biglietti1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pinkfloydlegend-thedarksideofthemoon-biglietti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jovanotti-biglietti-5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccountImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tichettone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TickeTlon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

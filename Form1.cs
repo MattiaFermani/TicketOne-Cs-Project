@@ -10,70 +10,47 @@ using System.Windows.Forms;
 
 namespace Biglietti_concerto
 {
-    public partial class search : Form
+    public partial class Form1 : Form
     {
-        private List<string> items;
-        public search()
+        public Form1()
         {
             InitializeComponent();
-            items = new List<string>
-        {
-            "Apple",
-            "Banana",
-            "Cherry",
-            "Date",
-            "Fig",
-            "Grape",
-            "Kiwi",
-            "Lemon",
-            "Mango",
-            "Orange"
-        };
-
-            // Configura il DataGridView
-            Search_results.Columns.Add("Item", "Item");
+            
         }
-
-        
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.Size = new Size(1167, 528);
         }
 
-        private void cabaretToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
+        private void Spettacolo_Click(object sender, EventArgs e)
+        {
+            Pannello_Principale.Visible = false;
+            Pannello_Posti.Location = new Point(0, 55);
         }
 
-        private void concertiToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PostoSelezionato_Click(object sender, EventArgs e)
         {
+            Button btn = (Button)sender;
 
-        }
-
-        private void altreManifestazioniToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void musicalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_search_TextChanged(object sender, EventArgs e)
-        {
-            string searchTerm = txt_search.Text.ToLower();
-            var results = items.Where(item => item.ToLower().Contains(searchTerm)).ToList();
-
-            // Pulisci il DataGridView
-            Search_results.Rows.Clear();
-
-            // Aggiungi i risultati al DataGridView
-            foreach (var result in results)
+            if(btn.BackColor == Color.Yellow)
             {
-                Search_results.Rows.Add(result);
+                btn.BackColor = Color.White;
             }
+            else
+            {
+                btn.BackColor = Color.Yellow;
+                string test = $"{btn.Parent.Name}\n\nPosto: {btn.Text}";
+                MessageBox.Show(test);
+            }
+        }
+
+        private void TickeTlon_Click(object sender, EventArgs e)
+        {
+            Pannello_Principale.Visible = true;
+            Pannello_Principale.Location = new Point(0, 54);
+            Pannello_Posti.Visible = false;
         }
     }
 }
