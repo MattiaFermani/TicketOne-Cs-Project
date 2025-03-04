@@ -29,9 +29,33 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trapRapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.classicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jazzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.calcioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pallavoloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.basketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rugbyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.concertiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -143,20 +167,6 @@
             this.mostreEMuseiToolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
             this.Search_results = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
             this.Img_BLACKPINK = new System.Windows.Forms.PictureBox();
             this.Img_WONDERJIMMY = new System.Windows.Forms.PictureBox();
             this.Img_MORRISSEY = new System.Windows.Forms.PictureBox();
@@ -171,17 +181,8 @@
             this.Img_SOPHIE = new System.Windows.Forms.PictureBox();
             this.Img_PALAJOVA = new System.Windows.Forms.PictureBox();
             this.Img_LRDL = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.rockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trapRapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.classicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jazzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pallavoloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.basketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rugbyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Search_results)).BeginInit();
@@ -200,7 +201,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_SOPHIE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_LRDL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -213,13 +213,25 @@
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1535, 68);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Biglietti_concerto.Properties.Resources.logo_ticketone;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(285, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -229,10 +241,21 @@
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(297, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1234, 60);
             this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Screenshot_2025_03_04_090615;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(515, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 54);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // txt_search
             // 
@@ -261,6 +284,174 @@
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.AutoToolTip = true;
+            this.toolStripMenuItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStripMenuItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem12,
+            this.toolStripMenuItem14});
+            this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.Control;
+            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(63, 56);
+            this.toolStripMenuItem2.Text = "Eventi";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem4,
+            this.rockToolStripMenuItem,
+            this.trapRapToolStripMenuItem,
+            this.classicaToolStripMenuItem,
+            this.jazzToolStripMenuItem});
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(225, 26);
+            this.toolStripMenuItem3.Text = "Concerti";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStripMenuItem4.Checked = true;
+            this.toolStripMenuItem4.CheckOnClick = true;
+            this.toolStripMenuItem4.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.toolStripMenuItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(153, 26);
+            this.toolStripMenuItem4.Text = "POP";
+            // 
+            // rockToolStripMenuItem
+            // 
+            this.rockToolStripMenuItem.Name = "rockToolStripMenuItem";
+            this.rockToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
+            this.rockToolStripMenuItem.Text = "Rock";
+            // 
+            // trapRapToolStripMenuItem
+            // 
+            this.trapRapToolStripMenuItem.Name = "trapRapToolStripMenuItem";
+            this.trapRapToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
+            this.trapRapToolStripMenuItem.Text = "Trap/Rap";
+            // 
+            // classicaToolStripMenuItem
+            // 
+            this.classicaToolStripMenuItem.Name = "classicaToolStripMenuItem";
+            this.classicaToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
+            this.classicaToolStripMenuItem.Text = "Classica";
+            // 
+            // jazzToolStripMenuItem
+            // 
+            this.jazzToolStripMenuItem.Name = "jazzToolStripMenuItem";
+            this.jazzToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
+            this.jazzToolStripMenuItem.Text = "Jazz";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem6,
+            this.toolStripMenuItem7,
+            this.toolStripMenuItem8,
+            this.toolStripMenuItem9,
+            this.toolStripMenuItem10,
+            this.toolStripMenuItem11});
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(225, 26);
+            this.toolStripMenuItem5.Text = "Teatro";
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem6.Text = "Musical";
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem7.Text = "Prosa";
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem8.Text = "Cabaret";
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem9.Text = "Lirica";
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem10.Text = "Balletto Classico / Moderno";
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem11.Text = "Concerti Musica Classica";
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calcioToolStripMenuItem,
+            this.pallavoloToolStripMenuItem,
+            this.basketToolStripMenuItem,
+            this.rugbyToolStripMenuItem});
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(225, 26);
+            this.toolStripMenuItem12.Text = "Sport";
+            // 
+            // calcioToolStripMenuItem
+            // 
+            this.calcioToolStripMenuItem.Name = "calcioToolStripMenuItem";
+            this.calcioToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.calcioToolStripMenuItem.Text = "Calcio";
+            // 
+            // pallavoloToolStripMenuItem
+            // 
+            this.pallavoloToolStripMenuItem.Name = "pallavoloToolStripMenuItem";
+            this.pallavoloToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.pallavoloToolStripMenuItem.Text = "Pallavolo";
+            // 
+            // basketToolStripMenuItem
+            // 
+            this.basketToolStripMenuItem.Name = "basketToolStripMenuItem";
+            this.basketToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.basketToolStripMenuItem.Text = "Basket";
+            // 
+            // rugbyToolStripMenuItem
+            // 
+            this.rugbyToolStripMenuItem.Name = "rugbyToolStripMenuItem";
+            this.rugbyToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.rugbyToolStripMenuItem.Text = "Rugby";
+            // 
+            // toolStripMenuItem14
+            // 
+            this.toolStripMenuItem14.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem15,
+            this.toolStripMenuItem16});
+            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(225, 26);
+            this.toolStripMenuItem14.Text = "Altre Manifestazioni";
+            // 
+            // toolStripMenuItem15
+            // 
+            this.toolStripMenuItem15.Name = "toolStripMenuItem15";
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(226, 26);
+            this.toolStripMenuItem15.Text = "Eventi Internazionali";
+            // 
+            // toolStripMenuItem16
+            // 
+            this.toolStripMenuItem16.Name = "toolStripMenuItem16";
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(226, 26);
+            this.toolStripMenuItem16.Text = "Cinema";
             // 
             // toolStripMenuItem1
             // 
@@ -1079,130 +1270,10 @@
             this.panel2.Controls.Add(this.Img_ARTOFPLAY);
             this.panel2.Controls.Add(this.Img_TIMBURTON);
             this.panel2.Location = new System.Drawing.Point(871, 68);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(660, 532);
             this.panel2.TabIndex = 9;
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.AutoToolTip = true;
-            this.toolStripMenuItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.toolStripMenuItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem12,
-            this.toolStripMenuItem14});
-            this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.Control;
-            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(63, 56);
-            this.toolStripMenuItem2.Text = "Eventi";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4,
-            this.rockToolStripMenuItem,
-            this.trapRapToolStripMenuItem,
-            this.classicaToolStripMenuItem,
-            this.jazzToolStripMenuItem});
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(225, 26);
-            this.toolStripMenuItem3.Text = "Concerti";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStripMenuItem4.Checked = true;
-            this.toolStripMenuItem4.CheckOnClick = true;
-            this.toolStripMenuItem4.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.toolStripMenuItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(119, 26);
-            this.toolStripMenuItem4.Text = "POP";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem6,
-            this.toolStripMenuItem7,
-            this.toolStripMenuItem8,
-            this.toolStripMenuItem9,
-            this.toolStripMenuItem10,
-            this.toolStripMenuItem11});
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(225, 26);
-            this.toolStripMenuItem5.Text = "Teatro";
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(276, 26);
-            this.toolStripMenuItem6.Text = "Musical";
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(276, 26);
-            this.toolStripMenuItem7.Text = "Prosa";
-            // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(276, 26);
-            this.toolStripMenuItem8.Text = "Cabaret";
-            // 
-            // toolStripMenuItem9
-            // 
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(276, 26);
-            this.toolStripMenuItem9.Text = "Lirica";
-            // 
-            // toolStripMenuItem10
-            // 
-            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(276, 26);
-            this.toolStripMenuItem10.Text = "Balletto Classico / Moderno";
-            // 
-            // toolStripMenuItem11
-            // 
-            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(276, 26);
-            this.toolStripMenuItem11.Text = "Concerti Musica Classica";
-            // 
-            // toolStripMenuItem12
-            // 
-            this.toolStripMenuItem12.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.calcioToolStripMenuItem,
-            this.pallavoloToolStripMenuItem,
-            this.basketToolStripMenuItem,
-            this.rugbyToolStripMenuItem});
-            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(225, 26);
-            this.toolStripMenuItem12.Text = "Sport";
-            // 
-            // toolStripMenuItem14
-            // 
-            this.toolStripMenuItem14.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem15,
-            this.toolStripMenuItem16});
-            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(225, 26);
-            this.toolStripMenuItem14.Text = "Altre Manifestazioni";
-            // 
-            // toolStripMenuItem15
-            // 
-            this.toolStripMenuItem15.Name = "toolStripMenuItem15";
-            this.toolStripMenuItem15.Size = new System.Drawing.Size(226, 26);
-            this.toolStripMenuItem15.Text = "Eventi Internazionali";
-            // 
-            // toolStripMenuItem16
-            // 
-            this.toolStripMenuItem16.Name = "toolStripMenuItem16";
-            this.toolStripMenuItem16.Size = new System.Drawing.Size(226, 26);
-            this.toolStripMenuItem16.Text = "Cinema";
             // 
             // Img_BLACKPINK
             // 
@@ -1344,77 +1415,6 @@
             this.Img_LRDL.TabIndex = 4;
             this.Img_LRDL.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Biglietti_concerto.Properties.Resources.logo_ticketone;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(285, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Screenshot_2025_03_04_090615;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(515, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 54);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // rockToolStripMenuItem
-            // 
-            this.rockToolStripMenuItem.Name = "rockToolStripMenuItem";
-            this.rockToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.rockToolStripMenuItem.Text = "Rock";
-            // 
-            // trapRapToolStripMenuItem
-            // 
-            this.trapRapToolStripMenuItem.Name = "trapRapToolStripMenuItem";
-            this.trapRapToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.trapRapToolStripMenuItem.Text = "Trap/Rap";
-            // 
-            // classicaToolStripMenuItem
-            // 
-            this.classicaToolStripMenuItem.Name = "classicaToolStripMenuItem";
-            this.classicaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.classicaToolStripMenuItem.Text = "Classica";
-            // 
-            // jazzToolStripMenuItem
-            // 
-            this.jazzToolStripMenuItem.Name = "jazzToolStripMenuItem";
-            this.jazzToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.jazzToolStripMenuItem.Text = "Jazz";
-            // 
-            // calcioToolStripMenuItem
-            // 
-            this.calcioToolStripMenuItem.Name = "calcioToolStripMenuItem";
-            this.calcioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.calcioToolStripMenuItem.Text = "Calcio";
-            // 
-            // pallavoloToolStripMenuItem
-            // 
-            this.pallavoloToolStripMenuItem.Name = "pallavoloToolStripMenuItem";
-            this.pallavoloToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.pallavoloToolStripMenuItem.Text = "Pallavolo";
-            // 
-            // basketToolStripMenuItem
-            // 
-            this.basketToolStripMenuItem.Name = "basketToolStripMenuItem";
-            this.basketToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.basketToolStripMenuItem.Text = "Basket";
-            // 
-            // rugbyToolStripMenuItem
-            // 
-            this.rugbyToolStripMenuItem.Name = "rugbyToolStripMenuItem";
-            this.rugbyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.rugbyToolStripMenuItem.Text = "Rugby";
-            // 
             // search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1429,11 +1429,12 @@
             this.Controls.Add(this.Img_LRDL);
             this.Controls.Add(this.Search_results);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "search";
             this.Text = " \\";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -1454,7 +1455,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_SOPHIE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_LRDL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
