@@ -32,21 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem19 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem20 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem21 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem22 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem23 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem24 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem25 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem26 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem27 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem28 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem29 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem30 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem31 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.concertiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -158,6 +143,20 @@
             this.mostreEMuseiToolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
             this.Search_results = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
             this.Img_BLACKPINK = new System.Windows.Forms.PictureBox();
             this.Img_WONDERJIMMY = new System.Windows.Forms.PictureBox();
             this.Img_MORRISSEY = new System.Windows.Forms.PictureBox();
@@ -173,6 +172,15 @@
             this.Img_PALAJOVA = new System.Windows.Forms.PictureBox();
             this.Img_LRDL = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.rockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trapRapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.classicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jazzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calcioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pallavoloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.basketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rugbyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -205,30 +213,33 @@
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1151, 55);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1535, 68);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txt_search);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(223, 3);
+            this.panel1.Location = new System.Drawing.Point(297, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(925, 49);
+            this.panel1.Size = new System.Drawing.Size(1234, 60);
             this.panel1.TabIndex = 1;
             // 
             // txt_search
             // 
-            this.txt_search.Location = new System.Drawing.Point(151, 16);
-            this.txt_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_search.Location = new System.Drawing.Point(201, 20);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(215, 20);
+            this.txt_search.Size = new System.Drawing.Size(285, 22);
             this.txt_search.TabIndex = 2;
             this.txt_search.Text = "Cerca ";
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
@@ -240,134 +251,16 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem17,
+            this.toolStripMenuItem2,
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(925, 49);
+            this.menuStrip1.Size = new System.Drawing.Size(1234, 60);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem17
-            // 
-            this.toolStripMenuItem17.AutoToolTip = true;
-            this.toolStripMenuItem17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.toolStripMenuItem17.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripMenuItem17.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem18,
-            this.toolStripMenuItem20,
-            this.toolStripMenuItem27,
-            this.toolStripMenuItem28,
-            this.toolStripMenuItem29});
-            this.toolStripMenuItem17.ForeColor = System.Drawing.SystemColors.Control;
-            this.toolStripMenuItem17.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem17.Name = "toolStripMenuItem17";
-            this.toolStripMenuItem17.Size = new System.Drawing.Size(51, 45);
-            this.toolStripMenuItem17.Text = "Eventi";
-            // 
-            // toolStripMenuItem18
-            // 
-            this.toolStripMenuItem18.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem19});
-            this.toolStripMenuItem18.Name = "toolStripMenuItem18";
-            this.toolStripMenuItem18.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem18.Text = "Concerti";
-            // 
-            // toolStripMenuItem19
-            // 
-            this.toolStripMenuItem19.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStripMenuItem19.Checked = true;
-            this.toolStripMenuItem19.CheckOnClick = true;
-            this.toolStripMenuItem19.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.toolStripMenuItem19.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripMenuItem19.Name = "toolStripMenuItem19";
-            this.toolStripMenuItem19.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem19.Text = "POP";
-            // 
-            // toolStripMenuItem20
-            // 
-            this.toolStripMenuItem20.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem21,
-            this.toolStripMenuItem22,
-            this.toolStripMenuItem23,
-            this.toolStripMenuItem24,
-            this.toolStripMenuItem25,
-            this.toolStripMenuItem26});
-            this.toolStripMenuItem20.Name = "toolStripMenuItem20";
-            this.toolStripMenuItem20.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem20.Text = "Teatro";
-            // 
-            // toolStripMenuItem21
-            // 
-            this.toolStripMenuItem21.Name = "toolStripMenuItem21";
-            this.toolStripMenuItem21.Size = new System.Drawing.Size(220, 22);
-            this.toolStripMenuItem21.Text = "Musical";
-            // 
-            // toolStripMenuItem22
-            // 
-            this.toolStripMenuItem22.Name = "toolStripMenuItem22";
-            this.toolStripMenuItem22.Size = new System.Drawing.Size(220, 22);
-            this.toolStripMenuItem22.Text = "Prosa";
-            // 
-            // toolStripMenuItem23
-            // 
-            this.toolStripMenuItem23.Name = "toolStripMenuItem23";
-            this.toolStripMenuItem23.Size = new System.Drawing.Size(220, 22);
-            this.toolStripMenuItem23.Text = "Cabaret";
-            // 
-            // toolStripMenuItem24
-            // 
-            this.toolStripMenuItem24.Name = "toolStripMenuItem24";
-            this.toolStripMenuItem24.Size = new System.Drawing.Size(220, 22);
-            this.toolStripMenuItem24.Text = "Lirica";
-            // 
-            // toolStripMenuItem25
-            // 
-            this.toolStripMenuItem25.Name = "toolStripMenuItem25";
-            this.toolStripMenuItem25.Size = new System.Drawing.Size(220, 22);
-            this.toolStripMenuItem25.Text = "Balletto Classico / Moderno";
-            // 
-            // toolStripMenuItem26
-            // 
-            this.toolStripMenuItem26.Name = "toolStripMenuItem26";
-            this.toolStripMenuItem26.Size = new System.Drawing.Size(220, 22);
-            this.toolStripMenuItem26.Text = "Concerti Musica Classica";
-            // 
-            // toolStripMenuItem27
-            // 
-            this.toolStripMenuItem27.Name = "toolStripMenuItem27";
-            this.toolStripMenuItem27.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem27.Text = "Sport";
-            // 
-            // toolStripMenuItem28
-            // 
-            this.toolStripMenuItem28.Name = "toolStripMenuItem28";
-            this.toolStripMenuItem28.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem28.Text = "Mostre / Musei";
-            // 
-            // toolStripMenuItem29
-            // 
-            this.toolStripMenuItem29.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem30,
-            this.toolStripMenuItem31});
-            this.toolStripMenuItem29.Name = "toolStripMenuItem29";
-            this.toolStripMenuItem29.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem29.Text = "Altre Manifestazioni";
-            // 
-            // toolStripMenuItem30
-            // 
-            this.toolStripMenuItem30.Name = "toolStripMenuItem30";
-            this.toolStripMenuItem30.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem30.Text = "Eventi Internazionali";
-            // 
-            // toolStripMenuItem31
-            // 
-            this.toolStripMenuItem31.Name = "toolStripMenuItem31";
-            this.toolStripMenuItem31.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem31.Text = "Cinema";
             // 
             // toolStripMenuItem1
             // 
@@ -396,7 +289,7 @@
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(60, 45);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(75, 56);
             this.toolStripMenuItem1.Text = "Località";
             // 
             // concertiToolStripMenuItem
@@ -408,7 +301,7 @@
             this.cinemaToolStripMenuItem1,
             this.mostreEMuseiToolStripMenuItem});
             this.concertiToolStripMenuItem.Name = "concertiToolStripMenuItem";
-            this.concertiToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.concertiToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.concertiToolStripMenuItem.Text = "Ancona";
             this.concertiToolStripMenuItem.Click += new System.EventHandler(this.concertiToolStripMenuItem_Click);
             // 
@@ -418,31 +311,31 @@
             this.toolStripTextBox1.CheckOnClick = true;
             this.toolStripTextBox1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(155, 22);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(193, 26);
             this.toolStripTextBox1.Text = "Concerti";
             // 
             // teatroToolStripMenuItem1
             // 
             this.teatroToolStripMenuItem1.Name = "teatroToolStripMenuItem1";
-            this.teatroToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem1.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem1.Text = "Teatro";
             // 
             // sportToolStripMenuItem1
             // 
             this.sportToolStripMenuItem1.Name = "sportToolStripMenuItem1";
-            this.sportToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem1.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem1.Text = "Sport";
             // 
             // cinemaToolStripMenuItem1
             // 
             this.cinemaToolStripMenuItem1.Name = "cinemaToolStripMenuItem1";
-            this.cinemaToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem1.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem1.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem
             // 
             this.mostreEMuseiToolStripMenuItem.Name = "mostreEMuseiToolStripMenuItem";
-            this.mostreEMuseiToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem.Text = "Mostre e Musei";
             // 
             // teatroToolStripMenuItem
@@ -454,38 +347,38 @@
             this.liricaToolStripMenuItem,
             this.ballettoClassicoEModernoToolStripMenuItem});
             this.teatroToolStripMenuItem.Name = "teatroToolStripMenuItem";
-            this.teatroToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.teatroToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.teatroToolStripMenuItem.Text = "Bari";
             // 
             // musicalToolStripMenuItem
             // 
             this.musicalToolStripMenuItem.Name = "musicalToolStripMenuItem";
-            this.musicalToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.musicalToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.musicalToolStripMenuItem.Text = "Concerti";
             this.musicalToolStripMenuItem.Click += new System.EventHandler(this.musicalToolStripMenuItem_Click);
             // 
             // prosaToolStripMenuItem
             // 
             this.prosaToolStripMenuItem.Name = "prosaToolStripMenuItem";
-            this.prosaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.prosaToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.prosaToolStripMenuItem.Text = "Teatro";
             // 
             // cabaretToolStripMenuItem
             // 
             this.cabaretToolStripMenuItem.Name = "cabaretToolStripMenuItem";
-            this.cabaretToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.cabaretToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.cabaretToolStripMenuItem.Text = "Sport";
             // 
             // liricaToolStripMenuItem
             // 
             this.liricaToolStripMenuItem.Name = "liricaToolStripMenuItem";
-            this.liricaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.liricaToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.liricaToolStripMenuItem.Text = "Cinema";
             // 
             // ballettoClassicoEModernoToolStripMenuItem
             // 
             this.ballettoClassicoEModernoToolStripMenuItem.Name = "ballettoClassicoEModernoToolStripMenuItem";
-            this.ballettoClassicoEModernoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.ballettoClassicoEModernoToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.ballettoClassicoEModernoToolStripMenuItem.Text = "Mostre e Musei";
             // 
             // sportToolStripMenuItem
@@ -497,37 +390,37 @@
             this.cinemaToolStripMenuItem2,
             this.mostreEMuseiToolStripMenuItem1});
             this.sportToolStripMenuItem.Name = "sportToolStripMenuItem";
-            this.sportToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.sportToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.sportToolStripMenuItem.Text = "Bologna";
             // 
             // concertiToolStripMenuItem1
             // 
             this.concertiToolStripMenuItem1.Name = "concertiToolStripMenuItem1";
-            this.concertiToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem1.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem1.Text = "Concerti";
             // 
             // teatroToolStripMenuItem2
             // 
             this.teatroToolStripMenuItem2.Name = "teatroToolStripMenuItem2";
-            this.teatroToolStripMenuItem2.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem2.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem2.Text = "Teatro";
             // 
             // sportToolStripMenuItem2
             // 
             this.sportToolStripMenuItem2.Name = "sportToolStripMenuItem2";
-            this.sportToolStripMenuItem2.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem2.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem2.Text = "Sport";
             // 
             // cinemaToolStripMenuItem2
             // 
             this.cinemaToolStripMenuItem2.Name = "cinemaToolStripMenuItem2";
-            this.cinemaToolStripMenuItem2.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem2.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem2.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem1
             // 
             this.mostreEMuseiToolStripMenuItem1.Name = "mostreEMuseiToolStripMenuItem1";
-            this.mostreEMuseiToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem1.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem1.Text = "Mostre e Musei";
             // 
             // mostreMuseiToolStripMenuItem
@@ -539,37 +432,37 @@
             this.cinemaToolStripMenuItem3,
             this.mostreEMuseiToolStripMenuItem2});
             this.mostreMuseiToolStripMenuItem.Name = "mostreMuseiToolStripMenuItem";
-            this.mostreMuseiToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.mostreMuseiToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.mostreMuseiToolStripMenuItem.Text = "Caserta";
             // 
             // concertiToolStripMenuItem2
             // 
             this.concertiToolStripMenuItem2.Name = "concertiToolStripMenuItem2";
-            this.concertiToolStripMenuItem2.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem2.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem2.Text = "Concerti";
             // 
             // teatroToolStripMenuItem3
             // 
             this.teatroToolStripMenuItem3.Name = "teatroToolStripMenuItem3";
-            this.teatroToolStripMenuItem3.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem3.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem3.Text = "Teatro";
             // 
             // sportToolStripMenuItem3
             // 
             this.sportToolStripMenuItem3.Name = "sportToolStripMenuItem3";
-            this.sportToolStripMenuItem3.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem3.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem3.Text = "Sport";
             // 
             // cinemaToolStripMenuItem3
             // 
             this.cinemaToolStripMenuItem3.Name = "cinemaToolStripMenuItem3";
-            this.cinemaToolStripMenuItem3.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem3.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem3.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem2
             // 
             this.mostreEMuseiToolStripMenuItem2.Name = "mostreEMuseiToolStripMenuItem2";
-            this.mostreEMuseiToolStripMenuItem2.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem2.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem2.Text = "Mostre e Musei";
             // 
             // altreManifestazioniToolStripMenuItem
@@ -581,38 +474,38 @@
             this.cinemaToolStripMenuItem4,
             this.mostreEMuseiToolStripMenuItem3});
             this.altreManifestazioniToolStripMenuItem.Name = "altreManifestazioniToolStripMenuItem";
-            this.altreManifestazioniToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.altreManifestazioniToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.altreManifestazioniToolStripMenuItem.Text = "Catania";
             this.altreManifestazioniToolStripMenuItem.Click += new System.EventHandler(this.altreManifestazioniToolStripMenuItem_Click);
             // 
             // eventiInternazionaliToolStripMenuItem
             // 
             this.eventiInternazionaliToolStripMenuItem.Name = "eventiInternazionaliToolStripMenuItem";
-            this.eventiInternazionaliToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.eventiInternazionaliToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.eventiInternazionaliToolStripMenuItem.Text = "Concerti";
             // 
             // cinemaToolStripMenuItem
             // 
             this.cinemaToolStripMenuItem.Name = "cinemaToolStripMenuItem";
-            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem.Text = "Teatro";
             // 
             // sportToolStripMenuItem4
             // 
             this.sportToolStripMenuItem4.Name = "sportToolStripMenuItem4";
-            this.sportToolStripMenuItem4.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem4.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem4.Text = "Sport";
             // 
             // cinemaToolStripMenuItem4
             // 
             this.cinemaToolStripMenuItem4.Name = "cinemaToolStripMenuItem4";
-            this.cinemaToolStripMenuItem4.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem4.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem4.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem3
             // 
             this.mostreEMuseiToolStripMenuItem3.Name = "mostreEMuseiToolStripMenuItem3";
-            this.mostreEMuseiToolStripMenuItem3.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem3.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem3.Text = "Mostre e Musei";
             // 
             // firenzeToolStripMenuItem
@@ -624,37 +517,37 @@
             this.cinemaToolStripMenuItem5,
             this.mostreEMuseiToolStripMenuItem4});
             this.firenzeToolStripMenuItem.Name = "firenzeToolStripMenuItem";
-            this.firenzeToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.firenzeToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.firenzeToolStripMenuItem.Text = "Firenze";
             // 
             // concertiToolStripMenuItem3
             // 
             this.concertiToolStripMenuItem3.Name = "concertiToolStripMenuItem3";
-            this.concertiToolStripMenuItem3.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem3.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem3.Text = "Concerti";
             // 
             // teatroToolStripMenuItem4
             // 
             this.teatroToolStripMenuItem4.Name = "teatroToolStripMenuItem4";
-            this.teatroToolStripMenuItem4.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem4.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem4.Text = "Teatro";
             // 
             // sportToolStripMenuItem5
             // 
             this.sportToolStripMenuItem5.Name = "sportToolStripMenuItem5";
-            this.sportToolStripMenuItem5.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem5.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem5.Text = "Sport";
             // 
             // cinemaToolStripMenuItem5
             // 
             this.cinemaToolStripMenuItem5.Name = "cinemaToolStripMenuItem5";
-            this.cinemaToolStripMenuItem5.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem5.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem5.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem4
             // 
             this.mostreEMuseiToolStripMenuItem4.Name = "mostreEMuseiToolStripMenuItem4";
-            this.mostreEMuseiToolStripMenuItem4.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem4.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem4.Text = "Mostre e Musei";
             // 
             // genovaToolStripMenuItem
@@ -666,37 +559,37 @@
             this.cinemaToolStripMenuItem6,
             this.mostreEMuseiToolStripMenuItem5});
             this.genovaToolStripMenuItem.Name = "genovaToolStripMenuItem";
-            this.genovaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.genovaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.genovaToolStripMenuItem.Text = "Genova";
             // 
             // concertiToolStripMenuItem4
             // 
             this.concertiToolStripMenuItem4.Name = "concertiToolStripMenuItem4";
-            this.concertiToolStripMenuItem4.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem4.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem4.Text = "Concerti";
             // 
             // teatroToolStripMenuItem5
             // 
             this.teatroToolStripMenuItem5.Name = "teatroToolStripMenuItem5";
-            this.teatroToolStripMenuItem5.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem5.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem5.Text = "Teatro";
             // 
             // sportToolStripMenuItem6
             // 
             this.sportToolStripMenuItem6.Name = "sportToolStripMenuItem6";
-            this.sportToolStripMenuItem6.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem6.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem6.Text = "Sport";
             // 
             // cinemaToolStripMenuItem6
             // 
             this.cinemaToolStripMenuItem6.Name = "cinemaToolStripMenuItem6";
-            this.cinemaToolStripMenuItem6.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem6.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem6.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem5
             // 
             this.mostreEMuseiToolStripMenuItem5.Name = "mostreEMuseiToolStripMenuItem5";
-            this.mostreEMuseiToolStripMenuItem5.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem5.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem5.Text = "Mostre e Musei";
             // 
             // mIlanoToolStripMenuItem
@@ -708,37 +601,37 @@
             this.cinemaToolStripMenuItem7,
             this.mostreEMuseiToolStripMenuItem6});
             this.mIlanoToolStripMenuItem.Name = "mIlanoToolStripMenuItem";
-            this.mIlanoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.mIlanoToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.mIlanoToolStripMenuItem.Text = "MIlano";
             // 
             // concertiToolStripMenuItem5
             // 
             this.concertiToolStripMenuItem5.Name = "concertiToolStripMenuItem5";
-            this.concertiToolStripMenuItem5.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem5.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem5.Text = "Concerti";
             // 
             // teatroToolStripMenuItem6
             // 
             this.teatroToolStripMenuItem6.Name = "teatroToolStripMenuItem6";
-            this.teatroToolStripMenuItem6.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem6.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem6.Text = "Teatro";
             // 
             // sportToolStripMenuItem7
             // 
             this.sportToolStripMenuItem7.Name = "sportToolStripMenuItem7";
-            this.sportToolStripMenuItem7.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem7.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem7.Text = "Sport";
             // 
             // cinemaToolStripMenuItem7
             // 
             this.cinemaToolStripMenuItem7.Name = "cinemaToolStripMenuItem7";
-            this.cinemaToolStripMenuItem7.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem7.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem7.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem6
             // 
             this.mostreEMuseiToolStripMenuItem6.Name = "mostreEMuseiToolStripMenuItem6";
-            this.mostreEMuseiToolStripMenuItem6.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem6.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem6.Text = "Mostre e Musei";
             // 
             // monzaToolStripMenuItem
@@ -750,37 +643,37 @@
             this.cinemaToolStripMenuItem8,
             this.mostreEMuseiToolStripMenuItem7});
             this.monzaToolStripMenuItem.Name = "monzaToolStripMenuItem";
-            this.monzaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.monzaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.monzaToolStripMenuItem.Text = "Monza";
             // 
             // concertiToolStripMenuItem6
             // 
             this.concertiToolStripMenuItem6.Name = "concertiToolStripMenuItem6";
-            this.concertiToolStripMenuItem6.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem6.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem6.Text = "Concerti";
             // 
             // teatroToolStripMenuItem7
             // 
             this.teatroToolStripMenuItem7.Name = "teatroToolStripMenuItem7";
-            this.teatroToolStripMenuItem7.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem7.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem7.Text = "Teatro";
             // 
             // sportToolStripMenuItem8
             // 
             this.sportToolStripMenuItem8.Name = "sportToolStripMenuItem8";
-            this.sportToolStripMenuItem8.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem8.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem8.Text = "Sport";
             // 
             // cinemaToolStripMenuItem8
             // 
             this.cinemaToolStripMenuItem8.Name = "cinemaToolStripMenuItem8";
-            this.cinemaToolStripMenuItem8.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem8.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem8.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem7
             // 
             this.mostreEMuseiToolStripMenuItem7.Name = "mostreEMuseiToolStripMenuItem7";
-            this.mostreEMuseiToolStripMenuItem7.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem7.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem7.Text = "Mostre e Musei";
             // 
             // napoliToolStripMenuItem
@@ -792,37 +685,37 @@
             this.cinemaToolStripMenuItem10,
             this.mostreEMuseiToolStripMenuItem8});
             this.napoliToolStripMenuItem.Name = "napoliToolStripMenuItem";
-            this.napoliToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.napoliToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.napoliToolStripMenuItem.Text = "Napoli";
             // 
             // cinemaToolStripMenuItem9
             // 
             this.cinemaToolStripMenuItem9.Name = "cinemaToolStripMenuItem9";
-            this.cinemaToolStripMenuItem9.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem9.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem9.Text = "Concerti";
             // 
             // teatroToolStripMenuItem8
             // 
             this.teatroToolStripMenuItem8.Name = "teatroToolStripMenuItem8";
-            this.teatroToolStripMenuItem8.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem8.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem8.Text = "Teatro";
             // 
             // sportToolStripMenuItem9
             // 
             this.sportToolStripMenuItem9.Name = "sportToolStripMenuItem9";
-            this.sportToolStripMenuItem9.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem9.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem9.Text = "Sport";
             // 
             // cinemaToolStripMenuItem10
             // 
             this.cinemaToolStripMenuItem10.Name = "cinemaToolStripMenuItem10";
-            this.cinemaToolStripMenuItem10.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem10.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem10.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem8
             // 
             this.mostreEMuseiToolStripMenuItem8.Name = "mostreEMuseiToolStripMenuItem8";
-            this.mostreEMuseiToolStripMenuItem8.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem8.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem8.Text = "Mostre e Musei";
             // 
             // padovaToolStripMenuItem
@@ -834,37 +727,37 @@
             this.cInemaToolStripMenuItem11,
             this.mostreEMuseiToolStripMenuItem9});
             this.padovaToolStripMenuItem.Name = "padovaToolStripMenuItem";
-            this.padovaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.padovaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.padovaToolStripMenuItem.Text = "Padova";
             // 
             // concertiToolStripMenuItem7
             // 
             this.concertiToolStripMenuItem7.Name = "concertiToolStripMenuItem7";
-            this.concertiToolStripMenuItem7.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem7.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem7.Text = "Concerti";
             // 
             // teatroToolStripMenuItem9
             // 
             this.teatroToolStripMenuItem9.Name = "teatroToolStripMenuItem9";
-            this.teatroToolStripMenuItem9.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem9.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem9.Text = "Teatro";
             // 
             // sportToolStripMenuItem10
             // 
             this.sportToolStripMenuItem10.Name = "sportToolStripMenuItem10";
-            this.sportToolStripMenuItem10.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem10.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem10.Text = "Sport";
             // 
             // cInemaToolStripMenuItem11
             // 
             this.cInemaToolStripMenuItem11.Name = "cInemaToolStripMenuItem11";
-            this.cInemaToolStripMenuItem11.Size = new System.Drawing.Size(155, 22);
+            this.cInemaToolStripMenuItem11.Size = new System.Drawing.Size(193, 26);
             this.cInemaToolStripMenuItem11.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem9
             // 
             this.mostreEMuseiToolStripMenuItem9.Name = "mostreEMuseiToolStripMenuItem9";
-            this.mostreEMuseiToolStripMenuItem9.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem9.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem9.Text = "Mostre e Musei";
             // 
             // palermoToolStripMenuItem
@@ -876,37 +769,37 @@
             this.cinemaToolStripMenuItem12,
             this.mostreEMuseiToolStripMenuItem10});
             this.palermoToolStripMenuItem.Name = "palermoToolStripMenuItem";
-            this.palermoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.palermoToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.palermoToolStripMenuItem.Text = "Palermo";
             // 
             // concertiToolStripMenuItem8
             // 
             this.concertiToolStripMenuItem8.Name = "concertiToolStripMenuItem8";
-            this.concertiToolStripMenuItem8.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem8.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem8.Text = "Concerti";
             // 
             // teatroToolStripMenuItem10
             // 
             this.teatroToolStripMenuItem10.Name = "teatroToolStripMenuItem10";
-            this.teatroToolStripMenuItem10.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem10.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem10.Text = "Teatro";
             // 
             // sportToolStripMenuItem11
             // 
             this.sportToolStripMenuItem11.Name = "sportToolStripMenuItem11";
-            this.sportToolStripMenuItem11.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem11.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem11.Text = "Sport";
             // 
             // cinemaToolStripMenuItem12
             // 
             this.cinemaToolStripMenuItem12.Name = "cinemaToolStripMenuItem12";
-            this.cinemaToolStripMenuItem12.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem12.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem12.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem10
             // 
             this.mostreEMuseiToolStripMenuItem10.Name = "mostreEMuseiToolStripMenuItem10";
-            this.mostreEMuseiToolStripMenuItem10.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem10.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem10.Text = "Mostre e Musei";
             // 
             // pescaraToolStripMenuItem
@@ -918,37 +811,37 @@
             this.cinemaToolStripMenuItem13,
             this.mostreEMuseiToolStripMenuItem11});
             this.pescaraToolStripMenuItem.Name = "pescaraToolStripMenuItem";
-            this.pescaraToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.pescaraToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.pescaraToolStripMenuItem.Text = "Pescara";
             // 
             // concertiToolStripMenuItem9
             // 
             this.concertiToolStripMenuItem9.Name = "concertiToolStripMenuItem9";
-            this.concertiToolStripMenuItem9.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem9.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem9.Text = "Concerti";
             // 
             // teatroToolStripMenuItem11
             // 
             this.teatroToolStripMenuItem11.Name = "teatroToolStripMenuItem11";
-            this.teatroToolStripMenuItem11.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem11.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem11.Text = "Teatro";
             // 
             // sportToolStripMenuItem12
             // 
             this.sportToolStripMenuItem12.Name = "sportToolStripMenuItem12";
-            this.sportToolStripMenuItem12.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem12.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem12.Text = "Sport";
             // 
             // cinemaToolStripMenuItem13
             // 
             this.cinemaToolStripMenuItem13.Name = "cinemaToolStripMenuItem13";
-            this.cinemaToolStripMenuItem13.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem13.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem13.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem11
             // 
             this.mostreEMuseiToolStripMenuItem11.Name = "mostreEMuseiToolStripMenuItem11";
-            this.mostreEMuseiToolStripMenuItem11.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem11.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem11.Text = "Mostre e Musei";
             // 
             // reggioEmiliaToolStripMenuItem
@@ -960,37 +853,37 @@
             this.cinemaToolStripMenuItem14,
             this.mostreEMuseiToolStripMenuItem12});
             this.reggioEmiliaToolStripMenuItem.Name = "reggioEmiliaToolStripMenuItem";
-            this.reggioEmiliaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.reggioEmiliaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.reggioEmiliaToolStripMenuItem.Text = "Reggio Emilia";
             // 
             // concertiToolStripMenuItem10
             // 
             this.concertiToolStripMenuItem10.Name = "concertiToolStripMenuItem10";
-            this.concertiToolStripMenuItem10.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem10.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem10.Text = "Concerti";
             // 
             // teatroToolStripMenuItem12
             // 
             this.teatroToolStripMenuItem12.Name = "teatroToolStripMenuItem12";
-            this.teatroToolStripMenuItem12.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem12.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem12.Text = "Teatro";
             // 
             // sportToolStripMenuItem13
             // 
             this.sportToolStripMenuItem13.Name = "sportToolStripMenuItem13";
-            this.sportToolStripMenuItem13.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem13.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem13.Text = "Sport";
             // 
             // cinemaToolStripMenuItem14
             // 
             this.cinemaToolStripMenuItem14.Name = "cinemaToolStripMenuItem14";
-            this.cinemaToolStripMenuItem14.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem14.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem14.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem12
             // 
             this.mostreEMuseiToolStripMenuItem12.Name = "mostreEMuseiToolStripMenuItem12";
-            this.mostreEMuseiToolStripMenuItem12.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem12.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem12.Text = "Mostre e Musei";
             // 
             // romaToolStripMenuItem
@@ -1002,37 +895,37 @@
             this.cinemaToolStripMenuItem15,
             this.mostreEMuseiToolStripMenuItem13});
             this.romaToolStripMenuItem.Name = "romaToolStripMenuItem";
-            this.romaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.romaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.romaToolStripMenuItem.Text = "Roma";
             // 
             // concertiToolStripMenuItem11
             // 
             this.concertiToolStripMenuItem11.Name = "concertiToolStripMenuItem11";
-            this.concertiToolStripMenuItem11.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem11.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem11.Text = "Concerti";
             // 
             // teatroToolStripMenuItem13
             // 
             this.teatroToolStripMenuItem13.Name = "teatroToolStripMenuItem13";
-            this.teatroToolStripMenuItem13.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem13.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem13.Text = "Teatro";
             // 
             // sportToolStripMenuItem14
             // 
             this.sportToolStripMenuItem14.Name = "sportToolStripMenuItem14";
-            this.sportToolStripMenuItem14.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem14.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem14.Text = "Sport";
             // 
             // cinemaToolStripMenuItem15
             // 
             this.cinemaToolStripMenuItem15.Name = "cinemaToolStripMenuItem15";
-            this.cinemaToolStripMenuItem15.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem15.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem15.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem13
             // 
             this.mostreEMuseiToolStripMenuItem13.Name = "mostreEMuseiToolStripMenuItem13";
-            this.mostreEMuseiToolStripMenuItem13.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem13.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem13.Text = "Mostre e Musei";
             // 
             // torinoToolStripMenuItem
@@ -1044,37 +937,37 @@
             this.cinemaToolStripMenuItem16,
             this.mostreEMuseiToolStripMenuItem14});
             this.torinoToolStripMenuItem.Name = "torinoToolStripMenuItem";
-            this.torinoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.torinoToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.torinoToolStripMenuItem.Text = "Torino";
             // 
             // concertiToolStripMenuItem12
             // 
             this.concertiToolStripMenuItem12.Name = "concertiToolStripMenuItem12";
-            this.concertiToolStripMenuItem12.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem12.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem12.Text = "Concerti";
             // 
             // teatroToolStripMenuItem14
             // 
             this.teatroToolStripMenuItem14.Name = "teatroToolStripMenuItem14";
-            this.teatroToolStripMenuItem14.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem14.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem14.Text = "Teatro";
             // 
             // sportToolStripMenuItem15
             // 
             this.sportToolStripMenuItem15.Name = "sportToolStripMenuItem15";
-            this.sportToolStripMenuItem15.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem15.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem15.Text = "Sport";
             // 
             // cinemaToolStripMenuItem16
             // 
             this.cinemaToolStripMenuItem16.Name = "cinemaToolStripMenuItem16";
-            this.cinemaToolStripMenuItem16.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem16.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem16.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem14
             // 
             this.mostreEMuseiToolStripMenuItem14.Name = "mostreEMuseiToolStripMenuItem14";
-            this.mostreEMuseiToolStripMenuItem14.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem14.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem14.Text = "Mostre e Musei";
             // 
             // triesteToolStripMenuItem
@@ -1086,37 +979,37 @@
             this.cinemaToolStripMenuItem17,
             this.mostreEMuseiToolStripMenuItem15});
             this.triesteToolStripMenuItem.Name = "triesteToolStripMenuItem";
-            this.triesteToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.triesteToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.triesteToolStripMenuItem.Text = "Trieste";
             // 
             // concertiToolStripMenuItem13
             // 
             this.concertiToolStripMenuItem13.Name = "concertiToolStripMenuItem13";
-            this.concertiToolStripMenuItem13.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem13.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem13.Text = "Concerti";
             // 
             // teatroToolStripMenuItem15
             // 
             this.teatroToolStripMenuItem15.Name = "teatroToolStripMenuItem15";
-            this.teatroToolStripMenuItem15.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem15.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem15.Text = "Teatro";
             // 
             // sportToolStripMenuItem16
             // 
             this.sportToolStripMenuItem16.Name = "sportToolStripMenuItem16";
-            this.sportToolStripMenuItem16.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem16.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem16.Text = "Sport";
             // 
             // cinemaToolStripMenuItem17
             // 
             this.cinemaToolStripMenuItem17.Name = "cinemaToolStripMenuItem17";
-            this.cinemaToolStripMenuItem17.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem17.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem17.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem15
             // 
             this.mostreEMuseiToolStripMenuItem15.Name = "mostreEMuseiToolStripMenuItem15";
-            this.mostreEMuseiToolStripMenuItem15.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem15.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem15.Text = "Mostre e Musei";
             // 
             // veneziaToolStripMenuItem
@@ -1128,49 +1021,49 @@
             this.cinemaToolStripMenuItem18,
             this.mostreEMuseiToolStripMenuItem16});
             this.veneziaToolStripMenuItem.Name = "veneziaToolStripMenuItem";
-            this.veneziaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.veneziaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.veneziaToolStripMenuItem.Text = "Venezia";
             // 
             // concertiToolStripMenuItem14
             // 
             this.concertiToolStripMenuItem14.Name = "concertiToolStripMenuItem14";
-            this.concertiToolStripMenuItem14.Size = new System.Drawing.Size(155, 22);
+            this.concertiToolStripMenuItem14.Size = new System.Drawing.Size(193, 26);
             this.concertiToolStripMenuItem14.Text = "Concerti";
             // 
             // teatroToolStripMenuItem16
             // 
             this.teatroToolStripMenuItem16.Name = "teatroToolStripMenuItem16";
-            this.teatroToolStripMenuItem16.Size = new System.Drawing.Size(155, 22);
+            this.teatroToolStripMenuItem16.Size = new System.Drawing.Size(193, 26);
             this.teatroToolStripMenuItem16.Text = "Teatro";
             // 
             // sportToolStripMenuItem17
             // 
             this.sportToolStripMenuItem17.Name = "sportToolStripMenuItem17";
-            this.sportToolStripMenuItem17.Size = new System.Drawing.Size(155, 22);
+            this.sportToolStripMenuItem17.Size = new System.Drawing.Size(193, 26);
             this.sportToolStripMenuItem17.Text = "Sport";
             // 
             // cinemaToolStripMenuItem18
             // 
             this.cinemaToolStripMenuItem18.Name = "cinemaToolStripMenuItem18";
-            this.cinemaToolStripMenuItem18.Size = new System.Drawing.Size(155, 22);
+            this.cinemaToolStripMenuItem18.Size = new System.Drawing.Size(193, 26);
             this.cinemaToolStripMenuItem18.Text = "Cinema";
             // 
             // mostreEMuseiToolStripMenuItem16
             // 
             this.mostreEMuseiToolStripMenuItem16.Name = "mostreEMuseiToolStripMenuItem16";
-            this.mostreEMuseiToolStripMenuItem16.Size = new System.Drawing.Size(155, 22);
+            this.mostreEMuseiToolStripMenuItem16.Size = new System.Drawing.Size(193, 26);
             this.mostreEMuseiToolStripMenuItem16.Text = "Mostre e Musei";
             // 
             // Search_results
             // 
             this.Search_results.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.Search_results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Search_results.Location = new System.Drawing.Point(375, 43);
-            this.Search_results.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Search_results.Location = new System.Drawing.Point(498, 53);
+            this.Search_results.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Search_results.Name = "Search_results";
             this.Search_results.RowHeadersWidth = 51;
             this.Search_results.RowTemplate.Height = 24;
-            this.Search_results.Size = new System.Drawing.Size(214, 108);
+            this.Search_results.Size = new System.Drawing.Size(287, 133);
             this.Search_results.TabIndex = 3;
             // 
             // panel2
@@ -1185,134 +1078,269 @@
             this.panel2.Controls.Add(this.Img_BALLOONMUSEUM);
             this.panel2.Controls.Add(this.Img_ARTOFPLAY);
             this.panel2.Controls.Add(this.Img_TIMBURTON);
-            this.panel2.Location = new System.Drawing.Point(653, 55);
+            this.panel2.Location = new System.Drawing.Point(871, 68);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(495, 432);
+            this.panel2.Size = new System.Drawing.Size(660, 532);
             this.panel2.TabIndex = 9;
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.AutoToolTip = true;
+            this.toolStripMenuItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStripMenuItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem12,
+            this.toolStripMenuItem14});
+            this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.Control;
+            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(63, 56);
+            this.toolStripMenuItem2.Text = "Eventi";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem4,
+            this.rockToolStripMenuItem,
+            this.trapRapToolStripMenuItem,
+            this.classicaToolStripMenuItem,
+            this.jazzToolStripMenuItem});
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(225, 26);
+            this.toolStripMenuItem3.Text = "Concerti";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStripMenuItem4.Checked = true;
+            this.toolStripMenuItem4.CheckOnClick = true;
+            this.toolStripMenuItem4.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.toolStripMenuItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(119, 26);
+            this.toolStripMenuItem4.Text = "POP";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem6,
+            this.toolStripMenuItem7,
+            this.toolStripMenuItem8,
+            this.toolStripMenuItem9,
+            this.toolStripMenuItem10,
+            this.toolStripMenuItem11});
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(225, 26);
+            this.toolStripMenuItem5.Text = "Teatro";
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem6.Text = "Musical";
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem7.Text = "Prosa";
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem8.Text = "Cabaret";
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem9.Text = "Lirica";
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem10.Text = "Balletto Classico / Moderno";
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(276, 26);
+            this.toolStripMenuItem11.Text = "Concerti Musica Classica";
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calcioToolStripMenuItem,
+            this.pallavoloToolStripMenuItem,
+            this.basketToolStripMenuItem,
+            this.rugbyToolStripMenuItem});
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(225, 26);
+            this.toolStripMenuItem12.Text = "Sport";
+            // 
+            // toolStripMenuItem14
+            // 
+            this.toolStripMenuItem14.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem15,
+            this.toolStripMenuItem16});
+            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(225, 26);
+            this.toolStripMenuItem14.Text = "Altre Manifestazioni";
+            // 
+            // toolStripMenuItem15
+            // 
+            this.toolStripMenuItem15.Name = "toolStripMenuItem15";
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(226, 26);
+            this.toolStripMenuItem15.Text = "Eventi Internazionali";
+            // 
+            // toolStripMenuItem16
+            // 
+            this.toolStripMenuItem16.Name = "toolStripMenuItem16";
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(226, 26);
+            this.toolStripMenuItem16.Text = "Cinema";
             // 
             // Img_BLACKPINK
             // 
             this.Img_BLACKPINK.Image = global::Biglietti_concerto.Properties.Resources.blackpink_biglietti;
-            this.Img_BLACKPINK.Location = new System.Drawing.Point(818, 212);
+            this.Img_BLACKPINK.Location = new System.Drawing.Point(1091, 261);
+            this.Img_BLACKPINK.Margin = new System.Windows.Forms.Padding(4);
             this.Img_BLACKPINK.Name = "Img_BLACKPINK";
-            this.Img_BLACKPINK.Size = new System.Drawing.Size(157, 200);
+            this.Img_BLACKPINK.Size = new System.Drawing.Size(209, 246);
             this.Img_BLACKPINK.TabIndex = 18;
             this.Img_BLACKPINK.TabStop = false;
             // 
             // Img_WONDERJIMMY
             // 
             this.Img_WONDERJIMMY.Image = global::Biglietti_concerto.Properties.Resources.jimmy_sax_biglietti;
-            this.Img_WONDERJIMMY.Location = new System.Drawing.Point(655, 212);
+            this.Img_WONDERJIMMY.Location = new System.Drawing.Point(873, 261);
+            this.Img_WONDERJIMMY.Margin = new System.Windows.Forms.Padding(4);
             this.Img_WONDERJIMMY.Name = "Img_WONDERJIMMY";
-            this.Img_WONDERJIMMY.Size = new System.Drawing.Size(157, 200);
+            this.Img_WONDERJIMMY.Size = new System.Drawing.Size(209, 246);
             this.Img_WONDERJIMMY.TabIndex = 17;
             this.Img_WONDERJIMMY.TabStop = false;
             // 
             // Img_MORRISSEY
             // 
             this.Img_MORRISSEY.Image = global::Biglietti_concerto.Properties.Resources.morrissey_biglietti;
-            this.Img_MORRISSEY.Location = new System.Drawing.Point(655, 6);
+            this.Img_MORRISSEY.Location = new System.Drawing.Point(873, 7);
+            this.Img_MORRISSEY.Margin = new System.Windows.Forms.Padding(4);
             this.Img_MORRISSEY.Name = "Img_MORRISSEY";
-            this.Img_MORRISSEY.Size = new System.Drawing.Size(320, 200);
+            this.Img_MORRISSEY.Size = new System.Drawing.Size(427, 246);
             this.Img_MORRISSEY.TabIndex = 16;
             this.Img_MORRISSEY.TabStop = false;
             // 
             // Img_INTELLIGENZANATURALE
             // 
             this.Img_INTELLIGENZANATURALE.Image = global::Biglietti_concerto.Properties.Resources.andrea_pezzi_intelligenza_naturale_2;
-            this.Img_INTELLIGENZANATURALE.Location = new System.Drawing.Point(492, 212);
+            this.Img_INTELLIGENZANATURALE.Location = new System.Drawing.Point(656, 261);
+            this.Img_INTELLIGENZANATURALE.Margin = new System.Windows.Forms.Padding(4);
             this.Img_INTELLIGENZANATURALE.Name = "Img_INTELLIGENZANATURALE";
-            this.Img_INTELLIGENZANATURALE.Size = new System.Drawing.Size(157, 200);
+            this.Img_INTELLIGENZANATURALE.Size = new System.Drawing.Size(209, 246);
             this.Img_INTELLIGENZANATURALE.TabIndex = 15;
             this.Img_INTELLIGENZANATURALE.TabStop = false;
             // 
             // img_GIORGIAFUMO
             // 
             this.img_GIORGIAFUMO.Image = global::Biglietti_concerto.Properties.Resources.giorgia_fumo_biglietti;
-            this.img_GIORGIAFUMO.Location = new System.Drawing.Point(329, 212);
+            this.img_GIORGIAFUMO.Location = new System.Drawing.Point(439, 261);
+            this.img_GIORGIAFUMO.Margin = new System.Windows.Forms.Padding(4);
             this.img_GIORGIAFUMO.Name = "img_GIORGIAFUMO";
-            this.img_GIORGIAFUMO.Size = new System.Drawing.Size(157, 200);
+            this.img_GIORGIAFUMO.Size = new System.Drawing.Size(209, 246);
             this.img_GIORGIAFUMO.TabIndex = 14;
             this.img_GIORGIAFUMO.TabStop = false;
             // 
             // Img_PROVAAPRENDERMI
             // 
             this.Img_PROVAAPRENDERMI.Image = global::Biglietti_concerto.Properties.Resources.prova_prendermi_biglietti;
-            this.Img_PROVAAPRENDERMI.Location = new System.Drawing.Point(329, 6);
+            this.Img_PROVAAPRENDERMI.Location = new System.Drawing.Point(439, 7);
+            this.Img_PROVAAPRENDERMI.Margin = new System.Windows.Forms.Padding(4);
             this.Img_PROVAAPRENDERMI.Name = "Img_PROVAAPRENDERMI";
-            this.Img_PROVAAPRENDERMI.Size = new System.Drawing.Size(320, 200);
+            this.Img_PROVAAPRENDERMI.Size = new System.Drawing.Size(427, 246);
             this.Img_PROVAAPRENDERMI.TabIndex = 13;
             this.Img_PROVAAPRENDERMI.TabStop = false;
             // 
             // Img_BALLOONMUSEUM
             // 
             this.Img_BALLOONMUSEUM.Image = global::Biglietti_concerto.Properties.Resources.balloon_roma_biglietti_3;
-            this.Img_BALLOONMUSEUM.Location = new System.Drawing.Point(3, 212);
+            this.Img_BALLOONMUSEUM.Location = new System.Drawing.Point(4, 261);
+            this.Img_BALLOONMUSEUM.Margin = new System.Windows.Forms.Padding(4);
             this.Img_BALLOONMUSEUM.Name = "Img_BALLOONMUSEUM";
-            this.Img_BALLOONMUSEUM.Size = new System.Drawing.Size(320, 200);
+            this.Img_BALLOONMUSEUM.Size = new System.Drawing.Size(427, 246);
             this.Img_BALLOONMUSEUM.TabIndex = 12;
             this.Img_BALLOONMUSEUM.TabStop = false;
             // 
             // Img_ARTOFPLAY
             // 
             this.Img_ARTOFPLAY.Image = global::Biglietti_concerto.Properties.Resources.art_play_roma;
-            this.Img_ARTOFPLAY.Location = new System.Drawing.Point(166, 6);
+            this.Img_ARTOFPLAY.Location = new System.Drawing.Point(221, 7);
+            this.Img_ARTOFPLAY.Margin = new System.Windows.Forms.Padding(4);
             this.Img_ARTOFPLAY.Name = "Img_ARTOFPLAY";
-            this.Img_ARTOFPLAY.Size = new System.Drawing.Size(157, 200);
+            this.Img_ARTOFPLAY.Size = new System.Drawing.Size(209, 246);
             this.Img_ARTOFPLAY.TabIndex = 11;
             this.Img_ARTOFPLAY.TabStop = false;
             // 
             // Img_TIMBURTON
             // 
             this.Img_TIMBURTON.Image = global::Biglietti_concerto.Properties.Resources.tim_burton_milano;
-            this.Img_TIMBURTON.Location = new System.Drawing.Point(3, 6);
+            this.Img_TIMBURTON.Location = new System.Drawing.Point(4, 7);
+            this.Img_TIMBURTON.Margin = new System.Windows.Forms.Padding(4);
             this.Img_TIMBURTON.Name = "Img_TIMBURTON";
-            this.Img_TIMBURTON.Size = new System.Drawing.Size(157, 200);
+            this.Img_TIMBURTON.Size = new System.Drawing.Size(209, 246);
             this.Img_TIMBURTON.TabIndex = 10;
             this.Img_TIMBURTON.TabStop = false;
             // 
             // Img_GAMESINCONCERT
             // 
             this.Img_GAMESINCONCERT.Image = global::Biglietti_concerto.Properties.Resources.games_concert_biglietti;
-            this.Img_GAMESINCONCERT.Location = new System.Drawing.Point(490, 61);
+            this.Img_GAMESINCONCERT.Location = new System.Drawing.Point(653, 75);
+            this.Img_GAMESINCONCERT.Margin = new System.Windows.Forms.Padding(4);
             this.Img_GAMESINCONCERT.Name = "Img_GAMESINCONCERT";
-            this.Img_GAMESINCONCERT.Size = new System.Drawing.Size(157, 200);
+            this.Img_GAMESINCONCERT.Size = new System.Drawing.Size(209, 246);
             this.Img_GAMESINCONCERT.TabIndex = 8;
             this.Img_GAMESINCONCERT.TabStop = false;
             // 
             // Img_TONYEFFE
             // 
             this.Img_TONYEFFE.Image = global::Biglietti_concerto.Properties.Resources.tony_effe_roma_milano_2;
-            this.Img_TONYEFFE.Location = new System.Drawing.Point(329, 267);
+            this.Img_TONYEFFE.Location = new System.Drawing.Point(439, 329);
+            this.Img_TONYEFFE.Margin = new System.Windows.Forms.Padding(4);
             this.Img_TONYEFFE.Name = "Img_TONYEFFE";
-            this.Img_TONYEFFE.Size = new System.Drawing.Size(318, 200);
+            this.Img_TONYEFFE.Size = new System.Drawing.Size(424, 246);
             this.Img_TONYEFFE.TabIndex = 7;
             this.Img_TONYEFFE.TabStop = false;
             // 
             // Img_SOPHIE
             // 
             this.Img_SOPHIE.Image = global::Biglietti_concerto.Properties.Resources.sophie_giants_biglietti;
-            this.Img_SOPHIE.Location = new System.Drawing.Point(329, 61);
+            this.Img_SOPHIE.Location = new System.Drawing.Point(439, 75);
+            this.Img_SOPHIE.Margin = new System.Windows.Forms.Padding(4);
             this.Img_SOPHIE.Name = "Img_SOPHIE";
-            this.Img_SOPHIE.Size = new System.Drawing.Size(157, 200);
+            this.Img_SOPHIE.Size = new System.Drawing.Size(209, 246);
             this.Img_SOPHIE.TabIndex = 6;
             this.Img_SOPHIE.TabStop = false;
             // 
             // Img_PALAJOVA
             // 
             this.Img_PALAJOVA.Image = global::Biglietti_concerto.Properties.Resources.palajova2025_biglietti;
-            this.Img_PALAJOVA.Location = new System.Drawing.Point(3, 265);
+            this.Img_PALAJOVA.Location = new System.Drawing.Point(4, 326);
+            this.Img_PALAJOVA.Margin = new System.Windows.Forms.Padding(4);
             this.Img_PALAJOVA.Name = "Img_PALAJOVA";
-            this.Img_PALAJOVA.Size = new System.Drawing.Size(320, 200);
+            this.Img_PALAJOVA.Size = new System.Drawing.Size(427, 246);
             this.Img_PALAJOVA.TabIndex = 5;
             this.Img_PALAJOVA.TabStop = false;
             // 
             // Img_LRDL
             // 
             this.Img_LRDL.Image = global::Biglietti_concerto.Properties.Resources.LRDL_summertour_biglietti;
-            this.Img_LRDL.Location = new System.Drawing.Point(3, 61);
+            this.Img_LRDL.Location = new System.Drawing.Point(4, 75);
+            this.Img_LRDL.Margin = new System.Windows.Forms.Padding(4);
             this.Img_LRDL.Name = "Img_LRDL";
-            this.Img_LRDL.Size = new System.Drawing.Size(320, 198);
+            this.Img_LRDL.Size = new System.Drawing.Size(427, 244);
             this.Img_LRDL.TabIndex = 4;
             this.Img_LRDL.TabStop = false;
             // 
@@ -1320,19 +1348,79 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::Biglietti_concerto.Properties.Resources.logo_ticketone;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(214, 49);
+            this.pictureBox1.Size = new System.Drawing.Size(285, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Screenshot_2025_03_04_090615;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(515, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 54);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // rockToolStripMenuItem
+            // 
+            this.rockToolStripMenuItem.Name = "rockToolStripMenuItem";
+            this.rockToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rockToolStripMenuItem.Text = "Rock";
+            // 
+            // trapRapToolStripMenuItem
+            // 
+            this.trapRapToolStripMenuItem.Name = "trapRapToolStripMenuItem";
+            this.trapRapToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.trapRapToolStripMenuItem.Text = "Trap/Rap";
+            // 
+            // classicaToolStripMenuItem
+            // 
+            this.classicaToolStripMenuItem.Name = "classicaToolStripMenuItem";
+            this.classicaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.classicaToolStripMenuItem.Text = "Classica";
+            // 
+            // jazzToolStripMenuItem
+            // 
+            this.jazzToolStripMenuItem.Name = "jazzToolStripMenuItem";
+            this.jazzToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.jazzToolStripMenuItem.Text = "Jazz";
+            // 
+            // calcioToolStripMenuItem
+            // 
+            this.calcioToolStripMenuItem.Name = "calcioToolStripMenuItem";
+            this.calcioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.calcioToolStripMenuItem.Text = "Calcio";
+            // 
+            // pallavoloToolStripMenuItem
+            // 
+            this.pallavoloToolStripMenuItem.Name = "pallavoloToolStripMenuItem";
+            this.pallavoloToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pallavoloToolStripMenuItem.Text = "Pallavolo";
+            // 
+            // basketToolStripMenuItem
+            // 
+            this.basketToolStripMenuItem.Name = "basketToolStripMenuItem";
+            this.basketToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.basketToolStripMenuItem.Text = "Basket";
+            // 
+            // rugbyToolStripMenuItem
+            // 
+            this.rugbyToolStripMenuItem.Name = "rugbyToolStripMenuItem";
+            this.rugbyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rugbyToolStripMenuItem.Text = "Rugby";
+            // 
             // search
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1151, 608);
+            this.ClientSize = new System.Drawing.Size(1535, 748);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Img_GAMESINCONCERT);
             this.Controls.Add(this.Img_TONYEFFE);
@@ -1341,6 +1429,7 @@
             this.Controls.Add(this.Img_LRDL);
             this.Controls.Add(this.Search_results);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "search";
             this.Text = " \\";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1485,21 +1574,6 @@
         private System.Windows.Forms.ToolStripMenuItem sportToolStripMenuItem17;
         private System.Windows.Forms.ToolStripMenuItem cinemaToolStripMenuItem18;
         private System.Windows.Forms.ToolStripMenuItem mostreEMuseiToolStripMenuItem16;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem17;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem18;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem20;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem21;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem22;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem23;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem24;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem25;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem26;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem27;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem28;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem29;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem30;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem31;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.DataGridView Search_results;
         private System.Windows.Forms.PictureBox Img_LRDL;
@@ -1517,6 +1591,29 @@
         private System.Windows.Forms.PictureBox Img_MORRISSEY;
         private System.Windows.Forms.PictureBox Img_BLACKPINK;
         private System.Windows.Forms.PictureBox Img_WONDERJIMMY;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem14;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem15;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem16;
+        private System.Windows.Forms.ToolStripMenuItem rockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trapRapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem classicaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jazzToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calcioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pallavoloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem basketToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rugbyToolStripMenuItem;
     }
 }
 
