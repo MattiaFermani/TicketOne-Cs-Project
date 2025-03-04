@@ -140,5 +140,14 @@
   <ItemGroup>
     <None Include="Resources\jovanotti-biglietti-5.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccountImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tichettone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TickeTlon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

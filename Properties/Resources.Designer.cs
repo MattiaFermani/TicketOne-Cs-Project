@@ -63,6 +63,16 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AccountImg {
+            get {
+                object obj = ResourceManager.GetObject("AccountImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap andrea_pezzi_intelligenza_naturale_2 {
             get {
                 object obj = ResourceManager.GetObject("andrea-pezzi-intelligenza-naturale-2", resourceCulture);
@@ -226,6 +236,26 @@ namespace Biglietti_concerto.Properties {
         internal static System.Drawing.Bitmap sophie_giants_biglietti1 {
             get {
                 object obj = ResourceManager.GetObject("sophie-giants-biglietti1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tichettone {
+            get {
+                object obj = ResourceManager.GetObject("Tichettone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TickeTlon {
+            get {
+                object obj = ResourceManager.GetObject("TickeTlon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
