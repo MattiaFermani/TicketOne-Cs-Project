@@ -31,7 +31,7 @@ namespace Biglietti_concerto
         };
 
             // Configura il DataGridView
-            Search_results.Columns.Add("Item", "Item");
+            //Search_results.Columns.Add("Item", "Item");
         }
 
         
@@ -63,16 +63,16 @@ namespace Biglietti_concerto
 
         private void txt_search_TextChanged(object sender, EventArgs e)
         {
-            string searchTerm = txt_search.Text.ToLower();
-            var results = items.Where(item => item.ToLower().Contains(searchTerm)).ToList();
+            //string searchTerm = txt_search.Text.ToLower();
+          //  var results = items.Where(item => item.ToLower().Contains(searchTerm)).ToList();
 
             // Pulisci il DataGridView
-            Search_results.Rows.Clear();
+          //  Search_results.Rows.Clear();
 
             // Aggiungi i risultati al DataGridView
-            foreach (var result in results)
+           // foreach (var result in results)
             {
-                Search_results.Rows.Add(result);
+             //   Search_results.Rows.Add(result);
             }
         }
     }
