@@ -21,5 +21,20 @@ namespace Biglietti_concerto
         {
 
         }
+
+        private void cabaretToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void concertiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void altreManifestazioniToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
