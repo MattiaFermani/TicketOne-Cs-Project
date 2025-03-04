@@ -75,5 +75,10 @@ namespace Biglietti_concerto
                 Search_results.Rows.Add(result);
             }
         }
+
+        private void Spettacolo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
