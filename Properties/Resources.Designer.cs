@@ -183,6 +183,16 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_03_04_090615 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-03-04 090615", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sophie_giants_biglietti {
             get {
                 object obj = ResourceManager.GetObject("sophie-giants-biglietti", resourceCulture);

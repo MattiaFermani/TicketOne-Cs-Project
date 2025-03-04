@@ -121,6 +121,9 @@
   <data name="andrea-pezzi-intelligenza-naturale-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\andrea-pezzi-intelligenza-naturale-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LRDL-summertour-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LRDL-summertour-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tony-effe-roma-milano-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tony-effe-roma-milano-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -129,9 +132,6 @@
   </data>
   <data name="logo_ticketone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_ticketone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="balloon-roma-biglietti-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\balloon-roma-biglietti-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="art-play-roma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\art-play-roma.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,8 +154,11 @@
   <data name="jimmy-sax-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jimmy-sax-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LRDL-summertour-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LRDL-summertour-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="balloon-roma-biglietti-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balloon-roma-biglietti-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blackpink-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blackpink-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="morrissey-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\morrissey-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,7 +166,7 @@
   <data name="prova-prendermi-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\prova-prendermi-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blackpink-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackpink-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Screenshot 2025-03-04 090615" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2025-03-04 090615.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
