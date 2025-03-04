@@ -28,6 +28,7 @@ namespace Biglietti_concerto
         {
             Pannello_Principale.Visible = false;
             Pannello_Posti.Location = new Point(0, 55);
+            Pannello_Posti.Visible = true;
         }
 
         private void PostoSelezionato_Click(object sender, EventArgs e)
