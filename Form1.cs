@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,14 +13,29 @@ namespace Biglietti_concerto
 {
     public partial class Form1 : Form
     {
-        List<string> Titoli = new List<string>
-        {
-            "Intelligenza Naturale", "Art of Play - Mostra Immersiva"
-        };
-        List<string> Artisti = new List<string>
-        {
-            "Andrea Pezzi"
-        };
+        List<(string Titolo, string Artista)> Spettacoli = new List<(string, string)>
+    {
+        ("Intelligenza Naturale", "Andrea Pezzi"),
+        ("Marcus Miller", "Marcus Miller"),
+        ("LRDL Summer Tour 2025", "La Rappresentante Di Lista"),
+        ("PalaJova", "Jovanotti"),
+        ("Sophie and The Giants", "Sophie\nThe Giants"),
+        ("Damme 'na mano", "Tony Effe"),
+        ("Games in Concert", ""),
+        ("Tim Burton's Labrynth", "Tim Burton"),
+        ("Prova A Prendermi", "Alessandro Longebardi\nSimone Montedoro"),
+        ("Vita Bassa", "Giorgia Fumo"),
+        ("Estate 2025", "Morrissey"),
+        ("Jimmy Sax and Symphonic Dance Orchestra", "Jimmy Sax"),
+        ("2025 World Tour - Milano", "Black Pink"),
+        ("ACDC - Powerup Tour", "ACDC"),
+    };
+
+
+
+
+
+
 
         public Form1()
         {
@@ -38,17 +54,31 @@ namespace Biglietti_concerto
 
         private void Spettacolo_Click(object sender, EventArgs e)
         {
+            string titolo = "", artista = "";
             PictureBox pb = (PictureBox)sender;
 
+            foreach (var spettacolo in Spettacoli)
+            {
+                if (spettacolo.Titolo == pb.Tag.ToString())
+                {
+                    titolo = spettacolo.Titolo;
+                    artista = spettacolo.Artista;
+                    break;
+                }
+            }
+
+            // Nascondi il pannello principale e mostra quello dei posti
             Pannello_Principale.Visible = false;
             Pannello_Posti.Location = new Point(0, 55);
             Pannello_Posti.Visible = true;
 
-            Artista_Lbl.Text = pb.Tag?.ToString() ?? "Sconosciuto";
+            // Imposta i valori sui controlli della UI
+            Artista_Lbl.Text = artista;
             Img_Info.Image = pb.Image;
             Img_Info.SizeMode = PictureBoxSizeMode.Zoom;
-            TitoloSpettacolo_Lbl.Text = pb.Name.Substring(4);
+            TitoloSpettacolo_Lbl.Text = titolo;
         }
+
 
         private void PostoSelezionato_Click(object sender, EventArgs e)
         {

@@ -263,12 +263,12 @@
             this.Img_PALAJOVA = new System.Windows.Forms.PictureBox();
             this.Img_MarcusMiller = new System.Windows.Forms.PictureBox();
             this.Img_BLACKPINK = new System.Windows.Forms.PictureBox();
-            this.Img_WONDERJIMMY = new System.Windows.Forms.PictureBox();
+            this.Img_JIMMYSAX = new System.Windows.Forms.PictureBox();
             this.Img_MORRISSEY = new System.Windows.Forms.PictureBox();
             this.Img_INTELLIGENZANATURALE = new System.Windows.Forms.PictureBox();
             this.img_GIORGIAFUMO = new System.Windows.Forms.PictureBox();
             this.Img_PROVAAPRENDERMI = new System.Windows.Forms.PictureBox();
-            this.Img_BALLOONMUSEUM = new System.Windows.Forms.PictureBox();
+            this.Img_ACDC = new System.Windows.Forms.PictureBox();
             this.Img_TIMBURTON = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -295,12 +295,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_WONDERJIMMY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_JIMMYSAX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_MORRISSEY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_INTELLIGENZANATURALE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_GIORGIAFUMO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_PROVAAPRENDERMI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_BALLOONMUSEUM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_ACDC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_TIMBURTON)).BeginInit();
             this.SuspendLayout();
             // 
@@ -337,12 +337,12 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.Img_MarcusMiller);
             this.panel2.Controls.Add(this.Img_BLACKPINK);
-            this.panel2.Controls.Add(this.Img_WONDERJIMMY);
+            this.panel2.Controls.Add(this.Img_JIMMYSAX);
             this.panel2.Controls.Add(this.Img_MORRISSEY);
             this.panel2.Controls.Add(this.Img_INTELLIGENZANATURALE);
             this.panel2.Controls.Add(this.img_GIORGIAFUMO);
             this.panel2.Controls.Add(this.Img_PROVAAPRENDERMI);
-            this.panel2.Controls.Add(this.Img_BALLOONMUSEUM);
+            this.panel2.Controls.Add(this.Img_ACDC);
             this.panel2.Controls.Add(this.Img_TIMBURTON);
             this.panel2.Location = new System.Drawing.Point(647, 0);
             this.panel2.Name = "panel2";
@@ -420,7 +420,7 @@
             // 
             this.Artista_Lbl.AutoSize = true;
             this.Artista_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Artista_Lbl.Location = new System.Drawing.Point(8, 96);
+            this.Artista_Lbl.Location = new System.Drawing.Point(9, 71);
             this.Artista_Lbl.Name = "Artista_Lbl";
             this.Artista_Lbl.Size = new System.Drawing.Size(55, 20);
             this.Artista_Lbl.TabIndex = 1;
@@ -429,10 +429,10 @@
             // TitoloSpettacolo_Lbl
             // 
             this.TitoloSpettacolo_Lbl.AutoSize = true;
-            this.TitoloSpettacolo_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitoloSpettacolo_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitoloSpettacolo_Lbl.Location = new System.Drawing.Point(7, 26);
             this.TitoloSpettacolo_Lbl.Name = "TitoloSpettacolo_Lbl";
-            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(81, 29);
+            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(95, 36);
             this.TitoloSpettacolo_Lbl.TabIndex = 0;
             this.TitoloSpettacolo_Lbl.Text = "Titolo";
             // 
@@ -3540,7 +3540,7 @@
             this.Info_Error.Name = "Info_Error";
             this.Info_Error.Size = new System.Drawing.Size(569, 189);
             this.Info_Error.TabIndex = 39;
-            this.Info_Error.Text = "Devi prima inserire le tue informazioni";
+            this.Info_Error.Text = "Devi prima fare il login/registrazione";
             this.Info_Error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Info_Posto
@@ -3592,7 +3592,7 @@
             this.Img_LRDL.Size = new System.Drawing.Size(320, 198);
             this.Img_LRDL.TabIndex = 4;
             this.Img_LRDL.TabStop = false;
-            this.Img_LRDL.Tag = "La Rappresentante Di Lista";
+            this.Img_LRDL.Tag = "LRDL Summer Tour 2025";
             this.Info_Spettacolo.SetToolTip(this.Img_LRDL, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
         "Posti: 300");
             this.Img_LRDL.Click += new System.EventHandler(this.Spettacolo_Click);
@@ -3605,7 +3605,7 @@
             this.Img_SOPHIE.Size = new System.Drawing.Size(157, 200);
             this.Img_SOPHIE.TabIndex = 6;
             this.Img_SOPHIE.TabStop = false;
-            this.Img_SOPHIE.Tag = "Sophie & The Giants";
+            this.Img_SOPHIE.Tag = "Sophie and The Giants";
             this.Img_SOPHIE.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_TONYEFFE
@@ -3616,7 +3616,7 @@
             this.Img_TONYEFFE.Size = new System.Drawing.Size(318, 200);
             this.Img_TONYEFFE.TabIndex = 7;
             this.Img_TONYEFFE.TabStop = false;
-            this.Img_TONYEFFE.Tag = "Tony Effe";
+            this.Img_TONYEFFE.Tag = "Damme \'na mano";
             this.Img_TONYEFFE.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_GAMESINCONCERT
@@ -3627,6 +3627,7 @@
             this.Img_GAMESINCONCERT.Size = new System.Drawing.Size(157, 200);
             this.Img_GAMESINCONCERT.TabIndex = 8;
             this.Img_GAMESINCONCERT.TabStop = false;
+            this.Img_GAMESINCONCERT.Tag = "Games in Concert";
             this.Img_GAMESINCONCERT.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_PALAJOVA
@@ -3637,7 +3638,7 @@
             this.Img_PALAJOVA.Size = new System.Drawing.Size(320, 200);
             this.Img_PALAJOVA.TabIndex = 5;
             this.Img_PALAJOVA.TabStop = false;
-            this.Img_PALAJOVA.Tag = "Jovanotti";
+            this.Img_PALAJOVA.Tag = "PalaJova";
             this.Info_Spettacolo.SetToolTip(this.Img_PALAJOVA, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
         "Posti: 300\r\n");
             this.Img_PALAJOVA.Click += new System.EventHandler(this.Spettacolo_Click);
@@ -3650,6 +3651,8 @@
             this.Img_MarcusMiller.Size = new System.Drawing.Size(157, 200);
             this.Img_MarcusMiller.TabIndex = 19;
             this.Img_MarcusMiller.TabStop = false;
+            this.Img_MarcusMiller.Tag = "Marcus Miller";
+            this.Img_MarcusMiller.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_BLACKPINK
             // 
@@ -3659,18 +3662,19 @@
             this.Img_BLACKPINK.Size = new System.Drawing.Size(157, 200);
             this.Img_BLACKPINK.TabIndex = 18;
             this.Img_BLACKPINK.TabStop = false;
-            this.Img_BLACKPINK.Tag = "";
+            this.Img_BLACKPINK.Tag = "2025 World Tour - Milano";
             this.Img_BLACKPINK.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
-            // Img_WONDERJIMMY
+            // Img_JIMMYSAX
             // 
-            this.Img_WONDERJIMMY.Image = global::Biglietti_concerto.Properties.Resources.jimmy_sax_biglietti;
-            this.Img_WONDERJIMMY.Location = new System.Drawing.Point(655, 212);
-            this.Img_WONDERJIMMY.Name = "Img_WONDERJIMMY";
-            this.Img_WONDERJIMMY.Size = new System.Drawing.Size(157, 200);
-            this.Img_WONDERJIMMY.TabIndex = 17;
-            this.Img_WONDERJIMMY.TabStop = false;
-            this.Img_WONDERJIMMY.Click += new System.EventHandler(this.Spettacolo_Click);
+            this.Img_JIMMYSAX.Image = global::Biglietti_concerto.Properties.Resources.jimmy_sax_biglietti;
+            this.Img_JIMMYSAX.Location = new System.Drawing.Point(655, 212);
+            this.Img_JIMMYSAX.Name = "Img_JIMMYSAX";
+            this.Img_JIMMYSAX.Size = new System.Drawing.Size(157, 200);
+            this.Img_JIMMYSAX.TabIndex = 17;
+            this.Img_JIMMYSAX.TabStop = false;
+            this.Img_JIMMYSAX.Tag = "Jimmy Sax and Symphonic Dance Orchestra";
+            this.Img_JIMMYSAX.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_MORRISSEY
             // 
@@ -3680,6 +3684,7 @@
             this.Img_MORRISSEY.Size = new System.Drawing.Size(320, 200);
             this.Img_MORRISSEY.TabIndex = 16;
             this.Img_MORRISSEY.TabStop = false;
+            this.Img_MORRISSEY.Tag = "Estate 2025";
             this.Img_MORRISSEY.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_INTELLIGENZANATURALE
@@ -3690,6 +3695,7 @@
             this.Img_INTELLIGENZANATURALE.Size = new System.Drawing.Size(157, 200);
             this.Img_INTELLIGENZANATURALE.TabIndex = 15;
             this.Img_INTELLIGENZANATURALE.TabStop = false;
+            this.Img_INTELLIGENZANATURALE.Tag = "Intelligenza Naturale";
             this.Img_INTELLIGENZANATURALE.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // img_GIORGIAFUMO
@@ -3700,6 +3706,7 @@
             this.img_GIORGIAFUMO.Size = new System.Drawing.Size(157, 200);
             this.img_GIORGIAFUMO.TabIndex = 14;
             this.img_GIORGIAFUMO.TabStop = false;
+            this.img_GIORGIAFUMO.Tag = "Vita Bassa";
             this.img_GIORGIAFUMO.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_PROVAAPRENDERMI
@@ -3710,17 +3717,19 @@
             this.Img_PROVAAPRENDERMI.Size = new System.Drawing.Size(320, 200);
             this.Img_PROVAAPRENDERMI.TabIndex = 13;
             this.Img_PROVAAPRENDERMI.TabStop = false;
+            this.Img_PROVAAPRENDERMI.Tag = "Prova A Prendermi";
             this.Img_PROVAAPRENDERMI.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
-            // Img_BALLOONMUSEUM
+            // Img_ACDC
             // 
-            this.Img_BALLOONMUSEUM.Image = global::Biglietti_concerto.Properties.Resources.balloon_roma_biglietti_3;
-            this.Img_BALLOONMUSEUM.Location = new System.Drawing.Point(3, 212);
-            this.Img_BALLOONMUSEUM.Name = "Img_BALLOONMUSEUM";
-            this.Img_BALLOONMUSEUM.Size = new System.Drawing.Size(320, 200);
-            this.Img_BALLOONMUSEUM.TabIndex = 12;
-            this.Img_BALLOONMUSEUM.TabStop = false;
-            this.Img_BALLOONMUSEUM.Click += new System.EventHandler(this.Spettacolo_Click);
+            this.Img_ACDC.Image = global::Biglietti_concerto.Properties.Resources.acdc_biglietti;
+            this.Img_ACDC.Location = new System.Drawing.Point(3, 212);
+            this.Img_ACDC.Name = "Img_ACDC";
+            this.Img_ACDC.Size = new System.Drawing.Size(320, 200);
+            this.Img_ACDC.TabIndex = 12;
+            this.Img_ACDC.TabStop = false;
+            this.Img_ACDC.Tag = "ACDC - Powerup Tour";
+            this.Img_ACDC.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_TIMBURTON
             // 
@@ -3730,6 +3739,7 @@
             this.Img_TIMBURTON.Size = new System.Drawing.Size(157, 200);
             this.Img_TIMBURTON.TabIndex = 10;
             this.Img_TIMBURTON.TabStop = false;
+            this.Img_TIMBURTON.Tag = "Tim Burton\'s Labrynth";
             this.Img_TIMBURTON.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Form1
@@ -3775,12 +3785,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_WONDERJIMMY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_JIMMYSAX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_MORRISSEY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_INTELLIGENZANATURALE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_GIORGIAFUMO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_PROVAAPRENDERMI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_BALLOONMUSEUM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_ACDC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_TIMBURTON)).EndInit();
             this.ResumeLayout(false);
 
@@ -3797,13 +3807,13 @@
         private System.Windows.Forms.PictureBox Img_GAMESINCONCERT;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox Img_TIMBURTON;
-        private System.Windows.Forms.PictureBox Img_BALLOONMUSEUM;
+        private System.Windows.Forms.PictureBox Img_ACDC;
         private System.Windows.Forms.PictureBox Img_PROVAAPRENDERMI;
         private System.Windows.Forms.PictureBox img_GIORGIAFUMO;
         private System.Windows.Forms.PictureBox Img_INTELLIGENZANATURALE;
         private System.Windows.Forms.PictureBox Img_MORRISSEY;
         private System.Windows.Forms.PictureBox Img_BLACKPINK;
-        private System.Windows.Forms.PictureBox Img_WONDERJIMMY;
+        private System.Windows.Forms.PictureBox Img_JIMMYSAX;
         private System.Windows.Forms.Panel Pannello_Principale;
         private System.Windows.Forms.Panel Pannello_InEvidenza;
         private System.Windows.Forms.ColorDialog colorDialog1;
