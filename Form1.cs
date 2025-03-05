@@ -74,5 +74,6 @@ namespace Biglietti_concerto
             Pannello_Posti.Visible = false;
         }
 
+       
     }
 }
