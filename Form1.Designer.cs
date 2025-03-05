@@ -580,13 +580,16 @@
             // 
             // button148
             // 
+            this.button148.BackColor = System.Drawing.Color.Gold;
+            this.button148.FlatAppearance.BorderSize = 0;
+            this.button148.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button148.Location = new System.Drawing.Point(466, 100);
             this.button148.Name = "button148";
             this.button148.Size = new System.Drawing.Size(212, 27);
             this.button148.TabIndex = 38;
             this.button148.Text = "Sotto Palco";
             this.Info_Posto.SetToolTip(this.button148, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - VIP\r\nCosto - 60€");
-            this.button148.UseVisualStyleBackColor = true;
+            this.button148.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
@@ -1931,16 +1934,18 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.PaleGreen;
             this.button1.Location = new System.Drawing.Point(466, 150);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(212, 120);
             this.button1.TabIndex = 37;
             this.button1.Text = "Prato";
             this.Info_Posto.SetToolTip(this.button1, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - Prato\r\nCosto - 15€");
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Settore_E
             // 
+            this.Settore_E.BackColor = System.Drawing.Color.Transparent;
             this.Settore_E.Controls.Add(this.button157);
             this.Settore_E.Controls.Add(this.button158);
             this.Settore_E.Controls.Add(this.button159);
@@ -2388,6 +2393,7 @@
             // 
             // Settore_A
             // 
+            this.Settore_A.BackColor = System.Drawing.Color.Transparent;
             this.Settore_A.Controls.Add(this.button33);
             this.Settore_A.Controls.Add(this.button34);
             this.Settore_A.Controls.Add(this.button35);
