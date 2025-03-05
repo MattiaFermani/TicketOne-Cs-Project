@@ -265,9 +265,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Info_Posto = new System.Windows.Forms.ToolTip(this.components);
             this.Info_Spettacolo = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -291,14 +288,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).BeginInit();
             this.Pannello_Posti.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.Pgn_Informazioni.SuspendLayout();
             this.Pgn_SelezionePosti.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.Settore_E.SuspendLayout();
             this.Settore_A.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -488,8 +483,8 @@
             this.Img_LRDL.Size = new System.Drawing.Size(320, 198);
             this.Img_LRDL.TabIndex = 4;
             this.Img_LRDL.TabStop = false;
-            this.Info_Spettacolo.SetToolTip(this.Img_LRDL, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 03/07/2025\r\n" +
-        "Posti: 350");
+            this.Info_Spettacolo.SetToolTip(this.Img_LRDL, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
+        "Posti: 300");
             this.Img_LRDL.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_SOPHIE
@@ -500,8 +495,6 @@
             this.Img_SOPHIE.Size = new System.Drawing.Size(157, 200);
             this.Img_SOPHIE.TabIndex = 6;
             this.Img_SOPHIE.TabStop = false;
-            this.Info_Spettacolo.SetToolTip(this.Img_SOPHIE, "Nome: Sophie And The Giants\r\nArtista: Sophie And The Giants\r\n\r\nData: 27/11/2025\r\n" +
-        "Posti: 350\r\n");
             this.Img_SOPHIE.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_TONYEFFE
@@ -532,7 +525,8 @@
             this.Img_PALAJOVA.Size = new System.Drawing.Size(320, 200);
             this.Img_PALAJOVA.TabIndex = 5;
             this.Img_PALAJOVA.TabStop = false;
-            this.Info_Spettacolo.SetToolTip(this.Img_PALAJOVA, "Nome: PALAJOVA\r\nArtista: Lorenzo Jovanotti\r\n\r\nData: 27/05/2025\r\nPosti: 350\r\n");
+            this.Info_Spettacolo.SetToolTip(this.Img_PALAJOVA, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
+        "Posti: 300\r\n");
             this.Img_PALAJOVA.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Pannello_Posti
@@ -559,12 +553,10 @@
             // Pgn_Informazioni
             // 
             this.Pgn_Informazioni.BackColor = System.Drawing.Color.SkyBlue;
-            this.Pgn_Informazioni.Controls.Add(this.label3);
-            this.Pgn_Informazioni.Controls.Add(this.pictureBox1);
-            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 478);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 481);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -578,10 +570,10 @@
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_E);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_A);
             this.Pgn_SelezionePosti.Controls.Add(this.label1);
-            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1143, 478);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1143, 481);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
@@ -594,10 +586,10 @@
             this.button148.Name = "button148";
             this.button148.Size = new System.Drawing.Size(212, 27);
             this.button148.TabIndex = 38;
-            this.button148.Tag = "VIP";
             this.button148.Text = "Sotto Palco";
             this.Info_Posto.SetToolTip(this.button148, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - VIP\r\nCosto - 60€");
             this.button148.UseVisualStyleBackColor = false;
+            this.button148.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // panel5
             // 
@@ -658,6 +650,7 @@
             this.button108.Text = "B4";
             this.Info_Posto.SetToolTip(this.button108, "Settore D\r\nPosto B4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button108.UseVisualStyleBackColor = false;
+            this.button108.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button109
             // 
@@ -671,6 +664,7 @@
             this.button109.Text = "B3";
             this.Info_Posto.SetToolTip(this.button109, "Settore D\r\nPosto B3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button109.UseVisualStyleBackColor = false;
+            this.button109.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button110
             // 
@@ -684,6 +678,7 @@
             this.button110.Text = "B2";
             this.Info_Posto.SetToolTip(this.button110, "Settore D\r\nPosto A2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button110.UseVisualStyleBackColor = false;
+            this.button110.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button111
             // 
@@ -697,6 +692,7 @@
             this.button111.Text = "B1";
             this.Info_Posto.SetToolTip(this.button111, "Settore D\r\nPosto B1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button111.UseVisualStyleBackColor = false;
+            this.button111.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button112
             // 
@@ -710,6 +706,7 @@
             this.button112.Text = "A4";
             this.Info_Posto.SetToolTip(this.button112, "Settore D\r\nPosto A4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button112.UseVisualStyleBackColor = false;
+            this.button112.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button113
             // 
@@ -723,6 +720,7 @@
             this.button113.Text = "D3";
             this.Info_Posto.SetToolTip(this.button113, "Settore D\r\nPosto D3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button113.UseVisualStyleBackColor = false;
+            this.button113.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button114
             // 
@@ -736,6 +734,7 @@
             this.button114.Text = "D1";
             this.Info_Posto.SetToolTip(this.button114, "Settore D\r\nPosto D1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button114.UseVisualStyleBackColor = false;
+            this.button114.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button115
             // 
@@ -749,6 +748,7 @@
             this.button115.Text = "A3";
             this.Info_Posto.SetToolTip(this.button115, "Settore D\r\nPosto A3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button115.UseVisualStyleBackColor = false;
+            this.button115.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button116
             // 
@@ -762,6 +762,7 @@
             this.button116.Text = "D2";
             this.Info_Posto.SetToolTip(this.button116, "Settore D\r\nPosto D2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button116.UseVisualStyleBackColor = false;
+            this.button116.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button117
             // 
@@ -775,6 +776,7 @@
             this.button117.Text = "A2";
             this.Info_Posto.SetToolTip(this.button117, "Settore D\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button117.UseVisualStyleBackColor = false;
+            this.button117.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button118
             // 
@@ -788,6 +790,7 @@
             this.button118.Text = "D4";
             this.Info_Posto.SetToolTip(this.button118, "Settore D\r\nPosto D4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button118.UseVisualStyleBackColor = false;
+            this.button118.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button119
             // 
@@ -801,6 +804,7 @@
             this.button119.Text = "A1";
             this.Info_Posto.SetToolTip(this.button119, "Settore D\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button119.UseVisualStyleBackColor = false;
+            this.button119.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button120
             // 
@@ -814,6 +818,7 @@
             this.button120.Text = "J4";
             this.Info_Posto.SetToolTip(this.button120, "Settore D\r\nPosto J4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button120.UseVisualStyleBackColor = false;
+            this.button120.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button121
             // 
@@ -827,6 +832,7 @@
             this.button121.Text = "J3";
             this.Info_Posto.SetToolTip(this.button121, "Settore D\r\nPosto J3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button121.UseVisualStyleBackColor = false;
+            this.button121.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button122
             // 
@@ -840,6 +846,7 @@
             this.button122.Text = "J2";
             this.Info_Posto.SetToolTip(this.button122, "Settore D\r\nPosto J2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button122.UseVisualStyleBackColor = false;
+            this.button122.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button123
             // 
@@ -853,6 +860,7 @@
             this.button123.Text = "J1";
             this.Info_Posto.SetToolTip(this.button123, "Settore D\r\nPosto J1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button123.UseVisualStyleBackColor = false;
+            this.button123.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button124
             // 
@@ -866,6 +874,7 @@
             this.button124.Text = "I4";
             this.Info_Posto.SetToolTip(this.button124, "Settore D\r\nPosto I4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button124.UseVisualStyleBackColor = false;
+            this.button124.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button125
             // 
@@ -879,6 +888,7 @@
             this.button125.Text = "F4";
             this.Info_Posto.SetToolTip(this.button125, "Settore D\r\nPosto F4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button125.UseVisualStyleBackColor = false;
+            this.button125.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button126
             // 
@@ -892,6 +902,7 @@
             this.button126.Text = "I3";
             this.Info_Posto.SetToolTip(this.button126, "Settore D\r\nPosto I3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button126.UseVisualStyleBackColor = false;
+            this.button126.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button127
             // 
@@ -905,6 +916,7 @@
             this.button127.Text = "I2";
             this.Info_Posto.SetToolTip(this.button127, "Settore D\r\nPosto I2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button127.UseVisualStyleBackColor = false;
+            this.button127.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button128
             // 
@@ -918,6 +930,7 @@
             this.button128.Text = "F3";
             this.Info_Posto.SetToolTip(this.button128, "Settore D\r\nPosto F3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button128.UseVisualStyleBackColor = false;
+            this.button128.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button129
             // 
@@ -931,6 +944,7 @@
             this.button129.Text = "I1";
             this.Info_Posto.SetToolTip(this.button129, "Settore D\r\nPosto I1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button129.UseVisualStyleBackColor = false;
+            this.button129.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button130
             // 
@@ -944,6 +958,7 @@
             this.button130.Text = "F2";
             this.Info_Posto.SetToolTip(this.button130, "Settore D\r\nPosto F2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button130.UseVisualStyleBackColor = false;
+            this.button130.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button131
             // 
@@ -957,6 +972,7 @@
             this.button131.Text = "F1";
             this.Info_Posto.SetToolTip(this.button131, "Settore D\r\nPosto F1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button131.UseVisualStyleBackColor = false;
+            this.button131.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button132
             // 
@@ -970,6 +986,7 @@
             this.button132.Text = "H4";
             this.Info_Posto.SetToolTip(this.button132, "Settore D\r\nPosto H4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button132.UseVisualStyleBackColor = false;
+            this.button132.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button133
             // 
@@ -983,6 +1000,7 @@
             this.button133.Text = "E4";
             this.Info_Posto.SetToolTip(this.button133, "Settore D\r\nPosto E4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button133.UseVisualStyleBackColor = false;
+            this.button133.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button134
             // 
@@ -996,6 +1014,7 @@
             this.button134.Text = "H3";
             this.Info_Posto.SetToolTip(this.button134, "Settore D\r\nPosto H3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button134.UseVisualStyleBackColor = false;
+            this.button134.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button135
             // 
@@ -1009,6 +1028,7 @@
             this.button135.Text = "E3";
             this.Info_Posto.SetToolTip(this.button135, "Settore D\r\nPosto E3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button135.UseVisualStyleBackColor = false;
+            this.button135.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button136
             // 
@@ -1022,6 +1042,7 @@
             this.button136.Text = "H2";
             this.Info_Posto.SetToolTip(this.button136, "Settore D\r\nPosto H2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button136.UseVisualStyleBackColor = false;
+            this.button136.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button137
             // 
@@ -1035,6 +1056,7 @@
             this.button137.Text = "H1";
             this.Info_Posto.SetToolTip(this.button137, "Settore D\r\nPosto H1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button137.UseVisualStyleBackColor = false;
+            this.button137.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button138
             // 
@@ -1048,6 +1070,7 @@
             this.button138.Text = "E2";
             this.Info_Posto.SetToolTip(this.button138, "Settore D\r\nPosto E2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button138.UseVisualStyleBackColor = false;
+            this.button138.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button139
             // 
@@ -1061,6 +1084,7 @@
             this.button139.Text = "G4";
             this.Info_Posto.SetToolTip(this.button139, "Settore D \r\nPosto G4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button139.UseVisualStyleBackColor = false;
+            this.button139.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button140
             // 
@@ -1074,6 +1098,7 @@
             this.button140.Text = "E1";
             this.Info_Posto.SetToolTip(this.button140, "Settore D\r\nPosto E1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button140.UseVisualStyleBackColor = false;
+            this.button140.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button141
             // 
@@ -1087,6 +1112,7 @@
             this.button141.Text = "G3";
             this.Info_Posto.SetToolTip(this.button141, "Settore D\r\nPosto G3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button141.UseVisualStyleBackColor = false;
+            this.button141.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button142
             // 
@@ -1100,6 +1126,7 @@
             this.button142.Text = "G2";
             this.Info_Posto.SetToolTip(this.button142, "Settore D\r\nPosto G2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button142.UseVisualStyleBackColor = false;
+            this.button142.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button143
             // 
@@ -1113,6 +1140,7 @@
             this.button143.Text = "G1";
             this.Info_Posto.SetToolTip(this.button143, "Settore D \r\nPosto G1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button143.UseVisualStyleBackColor = false;
+            this.button143.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button144
             // 
@@ -1126,6 +1154,7 @@
             this.button144.Text = "C4";
             this.Info_Posto.SetToolTip(this.button144, "Settore D\r\nPosto C4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button144.UseVisualStyleBackColor = false;
+            this.button144.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button145
             // 
@@ -1139,6 +1168,7 @@
             this.button145.Text = "C3";
             this.Info_Posto.SetToolTip(this.button145, "Settore D\r\nPosto C3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button145.UseVisualStyleBackColor = false;
+            this.button145.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button146
             // 
@@ -1152,6 +1182,7 @@
             this.button146.Text = "C2";
             this.Info_Posto.SetToolTip(this.button146, "Settore D\r\nPosto C2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button146.UseVisualStyleBackColor = false;
+            this.button146.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button147
             // 
@@ -1165,6 +1196,7 @@
             this.button147.Text = "C1";
             this.Info_Posto.SetToolTip(this.button147, "Settore D\r\nPosto C1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button147.UseVisualStyleBackColor = false;
+            this.button147.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // panel4
             // 
@@ -1225,6 +1257,7 @@
             this.button68.Text = "D0";
             this.Info_Posto.SetToolTip(this.button68, "Settore C\r\nPosto D0\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button68.UseVisualStyleBackColor = false;
+            this.button68.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button69
             // 
@@ -1238,6 +1271,7 @@
             this.button69.Text = "C0";
             this.Info_Posto.SetToolTip(this.button69, "Settore C\r\nPosto C0\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button69.UseVisualStyleBackColor = false;
+            this.button69.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button70
             // 
@@ -1251,6 +1285,7 @@
             this.button70.Text = "B0";
             this.Info_Posto.SetToolTip(this.button70, "Settore C\r\nPosto B0\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button70.UseVisualStyleBackColor = false;
+            this.button70.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button71
             // 
@@ -1264,6 +1299,7 @@
             this.button71.Text = "A0";
             this.Info_Posto.SetToolTip(this.button71, "Settore C\r\nPosto A0\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button71.UseVisualStyleBackColor = false;
+            this.button71.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button72
             // 
@@ -1277,6 +1313,7 @@
             this.button72.Text = "D9";
             this.Info_Posto.SetToolTip(this.button72, "Settore C\r\nPosto D9\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button72.UseVisualStyleBackColor = false;
+            this.button72.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button73
             // 
@@ -1290,6 +1327,7 @@
             this.button73.Text = "D6";
             this.Info_Posto.SetToolTip(this.button73, "Settore C \r\nPosto D6\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button73.UseVisualStyleBackColor = false;
+            this.button73.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button74
             // 
@@ -1303,6 +1341,7 @@
             this.button74.Text = "C9";
             this.Info_Posto.SetToolTip(this.button74, "Settore C\r\nPosto C9\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button74.UseVisualStyleBackColor = false;
+            this.button74.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button75
             // 
@@ -1316,6 +1355,7 @@
             this.button75.Text = "C6";
             this.Info_Posto.SetToolTip(this.button75, "Settore C\r\nPosto C6\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button75.UseVisualStyleBackColor = false;
+            this.button75.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button76
             // 
@@ -1329,6 +1369,7 @@
             this.button76.Text = "B9";
             this.Info_Posto.SetToolTip(this.button76, "Settore C\r\nPosto B9\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button76.UseVisualStyleBackColor = false;
+            this.button76.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button77
             // 
@@ -1342,6 +1383,7 @@
             this.button77.Text = "B6";
             this.Info_Posto.SetToolTip(this.button77, "Settore C\r\nPosto B6\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button77.UseVisualStyleBackColor = false;
+            this.button77.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button78
             // 
@@ -1355,6 +1397,7 @@
             this.button78.Text = "A9";
             this.Info_Posto.SetToolTip(this.button78, "Settore C\r\nPosto A9\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button78.UseVisualStyleBackColor = false;
+            this.button78.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button79
             // 
@@ -1368,6 +1411,7 @@
             this.button79.Text = "A6";
             this.Info_Posto.SetToolTip(this.button79, "Settore C \r\nPosto A6\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button79.UseVisualStyleBackColor = false;
+            this.button79.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button80
             // 
@@ -1381,6 +1425,7 @@
             this.button80.Text = "D8";
             this.Info_Posto.SetToolTip(this.button80, "Settore C \r\nPosto D8\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button80.UseVisualStyleBackColor = false;
+            this.button80.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button81
             // 
@@ -1394,6 +1439,7 @@
             this.button81.Text = "D5";
             this.Info_Posto.SetToolTip(this.button81, "Settore C \r\nPosto D5 \r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button81.UseVisualStyleBackColor = false;
+            this.button81.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button82
             // 
@@ -1407,6 +1453,7 @@
             this.button82.Text = "C8";
             this.Info_Posto.SetToolTip(this.button82, "Settore C \r\nPosto C8\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button82.UseVisualStyleBackColor = false;
+            this.button82.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button83
             // 
@@ -1420,6 +1467,7 @@
             this.button83.Text = "C5";
             this.Info_Posto.SetToolTip(this.button83, "Settore C\r\nPosto C5\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button83.UseVisualStyleBackColor = false;
+            this.button83.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button84
             // 
@@ -1433,6 +1481,7 @@
             this.button84.Text = "B8";
             this.Info_Posto.SetToolTip(this.button84, "Settore C\r\nPosto B8\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button84.UseVisualStyleBackColor = false;
+            this.button84.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button85
             // 
@@ -1446,6 +1495,7 @@
             this.button85.Text = "A8";
             this.Info_Posto.SetToolTip(this.button85, "Settore C\r\nPosto A8\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button85.UseVisualStyleBackColor = false;
+            this.button85.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button86
             // 
@@ -1459,6 +1509,7 @@
             this.button86.Text = "B5";
             this.Info_Posto.SetToolTip(this.button86, "Settore C\r\nPosto B5\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button86.UseVisualStyleBackColor = false;
+            this.button86.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button87
             // 
@@ -1472,6 +1523,7 @@
             this.button87.Text = "D7";
             this.Info_Posto.SetToolTip(this.button87, "Settore C \r\nPosto D7\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button87.UseVisualStyleBackColor = false;
+            this.button87.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button88
             // 
@@ -1485,6 +1537,7 @@
             this.button88.Text = "A5";
             this.Info_Posto.SetToolTip(this.button88, "Settore C\r\nPosto A5\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button88.UseVisualStyleBackColor = false;
+            this.button88.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button89
             // 
@@ -1498,6 +1551,7 @@
             this.button89.Text = "C7";
             this.Info_Posto.SetToolTip(this.button89, "Settore C\r\nPosto C7\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button89.UseVisualStyleBackColor = false;
+            this.button89.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button90
             // 
@@ -1511,6 +1565,7 @@
             this.button90.Text = "D4";
             this.Info_Posto.SetToolTip(this.button90, "Settore C\r\nPosto D4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button90.UseVisualStyleBackColor = false;
+            this.button90.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button91
             // 
@@ -1524,6 +1579,7 @@
             this.button91.Text = "B7";
             this.Info_Posto.SetToolTip(this.button91, "Settore C\r\nPosto B7\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button91.UseVisualStyleBackColor = false;
+            this.button91.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button92
             // 
@@ -1537,6 +1593,7 @@
             this.button92.Text = "C4";
             this.Info_Posto.SetToolTip(this.button92, "Settore C\r\nPosto C4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button92.UseVisualStyleBackColor = false;
+            this.button92.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button93
             // 
@@ -1550,6 +1607,7 @@
             this.button93.Text = "A7";
             this.Info_Posto.SetToolTip(this.button93, "Settore C\r\nPosto A7\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button93.UseVisualStyleBackColor = false;
+            this.button93.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button94
             // 
@@ -1563,6 +1621,7 @@
             this.button94.Text = "B4";
             this.Info_Posto.SetToolTip(this.button94, "Settore C\r\nPosto B4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button94.UseVisualStyleBackColor = false;
+            this.button94.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button95
             // 
@@ -1576,6 +1635,7 @@
             this.button95.Text = "A4";
             this.Info_Posto.SetToolTip(this.button95, "Settore C\r\nPosto A4\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button95.UseVisualStyleBackColor = false;
+            this.button95.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button96
             // 
@@ -1589,6 +1649,7 @@
             this.button96.Text = "D3";
             this.Info_Posto.SetToolTip(this.button96, "Settore C\r\nPosto D3 \r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button96.UseVisualStyleBackColor = false;
+            this.button96.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button97
             // 
@@ -1602,6 +1663,7 @@
             this.button97.Text = "C3";
             this.Info_Posto.SetToolTip(this.button97, "Settore C\r\nPosto C3\r\nTipologia - Normale\r\nCosto - 20€");
             this.button97.UseVisualStyleBackColor = false;
+            this.button97.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button98
             // 
@@ -1615,6 +1677,7 @@
             this.button98.Text = "B3";
             this.Info_Posto.SetToolTip(this.button98, "Settore C\r\nPosto B3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button98.UseVisualStyleBackColor = false;
+            this.button98.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button99
             // 
@@ -1628,6 +1691,7 @@
             this.button99.Text = "A3";
             this.Info_Posto.SetToolTip(this.button99, "Settore C\r\nPosto A3\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button99.UseVisualStyleBackColor = false;
+            this.button99.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button100
             // 
@@ -1641,6 +1705,7 @@
             this.button100.Text = "D2";
             this.Info_Posto.SetToolTip(this.button100, "Settore C\r\nPosto D2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button100.UseVisualStyleBackColor = false;
+            this.button100.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button101
             // 
@@ -1654,6 +1719,7 @@
             this.button101.Text = "C2";
             this.Info_Posto.SetToolTip(this.button101, "Settore C\r\nPosto C2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button101.UseVisualStyleBackColor = false;
+            this.button101.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button102
             // 
@@ -1667,6 +1733,7 @@
             this.button102.Text = "B2";
             this.Info_Posto.SetToolTip(this.button102, "Settore C\r\nPosto B2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button102.UseVisualStyleBackColor = false;
+            this.button102.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button103
             // 
@@ -1680,6 +1747,7 @@
             this.button103.Text = "A2";
             this.Info_Posto.SetToolTip(this.button103, "Settore C\r\nPosto A2\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button103.UseVisualStyleBackColor = false;
+            this.button103.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button104
             // 
@@ -1693,6 +1761,7 @@
             this.button104.Text = "D1";
             this.Info_Posto.SetToolTip(this.button104, "Settore C\r\nPosto A4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button104.UseVisualStyleBackColor = false;
+            this.button104.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button105
             // 
@@ -1706,6 +1775,7 @@
             this.button105.Text = "C1";
             this.Info_Posto.SetToolTip(this.button105, "Settore C\r\nPosto C1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button105.UseVisualStyleBackColor = false;
+            this.button105.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button106
             // 
@@ -1719,6 +1789,7 @@
             this.button106.Text = "B1";
             this.Info_Posto.SetToolTip(this.button106, "Settore C\r\nPosto A2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button106.UseVisualStyleBackColor = false;
+            this.button106.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button107
             // 
@@ -1732,6 +1803,7 @@
             this.button107.Text = "A1";
             this.Info_Posto.SetToolTip(this.button107, "Settore C\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button107.UseVisualStyleBackColor = false;
+            this.button107.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // panel3
             // 
@@ -1792,6 +1864,7 @@
             this.button2.Text = "J4";
             this.Info_Posto.SetToolTip(this.button2, "Settore B\r\nPosto J4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button3
             // 
@@ -1805,6 +1878,7 @@
             this.button3.Text = "J3";
             this.Info_Posto.SetToolTip(this.button3, "Settore B\r\nPosto J3 \n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button4
             // 
@@ -1818,6 +1892,7 @@
             this.button4.Text = "J2";
             this.Info_Posto.SetToolTip(this.button4, "Settore B\r\nPosto J2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button6
             // 
@@ -1831,6 +1906,7 @@
             this.button6.Text = "J1";
             this.Info_Posto.SetToolTip(this.button6, "Settore B\r\nPosto J1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button7
             // 
@@ -1844,6 +1920,7 @@
             this.button7.Text = "I4";
             this.Info_Posto.SetToolTip(this.button7, "Settore B\r\nPosto I4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button8
             // 
@@ -1857,6 +1934,7 @@
             this.button8.Text = "F4";
             this.Info_Posto.SetToolTip(this.button8, "Settore B\r\nPosto F4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button9
             // 
@@ -1870,6 +1948,7 @@
             this.button9.Text = "I3";
             this.Info_Posto.SetToolTip(this.button9, "Settore B\r\nPosto I3 \r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button19
             // 
@@ -1883,6 +1962,7 @@
             this.button19.Text = "F3";
             this.Info_Posto.SetToolTip(this.button19, "Settore B\r\nPosto F3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button20
             // 
@@ -1896,6 +1976,7 @@
             this.button20.Text = "I2";
             this.Info_Posto.SetToolTip(this.button20, "Settore B\r\nPosto I2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button37
             // 
@@ -1909,6 +1990,7 @@
             this.button37.Text = "F2";
             this.Info_Posto.SetToolTip(this.button37, "Settore B\r\nPosto F2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button37.UseVisualStyleBackColor = false;
+            this.button37.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button38
             // 
@@ -1922,6 +2004,7 @@
             this.button38.Text = "I1";
             this.Info_Posto.SetToolTip(this.button38, "Settore B\r\nPosto I1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button38.UseVisualStyleBackColor = false;
+            this.button38.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button39
             // 
@@ -1935,6 +2018,7 @@
             this.button39.Text = "F1";
             this.Info_Posto.SetToolTip(this.button39, "Settore B \r\nPosto F1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button39.UseVisualStyleBackColor = false;
+            this.button39.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button40
             // 
@@ -1948,6 +2032,7 @@
             this.button40.Text = "H4";
             this.Info_Posto.SetToolTip(this.button40, "Settore B\r\nPosto H4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button40.UseVisualStyleBackColor = false;
+            this.button40.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button41
             // 
@@ -1961,6 +2046,7 @@
             this.button41.Text = "E4";
             this.Info_Posto.SetToolTip(this.button41, "Settore B \r\nPosto E4 \r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button41.UseVisualStyleBackColor = false;
+            this.button41.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button42
             // 
@@ -1974,6 +2060,7 @@
             this.button42.Text = "H3";
             this.Info_Posto.SetToolTip(this.button42, "Settore B \r\nPosto H3 \r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button42.UseVisualStyleBackColor = false;
+            this.button42.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button43
             // 
@@ -1987,6 +2074,7 @@
             this.button43.Text = "E3";
             this.Info_Posto.SetToolTip(this.button43, "Settore B\r\nPosto E3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button43.UseVisualStyleBackColor = false;
+            this.button43.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button44
             // 
@@ -2000,6 +2088,7 @@
             this.button44.Text = "H2";
             this.Info_Posto.SetToolTip(this.button44, "Settore B\r\nPosto H2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button44.UseVisualStyleBackColor = false;
+            this.button44.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button45
             // 
@@ -2013,6 +2102,7 @@
             this.button45.Text = "H1";
             this.Info_Posto.SetToolTip(this.button45, "Settore B\r\nPosto H1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button45.UseVisualStyleBackColor = false;
+            this.button45.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button46
             // 
@@ -2026,6 +2116,7 @@
             this.button46.Text = "E2";
             this.Info_Posto.SetToolTip(this.button46, "Settore B\r\nPosto E2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button46.UseVisualStyleBackColor = false;
+            this.button46.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button47
             // 
@@ -2039,6 +2130,7 @@
             this.button47.Text = "G4";
             this.Info_Posto.SetToolTip(this.button47, "Settore B\r\nPosto G4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button47.UseVisualStyleBackColor = false;
+            this.button47.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button48
             // 
@@ -2052,6 +2144,7 @@
             this.button48.Text = "E1";
             this.Info_Posto.SetToolTip(this.button48, "Settore B\r\nPosto E1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button48.UseVisualStyleBackColor = false;
+            this.button48.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button49
             // 
@@ -2065,6 +2158,7 @@
             this.button49.Text = "G3";
             this.Info_Posto.SetToolTip(this.button49, "Settore B\r\nPosto G3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button49.UseVisualStyleBackColor = false;
+            this.button49.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button50
             // 
@@ -2078,6 +2172,7 @@
             this.button50.Text = "D4";
             this.Info_Posto.SetToolTip(this.button50, "Settore B\r\nPosto D4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button50.UseVisualStyleBackColor = false;
+            this.button50.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button51
             // 
@@ -2091,6 +2186,7 @@
             this.button51.Text = "G2";
             this.Info_Posto.SetToolTip(this.button51, "Settore B\r\nPosto G2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button51.UseVisualStyleBackColor = false;
+            this.button51.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button52
             // 
@@ -2104,6 +2200,7 @@
             this.button52.Text = "D3";
             this.Info_Posto.SetToolTip(this.button52, "Settore B\r\nPosto D3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button52.UseVisualStyleBackColor = false;
+            this.button52.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button53
             // 
@@ -2117,6 +2214,7 @@
             this.button53.Text = "G1";
             this.Info_Posto.SetToolTip(this.button53, "Settore B Posto G1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button53.UseVisualStyleBackColor = false;
+            this.button53.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button54
             // 
@@ -2130,6 +2228,7 @@
             this.button54.Text = "D2";
             this.Info_Posto.SetToolTip(this.button54, "Settore B\r\nPosto D2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button54.UseVisualStyleBackColor = false;
+            this.button54.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button55
             // 
@@ -2143,6 +2242,7 @@
             this.button55.Text = "D1";
             this.Info_Posto.SetToolTip(this.button55, "Settore B\r\nPosto D1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button55.UseVisualStyleBackColor = false;
+            this.button55.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button56
             // 
@@ -2156,6 +2256,7 @@
             this.button56.Text = "C4";
             this.Info_Posto.SetToolTip(this.button56, "Settore B\r\nPosto C4 \r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button56.UseVisualStyleBackColor = false;
+            this.button56.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button57
             // 
@@ -2169,6 +2270,7 @@
             this.button57.Text = "C3";
             this.Info_Posto.SetToolTip(this.button57, "Settore B\r\nPosto C3\nTipologia - Normale\r\nCosto - 20€");
             this.button57.UseVisualStyleBackColor = false;
+            this.button57.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button58
             // 
@@ -2182,6 +2284,7 @@
             this.button58.Text = "C2";
             this.Info_Posto.SetToolTip(this.button58, "Settore B\r\nPosto C2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button58.UseVisualStyleBackColor = false;
+            this.button58.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button59
             // 
@@ -2195,6 +2298,7 @@
             this.button59.Text = "C1";
             this.Info_Posto.SetToolTip(this.button59, "Settore B\r\nPosto C1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button59.UseVisualStyleBackColor = false;
+            this.button59.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button60
             // 
@@ -2208,6 +2312,7 @@
             this.button60.Text = "B4";
             this.Info_Posto.SetToolTip(this.button60, "Settore B\r\nPosto B4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button60.UseVisualStyleBackColor = false;
+            this.button60.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button61
             // 
@@ -2221,6 +2326,7 @@
             this.button61.Text = "B3";
             this.Info_Posto.SetToolTip(this.button61, "Settore B\r\nPosto B3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button61.UseVisualStyleBackColor = false;
+            this.button61.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button62
             // 
@@ -2234,6 +2340,7 @@
             this.button62.Text = "B2";
             this.Info_Posto.SetToolTip(this.button62, "Settore B\r\nPosto B2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button62.UseVisualStyleBackColor = false;
+            this.button62.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button63
             // 
@@ -2247,6 +2354,7 @@
             this.button63.Text = "B1";
             this.Info_Posto.SetToolTip(this.button63, "Settore B\r\nPosto B1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button63.UseVisualStyleBackColor = false;
+            this.button63.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button64
             // 
@@ -2260,6 +2368,7 @@
             this.button64.Text = "A4";
             this.Info_Posto.SetToolTip(this.button64, "Settore B\r\nPosto A4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button64.UseVisualStyleBackColor = false;
+            this.button64.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button65
             // 
@@ -2273,6 +2382,7 @@
             this.button65.Text = "A3";
             this.Info_Posto.SetToolTip(this.button65, "Settore B\r\nPosto A3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button65.UseVisualStyleBackColor = false;
+            this.button65.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button66
             // 
@@ -2286,6 +2396,7 @@
             this.button66.Text = "A2";
             this.Info_Posto.SetToolTip(this.button66, "Settore B\r\nPosto A2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button66.UseVisualStyleBackColor = false;
+            this.button66.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button67
             // 
@@ -2299,6 +2410,7 @@
             this.button67.Text = "A1";
             this.Info_Posto.SetToolTip(this.button67, "Settore B\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button67.UseVisualStyleBackColor = false;
+            this.button67.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button1
             // 
@@ -2311,6 +2423,7 @@
             this.button1.Text = "Prato";
             this.Info_Posto.SetToolTip(this.button1, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - Prato\r\nCosto - 15€");
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // Settore_E
             // 
@@ -2371,6 +2484,7 @@
             this.button157.Text = "B4";
             this.Info_Posto.SetToolTip(this.button157, "Settore E\r\nPosto B4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button157.UseVisualStyleBackColor = false;
+            this.button157.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button158
             // 
@@ -2384,6 +2498,7 @@
             this.button158.Text = "B3";
             this.Info_Posto.SetToolTip(this.button158, "Settore E\r\nPosto B3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button158.UseVisualStyleBackColor = false;
+            this.button158.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button159
             // 
@@ -2397,6 +2512,7 @@
             this.button159.Text = "B2";
             this.Info_Posto.SetToolTip(this.button159, "Settore E\r\nPosto A2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button159.UseVisualStyleBackColor = false;
+            this.button159.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button160
             // 
@@ -2410,6 +2526,7 @@
             this.button160.Text = "B1";
             this.Info_Posto.SetToolTip(this.button160, "Settore E\r\nPosto B1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button160.UseVisualStyleBackColor = false;
+            this.button160.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button161
             // 
@@ -2423,6 +2540,7 @@
             this.button161.Text = "A4";
             this.Info_Posto.SetToolTip(this.button161, "Settore E\r\nPosto A4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button161.UseVisualStyleBackColor = false;
+            this.button161.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button162
             // 
@@ -2436,6 +2554,7 @@
             this.button162.Text = "D3";
             this.Info_Posto.SetToolTip(this.button162, "Settore E\r\nPosto D3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button162.UseVisualStyleBackColor = false;
+            this.button162.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button163
             // 
@@ -2449,6 +2568,7 @@
             this.button163.Text = "D1";
             this.Info_Posto.SetToolTip(this.button163, "Settore E\r\nPosto D1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button163.UseVisualStyleBackColor = false;
+            this.button163.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button164
             // 
@@ -2462,6 +2582,7 @@
             this.button164.Text = "A3";
             this.Info_Posto.SetToolTip(this.button164, "Settore E\r\nPosto A3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button164.UseVisualStyleBackColor = false;
+            this.button164.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button165
             // 
@@ -2475,6 +2596,7 @@
             this.button165.Text = "D2";
             this.Info_Posto.SetToolTip(this.button165, "Settore E\r\nPosto D2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button165.UseVisualStyleBackColor = false;
+            this.button165.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button166
             // 
@@ -2488,6 +2610,7 @@
             this.button166.Text = "A2";
             this.Info_Posto.SetToolTip(this.button166, "Settore E\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button166.UseVisualStyleBackColor = false;
+            this.button166.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button167
             // 
@@ -2501,6 +2624,7 @@
             this.button167.Text = "D4";
             this.Info_Posto.SetToolTip(this.button167, "Settore E\r\nPosto D4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button167.UseVisualStyleBackColor = false;
+            this.button167.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button168
             // 
@@ -2514,6 +2638,7 @@
             this.button168.Text = "A1";
             this.Info_Posto.SetToolTip(this.button168, "Settore E\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button168.UseVisualStyleBackColor = false;
+            this.button168.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button169
             // 
@@ -2527,6 +2652,7 @@
             this.button169.Text = "J4";
             this.Info_Posto.SetToolTip(this.button169, "Settore E\r\nPosto J4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button169.UseVisualStyleBackColor = false;
+            this.button169.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button170
             // 
@@ -2540,6 +2666,7 @@
             this.button170.Text = "J3";
             this.Info_Posto.SetToolTip(this.button170, "Settore E\r\nPosto J3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button170.UseVisualStyleBackColor = false;
+            this.button170.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button171
             // 
@@ -2553,6 +2680,7 @@
             this.button171.Text = "J2";
             this.Info_Posto.SetToolTip(this.button171, "Settore E\r\nPosto J2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button171.UseVisualStyleBackColor = false;
+            this.button171.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button172
             // 
@@ -2566,6 +2694,7 @@
             this.button172.Text = "J1";
             this.Info_Posto.SetToolTip(this.button172, "Settore E\r\nPosto J1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button172.UseVisualStyleBackColor = false;
+            this.button172.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button173
             // 
@@ -2579,6 +2708,7 @@
             this.button173.Text = "I4";
             this.Info_Posto.SetToolTip(this.button173, "Settore E\r\nPosto I4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button173.UseVisualStyleBackColor = false;
+            this.button173.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button174
             // 
@@ -2592,6 +2722,7 @@
             this.button174.Text = "F4";
             this.Info_Posto.SetToolTip(this.button174, "Settore E\r\nPosto F4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button174.UseVisualStyleBackColor = false;
+            this.button174.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button175
             // 
@@ -2605,6 +2736,7 @@
             this.button175.Text = "I3";
             this.Info_Posto.SetToolTip(this.button175, "Settore E\r\nPosto I3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button175.UseVisualStyleBackColor = false;
+            this.button175.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button176
             // 
@@ -2618,6 +2750,7 @@
             this.button176.Text = "I2";
             this.Info_Posto.SetToolTip(this.button176, "Settore E\r\nPosto I2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button176.UseVisualStyleBackColor = false;
+            this.button176.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button177
             // 
@@ -2631,6 +2764,7 @@
             this.button177.Text = "F3";
             this.Info_Posto.SetToolTip(this.button177, "Settore E\r\nPosto F3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button177.UseVisualStyleBackColor = false;
+            this.button177.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button178
             // 
@@ -2644,6 +2778,7 @@
             this.button178.Text = "I1";
             this.Info_Posto.SetToolTip(this.button178, "Settore E\r\nPosto I1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button178.UseVisualStyleBackColor = false;
+            this.button178.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button179
             // 
@@ -2657,6 +2792,7 @@
             this.button179.Text = "F2";
             this.Info_Posto.SetToolTip(this.button179, "Settore E\r\nPosto F2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button179.UseVisualStyleBackColor = false;
+            this.button179.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button180
             // 
@@ -2670,6 +2806,7 @@
             this.button180.Text = "F1";
             this.Info_Posto.SetToolTip(this.button180, "Settore E\r\nPosto F1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button180.UseVisualStyleBackColor = false;
+            this.button180.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button181
             // 
@@ -2683,6 +2820,7 @@
             this.button181.Text = "H4";
             this.Info_Posto.SetToolTip(this.button181, "Settore E\r\nPosto H4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button181.UseVisualStyleBackColor = false;
+            this.button181.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button182
             // 
@@ -2696,6 +2834,7 @@
             this.button182.Text = "E4";
             this.Info_Posto.SetToolTip(this.button182, "Settore E\r\nPosto E4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button182.UseVisualStyleBackColor = false;
+            this.button182.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button183
             // 
@@ -2709,6 +2848,7 @@
             this.button183.Text = "H3";
             this.Info_Posto.SetToolTip(this.button183, "Settore E\r\nPosto H3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button183.UseVisualStyleBackColor = false;
+            this.button183.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button184
             // 
@@ -2722,6 +2862,7 @@
             this.button184.Text = "E3";
             this.Info_Posto.SetToolTip(this.button184, "Settore E\r\nPosto E3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button184.UseVisualStyleBackColor = false;
+            this.button184.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button185
             // 
@@ -2735,6 +2876,7 @@
             this.button185.Text = "H2";
             this.Info_Posto.SetToolTip(this.button185, "Settore E\r\nPosto H2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button185.UseVisualStyleBackColor = false;
+            this.button185.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button186
             // 
@@ -2748,6 +2890,7 @@
             this.button186.Text = "H1";
             this.Info_Posto.SetToolTip(this.button186, "Settore E\r\nPosto H1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button186.UseVisualStyleBackColor = false;
+            this.button186.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button187
             // 
@@ -2761,6 +2904,7 @@
             this.button187.Text = "E2";
             this.Info_Posto.SetToolTip(this.button187, "Settore E\r\nPosto E2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button187.UseVisualStyleBackColor = false;
+            this.button187.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button188
             // 
@@ -2774,6 +2918,7 @@
             this.button188.Text = "G4";
             this.Info_Posto.SetToolTip(this.button188, "Settore E\r\nPosto G4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button188.UseVisualStyleBackColor = false;
+            this.button188.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button189
             // 
@@ -2787,6 +2932,7 @@
             this.button189.Text = "E1";
             this.Info_Posto.SetToolTip(this.button189, "Settore E\r\nPosto E1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button189.UseVisualStyleBackColor = false;
+            this.button189.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button190
             // 
@@ -2800,6 +2946,7 @@
             this.button190.Text = "G3";
             this.Info_Posto.SetToolTip(this.button190, "Settore E\r\nPosto G3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button190.UseVisualStyleBackColor = false;
+            this.button190.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button191
             // 
@@ -2813,6 +2960,7 @@
             this.button191.Text = "G2";
             this.Info_Posto.SetToolTip(this.button191, "Settore E\r\nPosto G2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button191.UseVisualStyleBackColor = false;
+            this.button191.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button192
             // 
@@ -2826,6 +2974,7 @@
             this.button192.Text = "G1";
             this.Info_Posto.SetToolTip(this.button192, "Settore E\r\nPosto G1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button192.UseVisualStyleBackColor = false;
+            this.button192.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button193
             // 
@@ -2839,6 +2988,7 @@
             this.button193.Text = "C4";
             this.Info_Posto.SetToolTip(this.button193, "Settore E\r\nPosto C4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button193.UseVisualStyleBackColor = false;
+            this.button193.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button194
             // 
@@ -2852,6 +3002,7 @@
             this.button194.Text = "C3";
             this.Info_Posto.SetToolTip(this.button194, "Settore E\r\nPosto C3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button194.UseVisualStyleBackColor = false;
+            this.button194.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button195
             // 
@@ -2865,6 +3016,7 @@
             this.button195.Text = "C2";
             this.Info_Posto.SetToolTip(this.button195, "Settore E\r\nPosto C2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button195.UseVisualStyleBackColor = false;
+            this.button195.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button196
             // 
@@ -2878,6 +3030,7 @@
             this.button196.Text = "C1";
             this.Info_Posto.SetToolTip(this.button196, "Settore E\r\nPosto C1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button196.UseVisualStyleBackColor = false;
+            this.button196.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // Settore_A
             // 
@@ -3505,29 +3658,6 @@
             this.Info_Spettacolo.IsBalloon = true;
             this.Info_Spettacolo.ToolTipTitle = "Info Spettacolo";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(590, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(548, 476);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Titolo";
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -3568,15 +3698,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).EndInit();
             this.Pannello_Posti.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.Pgn_Informazioni.ResumeLayout(false);
-            this.Pgn_Informazioni.PerformLayout();
             this.Pgn_SelezionePosti.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.Settore_E.ResumeLayout(false);
             this.Settore_A.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3819,9 +3946,6 @@
         private System.Windows.Forms.Button button146;
         private System.Windows.Forms.Button button147;
         private System.Windows.Forms.Button button148;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 

@@ -35,12 +35,13 @@ namespace Biglietti_concerto
         {
             Button btn = (Button)sender;
 
-            if(btn.BackColor == Color.Yellow)
+            if (btn.BackColor == Color.Yellow)
             {
-                btn.BackColor = Color.White;
+
             }
             else
             {
+                
                 btn.BackColor = Color.Yellow;
                 string test = $"{btn.Parent.Name}\n\nPosto: {btn.Text}";
                 MessageBox.Show(test);
