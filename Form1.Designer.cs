@@ -41,7 +41,6 @@
             this.img_GIORGIAFUMO = new System.Windows.Forms.PictureBox();
             this.Img_PROVAAPRENDERMI = new System.Windows.Forms.PictureBox();
             this.Img_BALLOONMUSEUM = new System.Windows.Forms.PictureBox();
-            this.Img_ARTOFPLAY = new System.Windows.Forms.PictureBox();
             this.Img_TIMBURTON = new System.Windows.Forms.PictureBox();
             this.Pannello_Principale = new System.Windows.Forms.Panel();
             this.Pannello_InEvidenza = new System.Windows.Forms.Panel();
@@ -54,9 +53,13 @@
             this.Pannello_Posti = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Pgn_Informazioni = new System.Windows.Forms.TabPage();
+            this.Img_Info = new System.Windows.Forms.PictureBox();
+            this.TitoloArtista = new System.Windows.Forms.GroupBox();
+            this.Artista_Lbl = new System.Windows.Forms.Label();
+            this.TitoloSpettacolo_Lbl = new System.Windows.Forms.Label();
             this.Pgn_SelezionePosti = new System.Windows.Forms.TabPage();
-            this.button148 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.Prato_VIP = new System.Windows.Forms.Button();
+            this.Settore_D = new System.Windows.Forms.Panel();
             this.button108 = new System.Windows.Forms.Button();
             this.button109 = new System.Windows.Forms.Button();
             this.button110 = new System.Windows.Forms.Button();
@@ -97,7 +100,7 @@
             this.button145 = new System.Windows.Forms.Button();
             this.button146 = new System.Windows.Forms.Button();
             this.button147 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.Settore_C = new System.Windows.Forms.Panel();
             this.button68 = new System.Windows.Forms.Button();
             this.button69 = new System.Windows.Forms.Button();
             this.button70 = new System.Windows.Forms.Button();
@@ -138,7 +141,7 @@
             this.button105 = new System.Windows.Forms.Button();
             this.button106 = new System.Windows.Forms.Button();
             this.button107 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.Settore_B = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -179,7 +182,7 @@
             this.button65 = new System.Windows.Forms.Button();
             this.button66 = new System.Windows.Forms.Button();
             this.button67 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Prato = new System.Windows.Forms.Button();
             this.Settore_E = new System.Windows.Forms.Panel();
             this.button157 = new System.Windows.Forms.Button();
             this.button158 = new System.Windows.Forms.Button();
@@ -262,7 +265,8 @@
             this.A_A3 = new System.Windows.Forms.Button();
             this.A_A2 = new System.Windows.Forms.Button();
             this.A_A1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Palco = new System.Windows.Forms.Label();
+            this.Info_Error = new System.Windows.Forms.Label();
             this.Info_Posto = new System.Windows.Forms.ToolTip(this.components);
             this.Info_Spettacolo = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
@@ -277,7 +281,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.img_GIORGIAFUMO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_PROVAAPRENDERMI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_BALLOONMUSEUM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_ARTOFPLAY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_TIMBURTON)).BeginInit();
             this.Pannello_Principale.SuspendLayout();
             this.Pannello_InEvidenza.SuspendLayout();
@@ -288,10 +291,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).BeginInit();
             this.Pannello_Posti.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.Pgn_Informazioni.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).BeginInit();
+            this.TitoloArtista.SuspendLayout();
             this.Pgn_SelezionePosti.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.Settore_D.SuspendLayout();
+            this.Settore_C.SuspendLayout();
+            this.Settore_B.SuspendLayout();
             this.Settore_E.SuspendLayout();
             this.Settore_A.SuspendLayout();
             this.SuspendLayout();
@@ -318,7 +324,7 @@
             // TickeTlon
             // 
             this.TickeTlon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TickeTlon.Image = global::Biglietti_concerto.Properties.Resources.TickeTlon;
+            this.TickeTlon.Image = global::Biglietti_concerto.Properties;
             this.TickeTlon.Location = new System.Drawing.Point(364, 3);
             this.TickeTlon.Name = "TickeTlon";
             this.TickeTlon.Size = new System.Drawing.Size(441, 54);
@@ -356,7 +362,6 @@
             this.panel2.Controls.Add(this.img_GIORGIAFUMO);
             this.panel2.Controls.Add(this.Img_PROVAAPRENDERMI);
             this.panel2.Controls.Add(this.Img_BALLOONMUSEUM);
-            this.panel2.Controls.Add(this.Img_ARTOFPLAY);
             this.panel2.Controls.Add(this.Img_TIMBURTON);
             this.panel2.Location = new System.Drawing.Point(647, 0);
             this.panel2.Name = "panel2";
@@ -365,17 +370,16 @@
             // 
             // Img_BLACKPINK
             // 
-            this.Img_BLACKPINK.Image = global::Biglietti_concerto.Properties.Resources.blackpink_biglietti;
             this.Img_BLACKPINK.Location = new System.Drawing.Point(818, 212);
             this.Img_BLACKPINK.Name = "Img_BLACKPINK";
             this.Img_BLACKPINK.Size = new System.Drawing.Size(157, 200);
             this.Img_BLACKPINK.TabIndex = 18;
             this.Img_BLACKPINK.TabStop = false;
+            this.Img_BLACKPINK.Tag = "";
             this.Img_BLACKPINK.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_WONDERJIMMY
             // 
-            this.Img_WONDERJIMMY.Image = global::Biglietti_concerto.Properties.Resources.jimmy_sax_biglietti;
             this.Img_WONDERJIMMY.Location = new System.Drawing.Point(655, 212);
             this.Img_WONDERJIMMY.Name = "Img_WONDERJIMMY";
             this.Img_WONDERJIMMY.Size = new System.Drawing.Size(157, 200);
@@ -385,7 +389,6 @@
             // 
             // Img_MORRISSEY
             // 
-            this.Img_MORRISSEY.Image = global::Biglietti_concerto.Properties.Resources.morrissey_biglietti;
             this.Img_MORRISSEY.Location = new System.Drawing.Point(655, 6);
             this.Img_MORRISSEY.Name = "Img_MORRISSEY";
             this.Img_MORRISSEY.Size = new System.Drawing.Size(320, 200);
@@ -395,7 +398,6 @@
             // 
             // Img_INTELLIGENZANATURALE
             // 
-            this.Img_INTELLIGENZANATURALE.Image = global::Biglietti_concerto.Properties.Resources.andrea_pezzi_intelligenza_naturale_2;
             this.Img_INTELLIGENZANATURALE.Location = new System.Drawing.Point(492, 212);
             this.Img_INTELLIGENZANATURALE.Name = "Img_INTELLIGENZANATURALE";
             this.Img_INTELLIGENZANATURALE.Size = new System.Drawing.Size(157, 200);
@@ -405,7 +407,6 @@
             // 
             // img_GIORGIAFUMO
             // 
-            this.img_GIORGIAFUMO.Image = global::Biglietti_concerto.Properties.Resources.giorgia_fumo_biglietti;
             this.img_GIORGIAFUMO.Location = new System.Drawing.Point(329, 212);
             this.img_GIORGIAFUMO.Name = "img_GIORGIAFUMO";
             this.img_GIORGIAFUMO.Size = new System.Drawing.Size(157, 200);
@@ -415,7 +416,6 @@
             // 
             // Img_PROVAAPRENDERMI
             // 
-            this.Img_PROVAAPRENDERMI.Image = global::Biglietti_concerto.Properties.Resources.prova_prendermi_biglietti;
             this.Img_PROVAAPRENDERMI.Location = new System.Drawing.Point(329, 6);
             this.Img_PROVAAPRENDERMI.Name = "Img_PROVAAPRENDERMI";
             this.Img_PROVAAPRENDERMI.Size = new System.Drawing.Size(320, 200);
@@ -425,7 +425,6 @@
             // 
             // Img_BALLOONMUSEUM
             // 
-            this.Img_BALLOONMUSEUM.Image = global::Biglietti_concerto.Properties.Resources.balloon_roma_biglietti_3;
             this.Img_BALLOONMUSEUM.Location = new System.Drawing.Point(3, 212);
             this.Img_BALLOONMUSEUM.Name = "Img_BALLOONMUSEUM";
             this.Img_BALLOONMUSEUM.Size = new System.Drawing.Size(320, 200);
@@ -433,19 +432,8 @@
             this.Img_BALLOONMUSEUM.TabStop = false;
             this.Img_BALLOONMUSEUM.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
-            // Img_ARTOFPLAY
-            // 
-            this.Img_ARTOFPLAY.Image = global::Biglietti_concerto.Properties.Resources.art_play_roma;
-            this.Img_ARTOFPLAY.Location = new System.Drawing.Point(166, 6);
-            this.Img_ARTOFPLAY.Name = "Img_ARTOFPLAY";
-            this.Img_ARTOFPLAY.Size = new System.Drawing.Size(157, 200);
-            this.Img_ARTOFPLAY.TabIndex = 11;
-            this.Img_ARTOFPLAY.TabStop = false;
-            this.Img_ARTOFPLAY.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
             // Img_TIMBURTON
             // 
-            this.Img_TIMBURTON.Image = global::Biglietti_concerto.Properties.Resources.tim_burton_milano;
             this.Img_TIMBURTON.Location = new System.Drawing.Point(3, 6);
             this.Img_TIMBURTON.Name = "Img_TIMBURTON";
             this.Img_TIMBURTON.Size = new System.Drawing.Size(157, 200);
@@ -483,6 +471,7 @@
             this.Img_LRDL.Size = new System.Drawing.Size(320, 198);
             this.Img_LRDL.TabIndex = 4;
             this.Img_LRDL.TabStop = false;
+            this.Img_LRDL.Tag = "La Rappresentante Di Lista";
             this.Info_Spettacolo.SetToolTip(this.Img_LRDL, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
         "Posti: 300");
             this.Img_LRDL.Click += new System.EventHandler(this.Spettacolo_Click);
@@ -495,6 +484,7 @@
             this.Img_SOPHIE.Size = new System.Drawing.Size(157, 200);
             this.Img_SOPHIE.TabIndex = 6;
             this.Img_SOPHIE.TabStop = false;
+            this.Img_SOPHIE.Tag = "Sophie & The Giants";
             this.Img_SOPHIE.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_TONYEFFE
@@ -505,6 +495,7 @@
             this.Img_TONYEFFE.Size = new System.Drawing.Size(318, 200);
             this.Img_TONYEFFE.TabIndex = 7;
             this.Img_TONYEFFE.TabStop = false;
+            this.Img_TONYEFFE.Tag = "Tony Effe";
             this.Img_TONYEFFE.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_GAMESINCONCERT
@@ -525,6 +516,7 @@
             this.Img_PALAJOVA.Size = new System.Drawing.Size(320, 200);
             this.Img_PALAJOVA.TabIndex = 5;
             this.Img_PALAJOVA.TabStop = false;
+            this.Img_PALAJOVA.Tag = "Jovanotti";
             this.Info_Spettacolo.SetToolTip(this.Img_PALAJOVA, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
         "Posti: 300\r\n");
             this.Img_PALAJOVA.Click += new System.EventHandler(this.Spettacolo_Click);
@@ -552,7 +544,9 @@
             // 
             // Pgn_Informazioni
             // 
-            this.Pgn_Informazioni.BackColor = System.Drawing.Color.SkyBlue;
+            this.Pgn_Informazioni.BackColor = System.Drawing.Color.Transparent;
+            this.Pgn_Informazioni.Controls.Add(this.Img_Info);
+            this.Pgn_Informazioni.Controls.Add(this.TitoloArtista);
             this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
@@ -560,16 +554,57 @@
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
+            // Img_Info
+            // 
+            this.Img_Info.Location = new System.Drawing.Point(582, 25);
+            this.Img_Info.Name = "Img_Info";
+            this.Img_Info.Size = new System.Drawing.Size(544, 351);
+            this.Img_Info.TabIndex = 1;
+            this.Img_Info.TabStop = false;
+            // 
+            // TitoloArtista
+            // 
+            this.TitoloArtista.Controls.Add(this.Artista_Lbl);
+            this.TitoloArtista.Controls.Add(this.TitoloSpettacolo_Lbl);
+            this.TitoloArtista.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitoloArtista.Location = new System.Drawing.Point(31, 31);
+            this.TitoloArtista.Name = "TitoloArtista";
+            this.TitoloArtista.Size = new System.Drawing.Size(545, 176);
+            this.TitoloArtista.TabIndex = 0;
+            this.TitoloArtista.TabStop = false;
+            this.TitoloArtista.Text = "Titolo e Artista";
+            // 
+            // Artista_Lbl
+            // 
+            this.Artista_Lbl.AutoSize = true;
+            this.Artista_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Artista_Lbl.Location = new System.Drawing.Point(8, 96);
+            this.Artista_Lbl.Name = "Artista_Lbl";
+            this.Artista_Lbl.Size = new System.Drawing.Size(55, 20);
+            this.Artista_Lbl.TabIndex = 1;
+            this.Artista_Lbl.Text = "Artista";
+            // 
+            // TitoloSpettacolo_Lbl
+            // 
+            this.TitoloSpettacolo_Lbl.AutoSize = true;
+            this.TitoloSpettacolo_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitoloSpettacolo_Lbl.Location = new System.Drawing.Point(7, 26);
+            this.TitoloSpettacolo_Lbl.Name = "TitoloSpettacolo_Lbl";
+            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(81, 29);
+            this.TitoloSpettacolo_Lbl.TabIndex = 0;
+            this.TitoloSpettacolo_Lbl.Text = "Titolo";
+            // 
             // Pgn_SelezionePosti
             // 
-            this.Pgn_SelezionePosti.Controls.Add(this.button148);
-            this.Pgn_SelezionePosti.Controls.Add(this.panel5);
-            this.Pgn_SelezionePosti.Controls.Add(this.panel4);
-            this.Pgn_SelezionePosti.Controls.Add(this.panel3);
-            this.Pgn_SelezionePosti.Controls.Add(this.button1);
+            this.Pgn_SelezionePosti.Controls.Add(this.Prato_VIP);
+            this.Pgn_SelezionePosti.Controls.Add(this.Settore_D);
+            this.Pgn_SelezionePosti.Controls.Add(this.Settore_C);
+            this.Pgn_SelezionePosti.Controls.Add(this.Settore_B);
+            this.Pgn_SelezionePosti.Controls.Add(this.Prato);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_E);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_A);
-            this.Pgn_SelezionePosti.Controls.Add(this.label1);
+            this.Pgn_SelezionePosti.Controls.Add(this.Palco);
+            this.Pgn_SelezionePosti.Controls.Add(this.Info_Error);
             this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
@@ -579,64 +614,66 @@
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
             this.Pgn_SelezionePosti.UseVisualStyleBackColor = true;
             // 
-            // button148
+            // Prato_VIP
             // 
-            this.button148.BackColor = System.Drawing.Color.Gold;
-            this.button148.Location = new System.Drawing.Point(466, 100);
-            this.button148.Name = "button148";
-            this.button148.Size = new System.Drawing.Size(212, 27);
-            this.button148.TabIndex = 38;
-            this.button148.Text = "Sotto Palco";
-            this.Info_Posto.SetToolTip(this.button148, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - VIP\r\nCosto - 60€");
-            this.button148.UseVisualStyleBackColor = false;
-            this.button148.Click += new System.EventHandler(this.PostoSelezionato_Click);
+            this.Prato_VIP.BackColor = System.Drawing.Color.Gold;
+            this.Prato_VIP.Location = new System.Drawing.Point(466, 100);
+            this.Prato_VIP.Name = "Prato_VIP";
+            this.Prato_VIP.Size = new System.Drawing.Size(212, 27);
+            this.Prato_VIP.TabIndex = 38;
+            this.Prato_VIP.Text = "Sotto Palco";
+            this.Info_Posto.SetToolTip(this.Prato_VIP, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - VIP\r\nCosto - 60€");
+            this.Prato_VIP.UseVisualStyleBackColor = false;
+            this.Prato_VIP.Visible = false;
+            this.Prato_VIP.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
-            // panel5
+            // Settore_D
             // 
-            this.panel5.Controls.Add(this.button108);
-            this.panel5.Controls.Add(this.button109);
-            this.panel5.Controls.Add(this.button110);
-            this.panel5.Controls.Add(this.button111);
-            this.panel5.Controls.Add(this.button112);
-            this.panel5.Controls.Add(this.button113);
-            this.panel5.Controls.Add(this.button114);
-            this.panel5.Controls.Add(this.button115);
-            this.panel5.Controls.Add(this.button116);
-            this.panel5.Controls.Add(this.button117);
-            this.panel5.Controls.Add(this.button118);
-            this.panel5.Controls.Add(this.button119);
-            this.panel5.Controls.Add(this.button120);
-            this.panel5.Controls.Add(this.button121);
-            this.panel5.Controls.Add(this.button122);
-            this.panel5.Controls.Add(this.button123);
-            this.panel5.Controls.Add(this.button124);
-            this.panel5.Controls.Add(this.button125);
-            this.panel5.Controls.Add(this.button126);
-            this.panel5.Controls.Add(this.button127);
-            this.panel5.Controls.Add(this.button128);
-            this.panel5.Controls.Add(this.button129);
-            this.panel5.Controls.Add(this.button130);
-            this.panel5.Controls.Add(this.button131);
-            this.panel5.Controls.Add(this.button132);
-            this.panel5.Controls.Add(this.button133);
-            this.panel5.Controls.Add(this.button134);
-            this.panel5.Controls.Add(this.button135);
-            this.panel5.Controls.Add(this.button136);
-            this.panel5.Controls.Add(this.button137);
-            this.panel5.Controls.Add(this.button138);
-            this.panel5.Controls.Add(this.button139);
-            this.panel5.Controls.Add(this.button140);
-            this.panel5.Controls.Add(this.button141);
-            this.panel5.Controls.Add(this.button142);
-            this.panel5.Controls.Add(this.button143);
-            this.panel5.Controls.Add(this.button144);
-            this.panel5.Controls.Add(this.button145);
-            this.panel5.Controls.Add(this.button146);
-            this.panel5.Controls.Add(this.button147);
-            this.panel5.Location = new System.Drawing.Point(773, 166);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(364, 118);
-            this.panel5.TabIndex = 37;
+            this.Settore_D.Controls.Add(this.button108);
+            this.Settore_D.Controls.Add(this.button109);
+            this.Settore_D.Controls.Add(this.button110);
+            this.Settore_D.Controls.Add(this.button111);
+            this.Settore_D.Controls.Add(this.button112);
+            this.Settore_D.Controls.Add(this.button113);
+            this.Settore_D.Controls.Add(this.button114);
+            this.Settore_D.Controls.Add(this.button115);
+            this.Settore_D.Controls.Add(this.button116);
+            this.Settore_D.Controls.Add(this.button117);
+            this.Settore_D.Controls.Add(this.button118);
+            this.Settore_D.Controls.Add(this.button119);
+            this.Settore_D.Controls.Add(this.button120);
+            this.Settore_D.Controls.Add(this.button121);
+            this.Settore_D.Controls.Add(this.button122);
+            this.Settore_D.Controls.Add(this.button123);
+            this.Settore_D.Controls.Add(this.button124);
+            this.Settore_D.Controls.Add(this.button125);
+            this.Settore_D.Controls.Add(this.button126);
+            this.Settore_D.Controls.Add(this.button127);
+            this.Settore_D.Controls.Add(this.button128);
+            this.Settore_D.Controls.Add(this.button129);
+            this.Settore_D.Controls.Add(this.button130);
+            this.Settore_D.Controls.Add(this.button131);
+            this.Settore_D.Controls.Add(this.button132);
+            this.Settore_D.Controls.Add(this.button133);
+            this.Settore_D.Controls.Add(this.button134);
+            this.Settore_D.Controls.Add(this.button135);
+            this.Settore_D.Controls.Add(this.button136);
+            this.Settore_D.Controls.Add(this.button137);
+            this.Settore_D.Controls.Add(this.button138);
+            this.Settore_D.Controls.Add(this.button139);
+            this.Settore_D.Controls.Add(this.button140);
+            this.Settore_D.Controls.Add(this.button141);
+            this.Settore_D.Controls.Add(this.button142);
+            this.Settore_D.Controls.Add(this.button143);
+            this.Settore_D.Controls.Add(this.button144);
+            this.Settore_D.Controls.Add(this.button145);
+            this.Settore_D.Controls.Add(this.button146);
+            this.Settore_D.Controls.Add(this.button147);
+            this.Settore_D.Location = new System.Drawing.Point(773, 166);
+            this.Settore_D.Name = "Settore_D";
+            this.Settore_D.Size = new System.Drawing.Size(364, 118);
+            this.Settore_D.TabIndex = 37;
+            this.Settore_D.Visible = false;
             // 
             // button108
             // 
@@ -1198,52 +1235,53 @@
             this.button147.UseVisualStyleBackColor = false;
             this.button147.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
-            // panel4
+            // Settore_C
             // 
-            this.panel4.Controls.Add(this.button68);
-            this.panel4.Controls.Add(this.button69);
-            this.panel4.Controls.Add(this.button70);
-            this.panel4.Controls.Add(this.button71);
-            this.panel4.Controls.Add(this.button72);
-            this.panel4.Controls.Add(this.button73);
-            this.panel4.Controls.Add(this.button74);
-            this.panel4.Controls.Add(this.button75);
-            this.panel4.Controls.Add(this.button76);
-            this.panel4.Controls.Add(this.button77);
-            this.panel4.Controls.Add(this.button78);
-            this.panel4.Controls.Add(this.button79);
-            this.panel4.Controls.Add(this.button80);
-            this.panel4.Controls.Add(this.button81);
-            this.panel4.Controls.Add(this.button82);
-            this.panel4.Controls.Add(this.button83);
-            this.panel4.Controls.Add(this.button84);
-            this.panel4.Controls.Add(this.button85);
-            this.panel4.Controls.Add(this.button86);
-            this.panel4.Controls.Add(this.button87);
-            this.panel4.Controls.Add(this.button88);
-            this.panel4.Controls.Add(this.button89);
-            this.panel4.Controls.Add(this.button90);
-            this.panel4.Controls.Add(this.button91);
-            this.panel4.Controls.Add(this.button92);
-            this.panel4.Controls.Add(this.button93);
-            this.panel4.Controls.Add(this.button94);
-            this.panel4.Controls.Add(this.button95);
-            this.panel4.Controls.Add(this.button96);
-            this.panel4.Controls.Add(this.button97);
-            this.panel4.Controls.Add(this.button98);
-            this.panel4.Controls.Add(this.button99);
-            this.panel4.Controls.Add(this.button100);
-            this.panel4.Controls.Add(this.button101);
-            this.panel4.Controls.Add(this.button102);
-            this.panel4.Controls.Add(this.button103);
-            this.panel4.Controls.Add(this.button104);
-            this.panel4.Controls.Add(this.button105);
-            this.panel4.Controls.Add(this.button106);
-            this.panel4.Controls.Add(this.button107);
-            this.panel4.Location = new System.Drawing.Point(390, 291);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(364, 118);
-            this.panel4.TabIndex = 29;
+            this.Settore_C.Controls.Add(this.button68);
+            this.Settore_C.Controls.Add(this.button69);
+            this.Settore_C.Controls.Add(this.button70);
+            this.Settore_C.Controls.Add(this.button71);
+            this.Settore_C.Controls.Add(this.button72);
+            this.Settore_C.Controls.Add(this.button73);
+            this.Settore_C.Controls.Add(this.button74);
+            this.Settore_C.Controls.Add(this.button75);
+            this.Settore_C.Controls.Add(this.button76);
+            this.Settore_C.Controls.Add(this.button77);
+            this.Settore_C.Controls.Add(this.button78);
+            this.Settore_C.Controls.Add(this.button79);
+            this.Settore_C.Controls.Add(this.button80);
+            this.Settore_C.Controls.Add(this.button81);
+            this.Settore_C.Controls.Add(this.button82);
+            this.Settore_C.Controls.Add(this.button83);
+            this.Settore_C.Controls.Add(this.button84);
+            this.Settore_C.Controls.Add(this.button85);
+            this.Settore_C.Controls.Add(this.button86);
+            this.Settore_C.Controls.Add(this.button87);
+            this.Settore_C.Controls.Add(this.button88);
+            this.Settore_C.Controls.Add(this.button89);
+            this.Settore_C.Controls.Add(this.button90);
+            this.Settore_C.Controls.Add(this.button91);
+            this.Settore_C.Controls.Add(this.button92);
+            this.Settore_C.Controls.Add(this.button93);
+            this.Settore_C.Controls.Add(this.button94);
+            this.Settore_C.Controls.Add(this.button95);
+            this.Settore_C.Controls.Add(this.button96);
+            this.Settore_C.Controls.Add(this.button97);
+            this.Settore_C.Controls.Add(this.button98);
+            this.Settore_C.Controls.Add(this.button99);
+            this.Settore_C.Controls.Add(this.button100);
+            this.Settore_C.Controls.Add(this.button101);
+            this.Settore_C.Controls.Add(this.button102);
+            this.Settore_C.Controls.Add(this.button103);
+            this.Settore_C.Controls.Add(this.button104);
+            this.Settore_C.Controls.Add(this.button105);
+            this.Settore_C.Controls.Add(this.button106);
+            this.Settore_C.Controls.Add(this.button107);
+            this.Settore_C.Location = new System.Drawing.Point(390, 291);
+            this.Settore_C.Name = "Settore_C";
+            this.Settore_C.Size = new System.Drawing.Size(364, 118);
+            this.Settore_C.TabIndex = 29;
+            this.Settore_C.Visible = false;
             // 
             // button68
             // 
@@ -1805,52 +1843,53 @@
             this.button107.UseVisualStyleBackColor = false;
             this.button107.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
-            // panel3
+            // Settore_B
             // 
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Controls.Add(this.button9);
-            this.panel3.Controls.Add(this.button19);
-            this.panel3.Controls.Add(this.button20);
-            this.panel3.Controls.Add(this.button37);
-            this.panel3.Controls.Add(this.button38);
-            this.panel3.Controls.Add(this.button39);
-            this.panel3.Controls.Add(this.button40);
-            this.panel3.Controls.Add(this.button41);
-            this.panel3.Controls.Add(this.button42);
-            this.panel3.Controls.Add(this.button43);
-            this.panel3.Controls.Add(this.button44);
-            this.panel3.Controls.Add(this.button45);
-            this.panel3.Controls.Add(this.button46);
-            this.panel3.Controls.Add(this.button47);
-            this.panel3.Controls.Add(this.button48);
-            this.panel3.Controls.Add(this.button49);
-            this.panel3.Controls.Add(this.button50);
-            this.panel3.Controls.Add(this.button51);
-            this.panel3.Controls.Add(this.button52);
-            this.panel3.Controls.Add(this.button53);
-            this.panel3.Controls.Add(this.button54);
-            this.panel3.Controls.Add(this.button55);
-            this.panel3.Controls.Add(this.button56);
-            this.panel3.Controls.Add(this.button57);
-            this.panel3.Controls.Add(this.button58);
-            this.panel3.Controls.Add(this.button59);
-            this.panel3.Controls.Add(this.button60);
-            this.panel3.Controls.Add(this.button61);
-            this.panel3.Controls.Add(this.button62);
-            this.panel3.Controls.Add(this.button63);
-            this.panel3.Controls.Add(this.button64);
-            this.panel3.Controls.Add(this.button65);
-            this.panel3.Controls.Add(this.button66);
-            this.panel3.Controls.Add(this.button67);
-            this.panel3.Location = new System.Drawing.Point(8, 166);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(364, 118);
-            this.panel3.TabIndex = 28;
+            this.Settore_B.Controls.Add(this.button2);
+            this.Settore_B.Controls.Add(this.button3);
+            this.Settore_B.Controls.Add(this.button4);
+            this.Settore_B.Controls.Add(this.button6);
+            this.Settore_B.Controls.Add(this.button7);
+            this.Settore_B.Controls.Add(this.button8);
+            this.Settore_B.Controls.Add(this.button9);
+            this.Settore_B.Controls.Add(this.button19);
+            this.Settore_B.Controls.Add(this.button20);
+            this.Settore_B.Controls.Add(this.button37);
+            this.Settore_B.Controls.Add(this.button38);
+            this.Settore_B.Controls.Add(this.button39);
+            this.Settore_B.Controls.Add(this.button40);
+            this.Settore_B.Controls.Add(this.button41);
+            this.Settore_B.Controls.Add(this.button42);
+            this.Settore_B.Controls.Add(this.button43);
+            this.Settore_B.Controls.Add(this.button44);
+            this.Settore_B.Controls.Add(this.button45);
+            this.Settore_B.Controls.Add(this.button46);
+            this.Settore_B.Controls.Add(this.button47);
+            this.Settore_B.Controls.Add(this.button48);
+            this.Settore_B.Controls.Add(this.button49);
+            this.Settore_B.Controls.Add(this.button50);
+            this.Settore_B.Controls.Add(this.button51);
+            this.Settore_B.Controls.Add(this.button52);
+            this.Settore_B.Controls.Add(this.button53);
+            this.Settore_B.Controls.Add(this.button54);
+            this.Settore_B.Controls.Add(this.button55);
+            this.Settore_B.Controls.Add(this.button56);
+            this.Settore_B.Controls.Add(this.button57);
+            this.Settore_B.Controls.Add(this.button58);
+            this.Settore_B.Controls.Add(this.button59);
+            this.Settore_B.Controls.Add(this.button60);
+            this.Settore_B.Controls.Add(this.button61);
+            this.Settore_B.Controls.Add(this.button62);
+            this.Settore_B.Controls.Add(this.button63);
+            this.Settore_B.Controls.Add(this.button64);
+            this.Settore_B.Controls.Add(this.button65);
+            this.Settore_B.Controls.Add(this.button66);
+            this.Settore_B.Controls.Add(this.button67);
+            this.Settore_B.Location = new System.Drawing.Point(8, 166);
+            this.Settore_B.Name = "Settore_B";
+            this.Settore_B.Size = new System.Drawing.Size(364, 118);
+            this.Settore_B.TabIndex = 28;
+            this.Settore_B.Visible = false;
             // 
             // button2
             // 
@@ -2412,18 +2451,19 @@
             this.button67.UseVisualStyleBackColor = false;
             this.button67.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
-            // button1
+            // Prato
             // 
-            this.button1.BackColor = System.Drawing.Color.PaleGreen;
-            this.button1.Location = new System.Drawing.Point(466, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 120);
-            this.button1.TabIndex = 37;
-            this.button1.Tag = "Prato";
-            this.button1.Text = "Prato";
-            this.Info_Posto.SetToolTip(this.button1, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - Prato\r\nCosto - 15€");
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.PostoSelezionato_Click);
+            this.Prato.BackColor = System.Drawing.Color.PaleGreen;
+            this.Prato.Location = new System.Drawing.Point(466, 150);
+            this.Prato.Name = "Prato";
+            this.Prato.Size = new System.Drawing.Size(212, 120);
+            this.Prato.TabIndex = 37;
+            this.Prato.Tag = "Prato";
+            this.Prato.Text = "Prato";
+            this.Info_Posto.SetToolTip(this.Prato, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - Prato\r\nCosto - 15€");
+            this.Prato.UseVisualStyleBackColor = false;
+            this.Prato.Visible = false;
+            this.Prato.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // Settore_E
             // 
@@ -2471,6 +2511,7 @@
             this.Settore_E.Name = "Settore_E";
             this.Settore_E.Size = new System.Drawing.Size(364, 118);
             this.Settore_E.TabIndex = 36;
+            this.Settore_E.Visible = false;
             // 
             // button157
             // 
@@ -3078,6 +3119,7 @@
             this.Settore_A.Name = "Settore_A";
             this.Settore_A.Size = new System.Drawing.Size(364, 118);
             this.Settore_A.TabIndex = 1;
+            this.Settore_A.Visible = false;
             // 
             // button33
             // 
@@ -3636,16 +3678,28 @@
             this.A_A1.UseVisualStyleBackColor = false;
             this.A_A1.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
-            // label1
+            // Palco
             // 
-            this.label1.BackColor = System.Drawing.Color.Silver;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(466, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 94);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Palco";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Palco.BackColor = System.Drawing.Color.Silver;
+            this.Palco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Palco.Location = new System.Drawing.Point(466, 3);
+            this.Palco.Name = "Palco";
+            this.Palco.Size = new System.Drawing.Size(212, 94);
+            this.Palco.TabIndex = 0;
+            this.Palco.Text = "Palco";
+            this.Palco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Palco.Visible = false;
+            // 
+            // Info_Error
+            // 
+            this.Info_Error.Font = new System.Drawing.Font("Forte", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Info_Error.ForeColor = System.Drawing.Color.Red;
+            this.Info_Error.Location = new System.Drawing.Point(290, 127);
+            this.Info_Error.Name = "Info_Error";
+            this.Info_Error.Size = new System.Drawing.Size(569, 189);
+            this.Info_Error.TabIndex = 39;
+            this.Info_Error.Text = "Devi prima inserire le tue informazioni";
+            this.Info_Error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Info_Posto
             // 
@@ -3687,7 +3741,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.img_GIORGIAFUMO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_PROVAAPRENDERMI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_BALLOONMUSEUM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_ARTOFPLAY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_TIMBURTON)).EndInit();
             this.Pannello_Principale.ResumeLayout(false);
             this.Pannello_InEvidenza.ResumeLayout(false);
@@ -3698,10 +3751,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).EndInit();
             this.Pannello_Posti.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.Pgn_Informazioni.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).EndInit();
+            this.TitoloArtista.ResumeLayout(false);
+            this.TitoloArtista.PerformLayout();
             this.Pgn_SelezionePosti.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.Settore_D.ResumeLayout(false);
+            this.Settore_C.ResumeLayout(false);
+            this.Settore_B.ResumeLayout(false);
             this.Settore_E.ResumeLayout(false);
             this.Settore_A.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -3719,7 +3776,6 @@
         private System.Windows.Forms.PictureBox Img_GAMESINCONCERT;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox Img_TIMBURTON;
-        private System.Windows.Forms.PictureBox Img_ARTOFPLAY;
         private System.Windows.Forms.PictureBox Img_BALLOONMUSEUM;
         private System.Windows.Forms.PictureBox Img_PROVAAPRENDERMI;
         private System.Windows.Forms.PictureBox img_GIORGIAFUMO;
@@ -3816,13 +3872,13 @@
         private System.Windows.Forms.Button A_A3;
         private System.Windows.Forms.Button A_A2;
         private System.Windows.Forms.Button A_A1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Palco;
         private System.Windows.Forms.PictureBox Account;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolTip Info_Posto;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Prato;
         private System.Windows.Forms.ToolTip Info_Spettacolo;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel Settore_B;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -3863,7 +3919,7 @@
         private System.Windows.Forms.Button button65;
         private System.Windows.Forms.Button button66;
         private System.Windows.Forms.Button button67;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel Settore_C;
         private System.Windows.Forms.Button button68;
         private System.Windows.Forms.Button button69;
         private System.Windows.Forms.Button button70;
@@ -3904,7 +3960,7 @@
         private System.Windows.Forms.Button button105;
         private System.Windows.Forms.Button button106;
         private System.Windows.Forms.Button button107;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel Settore_D;
         private System.Windows.Forms.Button button108;
         private System.Windows.Forms.Button button109;
         private System.Windows.Forms.Button button110;
@@ -3945,7 +4001,12 @@
         private System.Windows.Forms.Button button145;
         private System.Windows.Forms.Button button146;
         private System.Windows.Forms.Button button147;
-        private System.Windows.Forms.Button button148;
+        private System.Windows.Forms.Button Prato_VIP;
+        private System.Windows.Forms.Label Info_Error;
+        private System.Windows.Forms.GroupBox TitoloArtista;
+        private System.Windows.Forms.Label Artista_Lbl;
+        private System.Windows.Forms.Label TitoloSpettacolo_Lbl;
+        private System.Windows.Forms.PictureBox Img_Info;
     }
 }
 

@@ -12,6 +12,15 @@ namespace Biglietti_concerto
 {
     public partial class Form1 : Form
     {
+        List<string> Titoli = new List<string>
+        {
+            "Intelligenza Naturale", "Art of Play - Mostra Immersiva"
+        };
+        List<string> Artisti = new List<string>
+        {
+            "Andrea Pezzi"
+        };
+
         public Form1()
         {
             InitializeComponent();
@@ -21,14 +30,24 @@ namespace Biglietti_concerto
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Size = new Size(1167, 528);
+            Pannello_Principale.Size = new Size(1151, 434);
+            Pannello_Principale.Location = new Point(0, 54);
+            Pannello_Posti.Size = new Size(1151, 434);
         }
 
 
         private void Spettacolo_Click(object sender, EventArgs e)
         {
+            PictureBox pb = (PictureBox)sender;
+
             Pannello_Principale.Visible = false;
             Pannello_Posti.Location = new Point(0, 55);
             Pannello_Posti.Visible = true;
+
+            Artista_Lbl.Text = pb.Tag?.ToString() ?? "Sconosciuto";
+            Img_Info.Image = pb.Image;
+            Img_Info.SizeMode = PictureBoxSizeMode.Zoom;
+            TitoloSpettacolo_Lbl.Text = pb.Name.Substring(4);
         }
 
         private void PostoSelezionato_Click(object sender, EventArgs e)
@@ -54,5 +73,6 @@ namespace Biglietti_concerto
             Pannello_Principale.Location = new Point(0, 54);
             Pannello_Posti.Visible = false;
         }
+
     }
 }

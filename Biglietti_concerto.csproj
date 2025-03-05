@@ -59,14 +59,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,73 +75,61 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ticketone_4c_pos.png" />
+    <None Include="Resources\Eventi_Imgs\LRDL-summertour-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo_ticketone.jpg" />
+    <None Include="Resources\Eventi_Imgs\palajova2025-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LRDL-summertour-biglietti.jpg" />
+    <None Include="Resources\Eventi_Imgs\sophie-giants-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\palajova2025-biglietti.jpg" />
+    <None Include="Resources\Eventi_Imgs\tony-effe-roma-milano-2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sophie-giants-biglietti.jpg" />
+    <None Include="Resources\Eventi_Imgs\games-concert-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tony-effe-roma-milano-2.jpg" />
+    <None Include="Resources\Eventi_Imgs\tim-burton-milano.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\games-concert-biglietti.jpg" />
+    <None Include="Resources\Eventi_Imgs\balloon-roma-biglietti-3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tim-burton-milano.jpg" />
+    <None Include="Resources\Eventi_Imgs\prova-prendermi-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\art-play-roma.jpg" />
+    <None Include="Resources\Eventi_Imgs\giorgia-fumo-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\balloon-roma-biglietti-3.jpg" />
+    <None Include="Resources\Eventi_Imgs\andrea-pezzi-intelligenza-naturale-2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\prova-prendermi-biglietti.jpg" />
+    <None Include="Resources\Eventi_Imgs\morrissey-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\giorgia-fumo-biglietti.jpg" />
+    <None Include="Resources\Eventi_Imgs\jimmy-sax-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\andrea-pezzi-intelligenza-naturale-2.jpg" />
+    <None Include="Resources\Eventi_Imgs\blackpink-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\morrissey-biglietti.jpg" />
+    <None Include="Resources\Eventi_Imgs\pinkfloydlegend-thedarksideofthemoon-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\jimmy-sax-biglietti.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\blackpink-biglietti.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Screenshot 2025-03-04 090615.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sophie-giants-biglietti1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pinkfloydlegend-thedarksideofthemoon-biglietti.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\jovanotti-biglietti-5.jpg" />
+    <None Include="Resources\Eventi_Imgs\jovanotti-biglietti-5.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AccountImg.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Tichettone.png" />
+    <None Include="Resources\TickeTlon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TickeTlon.png" />
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kamasi-washington-biglietti.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
