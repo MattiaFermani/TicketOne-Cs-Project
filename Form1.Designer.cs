@@ -265,6 +265,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Info_Posto = new System.Windows.Forms.ToolTip(this.components);
             this.Info_Spettacolo = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -288,12 +291,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).BeginInit();
             this.Pannello_Posti.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.Pgn_Informazioni.SuspendLayout();
             this.Pgn_SelezionePosti.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.Settore_E.SuspendLayout();
             this.Settore_A.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -483,8 +488,8 @@
             this.Img_LRDL.Size = new System.Drawing.Size(320, 198);
             this.Img_LRDL.TabIndex = 4;
             this.Img_LRDL.TabStop = false;
-            this.Info_Spettacolo.SetToolTip(this.Img_LRDL, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
-        "Posti: 300");
+            this.Info_Spettacolo.SetToolTip(this.Img_LRDL, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 03/07/2025\r\n" +
+        "Posti: 350");
             this.Img_LRDL.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_SOPHIE
@@ -495,6 +500,8 @@
             this.Img_SOPHIE.Size = new System.Drawing.Size(157, 200);
             this.Img_SOPHIE.TabIndex = 6;
             this.Img_SOPHIE.TabStop = false;
+            this.Info_Spettacolo.SetToolTip(this.Img_SOPHIE, "Nome: Sophie And The Giants\r\nArtista: Sophie And The Giants\r\n\r\nData: 27/11/2025\r\n" +
+        "Posti: 350\r\n");
             this.Img_SOPHIE.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_TONYEFFE
@@ -525,8 +532,7 @@
             this.Img_PALAJOVA.Size = new System.Drawing.Size(320, 200);
             this.Img_PALAJOVA.TabIndex = 5;
             this.Img_PALAJOVA.TabStop = false;
-            this.Info_Spettacolo.SetToolTip(this.Img_PALAJOVA, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
-        "Posti: 300\r\n");
+            this.Info_Spettacolo.SetToolTip(this.Img_PALAJOVA, "Nome: PALAJOVA\r\nArtista: Lorenzo Jovanotti\r\n\r\nData: 27/05/2025\r\nPosti: 350\r\n");
             this.Img_PALAJOVA.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Pannello_Posti
@@ -553,10 +559,12 @@
             // Pgn_Informazioni
             // 
             this.Pgn_Informazioni.BackColor = System.Drawing.Color.SkyBlue;
-            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Informazioni.Controls.Add(this.label3);
+            this.Pgn_Informazioni.Controls.Add(this.pictureBox1);
+            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 25);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 481);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 478);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -570,10 +578,10 @@
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_E);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_A);
             this.Pgn_SelezionePosti.Controls.Add(this.label1);
-            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 25);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1143, 481);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1143, 478);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
@@ -3497,6 +3505,29 @@
             this.Info_Spettacolo.IsBalloon = true;
             this.Info_Spettacolo.ToolTipTitle = "Info Spettacolo";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(590, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(548, 476);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Titolo";
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -3537,12 +3568,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).EndInit();
             this.Pannello_Posti.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.Pgn_Informazioni.ResumeLayout(false);
+            this.Pgn_Informazioni.PerformLayout();
             this.Pgn_SelezionePosti.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.Settore_E.ResumeLayout(false);
             this.Settore_A.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3785,6 +3819,9 @@
         private System.Windows.Forms.Button button146;
         private System.Windows.Forms.Button button147;
         private System.Windows.Forms.Button button148;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
