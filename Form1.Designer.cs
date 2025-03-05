@@ -30,30 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.TickeTlon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Account = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Img_BLACKPINK = new System.Windows.Forms.PictureBox();
-            this.Img_WONDERJIMMY = new System.Windows.Forms.PictureBox();
-            this.Img_MORRISSEY = new System.Windows.Forms.PictureBox();
-            this.Img_INTELLIGENZANATURALE = new System.Windows.Forms.PictureBox();
-            this.img_GIORGIAFUMO = new System.Windows.Forms.PictureBox();
-            this.Img_PROVAAPRENDERMI = new System.Windows.Forms.PictureBox();
-            this.Img_BALLOONMUSEUM = new System.Windows.Forms.PictureBox();
-            this.Img_TIMBURTON = new System.Windows.Forms.PictureBox();
             this.Pannello_Principale = new System.Windows.Forms.Panel();
             this.Pannello_InEvidenza = new System.Windows.Forms.Panel();
-            this.Img_LRDL = new System.Windows.Forms.PictureBox();
-            this.Img_SOPHIE = new System.Windows.Forms.PictureBox();
-            this.Img_TONYEFFE = new System.Windows.Forms.PictureBox();
-            this.Img_GAMESINCONCERT = new System.Windows.Forms.PictureBox();
-            this.Img_PALAJOVA = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.Pannello_Posti = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Pgn_Informazioni = new System.Windows.Forms.TabPage();
-            this.Img_Info = new System.Windows.Forms.PictureBox();
             this.TitoloArtista = new System.Windows.Forms.GroupBox();
             this.Artista_Lbl = new System.Windows.Forms.Label();
             this.TitoloSpettacolo_Lbl = new System.Windows.Forms.Label();
@@ -269,11 +253,47 @@
             this.Info_Error = new System.Windows.Forms.Label();
             this.Info_Posto = new System.Windows.Forms.ToolTip(this.components);
             this.Info_Spettacolo = new System.Windows.Forms.ToolTip(this.components);
+            this.Img_Info = new System.Windows.Forms.PictureBox();
+            this.TickeTlon = new System.Windows.Forms.PictureBox();
+            this.Account = new System.Windows.Forms.PictureBox();
+            this.Img_LRDL = new System.Windows.Forms.PictureBox();
+            this.Img_SOPHIE = new System.Windows.Forms.PictureBox();
+            this.Img_TONYEFFE = new System.Windows.Forms.PictureBox();
+            this.Img_GAMESINCONCERT = new System.Windows.Forms.PictureBox();
+            this.Img_PALAJOVA = new System.Windows.Forms.PictureBox();
+            this.Img_MarcusMiller = new System.Windows.Forms.PictureBox();
+            this.Img_BLACKPINK = new System.Windows.Forms.PictureBox();
+            this.Img_WONDERJIMMY = new System.Windows.Forms.PictureBox();
+            this.Img_MORRISSEY = new System.Windows.Forms.PictureBox();
+            this.Img_INTELLIGENZANATURALE = new System.Windows.Forms.PictureBox();
+            this.img_GIORGIAFUMO = new System.Windows.Forms.PictureBox();
+            this.Img_PROVAAPRENDERMI = new System.Windows.Forms.PictureBox();
+            this.Img_BALLOONMUSEUM = new System.Windows.Forms.PictureBox();
+            this.Img_TIMBURTON = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Account)).BeginInit();
             this.panel2.SuspendLayout();
+            this.Pannello_Principale.SuspendLayout();
+            this.Pannello_InEvidenza.SuspendLayout();
+            this.Pannello_Posti.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.Pgn_Informazioni.SuspendLayout();
+            this.TitoloArtista.SuspendLayout();
+            this.Pgn_SelezionePosti.SuspendLayout();
+            this.Settore_D.SuspendLayout();
+            this.Settore_C.SuspendLayout();
+            this.Settore_B.SuspendLayout();
+            this.Settore_E.SuspendLayout();
+            this.Settore_A.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Account)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_LRDL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_SOPHIE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_TONYEFFE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_GAMESINCONCERT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_WONDERJIMMY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_MORRISSEY)).BeginInit();
@@ -282,24 +302,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_PROVAAPRENDERMI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_BALLOONMUSEUM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_TIMBURTON)).BeginInit();
-            this.Pannello_Principale.SuspendLayout();
-            this.Pannello_InEvidenza.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_LRDL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_SOPHIE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_TONYEFFE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_GAMESINCONCERT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).BeginInit();
-            this.Pannello_Posti.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.Pgn_Informazioni.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).BeginInit();
-            this.TitoloArtista.SuspendLayout();
-            this.Pgn_SelezionePosti.SuspendLayout();
-            this.Settore_D.SuspendLayout();
-            this.Settore_C.SuspendLayout();
-            this.Settore_B.SuspendLayout();
-            this.Settore_E.SuspendLayout();
-            this.Settore_A.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -321,18 +323,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1924, 60);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // TickeTlon
-            // 
-            this.TickeTlon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TickeTlon.Image = global::Biglietti_concerto.Properties;
-            this.TickeTlon.Location = new System.Drawing.Point(364, 3);
-            this.TickeTlon.Name = "TickeTlon";
-            this.TickeTlon.Size = new System.Drawing.Size(441, 54);
-            this.TickeTlon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.TickeTlon.TabIndex = 0;
-            this.TickeTlon.TabStop = false;
-            this.TickeTlon.Click += new System.EventHandler(this.TickeTlon_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.Account);
@@ -341,20 +331,11 @@
             this.panel1.Size = new System.Drawing.Size(170, 54);
             this.panel1.TabIndex = 5;
             // 
-            // Account
-            // 
-            this.Account.Image = global::Biglietti_concerto.Properties.Resources.AccountImg;
-            this.Account.Location = new System.Drawing.Point(0, 6);
-            this.Account.Name = "Account";
-            this.Account.Size = new System.Drawing.Size(170, 45);
-            this.Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Account.TabIndex = 4;
-            this.Account.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.Img_MarcusMiller);
             this.panel2.Controls.Add(this.Img_BLACKPINK);
             this.panel2.Controls.Add(this.Img_WONDERJIMMY);
             this.panel2.Controls.Add(this.Img_MORRISSEY);
@@ -367,79 +348,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(498, 429);
             this.panel2.TabIndex = 9;
-            // 
-            // Img_BLACKPINK
-            // 
-            this.Img_BLACKPINK.Location = new System.Drawing.Point(818, 212);
-            this.Img_BLACKPINK.Name = "Img_BLACKPINK";
-            this.Img_BLACKPINK.Size = new System.Drawing.Size(157, 200);
-            this.Img_BLACKPINK.TabIndex = 18;
-            this.Img_BLACKPINK.TabStop = false;
-            this.Img_BLACKPINK.Tag = "";
-            this.Img_BLACKPINK.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_WONDERJIMMY
-            // 
-            this.Img_WONDERJIMMY.Location = new System.Drawing.Point(655, 212);
-            this.Img_WONDERJIMMY.Name = "Img_WONDERJIMMY";
-            this.Img_WONDERJIMMY.Size = new System.Drawing.Size(157, 200);
-            this.Img_WONDERJIMMY.TabIndex = 17;
-            this.Img_WONDERJIMMY.TabStop = false;
-            this.Img_WONDERJIMMY.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_MORRISSEY
-            // 
-            this.Img_MORRISSEY.Location = new System.Drawing.Point(655, 6);
-            this.Img_MORRISSEY.Name = "Img_MORRISSEY";
-            this.Img_MORRISSEY.Size = new System.Drawing.Size(320, 200);
-            this.Img_MORRISSEY.TabIndex = 16;
-            this.Img_MORRISSEY.TabStop = false;
-            this.Img_MORRISSEY.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_INTELLIGENZANATURALE
-            // 
-            this.Img_INTELLIGENZANATURALE.Location = new System.Drawing.Point(492, 212);
-            this.Img_INTELLIGENZANATURALE.Name = "Img_INTELLIGENZANATURALE";
-            this.Img_INTELLIGENZANATURALE.Size = new System.Drawing.Size(157, 200);
-            this.Img_INTELLIGENZANATURALE.TabIndex = 15;
-            this.Img_INTELLIGENZANATURALE.TabStop = false;
-            this.Img_INTELLIGENZANATURALE.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // img_GIORGIAFUMO
-            // 
-            this.img_GIORGIAFUMO.Location = new System.Drawing.Point(329, 212);
-            this.img_GIORGIAFUMO.Name = "img_GIORGIAFUMO";
-            this.img_GIORGIAFUMO.Size = new System.Drawing.Size(157, 200);
-            this.img_GIORGIAFUMO.TabIndex = 14;
-            this.img_GIORGIAFUMO.TabStop = false;
-            this.img_GIORGIAFUMO.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_PROVAAPRENDERMI
-            // 
-            this.Img_PROVAAPRENDERMI.Location = new System.Drawing.Point(329, 6);
-            this.Img_PROVAAPRENDERMI.Name = "Img_PROVAAPRENDERMI";
-            this.Img_PROVAAPRENDERMI.Size = new System.Drawing.Size(320, 200);
-            this.Img_PROVAAPRENDERMI.TabIndex = 13;
-            this.Img_PROVAAPRENDERMI.TabStop = false;
-            this.Img_PROVAAPRENDERMI.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_BALLOONMUSEUM
-            // 
-            this.Img_BALLOONMUSEUM.Location = new System.Drawing.Point(3, 212);
-            this.Img_BALLOONMUSEUM.Name = "Img_BALLOONMUSEUM";
-            this.Img_BALLOONMUSEUM.Size = new System.Drawing.Size(320, 200);
-            this.Img_BALLOONMUSEUM.TabIndex = 12;
-            this.Img_BALLOONMUSEUM.TabStop = false;
-            this.Img_BALLOONMUSEUM.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_TIMBURTON
-            // 
-            this.Img_TIMBURTON.Location = new System.Drawing.Point(3, 6);
-            this.Img_TIMBURTON.Name = "Img_TIMBURTON";
-            this.Img_TIMBURTON.Size = new System.Drawing.Size(157, 200);
-            this.Img_TIMBURTON.TabIndex = 10;
-            this.Img_TIMBURTON.TabStop = false;
-            this.Img_TIMBURTON.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Pannello_Principale
             // 
@@ -462,64 +370,6 @@
             this.Pannello_InEvidenza.Name = "Pannello_InEvidenza";
             this.Pannello_InEvidenza.Size = new System.Drawing.Size(641, 408);
             this.Pannello_InEvidenza.TabIndex = 0;
-            // 
-            // Img_LRDL
-            // 
-            this.Img_LRDL.Image = global::Biglietti_concerto.Properties.Resources.LRDL_summertour_biglietti;
-            this.Img_LRDL.Location = new System.Drawing.Point(0, 3);
-            this.Img_LRDL.Name = "Img_LRDL";
-            this.Img_LRDL.Size = new System.Drawing.Size(320, 198);
-            this.Img_LRDL.TabIndex = 4;
-            this.Img_LRDL.TabStop = false;
-            this.Img_LRDL.Tag = "La Rappresentante Di Lista";
-            this.Info_Spettacolo.SetToolTip(this.Img_LRDL, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
-        "Posti: 300");
-            this.Img_LRDL.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_SOPHIE
-            // 
-            this.Img_SOPHIE.Image = global::Biglietti_concerto.Properties.Resources.sophie_giants_biglietti;
-            this.Img_SOPHIE.Location = new System.Drawing.Point(323, 3);
-            this.Img_SOPHIE.Name = "Img_SOPHIE";
-            this.Img_SOPHIE.Size = new System.Drawing.Size(157, 200);
-            this.Img_SOPHIE.TabIndex = 6;
-            this.Img_SOPHIE.TabStop = false;
-            this.Img_SOPHIE.Tag = "Sophie & The Giants";
-            this.Img_SOPHIE.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_TONYEFFE
-            // 
-            this.Img_TONYEFFE.Image = global::Biglietti_concerto.Properties.Resources.tony_effe_roma_milano_2;
-            this.Img_TONYEFFE.Location = new System.Drawing.Point(320, 207);
-            this.Img_TONYEFFE.Name = "Img_TONYEFFE";
-            this.Img_TONYEFFE.Size = new System.Drawing.Size(318, 200);
-            this.Img_TONYEFFE.TabIndex = 7;
-            this.Img_TONYEFFE.TabStop = false;
-            this.Img_TONYEFFE.Tag = "Tony Effe";
-            this.Img_TONYEFFE.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_GAMESINCONCERT
-            // 
-            this.Img_GAMESINCONCERT.Image = global::Biglietti_concerto.Properties.Resources.games_concert_biglietti;
-            this.Img_GAMESINCONCERT.Location = new System.Drawing.Point(481, 3);
-            this.Img_GAMESINCONCERT.Name = "Img_GAMESINCONCERT";
-            this.Img_GAMESINCONCERT.Size = new System.Drawing.Size(157, 200);
-            this.Img_GAMESINCONCERT.TabIndex = 8;
-            this.Img_GAMESINCONCERT.TabStop = false;
-            this.Img_GAMESINCONCERT.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_PALAJOVA
-            // 
-            this.Img_PALAJOVA.Image = global::Biglietti_concerto.Properties.Resources.palajova2025_biglietti;
-            this.Img_PALAJOVA.Location = new System.Drawing.Point(3, 207);
-            this.Img_PALAJOVA.Name = "Img_PALAJOVA";
-            this.Img_PALAJOVA.Size = new System.Drawing.Size(320, 200);
-            this.Img_PALAJOVA.TabIndex = 5;
-            this.Img_PALAJOVA.TabStop = false;
-            this.Img_PALAJOVA.Tag = "Jovanotti";
-            this.Info_Spettacolo.SetToolTip(this.Img_PALAJOVA, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
-        "Posti: 300\r\n");
-            this.Img_PALAJOVA.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Pannello_Posti
             // 
@@ -553,14 +403,6 @@
             this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 481);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
-            // 
-            // Img_Info
-            // 
-            this.Img_Info.Location = new System.Drawing.Point(582, 25);
-            this.Img_Info.Name = "Img_Info";
-            this.Img_Info.Size = new System.Drawing.Size(544, 351);
-            this.Img_Info.TabIndex = 1;
-            this.Img_Info.TabStop = false;
             // 
             // TitoloArtista
             // 
@@ -3712,6 +3554,184 @@
             this.Info_Spettacolo.IsBalloon = true;
             this.Info_Spettacolo.ToolTipTitle = "Info Spettacolo";
             // 
+            // Img_Info
+            // 
+            this.Img_Info.Location = new System.Drawing.Point(582, 25);
+            this.Img_Info.Name = "Img_Info";
+            this.Img_Info.Size = new System.Drawing.Size(544, 351);
+            this.Img_Info.TabIndex = 1;
+            this.Img_Info.TabStop = false;
+            // 
+            // TickeTlon
+            // 
+            this.TickeTlon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TickeTlon.Image = global::Biglietti_concerto.Properties.Resources.TickeTlon;
+            this.TickeTlon.Location = new System.Drawing.Point(364, 3);
+            this.TickeTlon.Name = "TickeTlon";
+            this.TickeTlon.Size = new System.Drawing.Size(441, 54);
+            this.TickeTlon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TickeTlon.TabIndex = 0;
+            this.TickeTlon.TabStop = false;
+            this.TickeTlon.Click += new System.EventHandler(this.TickeTlon_Click);
+            // 
+            // Account
+            // 
+            this.Account.Image = global::Biglietti_concerto.Properties.Resources.AccountImg;
+            this.Account.Location = new System.Drawing.Point(0, 6);
+            this.Account.Name = "Account";
+            this.Account.Size = new System.Drawing.Size(170, 45);
+            this.Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Account.TabIndex = 4;
+            this.Account.TabStop = false;
+            // 
+            // Img_LRDL
+            // 
+            this.Img_LRDL.Image = global::Biglietti_concerto.Properties.Resources.LRDL_summertour_biglietti;
+            this.Img_LRDL.Location = new System.Drawing.Point(0, 3);
+            this.Img_LRDL.Name = "Img_LRDL";
+            this.Img_LRDL.Size = new System.Drawing.Size(320, 198);
+            this.Img_LRDL.TabIndex = 4;
+            this.Img_LRDL.TabStop = false;
+            this.Img_LRDL.Tag = "La Rappresentante Di Lista";
+            this.Info_Spettacolo.SetToolTip(this.Img_LRDL, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
+        "Posti: 300");
+            this.Img_LRDL.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_SOPHIE
+            // 
+            this.Img_SOPHIE.Image = global::Biglietti_concerto.Properties.Resources.sophie_giants_biglietti;
+            this.Img_SOPHIE.Location = new System.Drawing.Point(323, 3);
+            this.Img_SOPHIE.Name = "Img_SOPHIE";
+            this.Img_SOPHIE.Size = new System.Drawing.Size(157, 200);
+            this.Img_SOPHIE.TabIndex = 6;
+            this.Img_SOPHIE.TabStop = false;
+            this.Img_SOPHIE.Tag = "Sophie & The Giants";
+            this.Img_SOPHIE.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_TONYEFFE
+            // 
+            this.Img_TONYEFFE.Image = global::Biglietti_concerto.Properties.Resources.tony_effe_roma_milano_2;
+            this.Img_TONYEFFE.Location = new System.Drawing.Point(320, 207);
+            this.Img_TONYEFFE.Name = "Img_TONYEFFE";
+            this.Img_TONYEFFE.Size = new System.Drawing.Size(318, 200);
+            this.Img_TONYEFFE.TabIndex = 7;
+            this.Img_TONYEFFE.TabStop = false;
+            this.Img_TONYEFFE.Tag = "Tony Effe";
+            this.Img_TONYEFFE.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_GAMESINCONCERT
+            // 
+            this.Img_GAMESINCONCERT.Image = global::Biglietti_concerto.Properties.Resources.games_concert_biglietti;
+            this.Img_GAMESINCONCERT.Location = new System.Drawing.Point(481, 3);
+            this.Img_GAMESINCONCERT.Name = "Img_GAMESINCONCERT";
+            this.Img_GAMESINCONCERT.Size = new System.Drawing.Size(157, 200);
+            this.Img_GAMESINCONCERT.TabIndex = 8;
+            this.Img_GAMESINCONCERT.TabStop = false;
+            this.Img_GAMESINCONCERT.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_PALAJOVA
+            // 
+            this.Img_PALAJOVA.Image = global::Biglietti_concerto.Properties.Resources.palajova2025_biglietti;
+            this.Img_PALAJOVA.Location = new System.Drawing.Point(3, 207);
+            this.Img_PALAJOVA.Name = "Img_PALAJOVA";
+            this.Img_PALAJOVA.Size = new System.Drawing.Size(320, 200);
+            this.Img_PALAJOVA.TabIndex = 5;
+            this.Img_PALAJOVA.TabStop = false;
+            this.Img_PALAJOVA.Tag = "Jovanotti";
+            this.Info_Spettacolo.SetToolTip(this.Img_PALAJOVA, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nData: 12-06-2025\r\n" +
+        "Posti: 300\r\n");
+            this.Img_PALAJOVA.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_MarcusMiller
+            // 
+            this.Img_MarcusMiller.Image = global::Biglietti_concerto.Properties.Resources.marcus_miller_biglietti;
+            this.Img_MarcusMiller.Location = new System.Drawing.Point(166, 6);
+            this.Img_MarcusMiller.Name = "Img_MarcusMiller";
+            this.Img_MarcusMiller.Size = new System.Drawing.Size(157, 200);
+            this.Img_MarcusMiller.TabIndex = 19;
+            this.Img_MarcusMiller.TabStop = false;
+            // 
+            // Img_BLACKPINK
+            // 
+            this.Img_BLACKPINK.Image = global::Biglietti_concerto.Properties.Resources.blackpink_biglietti;
+            this.Img_BLACKPINK.Location = new System.Drawing.Point(818, 212);
+            this.Img_BLACKPINK.Name = "Img_BLACKPINK";
+            this.Img_BLACKPINK.Size = new System.Drawing.Size(157, 200);
+            this.Img_BLACKPINK.TabIndex = 18;
+            this.Img_BLACKPINK.TabStop = false;
+            this.Img_BLACKPINK.Tag = "";
+            this.Img_BLACKPINK.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_WONDERJIMMY
+            // 
+            this.Img_WONDERJIMMY.Image = global::Biglietti_concerto.Properties.Resources.jimmy_sax_biglietti;
+            this.Img_WONDERJIMMY.Location = new System.Drawing.Point(655, 212);
+            this.Img_WONDERJIMMY.Name = "Img_WONDERJIMMY";
+            this.Img_WONDERJIMMY.Size = new System.Drawing.Size(157, 200);
+            this.Img_WONDERJIMMY.TabIndex = 17;
+            this.Img_WONDERJIMMY.TabStop = false;
+            this.Img_WONDERJIMMY.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_MORRISSEY
+            // 
+            this.Img_MORRISSEY.Image = global::Biglietti_concerto.Properties.Resources.morrissey_biglietti;
+            this.Img_MORRISSEY.Location = new System.Drawing.Point(655, 6);
+            this.Img_MORRISSEY.Name = "Img_MORRISSEY";
+            this.Img_MORRISSEY.Size = new System.Drawing.Size(320, 200);
+            this.Img_MORRISSEY.TabIndex = 16;
+            this.Img_MORRISSEY.TabStop = false;
+            this.Img_MORRISSEY.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_INTELLIGENZANATURALE
+            // 
+            this.Img_INTELLIGENZANATURALE.Image = global::Biglietti_concerto.Properties.Resources.andrea_pezzi_intelligenza_naturale_2;
+            this.Img_INTELLIGENZANATURALE.Location = new System.Drawing.Point(492, 212);
+            this.Img_INTELLIGENZANATURALE.Name = "Img_INTELLIGENZANATURALE";
+            this.Img_INTELLIGENZANATURALE.Size = new System.Drawing.Size(157, 200);
+            this.Img_INTELLIGENZANATURALE.TabIndex = 15;
+            this.Img_INTELLIGENZANATURALE.TabStop = false;
+            this.Img_INTELLIGENZANATURALE.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // img_GIORGIAFUMO
+            // 
+            this.img_GIORGIAFUMO.Image = global::Biglietti_concerto.Properties.Resources.giorgia_fumo_biglietti;
+            this.img_GIORGIAFUMO.Location = new System.Drawing.Point(329, 212);
+            this.img_GIORGIAFUMO.Name = "img_GIORGIAFUMO";
+            this.img_GIORGIAFUMO.Size = new System.Drawing.Size(157, 200);
+            this.img_GIORGIAFUMO.TabIndex = 14;
+            this.img_GIORGIAFUMO.TabStop = false;
+            this.img_GIORGIAFUMO.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_PROVAAPRENDERMI
+            // 
+            this.Img_PROVAAPRENDERMI.Image = global::Biglietti_concerto.Properties.Resources.prova_prendermi_biglietti;
+            this.Img_PROVAAPRENDERMI.Location = new System.Drawing.Point(329, 6);
+            this.Img_PROVAAPRENDERMI.Name = "Img_PROVAAPRENDERMI";
+            this.Img_PROVAAPRENDERMI.Size = new System.Drawing.Size(320, 200);
+            this.Img_PROVAAPRENDERMI.TabIndex = 13;
+            this.Img_PROVAAPRENDERMI.TabStop = false;
+            this.Img_PROVAAPRENDERMI.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_BALLOONMUSEUM
+            // 
+            this.Img_BALLOONMUSEUM.Image = global::Biglietti_concerto.Properties.Resources.balloon_roma_biglietti_3;
+            this.Img_BALLOONMUSEUM.Location = new System.Drawing.Point(3, 212);
+            this.Img_BALLOONMUSEUM.Name = "Img_BALLOONMUSEUM";
+            this.Img_BALLOONMUSEUM.Size = new System.Drawing.Size(320, 200);
+            this.Img_BALLOONMUSEUM.TabIndex = 12;
+            this.Img_BALLOONMUSEUM.TabStop = false;
+            this.Img_BALLOONMUSEUM.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_TIMBURTON
+            // 
+            this.Img_TIMBURTON.Image = global::Biglietti_concerto.Properties.Resources.tim_burton_milano;
+            this.Img_TIMBURTON.Location = new System.Drawing.Point(3, 6);
+            this.Img_TIMBURTON.Name = "Img_TIMBURTON";
+            this.Img_TIMBURTON.Size = new System.Drawing.Size(157, 200);
+            this.Img_TIMBURTON.TabIndex = 10;
+            this.Img_TIMBURTON.TabStop = false;
+            this.Img_TIMBURTON.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -3730,29 +3750,13 @@
             this.Text = "Tichettone";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Account)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_WONDERJIMMY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_MORRISSEY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_INTELLIGENZANATURALE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_GIORGIAFUMO)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_PROVAAPRENDERMI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_BALLOONMUSEUM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_TIMBURTON)).EndInit();
             this.Pannello_Principale.ResumeLayout(false);
             this.Pannello_InEvidenza.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Img_LRDL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_SOPHIE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_TONYEFFE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_GAMESINCONCERT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).EndInit();
             this.Pannello_Posti.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.Pgn_Informazioni.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).EndInit();
             this.TitoloArtista.ResumeLayout(false);
             this.TitoloArtista.PerformLayout();
             this.Pgn_SelezionePosti.ResumeLayout(false);
@@ -3761,6 +3765,23 @@
             this.Settore_B.ResumeLayout(false);
             this.Settore_E.ResumeLayout(false);
             this.Settore_A.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Account)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_LRDL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_SOPHIE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_TONYEFFE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_GAMESINCONCERT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_WONDERJIMMY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_MORRISSEY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_INTELLIGENZANATURALE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_GIORGIAFUMO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_PROVAAPRENDERMI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_BALLOONMUSEUM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_TIMBURTON)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4007,6 +4028,7 @@
         private System.Windows.Forms.Label Artista_Lbl;
         private System.Windows.Forms.Label TitoloSpettacolo_Lbl;
         private System.Windows.Forms.PictureBox Img_Info;
+        private System.Windows.Forms.PictureBox Img_MarcusMiller;
     }
 }
 

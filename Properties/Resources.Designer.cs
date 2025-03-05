@@ -83,16 +83,6 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap art_play_roma {
-            get {
-                object obj = ResourceManager.GetObject("art-play-roma", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap balloon_roma_biglietti_3 {
             get {
                 object obj = ResourceManager.GetObject("balloon-roma-biglietti-3", resourceCulture);
@@ -153,9 +143,9 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_ticketone {
+        internal static System.Drawing.Bitmap LRDL_summertour_biglietti {
             get {
-                object obj = ResourceManager.GetObject("logo_ticketone", resourceCulture);
+                object obj = ResourceManager.GetObject("LRDL-summertour-biglietti", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +153,9 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LRDL_summertour_biglietti {
+        internal static System.Drawing.Bitmap marcus_miller_biglietti {
             get {
-                object obj = ResourceManager.GetObject("LRDL-summertour-biglietti", resourceCulture);
+                object obj = ResourceManager.GetObject("marcus-miller-biglietti", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,39 +203,9 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2025_03_04_090615 {
-            get {
-                object obj = ResourceManager.GetObject("Screenshot 2025-03-04 090615", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap sophie_giants_biglietti {
             get {
-                object obj = ResourceManager.GetObject("sophie-giants-biglietti", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sophie_giants_biglietti1 {
-            get {
-                object obj = ResourceManager.GetObject("sophie-giants-biglietti1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Tichettone {
-            get {
-                object obj = ResourceManager.GetObject("Tichettone", resourceCulture);
+                object obj = ResourceManager.GetObject("sophie_giants_biglietti", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,16 +216,6 @@ namespace Biglietti_concerto.Properties {
         internal static System.Drawing.Bitmap TickeTlon {
             get {
                 object obj = ResourceManager.GetObject("TickeTlon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ticketone_4c_pos {
-            get {
-                object obj = ResourceManager.GetObject("ticketone_4c_pos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

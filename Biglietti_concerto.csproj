@@ -60,11 +60,17 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -75,49 +81,49 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\LRDL-summertour-biglietti.jpg" />
+    <None Include="Resources\LRDL-summertour-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\palajova2025-biglietti.jpg" />
+    <None Include="Resources\palajova2025-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\sophie-giants-biglietti.jpg" />
+    <None Include="Resources\sophie_giants_biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\tony-effe-roma-milano-2.jpg" />
+    <None Include="Resources\tony-effe-roma-milano-2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\games-concert-biglietti.jpg" />
+    <None Include="Resources\games-concert-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\tim-burton-milano.jpg" />
+    <None Include="Resources\tim-burton-milano.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\balloon-roma-biglietti-3.jpg" />
+    <None Include="Resources\balloon-roma-biglietti-3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\prova-prendermi-biglietti.jpg" />
+    <None Include="Resources\prova-prendermi-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\giorgia-fumo-biglietti.jpg" />
+    <None Include="Resources\giorgia-fumo-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\andrea-pezzi-intelligenza-naturale-2.jpg" />
+    <None Include="Resources\andrea-pezzi-intelligenza-naturale-2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\morrissey-biglietti.jpg" />
+    <None Include="Resources\morrissey-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\jimmy-sax-biglietti.jpg" />
+    <None Include="Resources\jimmy-sax-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\blackpink-biglietti.jpg" />
+    <None Include="Resources\blackpink-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\pinkfloydlegend-thedarksideofthemoon-biglietti.jpg" />
+    <None Include="Resources\pinkfloydlegend-thedarksideofthemoon-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eventi_Imgs\jovanotti-biglietti-5.jpg" />
+    <None Include="Resources\jovanotti-biglietti-5.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AccountImg.png" />
@@ -130,6 +136,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kamasi-washington-biglietti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcus-miller-biglietti.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
