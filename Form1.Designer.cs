@@ -55,6 +55,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Pgn_Informazioni = new System.Windows.Forms.TabPage();
             this.Pgn_SelezionePosti = new System.Windows.Forms.TabPage();
+            this.button148 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button108 = new System.Windows.Forms.Button();
             this.button109 = new System.Windows.Forms.Button();
@@ -264,7 +265,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Info_Posto = new System.Windows.Forms.ToolTip(this.components);
             this.Info_Spettacolo = new System.Windows.Forms.ToolTip(this.components);
-            this.button148 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -553,10 +553,10 @@
             // Pgn_Informazioni
             // 
             this.Pgn_Informazioni.BackColor = System.Drawing.Color.SkyBlue;
-            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 25);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 481);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 478);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -570,13 +570,23 @@
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_E);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_A);
             this.Pgn_SelezionePosti.Controls.Add(this.label1);
-            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 25);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1143, 481);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1143, 478);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
             this.Pgn_SelezionePosti.UseVisualStyleBackColor = true;
+            // 
+            // button148
+            // 
+            this.button148.Location = new System.Drawing.Point(466, 100);
+            this.button148.Name = "button148";
+            this.button148.Size = new System.Drawing.Size(212, 27);
+            this.button148.TabIndex = 38;
+            this.button148.Text = "Sotto Palco";
+            this.Info_Posto.SetToolTip(this.button148, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - VIP\r\nCosto - 60€");
+            this.button148.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -2921,16 +2931,6 @@
             // 
             this.Info_Spettacolo.IsBalloon = true;
             this.Info_Spettacolo.ToolTipTitle = "Info Spettacolo";
-            // 
-            // button148
-            // 
-            this.button148.Location = new System.Drawing.Point(466, 100);
-            this.button148.Name = "button148";
-            this.button148.Size = new System.Drawing.Size(212, 27);
-            this.button148.TabIndex = 38;
-            this.button148.Text = "Sotto Palco";
-            this.Info_Posto.SetToolTip(this.button148, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - VIP\r\nCosto - 60€");
-            this.button148.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
