@@ -54,8 +54,14 @@
             this.Pannello_Posti = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Pgn_Informazioni = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Data_Lst = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Luogo_Lst = new System.Windows.Forms.ListBox();
             this.Img_Info = new System.Windows.Forms.PictureBox();
             this.TitoloArtista = new System.Windows.Forms.GroupBox();
+            this.Descrizione_Lbl = new System.Windows.Forms.Label();
             this.Artista_Lbl = new System.Windows.Forms.Label();
             this.TitoloSpettacolo_Lbl = new System.Windows.Forms.Label();
             this.Pgn_SelezionePosti = new System.Windows.Forms.TabPage();
@@ -294,6 +300,7 @@
             this.Pannello_Posti.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Pgn_Informazioni.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).BeginInit();
             this.TitoloArtista.SuspendLayout();
             this.Pgn_SelezionePosti.SuspendLayout();
@@ -346,7 +353,7 @@
             // Account
             // 
             this.Account.Image = global::Biglietti_concerto.Properties.Resources.AccountImg;
-            this.Account.Location = new System.Drawing.Point(0, 6);
+            this.Account.Location = new System.Drawing.Point(-1, 6);
             this.Account.Name = "Account";
             this.Account.Size = new System.Drawing.Size(170, 45);
             this.Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -456,18 +463,18 @@
             this.Img_ACDC.Size = new System.Drawing.Size(320, 200);
             this.Img_ACDC.TabIndex = 12;
             this.Img_ACDC.TabStop = false;
-            this.Img_ACDC.Tag = "ACDC - Powerup Tour";
+            this.Img_ACDC.Tag = "AC/DC - Powerup Tour";
             this.Img_ACDC.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_TIMBURTON
             // 
-            this.Img_TIMBURTON.Image = global::Biglietti_concerto.Properties.Resources.tim_burton_milano;
+            this.Img_TIMBURTON.Image = global::Biglietti_concerto.Properties.Resources.fask_summer_biglietti;
             this.Img_TIMBURTON.Location = new System.Drawing.Point(3, 6);
             this.Img_TIMBURTON.Name = "Img_TIMBURTON";
             this.Img_TIMBURTON.Size = new System.Drawing.Size(157, 200);
             this.Img_TIMBURTON.TabIndex = 10;
             this.Img_TIMBURTON.TabStop = false;
-            this.Img_TIMBURTON.Tag = "Tim Burton\'s Labrynth";
+            this.Img_TIMBURTON.Tag = "FASK tour estivo 2025";
             this.Img_TIMBURTON.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Pannello_Principale
@@ -524,7 +531,7 @@
             this.Img_TONYEFFE.Size = new System.Drawing.Size(318, 200);
             this.Img_TONYEFFE.TabIndex = 7;
             this.Img_TONYEFFE.TabStop = false;
-            this.Img_TONYEFFE.Tag = "Damme \'na mano";
+            this.Img_TONYEFFE.Tag = "Damme na mano Roma e Milano";
             this.Img_TONYEFFE.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Img_GAMESINCONCERT
@@ -557,7 +564,7 @@
             this.Pannello_Posti.Controls.Add(this.tabControl1);
             this.Pannello_Posti.Location = new System.Drawing.Point(3, 509);
             this.Pannello_Posti.Name = "Pannello_Posti";
-            this.Pannello_Posti.Size = new System.Drawing.Size(1151, 507);
+            this.Pannello_Posti.Size = new System.Drawing.Size(1151, 434);
             this.Pannello_Posti.TabIndex = 12;
             // 
             // tabControl1
@@ -569,24 +576,83 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1151, 507);
+            this.tabControl1.Size = new System.Drawing.Size(1151, 434);
             this.tabControl1.TabIndex = 0;
             // 
             // Pgn_Informazioni
             // 
             this.Pgn_Informazioni.BackColor = System.Drawing.Color.Transparent;
+            this.Pgn_Informazioni.Controls.Add(this.groupBox1);
             this.Pgn_Informazioni.Controls.Add(this.Img_Info);
             this.Pgn_Informazioni.Controls.Add(this.TitoloArtista);
-            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 478);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 408);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.Data_Lst);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.Luogo_Lst);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(31, 221);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(545, 181);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Date ed Eventi";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(284, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Data";
+            // 
+            // Data_Lst
+            // 
+            this.Data_Lst.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Data_Lst.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Data_Lst.FormattingEnabled = true;
+            this.Data_Lst.HorizontalScrollbar = true;
+            this.Data_Lst.ItemHeight = 20;
+            this.Data_Lst.Location = new System.Drawing.Point(288, 55);
+            this.Data_Lst.Name = "Data_Lst";
+            this.Data_Lst.Size = new System.Drawing.Size(184, 120);
+            this.Data_Lst.TabIndex = 2;
+            this.Data_Lst.SelectedIndexChanged += new System.EventHandler(this.Data_Lst_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Luogo";
+            // 
+            // Luogo_Lst
+            // 
+            this.Luogo_Lst.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Luogo_Lst.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Luogo_Lst.FormattingEnabled = true;
+            this.Luogo_Lst.HorizontalScrollbar = true;
+            this.Luogo_Lst.ItemHeight = 20;
+            this.Luogo_Lst.Location = new System.Drawing.Point(13, 55);
+            this.Luogo_Lst.Name = "Luogo_Lst";
+            this.Luogo_Lst.Size = new System.Drawing.Size(281, 120);
+            this.Luogo_Lst.TabIndex = 0;
+            this.Luogo_Lst.SelectedIndexChanged += new System.EventHandler(this.Luogo_Lst_SelectedIndexChanged);
+            // 
             // Img_Info
             // 
-            this.Img_Info.Location = new System.Drawing.Point(619, 127);
+            this.Img_Info.Location = new System.Drawing.Point(582, 25);
             this.Img_Info.Name = "Img_Info";
             this.Img_Info.Size = new System.Drawing.Size(544, 351);
             this.Img_Info.TabIndex = 1;
@@ -594,15 +660,25 @@
             // 
             // TitoloArtista
             // 
+            this.TitoloArtista.Controls.Add(this.Descrizione_Lbl);
             this.TitoloArtista.Controls.Add(this.Artista_Lbl);
             this.TitoloArtista.Controls.Add(this.TitoloSpettacolo_Lbl);
             this.TitoloArtista.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitoloArtista.Location = new System.Drawing.Point(31, 31);
             this.TitoloArtista.Name = "TitoloArtista";
-            this.TitoloArtista.Size = new System.Drawing.Size(545, 176);
+            this.TitoloArtista.Size = new System.Drawing.Size(545, 183);
             this.TitoloArtista.TabIndex = 0;
             this.TitoloArtista.TabStop = false;
             this.TitoloArtista.Text = "Titolo e Artista";
+            // 
+            // Descrizione_Lbl
+            // 
+            this.Descrizione_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Descrizione_Lbl.Location = new System.Drawing.Point(9, 112);
+            this.Descrizione_Lbl.Name = "Descrizione_Lbl";
+            this.Descrizione_Lbl.Size = new System.Drawing.Size(530, 63);
+            this.Descrizione_Lbl.TabIndex = 2;
+            this.Descrizione_Lbl.Text = "Descrizione";
             // 
             // Artista_Lbl
             // 
@@ -610,7 +686,7 @@
             this.Artista_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Artista_Lbl.Location = new System.Drawing.Point(9, 71);
             this.Artista_Lbl.Name = "Artista_Lbl";
-            this.Artista_Lbl.Size = new System.Drawing.Size(67, 25);
+            this.Artista_Lbl.Size = new System.Drawing.Size(55, 20);
             this.Artista_Lbl.TabIndex = 1;
             this.Artista_Lbl.Text = "Artista";
             // 
@@ -620,7 +696,7 @@
             this.TitoloSpettacolo_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitoloSpettacolo_Lbl.Location = new System.Drawing.Point(7, 26);
             this.TitoloSpettacolo_Lbl.Name = "TitoloSpettacolo_Lbl";
-            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(115, 42);
+            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(95, 36);
             this.TitoloSpettacolo_Lbl.TabIndex = 0;
             this.TitoloSpettacolo_Lbl.Text = "Titolo";
             // 
@@ -635,10 +711,10 @@
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_A);
             this.Pgn_SelezionePosti.Controls.Add(this.Palco);
             this.Pgn_SelezionePosti.Controls.Add(this.Info_Error);
-            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1143, 478);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1143, 408);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
@@ -3783,6 +3859,8 @@
             this.Pannello_Posti.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.Pgn_Informazioni.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).EndInit();
             this.TitoloArtista.ResumeLayout(false);
             this.TitoloArtista.PerformLayout();
@@ -4039,6 +4117,12 @@
         private System.Windows.Forms.Label TitoloSpettacolo_Lbl;
         private System.Windows.Forms.PictureBox Img_Info;
         private System.Windows.Forms.PictureBox Img_MarcusMiller;
+        private System.Windows.Forms.Label Descrizione_Lbl;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox Luogo_Lst;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox Data_Lst;
     }
 }
 

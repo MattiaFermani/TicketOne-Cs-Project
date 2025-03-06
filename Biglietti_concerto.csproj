@@ -143,5 +143,8 @@
   <ItemGroup>
     <None Include="Resources\acdc-biglietti.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fask-summer-biglietti.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
