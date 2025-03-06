@@ -73,6 +73,16 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap acdc_biglietti {
+            get {
+                object obj = ResourceManager.GetObject("acdc-biglietti", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap andrea_pezzi_intelligenza_naturale_2 {
             get {
                 object obj = ResourceManager.GetObject("andrea-pezzi-intelligenza-naturale-2", resourceCulture);
