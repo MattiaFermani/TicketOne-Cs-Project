@@ -276,6 +276,7 @@
             this.Info_Error = new System.Windows.Forms.Label();
             this.Info_Posto = new System.Windows.Forms.ToolTip(this.components);
             this.Info_Spettacolo = new System.Windows.Forms.ToolTip(this.components);
+            this.Login = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -364,6 +365,7 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.Login);
             this.panel2.Controls.Add(this.Img_MarcusMiller);
             this.panel2.Controls.Add(this.Img_BLACKPINK);
             this.panel2.Controls.Add(this.Img_JIMMYSAX);
@@ -585,10 +587,10 @@
             this.Pgn_Informazioni.Controls.Add(this.groupBox1);
             this.Pgn_Informazioni.Controls.Add(this.Img_Info);
             this.Pgn_Informazioni.Controls.Add(this.TitoloArtista);
-            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 25);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 408);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 405);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -611,7 +613,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(284, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 20);
+            this.label2.Size = new System.Drawing.Size(53, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Data";
             // 
@@ -621,10 +623,10 @@
             this.Data_Lst.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Data_Lst.FormattingEnabled = true;
             this.Data_Lst.HorizontalScrollbar = true;
-            this.Data_Lst.ItemHeight = 20;
+            this.Data_Lst.ItemHeight = 25;
             this.Data_Lst.Location = new System.Drawing.Point(288, 55);
             this.Data_Lst.Name = "Data_Lst";
-            this.Data_Lst.Size = new System.Drawing.Size(184, 120);
+            this.Data_Lst.Size = new System.Drawing.Size(184, 100);
             this.Data_Lst.TabIndex = 2;
             this.Data_Lst.SelectedIndexChanged += new System.EventHandler(this.Data_Lst_SelectedIndexChanged);
             // 
@@ -633,7 +635,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 20);
+            this.label1.Size = new System.Drawing.Size(67, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Luogo";
             // 
@@ -643,10 +645,10 @@
             this.Luogo_Lst.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Luogo_Lst.FormattingEnabled = true;
             this.Luogo_Lst.HorizontalScrollbar = true;
-            this.Luogo_Lst.ItemHeight = 20;
+            this.Luogo_Lst.ItemHeight = 25;
             this.Luogo_Lst.Location = new System.Drawing.Point(13, 55);
             this.Luogo_Lst.Name = "Luogo_Lst";
-            this.Luogo_Lst.Size = new System.Drawing.Size(281, 120);
+            this.Luogo_Lst.Size = new System.Drawing.Size(281, 100);
             this.Luogo_Lst.TabIndex = 0;
             this.Luogo_Lst.SelectedIndexChanged += new System.EventHandler(this.Luogo_Lst_SelectedIndexChanged);
             // 
@@ -686,7 +688,7 @@
             this.Artista_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Artista_Lbl.Location = new System.Drawing.Point(9, 71);
             this.Artista_Lbl.Name = "Artista_Lbl";
-            this.Artista_Lbl.Size = new System.Drawing.Size(55, 20);
+            this.Artista_Lbl.Size = new System.Drawing.Size(67, 25);
             this.Artista_Lbl.TabIndex = 1;
             this.Artista_Lbl.Text = "Artista";
             // 
@@ -696,7 +698,7 @@
             this.TitoloSpettacolo_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitoloSpettacolo_Lbl.Location = new System.Drawing.Point(7, 26);
             this.TitoloSpettacolo_Lbl.Name = "TitoloSpettacolo_Lbl";
-            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(95, 36);
+            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(115, 42);
             this.TitoloSpettacolo_Lbl.TabIndex = 0;
             this.TitoloSpettacolo_Lbl.Text = "Titolo";
             // 
@@ -711,10 +713,10 @@
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_A);
             this.Pgn_SelezionePosti.Controls.Add(this.Palco);
             this.Pgn_SelezionePosti.Controls.Add(this.Info_Error);
-            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 25);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1143, 408);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1143, 405);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
@@ -3818,6 +3820,14 @@
             this.Info_Spettacolo.IsBalloon = true;
             this.Info_Spettacolo.ToolTipTitle = "Info Spettacolo";
             // 
+            // Login
+            // 
+            this.Login.Location = new System.Drawing.Point(327, 6);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(158, 180);
+            this.Login.TabIndex = 20;
+            this.Login.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4123,6 +4133,7 @@
         private System.Windows.Forms.ListBox Luogo_Lst;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox Data_Lst;
+        private System.Windows.Forms.Panel Login;
     }
 }
 
