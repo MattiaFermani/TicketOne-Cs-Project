@@ -276,7 +276,16 @@
             this.Info_Error = new System.Windows.Forms.Label();
             this.Info_Posto = new System.Windows.Forms.ToolTip(this.components);
             this.Info_Spettacolo = new System.Windows.Forms.ToolTip(this.components);
-            this.Login = new System.Windows.Forms.Panel();
+            this.Pannello_Login = new System.Windows.Forms.Panel();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.Pgn_Register = new System.Windows.Forms.TabPage();
+            this.Pgn_Login = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -310,6 +319,9 @@
             this.Settore_B.SuspendLayout();
             this.Settore_E.SuspendLayout();
             this.Settore_A.SuspendLayout();
+            this.Pannello_Login.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.Pgn_Register.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -365,7 +377,6 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.Login);
             this.panel2.Controls.Add(this.Img_MarcusMiller);
             this.panel2.Controls.Add(this.Img_BLACKPINK);
             this.panel2.Controls.Add(this.Img_JIMMYSAX);
@@ -484,9 +495,9 @@
             this.Pannello_Principale.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Principale.Controls.Add(this.Pannello_InEvidenza);
             this.Pannello_Principale.Controls.Add(this.panel2);
-            this.Pannello_Principale.Location = new System.Drawing.Point(0, 54);
+            this.Pannello_Principale.Location = new System.Drawing.Point(1169, 509);
             this.Pannello_Principale.Name = "Pannello_Principale";
-            this.Pannello_Principale.Size = new System.Drawing.Size(1151, 434);
+            this.Pannello_Principale.Size = new System.Drawing.Size(55, 434);
             this.Pannello_Principale.TabIndex = 11;
             // 
             // Pannello_InEvidenza
@@ -3820,13 +3831,94 @@
             this.Info_Spettacolo.IsBalloon = true;
             this.Info_Spettacolo.ToolTipTitle = "Info Spettacolo";
             // 
-            // Login
+            // Pannello_Login
             // 
-            this.Login.Location = new System.Drawing.Point(327, 6);
-            this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(158, 180);
-            this.Login.TabIndex = 20;
-            this.Login.Visible = false;
+            this.Pannello_Login.Controls.Add(this.tabControl2);
+            this.Pannello_Login.Location = new System.Drawing.Point(0, 54);
+            this.Pannello_Login.Name = "Pannello_Login";
+            this.Pannello_Login.Size = new System.Drawing.Size(1151, 434);
+            this.Pannello_Login.TabIndex = 13;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.Pgn_Register);
+            this.tabControl2.Controls.Add(this.Pgn_Login);
+            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.Location = new System.Drawing.Point(0, 0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(1151, 434);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // Pgn_Register
+            // 
+            this.Pgn_Register.Controls.Add(this.textBox3);
+            this.Pgn_Register.Controls.Add(this.monthCalendar1);
+            this.Pgn_Register.Controls.Add(this.textBox2);
+            this.Pgn_Register.Controls.Add(this.label4);
+            this.Pgn_Register.Controls.Add(this.textBox1);
+            this.Pgn_Register.Controls.Add(this.label3);
+            this.Pgn_Register.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Register.Name = "Pgn_Register";
+            this.Pgn_Register.Padding = new System.Windows.Forms.Padding(3);
+            this.Pgn_Register.Size = new System.Drawing.Size(1143, 405);
+            this.Pgn_Register.TabIndex = 0;
+            this.Pgn_Register.Text = "Registrazione";
+            // 
+            // Pgn_Login
+            // 
+            this.Pgn_Login.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Login.Name = "Pgn_Login";
+            this.Pgn_Login.Padding = new System.Windows.Forms.Padding(3);
+            this.Pgn_Login.Size = new System.Drawing.Size(1143, 405);
+            this.Pgn_Login.TabIndex = 1;
+            this.Pgn_Login.Text = "Login";
+            this.Pgn_Login.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(44, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nome";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(48, 56);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(199, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(47, 122);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(199, 22);
+            this.textBox2.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(43, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Cognome";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(237, 179);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 4;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(48, 179);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(198, 22);
+            this.textBox3.TabIndex = 5;
             // 
             // Form1
             // 
@@ -3834,6 +3926,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.Pannello_Login);
             this.Controls.Add(this.Pannello_Posti);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.Pannello_Principale);
@@ -3880,6 +3973,10 @@
             this.Settore_B.ResumeLayout(false);
             this.Settore_E.ResumeLayout(false);
             this.Settore_A.ResumeLayout(false);
+            this.Pannello_Login.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.Pgn_Register.ResumeLayout(false);
+            this.Pgn_Register.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4133,7 +4230,16 @@
         private System.Windows.Forms.ListBox Luogo_Lst;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox Data_Lst;
-        private System.Windows.Forms.Panel Login;
+        private System.Windows.Forms.Panel Pannello_Login;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage Pgn_Register;
+        private System.Windows.Forms.TabPage Pgn_Login;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
 
