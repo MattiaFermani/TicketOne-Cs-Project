@@ -276,6 +276,10 @@
             this.Info_Error = new System.Windows.Forms.Label();
             this.Info_Posto = new System.Windows.Forms.ToolTip(this.components);
             this.Info_Spettacolo = new System.Windows.Forms.ToolTip(this.components);
+            this.Pannello_Login = new System.Windows.Forms.Panel();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.Pgn_Register = new System.Windows.Forms.TabPage();
+            this.Pgn_Login = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -309,6 +313,8 @@
             this.Settore_B.SuspendLayout();
             this.Settore_E.SuspendLayout();
             this.Settore_A.SuspendLayout();
+            this.Pannello_Login.SuspendLayout();
+            this.tabControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -482,9 +488,9 @@
             this.Pannello_Principale.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Principale.Controls.Add(this.Pannello_InEvidenza);
             this.Pannello_Principale.Controls.Add(this.panel2);
-            this.Pannello_Principale.Location = new System.Drawing.Point(0, 54);
+            this.Pannello_Principale.Location = new System.Drawing.Point(1169, 509);
             this.Pannello_Principale.Name = "Pannello_Principale";
-            this.Pannello_Principale.Size = new System.Drawing.Size(1151, 434);
+            this.Pannello_Principale.Size = new System.Drawing.Size(55, 434);
             this.Pannello_Principale.TabIndex = 11;
             // 
             // Pannello_InEvidenza
@@ -3818,12 +3824,51 @@
             this.Info_Spettacolo.IsBalloon = true;
             this.Info_Spettacolo.ToolTipTitle = "Info Spettacolo";
             // 
+            // Pannello_Login
+            // 
+            this.Pannello_Login.Controls.Add(this.tabControl2);
+            this.Pannello_Login.Location = new System.Drawing.Point(0, 54);
+            this.Pannello_Login.Name = "Pannello_Login";
+            this.Pannello_Login.Size = new System.Drawing.Size(1151, 434);
+            this.Pannello_Login.TabIndex = 13;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.Pgn_Register);
+            this.tabControl2.Controls.Add(this.Pgn_Login);
+            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.Location = new System.Drawing.Point(0, 0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(1151, 434);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // Pgn_Register
+            // 
+            this.Pgn_Register.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Register.Name = "Pgn_Register";
+            this.Pgn_Register.Padding = new System.Windows.Forms.Padding(3);
+            this.Pgn_Register.Size = new System.Drawing.Size(1143, 408);
+            this.Pgn_Register.TabIndex = 0;
+            this.Pgn_Register.Text = "Registrazione";
+            // 
+            // Pgn_Login
+            // 
+            this.Pgn_Login.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Login.Name = "Pgn_Login";
+            this.Pgn_Login.Padding = new System.Windows.Forms.Padding(3);
+            this.Pgn_Login.Size = new System.Drawing.Size(1143, 408);
+            this.Pgn_Login.TabIndex = 1;
+            this.Pgn_Login.Text = "Login";
+            this.Pgn_Login.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.Pannello_Login);
             this.Controls.Add(this.Pannello_Posti);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.Pannello_Principale);
@@ -3870,6 +3915,8 @@
             this.Settore_B.ResumeLayout(false);
             this.Settore_E.ResumeLayout(false);
             this.Settore_A.ResumeLayout(false);
+            this.Pannello_Login.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4123,6 +4170,10 @@
         private System.Windows.Forms.ListBox Luogo_Lst;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox Data_Lst;
+        private System.Windows.Forms.Panel Pannello_Login;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage Pgn_Register;
+        private System.Windows.Forms.TabPage Pgn_Login;
     }
 }
 
