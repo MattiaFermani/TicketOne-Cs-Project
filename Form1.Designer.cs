@@ -353,7 +353,7 @@
             // Account
             // 
             this.Account.Image = global::Biglietti_concerto.Properties.Resources.AccountImg;
-            this.Account.Location = new System.Drawing.Point(0, 6);
+            this.Account.Location = new System.Drawing.Point(-1, 6);
             this.Account.Name = "Account";
             this.Account.Size = new System.Drawing.Size(170, 45);
             this.Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
