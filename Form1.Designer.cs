@@ -294,6 +294,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Pgn_Login = new System.Windows.Forms.TabPage();
             this.Login_Btn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.FormClose = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -331,6 +333,7 @@
             this.tabControl2.SuspendLayout();
             this.Pgn_Register.SuspendLayout();
             this.Pgn_Login.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -344,6 +347,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.Controls.Add(this.TickeTlon, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -4009,6 +4013,29 @@
             this.Login_Btn.UseVisualStyleBackColor = true;
             this.Login_Btn.Click += new System.EventHandler(this.Login_Register);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.FormClose);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(355, 54);
+            this.panel3.TabIndex = 6;
+            // 
+            // FormClose
+            // 
+            this.FormClose.FlatAppearance.BorderSize = 0;
+            this.FormClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.FormClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.FormClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FormClose.Location = new System.Drawing.Point(0, 0);
+            this.FormClose.Name = "FormClose";
+            this.FormClose.Size = new System.Drawing.Size(26, 23);
+            this.FormClose.TabIndex = 0;
+            this.FormClose.Text = "X";
+            this.FormClose.UseVisualStyleBackColor = true;
+            this.FormClose.Click += new System.EventHandler(this.FormClose_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4019,12 +4046,12 @@
             this.Controls.Add(this.Pannello_Posti);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.Pannello_Principale);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "6++";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -4067,6 +4094,7 @@
             this.Pgn_Register.ResumeLayout(false);
             this.Pgn_Register.PerformLayout();
             this.Pgn_Login.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4338,6 +4366,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button FormClose;
     }
 }
 

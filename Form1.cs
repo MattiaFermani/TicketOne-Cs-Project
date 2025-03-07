@@ -276,6 +276,11 @@ namespace Biglietti_concerto
 
         }
 
+        private void FormClose_Click(object sender, EventArgs e)
+        {
+            Form1.ActiveForm.Close();
+        }
+
         /*private void txt_nascita_TextChanged(object sender, EventArgs e)
         {
             if(txt_nascita.SelectedText ==true)
