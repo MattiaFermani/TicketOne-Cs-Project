@@ -232,6 +232,11 @@ namespace Biglietti_concerto
             }
         }
 
+        private void Pgn_Register_Click(object sender, EventArgs e)
+        {
+
+        }
+
         /*private void txt_nascita_TextChanged(object sender, EventArgs e)
         {
             if(txt_nascita.SelectedText ==true)
