@@ -52,7 +52,7 @@
             this.Img_PALAJOVA = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.Pannello_Posti = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Tab_Info_Posti = new System.Windows.Forms.TabControl();
             this.Pgn_Informazioni = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -288,6 +288,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Pgn_Login = new System.Windows.Forms.TabPage();
+            this.Register_Btn = new System.Windows.Forms.Button();
+            this.Login_Btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -310,7 +312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_GAMESINCONCERT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).BeginInit();
             this.Pannello_Posti.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.Tab_Info_Posti.SuspendLayout();
             this.Pgn_Informazioni.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).BeginInit();
@@ -324,6 +326,7 @@
             this.Pannello_Login.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.Pgn_Register.SuspendLayout();
+            this.Pgn_Login.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -374,6 +377,7 @@
             this.Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Account.TabIndex = 4;
             this.Account.TabStop = false;
+            this.Account.Click += new System.EventHandler(this.Account_Click);
             // 
             // panel2
             // 
@@ -576,23 +580,26 @@
             // Pannello_Posti
             // 
             this.Pannello_Posti.BackColor = System.Drawing.Color.SkyBlue;
-            this.Pannello_Posti.Controls.Add(this.tabControl1);
+            this.Pannello_Posti.Controls.Add(this.Tab_Info_Posti);
             this.Pannello_Posti.Location = new System.Drawing.Point(3, 509);
             this.Pannello_Posti.Name = "Pannello_Posti";
             this.Pannello_Posti.Size = new System.Drawing.Size(1151, 434);
             this.Pannello_Posti.TabIndex = 12;
+            this.Pannello_Posti.Visible = false;
+            this.Pannello_Posti.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pannello_Posti_MouseMove);
             // 
-            // tabControl1
+            // Tab_Info_Posti
             // 
-            this.tabControl1.Controls.Add(this.Pgn_Informazioni);
-            this.tabControl1.Controls.Add(this.Pgn_SelezionePosti);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.HotTrack = true;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1151, 434);
-            this.tabControl1.TabIndex = 0;
+            this.Tab_Info_Posti.Controls.Add(this.Pgn_Informazioni);
+            this.Tab_Info_Posti.Controls.Add(this.Pgn_SelezionePosti);
+            this.Tab_Info_Posti.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tab_Info_Posti.HotTrack = true;
+            this.Tab_Info_Posti.Location = new System.Drawing.Point(0, 0);
+            this.Tab_Info_Posti.Name = "Tab_Info_Posti";
+            this.Tab_Info_Posti.SelectedIndex = 0;
+            this.Tab_Info_Posti.Size = new System.Drawing.Size(1151, 434);
+            this.Tab_Info_Posti.TabIndex = 0;
+            this.Tab_Info_Posti.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Tab_Info_Posti_MouseMove);
             // 
             // Pgn_Informazioni
             // 
@@ -717,6 +724,7 @@
             // 
             // Pgn_SelezionePosti
             // 
+            this.Pgn_SelezionePosti.Controls.Add(this.Info_Error);
             this.Pgn_SelezionePosti.Controls.Add(this.Prato_VIP);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_D);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_C);
@@ -725,7 +733,6 @@
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_E);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_A);
             this.Pgn_SelezionePosti.Controls.Add(this.Palco);
-            this.Pgn_SelezionePosti.Controls.Add(this.Info_Error);
             this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
@@ -745,7 +752,6 @@
             this.Prato_VIP.Text = "Sotto Palco";
             this.Info_Posto.SetToolTip(this.Prato_VIP, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - VIP\r\nCosto - 60€");
             this.Prato_VIP.UseVisualStyleBackColor = false;
-            this.Prato_VIP.Visible = false;
             this.Prato_VIP.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // Settore_D
@@ -794,7 +800,6 @@
             this.Settore_D.Name = "Settore_D";
             this.Settore_D.Size = new System.Drawing.Size(364, 118);
             this.Settore_D.TabIndex = 37;
-            this.Settore_D.Visible = false;
             // 
             // button108
             // 
@@ -1402,7 +1407,6 @@
             this.Settore_C.Name = "Settore_C";
             this.Settore_C.Size = new System.Drawing.Size(364, 118);
             this.Settore_C.TabIndex = 29;
-            this.Settore_C.Visible = false;
             // 
             // button68
             // 
@@ -2010,7 +2014,6 @@
             this.Settore_B.Name = "Settore_B";
             this.Settore_B.Size = new System.Drawing.Size(364, 118);
             this.Settore_B.TabIndex = 28;
-            this.Settore_B.Visible = false;
             // 
             // button2
             // 
@@ -2583,7 +2586,6 @@
             this.Prato.Text = "Prato";
             this.Info_Posto.SetToolTip(this.Prato, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - Prato\r\nCosto - 15€");
             this.Prato.UseVisualStyleBackColor = false;
-            this.Prato.Visible = false;
             this.Prato.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // Settore_E
@@ -2632,7 +2634,6 @@
             this.Settore_E.Name = "Settore_E";
             this.Settore_E.Size = new System.Drawing.Size(364, 118);
             this.Settore_E.TabIndex = 36;
-            this.Settore_E.Visible = false;
             // 
             // button157
             // 
@@ -3240,7 +3241,6 @@
             this.Settore_A.Name = "Settore_A";
             this.Settore_A.Size = new System.Drawing.Size(364, 118);
             this.Settore_A.TabIndex = 1;
-            this.Settore_A.Visible = false;
             // 
             // button33
             // 
@@ -3809,15 +3809,14 @@
             this.Palco.TabIndex = 0;
             this.Palco.Text = "Palco";
             this.Palco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Palco.Visible = false;
             // 
             // Info_Error
             // 
             this.Info_Error.Font = new System.Drawing.Font("Forte", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Info_Error.ForeColor = System.Drawing.Color.Red;
-            this.Info_Error.Location = new System.Drawing.Point(290, 127);
+            this.Info_Error.Location = new System.Drawing.Point(-7, -16);
             this.Info_Error.Name = "Info_Error";
-            this.Info_Error.Size = new System.Drawing.Size(569, 189);
+            this.Info_Error.Size = new System.Drawing.Size(1154, 428);
             this.Info_Error.TabIndex = 39;
             this.Info_Error.Text = "Devi prima fare il login/registrazione";
             this.Info_Error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3836,10 +3835,11 @@
             // Pannello_Login
             // 
             this.Pannello_Login.Controls.Add(this.tabControl2);
-            this.Pannello_Login.Location = new System.Drawing.Point(0, 54);
+            this.Pannello_Login.Location = new System.Drawing.Point(0, 59);
             this.Pannello_Login.Name = "Pannello_Login";
             this.Pannello_Login.Size = new System.Drawing.Size(1151, 434);
             this.Pannello_Login.TabIndex = 13;
+            this.Pannello_Login.Visible = false;
             // 
             // tabControl2
             // 
@@ -3854,6 +3854,7 @@
             // 
             // Pgn_Register
             // 
+            this.Pgn_Register.Controls.Add(this.Register_Btn);
             this.Pgn_Register.Controls.Add(this.Comuni_Lst);
             this.Pgn_Register.Controls.Add(this.label6);
             this.Pgn_Register.Controls.Add(this.label5);
@@ -3936,6 +3937,7 @@
             // 
             // Pgn_Login
             // 
+            this.Pgn_Login.Controls.Add(this.Login_Btn);
             this.Pgn_Login.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Login.Name = "Pgn_Login";
             this.Pgn_Login.Padding = new System.Windows.Forms.Padding(3);
@@ -3943,6 +3945,26 @@
             this.Pgn_Login.TabIndex = 1;
             this.Pgn_Login.Text = "Login";
             this.Pgn_Login.UseVisualStyleBackColor = true;
+            // 
+            // Register_Btn
+            // 
+            this.Register_Btn.Location = new System.Drawing.Point(502, 343);
+            this.Register_Btn.Name = "Register_Btn";
+            this.Register_Btn.Size = new System.Drawing.Size(143, 23);
+            this.Register_Btn.TabIndex = 11;
+            this.Register_Btn.Text = "Registrati";
+            this.Register_Btn.UseVisualStyleBackColor = true;
+            this.Register_Btn.Click += new System.EventHandler(this.Login_Register);
+            // 
+            // Login_Btn
+            // 
+            this.Login_Btn.Location = new System.Drawing.Point(469, 338);
+            this.Login_Btn.Name = "Login_Btn";
+            this.Login_Btn.Size = new System.Drawing.Size(75, 23);
+            this.Login_Btn.TabIndex = 0;
+            this.Login_Btn.Text = "Accedi";
+            this.Login_Btn.UseVisualStyleBackColor = true;
+            this.Login_Btn.Click += new System.EventHandler(this.Login_Register);
             // 
             // Form1
             // 
@@ -3984,7 +4006,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Img_GAMESINCONCERT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).EndInit();
             this.Pannello_Posti.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.Tab_Info_Posti.ResumeLayout(false);
             this.Pgn_Informazioni.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -4001,6 +4023,7 @@
             this.tabControl2.ResumeLayout(false);
             this.Pgn_Register.ResumeLayout(false);
             this.Pgn_Register.PerformLayout();
+            this.Pgn_Login.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4027,7 +4050,7 @@
         private System.Windows.Forms.Panel Pannello_InEvidenza;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Panel Pannello_Posti;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl Tab_Info_Posti;
         private System.Windows.Forms.TabPage Pgn_Informazioni;
         private System.Windows.Forms.TabPage Pgn_SelezionePosti;
         private System.Windows.Forms.Panel Settore_E;
@@ -4266,6 +4289,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox Comuni_Lst;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button Register_Btn;
+        private System.Windows.Forms.Button Login_Btn;
     }
 }
 

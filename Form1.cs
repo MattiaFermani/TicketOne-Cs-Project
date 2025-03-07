@@ -15,8 +15,10 @@ namespace Biglietti_concerto
 {
     public partial class Form1 : Form
     {
-
         static Random rand = new Random();
+        static List<string> Comuni = new List<string>();
+        static List<string> CodiciBelfiore = new List<string>();
+
         static List<string> DataRandom(Random rand)
         {
             List<string> dates = new List<string>();
@@ -104,6 +106,9 @@ namespace Biglietti_concerto
                         string comune = row.Cell(2).GetValue<string>();
                         string codiceBelfiore = row.Cell(1).GetValue<string>();
 
+                        Comuni.Add(comune);
+                        CodiciBelfiore.Add(codiceBelfiore);
+
                         Comuni_Lst.Items.Add($"{comune} - {codiceBelfiore} ");
                     }
                 }
@@ -127,6 +132,7 @@ namespace Biglietti_concerto
             Pannello_Principale.Size = new Size(1151, 434);
             Pannello_Principale.Location = new Point(0, 54);
             Pannello_Posti.Size = new Size(1151, 434);
+            Pannello_Login.Size = new Size(1151, 434);
         }
 
 
@@ -174,21 +180,56 @@ namespace Biglietti_concerto
             }
         }
 
+
         private void TickeTlon_Click(object sender, EventArgs e)
         {
             Pannello_Principale.Visible = true;
             Pannello_Principale.Location = new Point(0, 54);
             Pannello_Posti.Visible = false;
         }
-
         private void Data_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
             Luogo_Lst.SelectedIndex = Data_Lst.SelectedIndex;
         }
-
         private void Luogo_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
             Data_Lst.SelectedIndex = Luogo_Lst.SelectedIndex;
+        }
+
+
+
+
+        bool Login = false;
+        private void Account_Click(object sender, EventArgs e)
+        {
+            Pannello_Principale.Visible = false;
+            Pannello_Posti.Visible = false;
+            Pannello_Login.Visible = true;
+            Pannello_Login.Location = new Point(0, 54);
+        }
+
+        private void Login_Register(object sender, EventArgs e)
+        {
+            Login = true;
+            Pannello_Login.Visible = false;
+            Pannello_Login.Enabled = false;
+        }
+
+        private void Tab_Info_Posti_MouseMove(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void Pannello_Posti_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Login == true)
+            {
+                Info_Error.Visible = false;
+            }
+            else
+            {
+                Info_Error.Visible = true;
+            }
         }
 
         /*private void txt_nascita_TextChanged(object sender, EventArgs e)
