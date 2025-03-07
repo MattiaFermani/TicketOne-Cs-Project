@@ -17,9 +17,6 @@ namespace Biglietti_concerto
     {
 
         static Random rand = new Random();
-
-
-
         static List<string> DataRandom(Random rand)
         {
             List<string> dates = new List<string>();
@@ -43,7 +40,6 @@ namespace Biglietti_concerto
             dates.Reverse();
             return dates;
         }
-
         static Dictionary<string, (List<string> luoghi, List<string> date)> Eventi = new Dictionary<string, (List<string>, List<string>)>
         {
             { "Intelligenza Naturale",
@@ -93,44 +89,6 @@ namespace Biglietti_concerto
         ("2025 World Tour - Milano", "Black Pink", "Le Blackpink, star mondiali del K-POP, arrivano in Italia per la prima volta.\nScopri i dettagli!", Eventi),
         ("AC/DC - Powerup Tour", "AC/DC", "Annunciata una data estiva del POWER UP Tour. Scopri i dettagli!", Eventi),
         };
-        List<string> Luoghi = new List<string>
-        {
-            "Firenze - Teatro Verdi",
-            "Roma - Stadio Olimpico",
-            "Roma - Auditorium Parco della Musica",
-            "Torino - Teatro Regio",
-            "Verona - Arena di Verona",
-            "Milano - Teatro La Scala",
-            "Milano - Blue Note",
-            "Torino - Pala Alpitour",
-            "Roma - Palazzetto dello Sport",
-            "Napoli - Teatro Centrale",
-            "Firenze - Stadio Artemio Franchi",
-            "Roma - Ippodromo delle Capannelle",
-            "Milano - Mediolanum Forum",
-            "Bologna - Unipol Arena",
-            "Milano - Alcatraz",
-            "Roma - Atlantico",
-            "Bologna - Estragon Club",
-            "Napoli - Palapartenope",
-            "Roma - Circo Massimo",
-            "Milano - Ippodromo Snai",
-            "Roma - Auditorium della Musica",
-            "Firenze - Palazzo dei Congressi",
-            "Palermo - Teatro Massimo",
-            "Roma - Villa Ada",
-            "Milano - Fabrique",
-            "Genova - Politeama Genovese",
-            "Milano - Teatro Manzoni",
-            "Milano - Teatro Elfo Puccini",
-            "Milano - Auditorium San Fedele",
-            "Torino - Teatro Gobetti",
-            "Bari - Stadio San Nicola",
-            "Milano - Teatro degli Arcimboldi",
-            "Roma - Palazzo dello Sport",
-            "Milano - Stadio San Siro"
-        };
-
 
 
         public Form1()
