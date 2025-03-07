@@ -128,8 +128,9 @@ namespace Biglietti_concerto
             ("AC/DC - Powerup Tour", "AC/DC", "Annunciata una data estiva del POWER UP Tour. Scopri i dettagli!", Eventi),
         };
 
-        private void ComuniITA(string filePath)
+        private void ComuniITA()
         {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\Resources", "T4_codicicatastali_comuni_20_01_2020.xlsx");
             if (System.IO.File.Exists(filePath))
             {
                 using (var workbook = new XLWorkbook(filePath))
@@ -158,8 +159,7 @@ namespace Biglietti_concerto
         public Form1()
         {
             InitializeComponent();
-            ComuniITA(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\Resources", "T4_codicicatastali_comuni_20_01_2020.xlsx"));
-
+            ComuniITA();
         }
 
         private void Form1_Load(object sender, EventArgs e)
