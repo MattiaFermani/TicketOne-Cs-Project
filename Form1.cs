@@ -151,7 +151,8 @@ namespace Biglietti_concerto
         public Form1()
         {
             InitializeComponent();
-            
+            //dateTimePicker1.Value = DateTime.Today;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -223,5 +224,40 @@ namespace Biglietti_concerto
         {
             Data_Lst.SelectedIndex = Luogo_Lst.SelectedIndex;
         }
+
+        /*private void txt_nascita_TextChanged(object sender, EventArgs e)
+        {
+            if(txt_nascita.SelectedText ==true)
+            if (txt_nascita.Text.Length == 10)
+            {
+                if (txt_nascita.Text[2] == '/' && txt_nascita.Text[5] == '/')
+                {
+                    string[] data = txt_nascita.Text.Split('/');
+                    if (int.TryParse(data[0], out int giorno) && int.TryParse(data[1], out int mese) && int.TryParse(data[2], out int anno))
+                    {
+                        if (giorno > 0 && giorno <= 31 && mese > 0 && mese <= 12 && anno > 1900 && anno < 2025)
+                        {
+                            txt_nascita.BackColor = Color.White;
+                        }
+                        else
+                        {
+                            txt_nascita.BackColor = Color.Red;
+                        }
+                    }
+                    else
+                    {
+                        txt_nascita.BackColor = Color.Red;
+                    }
+                }
+                else
+                {
+                    txt_nascita.BackColor = Color.Red;
+                }
+            }
+            else
+            {
+                txt_nascita.BackColor = Color.Red;
+            }
+        }*/
     }
 }

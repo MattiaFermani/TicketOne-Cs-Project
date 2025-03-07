@@ -279,13 +279,13 @@
             this.Pannello_Login = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.Pgn_Register = new System.Windows.Forms.TabPage();
-            this.Pgn_Login = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Pgn_Login = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -3852,8 +3852,8 @@
             // 
             // Pgn_Register
             // 
-            this.Pgn_Register.Controls.Add(this.textBox3);
-            this.Pgn_Register.Controls.Add(this.monthCalendar1);
+            this.Pgn_Register.Controls.Add(this.label5);
+            this.Pgn_Register.Controls.Add(this.dateTimePicker1);
             this.Pgn_Register.Controls.Add(this.textBox2);
             this.Pgn_Register.Controls.Add(this.label4);
             this.Pgn_Register.Controls.Add(this.textBox1);
@@ -3864,32 +3864,6 @@
             this.Pgn_Register.Size = new System.Drawing.Size(1143, 405);
             this.Pgn_Register.TabIndex = 0;
             this.Pgn_Register.Text = "Registrazione";
-            // 
-            // Pgn_Login
-            // 
-            this.Pgn_Login.Location = new System.Drawing.Point(4, 25);
-            this.Pgn_Login.Name = "Pgn_Login";
-            this.Pgn_Login.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Login.Size = new System.Drawing.Size(1143, 405);
-            this.Pgn_Login.TabIndex = 1;
-            this.Pgn_Login.Text = "Login";
-            this.Pgn_Login.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nome";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(48, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 22);
-            this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
@@ -3907,18 +3881,47 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Cognome";
             // 
-            // monthCalendar1
+            // textBox1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(237, 179);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 4;
+            this.textBox1.Location = new System.Drawing.Point(48, 56);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(199, 22);
+            this.textBox1.TabIndex = 1;
             // 
-            // textBox3
+            // label3
             // 
-            this.textBox3.Location = new System.Drawing.Point(48, 179);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 22);
-            this.textBox3.TabIndex = 5;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(44, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nome";
+            // 
+            // Pgn_Login
+            // 
+            this.Pgn_Login.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Login.Name = "Pgn_Login";
+            this.Pgn_Login.Padding = new System.Windows.Forms.Padding(3);
+            this.Pgn_Login.Size = new System.Drawing.Size(1143, 405);
+            this.Pgn_Login.TabIndex = 1;
+            this.Pgn_Login.Text = "Login";
+            this.Pgn_Login.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(48, 195);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(46, 167);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Data di nascita";
             // 
             // Form1
             // 
@@ -4238,8 +4241,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label5;
     }
 }
 
