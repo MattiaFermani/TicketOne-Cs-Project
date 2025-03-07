@@ -186,6 +186,7 @@ namespace Biglietti_concerto
             Pannello_Principale.Visible = true;
             Pannello_Principale.Location = new Point(0, 54);
             Pannello_Posti.Visible = false;
+            Pannello_Login.Visible = false;
         }
         private void Data_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -213,6 +214,8 @@ namespace Biglietti_concerto
             Login = true;
             Pannello_Login.Visible = false;
             Pannello_Login.Enabled = false;
+            Pannello_Posti.Visible = false;
+            Pannello_Principale.Visible = true;
         }
 
         private void Tab_Info_Posti_MouseMove(object sender, MouseEventArgs e)
