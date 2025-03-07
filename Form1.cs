@@ -20,7 +20,7 @@ namespace Biglietti_concerto
 
 
 
-        static List<string> GenerateRandomDates(Random rand)
+        static List<string> DataRandom(Random rand)
         {
             List<string> dates = new List<string>();
             for (int i = 0; i < 4; i++)
@@ -32,6 +32,7 @@ namespace Biglietti_concerto
             }
 
             dates.Sort();
+            dates.Reverse();
 
             for (int i = 0; i < dates.Count; i++)
             {
@@ -39,6 +40,7 @@ namespace Biglietti_concerto
                 dates[i] = dt.ToString("dd/MM/yyyy");
             }
 
+            dates.Reverse();
             return dates;
         }
 
@@ -46,35 +48,34 @@ namespace Biglietti_concerto
         {
             { "Intelligenza Naturale",
                 (new List<string> { "Firenze - Teatro Verdi", "Roma - Stadio Olimpico", "Roma - Auditorium Parco della Musica", "Torino - Teatro Regio" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "Marcus Miller", (new List<string> { "Verona - Arena di Verona", "Milano - Teatro La Scala", "Milano - Blue Note", "Torino - Pala Alpitour" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "LRDL Summer Tour 2025", (new List<string> { "Roma - Palazzetto dello Sport", "Napoli - Teatro Centrale", "Firenze - Stadio Artemio Franchi", "Roma - Ippodromo delle Capannelle" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "PalaJova", (new List<string> { "Torino - Pala Alpitour", "Milano - Mediolanum Forum", "Bologna - Unipol Arena", "Roma - Stadio Olimpico" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "Sophie and The Giants", (new List<string> { "Milano - Alcatraz", "Roma - Atlantico", "Firenze - Teatro Verdi", "Bologna - Estragon Club" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "Damme na mano Roma e Milano", (new List<string> { "Milano - Ippodromo Snai", "Roma - Circo Massimo", "Napoli - Palapartenope", "Bologna - Unipol Arena" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "Games in Concert", (new List<string> { "Roma - Auditorium della Musica", "Torino - Teatro Regio", "Firenze - Palazzo dei Congressi", "Palermo - Teatro Massimo" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "FASK tour estivo 2025", (new List<string> { "Roma - Villa Ada", "Bologna - Estragon Club", "Milano - Fabrique", "Milano - Alcatraz" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "Prova A Prendermi", (new List<string> { "Roma - Teatro Brancaccio", "Milano - Teatro Nazionale", "Genova - Politeama Genovese", "Bologna - Teatro Comunale" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "Vita Bassa", (new List<string> { "Milano - Teatro Manzoni", "Milano - Teatro Elfo Puccini", "Milano - Auditorium San Fedele", "Torino - Teatro Gobetti" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "Estate 2025", (new List<string> { "Milano - Ippodromo Snai San Siro", "Roma - Circo Massimo", "Firenze - Stadio Artemio Franchi", "Bari - Stadio San Nicola" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "Jimmy Sax and Symphonic Dance Orchestra", (new List<string> { "Milano - Teatro degli Arcimboldi", "Roma - Auditorium Parco della Musica", "Firenze - Palazzo della Musica", "Verona - Arena di Verona" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "2025 World Tour - Milano", (new List<string> { "Milano - Mediolanum Forum", "Bologna - Unipol Arena", "Torino - Pala Alpitour", "Roma - Palazzo dello Sport" },
-                GenerateRandomDates(rand)) },
+                DataRandom(rand)) },
             { "AC/DC - Powerup Tour", (new List<string> { "Milano - Stadio San Siro", "Roma - Stadio Olimpico", "Verona - Arena di Verona", "Roma - Ippodromo delle Capannelle" },
-                GenerateRandomDates(rand)) }
+                DataRandom(rand)) }
         };
-
         List<(string Titolo, string Artista, string Descrizione, Dictionary<string, (List<string> luoghi, List<string> date)> Dizionario)> Spettacoli = new List<(string, string, string, Dictionary<string, (List<string>, List<string>)>)>
     {
         ("Intelligenza Naturale", "Andrea Pezzi", "Uno spettacolo sull'intelligenza umana", Eventi),
@@ -91,6 +92,43 @@ namespace Biglietti_concerto
         ("Jimmy Sax and Symphonic Dance Orchestra", "Jimmy Sax", "Scopri i dettagli e acquista il tuo biglietto!", Eventi),
         ("2025 World Tour - Milano", "Black Pink", "Le Blackpink, star mondiali del K-POP, arrivano in Italia per la prima volta.\nScopri i dettagli!", Eventi),
         ("AC/DC - Powerup Tour", "AC/DC", "Annunciata una data estiva del POWER UP Tour. Scopri i dettagli!", Eventi),
+        };
+        List<string> Luoghi = new List<string>
+        {
+            "Firenze - Teatro Verdi",
+            "Roma - Stadio Olimpico",
+            "Roma - Auditorium Parco della Musica",
+            "Torino - Teatro Regio",
+            "Verona - Arena di Verona",
+            "Milano - Teatro La Scala",
+            "Milano - Blue Note",
+            "Torino - Pala Alpitour",
+            "Roma - Palazzetto dello Sport",
+            "Napoli - Teatro Centrale",
+            "Firenze - Stadio Artemio Franchi",
+            "Roma - Ippodromo delle Capannelle",
+            "Milano - Mediolanum Forum",
+            "Bologna - Unipol Arena",
+            "Milano - Alcatraz",
+            "Roma - Atlantico",
+            "Bologna - Estragon Club",
+            "Napoli - Palapartenope",
+            "Roma - Circo Massimo",
+            "Milano - Ippodromo Snai",
+            "Roma - Auditorium della Musica",
+            "Firenze - Palazzo dei Congressi",
+            "Palermo - Teatro Massimo",
+            "Roma - Villa Ada",
+            "Milano - Fabrique",
+            "Genova - Politeama Genovese",
+            "Milano - Teatro Manzoni",
+            "Milano - Teatro Elfo Puccini",
+            "Milano - Auditorium San Fedele",
+            "Torino - Teatro Gobetti",
+            "Bari - Stadio San Nicola",
+            "Milano - Teatro degli Arcimboldi",
+            "Roma - Palazzo dello Sport",
+            "Milano - Stadio San Siro"
         };
 
 
