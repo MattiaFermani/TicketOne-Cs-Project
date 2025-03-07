@@ -296,6 +296,12 @@
             this.Login_Btn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.FormClose = new System.Windows.Forms.Button();
+            this.PratoMeno = new System.Windows.Forms.Button();
+            this.PratoPiu = new System.Windows.Forms.Button();
+            this.PratoPostiNum_Lbl = new System.Windows.Forms.Label();
+            this.Group_Gender = new System.Windows.Forms.GroupBox();
+            this.Male_Rdb = new System.Windows.Forms.RadioButton();
+            this.Female_Rdb = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -334,6 +340,7 @@
             this.Pgn_Register.SuspendLayout();
             this.Pgn_Login.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.Group_Gender.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -733,6 +740,9 @@
             // Pgn_SelezionePosti
             // 
             this.Pgn_SelezionePosti.Controls.Add(this.Info_Error);
+            this.Pgn_SelezionePosti.Controls.Add(this.PratoPostiNum_Lbl);
+            this.Pgn_SelezionePosti.Controls.Add(this.PratoPiu);
+            this.Pgn_SelezionePosti.Controls.Add(this.PratoMeno);
             this.Pgn_SelezionePosti.Controls.Add(this.Prato_VIP);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_D);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_C);
@@ -768,6 +778,7 @@
             this.Prato_VIP.Name = "Prato_VIP";
             this.Prato_VIP.Size = new System.Drawing.Size(212, 27);
             this.Prato_VIP.TabIndex = 38;
+            this.Prato_VIP.Tag = "VIP";
             this.Prato_VIP.Text = "Sotto Palco";
             this.Info_Posto.SetToolTip(this.Prato_VIP, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - VIP\r\nCosto - 60€");
             this.Prato_VIP.UseVisualStyleBackColor = false;
@@ -3842,6 +3853,7 @@
             // 
             // Pannello_Login
             // 
+            this.Pannello_Login.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Login.Controls.Add(this.tabControl2);
             this.Pannello_Login.Location = new System.Drawing.Point(0, 59);
             this.Pannello_Login.Name = "Pannello_Login";
@@ -3862,6 +3874,7 @@
             // 
             // Pgn_Register
             // 
+            this.Pgn_Register.Controls.Add(this.Group_Gender);
             this.Pgn_Register.Controls.Add(this.textBox4);
             this.Pgn_Register.Controls.Add(this.label8);
             this.Pgn_Register.Controls.Add(this.textBox3);
@@ -4036,6 +4049,76 @@
             this.FormClose.UseVisualStyleBackColor = true;
             this.FormClose.Click += new System.EventHandler(this.FormClose_Click);
             // 
+            // PratoMeno
+            // 
+            this.PratoMeno.FlatAppearance.BorderSize = 0;
+            this.PratoMeno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PratoMeno.Location = new System.Drawing.Point(499, 158);
+            this.PratoMeno.Name = "PratoMeno";
+            this.PratoMeno.Size = new System.Drawing.Size(34, 23);
+            this.PratoMeno.TabIndex = 40;
+            this.PratoMeno.Text = "- 1";
+            this.PratoMeno.UseMnemonic = false;
+            this.PratoMeno.UseVisualStyleBackColor = true;
+            this.PratoMeno.Visible = false;
+            this.PratoMeno.Click += new System.EventHandler(this.PratoPosti);
+            // 
+            // PratoPiu
+            // 
+            this.PratoPiu.FlatAppearance.BorderSize = 0;
+            this.PratoPiu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PratoPiu.Location = new System.Drawing.Point(608, 158);
+            this.PratoPiu.Name = "PratoPiu";
+            this.PratoPiu.Size = new System.Drawing.Size(34, 23);
+            this.PratoPiu.TabIndex = 41;
+            this.PratoPiu.Text = "+1";
+            this.PratoPiu.UseVisualStyleBackColor = true;
+            this.PratoPiu.Visible = false;
+            this.PratoPiu.Click += new System.EventHandler(this.PratoPosti);
+            // 
+            // PratoPostiNum_Lbl
+            // 
+            this.PratoPostiNum_Lbl.AutoSize = true;
+            this.PratoPostiNum_Lbl.Location = new System.Drawing.Point(572, 168);
+            this.PratoPostiNum_Lbl.Name = "PratoPostiNum_Lbl";
+            this.PratoPostiNum_Lbl.Size = new System.Drawing.Size(29, 13);
+            this.PratoPostiNum_Lbl.TabIndex = 42;
+            this.PratoPostiNum_Lbl.Text = "NaN";
+            this.PratoPostiNum_Lbl.Visible = false;
+            // 
+            // Group_Gender
+            // 
+            this.Group_Gender.Controls.Add(this.Female_Rdb);
+            this.Group_Gender.Controls.Add(this.Male_Rdb);
+            this.Group_Gender.Location = new System.Drawing.Point(392, 183);
+            this.Group_Gender.Name = "Group_Gender";
+            this.Group_Gender.Size = new System.Drawing.Size(187, 50);
+            this.Group_Gender.TabIndex = 16;
+            this.Group_Gender.TabStop = false;
+            this.Group_Gender.Text = "Sesso";
+            // 
+            // Male_Rdb
+            // 
+            this.Male_Rdb.AutoSize = true;
+            this.Male_Rdb.Location = new System.Drawing.Point(6, 19);
+            this.Male_Rdb.Name = "Male_Rdb";
+            this.Male_Rdb.Size = new System.Drawing.Size(65, 17);
+            this.Male_Rdb.TabIndex = 0;
+            this.Male_Rdb.TabStop = true;
+            this.Male_Rdb.Text = "Maschio";
+            this.Male_Rdb.UseVisualStyleBackColor = true;
+            // 
+            // Female_Rdb
+            // 
+            this.Female_Rdb.AutoSize = true;
+            this.Female_Rdb.Location = new System.Drawing.Point(116, 19);
+            this.Female_Rdb.Name = "Female_Rdb";
+            this.Female_Rdb.Size = new System.Drawing.Size(67, 17);
+            this.Female_Rdb.TabIndex = 1;
+            this.Female_Rdb.TabStop = true;
+            this.Female_Rdb.Text = "Femmina";
+            this.Female_Rdb.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4084,6 +4167,7 @@
             this.TitoloArtista.ResumeLayout(false);
             this.TitoloArtista.PerformLayout();
             this.Pgn_SelezionePosti.ResumeLayout(false);
+            this.Pgn_SelezionePosti.PerformLayout();
             this.Settore_D.ResumeLayout(false);
             this.Settore_C.ResumeLayout(false);
             this.Settore_B.ResumeLayout(false);
@@ -4095,6 +4179,8 @@
             this.Pgn_Register.PerformLayout();
             this.Pgn_Login.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.Group_Gender.ResumeLayout(false);
+            this.Group_Gender.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4368,6 +4454,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button FormClose;
+        private System.Windows.Forms.Button PratoMeno;
+        private System.Windows.Forms.Label PratoPostiNum_Lbl;
+        private System.Windows.Forms.Button PratoPiu;
+        private System.Windows.Forms.GroupBox Group_Gender;
+        private System.Windows.Forms.RadioButton Female_Rdb;
+        private System.Windows.Forms.RadioButton Male_Rdb;
     }
 }
 

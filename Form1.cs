@@ -174,6 +174,7 @@ namespace Biglietti_concerto
 
         private void Spettacolo_Click(object sender, EventArgs e)
         {
+            PostiSelezionati = 0;
             PictureBox pb = (PictureBox)sender;
 
             foreach (var spettacolo in Spettacoli)
@@ -191,7 +192,7 @@ namespace Biglietti_concerto
                 }
             }
             Pannello_Principale.Visible = false;
-            Pannello_Posti.Location = new Point(0, 55);
+            Pannello_Posti.Location = new Point(0, 54);
             Pannello_Posti.Visible = true;
 
             Img_Info.Image = pb.Image;
@@ -199,20 +200,93 @@ namespace Biglietti_concerto
         }
 
 
+        int PostiSelezionati;
+        int posti;
         private void PostoSelezionato_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
 
             if (btn.BackColor == Color.Yellow)
             {
+                switch (btn.Tag.ToString())
+                {
+                    case "Normal":
+                        btn.BackColor = Color.LightSalmon;
+                        PostiSelezionati--;
+                        break;
+                    case "Senior":
+                        btn.BackColor = Color.Violet;
+                        PostiSelezionati--;
+                        break;
+                    case "Prato":
+                        btn.BackColor = Color.PaleGreen;
+                        PostiSelezionati -= posti;
+                        PratoPiu.Visible = false;
+                        PratoMeno.Visible = false;
+                        PratoPostiNum_Lbl.Visible = false;
+                        break;
+                    case "VIP":
+                        btn.BackColor = Color.Gold;
+                        break;
 
+                }
             }
             else
             {
-                
-                btn.BackColor = Color.Yellow;
-                string test = $"{btn.Parent.Name}\n\nPosto: {btn.Text}";
-                MessageBox.Show(test);
+                if (PostiSelezionati < 4)
+                {
+                    if(btn.Tag.ToString() == "Prato")
+                    {
+                        posti = 0;
+                        PSel = PostiSelezionati;
+                        PratoPostiNum_Lbl.Visible = true;
+                        PratoPiu.Visible = true;
+                        PratoMeno.Visible = true;
+                        PratoPostiNum_Lbl.Text = posti.ToString(); 
+                        btn.BackColor = Color.Yellow;
+                    }
+                    else
+                    {
+                        PostiSelezionati++;
+                        btn.BackColor = Color.Yellow;
+                        string test = $"{btn.Parent.Name}\n\nPosto: {btn.Text}";
+                        MessageBox.Show(test);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Hai già raggiunto il numero massimo di posti selezionabili");
+                }
+            }
+        }
+
+        int PSel;
+        private void PratoPosti(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            
+            if (btn.Text == "+1")
+            {
+                if (PSel + posti < 4)
+                {
+                    posti++;
+                    PostiSelezionati++;
+                    PratoPostiNum_Lbl.Text = posti.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Hai già raggiunto il numero massimo di posti selezionabili");
+                }
+            }
+            else
+            {
+                PSel = PostiSelezionati;
+                if (posti > 0)
+                {
+                    posti--;
+                    PostiSelezionati--;
+                    PratoPostiNum_Lbl.Text = posti.ToString();
+                }
             }
         }
 
@@ -280,6 +354,7 @@ namespace Biglietti_concerto
         {
             Form1.ActiveForm.Close();
         }
+
 
         /*private void txt_nascita_TextChanged(object sender, EventArgs e)
         {
