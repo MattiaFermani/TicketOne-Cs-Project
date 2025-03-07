@@ -9,124 +9,71 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Biglietti_concerto
 {
     public partial class Form1 : Form
     {
 
-        static Random rnd;
-        static List<DateTime> dateUsate = new List<DateTime>();
+        static Random rand = new Random();
 
 
-        //NOT WORKING PROPERLY
-        static List<string> GeneraDate(int numeroDate, DateTime dataIniziale)
+
+        static List<string> GenerateRandomDates(Random rand)
         {
-            List<string> dateGenerates = new List<string>();
-
-            for (int i = 0; i < numeroDate; i++)
+            List<string> dates = new List<string>();
+            for (int i = 0; i < 4; i++)
             {
-                rnd = new Random();
-                DateTime nuovadata = dataIniziale.AddDays(rnd.Next(1, 30));
-                while (dateUsate.Contains(nuovadata))
-                {
-                    nuovadata = dataIniziale.AddDays(rnd.Next(1, 30));
-                }
-                dateUsate.Add(nuovadata);
-                dateGenerates.Add(nuovadata.ToString("dd/MM/yyyy"));
+                int day = rand.Next(1, 29);
+                int month = rand.Next(4, 13);
+                int year = 2025 + rand.Next(0, 2);
+                dates.Add($"{year:D4}/{month:D2}/{day:D2}");
             }
 
+            dates.Sort();
 
+            for (int i = 0; i < dates.Count; i++)
+            {
+                DateTime dt = DateTime.ParseExact(dates[i], "yyyy/MM/dd", null);
+                dates[i] = dt.ToString("dd/MM/yyyy");
+            }
 
-            return dateGenerates;
+            return dates;
         }
 
         static Dictionary<string, (List<string> luoghi, List<string> date)> Eventi = new Dictionary<string, (List<string>, List<string>)>
-    {
-        { "Intelligenza Naturale",
-            (new List<string> { "Firenze - Teatro Verdi", "Roma - Stadio Olimpico", "Roma - Auditorium Parco della Musica", "Torino - Teatro Regio" },
-                //new List<string> {    "25/04/2025", "05/06/2025", "09/11/2025", "21/03/2026"})
-             GeneraDate(4, new DateTime(2025, 3, 25)))
-        },
-
-        { "Marcus Miller",
-            (new List<string> { "Verona - Arena di Verona", "Milano - Teatro La Scala", "Milano - Blue Note", "Torino - Pala Alpitour" },
-                //new List<string> {    "19/05/2025", "25/10/2025", "09/12/2025", "30/02/2026"})
-             GeneraDate(rnd.Next(3, 6), new DateTime(2025, 3, 25)))
-        },
-
-        { "LRDL Summer Tour 2025",
-            (new List<string> { "Roma - Palazzetto dello Sport", "Napoli - Teatro Centrale", "Firenze - Stadio Artemio Franchi", "Roma - Ippodromo delle Capannelle" },
-                //new List<string> {    "25/07/2025", "10/08/2025", "31/08/2025", "11/09/2025"})
-             GeneraDate(rnd.Next(2, 5), new DateTime(2025, 3, 25)))
-        },
-
-        { "PalaJova",
-            (new List<string> { "Torino - Pala Alpitour", "Milano - Mediolanum Forum", "Bologna - Unipol Arena", "Roma - Stadio Olimpico" },
-                //new List<string> {    "06/10/2025", "12/12/2025", "15/01/2025", "22/02/2026"})
-             GeneraDate(rnd.Next(3, 7), new DateTime(2025, 3, 25)))
-        },
-
-        { "Sophie and The Giants",
-            (new List<string> { "Milano - Alcatraz", "Roma - Atlantico", "Firenze - Teatro Verdi", "Bologna - Estragon Club" },
-                //new List<string> {    "06/04/2025", "12/06/2025", "19/07/2025", "06/11/2025"})
-             GeneraDate(rnd.Next(2, 6), new DateTime(2025, 3, 25)))
-        },
-
-        { "Damme na mano Roma e Milano",
-            (new List<string> { "Milano - Ippodromo Snai", "Roma - Circo Massimo", "Napoli - Palapartenope", "Bologna - Unipol Arena" },
-                //new List<string> {    "22/09/2025", "04/10/2025", "07/10/2025", "29/10/2025"})
-             GeneraDate(rnd.Next(3, 7), new DateTime(2025, 3, 25)))
-        },
-
-        { "Games in Concert",
-            (new List<string> { "Roma - Auditorium della Musica", "Torino - Teatro Regio", "Firenze - Palazzo dei Congressi", "Palermo - Teatro Massimo" },
-                //new List<string> {    "10/09/2025", "11/09/2025", "12/09/2025", "19/09/2025"})
-             GeneraDate(rnd.Next(2, 5), new DateTime(2025, 3, 25)))
-        },
-
-        { "FASK tour estivo 2025",
-            (new List<string> { "Roma - Villa Ada", "Bologna - Estragon Club", "Milano - Fabrique", "Milano - Alcatraz" },
-                //new List<string> {    "18/08/2025", "24/08/2025", "25/08/2025", "07/09/2025"})
-             GeneraDate(rnd.Next(3, 6), new DateTime(2025, 3, 25)))
-        },
-
-        { "Prova A Prendermi",
-            (new List<string> { "Roma - Teatro Brancaccio", "Milano - Teatro Nazionale", "Genova - Politeama Genovese", "Bologna - Teatro Comunale" },
-                //new List<string> {    "05/08/2025", "08/08/2025", "09/08/2025", "14/08/2025"})
-             GeneraDate(rnd.Next(2, 4), new DateTime(2025, 3, 25)))
-        },
-
-        { "Vita Bassa",
-            (new List<string> { "Milano - Teatro Manzoni", "Milano - Teatro Elfo Puccini", "Milano - Auditorium San Fedele", "Torino - Teatro Gobetti" },
-                //new List<string> {    "16/07/2025", "21/07/2025", "03/08/2025", "03/08/2025"})
-             GeneraDate(rnd.Next(3, 5), new DateTime(2025, 3, 25)))
-        },
-
-        { "Estate 2025",
-            (new List<string> { "Milano - Ippodromo Snai San Siro", "Roma - Circo Massimo", "Firenze - Stadio Artemio Franchi", "Bari - Stadio San Nicola" },
-                //new List<string> {    "06/07/2025", "06/07/2025", "07/07/2025", "08/07/2025"})
-             GeneraDate(rnd.Next(4, 8), new DateTime(2025, 3, 25)))
-        },
-
-        { "Jimmy Sax and Symphonic Dance Orchestra",
-            (new List<string> { "Milano - Teatro degli Arcimboldi", "Roma - Auditorium Parco della Musica", "Firenze - Palazzo della Musica", "Verona - Arena di Verona" },
-                //new List<string> {    "08/06/2025", "21/06/2025", "27/06/2025", "28/06/2025"})
-             GeneraDate(rnd.Next(3, 6), new DateTime(2025, 3, 25)))
-        },
-
-        { "2025 World Tour - Milano",
-            (new List<string> { "Milano - Mediolanum Forum", "Bologna - Unipol Arena", "Torino - Pala Alpitour", "Roma - Palazzo dello Sport" },
-                //new List<string> {    "04/05/2025", "24/05/2025", "30/05/2025", "01/06/2025"})
-             GeneraDate(rnd.Next(2, 5), new DateTime(2025, 3, 25)))
-        },
-
-        { "AC/DC - Powerup Tour",
-            (new List<string> { "Milano - Stadio San Siro", "Roma - Stadio Olimpico", "Verona - Arena di Verona", "Roma - Ippodromo delle Capannelle" },
-                //new List<string> {    "10/04/2025", "11/04/2025", "12/04/2025", "28/04/2025"})
-             GeneraDate(rnd.Next(4, 7), new DateTime(2025, 3, 25)))
-        }
-    };
+        {
+            { "Intelligenza Naturale",
+                (new List<string> { "Firenze - Teatro Verdi", "Roma - Stadio Olimpico", "Roma - Auditorium Parco della Musica", "Torino - Teatro Regio" },
+                GenerateRandomDates(rand)) },
+            { "Marcus Miller", (new List<string> { "Verona - Arena di Verona", "Milano - Teatro La Scala", "Milano - Blue Note", "Torino - Pala Alpitour" },
+                GenerateRandomDates(rand)) },
+            { "LRDL Summer Tour 2025", (new List<string> { "Roma - Palazzetto dello Sport", "Napoli - Teatro Centrale", "Firenze - Stadio Artemio Franchi", "Roma - Ippodromo delle Capannelle" },
+                GenerateRandomDates(rand)) },
+            { "PalaJova", (new List<string> { "Torino - Pala Alpitour", "Milano - Mediolanum Forum", "Bologna - Unipol Arena", "Roma - Stadio Olimpico" },
+                GenerateRandomDates(rand)) },
+            { "Sophie and The Giants", (new List<string> { "Milano - Alcatraz", "Roma - Atlantico", "Firenze - Teatro Verdi", "Bologna - Estragon Club" },
+                GenerateRandomDates(rand)) },
+            { "Damme na mano Roma e Milano", (new List<string> { "Milano - Ippodromo Snai", "Roma - Circo Massimo", "Napoli - Palapartenope", "Bologna - Unipol Arena" },
+                GenerateRandomDates(rand)) },
+            { "Games in Concert", (new List<string> { "Roma - Auditorium della Musica", "Torino - Teatro Regio", "Firenze - Palazzo dei Congressi", "Palermo - Teatro Massimo" },
+                GenerateRandomDates(rand)) },
+            { "FASK tour estivo 2025", (new List<string> { "Roma - Villa Ada", "Bologna - Estragon Club", "Milano - Fabrique", "Milano - Alcatraz" },
+                GenerateRandomDates(rand)) },
+            { "Prova A Prendermi", (new List<string> { "Roma - Teatro Brancaccio", "Milano - Teatro Nazionale", "Genova - Politeama Genovese", "Bologna - Teatro Comunale" },
+                GenerateRandomDates(rand)) },
+            { "Vita Bassa", (new List<string> { "Milano - Teatro Manzoni", "Milano - Teatro Elfo Puccini", "Milano - Auditorium San Fedele", "Torino - Teatro Gobetti" },
+                GenerateRandomDates(rand)) },
+            { "Estate 2025", (new List<string> { "Milano - Ippodromo Snai San Siro", "Roma - Circo Massimo", "Firenze - Stadio Artemio Franchi", "Bari - Stadio San Nicola" },
+                GenerateRandomDates(rand)) },
+            { "Jimmy Sax and Symphonic Dance Orchestra", (new List<string> { "Milano - Teatro degli Arcimboldi", "Roma - Auditorium Parco della Musica", "Firenze - Palazzo della Musica", "Verona - Arena di Verona" },
+                GenerateRandomDates(rand)) },
+            { "2025 World Tour - Milano", (new List<string> { "Milano - Mediolanum Forum", "Bologna - Unipol Arena", "Torino - Pala Alpitour", "Roma - Palazzo dello Sport" },
+                GenerateRandomDates(rand)) },
+            { "AC/DC - Powerup Tour", (new List<string> { "Milano - Stadio San Siro", "Roma - Stadio Olimpico", "Verona - Arena di Verona", "Roma - Ippodromo delle Capannelle" },
+                GenerateRandomDates(rand)) }
+        };
 
         List<(string Titolo, string Artista, string Descrizione, Dictionary<string, (List<string> luoghi, List<string> date)> Dizionario)> Spettacoli = new List<(string, string, string, Dictionary<string, (List<string>, List<string>)>)>
     {
@@ -151,7 +98,7 @@ namespace Biglietti_concerto
         public Form1()
         {
             InitializeComponent();
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
