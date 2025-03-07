@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClosedXML.Excel;
 using System.Windows.Forms;
 
 namespace Biglietti_concerto
@@ -89,12 +90,34 @@ namespace Biglietti_concerto
         ("AC/DC - Powerup Tour", "AC/DC", "Annunciata una data estiva del POWER UP Tour. Scopri i dettagli!", Eventi),
         };
 
+        private void ComuniITA(string filePath)
+        {
+            if (System.IO.File.Exists(filePath))
+            {
+                using (var workbook = new XLWorkbook(filePath))
+                {
+                    var worksheet = workbook.Worksheet(1);
+                    var rowCount = worksheet.RowsUsed();
 
+                    foreach (var row in rowCount)
+                    {
+                        string comune = row.Cell(2).GetValue<string>();
+                        string codiceBelfiore = row.Cell(1).GetValue<string>();
+
+                        Comuni_Lst.Items.Add($"{comune} - {codiceBelfiore} ");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Il file Excel non esiste!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         public Form1()
         {
             InitializeComponent();
-            //dateTimePicker1.Value = DateTime.Today;
+            ComuniITA(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\Resources", "T4_codicicatastali_comuni_20_01_2020.xlsx"));
 
         }
 
