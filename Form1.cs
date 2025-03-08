@@ -55,6 +55,7 @@ namespace Biglietti_concerto
             "Roma - Palazzo dello Sport",
             "Milano - Stadio San Siro"
         };
+        static List<string> DateUSateLoad = new List<string>();
 
         static List<string> Date_Luoghi_Random(int cosa, Random rand)
         {
@@ -93,7 +94,9 @@ namespace Biglietti_concerto
             return null;
         }
 
-        static Dictionary<string, List<Dictionary<string, List<Button>>>> PostiEvento = new Dictionary<string, List<Dictionary<string, List<Button>>>>();
+        static List<Button> TempPostiSel = new List<Button>();
+
+        static Dictionary<string, Dictionary<(string luogo, string data), List<Button>>> PostiEvento = new Dictionary<string, Dictionary<(string, string), List<Button>>>();
 
         static Dictionary<string, (List<string> luoghi, List<string> date)> Eventi = new Dictionary<string, (List<string>, List<string>)>
         {
@@ -158,10 +161,84 @@ namespace Biglietti_concerto
             }
         }
 
+        private void PostiEventoFirstLoad()
+        {
+            foreach (var spettacolo in Spettacoli)
+            {
+                Dictionary<(string, string), List<Button>> postiEvento = new Dictionary<(string, string), List<Button>>();
+                foreach (var luogo in spettacolo.Dizionario[spettacolo.Titolo].luoghi)
+                {
+                    foreach (var data in spettacolo.Dizionario[spettacolo.Titolo].date)
+                    {
+                        if(DateUSateLoad.Contains(data))
+                        {
+                            continue;
+                        }
+                        List<Button> posti = new List<Button>();
+                        foreach(var settore in Pgn_SelezionePosti.Controls.OfType<Panel>())
+                        {
+                            foreach (var posto in settore.Controls.OfType<Button>())
+                            {
+                                if (posto.Tag.ToString()[0] == '0')
+                                {
+                                    Button btn = new Button
+                                    {
+                                        Tag = posto.Tag,
+                                        Location = posto.Location,
+                                        Enabled = posto.Enabled
+                                    };
+                                    posti.Add(btn);
+                                }
+                            }
+                        }
+                        postiEvento.Add((luogo, data), posti);
+                        DateUSateLoad.Add(data);
+                        break;
+                    }
+                }
+                PostiEvento.Add(spettacolo.Titolo, postiEvento);
+            }
+        }
+
+        private void PostiEventoShow(string titolo, string luogo, string data)
+        {
+            foreach (var spettacolo in Spettacoli)
+            {
+                if (spettacolo.Titolo == titolo)
+                {
+                    foreach (var luogoEvento in spettacolo.Dizionario[spettacolo.Titolo].luoghi)
+                    {
+                        if (luogoEvento == luogo)
+                        {
+                            foreach (var dataEvento in spettacolo.Dizionario[spettacolo.Titolo].date)
+                            {
+                                if (dataEvento == data)
+                                {
+                                    foreach (var btn in PostiEvento[spettacolo.Titolo][(luogo, data)])
+                                    {
+                                        foreach (var posto in Pannello_Posti.Controls.OfType<Button>())
+                                        {
+                                            if (btn.Location == posto.Location && btn.Tag.ToString()[0] == 1)
+                                            {
+                                                posto.BackColor = Color.Gray;
+                                                posto.Enabled = false;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
         public Form1()
         {
             InitializeComponent();
             ComuniITA();
+            PostiEventoFirstLoad();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -170,7 +247,14 @@ namespace Biglietti_concerto
             Pannello_Principale.Size = new Size(1151, 434);
             Pannello_Principale.Location = new Point(0, 54);
             Pannello_Posti.Size = new Size(1151, 434);
+            Pannello_Posti.Location = new Point(0, 54);
+            Pannello_Posti.Visible = false;
             Pannello_Login.Size = new Size(1151, 434);
+            Pannello_Login.Location = new Point(0, 54);
+            Pannello_Login.Visible = false;
+            Pannello_Pagamento.Size = new Size(1151, 434);
+            Pannello_Pagamento.Location = new Point(0, 54);
+            Pannello_Pagamento.Visible = false;
         }
 
 
@@ -232,6 +316,10 @@ namespace Biglietti_concerto
                         break;
 
                 }
+                if (TempPostiSel.Contains(btn))
+                {
+                    TempPostiSel.Remove(btn);
+                }
             }
             else
             {
@@ -249,6 +337,7 @@ namespace Biglietti_concerto
                     }
                     else
                     {
+                        TempPostiSel.Add(btn);
                         PostiSelezionati++;
                         btn.BackColor = Color.Yellow;
                         string test = $"{btn.Parent.Name}\n\nPosto: {btn.Text}";
@@ -299,6 +388,8 @@ namespace Biglietti_concerto
             Pannello_Principale.Location = new Point(0, 54);
             Pannello_Posti.Visible = false;
             Pannello_Login.Visible = false;
+            Pannello_Pagamento.Visible = false;
+            TempPostiSel.Clear();
         }
         private void Data_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -357,22 +448,39 @@ namespace Biglietti_concerto
 
         private void Btn_ConfemaPosti_Click(object sender, EventArgs e)
         {
-            if(Luogo_Lst.SelectedIndex != -1 && Data_Lst.SelectedIndex != -1)
+            if(PostiSelezionati > 0)
             {
-                if(PostiSelezionati > 0)
-                {
-                }
-                else
-                {
-                    MessageBox.Show("Seleziona almeno un posto");
-                }
+                Pannello_Pagamento.Visible = true;
+                Pannello_Posti.Visible = false;
             }
             else
             {
-                MessageBox.Show("Seleziona un luogo e una data");
+                MessageBox.Show("Seleziona almeno un posto");
             }
         }
 
+        private void Tab_Info_Posti_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Luogo_Lst.SelectedIndex == -1 && Data_Lst.SelectedIndex == -1)
+            {
+                Pgn_SelezionePosti.Enabled = false;
+            }
+            else
+            {
+                PostiEventoShow(TitoloSpettacolo_Lbl.Text, Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString());
+                Pgn_SelezionePosti.Enabled = true;
+            }
+        }
+
+        private void Btn_Pagamento_Click(object sender, EventArgs e)
+        {
+            foreach (var btn in TempPostiSel)
+            {
+                PostiEvento[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString())].Add(btn);
+                btn.Tag = "1" + btn.Tag.ToString().Substring(1);
+            }
+            TempPostiSel.Clear();
+        }
 
         /*private void txt_nascita_TextChanged(object sender, EventArgs e)
         {
