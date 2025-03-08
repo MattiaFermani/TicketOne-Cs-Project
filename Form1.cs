@@ -93,6 +93,8 @@ namespace Biglietti_concerto
             return null;
         }
 
+        static Dictionary<string, List<Dictionary<string, List<Button>>>> PostiEvento = new Dictionary<string, List<Dictionary<string, List<Button>>>>();
+
         static Dictionary<string, (List<string> luoghi, List<string> date)> Eventi = new Dictionary<string, (List<string>, List<string>)>
         {
             { "Intelligenza Naturale", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
@@ -164,7 +166,7 @@ namespace Biglietti_concerto
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(1167, 528);
+            this.Size = new Size(1148, 488);
             Pannello_Principale.Size = new Size(1151, 434);
             Pannello_Principale.Location = new Point(0, 54);
             Pannello_Posti.Size = new Size(1151, 434);
@@ -328,21 +330,18 @@ namespace Biglietti_concerto
             Pannello_Posti.Visible = false;
             Pannello_Principale.Visible = true;
         }
-
-        private void Tab_Info_Posti_MouseMove(object sender, MouseEventArgs e)
-        {
-            
-        }
-
         private void Pannello_Posti_MouseMove(object sender, MouseEventArgs e)
         {
-            if (Login == true)
+            if (Login)
             {
-                Info_Error.Visible = false;
+                Pannello_Login.Visible = false;
+                Pannello_Principale.Visible = false;
+                Pannello_Posti.Visible = true;
+                Tab_Info_Posti.Enabled = true;
             }
             else
             {
-                Info_Error.Visible = true;
+                Tab_Info_Posti.Enabled = false; 
             }
         }
 
@@ -354,6 +353,24 @@ namespace Biglietti_concerto
         private void FormClose_Click(object sender, EventArgs e)
         {
             Form1.ActiveForm.Close();
+        }
+
+        private void Btn_ConfemaPosti_Click(object sender, EventArgs e)
+        {
+            if(Luogo_Lst.SelectedIndex != -1 && Data_Lst.SelectedIndex != -1)
+            {
+                if(PostiSelezionati > 0)
+                {
+                }
+                else
+                {
+                    MessageBox.Show("Seleziona almeno un posto");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleziona un luogo e una data");
+            }
         }
 
 
