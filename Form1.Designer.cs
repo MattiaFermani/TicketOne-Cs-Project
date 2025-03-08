@@ -33,6 +33,8 @@
             this.TickeTlon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Account = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.FormClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Img_MarcusMiller = new System.Windows.Forms.PictureBox();
             this.Img_BLACKPINK = new System.Windows.Forms.PictureBox();
@@ -66,6 +68,9 @@
             this.TitoloSpettacolo_Lbl = new System.Windows.Forms.Label();
             this.Pgn_SelezionePosti = new System.Windows.Forms.TabPage();
             this.Info_Error = new System.Windows.Forms.Label();
+            this.PratoPostiNum_Lbl = new System.Windows.Forms.Label();
+            this.PratoPiu = new System.Windows.Forms.Button();
+            this.PratoMeno = new System.Windows.Forms.Button();
             this.Prato_VIP = new System.Windows.Forms.Button();
             this.Settore_D = new System.Windows.Forms.Panel();
             this.button108 = new System.Windows.Forms.Button();
@@ -279,26 +284,29 @@
             this.Pannello_Login = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.Pgn_Register = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Group_Gender = new System.Windows.Forms.GroupBox();
+            this.Female_Rdb = new System.Windows.Forms.RadioButton();
+            this.Male_Rdb = new System.Windows.Forms.RadioButton();
+            this.txt_codicefiscale = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_email = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.Register_Btn = new System.Windows.Forms.Button();
             this.Comuni_Lst = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dtp_nascita = new System.Windows.Forms.DateTimePicker();
+            this.txt_cognome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_nome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Pgn_Login = new System.Windows.Forms.TabPage();
             this.Login_Btn = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Account)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).BeginInit();
@@ -331,6 +339,7 @@
             this.Pannello_Login.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.Pgn_Register.SuspendLayout();
+            this.Group_Gender.SuspendLayout();
             this.Pgn_Login.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -345,6 +354,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.Controls.Add(this.TickeTlon, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -383,6 +393,29 @@
             this.Account.TabIndex = 4;
             this.Account.TabStop = false;
             this.Account.Click += new System.EventHandler(this.Account_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.FormClose);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(355, 54);
+            this.panel3.TabIndex = 6;
+            // 
+            // FormClose
+            // 
+            this.FormClose.FlatAppearance.BorderSize = 0;
+            this.FormClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.FormClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.FormClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FormClose.Location = new System.Drawing.Point(0, 0);
+            this.FormClose.Name = "FormClose";
+            this.FormClose.Size = new System.Drawing.Size(26, 23);
+            this.FormClose.TabIndex = 0;
+            this.FormClose.Text = "X";
+            this.FormClose.UseVisualStyleBackColor = true;
+            this.FormClose.Click += new System.EventHandler(this.FormClose_Click);
             // 
             // panel2
             // 
@@ -503,12 +536,13 @@
             // 
             // Pannello_Principale
             // 
+            this.Pannello_Principale.AutoScroll = true;
             this.Pannello_Principale.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Principale.Controls.Add(this.Pannello_InEvidenza);
             this.Pannello_Principale.Controls.Add(this.panel2);
             this.Pannello_Principale.Location = new System.Drawing.Point(1169, 509);
             this.Pannello_Principale.Name = "Pannello_Principale";
-            this.Pannello_Principale.Size = new System.Drawing.Size(55, 434);
+            this.Pannello_Principale.Size = new System.Drawing.Size(653, 455);
             this.Pannello_Principale.TabIndex = 11;
             // 
             // Pannello_InEvidenza
@@ -730,6 +764,9 @@
             // Pgn_SelezionePosti
             // 
             this.Pgn_SelezionePosti.Controls.Add(this.Info_Error);
+            this.Pgn_SelezionePosti.Controls.Add(this.PratoPostiNum_Lbl);
+            this.Pgn_SelezionePosti.Controls.Add(this.PratoPiu);
+            this.Pgn_SelezionePosti.Controls.Add(this.PratoMeno);
             this.Pgn_SelezionePosti.Controls.Add(this.Prato_VIP);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_D);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_C);
@@ -758,6 +795,43 @@
             this.Info_Error.Text = "Devi prima fare il login/registrazione";
             this.Info_Error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // PratoPostiNum_Lbl
+            // 
+            this.PratoPostiNum_Lbl.AutoSize = true;
+            this.PratoPostiNum_Lbl.Location = new System.Drawing.Point(572, 168);
+            this.PratoPostiNum_Lbl.Name = "PratoPostiNum_Lbl";
+            this.PratoPostiNum_Lbl.Size = new System.Drawing.Size(35, 16);
+            this.PratoPostiNum_Lbl.TabIndex = 42;
+            this.PratoPostiNum_Lbl.Text = "NaN";
+            this.PratoPostiNum_Lbl.Visible = false;
+            // 
+            // PratoPiu
+            // 
+            this.PratoPiu.FlatAppearance.BorderSize = 0;
+            this.PratoPiu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PratoPiu.Location = new System.Drawing.Point(608, 158);
+            this.PratoPiu.Name = "PratoPiu";
+            this.PratoPiu.Size = new System.Drawing.Size(34, 23);
+            this.PratoPiu.TabIndex = 41;
+            this.PratoPiu.Text = "+1";
+            this.PratoPiu.UseVisualStyleBackColor = true;
+            this.PratoPiu.Visible = false;
+            this.PratoPiu.Click += new System.EventHandler(this.PratoPosti);
+            // 
+            // PratoMeno
+            // 
+            this.PratoMeno.FlatAppearance.BorderSize = 0;
+            this.PratoMeno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PratoMeno.Location = new System.Drawing.Point(499, 158);
+            this.PratoMeno.Name = "PratoMeno";
+            this.PratoMeno.Size = new System.Drawing.Size(34, 23);
+            this.PratoMeno.TabIndex = 40;
+            this.PratoMeno.Text = "- 1";
+            this.PratoMeno.UseMnemonic = false;
+            this.PratoMeno.UseVisualStyleBackColor = true;
+            this.PratoMeno.Visible = false;
+            this.PratoMeno.Click += new System.EventHandler(this.PratoPosti);
+            // 
             // Prato_VIP
             // 
             this.Prato_VIP.BackColor = System.Drawing.Color.Gold;
@@ -765,6 +839,7 @@
             this.Prato_VIP.Name = "Prato_VIP";
             this.Prato_VIP.Size = new System.Drawing.Size(212, 27);
             this.Prato_VIP.TabIndex = 38;
+            this.Prato_VIP.Tag = "VIP";
             this.Prato_VIP.Text = "Sotto Palco";
             this.Info_Posto.SetToolTip(this.Prato_VIP, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - VIP\r\nCosto - 60€");
             this.Prato_VIP.UseVisualStyleBackColor = false;
@@ -3839,6 +3914,7 @@
             // 
             // Pannello_Login
             // 
+            this.Pannello_Login.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Login.Controls.Add(this.tabControl2);
             this.Pannello_Login.Location = new System.Drawing.Point(0, 59);
             this.Pannello_Login.Name = "Pannello_Login";
@@ -3859,19 +3935,19 @@
             // 
             // Pgn_Register
             // 
+            this.Pgn_Register.Controls.Add(this.Group_Gender);
+            this.Pgn_Register.Controls.Add(this.txt_codicefiscale);
             this.Pgn_Register.Controls.Add(this.label8);
-            this.Pgn_Register.Controls.Add(this.radioButton2);
-            this.Pgn_Register.Controls.Add(this.radioButton1);
-            this.Pgn_Register.Controls.Add(this.textBox3);
+            this.Pgn_Register.Controls.Add(this.txt_email);
             this.Pgn_Register.Controls.Add(this.label7);
             this.Pgn_Register.Controls.Add(this.Register_Btn);
             this.Pgn_Register.Controls.Add(this.Comuni_Lst);
             this.Pgn_Register.Controls.Add(this.label6);
             this.Pgn_Register.Controls.Add(this.label5);
-            this.Pgn_Register.Controls.Add(this.dateTimePicker1);
-            this.Pgn_Register.Controls.Add(this.textBox2);
+            this.Pgn_Register.Controls.Add(this.dtp_nascita);
+            this.Pgn_Register.Controls.Add(this.txt_cognome);
             this.Pgn_Register.Controls.Add(this.label4);
-            this.Pgn_Register.Controls.Add(this.textBox1);
+            this.Pgn_Register.Controls.Add(this.txt_nome);
             this.Pgn_Register.Controls.Add(this.label3);
             this.Pgn_Register.Location = new System.Drawing.Point(4, 25);
             this.Pgn_Register.Name = "Pgn_Register";
@@ -3881,12 +3957,61 @@
             this.Pgn_Register.Text = "Registrazione";
             this.Pgn_Register.Click += new System.EventHandler(this.Pgn_Register_Click);
             // 
-            // textBox3
+            // Group_Gender
             // 
-            this.textBox3.Location = new System.Drawing.Point(392, 56);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(253, 22);
-            this.textBox3.TabIndex = 13;
+            this.Group_Gender.Controls.Add(this.Female_Rdb);
+            this.Group_Gender.Controls.Add(this.Male_Rdb);
+            this.Group_Gender.Location = new System.Drawing.Point(392, 183);
+            this.Group_Gender.Name = "Group_Gender";
+            this.Group_Gender.Size = new System.Drawing.Size(204, 50);
+            this.Group_Gender.TabIndex = 16;
+            this.Group_Gender.TabStop = false;
+            this.Group_Gender.Text = "Sesso";
+            // 
+            // Female_Rdb
+            // 
+            this.Female_Rdb.AutoSize = true;
+            this.Female_Rdb.Location = new System.Drawing.Point(116, 19);
+            this.Female_Rdb.Name = "Female_Rdb";
+            this.Female_Rdb.Size = new System.Drawing.Size(84, 20);
+            this.Female_Rdb.TabIndex = 1;
+            this.Female_Rdb.TabStop = true;
+            this.Female_Rdb.Text = "Femmina";
+            this.Female_Rdb.UseVisualStyleBackColor = true;
+            // 
+            // Male_Rdb
+            // 
+            this.Male_Rdb.AutoSize = true;
+            this.Male_Rdb.Location = new System.Drawing.Point(6, 19);
+            this.Male_Rdb.Name = "Male_Rdb";
+            this.Male_Rdb.Size = new System.Drawing.Size(79, 20);
+            this.Male_Rdb.TabIndex = 0;
+            this.Male_Rdb.TabStop = true;
+            this.Male_Rdb.Text = "Maschio";
+            this.Male_Rdb.UseVisualStyleBackColor = true;
+            // 
+            // txt_codicefiscale
+            // 
+            this.txt_codicefiscale.Location = new System.Drawing.Point(392, 122);
+            this.txt_codicefiscale.Name = "txt_codicefiscale";
+            this.txt_codicefiscale.Size = new System.Drawing.Size(253, 22);
+            this.txt_codicefiscale.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(389, 106);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 16);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Codice fiscale";
+            // 
+            // txt_email
+            // 
+            this.txt_email.Location = new System.Drawing.Point(392, 56);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(253, 22);
+            this.txt_email.TabIndex = 13;
             // 
             // label7
             // 
@@ -3901,7 +4026,7 @@
             // 
             this.Register_Btn.Location = new System.Drawing.Point(502, 343);
             this.Register_Btn.Name = "Register_Btn";
-            this.Register_Btn.Size = new System.Drawing.Size(143, 23);
+            this.Register_Btn.Size = new System.Drawing.Size(143, 25);
             this.Register_Btn.TabIndex = 11;
             this.Register_Btn.Text = "Registrati";
             this.Register_Btn.UseVisualStyleBackColor = true;
@@ -3909,6 +4034,8 @@
             // 
             // Comuni_Lst
             // 
+            this.Comuni_Lst.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Comuni_Lst.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Comuni_Lst.FormattingEnabled = true;
             this.Comuni_Lst.Location = new System.Drawing.Point(49, 262);
             this.Comuni_Lst.Name = "Comuni_Lst";
@@ -3933,19 +4060,19 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Data di nascita";
             // 
-            // dateTimePicker1
+            // dtp_nascita
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(48, 195);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(253, 22);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtp_nascita.Location = new System.Drawing.Point(48, 195);
+            this.dtp_nascita.Name = "dtp_nascita";
+            this.dtp_nascita.Size = new System.Drawing.Size(253, 22);
+            this.dtp_nascita.TabIndex = 6;
             // 
-            // textBox2
+            // txt_cognome
             // 
-            this.textBox2.Location = new System.Drawing.Point(47, 122);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 22);
-            this.textBox2.TabIndex = 3;
+            this.txt_cognome.Location = new System.Drawing.Point(47, 122);
+            this.txt_cognome.Name = "txt_cognome";
+            this.txt_cognome.Size = new System.Drawing.Size(254, 22);
+            this.txt_cognome.TabIndex = 3;
             // 
             // label4
             // 
@@ -3956,12 +4083,12 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Cognome";
             // 
-            // textBox1
+            // txt_nome
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 22);
-            this.textBox1.TabIndex = 1;
+            this.txt_nome.Location = new System.Drawing.Point(48, 56);
+            this.txt_nome.Name = "txt_nome";
+            this.txt_nome.Size = new System.Drawing.Size(253, 22);
+            this.txt_nome.TabIndex = 1;
             // 
             // label3
             // 
@@ -3993,37 +4120,6 @@
             this.Login_Btn.UseVisualStyleBackColor = true;
             this.Login_Btn.Click += new System.EventHandler(this.Login_Register);
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(391, 125);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(39, 20);
-            this.radioButton1.TabIndex = 14;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "M";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(391, 151);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(36, 20);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "F";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(388, 106);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 16);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "sesso";
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4034,18 +4130,19 @@
             this.Controls.Add(this.Pannello_Posti);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.Pannello_Principale);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "6++";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Account)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).EndInit();
@@ -4072,6 +4169,7 @@
             this.TitoloArtista.ResumeLayout(false);
             this.TitoloArtista.PerformLayout();
             this.Pgn_SelezionePosti.ResumeLayout(false);
+            this.Pgn_SelezionePosti.PerformLayout();
             this.Settore_D.ResumeLayout(false);
             this.Settore_C.ResumeLayout(false);
             this.Settore_B.ResumeLayout(false);
@@ -4081,6 +4179,8 @@
             this.tabControl2.ResumeLayout(false);
             this.Pgn_Register.ResumeLayout(false);
             this.Pgn_Register.PerformLayout();
+            this.Group_Gender.ResumeLayout(false);
+            this.Group_Gender.PerformLayout();
             this.Pgn_Login.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -4339,21 +4439,28 @@
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage Pgn_Register;
         private System.Windows.Forms.TabPage Pgn_Login;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_cognome;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_nome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_nascita;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox Comuni_Lst;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Register_Btn;
         private System.Windows.Forms.Button Login_Btn;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox txt_codicefiscale;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button FormClose;
+        private System.Windows.Forms.Button PratoMeno;
+        private System.Windows.Forms.Label PratoPostiNum_Lbl;
+        private System.Windows.Forms.Button PratoPiu;
+        private System.Windows.Forms.GroupBox Group_Gender;
+        private System.Windows.Forms.RadioButton Female_Rdb;
+        private System.Windows.Forms.RadioButton Male_Rdb;
     }
 }
 
