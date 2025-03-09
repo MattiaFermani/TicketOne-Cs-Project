@@ -67,6 +67,7 @@
             this.Artista_Lbl = new System.Windows.Forms.Label();
             this.TitoloSpettacolo_Lbl = new System.Windows.Forms.Label();
             this.Pgn_SelezionePosti = new System.Windows.Forms.TabPage();
+            this.Btn_ConfemaPosti = new System.Windows.Forms.Button();
             this.PratoPostiNum_Lbl = new System.Windows.Forms.Label();
             this.PratoPiu = new System.Windows.Forms.Button();
             this.PratoMeno = new System.Windows.Forms.Button();
@@ -302,7 +303,6 @@
             this.Pgn_Login = new System.Windows.Forms.TabPage();
             this.Login_Btn = new System.Windows.Forms.Button();
             this.Pannello_Pagamento = new System.Windows.Forms.Panel();
-            this.Btn_ConfemaPosti = new System.Windows.Forms.Button();
             this.Btn_Pagamento = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
@@ -624,9 +624,9 @@
             this.Pannello_Posti.AutoScroll = true;
             this.Pannello_Posti.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Posti.Controls.Add(this.Tab_Info_Posti);
-            this.Pannello_Posti.Location = new System.Drawing.Point(750, 137);
+            this.Pannello_Posti.Location = new System.Drawing.Point(1168, 66);
             this.Pannello_Posti.Name = "Pannello_Posti";
-            this.Pannello_Posti.Size = new System.Drawing.Size(1162, 465);
+            this.Pannello_Posti.Size = new System.Drawing.Size(100, 465);
             this.Pannello_Posti.TabIndex = 12;
             this.Pannello_Posti.Visible = false;
             this.Pannello_Posti.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pannello_Posti_MouseMove);
@@ -641,9 +641,8 @@
             this.Tab_Info_Posti.Location = new System.Drawing.Point(0, 0);
             this.Tab_Info_Posti.Name = "Tab_Info_Posti";
             this.Tab_Info_Posti.SelectedIndex = 0;
-            this.Tab_Info_Posti.Size = new System.Drawing.Size(1162, 465);
+            this.Tab_Info_Posti.Size = new System.Drawing.Size(100, 465);
             this.Tab_Info_Posti.TabIndex = 0;
-            this.Tab_Info_Posti.SelectedIndexChanged += new System.EventHandler(this.Tab_Info_Posti_SelectedIndexChanged);
             // 
             // Pgn_Informazioni
             // 
@@ -655,7 +654,7 @@
             this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(699, 439);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(92, 439);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -784,11 +783,21 @@
             this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1154, 439);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(92, 439);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
             this.Pgn_SelezionePosti.UseVisualStyleBackColor = true;
+            // 
+            // Btn_ConfemaPosti
+            // 
+            this.Btn_ConfemaPosti.Location = new System.Drawing.Point(921, 371);
+            this.Btn_ConfemaPosti.Name = "Btn_ConfemaPosti";
+            this.Btn_ConfemaPosti.Size = new System.Drawing.Size(174, 34);
+            this.Btn_ConfemaPosti.TabIndex = 43;
+            this.Btn_ConfemaPosti.Text = "Conferma Posti";
+            this.Btn_ConfemaPosti.UseVisualStyleBackColor = true;
+            this.Btn_ConfemaPosti.Click += new System.EventHandler(this.Btn_ConfemaPosti_Click);
             // 
             // PratoPostiNum_Lbl
             // 
@@ -4126,16 +4135,6 @@
             this.Pannello_Pagamento.Size = new System.Drawing.Size(1151, 434);
             this.Pannello_Pagamento.TabIndex = 14;
             this.Pannello_Pagamento.Visible = false;
-            // 
-            // Btn_ConfemaPosti
-            // 
-            this.Btn_ConfemaPosti.Location = new System.Drawing.Point(921, 371);
-            this.Btn_ConfemaPosti.Name = "Btn_ConfemaPosti";
-            this.Btn_ConfemaPosti.Size = new System.Drawing.Size(174, 34);
-            this.Btn_ConfemaPosti.TabIndex = 43;
-            this.Btn_ConfemaPosti.Text = "Conferma Posti";
-            this.Btn_ConfemaPosti.UseVisualStyleBackColor = true;
-            this.Btn_ConfemaPosti.Click += new System.EventHandler(this.Btn_ConfemaPosti_Click);
             // 
             // Btn_Pagamento
             // 
