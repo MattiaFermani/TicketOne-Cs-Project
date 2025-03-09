@@ -67,6 +67,7 @@
             this.Artista_Lbl = new System.Windows.Forms.Label();
             this.TitoloSpettacolo_Lbl = new System.Windows.Forms.Label();
             this.Pgn_SelezionePosti = new System.Windows.Forms.TabPage();
+            this.Btn_ConfemaPosti = new System.Windows.Forms.Button();
             this.PratoPostiNum_Lbl = new System.Windows.Forms.Label();
             this.PratoPiu = new System.Windows.Forms.Button();
             this.PratoMeno = new System.Windows.Forms.Button();
@@ -302,7 +303,6 @@
             this.Pgn_Login = new System.Windows.Forms.TabPage();
             this.Login_Btn = new System.Windows.Forms.Button();
             this.Pannello_Pagamento = new System.Windows.Forms.Panel();
-            this.Btn_ConfemaPosti = new System.Windows.Forms.Button();
             this.Btn_Pagamento = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
@@ -652,10 +652,10 @@
             this.Pgn_Informazioni.Controls.Add(this.groupBox1);
             this.Pgn_Informazioni.Controls.Add(this.Img_Info);
             this.Pgn_Informazioni.Controls.Add(this.TitoloArtista);
-            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 25);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(699, 439);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(1154, 436);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -678,7 +678,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(284, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 20);
+            this.label2.Size = new System.Drawing.Size(53, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Data";
             // 
@@ -688,7 +688,7 @@
             this.Data_Lst.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Data_Lst.FormattingEnabled = true;
             this.Data_Lst.HorizontalScrollbar = true;
-            this.Data_Lst.ItemHeight = 20;
+            this.Data_Lst.ItemHeight = 25;
             this.Data_Lst.Location = new System.Drawing.Point(288, 55);
             this.Data_Lst.Name = "Data_Lst";
             this.Data_Lst.Size = new System.Drawing.Size(184, 100);
@@ -700,7 +700,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 20);
+            this.label1.Size = new System.Drawing.Size(67, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Luogo";
             // 
@@ -710,7 +710,7 @@
             this.Luogo_Lst.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Luogo_Lst.FormattingEnabled = true;
             this.Luogo_Lst.HorizontalScrollbar = true;
-            this.Luogo_Lst.ItemHeight = 20;
+            this.Luogo_Lst.ItemHeight = 25;
             this.Luogo_Lst.Location = new System.Drawing.Point(13, 55);
             this.Luogo_Lst.Name = "Luogo_Lst";
             this.Luogo_Lst.Size = new System.Drawing.Size(281, 100);
@@ -753,7 +753,7 @@
             this.Artista_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Artista_Lbl.Location = new System.Drawing.Point(9, 71);
             this.Artista_Lbl.Name = "Artista_Lbl";
-            this.Artista_Lbl.Size = new System.Drawing.Size(55, 20);
+            this.Artista_Lbl.Size = new System.Drawing.Size(67, 25);
             this.Artista_Lbl.TabIndex = 1;
             this.Artista_Lbl.Text = "Artista";
             // 
@@ -763,7 +763,7 @@
             this.TitoloSpettacolo_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitoloSpettacolo_Lbl.Location = new System.Drawing.Point(7, 26);
             this.TitoloSpettacolo_Lbl.Name = "TitoloSpettacolo_Lbl";
-            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(95, 36);
+            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(115, 42);
             this.TitoloSpettacolo_Lbl.TabIndex = 0;
             this.TitoloSpettacolo_Lbl.Text = "Titolo";
             // 
@@ -781,21 +781,31 @@
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_E);
             this.Pgn_SelezionePosti.Controls.Add(this.Settore_A);
             this.Pgn_SelezionePosti.Controls.Add(this.Palco);
-            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 25);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1154, 439);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1154, 436);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
             this.Pgn_SelezionePosti.UseVisualStyleBackColor = true;
+            // 
+            // Btn_ConfemaPosti
+            // 
+            this.Btn_ConfemaPosti.Location = new System.Drawing.Point(921, 371);
+            this.Btn_ConfemaPosti.Name = "Btn_ConfemaPosti";
+            this.Btn_ConfemaPosti.Size = new System.Drawing.Size(174, 34);
+            this.Btn_ConfemaPosti.TabIndex = 43;
+            this.Btn_ConfemaPosti.Text = "Conferma Posti";
+            this.Btn_ConfemaPosti.UseVisualStyleBackColor = true;
+            this.Btn_ConfemaPosti.Click += new System.EventHandler(this.Btn_ConfemaPosti_Click);
             // 
             // PratoPostiNum_Lbl
             // 
             this.PratoPostiNum_Lbl.AutoSize = true;
             this.PratoPostiNum_Lbl.Location = new System.Drawing.Point(572, 168);
             this.PratoPostiNum_Lbl.Name = "PratoPostiNum_Lbl";
-            this.PratoPostiNum_Lbl.Size = new System.Drawing.Size(29, 13);
+            this.PratoPostiNum_Lbl.Size = new System.Drawing.Size(35, 16);
             this.PratoPostiNum_Lbl.TabIndex = 42;
             this.PratoPostiNum_Lbl.Text = "NaN";
             this.PratoPostiNum_Lbl.Visible = false;
@@ -3946,10 +3956,10 @@
             this.Pgn_Register.Controls.Add(this.label4);
             this.Pgn_Register.Controls.Add(this.txt_nome);
             this.Pgn_Register.Controls.Add(this.label3);
-            this.Pgn_Register.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Register.Location = new System.Drawing.Point(4, 25);
             this.Pgn_Register.Name = "Pgn_Register";
             this.Pgn_Register.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Register.Size = new System.Drawing.Size(1143, 408);
+            this.Pgn_Register.Size = new System.Drawing.Size(1143, 405);
             this.Pgn_Register.TabIndex = 0;
             this.Pgn_Register.Text = "Registrazione";
             this.Pgn_Register.Click += new System.EventHandler(this.Pgn_Register_Click);
@@ -3970,7 +3980,7 @@
             this.Female_Rdb.AutoSize = true;
             this.Female_Rdb.Location = new System.Drawing.Point(116, 19);
             this.Female_Rdb.Name = "Female_Rdb";
-            this.Female_Rdb.Size = new System.Drawing.Size(67, 17);
+            this.Female_Rdb.Size = new System.Drawing.Size(84, 20);
             this.Female_Rdb.TabIndex = 1;
             this.Female_Rdb.TabStop = true;
             this.Female_Rdb.Text = "Femmina";
@@ -3981,7 +3991,7 @@
             this.Male_Rdb.AutoSize = true;
             this.Male_Rdb.Location = new System.Drawing.Point(6, 19);
             this.Male_Rdb.Name = "Male_Rdb";
-            this.Male_Rdb.Size = new System.Drawing.Size(65, 17);
+            this.Male_Rdb.Size = new System.Drawing.Size(79, 20);
             this.Male_Rdb.TabIndex = 0;
             this.Male_Rdb.TabStop = true;
             this.Male_Rdb.Text = "Maschio";
@@ -3991,7 +4001,7 @@
             // 
             this.txt_codicefiscale.Location = new System.Drawing.Point(392, 195);
             this.txt_codicefiscale.Name = "txt_codicefiscale";
-            this.txt_codicefiscale.Size = new System.Drawing.Size(253, 20);
+            this.txt_codicefiscale.Size = new System.Drawing.Size(253, 22);
             this.txt_codicefiscale.TabIndex = 15;
             // 
             // label8
@@ -3999,7 +4009,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(389, 179);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 13);
+            this.label8.Size = new System.Drawing.Size(92, 16);
             this.label8.TabIndex = 14;
             this.label8.Text = "Codice fiscale";
             // 
@@ -4007,7 +4017,7 @@
             // 
             this.txt_email.Location = new System.Drawing.Point(392, 56);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(253, 20);
+            this.txt_email.Size = new System.Drawing.Size(253, 22);
             this.txt_email.TabIndex = 13;
             // 
             // label7
@@ -4015,7 +4025,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(389, 40);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.Size = new System.Drawing.Size(40, 16);
             this.label7.TabIndex = 12;
             this.label7.Text = "email";
             // 
@@ -4036,7 +4046,7 @@
             this.Comuni_Lst.FormattingEnabled = true;
             this.Comuni_Lst.Location = new System.Drawing.Point(49, 262);
             this.Comuni_Lst.Name = "Comuni_Lst";
-            this.Comuni_Lst.Size = new System.Drawing.Size(252, 21);
+            this.Comuni_Lst.Size = new System.Drawing.Size(252, 24);
             this.Comuni_Lst.TabIndex = 10;
             // 
             // label6
@@ -4044,7 +4054,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(46, 246);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 13);
+            this.label6.Size = new System.Drawing.Size(117, 16);
             this.label6.TabIndex = 9;
             this.label6.Text = "Comune di nascita";
             // 
@@ -4053,7 +4063,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(46, 179);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.Size = new System.Drawing.Size(96, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Data di nascita";
             // 
@@ -4061,14 +4071,14 @@
             // 
             this.dtp_nascita.Location = new System.Drawing.Point(48, 195);
             this.dtp_nascita.Name = "dtp_nascita";
-            this.dtp_nascita.Size = new System.Drawing.Size(253, 20);
+            this.dtp_nascita.Size = new System.Drawing.Size(253, 22);
             this.dtp_nascita.TabIndex = 6;
             // 
             // txt_cognome
             // 
             this.txt_cognome.Location = new System.Drawing.Point(47, 122);
             this.txt_cognome.Name = "txt_cognome";
-            this.txt_cognome.Size = new System.Drawing.Size(254, 20);
+            this.txt_cognome.Size = new System.Drawing.Size(254, 22);
             this.txt_cognome.TabIndex = 3;
             // 
             // label4
@@ -4076,7 +4086,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(44, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(66, 16);
             this.label4.TabIndex = 2;
             this.label4.Text = "Cognome";
             // 
@@ -4084,7 +4094,7 @@
             // 
             this.txt_nome.Location = new System.Drawing.Point(48, 56);
             this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(253, 20);
+            this.txt_nome.Size = new System.Drawing.Size(253, 22);
             this.txt_nome.TabIndex = 1;
             // 
             // label3
@@ -4092,17 +4102,17 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(45, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Nome";
             // 
             // Pgn_Login
             // 
             this.Pgn_Login.Controls.Add(this.Login_Btn);
-            this.Pgn_Login.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Login.Location = new System.Drawing.Point(4, 25);
             this.Pgn_Login.Name = "Pgn_Login";
             this.Pgn_Login.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Login.Size = new System.Drawing.Size(1143, 408);
+            this.Pgn_Login.Size = new System.Drawing.Size(1143, 405);
             this.Pgn_Login.TabIndex = 1;
             this.Pgn_Login.Text = "Login";
             this.Pgn_Login.UseVisualStyleBackColor = true;
@@ -4126,16 +4136,6 @@
             this.Pannello_Pagamento.Size = new System.Drawing.Size(1151, 434);
             this.Pannello_Pagamento.TabIndex = 14;
             this.Pannello_Pagamento.Visible = false;
-            // 
-            // Btn_ConfemaPosti
-            // 
-            this.Btn_ConfemaPosti.Location = new System.Drawing.Point(921, 371);
-            this.Btn_ConfemaPosti.Name = "Btn_ConfemaPosti";
-            this.Btn_ConfemaPosti.Size = new System.Drawing.Size(174, 34);
-            this.Btn_ConfemaPosti.TabIndex = 43;
-            this.Btn_ConfemaPosti.Text = "Conferma Posti";
-            this.Btn_ConfemaPosti.UseVisualStyleBackColor = true;
-            this.Btn_ConfemaPosti.Click += new System.EventHandler(this.Btn_ConfemaPosti_Click);
             // 
             // Btn_Pagamento
             // 
