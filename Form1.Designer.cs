@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Profilo");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Sicurezza");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Personalizzazione");
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TickeTlon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -282,8 +285,12 @@
             this.Info_Posto = new System.Windows.Forms.ToolTip(this.components);
             this.Info_Spettacolo = new System.Windows.Forms.ToolTip(this.components);
             this.Pannello_Login = new System.Windows.Forms.Panel();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.Tab_Login_Register = new System.Windows.Forms.TabControl();
             this.Pgn_Register = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_nome_visualizzato = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_telefono = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_confermapsw = new System.Windows.Forms.TextBox();
@@ -305,11 +312,28 @@
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Pgn_Login = new System.Windows.Forms.TabPage();
+            this.txt_L_Password = new System.Windows.Forms.TextBox();
+            this.txt_L_Email = new System.Windows.Forms.TextBox();
             this.Login_Btn = new System.Windows.Forms.Button();
             this.Pannello_Pagamento = new System.Windows.Forms.Panel();
             this.Btn_Pagamento = new System.Windows.Forms.Button();
-            this.txt_L_Email = new System.Windows.Forms.TextBox();
-            this.txt_L_Password = new System.Windows.Forms.TextBox();
+            this.Pannello_Acc_User = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Pgn_Profilo = new System.Windows.Forms.TabPage();
+            this.txt_A_Telefono = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_A_Email = new System.Windows.Forms.TextBox();
+            this.txt_A_Nome = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Btn_Logout = new System.Windows.Forms.Button();
+            this.Pgn_Sicurezza = new System.Windows.Forms.TabPage();
+            this.Pgn_Personalizza = new System.Windows.Forms.TabPage();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.Modifica_Vis_Name = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.Lbl_register = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -345,12 +369,15 @@
             this.Settore_E.SuspendLayout();
             this.Settore_A.SuspendLayout();
             this.Pannello_Login.SuspendLayout();
-            this.tabControl2.SuspendLayout();
+            this.Tab_Login_Register.SuspendLayout();
             this.Pgn_Register.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Group_Gender.SuspendLayout();
             this.Pgn_Login.SuspendLayout();
             this.Pannello_Pagamento.SuspendLayout();
+            this.Pannello_Acc_User.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.Pgn_Profilo.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -423,6 +450,7 @@
             this.FormClose.Name = "FormClose";
             this.FormClose.Size = new System.Drawing.Size(26, 23);
             this.FormClose.TabIndex = 0;
+            this.FormClose.TabStop = false;
             this.FormClose.Text = "X";
             this.FormClose.UseVisualStyleBackColor = true;
             this.FormClose.Click += new System.EventHandler(this.FormClose_Click);
@@ -632,7 +660,7 @@
             this.Pannello_Posti.Controls.Add(this.Tab_Info_Posti);
             this.Pannello_Posti.Location = new System.Drawing.Point(1157, 66);
             this.Pannello_Posti.Name = "Pannello_Posti";
-            this.Pannello_Posti.Size = new System.Drawing.Size(111, 455);
+            this.Pannello_Posti.Size = new System.Drawing.Size(111, 423);
             this.Pannello_Posti.TabIndex = 12;
             this.Pannello_Posti.Visible = false;
             // 
@@ -646,7 +674,7 @@
             this.Tab_Info_Posti.Location = new System.Drawing.Point(0, 0);
             this.Tab_Info_Posti.Name = "Tab_Info_Posti";
             this.Tab_Info_Posti.SelectedIndex = 0;
-            this.Tab_Info_Posti.Size = new System.Drawing.Size(111, 455);
+            this.Tab_Info_Posti.Size = new System.Drawing.Size(111, 423);
             this.Tab_Info_Posti.TabIndex = 0;
             // 
             // Pgn_Informazioni
@@ -659,7 +687,7 @@
             this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(103, 429);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(103, 397);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -788,7 +816,7 @@
             this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(103, 429);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(103, 397);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
@@ -3925,26 +3953,30 @@
             // Pannello_Login
             // 
             this.Pannello_Login.BackColor = System.Drawing.Color.SkyBlue;
-            this.Pannello_Login.Controls.Add(this.tabControl2);
+            this.Pannello_Login.Controls.Add(this.Tab_Login_Register);
             this.Pannello_Login.Location = new System.Drawing.Point(0, 59);
             this.Pannello_Login.Name = "Pannello_Login";
             this.Pannello_Login.Size = new System.Drawing.Size(1151, 434);
             this.Pannello_Login.TabIndex = 13;
             this.Pannello_Login.Visible = false;
             // 
-            // tabControl2
+            // Tab_Login_Register
             // 
-            this.tabControl2.Controls.Add(this.Pgn_Register);
-            this.tabControl2.Controls.Add(this.Pgn_Login);
-            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1151, 434);
-            this.tabControl2.TabIndex = 0;
+            this.Tab_Login_Register.Controls.Add(this.Pgn_Login);
+            this.Tab_Login_Register.Controls.Add(this.Pgn_Register);
+            this.Tab_Login_Register.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tab_Login_Register.Location = new System.Drawing.Point(0, 0);
+            this.Tab_Login_Register.Name = "Tab_Login_Register";
+            this.Tab_Login_Register.SelectedIndex = 0;
+            this.Tab_Login_Register.Size = new System.Drawing.Size(1151, 434);
+            this.Tab_Login_Register.TabIndex = 0;
             // 
             // Pgn_Register
             // 
+            this.Pgn_Register.Controls.Add(this.label14);
+            this.Pgn_Register.Controls.Add(this.txt_nome_visualizzato);
+            this.Pgn_Register.Controls.Add(this.label12);
+            this.Pgn_Register.Controls.Add(this.txt_telefono);
             this.Pgn_Register.Controls.Add(this.groupBox2);
             this.Pgn_Register.Controls.Add(this.Group_Gender);
             this.Pgn_Register.Controls.Add(this.txt_codicefiscale);
@@ -3968,8 +4000,41 @@
             this.Pgn_Register.Text = "Registrazione";
             this.Pgn_Register.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pgn_Register_MouseMove);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(493, 91);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(93, 13);
+            this.label14.TabIndex = 25;
+            this.label14.Text = "Nome Visualizzato";
+            // 
+            // txt_nome_visualizzato
+            // 
+            this.txt_nome_visualizzato.Location = new System.Drawing.Point(448, 107);
+            this.txt_nome_visualizzato.Name = "txt_nome_visualizzato";
+            this.txt_nome_visualizzato.Size = new System.Drawing.Size(204, 20);
+            this.txt_nome_visualizzato.TabIndex = 24;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(545, 216);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(137, 13);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Telefono - Non Obbligatorio";
+            // 
+            // txt_telefono
+            // 
+            this.txt_telefono.Location = new System.Drawing.Point(548, 232);
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(204, 20);
+            this.txt_telefono.TabIndex = 22;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.Controls.Add(this.txt_password);
             this.groupBox2.Controls.Add(this.txt_confermapsw);
             this.groupBox2.Controls.Add(this.Lbl_ConfermaPsw);
@@ -4060,15 +4125,15 @@
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(423, 228);
+            this.txt_email.Location = new System.Drawing.Point(338, 232);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(253, 20);
+            this.txt_email.Size = new System.Drawing.Size(204, 20);
             this.txt_email.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(423, 212);
+            this.label7.Location = new System.Drawing.Point(335, 216);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 12;
@@ -4122,7 +4187,7 @@
             // 
             // txt_cognome
             // 
-            this.txt_cognome.Location = new System.Drawing.Point(547, 103);
+            this.txt_cognome.Location = new System.Drawing.Point(546, 68);
             this.txt_cognome.Name = "txt_cognome";
             this.txt_cognome.Size = new System.Drawing.Size(205, 20);
             this.txt_cognome.TabIndex = 3;
@@ -4130,7 +4195,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(544, 87);
+            this.label4.Location = new System.Drawing.Point(545, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 2;
@@ -4138,7 +4203,7 @@
             // 
             // txt_nome
             // 
-            this.txt_nome.Location = new System.Drawing.Point(338, 103);
+            this.txt_nome.Location = new System.Drawing.Point(338, 68);
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(204, 20);
             this.txt_nome.TabIndex = 1;
@@ -4146,7 +4211,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(335, 87);
+            this.label3.Location = new System.Drawing.Point(336, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 0;
@@ -4154,6 +4219,9 @@
             // 
             // Pgn_Login
             // 
+            this.Pgn_Login.Controls.Add(this.Lbl_register);
+            this.Pgn_Login.Controls.Add(this.label15);
+            this.Pgn_Login.Controls.Add(this.label10);
             this.Pgn_Login.Controls.Add(this.txt_L_Password);
             this.Pgn_Login.Controls.Add(this.txt_L_Email);
             this.Pgn_Login.Controls.Add(this.Login_Btn);
@@ -4165,9 +4233,26 @@
             this.Pgn_Login.Text = "Login";
             this.Pgn_Login.UseVisualStyleBackColor = true;
             // 
+            // txt_L_Password
+            // 
+            this.txt_L_Password.Location = new System.Drawing.Point(421, 224);
+            this.txt_L_Password.Name = "txt_L_Password";
+            this.txt_L_Password.PasswordChar = '*';
+            this.txt_L_Password.Size = new System.Drawing.Size(253, 20);
+            this.txt_L_Password.TabIndex = 18;
+            this.txt_L_Password.UseSystemPasswordChar = true;
+            this.txt_L_Password.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_L_Password_PreviewKeyDown);
+            // 
+            // txt_L_Email
+            // 
+            this.txt_L_Email.Location = new System.Drawing.Point(421, 171);
+            this.txt_L_Email.Name = "txt_L_Email";
+            this.txt_L_Email.Size = new System.Drawing.Size(253, 20);
+            this.txt_L_Email.TabIndex = 14;
+            // 
             // Login_Btn
             // 
-            this.Login_Btn.Location = new System.Drawing.Point(509, 346);
+            this.Login_Btn.Location = new System.Drawing.Point(510, 261);
             this.Login_Btn.Name = "Login_Btn";
             this.Login_Btn.Size = new System.Drawing.Size(75, 23);
             this.Login_Btn.TabIndex = 0;
@@ -4179,36 +4264,208 @@
             // 
             this.Pannello_Pagamento.BackColor = System.Drawing.SystemColors.Control;
             this.Pannello_Pagamento.Controls.Add(this.Btn_Pagamento);
-            this.Pannello_Pagamento.Location = new System.Drawing.Point(0, 495);
+            this.Pannello_Pagamento.Location = new System.Drawing.Point(1290, 527);
             this.Pannello_Pagamento.Name = "Pannello_Pagamento";
-            this.Pannello_Pagamento.Size = new System.Drawing.Size(1151, 434);
+            this.Pannello_Pagamento.Size = new System.Drawing.Size(208, 434);
             this.Pannello_Pagamento.TabIndex = 14;
             this.Pannello_Pagamento.Visible = false;
             // 
             // Btn_Pagamento
             // 
-            this.Btn_Pagamento.Location = new System.Drawing.Point(468, 307);
+            this.Btn_Pagamento.Location = new System.Drawing.Point(92, 290);
             this.Btn_Pagamento.Name = "Btn_Pagamento";
             this.Btn_Pagamento.Size = new System.Drawing.Size(75, 23);
             this.Btn_Pagamento.TabIndex = 0;
             this.Btn_Pagamento.Text = "Paga Ora";
             this.Btn_Pagamento.UseVisualStyleBackColor = true;
             // 
-            // txt_L_Email
+            // Pannello_Acc_User
             // 
-            this.txt_L_Email.Location = new System.Drawing.Point(421, 273);
-            this.txt_L_Email.Name = "txt_L_Email";
-            this.txt_L_Email.Size = new System.Drawing.Size(253, 20);
-            this.txt_L_Email.TabIndex = 14;
+            this.Pannello_Acc_User.BackColor = System.Drawing.SystemColors.Control;
+            this.Pannello_Acc_User.Controls.Add(this.tabControl1);
+            this.Pannello_Acc_User.Controls.Add(this.treeView1);
+            this.Pannello_Acc_User.Location = new System.Drawing.Point(4, 499);
+            this.Pannello_Acc_User.Name = "Pannello_Acc_User";
+            this.Pannello_Acc_User.Size = new System.Drawing.Size(1147, 444);
+            this.Pannello_Acc_User.TabIndex = 15;
+            this.Pannello_Acc_User.Visible = false;
             // 
-            // txt_L_Password
+            // tabControl1
             // 
-            this.txt_L_Password.Location = new System.Drawing.Point(421, 320);
-            this.txt_L_Password.Name = "txt_L_Password";
-            this.txt_L_Password.PasswordChar = '*';
-            this.txt_L_Password.Size = new System.Drawing.Size(253, 20);
-            this.txt_L_Password.TabIndex = 18;
-            this.txt_L_Password.UseSystemPasswordChar = true;
+            this.tabControl1.Controls.Add(this.Pgn_Profilo);
+            this.tabControl1.Controls.Add(this.Pgn_Sicurezza);
+            this.tabControl1.Controls.Add(this.Pgn_Personalizza);
+            this.tabControl1.Location = new System.Drawing.Point(144, -29);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1007, 483);
+            this.tabControl1.TabIndex = 1;
+            // 
+            // Pgn_Profilo
+            // 
+            this.Pgn_Profilo.Controls.Add(this.Modifica_Vis_Name);
+            this.Pgn_Profilo.Controls.Add(this.txt_A_Telefono);
+            this.Pgn_Profilo.Controls.Add(this.label13);
+            this.Pgn_Profilo.Controls.Add(this.txt_A_Email);
+            this.Pgn_Profilo.Controls.Add(this.txt_A_Nome);
+            this.Pgn_Profilo.Controls.Add(this.label11);
+            this.Pgn_Profilo.Controls.Add(this.label9);
+            this.Pgn_Profilo.Controls.Add(this.Btn_Logout);
+            this.Pgn_Profilo.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Profilo.Name = "Pgn_Profilo";
+            this.Pgn_Profilo.Padding = new System.Windows.Forms.Padding(3);
+            this.Pgn_Profilo.Size = new System.Drawing.Size(999, 457);
+            this.Pgn_Profilo.TabIndex = 0;
+            this.Pgn_Profilo.Text = "Profilo";
+            this.Pgn_Profilo.UseVisualStyleBackColor = true;
+            // 
+            // txt_A_Telefono
+            // 
+            this.txt_A_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_A_Telefono.Location = new System.Drawing.Point(110, 167);
+            this.txt_A_Telefono.Name = "txt_A_Telefono";
+            this.txt_A_Telefono.Size = new System.Drawing.Size(165, 13);
+            this.txt_A_Telefono.TabIndex = 7;
+            this.txt_A_Telefono.Text = "telefono";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(23, 158);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 22);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Telefono";
+            // 
+            // txt_A_Email
+            // 
+            this.txt_A_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_A_Email.Location = new System.Drawing.Point(110, 131);
+            this.txt_A_Email.Name = "txt_A_Email";
+            this.txt_A_Email.Size = new System.Drawing.Size(165, 13);
+            this.txt_A_Email.TabIndex = 5;
+            this.txt_A_Email.Text = "email";
+            // 
+            // txt_A_Nome
+            // 
+            this.txt_A_Nome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_A_Nome.Location = new System.Drawing.Point(110, 100);
+            this.txt_A_Nome.Name = "txt_A_Nome";
+            this.txt_A_Nome.Size = new System.Drawing.Size(165, 13);
+            this.txt_A_Nome.TabIndex = 3;
+            this.txt_A_Nome.Text = "nome visualizzato";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(50, 124);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 22);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Email";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(47, 93);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 22);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Nome";
+            // 
+            // Btn_Logout
+            // 
+            this.Btn_Logout.Location = new System.Drawing.Point(76, 212);
+            this.Btn_Logout.Name = "Btn_Logout";
+            this.Btn_Logout.Size = new System.Drawing.Size(137, 32);
+            this.Btn_Logout.TabIndex = 0;
+            this.Btn_Logout.Text = "Logout";
+            this.Btn_Logout.UseVisualStyleBackColor = true;
+            this.Btn_Logout.Click += new System.EventHandler(this.Btn_Logout_Click);
+            // 
+            // Pgn_Sicurezza
+            // 
+            this.Pgn_Sicurezza.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Sicurezza.Name = "Pgn_Sicurezza";
+            this.Pgn_Sicurezza.Padding = new System.Windows.Forms.Padding(3);
+            this.Pgn_Sicurezza.Size = new System.Drawing.Size(989, 405);
+            this.Pgn_Sicurezza.TabIndex = 1;
+            this.Pgn_Sicurezza.Text = "Sicurezza";
+            this.Pgn_Sicurezza.UseVisualStyleBackColor = true;
+            // 
+            // Pgn_Personalizza
+            // 
+            this.Pgn_Personalizza.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Personalizza.Name = "Pgn_Personalizza";
+            this.Pgn_Personalizza.Size = new System.Drawing.Size(989, 405);
+            this.Pgn_Personalizza.TabIndex = 2;
+            this.Pgn_Personalizza.Text = "Personalizzazione";
+            this.Pgn_Personalizza.UseVisualStyleBackColor = true;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "Account_Info";
+            treeNode1.Text = "Profilo";
+            treeNode2.Name = "Account_Privacy";
+            treeNode2.Text = "Sicurezza";
+            treeNode3.Name = "Customisation";
+            treeNode3.Text = "Personalizzazione";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            this.treeView1.ShowLines = false;
+            this.treeView1.ShowPlusMinus = false;
+            this.treeView1.ShowRootLines = false;
+            this.treeView1.Size = new System.Drawing.Size(148, 444);
+            this.treeView1.TabIndex = 3;
+            // 
+            // Modifica_Vis_Name
+            // 
+            this.Modifica_Vis_Name.Location = new System.Drawing.Point(290, 94);
+            this.Modifica_Vis_Name.Name = "Modifica_Vis_Name";
+            this.Modifica_Vis_Name.Size = new System.Drawing.Size(137, 25);
+            this.Modifica_Vis_Name.TabIndex = 8;
+            this.Modifica_Vis_Name.Text = "Modifica";
+            this.Modifica_Vis_Name.UseVisualStyleBackColor = true;
+            this.Modifica_Vis_Name.Click += new System.EventHandler(this.Modifica_Vis_Name_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(418, 208);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Password";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(418, 155);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(134, 13);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "Email, Username, Telefono";
+            // 
+            // Lbl_register
+            // 
+            this.Lbl_register.AutoSize = true;
+            this.Lbl_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_register.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Lbl_register.Location = new System.Drawing.Point(457, 287);
+            this.Lbl_register.Name = "Lbl_register";
+            this.Lbl_register.Size = new System.Drawing.Size(176, 13);
+            this.Lbl_register.TabIndex = 23;
+            this.Lbl_register.Text = "Non hai un Account? Registrati ora!";
+            this.Lbl_register.Click += new System.EventHandler(this.Lbl_register_Click);
             // 
             // Form1
             // 
@@ -4216,6 +4473,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.Pannello_Acc_User);
             this.Controls.Add(this.Pannello_Posti);
             this.Controls.Add(this.Pannello_Pagamento);
             this.Controls.Add(this.Pannello_Login);
@@ -4267,7 +4525,7 @@
             this.Settore_E.ResumeLayout(false);
             this.Settore_A.ResumeLayout(false);
             this.Pannello_Login.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
+            this.Tab_Login_Register.ResumeLayout(false);
             this.Pgn_Register.ResumeLayout(false);
             this.Pgn_Register.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -4277,6 +4535,10 @@
             this.Pgn_Login.ResumeLayout(false);
             this.Pgn_Login.PerformLayout();
             this.Pannello_Pagamento.ResumeLayout(false);
+            this.Pannello_Acc_User.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.Pgn_Profilo.ResumeLayout(false);
+            this.Pgn_Profilo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4530,7 +4792,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox Data_Lst;
         private System.Windows.Forms.Panel Pannello_Login;
-        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabControl Tab_Login_Register;
         private System.Windows.Forms.TabPage Pgn_Register;
         private System.Windows.Forms.TabPage Pgn_Login;
         private System.Windows.Forms.TextBox txt_cognome;
@@ -4564,6 +4826,27 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_L_Email;
         private System.Windows.Forms.TextBox txt_L_Password;
+        private System.Windows.Forms.Panel Pannello_Acc_User;
+        private System.Windows.Forms.Button Btn_Logout;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage Pgn_Profilo;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TabPage Pgn_Sicurezza;
+        private System.Windows.Forms.TabPage Pgn_Personalizza;
+        private System.Windows.Forms.TextBox txt_A_Nome;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txt_telefono;
+        private System.Windows.Forms.TextBox txt_A_Telefono;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_A_Email;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txt_nome_visualizzato;
+        private System.Windows.Forms.Button Modifica_Vis_Name;
+        private System.Windows.Forms.Label Lbl_register;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label10;
     }
 }
 

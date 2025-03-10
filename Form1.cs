@@ -15,11 +15,23 @@ using System.Security.Cryptography;
 
 namespace Biglietti_concerto
 {
+
+
     public partial class Form1 : Form
     {
+
+        static string loggedNome = "";
+        static string loggedTelefono = "";
+        static string loggedEmail = "";
+
+
+        static readonly string filePath = "accounts.json";
+
         static Random rand = new Random();
         static List<string> Comuni = new List<string>();
         static List<string> CodiciBelfiore = new List<string>();
+
+
         readonly static List<string> Luoghi = new List<string>
         {
             "Milano - Stadio San Siro",
@@ -342,7 +354,6 @@ namespace Biglietti_concerto
             "Pinerolo - Stadio Luigi Barbieri",
             "Pinerolo - Stadio Luigi Barbieri",
         };
-
         static List<string> Date_Luoghi_Random(int cosa, Random rand)
         {
             switch (cosa)
@@ -455,6 +466,7 @@ namespace Biglietti_concerto
 
             consonanti = "";
             vocali = "";
+
             foreach (char c in nome)
                 if ("AEIOU".Contains(c)) vocali += c;
                 else consonanti += c;
@@ -517,11 +529,16 @@ namespace Biglietti_concerto
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(1167, 528);
+            this.Size = new Size(1150, 485);
             Pannello_Principale.Size = new Size(1151, 434);
             Pannello_Principale.Location = new Point(0, 54);
             Pannello_Posti.Size = new Size(1151, 434);
             Pannello_Login.Size = new Size(1151, 434);
+            Pannello_Login.Location = new Point(0, 54);
+            Pannello_Login.Visible = false;
+            Pannello_Acc_User.Size = new Size(1151, 434);
+            Pannello_Acc_User.Location = new Point(0, 54);
+            Pannello_Acc_User.Visible = false;
         }
 
 
@@ -650,6 +667,8 @@ namespace Biglietti_concerto
             Pannello_Principale.Location = new Point(0, 54);
             Pannello_Posti.Visible = false;
             Pannello_Login.Visible = false;
+            Pannello_Acc_User.Visible = false;
+            Pannello_Pagamento.Visible = false;
         }
         private void Data_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -666,10 +685,21 @@ namespace Biglietti_concerto
         bool Login = false;
         private void Account_Click(object sender, EventArgs e)
         {
-            Pannello_Principale.Visible = false;
-            Pannello_Posti.Visible = false;
-            Pannello_Login.Visible = true;
-            Pannello_Login.Location = new Point(0, 54);
+            if (Login)
+            {
+                Pannello_Acc_User.Visible = true;
+                txt_A_Nome.Text = loggedNome;
+                txt_A_Email.Text = loggedEmail;
+                txt_A_Telefono.Text = loggedTelefono;
+            }
+            else
+            {
+                Pannello_Principale.Visible = false;
+                Pannello_Posti.Visible = false;
+                Pannello_Login.Visible = true;
+                Pannello_Login.Enabled = true;
+                Pannello_Login.Location = new Point(0, 54);
+            }
         }
         private string MascheraPassword(string password)
         {
@@ -682,8 +712,14 @@ namespace Biglietti_concerto
 
         private void Btn_Register(object sender, EventArgs e)
         {
+            
             if (txt_codicefiscale.BackColor == Color.PaleGreen && txt_confermapsw.BackColor == Color.PaleGreen && !string.IsNullOrEmpty(txt_email.Text))
             {
+                if (!int.TryParse(txt_telefono.Text, out int n) && txt_telefono.Text.Length != 10)
+                {
+                    MessageBox.Show("Il numero di telefono deve essere composto da 10 cifre");
+                    return;
+                }
                 Login = true;
                 Pannello_Login.Visible = false;
                 Pannello_Login.Enabled = false;
@@ -706,17 +742,29 @@ namespace Biglietti_concerto
                 {
                     ["Nome"] = txt_nome.Text,
                     ["Cognome"] = txt_cognome.Text,
+                    ["Nome Visualizzato"] = txt_nome_visualizzato.Text,
                     ["Data di nascita"] = dtp_nascita.Text,
                     ["Comune"] = Comuni_Lst.SelectedItem.ToString(),
                     ["Codice Fiscale"] = txt_codicefiscale.Text,
+                    ["Telefono"] = txt_telefono.Text,
                     ["Email"] = txt_email.Text,
-                    ["Password"] = MascheraPassword(txt_password.Text)
+                    ["Password"] = MascheraPassword(txt_password.Text),
                 };
                 jsonArray.Add(newProfile);
 
                 File.WriteAllText(filePath, jsonArray.ToString());
 
+                loggedNome = txt_nome_visualizzato.Text;
+                loggedTelefono = txt_telefono.Text;
+                loggedEmail = txt_email.Text;
+
                 MessageBox.Show("Registrazione Completata");
+
+                Login = true;
+                Pannello_Login.Visible = false;
+                Pannello_Login.Enabled = false;
+                Pannello_Posti.Visible = false;
+                Pannello_Principale.Visible = true;
             }
             else
             {
@@ -725,7 +773,6 @@ namespace Biglietti_concerto
         }
         private void Btn_Login(object sender, EventArgs e)
         {
-            string filePath = "accounts.json";
 
             if (!File.Exists(filePath))
             {
@@ -736,22 +783,46 @@ namespace Biglietti_concerto
             string jsonContent = File.ReadAllText(filePath);
             JArray jsonArray = JArray.Parse(jsonContent);
 
-            string emailInput = txt_L_Email.Text;
+            string Input = txt_L_Email.Text;
             string passwordHashInput = MascheraPassword(txt_L_Password.Text); 
 
             JObject user = jsonArray
                 .Children<JObject>()
                 .FirstOrDefault(u =>
-                    u["Email"]?.ToString() == emailInput &&
+                    (u["Email"]?.ToString() == Input || u["Nome Visualizzato"]?.ToString() == Input || u["Telefono"]?.ToString() == Input) &&
                     u["Password"]?.ToString() == passwordHashInput);
 
             if (user != null)
             {
-                MessageBox.Show($"Benvenuto, {user["Nome"]} {user["Cognome"]}!");
+                try
+                {
+                    loggedNome = user["Nome Visualizzato"].ToString();
+                }catch (Exception)
+                {
+                    loggedNome = "";
+                }
+                try
+                {
+                    loggedTelefono = user["Telefono"].ToString();
+                }
+                catch (Exception)
+                {
+                    loggedTelefono = "";
+                }
+                loggedEmail = user["Email"].ToString();
+
+                MessageBox.Show($"Benvenuto, {user["Nome Visualizzato"]}!");
+                txt_L_Email.Clear();
+                txt_L_Password.Clear();
+                Login = true;
+                Pannello_Login.Visible = false;
+                Pannello_Login.Enabled = false;
+                Pannello_Posti.Visible = false;
+                Pannello_Principale.Visible = true;
             }
             else
             {
-                MessageBox.Show("Email o password errati.");
+                MessageBox.Show("Email/Username/Telefono o Password errati.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -816,43 +887,49 @@ namespace Biglietti_concerto
             }
         }
 
-        
-
-
-
-        /*private void txt_nascita_TextChanged(object sender, EventArgs e)
+        private void txt_L_Password_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            if(txt_nascita.SelectedText ==true)
-            if (txt_nascita.Text.Length == 10)
+            if (e.KeyCode == Keys.Enter)
             {
-                if (txt_nascita.Text[2] == '/' && txt_nascita.Text[5] == '/')
-                {
-                    string[] data = txt_nascita.Text.Split('/');
-                    if (int.TryParse(data[0], out int giorno) && int.TryParse(data[1], out int mese) && int.TryParse(data[2], out int anno))
-                    {
-                        if (giorno > 0 && giorno <= 31 && mese > 0 && mese <= 12 && anno > 1900 && anno < 2025)
-                        {
-                            txt_nascita.BackColor = Color.White;
-                        }
-                        else
-                        {
-                            txt_nascita.BackColor = Color.Red;
-                        }
-                    }
-                    else
-                    {
-                        txt_nascita.BackColor = Color.Red;
-                    }
-                }
-                else
-                {
-                    txt_nascita.BackColor = Color.Red;
-                }
+                Btn_Login(sender, e);
             }
-            else
+        }
+
+        private void Modifica_Vis_Name_Click(object sender, EventArgs e)
+        {
+            string jsonContent = File.ReadAllText(filePath);
+            JArray jsonArray = JArray.Parse(jsonContent);
+
+            JObject user = jsonArray
+                .Children<JObject>()
+                .FirstOrDefault(u =>
+                    (u["Email"]?.ToString() == loggedEmail));
+            if (user != null)
             {
-                txt_nascita.BackColor = Color.Red;
+                user["Nome Visualizzato"] = txt_A_Nome.Text;
+                File.WriteAllText(filePath, jsonArray.ToString());
+                loggedNome = txt_A_Nome.Text;
+                MessageBox.Show("Username Modificato");
             }
-        }*/
+
+        }
+
+        private void Btn_Logout_Click(object sender, EventArgs e)
+        {
+            Login = false;
+            Pannello_Acc_User.Visible = false;
+            Pannello_Acc_User.Enabled = false;
+            Pannello_Login.Visible = true;
+            Pannello_Login.Enabled = true;
+
+            loggedNome = "";
+            loggedTelefono = "";
+            loggedEmail = "";
+        }
+
+        private void Lbl_register_Click(object sender, EventArgs e)
+        {
+            Tab_Login_Register.SelectedIndex = 1;
+        }
     }
 }

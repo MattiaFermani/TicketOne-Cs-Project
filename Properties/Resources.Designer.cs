@@ -113,6 +113,16 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Default_Img_Profile {
+            get {
+                object obj = ResourceManager.GetObject("Default_Img_Profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fask_summer_biglietti {
             get {
                 object obj = ResourceManager.GetObject("fask-summer-biglietti", resourceCulture);
