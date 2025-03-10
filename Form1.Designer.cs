@@ -284,6 +284,10 @@
             this.Pannello_Login = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.Pgn_Register = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
+            this.txt_confermapsw = new System.Windows.Forms.TextBox();
+            this.Lbl_ConfermaPsw = new System.Windows.Forms.Label();
             this.Group_Gender = new System.Windows.Forms.GroupBox();
             this.Female_Rdb = new System.Windows.Forms.RadioButton();
             this.Male_Rdb = new System.Windows.Forms.RadioButton();
@@ -304,10 +308,8 @@
             this.Login_Btn = new System.Windows.Forms.Button();
             this.Pannello_Pagamento = new System.Windows.Forms.Panel();
             this.Btn_Pagamento = new System.Windows.Forms.Button();
-            this.txt_password = new System.Windows.Forms.TextBox();
-            this.txt_confermapsw = new System.Windows.Forms.TextBox();
-            this.Lbl_ConfermaPsw = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_L_Email = new System.Windows.Forms.TextBox();
+            this.txt_L_Password = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -345,10 +347,10 @@
             this.Pannello_Login.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.Pgn_Register.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.Group_Gender.SuspendLayout();
             this.Pgn_Login.SuspendLayout();
             this.Pannello_Pagamento.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -633,7 +635,6 @@
             this.Pannello_Posti.Size = new System.Drawing.Size(111, 455);
             this.Pannello_Posti.TabIndex = 12;
             this.Pannello_Posti.Visible = false;
-            this.Pannello_Posti.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pannello_Posti_MouseMove);
             // 
             // Tab_Info_Posti
             // 
@@ -658,7 +659,7 @@
             this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(757, 439);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(103, 429);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -3965,8 +3966,47 @@
             this.Pgn_Register.Size = new System.Drawing.Size(1143, 408);
             this.Pgn_Register.TabIndex = 0;
             this.Pgn_Register.Text = "Registrazione";
-            this.Pgn_Register.Click += new System.EventHandler(this.Pgn_Register_Click);
             this.Pgn_Register.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pgn_Register_MouseMove);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txt_password);
+            this.groupBox2.Controls.Add(this.txt_confermapsw);
+            this.groupBox2.Controls.Add(this.Lbl_ConfermaPsw);
+            this.groupBox2.Location = new System.Drawing.Point(417, 254);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(265, 98);
+            this.groupBox2.TabIndex = 21;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Password";
+            // 
+            // txt_password
+            // 
+            this.txt_password.Location = new System.Drawing.Point(6, 19);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
+            this.txt_password.Size = new System.Drawing.Size(253, 20);
+            this.txt_password.TabIndex = 17;
+            this.txt_password.UseSystemPasswordChar = true;
+            // 
+            // txt_confermapsw
+            // 
+            this.txt_confermapsw.Location = new System.Drawing.Point(6, 72);
+            this.txt_confermapsw.Name = "txt_confermapsw";
+            this.txt_confermapsw.PasswordChar = '*';
+            this.txt_confermapsw.Size = new System.Drawing.Size(253, 20);
+            this.txt_confermapsw.TabIndex = 18;
+            this.txt_confermapsw.UseSystemPasswordChar = true;
+            this.txt_confermapsw.TextChanged += new System.EventHandler(this.txt_confermapsw_TextChanged);
+            // 
+            // Lbl_ConfermaPsw
+            // 
+            this.Lbl_ConfermaPsw.AutoSize = true;
+            this.Lbl_ConfermaPsw.Location = new System.Drawing.Point(6, 56);
+            this.Lbl_ConfermaPsw.Name = "Lbl_ConfermaPsw";
+            this.Lbl_ConfermaPsw.Size = new System.Drawing.Size(101, 13);
+            this.Lbl_ConfermaPsw.TabIndex = 20;
+            this.Lbl_ConfermaPsw.Text = "Conferma Password";
             // 
             // Group_Gender
             // 
@@ -4042,7 +4082,7 @@
             this.Register_Btn.TabIndex = 11;
             this.Register_Btn.Text = "Registrati";
             this.Register_Btn.UseVisualStyleBackColor = true;
-            this.Register_Btn.Click += new System.EventHandler(this.Login_Register);
+            this.Register_Btn.Click += new System.EventHandler(this.Btn_Register);
             // 
             // Comuni_Lst
             // 
@@ -4114,6 +4154,8 @@
             // 
             // Pgn_Login
             // 
+            this.Pgn_Login.Controls.Add(this.txt_L_Password);
+            this.Pgn_Login.Controls.Add(this.txt_L_Email);
             this.Pgn_Login.Controls.Add(this.Login_Btn);
             this.Pgn_Login.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Login.Name = "Pgn_Login";
@@ -4125,13 +4167,13 @@
             // 
             // Login_Btn
             // 
-            this.Login_Btn.Location = new System.Drawing.Point(469, 338);
+            this.Login_Btn.Location = new System.Drawing.Point(509, 346);
             this.Login_Btn.Name = "Login_Btn";
             this.Login_Btn.Size = new System.Drawing.Size(75, 23);
             this.Login_Btn.TabIndex = 0;
             this.Login_Btn.Text = "Accedi";
             this.Login_Btn.UseVisualStyleBackColor = true;
-            this.Login_Btn.Click += new System.EventHandler(this.Login_Register);
+            this.Login_Btn.Click += new System.EventHandler(this.Btn_Login);
             // 
             // Pannello_Pagamento
             // 
@@ -4152,45 +4194,21 @@
             this.Btn_Pagamento.Text = "Paga Ora";
             this.Btn_Pagamento.UseVisualStyleBackColor = true;
             // 
-            // txt_password
+            // txt_L_Email
             // 
-            this.txt_password.Location = new System.Drawing.Point(6, 19);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '*';
-            this.txt_password.Size = new System.Drawing.Size(253, 20);
-            this.txt_password.TabIndex = 17;
-            this.txt_password.UseSystemPasswordChar = true;
+            this.txt_L_Email.Location = new System.Drawing.Point(421, 273);
+            this.txt_L_Email.Name = "txt_L_Email";
+            this.txt_L_Email.Size = new System.Drawing.Size(253, 20);
+            this.txt_L_Email.TabIndex = 14;
             // 
-            // txt_confermapsw
+            // txt_L_Password
             // 
-            this.txt_confermapsw.Location = new System.Drawing.Point(6, 72);
-            this.txt_confermapsw.Name = "txt_confermapsw";
-            this.txt_confermapsw.PasswordChar = '*';
-            this.txt_confermapsw.Size = new System.Drawing.Size(253, 20);
-            this.txt_confermapsw.TabIndex = 18;
-            this.txt_confermapsw.UseSystemPasswordChar = true;
-            this.txt_confermapsw.TextChanged += new System.EventHandler(this.txt_confermapsw_TextChanged);
-            // 
-            // Lbl_ConfermaPsw
-            // 
-            this.Lbl_ConfermaPsw.AutoSize = true;
-            this.Lbl_ConfermaPsw.Location = new System.Drawing.Point(6, 56);
-            this.Lbl_ConfermaPsw.Name = "Lbl_ConfermaPsw";
-            this.Lbl_ConfermaPsw.Size = new System.Drawing.Size(101, 13);
-            this.Lbl_ConfermaPsw.TabIndex = 20;
-            this.Lbl_ConfermaPsw.Text = "Conferma Password";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txt_password);
-            this.groupBox2.Controls.Add(this.txt_confermapsw);
-            this.groupBox2.Controls.Add(this.Lbl_ConfermaPsw);
-            this.groupBox2.Location = new System.Drawing.Point(417, 254);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(265, 98);
-            this.groupBox2.TabIndex = 21;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Password";
+            this.txt_L_Password.Location = new System.Drawing.Point(421, 320);
+            this.txt_L_Password.Name = "txt_L_Password";
+            this.txt_L_Password.PasswordChar = '*';
+            this.txt_L_Password.Size = new System.Drawing.Size(253, 20);
+            this.txt_L_Password.TabIndex = 18;
+            this.txt_L_Password.UseSystemPasswordChar = true;
             // 
             // Form1
             // 
@@ -4252,12 +4270,13 @@
             this.tabControl2.ResumeLayout(false);
             this.Pgn_Register.ResumeLayout(false);
             this.Pgn_Register.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.Group_Gender.ResumeLayout(false);
             this.Group_Gender.PerformLayout();
             this.Pgn_Login.ResumeLayout(false);
+            this.Pgn_Login.PerformLayout();
             this.Pannello_Pagamento.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4543,6 +4562,8 @@
         private System.Windows.Forms.TextBox txt_confermapsw;
         private System.Windows.Forms.Label Lbl_ConfermaPsw;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txt_L_Email;
+        private System.Windows.Forms.TextBox txt_L_Password;
     }
 }
 

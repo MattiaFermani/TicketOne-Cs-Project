@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using ClosedXML.Excel;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
+using System.Security.Cryptography;
 
 namespace Biglietti_concerto
 {
@@ -670,8 +671,16 @@ namespace Biglietti_concerto
             Pannello_Login.Visible = true;
             Pannello_Login.Location = new Point(0, 54);
         }
+        private string MascheraPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(bytes).Replace("-", "").ToLower();
+            }
+        }
 
-        private void Login_Register(object sender, EventArgs e)
+        private void Btn_Register(object sender, EventArgs e)
         {
             if (txt_codicefiscale.BackColor == Color.PaleGreen && txt_confermapsw.BackColor == Color.PaleGreen && !string.IsNullOrEmpty(txt_email.Text))
             {
@@ -680,9 +689,20 @@ namespace Biglietti_concerto
                 Pannello_Login.Enabled = false;
                 Pannello_Posti.Visible = false;
                 Pannello_Principale.Visible = true;
-                string filePath = "data.json";
+                string filePath = "accounts.json";
 
-                JObject jsonData = new JObject
+                JArray jsonArray;
+                if (File.Exists(filePath))
+                {
+                    string jsonContent = File.ReadAllText(filePath);
+                    jsonArray = JArray.Parse(jsonContent);
+                }
+                else
+                {
+                    jsonArray = new JArray();
+                }
+
+                JObject newProfile = new JObject
                 {
                     ["Nome"] = txt_nome.Text,
                     ["Cognome"] = txt_cognome.Text,
@@ -690,29 +710,49 @@ namespace Biglietti_concerto
                     ["Comune"] = Comuni_Lst.SelectedItem.ToString(),
                     ["Codice Fiscale"] = txt_codicefiscale.Text,
                     ["Email"] = txt_email.Text,
-                    ["Password"] = txt_password.Text
+                    ["Password"] = MascheraPassword(txt_password.Text)
                 };
-                File.WriteAllText(filePath, jsonData.ToString());
-                MessageBox.Show("Dati salvati!");
+                jsonArray.Add(newProfile);
+
+                File.WriteAllText(filePath, jsonArray.ToString());
+
+                MessageBox.Show("Registrazione Completata");
             }
             else
             {
                 MessageBox.Show("Controlla i dati inseriti e riprova");
             }
         }
-
-        private void Tab_Info_Posti_MouseMove(object sender, MouseEventArgs e)
+        private void Btn_Login(object sender, EventArgs e)
         {
-            
-        }
+            string filePath = "accounts.json";
 
-        private void Pannello_Posti_MouseMove(object sender, MouseEventArgs e)
-        {
-        }
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Nessun account registrato.");
+                return;
+            }
 
-        private void Pgn_Register_Click(object sender, EventArgs e)
-        {
+            string jsonContent = File.ReadAllText(filePath);
+            JArray jsonArray = JArray.Parse(jsonContent);
 
+            string emailInput = txt_L_Email.Text;
+            string passwordHashInput = MascheraPassword(txt_L_Password.Text); 
+
+            JObject user = jsonArray
+                .Children<JObject>()
+                .FirstOrDefault(u =>
+                    u["Email"]?.ToString() == emailInput &&
+                    u["Password"]?.ToString() == passwordHashInput);
+
+            if (user != null)
+            {
+                MessageBox.Show($"Benvenuto, {user["Nome"]} {user["Cognome"]}!");
+            }
+            else
+            {
+                MessageBox.Show("Email o password errati.");
+            }
         }
 
         private void FormClose_Click(object sender, EventArgs e)
@@ -775,6 +815,9 @@ namespace Biglietti_concerto
                 Lbl_ConfermaPsw.Text = "Conferma Password - Le Password non Corrispondono";
             }
         }
+
+        
+
 
 
         /*private void txt_nascita_TextChanged(object sender, EventArgs e)
