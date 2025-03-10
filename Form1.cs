@@ -23,6 +23,7 @@ namespace Biglietti_concerto
         static string loggedNome = "";
         static string loggedTelefono = "";
         static string loggedEmail = "";
+        static string loggedRole = "";
 
         static string adminFilePath = "admin.dat";
         static string encryptionKey = "abcabc"; // 🔑 Chiave di cifratura (NON salvarla nel codice in produzione!)
@@ -31,7 +32,6 @@ namespace Biglietti_concerto
         {
             byte[] encryptedData = EncryptData(password, encryptionKey);
             File.WriteAllBytes(adminFilePath, encryptedData);
-            MessageBox.Show("Password admin salvata in modo sicuro.");
         }
 
         private byte[] EncryptData(string text, string key)
@@ -581,6 +581,7 @@ namespace Biglietti_concerto
         public Form1()
         {
             InitializeComponent();
+            CreaAdminPassword("Cisco123");
             ComuniITA();
         }
 
@@ -601,7 +602,15 @@ namespace Biglietti_concerto
 
         private void Spettacolo_Click(object sender, EventArgs e)
         {
-            PostiSelezionati = 0;
+            if (Login)
+            {
+                Tab_Info_Posti.Enabled = true;
+            }
+            else
+            {
+                Tab_Info_Posti.Enabled = false;
+            }
+                PostiSelezionati = 0;
             PictureBox pb = (PictureBox)sender;
 
             foreach (var spettacolo in Spettacoli)
@@ -748,6 +757,8 @@ namespace Biglietti_concerto
                 txt_A_Nome.Text = loggedNome;
                 txt_A_Email.Text = loggedEmail;
                 txt_A_Telefono.Text = loggedTelefono;
+                Lbl_Role.Text = loggedRole;
+
             }
             else
             {
@@ -772,7 +783,7 @@ namespace Biglietti_concerto
             
             if (txt_codicefiscale.BackColor == Color.PaleGreen && txt_confermapsw.BackColor == Color.PaleGreen && !string.IsNullOrEmpty(txt_email.Text) && !string.IsNullOrWhiteSpace(txt_nome_visualizzato.Text))
             {
-                if (!int.TryParse(txt_telefono.Text, out int n) && txt_telefono.Text.Length != 10)
+                if (!int.TryParse(txt_telefono.Text, out int n) && txt_telefono.Text.Length != 10 && !string.IsNullOrEmpty(txt_telefono.Text))
                 {
                     MessageBox.Show("Il numero di telefono deve essere composto da 10 cifre");
                     return;
@@ -805,20 +816,22 @@ namespace Biglietti_concerto
                     ["Codice Fiscale"] = txt_codicefiscale.Text,
                     ["Telefono"] = txt_telefono.Text,
                     ["Email"] = txt_email.Text,
-                    ["Role"] = Chk_IsAdmin.Checked ? PswAdmin() ? "Admin" : "User" : "User",
+                    ["Role"] = Chk_IsAdmin.Checked ? (PswAdmin() ? "Admin" : "User") : "User",
                     ["Password"] = MascheraPassword(txt_password.Text),
                 };
                 jsonArray.Add(newProfile);
 
                 File.WriteAllText(filePath, jsonArray.ToString());
 
-                loggedNome = txt_nome_visualizzato.Text;
-                loggedTelefono = txt_telefono.Text;
-                loggedEmail = txt_email.Text;
+                loggedNome = newProfile["Nome Visualizzato"].ToString();
+                loggedTelefono = newProfile["Telefono"].ToString();
+                loggedEmail = newProfile["Email"].ToString();
+                loggedRole = newProfile["Role"].ToString();
 
                 MessageBox.Show("Registrazione Completata");
 
                 Login = true;
+                txb_psw_admin.Clear();
                 Pannello_Login.Visible = false;
                 Pannello_Login.Enabled = false;
                 Pannello_Posti.Visible = false;
@@ -868,6 +881,7 @@ namespace Biglietti_concerto
                     loggedTelefono = "";
                 }
                 loggedEmail = user["Email"].ToString();
+                loggedRole = user["Role"].ToString();
 
                 MessageBox.Show($"Benvenuto, {user["Nome Visualizzato"]}!");
                 txt_L_Email.Clear();
@@ -876,6 +890,7 @@ namespace Biglietti_concerto
                 Pannello_Login.Visible = false;
                 Pannello_Login.Enabled = false;
                 Pannello_Posti.Visible = false;
+                Pannello_Acc_User.Enabled = true;
                 Pannello_Principale.Visible = true;
             }
             else
@@ -983,6 +998,7 @@ namespace Biglietti_concerto
             loggedNome = "";
             loggedTelefono = "";
             loggedEmail = "";
+            loggedRole = "";
         }
 
         private void Lbl_register_Click(object sender, EventArgs e)
@@ -1023,7 +1039,6 @@ namespace Biglietti_concerto
                 txb_psw_admin.Visible = false;
                 btn_Admin_Check.Visible = false;
                 return true;
-
             }
             else
             {

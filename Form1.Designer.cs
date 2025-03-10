@@ -292,6 +292,11 @@
             this.txt_L_Email = new System.Windows.Forms.TextBox();
             this.Login_Btn = new System.Windows.Forms.Button();
             this.Pgn_Register = new System.Windows.Forms.TabPage();
+            this.btn_Admin_Check = new System.Windows.Forms.Button();
+            this.lbl_admin = new System.Windows.Forms.Label();
+            this.txb_psw_admin = new System.Windows.Forms.TextBox();
+            this.Chk_IsAdmin = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txt_nome_visualizzato = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -331,11 +336,9 @@
             this.Btn_Logout = new System.Windows.Forms.Button();
             this.Pgn_Sicurezza = new System.Windows.Forms.TabPage();
             this.Pgn_Personalizza = new System.Windows.Forms.TabPage();
-            this.label17 = new System.Windows.Forms.Label();
-            this.Chk_IsAdmin = new System.Windows.Forms.CheckBox();
-            this.txb_psw_admin = new System.Windows.Forms.TextBox();
-            this.lbl_admin = new System.Windows.Forms.Label();
-            this.btn_Admin_Check = new System.Windows.Forms.Button();
+            this.Lbl_Role = new System.Windows.Forms.Label();
+            this.txt_A_Password = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -4091,6 +4094,58 @@
             this.Pgn_Register.Text = "Registrazione";
             this.Pgn_Register.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pgn_Register_MouseMove);
             // 
+            // btn_Admin_Check
+            // 
+            this.btn_Admin_Check.Location = new System.Drawing.Point(880, 324);
+            this.btn_Admin_Check.Name = "btn_Admin_Check";
+            this.btn_Admin_Check.Size = new System.Drawing.Size(52, 22);
+            this.btn_Admin_Check.TabIndex = 29;
+            this.btn_Admin_Check.Text = "Check";
+            this.btn_Admin_Check.UseVisualStyleBackColor = true;
+            this.btn_Admin_Check.Visible = false;
+            this.btn_Admin_Check.Click += new System.EventHandler(this.btn_Admin_Check_Click);
+            // 
+            // lbl_admin
+            // 
+            this.lbl_admin.AutoSize = true;
+            this.lbl_admin.Location = new System.Drawing.Point(618, 310);
+            this.lbl_admin.Name = "lbl_admin";
+            this.lbl_admin.Size = new System.Drawing.Size(124, 13);
+            this.lbl_admin.TabIndex = 21;
+            this.lbl_admin.Text = "Password Amministratore";
+            this.lbl_admin.Visible = false;
+            // 
+            // txb_psw_admin
+            // 
+            this.txb_psw_admin.Location = new System.Drawing.Point(621, 326);
+            this.txb_psw_admin.Name = "txb_psw_admin";
+            this.txb_psw_admin.PasswordChar = '*';
+            this.txb_psw_admin.Size = new System.Drawing.Size(253, 20);
+            this.txb_psw_admin.TabIndex = 28;
+            this.txb_psw_admin.UseSystemPasswordChar = true;
+            this.txb_psw_admin.Visible = false;
+            // 
+            // Chk_IsAdmin
+            // 
+            this.Chk_IsAdmin.AutoSize = true;
+            this.Chk_IsAdmin.Location = new System.Drawing.Point(621, 273);
+            this.Chk_IsAdmin.Name = "Chk_IsAdmin";
+            this.Chk_IsAdmin.Size = new System.Drawing.Size(72, 17);
+            this.Chk_IsAdmin.TabIndex = 27;
+            this.Chk_IsAdmin.Text = "Is Admin?";
+            this.Chk_IsAdmin.UseVisualStyleBackColor = true;
+            this.Chk_IsAdmin.CheckedChanged += new System.EventHandler(this.Chk_IsAdmin_CheckedChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Coiny", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(474, 21);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(128, 31);
+            this.label17.TabIndex = 26;
+            this.label17.Text = "Sign In";
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -4350,6 +4405,9 @@
             // 
             // Pgn_Profilo
             // 
+            this.Pgn_Profilo.Controls.Add(this.label18);
+            this.Pgn_Profilo.Controls.Add(this.txt_A_Password);
+            this.Pgn_Profilo.Controls.Add(this.Lbl_Role);
             this.Pgn_Profilo.Controls.Add(this.Modifica_Vis_Name);
             this.Pgn_Profilo.Controls.Add(this.txt_A_Telefono);
             this.Pgn_Profilo.Controls.Add(this.label13);
@@ -4462,57 +4520,35 @@
             this.Pgn_Personalizza.Text = "Personalizzazione";
             this.Pgn_Personalizza.UseVisualStyleBackColor = true;
             // 
-            // label17
+            // Lbl_Role
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Coiny", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(474, 21);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(128, 31);
-            this.label17.TabIndex = 26;
-            this.label17.Text = "Sign In";
+            this.Lbl_Role.AutoSize = true;
+            this.Lbl_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Lbl_Role.Location = new System.Drawing.Point(1012, 18);
+            this.Lbl_Role.Name = "Lbl_Role";
+            this.Lbl_Role.Size = new System.Drawing.Size(57, 22);
+            this.Lbl_Role.TabIndex = 9;
+            this.Lbl_Role.Text = "Ruolo";
             // 
-            // Chk_IsAdmin
+            // txt_A_Password
             // 
-            this.Chk_IsAdmin.AutoSize = true;
-            this.Chk_IsAdmin.Location = new System.Drawing.Point(621, 273);
-            this.Chk_IsAdmin.Name = "Chk_IsAdmin";
-            this.Chk_IsAdmin.Size = new System.Drawing.Size(72, 17);
-            this.Chk_IsAdmin.TabIndex = 27;
-            this.Chk_IsAdmin.Text = "Is Admin?";
-            this.Chk_IsAdmin.UseVisualStyleBackColor = true;
-            this.Chk_IsAdmin.CheckedChanged += new System.EventHandler(this.Chk_IsAdmin_CheckedChanged);
+            this.txt_A_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_A_Password.Location = new System.Drawing.Point(110, 197);
+            this.txt_A_Password.Name = "txt_A_Password";
+            this.txt_A_Password.PasswordChar = '*';
+            this.txt_A_Password.Size = new System.Drawing.Size(165, 13);
+            this.txt_A_Password.TabIndex = 25;
+            this.txt_A_Password.UseSystemPasswordChar = true;
             // 
-            // txb_psw_admin
+            // label18
             // 
-            this.txb_psw_admin.Location = new System.Drawing.Point(621, 326);
-            this.txb_psw_admin.Name = "txb_psw_admin";
-            this.txb_psw_admin.PasswordChar = '*';
-            this.txb_psw_admin.Size = new System.Drawing.Size(253, 20);
-            this.txb_psw_admin.TabIndex = 28;
-            this.txb_psw_admin.UseSystemPasswordChar = true;
-            this.txb_psw_admin.Visible = false;
-            // 
-            // lbl_admin
-            // 
-            this.lbl_admin.AutoSize = true;
-            this.lbl_admin.Location = new System.Drawing.Point(618, 310);
-            this.lbl_admin.Name = "lbl_admin";
-            this.lbl_admin.Size = new System.Drawing.Size(124, 13);
-            this.lbl_admin.TabIndex = 21;
-            this.lbl_admin.Text = "Password Amministratore";
-            this.lbl_admin.Visible = false;
-            // 
-            // btn_Admin_Check
-            // 
-            this.btn_Admin_Check.Location = new System.Drawing.Point(880, 324);
-            this.btn_Admin_Check.Name = "btn_Admin_Check";
-            this.btn_Admin_Check.Size = new System.Drawing.Size(52, 22);
-            this.btn_Admin_Check.TabIndex = 29;
-            this.btn_Admin_Check.Text = "Check";
-            this.btn_Admin_Check.UseVisualStyleBackColor = true;
-            this.btn_Admin_Check.Visible = false;
-            this.btn_Admin_Check.Click += new System.EventHandler(this.btn_Admin_Check_Click);
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(15, 188);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(89, 22);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "Password";
             // 
             // Form1
             // 
@@ -4899,6 +4935,9 @@
         private System.Windows.Forms.Button btn_Admin_Check;
         private System.Windows.Forms.Label lbl_admin;
         private System.Windows.Forms.TextBox txb_psw_admin;
+        private System.Windows.Forms.Label Lbl_Role;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txt_A_Password;
     }
 }
 
