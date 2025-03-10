@@ -3960,6 +3960,7 @@
             this.Pgn_Register.TabIndex = 0;
             this.Pgn_Register.Text = "Registrazione";
             this.Pgn_Register.Click += new System.EventHandler(this.Pgn_Register_Click);
+            this.Pgn_Register.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pgn_Register_MouseMove);
             // 
             // Group_Gender
             // 
@@ -4029,7 +4030,7 @@
             // 
             // Register_Btn
             // 
-            this.Register_Btn.Location = new System.Drawing.Point(502, 343);
+            this.Register_Btn.Location = new System.Drawing.Point(453, 358);
             this.Register_Btn.Name = "Register_Btn";
             this.Register_Btn.Size = new System.Drawing.Size(143, 25);
             this.Register_Btn.TabIndex = 11;

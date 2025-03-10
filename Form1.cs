@@ -446,10 +446,10 @@ namespace Biglietti_concerto
             string cf = "";
             string consonanti = "", vocali = "";
             foreach (char c in cognome)
+                
                 if ("AEIOU".Contains(c)) vocali += c;
                 else consonanti += c;
-            cf += (consonanti.Length >= 4) ? $"{consonanti[0]}{consonanti[2]}{consonanti[3]}" :
-                  (consonanti + vocali + "XXX").Substring(0, 3);
+            cf += (consonanti + vocali + "XXX").Substring(0, 3);
 
             consonanti = "";
             vocali = "";
@@ -466,7 +466,7 @@ namespace Biglietti_concerto
             int giorno = dt.Day + (sesso == "F" ? 40 : 0);
             cf += anno + mese + giorno.ToString("D2");
 
-            // CODICE BELFIORE
+
             cf += Comuni.Contains(comune) ? CodiciBelfiore[Comuni_Lst.SelectedIndex] : "Z999";
 
             Dictionary<char, int> Pari = new Dictionary<char, int>
@@ -496,13 +496,13 @@ namespace Biglietti_concerto
             for (int i = 0; i < 15; i++)
             {
                 char c = cf[i];
-                if (i % 2 == 0)
+                if ((i+1) % 2 == 0)
                     somma += Pari[c];
                 else
                     somma += Dispari[c];
             }
 
-            cf += Carattere[somma % 26];
+            cf += Carattere[(somma % 26)];
 
             return cf;
         }
@@ -709,20 +709,32 @@ namespace Biglietti_concerto
             {
                 sesso = "F";
             }
-            else if(Male_Rdb.Checked)
+            else if (Male_Rdb.Checked)
             {
                 sesso = "M";
             }
             string comune = Comuni_Lst.SelectedItem.ToString();
 
 
-            if (string.Equals(txt_codicefiscale.Text, CalcCodiceFiscale(nome, cognome, dataNascita, sesso, comune), StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(txt_codicefiscale.Text, CalcCodiceFiscale(nome.ToUpper(), cognome.ToUpper(), dataNascita, sesso.ToUpper(), comune), StringComparison.OrdinalIgnoreCase))
             {
-                txt_codicefiscale.BackColor = Color.Green;
+                txt_codicefiscale.BackColor = Color.PaleGreen;
             }
             else
             {
-                txt_codicefiscale.BackColor = Color.Red;
+                txt_codicefiscale.BackColor = Color.IndianRed;
+            }
+        }
+
+        private void Pgn_Register_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Comuni_Lst.SelectedIndex == -1 || (!Female_Rdb.Checked && !Male_Rdb.Checked))
+            {
+                txt_codicefiscale.Enabled = false;
+            }
+            else
+            {
+                txt_codicefiscale.Enabled = true;
             }
         }
 
