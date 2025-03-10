@@ -630,7 +630,7 @@
             this.Pannello_Posti.Controls.Add(this.Tab_Info_Posti);
             this.Pannello_Posti.Location = new System.Drawing.Point(1157, 66);
             this.Pannello_Posti.Name = "Pannello_Posti";
-            this.Pannello_Posti.Size = new System.Drawing.Size(111, 465);
+            this.Pannello_Posti.Size = new System.Drawing.Size(111, 455);
             this.Pannello_Posti.TabIndex = 12;
             this.Pannello_Posti.Visible = false;
             this.Pannello_Posti.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pannello_Posti_MouseMove);
@@ -645,7 +645,7 @@
             this.Tab_Info_Posti.Location = new System.Drawing.Point(0, 0);
             this.Tab_Info_Posti.Name = "Tab_Info_Posti";
             this.Tab_Info_Posti.SelectedIndex = 0;
-            this.Tab_Info_Posti.Size = new System.Drawing.Size(111, 465);
+            this.Tab_Info_Posti.Size = new System.Drawing.Size(111, 455);
             this.Tab_Info_Posti.TabIndex = 0;
             // 
             // Pgn_Informazioni
@@ -787,7 +787,7 @@
             this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(103, 439);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(103, 429);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
