@@ -24,6 +24,63 @@ namespace Biglietti_concerto
         static string loggedTelefono = "";
         static string loggedEmail = "";
 
+        static string adminFilePath = "admin.dat";
+        static string encryptionKey = "abcabc"; // 🔑 Chiave di cifratura (NON salvarla nel codice in produzione!)
+
+        private void CreaAdminPassword(string password)
+        {
+            byte[] encryptedData = EncryptData(password, encryptionKey);
+            File.WriteAllBytes(adminFilePath, encryptedData);
+            MessageBox.Show("Password admin salvata in modo sicuro.");
+        }
+
+        private byte[] EncryptData(string text, string key)
+        {
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(key.PadRight(32)); // AES usa chiavi da 32 byte
+                aes.IV = new byte[16]; // Inizializziamo IV a 16 byte nulli
+
+                using (var encryptor = aes.CreateEncryptor(aes.Key, aes.IV))
+                using (var ms = new MemoryStream())
+                {
+                    using (var cryptoStream = new CryptoStream(ms, encryptor, CryptoStreamMode.Write))
+                    using (var writer = new StreamWriter(cryptoStream))
+                    {
+                        writer.Write(text);
+                    }
+                    return ms.ToArray();
+                }
+            }
+        }
+        private string LeggiAdminPassword()
+        {
+            if (!File.Exists(adminFilePath))
+            {
+                MessageBox.Show("File admin non trovato.");
+                return null;
+            }
+
+            byte[] encryptedData = File.ReadAllBytes(adminFilePath);
+            return DecryptData(encryptedData, encryptionKey);
+        }
+
+        private string DecryptData(byte[] data, string key)
+        {
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(key.PadRight(32));
+                aes.IV = new byte[16];
+
+                using (var decryptor = aes.CreateDecryptor(aes.Key, aes.IV))
+                using (var ms = new MemoryStream(data))
+                using (var cryptoStream = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
+                using (var reader = new StreamReader(cryptoStream))
+                {
+                    return reader.ReadToEnd();
+                }
+            }
+        }
 
         static readonly string filePath = "accounts.json";
 
@@ -713,7 +770,7 @@ namespace Biglietti_concerto
         private void Btn_Register(object sender, EventArgs e)
         {
             
-            if (txt_codicefiscale.BackColor == Color.PaleGreen && txt_confermapsw.BackColor == Color.PaleGreen && !string.IsNullOrEmpty(txt_email.Text))
+            if (txt_codicefiscale.BackColor == Color.PaleGreen && txt_confermapsw.BackColor == Color.PaleGreen && !string.IsNullOrEmpty(txt_email.Text) && !string.IsNullOrWhiteSpace(txt_nome_visualizzato.Text))
             {
                 if (!int.TryParse(txt_telefono.Text, out int n) && txt_telefono.Text.Length != 10)
                 {
@@ -748,6 +805,7 @@ namespace Biglietti_concerto
                     ["Codice Fiscale"] = txt_codicefiscale.Text,
                     ["Telefono"] = txt_telefono.Text,
                     ["Email"] = txt_email.Text,
+                    ["Role"] = Chk_IsAdmin.Checked ? PswAdmin() ? "Admin" : "User" : "User",
                     ["Password"] = MascheraPassword(txt_password.Text),
                 };
                 jsonArray.Add(newProfile);
@@ -931,5 +989,48 @@ namespace Biglietti_concerto
         {
             Tab_Login_Register.SelectedIndex = 1;
         }
+
+        private void Chk_IsAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Chk_IsAdmin.Checked)
+            {
+                lbl_admin.Visible = true;
+                txb_psw_admin.Visible = true;
+                btn_Admin_Check.Visible = true;
+            }
+            else
+            {
+                lbl_admin.Visible = false;
+                txb_psw_admin.Visible = false;
+                btn_Admin_Check.Visible = false;
+            }
+        }
+
+        private void btn_Admin_Check_Click(object sender, EventArgs e)
+        {
+            PswAdmin();
+        }
+
+        private bool PswAdmin()
+        {
+            string savedPassword = LeggiAdminPassword();
+            string inputPassword = txb_psw_admin.Text;
+
+            if (savedPassword != null && savedPassword == inputPassword)
+            {
+                Chk_IsAdmin.Checked = true;
+                lbl_admin.Visible = false;
+                txb_psw_admin.Visible = false;
+                btn_Admin_Check.Visible = false;
+                return true;
+
+            }
+            else
+            {
+                Chk_IsAdmin.Checked = false;
+                return false;
+            }
+        }
+
     }
 }
