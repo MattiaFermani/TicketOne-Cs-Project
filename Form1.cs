@@ -673,7 +673,7 @@ namespace Biglietti_concerto
 
         private void Login_Register(object sender, EventArgs e)
         {
-            if (txt_codicefiscale.BackColor == Color.PaleGreen && txt_confermapsw.BackColor == Color.PaleGreen)
+            if (txt_codicefiscale.BackColor == Color.PaleGreen && txt_confermapsw.BackColor == Color.PaleGreen && !string.IsNullOrEmpty(txt_email.Text))
             {
                 Login = true;
                 Pannello_Login.Visible = false;
@@ -752,7 +752,7 @@ namespace Biglietti_concerto
 
         private void Pgn_Register_MouseMove(object sender, MouseEventArgs e)
         {
-            if (Comuni_Lst.SelectedIndex == -1 || (!Female_Rdb.Checked && !Male_Rdb.Checked) || string.IsNullOrEmpty(txt_email.Text))
+            if (Comuni_Lst.SelectedIndex == -1 || (!Female_Rdb.Checked && !Male_Rdb.Checked))
             {
                 txt_codicefiscale.Enabled = false;
             }
