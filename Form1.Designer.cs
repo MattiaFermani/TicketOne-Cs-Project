@@ -304,6 +304,10 @@
             this.Login_Btn = new System.Windows.Forms.Button();
             this.Pannello_Pagamento = new System.Windows.Forms.Panel();
             this.Btn_Pagamento = new System.Windows.Forms.Button();
+            this.txt_password = new System.Windows.Forms.TextBox();
+            this.txt_confermapsw = new System.Windows.Forms.TextBox();
+            this.Lbl_ConfermaPsw = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -344,6 +348,7 @@
             this.Group_Gender.SuspendLayout();
             this.Pgn_Login.SuspendLayout();
             this.Pannello_Pagamento.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -3939,6 +3944,7 @@
             // 
             // Pgn_Register
             // 
+            this.Pgn_Register.Controls.Add(this.groupBox2);
             this.Pgn_Register.Controls.Add(this.Group_Gender);
             this.Pgn_Register.Controls.Add(this.txt_codicefiscale);
             this.Pgn_Register.Controls.Add(this.label8);
@@ -4146,6 +4152,46 @@
             this.Btn_Pagamento.Text = "Paga Ora";
             this.Btn_Pagamento.UseVisualStyleBackColor = true;
             // 
+            // txt_password
+            // 
+            this.txt_password.Location = new System.Drawing.Point(6, 19);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
+            this.txt_password.Size = new System.Drawing.Size(253, 20);
+            this.txt_password.TabIndex = 17;
+            this.txt_password.UseSystemPasswordChar = true;
+            // 
+            // txt_confermapsw
+            // 
+            this.txt_confermapsw.Location = new System.Drawing.Point(6, 72);
+            this.txt_confermapsw.Name = "txt_confermapsw";
+            this.txt_confermapsw.PasswordChar = '*';
+            this.txt_confermapsw.Size = new System.Drawing.Size(253, 20);
+            this.txt_confermapsw.TabIndex = 18;
+            this.txt_confermapsw.UseSystemPasswordChar = true;
+            this.txt_confermapsw.TextChanged += new System.EventHandler(this.txt_confermapsw_TextChanged);
+            // 
+            // Lbl_ConfermaPsw
+            // 
+            this.Lbl_ConfermaPsw.AutoSize = true;
+            this.Lbl_ConfermaPsw.Location = new System.Drawing.Point(6, 56);
+            this.Lbl_ConfermaPsw.Name = "Lbl_ConfermaPsw";
+            this.Lbl_ConfermaPsw.Size = new System.Drawing.Size(101, 13);
+            this.Lbl_ConfermaPsw.TabIndex = 20;
+            this.Lbl_ConfermaPsw.Text = "Conferma Password";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txt_password);
+            this.groupBox2.Controls.Add(this.txt_confermapsw);
+            this.groupBox2.Controls.Add(this.Lbl_ConfermaPsw);
+            this.groupBox2.Location = new System.Drawing.Point(634, 246);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(265, 98);
+            this.groupBox2.TabIndex = 21;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Password";
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4210,6 +4256,8 @@
             this.Group_Gender.PerformLayout();
             this.Pgn_Login.ResumeLayout(false);
             this.Pannello_Pagamento.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4491,6 +4539,10 @@
         private System.Windows.Forms.Panel Pannello_Pagamento;
         private System.Windows.Forms.Button Btn_ConfemaPosti;
         private System.Windows.Forms.Button Btn_Pagamento;
+        private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.TextBox txt_confermapsw;
+        private System.Windows.Forms.Label Lbl_ConfermaPsw;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 

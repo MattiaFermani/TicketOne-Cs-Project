@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ClosedXML.Excel;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 
 namespace Biglietti_concerto
 {
@@ -672,12 +673,32 @@ namespace Biglietti_concerto
 
         private void Login_Register(object sender, EventArgs e)
         {
-            //if(Login_Register-0)
-            Login = true;
-            Pannello_Login.Visible = false;
-            Pannello_Login.Enabled = false;
-            Pannello_Posti.Visible = false;
-            Pannello_Principale.Visible = true;
+            if (txt_codicefiscale.BackColor == Color.PaleGreen && txt_confermapsw.BackColor == Color.PaleGreen)
+            {
+                Login = true;
+                Pannello_Login.Visible = false;
+                Pannello_Login.Enabled = false;
+                Pannello_Posti.Visible = false;
+                Pannello_Principale.Visible = true;
+                string filePath = "data.json";
+
+                JObject jsonData = new JObject
+                {
+                    ["Nome"] = txt_nome.Text,
+                    ["Cognome"] = txt_cognome.Text,
+                    ["Data di nascita"] = dtp_nascita.Text,
+                    ["Comune"] = Comuni_Lst.SelectedItem.ToString(),
+                    ["Codice Fiscale"] = txt_codicefiscale.Text,
+                    ["Email"] = txt_email.Text,
+                    ["Password"] = txt_password.Text
+                };
+                File.WriteAllText(filePath, jsonData.ToString());
+                MessageBox.Show("Dati salvati!");
+            }
+            else
+            {
+                MessageBox.Show("Controlla i dati inseriti e riprova");
+            }
         }
 
         private void Tab_Info_Posti_MouseMove(object sender, MouseEventArgs e)
@@ -722,19 +743,36 @@ namespace Biglietti_concerto
             }
             else
             {
-                txt_codicefiscale.BackColor = Color.IndianRed;
+                if(string.IsNullOrEmpty(txt_codicefiscale.Text))
+                    txt_codicefiscale.BackColor = Color.White;
+                else 
+                    txt_codicefiscale.BackColor = Color.IndianRed;
             }
         }
 
         private void Pgn_Register_MouseMove(object sender, MouseEventArgs e)
         {
-            if (Comuni_Lst.SelectedIndex == -1 || (!Female_Rdb.Checked && !Male_Rdb.Checked))
+            if (Comuni_Lst.SelectedIndex == -1 || (!Female_Rdb.Checked && !Male_Rdb.Checked) || string.IsNullOrEmpty(txt_email.Text))
             {
                 txt_codicefiscale.Enabled = false;
             }
             else
             {
                 txt_codicefiscale.Enabled = true;
+            }
+        }
+
+        private void txt_confermapsw_TextChanged(object sender, EventArgs e)
+        {
+            if(txt_password.Text == txt_confermapsw.Text)
+            {
+                txt_confermapsw.BackColor = Color.PaleGreen;
+                Lbl_ConfermaPsw.Text = "Conferma Password";
+            }
+            else
+            {
+                txt_confermapsw.BackColor = Color.IndianRed;
+                Lbl_ConfermaPsw.Text = "Conferma Password - Le Password non Corrispondono";
             }
         }
 
