@@ -12,6 +12,7 @@ using ClosedXML.Excel;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using System.Security.Cryptography;
+using Newtonsoft.Json;
 
 namespace Biglietti_concerto
 {
@@ -28,61 +29,9 @@ namespace Biglietti_concerto
         static string adminFilePath = "admin.dat";
         static string encryptionKey = "abcabc"; // 🔑 Chiave di cifratura (NON salvarla nel codice in produzione!)
 
-        private void CreaAdminPassword(string password)
-        {
-            byte[] encryptedData = EncryptData(password, encryptionKey);
-            File.WriteAllBytes(adminFilePath, encryptedData);
-        }
 
-        private byte[] EncryptData(string text, string key)
-        {
-            using (Aes aes = Aes.Create())
-            {
-                aes.Key = Encoding.UTF8.GetBytes(key.PadRight(32)); // AES usa chiavi da 32 byte
-                aes.IV = new byte[16]; // Inizializziamo IV a 16 byte nulli
+        static readonly string filePath = "accounts.json"; 
 
-                using (var encryptor = aes.CreateEncryptor(aes.Key, aes.IV))
-                using (var ms = new MemoryStream())
-                {
-                    using (var cryptoStream = new CryptoStream(ms, encryptor, CryptoStreamMode.Write))
-                    using (var writer = new StreamWriter(cryptoStream))
-                    {
-                        writer.Write(text);
-                    }
-                    return ms.ToArray();
-                }
-            }
-        }
-        private string LeggiAdminPassword()
-        {
-            if (!File.Exists(adminFilePath))
-            {
-                MessageBox.Show("File admin non trovato.");
-                return null;
-            }
-
-            byte[] encryptedData = File.ReadAllBytes(adminFilePath);
-            return DecryptData(encryptedData, encryptionKey);
-        }
-
-        private string DecryptData(byte[] data, string key)
-        {
-            using (Aes aes = Aes.Create())
-            {
-                aes.Key = Encoding.UTF8.GetBytes(key.PadRight(32));
-                aes.IV = new byte[16];
-
-                using (var decryptor = aes.CreateDecryptor(aes.Key, aes.IV))
-                using (var ms = new MemoryStream(data))
-                using (var cryptoStream = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
-                using (var reader = new StreamReader(cryptoStream))
-                {
-                    return reader.ReadToEnd();
-                }
-            }
-        }
-
-        static readonly string filePath = "accounts.json";
 
         static Random rand = new Random();
         static List<string> Comuni = new List<string>();
@@ -483,6 +432,8 @@ namespace Biglietti_concerto
             ("AC/DC - Powerup Tour", "AC/DC", "Annunciata una data estiva del POWER UP Tour. Scopri i dettagli!", Eventi),
         };
 
+        Dictionary<string, Dictionary<(string,string), Panel>> Posti = new Dictionary<string, Dictionary<(string, string), Panel>>();
+
         private void ComuniITA()
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\Resources", "T4_codicicatastali_comuni_20_01_2020.xlsx");
@@ -583,6 +534,23 @@ namespace Biglietti_concerto
             InitializeComponent();
             CreaAdminPassword("Cisco123");
             ComuniITA();
+            CreaPosti();
+        }
+
+        private void CreaPosti()
+        {
+            foreach (var spettacolo in Spettacoli)
+            {
+                Dictionary<(string, string), Panel> posti = new Dictionary<(string, string), Panel>();
+                int i = 0;
+                foreach (var luogo in spettacolo.Dizionario[spettacolo.Titolo].luoghi)
+                {
+                    Panel p = Panel_Seats;
+                    posti.Add((luogo, spettacolo.Dizionario[spettacolo.Titolo].date[i]), p);
+                    i++;
+                }
+                Posti.Add(spettacolo.Titolo, posti);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -599,6 +567,58 @@ namespace Biglietti_concerto
             Pannello_Acc_User.Visible = false;
         }
 
+
+        private void CreaAdminPassword(string password)
+        {
+            byte[] encryptedData = EncryptData(password, encryptionKey);
+            File.WriteAllBytes(adminFilePath, encryptedData);
+        }
+        private byte[] EncryptData(string text, string key)
+        {
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(key.PadRight(32)); // AES usa chiavi da 32 byte
+                aes.IV = new byte[16]; // Inizializziamo IV a 16 byte nulli
+
+                using (var encryptor = aes.CreateEncryptor(aes.Key, aes.IV))
+                using (var ms = new MemoryStream())
+                {
+                    using (var cryptoStream = new CryptoStream(ms, encryptor, CryptoStreamMode.Write))
+                    using (var writer = new StreamWriter(cryptoStream))
+                    {
+                        writer.Write(text);
+                    }
+                    return ms.ToArray();
+                }
+            }
+        }
+        private string LeggiAdminPassword()
+        {
+            if (!File.Exists(adminFilePath))
+            {
+                MessageBox.Show("File admin non trovato.");
+                return null;
+            }
+
+            byte[] encryptedData = File.ReadAllBytes(adminFilePath);
+            return DecryptData(encryptedData, encryptionKey);
+        }
+        private string DecryptData(byte[] data, string key)
+        {
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(key.PadRight(32));
+                aes.IV = new byte[16];
+
+                using (var decryptor = aes.CreateDecryptor(aes.Key, aes.IV))
+                using (var ms = new MemoryStream(data))
+                using (var cryptoStream = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
+                using (var reader = new StreamReader(cryptoStream))
+                {
+                    return reader.ReadToEnd();
+                }
+            }
+        }
 
         private void Spettacolo_Click(object sender, EventArgs e)
         {
@@ -634,7 +654,6 @@ namespace Biglietti_concerto
             Img_Info.Image = pb.Image;
             Img_Info.SizeMode = PictureBoxSizeMode.Zoom;
         }
-
 
         int PostiSelezionati;
         int posti;
@@ -725,8 +744,6 @@ namespace Biglietti_concerto
                 }
             }
         }
-
-
         private void TickeTlon_Click(object sender, EventArgs e)
         {
             Pannello_Principale.Visible = true;
@@ -739,14 +756,12 @@ namespace Biglietti_concerto
         private void Data_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
             Luogo_Lst.SelectedIndex = Data_Lst.SelectedIndex;
+            Panel_Seats = Posti[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString())];
         }
         private void Luogo_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
             Data_Lst.SelectedIndex = Luogo_Lst.SelectedIndex;
         }
-
-
-
 
         bool Login = false;
         private void Account_Click(object sender, EventArgs e)
@@ -777,7 +792,6 @@ namespace Biglietti_concerto
                 return BitConverter.ToString(bytes).Replace("-", "").ToLower();
             }
         }
-
         private void Btn_Register(object sender, EventArgs e)
         {
             
@@ -1046,6 +1060,8 @@ namespace Biglietti_concerto
                 return false;
             }
         }
+
+
 
     }
 }
