@@ -443,15 +443,14 @@ namespace Biglietti_concerto
 
         private string CalcCodiceFiscale(string nome, string cognome, string dataNascita, string sesso, string comune)
         {
-            // Estrai consonanti e vocali dal COGNOME
             string cf = "";
             string consonanti = "", vocali = "";
             foreach (char c in cognome)
                 if ("AEIOU".Contains(c)) vocali += c;
                 else consonanti += c;
-            cf += (consonanti + vocali + "XXX").Substring(0, 3);
+            cf += (consonanti.Length >= 4) ? $"{consonanti[0]}{consonanti[2]}{consonanti[3]}" :
+                  (consonanti + vocali + "XXX").Substring(0, 3);
 
-            // Estrai consonanti e vocali dal NOME
             consonanti = "";
             vocali = "";
             foreach (char c in nome)
@@ -460,7 +459,6 @@ namespace Biglietti_concerto
             cf += (consonanti.Length >= 4) ? $"{consonanti[0]}{consonanti[2]}{consonanti[3]}" :
                   (consonanti + vocali + "XXX").Substring(0, 3);
 
-            // Converti la DATA DI NASCITA
             DateTime dt = DateTime.Parse(dataNascita);
             string anno = dt.Year.ToString().Substring(2, 2);
             string mesi = "ABCDEHLMPRST";
@@ -492,9 +490,9 @@ namespace Biglietti_concerto
             {
                 char c = cf[i];
                 if (i % 2 == 0)
-                    somma += Dispari[c];
-                else
                     somma += Pari[c];
+                else
+                    somma += Dispari[c];
             }
 
             cf += (char)('A' + (somma % 26));
@@ -711,14 +709,16 @@ namespace Biglietti_concerto
             }
             string comune = Comuni_Lst.SelectedItem.ToString();
 
-            if(string.Equals(txt_codicefiscale.Text, CalcCodiceFiscale(nome, cognome, dataNascita, sesso, comune), StringComparison.OrdinalIgnoreCase))
-            {
-                txt_codicefiscale.BackColor = Color.Green;
-            }
-            else
-            {
-                txt_codicefiscale.BackColor = Color.Red;
-            }
+            txt_codicefiscale.Text = CalcCodiceFiscale(nome, cognome, dataNascita, sesso, comune);
+
+            //if(string.Equals(txt_codicefiscale.Text, CalcCodiceFiscale(nome, cognome, dataNascita, sesso, comune), StringComparison.OrdinalIgnoreCase))
+            //{
+            //    txt_codicefiscale.BackColor = Color.Green;
+            //}
+            //else
+            //{
+            //    txt_codicefiscale.BackColor = Color.Red;
+            //}
         }
 
 
