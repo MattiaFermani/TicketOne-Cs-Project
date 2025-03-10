@@ -20,40 +20,325 @@ namespace Biglietti_concerto
         static List<string> CodiciBelfiore = new List<string>();
         readonly static List<string> Luoghi = new List<string>
         {
-            "Firenze - Teatro Verdi",
+            "Milano - Stadio San Siro",
             "Roma - Stadio Olimpico",
-            "Roma - Auditorium Parco della Musica",
-            "Torino - Teatro Regio",
-            "Verona - Arena di Verona",
-            "Milano - Teatro La Scala",
-            "Milano - Blue Note",
             "Torino - Pala Alpitour",
-            "Roma - Palazzetto dello Sport",
-            "Napoli - Teatro Centrale",
             "Firenze - Stadio Artemio Franchi",
-            "Roma - Ippodromo delle Capannelle",
-            "Milano - Mediolanum Forum",
+            "Napoli - Stadio Diego Armando Maradona",
             "Bologna - Unipol Arena",
-            "Milano - Alcatraz",
-            "Roma - Atlantico",
-            "Bologna - Estragon Club",
-            "Napoli - Palapartenope",
-            "Roma - Circo Massimo",
-            "Milano - Ippodromo Snai",
-            "Roma - Auditorium della Musica",
-            "Firenze - Palazzo dei Congressi",
-            "Palermo - Teatro Massimo",
-            "Roma - Villa Ada",
-            "Milano - Fabrique",
-            "Genova - Politeama Genovese",
-            "Milano - Teatro Manzoni",
-            "Milano - Teatro Elfo Puccini",
-            "Milano - Auditorium San Fedele",
-            "Torino - Teatro Gobetti",
+            "Verona - Arena di Verona",
+            "Genova - Stadio Luigi Ferraris",
+            "Palermo - Stadio Renzo Barbera",
             "Bari - Stadio San Nicola",
-            "Milano - Teatro degli Arcimboldi",
-            "Roma - Palazzo dello Sport",
-            "Milano - Stadio San Siro"
+            "Venezia - Teatro La Fenice",
+            "Parma - Teatro Regio",
+            "Trieste - Teatro Lirico Giuseppe Verdi",
+            "Catania - Teatro Massimo Bellini",
+            "Lucca - Piazza Napoleone",
+            "Perugia - PalaEvangelisti",
+            "Cagliari - Sardegna Arena",
+            "Padova - Gran Teatro Geox",
+            "Brescia - PalaGeorge",
+            "Livorno - Stadio Armando Picchi",
+            "Pisa - Verdi Theater",
+            "Reggio Emilia - RCF Arena",
+            "Rimini - 105 Stadium",
+            "Ancona - Mole Vanvitelliana",
+            "L'Aquila - Stadio Tommaso Fattori",
+            "Udine - Dacia Arena",
+            "Salerno - Stadio Arechi",
+            "Taranto - Stadio Erasmo Iacovone",
+            "Foggia - Stadio Pino Zaccheria",
+            "Latina - Stadio Domenico Francioni",
+            "Pescara - Stadio Adriatico",
+            "Ascoli Piceno - Stadio Cino e Lillo Del Duca",
+            "Terni - Stadio Libero Liberati",
+            "Vicenza - Stadio Romeo Menti",
+            "Treviso - Stadio Omobono Tenni",
+            "Como - Stadio Giuseppe Sinigaglia",
+            "Lecco - Stadio Rigamonti-Ceppi",
+            "Bergamo - Gewiss Stadium",
+            "Cremona - Stadio Giovanni Zini",
+            "Mantova - Stadio Danilo Martelli",
+            "Alessandria - Stadio Giuseppe Moccagatta",
+            "Vercelli - Stadio Silvio Piola",
+            "Novara - Stadio Silvio Piola",
+            "Biella - Stadio Lamarmora",
+            "Aosta - Stadio Mario Puchoz",
+            "Cuneo - Stadio Fratelli Paschiero",
+            "Savona - Stadio Valerio Bacigalupo",
+            "La Spezia - Stadio Alberto Picco",
+            "Piacenza - Stadio Leonardo Garilli",
+            "Pavia - Stadio Pietro Fortunati",
+            "Sondrio - Stadio Moretti Orobici",
+            "Varese - Stadio Franco Ossola",
+            "Monza - Stadio Brianteo",
+            "Lodi - Stadio Dossenina",
+            "Cremona - Stadio Giovanni Zini",
+            "Siena - Stadio Artemio Franchi",
+            "Arezzo - Stadio Città di Arezzo",
+            "Grosseto - Stadio Carlo Zecchini",
+            "Prato - Stadio Lungobisenzio",
+            "Pistoia - Stadio Marcello Melani",
+            "Lucca - Stadio Porta Elisa",
+            "Massa - Stadio degli Oliveti",
+            "Carrara - Stadio dei Marmi",
+            "Livorno - Stadio Armando Picchi",
+            "Pisa - Arena Garibaldi",
+            "Ferrara - Stadio Paolo Mazza",
+            "Ravenna - Stadio Bruno Benelli",
+            "Forlì - Stadio Tullo Morgagni",
+            "Cesena - Stadio Dino Manuzzi",
+            "Rimini - Stadio Romeo Neri",
+            "San Marino - Stadio Olimpico",
+            "Pesaro - Stadio Tonino Benelli",
+            "Ancona - Stadio Del Conero",
+            "Macerata - Stadio Helvia Recina",
+            "Ascoli Piceno - Stadio Cino e Lillo Del Duca",
+            "Teramo - Stadio Gaetano Bonolis",
+            "Pescara - Stadio Adriatico",
+            "Chieti - Stadio Guido Angelini",
+            "L'Aquila - Stadio Tommaso Fattori",
+            "Rieti - Stadio Centro d'Italia",
+            "Viterbo - Stadio Enrico Rocchi",
+            "Frosinone - Stadio Benito Stirpe",
+            "Latina - Stadio Domenico Francioni",
+            "Caserta - Stadio Alberto Pinto",
+            "Benevento - Stadio Ciro Vigorito",
+            "Avellino - Stadio Partenio",
+            "Salerno - Stadio Arechi",
+            "Napoli - Stadio San Paolo",
+            "Torre del Greco - Stadio Amerigo Liguori",
+            "Castellammare di Stabia - Stadio Romeo Menti",
+            "Nocera Inferiore - Stadio San Francesco d'Assisi",
+            "Cava de' Tirreni - Stadio Simonetta Lamberti",
+            "Agropoli - Stadio Raffaele Guariglia",
+            "Battipaglia - Stadio Luigi Pastena",
+            "Eboli - Stadio José Guimarães Dirceu",
+            "Altamura - Stadio Tonino D'Angelo",
+            "Andria - Stadio degli Ulivi",
+            "Barletta - Stadio Cosimo Puttilli",
+            "Bisceglie - Stadio Gustavo Ventura",
+            "Canosa di Puglia - Stadio San Sabino",
+            "Cerignola - Stadio Domenico Monterisi",
+            "Foggia - Stadio Pino Zaccheria",
+            "Lucera - Stadio Giuseppe Capozza",
+            "Manfredonia - Stadio Miramare",
+            "San Severo - Stadio Ricciardelli",
+            "Trani - Stadio Comunale",
+            "Brindisi - Stadio Franco Fanuzzi",
+            "Francavilla Fontana - Stadio Giovanni Paolo II",
+            "Lecce - Stadio Via del Mare",
+            "Gallipoli - Stadio Antonio Bianco",
+            "Manduria - Stadio Nino Dimitri",
+            "Martina Franca - Stadio Giuseppe Domenico Tursi",
+            "Mesagne - Stadio Gianni De Luca",
+            "Monopoli - Stadio Vito Simone Veneziani",
+            "Ostuni - Stadio Comunale",
+            "San Vito dei Normanni - Stadio Comunale",
+            "Taranto - Stadio Erasmo Iacovone",
+            "Crotone - Stadio Ezio Scida",
+            "Lamezia Terme - Stadio Guido D'Ippolito",
+            "Reggio Calabria - Stadio Oreste Granillo",
+            "Vibo Valentia - Stadio Luigi Razza",
+            "Catanzaro - Stadio Nicola Ceravolo",
+            "Cosenza - Stadio San Vito",
+            "Rende - Stadio Marco Lorenzon",
+            "Castrovillari - Stadio Mimmo Rende",
+            "Corigliano Calabro - Stadio Comunale",
+            "Rossano - Stadio Stefano Rizzo",
+            "Soverato - Stadio Comunale",
+            "Tropea - Stadio Comunale",
+            "Villafranca Tirrena - Stadio Comunale",
+            "Acireale - Stadio Tupparello",
+            "Caltagirone - Stadio Comunale",
+            "Catania - Stadio Angelo Massimino",
+            "Gela - Stadio Vincenzo Presti",
+            "Messina - Stadio San Filippo",
+            "Milazzo - Stadio Grotta Polifemo",
+            "Patti - Stadio Comunale",
+            "Ragusa - Stadio Aldo Campo",
+            "Siracusa - Stadio Nicola De Simone",
+            "Taormina - Stadio Comunale",
+            "Trapani - Stadio Polisportivo Provinciale",
+            "Agrigento - Stadio Esseneto",
+            "Caltanissetta - Stadio Marco Tomaselli",
+            "Enna - Stadio Generale Gaeta",
+            "Marsala - Stadio Antonino Lombardo Angotta",
+            "Mazara del Vallo - Stadio Nino Vaccara",
+            "Palermo - Stadio Renzo Barbera",
+            "Termini Imerese - Stadio Comunale",
+            "Bagheria - Stadio Comunale",
+            "Partinico - Stadio Comunale",
+            "Sciacca - Stadio Luigi Riccardo Gurrera",
+            "Trapani - Stadio Polisportivo Provinciale",
+            "Alghero - Stadio Mariotti",
+            "Cagliari - Stadio Sant'Elia",
+            "Carbonia - Stadio Comunale",
+            "Iglesias - Stadio Comunale",
+            "Nuoro - Stadio Franco Frogheri",
+            "Olbia - Stadio Bruno Nespoli",
+            "Oristano - Stadio Tharros",
+            "Sassari - Stadio Vanni Sanna",
+            "Tempio Pausania - Stadio Nino Manus",
+            "Tortolì - Stadio Fra Locci",
+            "Lanusei - Stadio Comunale",
+            "Aosta - Stadio Mario Puchoz",
+            "Ivrea - Stadio Gino Pistoni",
+            "Biella - Stadio Lamarmora",
+            "Verbania - Stadio Carlo Pedroli",
+            "Domodossola - Stadio Comunale",
+            "Novara - Stadio Silvio Piola",
+            "Vercelli - Stadio Silvio Piola",
+            "Alessandria - Stadio Giuseppe Moccagatta",
+            "Casale Monferrato - Stadio Natale Palli",
+            "Tortona - Stadio Fausto Coppi",
+            "Acqui Terme - Stadio Jona Ottolenghi",
+            "Ovada - Stadio Comunale",
+            "Savona - Stadio Valerio Bacigalupo",
+            "Albenga - Stadio Annibale Riva",
+            "Finale Ligure - Stadio Comunale",
+            "Imperia - Stadio Nino Ciccione",
+            "Sanremo - Stadio Comunale",
+            "Ventimiglia - Stadio Simone Rizzato",
+            "Cuneo - Stadio Fratelli Paschiero",
+            "Alba - Stadio Comunale",
+            "Bra - Stadio Attilio Bravi",
+            "Fossano - Stadio Angelo Pochissimo",
+            "Savigliano - Stadio Comunale",
+            "Saluzzo - Stadio Amedeo Damiano",
+            "Pinerolo - Stadio Luigi Barbieri",
+            "Torino - Stadio Olimpico Grande Torino",
+            "Chivasso - Stadio Comunale",
+            "Ivrea - Stadio Gino Pistoni",
+            "Biella - Stadio Lamarmora",
+            "Verbania - Stadio Carlo Pedroli",
+            "Domodossola - Stadio Comunale",
+            "Novara - Stadio Silvio Piola",
+            "Vercelli - Stadio Silvio Piola",
+            "Alessandria - Stadio Giuseppe Moccagatta",
+            "Casale Monferrato - Stadio Natale Palli",
+            "Tortona - Stadio Fausto Coppi",
+            "Acqui Terme - Stadio Jona Ottolenghi",
+            "Ovada - Stadio Comunale",
+            "Savona - Stadio Valerio Bacigalupo",
+            "Albenga - Stadio Annibale Riva",
+            "Finale Ligure - Stadio Comunale",
+            "Imperia - Stadio Nino Ciccione",
+            "Sanremo - Stadio Comunale",
+            "Ventimiglia - Stadio Simone Rizzato",
+            "Cuneo - Stadio Fratelli Paschiero",
+            "Alba - Stadio Comunale",
+            "Bra - Stadio Attilio Bravi",
+            "Fossano - Stadio Angelo Pochissimo",
+            "Savigliano - Stadio Comunale",
+            "Saluzzo - Stadio Amedeo Damiano",
+            "Pinerolo - Stadio Luigi Barbieri",
+            "Torino - Stadio Olimpico Grande Torino",
+            "Chivasso - Stadio Comunale",
+            "Ivrea - Stadio Gino Pistoni",
+            "Biella - Stadio Lamarmora",
+            "Verbania - Stadio Carlo Pedroli",
+            "Domodossola - Stadio Comunale",
+            "Novara - Stadio Silvio Piola",
+            "Vercelli - Stadio Silvio Piola",
+            "Alessandria - Stadio Giuseppe Moccagatta",
+            "Casale Monferrato - Stadio Natale Palli",
+            "Tortona - Stadio Fausto Coppi",
+            "Acqui Terme - Stadio Jona Ottolenghi",
+            "Ovada - Stadio Comunale",
+            "Savona - Stadio Valerio Bacigalupo",
+            "Albenga - Stadio Annibale Riva",
+            "Finale Ligure - Stadio Comunale",
+            "Imperia - Stadio Nino Ciccione",
+            "Sanremo - Stadio Comunale",
+            "Ventimiglia - Stadio Simone Rizzato",
+            "Cuneo - Stadio Fratelli Paschiero",
+            "Alba - Stadio Comunale",
+            "Bra - Stadio Attilio Bravi",
+            "Fossano - Stadio Angelo Pochissimo",
+            "Savigliano - Stadio Comunale",
+            "Saluzzo - Stadio Amedeo Damiano",
+            "Pinerolo - Stadio Luigi Barbieri",
+            "Torino - Stadio Olimpico Grande Torino",
+            "Chivasso - Stadio Comunale",
+            "Ivrea - Stadio Gino Pistoni",
+            "Biella - Stadio Lamarmora",
+            "Verbania - Stadio Carlo Pedroli",
+            "Domodossola - Stadio Comunale",
+            "Novara - Stadio Silvio Piola",
+            "Vercelli - Stadio Silvio Piola",
+            "Alessandria - Stadio Giuseppe Moccagatta",
+            "Casale Monferrato - Stadio Natale Palli",
+            "Tortona - Stadio Fausto Coppi",
+            "Acqui Terme - Stadio Jona Ottolenghi",
+            "Ovada - Stadio Comunale",
+            "Savona - Stadio Valerio Bacigalupo",
+            "Albenga - Stadio Annibale Riva",
+            "Finale Ligure - Stadio Comunale",
+            "Imperia - Stadio Nino Ciccione",
+            "Sanremo - Stadio Comunale",
+            "Ventimiglia - Stadio Simone Rizzato",
+            "Cuneo - Stadio Fratelli Paschiero",
+            "Alba - Stadio Comunale",
+            "Bra - Stadio Attilio Bravi",
+            "Fossano - Stadio Angelo Pochissimo",
+            "Savigliano - Stadio Comunale",
+            "Saluzzo - Stadio Amedeo Damiano",
+            "Pinerolo - Stadio Luigi Barbieri",
+            "Torino - Stadio Olimpico Grande Torino",
+            "Chivasso - Stadio Comunale",
+            "Ivrea - Stadio Gino Pistoni",
+            "Biella - Stadio Lamarmora",
+            "Verbania - Stadio Carlo Pedroli",
+            "Domodossola - Stadio Comunale",
+            "Novara - Stadio Silvio Piola",
+            "Vercelli - Stadio Silvio Piola",
+            "Alessandria - Stadio Giuseppe Moccagatta",
+            "Casale Monferrato - Stadio Natale Palli",
+            "Tortona - Stadio Fausto Coppi",
+            "Acqui Terme - Stadio Jona Ottolenghi",
+            "Ovada - Stadio Comunale",
+            "Savona - Stadio Valerio Bacigalupo",
+            "Albenga - Stadio Annibale Riva",
+            "Finale Ligure - Stadio Comunale",
+            "Imperia - Stadio Nino Ciccione",
+            "Sanremo - Stadio Comunale",
+            "Ventimiglia - Stadio Simone Rizzato",
+            "Cuneo - Stadio Fratelli Paschiero",
+            "Alba - Stadio Comunale",
+            "Bra - Stadio Attilio Bravi",
+            "Fossano - Stadio Angelo Pochissimo",
+            "Savigliano - Stadio Comunale",
+            "Saluzzo - Stadio Amedeo Damiano",
+            "Pinerolo - Stadio Luigi Barbieri",
+            "Torino - Stadio Olimpico Grande Torino",
+            "Chivasso - Stadio Comunale",
+            "Ivrea - Stadio Gino Pistoni",
+            "Biella - Stadio Lamarmora",
+            "Verbania - Stadio Carlo Pedroli",
+            "Domodossola - Stadio Comunale",
+            "Novara - Stadio Silvio Piola",
+            "Vercelli - Stadio Silvio Piola",
+            "Alessandria - Stadio Giuseppe Moccagatta",
+            "Casale Monferrato - Stadio Natale Palli",
+            "Tortona - Stadio Fausto Coppi",
+            "Acqui Terme - Stadio Jona Ottolenghi",
+            "Ovada - Stadio Comunale",
+            "Savona - Stadio Valerio Bacigalupo",
+            "Albenga - Stadio Annibale Riva",
+            "Finale Ligure - Stadio Comunale",
+            "Imperia - Stadio Nino Ciccione",
+            "Sanremo - Stadio Comunale",
+            "Ventimiglia - Stadio Simone Rizzato",
+            "Cuneo - Stadio Fratelli Paschiero",
+            "Alba - Stadio Comunale",
+            "Bra - Stadio Attilio Bravi",
+            "Fossano - Stadio Angelo Pochissimo",
+            "Savigliano - Stadio Comunale",
+            "Saluzzo - Stadio Amedeo Damiano",
+            "Pinerolo - Stadio Luigi Barbieri",
+            "Pinerolo - Stadio Luigi Barbieri",
         };
 
         static List<string> Date_Luoghi_Random(int cosa, Random rand)
@@ -146,7 +431,7 @@ namespace Biglietti_concerto
                         Comuni.Add(comune);
                         CodiciBelfiore.Add(codiceBelfiore);
 
-                        Comuni_Lst.Items.Add($"{comune} - {codiceBelfiore} ");
+                        Comuni_Lst.Items.Add($"{comune}");
                     }
                 }
             }
@@ -154,6 +439,68 @@ namespace Biglietti_concerto
             {
                 MessageBox.Show("Il file Excel non esiste!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private string CalcCodiceFiscale(string nome, string cognome, string dataNascita, string sesso, string comune)
+        {
+            // Estrai consonanti e vocali dal COGNOME
+            string cf = "";
+            string consonanti = "", vocali = "";
+            foreach (char c in cognome)
+                if ("AEIOU".Contains(c)) vocali += c;
+                else consonanti += c;
+            cf += (consonanti + vocali + "XXX").Substring(0, 3);
+
+            // Estrai consonanti e vocali dal NOME
+            consonanti = "";
+            vocali = "";
+            foreach (char c in nome)
+                if ("AEIOU".Contains(c)) vocali += c;
+                else consonanti += c;
+            cf += (consonanti.Length >= 4) ? $"{consonanti[0]}{consonanti[2]}{consonanti[3]}" :
+                  (consonanti + vocali + "XXX").Substring(0, 3);
+
+            // Converti la DATA DI NASCITA
+            DateTime dt = DateTime.Parse(dataNascita);
+            string anno = dt.Year.ToString().Substring(2, 2);
+            string mesi = "ABCDEHLMPRST";
+            string mese = mesi[dt.Month - 1].ToString();
+            int giorno = dt.Day + (sesso == "F" ? 40 : 0);
+            cf += anno + mese + giorno.ToString("D2");
+
+            // CODICE BELFIORE
+            cf += Comuni.Contains(comune) ? CodiciBelfiore[Comuni_Lst.SelectedIndex] : "Z999";
+
+            Dictionary<char, int> Pari = new Dictionary<char, int>
+            {
+                {'0', 0}, {'1', 1}, {'2', 2}, {'3', 3}, {'4', 4}, {'5', 5}, {'6', 6}, {'7', 7}, {'8', 8}, {'9', 9},
+                {'A', 0}, {'B', 1}, {'C', 2}, {'D', 3}, {'E', 4}, {'F', 5}, {'G', 6}, {'H', 7}, {'I', 8}, {'J', 9},
+                {'K', 10}, {'L', 11}, {'M', 12}, {'N', 13}, {'O', 14}, {'P', 15}, {'Q', 16}, {'R', 17}, {'S', 18}, {'T', 19},
+                {'U', 20}, {'V', 21}, {'W', 22}, {'X', 23}, {'Y', 24}, {'Z', 25}
+            };
+
+            Dictionary<char, int> Dispari = new Dictionary<char, int>
+            {
+                {'0', 1}, {'1', 0}, {'2', 5}, {'3', 7}, {'4', 9}, {'5', 13}, {'6', 15}, {'7', 17}, {'8', 19}, {'9', 21},
+                {'A', 1}, {'B', 0}, {'C', 5}, {'D', 7}, {'E', 9}, {'F', 13}, {'G', 15}, {'H', 17}, {'I', 19}, {'J', 21},
+                {'K', 1}, {'L', 0}, {'M', 5}, {'N', 7}, {'O', 9}, {'P', 13}, {'Q', 15}, {'R', 17}, {'S', 19}, {'T', 21},
+                {'U', 1}, {'V', 0}, {'W', 5}, {'X', 7}, {'Y', 9}, {'Z', 13}
+            };
+            cf = cf.ToUpper();
+            int somma = 0;
+            for (int i = 0; i < 15; i++)
+            {
+                char c = cf[i];
+                if (i % 2 == 0)
+                    somma += Dispari[c];
+                else
+                    somma += Pari[c];
+            }
+
+            cf += (char)('A' + (somma % 26));
+            cf = cf.ToLower();
+
+            return cf;
         }
 
         public Form1()
@@ -354,6 +701,32 @@ namespace Biglietti_concerto
         private void FormClose_Click(object sender, EventArgs e)
         {
             Form1.ActiveForm.Close();
+        }
+
+        private void txt_codicefiscale_TextChanged(object sender, EventArgs e)
+        {
+            string nome = txt_nome.Text;
+            string cognome = txt_cognome.Text;
+            string dataNascita = dtp_nascita.Text;
+            string sesso = "";
+            if (Female_Rdb.Checked)
+            {
+                sesso = "F";
+            }
+            else if(Male_Rdb.Checked)
+            {
+                sesso = "M";
+            }
+            string comune = Comuni_Lst.SelectedItem.ToString();
+
+            if(string.Equals(txt_codicefiscale.Text, CalcCodiceFiscale(nome, cognome, dataNascita, sesso, comune), StringComparison.OrdinalIgnoreCase))
+            {
+                txt_codicefiscale.BackColor = Color.Green;
+            }
+            else
+            {
+                txt_codicefiscale.BackColor = Color.Red;
+            }
         }
 
 
