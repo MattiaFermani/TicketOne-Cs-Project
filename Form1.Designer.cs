@@ -67,7 +67,7 @@
             this.Artista_Lbl = new System.Windows.Forms.Label();
             this.TitoloSpettacolo_Lbl = new System.Windows.Forms.Label();
             this.Pgn_SelezionePosti = new System.Windows.Forms.TabPage();
-            this.Info_Error = new System.Windows.Forms.Label();
+            this.Btn_ConfemaPosti = new System.Windows.Forms.Button();
             this.PratoPostiNum_Lbl = new System.Windows.Forms.Label();
             this.PratoPiu = new System.Windows.Forms.Button();
             this.PratoMeno = new System.Windows.Forms.Button();
@@ -302,6 +302,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Pgn_Login = new System.Windows.Forms.TabPage();
             this.Login_Btn = new System.Windows.Forms.Button();
+            this.Pannello_Pagamento = new System.Windows.Forms.Panel();
+            this.Btn_Pagamento = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -341,6 +343,7 @@
             this.Pgn_Register.SuspendLayout();
             this.Group_Gender.SuspendLayout();
             this.Pgn_Login.SuspendLayout();
+            this.Pannello_Pagamento.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -540,9 +543,9 @@
             this.Pannello_Principale.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Principale.Controls.Add(this.Pannello_InEvidenza);
             this.Pannello_Principale.Controls.Add(this.panel2);
-            this.Pannello_Principale.Location = new System.Drawing.Point(1169, 509);
+            this.Pannello_Principale.Location = new System.Drawing.Point(1284, 66);
             this.Pannello_Principale.Name = "Pannello_Principale";
-            this.Pannello_Principale.Size = new System.Drawing.Size(653, 455);
+            this.Pannello_Principale.Size = new System.Drawing.Size(330, 455);
             this.Pannello_Principale.TabIndex = 11;
             // 
             // Pannello_InEvidenza
@@ -618,11 +621,12 @@
             // 
             // Pannello_Posti
             // 
+            this.Pannello_Posti.AutoScroll = true;
             this.Pannello_Posti.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Posti.Controls.Add(this.Tab_Info_Posti);
-            this.Pannello_Posti.Location = new System.Drawing.Point(3, 509);
+            this.Pannello_Posti.Location = new System.Drawing.Point(1168, 66);
             this.Pannello_Posti.Name = "Pannello_Posti";
-            this.Pannello_Posti.Size = new System.Drawing.Size(1151, 434);
+            this.Pannello_Posti.Size = new System.Drawing.Size(100, 465);
             this.Pannello_Posti.TabIndex = 12;
             this.Pannello_Posti.Visible = false;
             this.Pannello_Posti.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pannello_Posti_MouseMove);
@@ -632,16 +636,17 @@
             this.Tab_Info_Posti.Controls.Add(this.Pgn_Informazioni);
             this.Tab_Info_Posti.Controls.Add(this.Pgn_SelezionePosti);
             this.Tab_Info_Posti.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tab_Info_Posti.Enabled = false;
             this.Tab_Info_Posti.HotTrack = true;
             this.Tab_Info_Posti.Location = new System.Drawing.Point(0, 0);
             this.Tab_Info_Posti.Name = "Tab_Info_Posti";
             this.Tab_Info_Posti.SelectedIndex = 0;
-            this.Tab_Info_Posti.Size = new System.Drawing.Size(1151, 434);
+            this.Tab_Info_Posti.Size = new System.Drawing.Size(100, 465);
             this.Tab_Info_Posti.TabIndex = 0;
-            this.Tab_Info_Posti.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Tab_Info_Posti_MouseMove);
             // 
             // Pgn_Informazioni
             // 
+            this.Pgn_Informazioni.AutoScroll = true;
             this.Pgn_Informazioni.BackColor = System.Drawing.Color.Transparent;
             this.Pgn_Informazioni.Controls.Add(this.groupBox1);
             this.Pgn_Informazioni.Controls.Add(this.Img_Info);
@@ -649,7 +654,7 @@
             this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(1143, 408);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(92, 439);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -763,7 +768,7 @@
             // 
             // Pgn_SelezionePosti
             // 
-            this.Pgn_SelezionePosti.Controls.Add(this.Info_Error);
+            this.Pgn_SelezionePosti.Controls.Add(this.Btn_ConfemaPosti);
             this.Pgn_SelezionePosti.Controls.Add(this.PratoPostiNum_Lbl);
             this.Pgn_SelezionePosti.Controls.Add(this.PratoPiu);
             this.Pgn_SelezionePosti.Controls.Add(this.PratoMeno);
@@ -778,22 +783,21 @@
             this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1143, 408);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(92, 439);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
             this.Pgn_SelezionePosti.UseVisualStyleBackColor = true;
             // 
-            // Info_Error
+            // Btn_ConfemaPosti
             // 
-            this.Info_Error.Font = new System.Drawing.Font("Forte", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Info_Error.ForeColor = System.Drawing.Color.Red;
-            this.Info_Error.Location = new System.Drawing.Point(-7, -16);
-            this.Info_Error.Name = "Info_Error";
-            this.Info_Error.Size = new System.Drawing.Size(1154, 428);
-            this.Info_Error.TabIndex = 39;
-            this.Info_Error.Text = "Devi prima fare il login/registrazione";
-            this.Info_Error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Btn_ConfemaPosti.Location = new System.Drawing.Point(921, 371);
+            this.Btn_ConfemaPosti.Name = "Btn_ConfemaPosti";
+            this.Btn_ConfemaPosti.Size = new System.Drawing.Size(174, 34);
+            this.Btn_ConfemaPosti.TabIndex = 43;
+            this.Btn_ConfemaPosti.Text = "Conferma Posti";
+            this.Btn_ConfemaPosti.UseVisualStyleBackColor = true;
+            this.Btn_ConfemaPosti.Click += new System.EventHandler(this.Btn_ConfemaPosti_Click);
             // 
             // PratoPostiNum_Lbl
             // 
@@ -900,7 +904,7 @@
             this.button108.Name = "button108";
             this.button108.Size = new System.Drawing.Size(30, 23);
             this.button108.TabIndex = 35;
-            this.button108.Tag = "Normal";
+            this.button108.Tag = "0Normal";
             this.button108.Text = "B4";
             this.Info_Posto.SetToolTip(this.button108, "Settore D\r\nPosto B4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button108.UseVisualStyleBackColor = false;
@@ -914,7 +918,7 @@
             this.button109.Name = "button109";
             this.button109.Size = new System.Drawing.Size(30, 23);
             this.button109.TabIndex = 34;
-            this.button109.Tag = "Normal";
+            this.button109.Tag = "0Normal";
             this.button109.Text = "B3";
             this.Info_Posto.SetToolTip(this.button109, "Settore D\r\nPosto B3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button109.UseVisualStyleBackColor = false;
@@ -928,7 +932,7 @@
             this.button110.Name = "button110";
             this.button110.Size = new System.Drawing.Size(30, 23);
             this.button110.TabIndex = 33;
-            this.button110.Tag = "Normal";
+            this.button110.Tag = "0Normal";
             this.button110.Text = "B2";
             this.Info_Posto.SetToolTip(this.button110, "Settore D\r\nPosto A2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button110.UseVisualStyleBackColor = false;
@@ -942,7 +946,7 @@
             this.button111.Name = "button111";
             this.button111.Size = new System.Drawing.Size(30, 23);
             this.button111.TabIndex = 32;
-            this.button111.Tag = "Normal";
+            this.button111.Tag = "0Normal";
             this.button111.Text = "B1";
             this.Info_Posto.SetToolTip(this.button111, "Settore D\r\nPosto B1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button111.UseVisualStyleBackColor = false;
@@ -956,7 +960,7 @@
             this.button112.Name = "button112";
             this.button112.Size = new System.Drawing.Size(30, 23);
             this.button112.TabIndex = 31;
-            this.button112.Tag = "Normal";
+            this.button112.Tag = "0Normal";
             this.button112.Text = "A4";
             this.Info_Posto.SetToolTip(this.button112, "Settore D\r\nPosto A4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button112.UseVisualStyleBackColor = false;
@@ -970,7 +974,7 @@
             this.button113.Name = "button113";
             this.button113.Size = new System.Drawing.Size(30, 23);
             this.button113.TabIndex = 14;
-            this.button113.Tag = "Normal";
+            this.button113.Tag = "0Normal";
             this.button113.Text = "D3";
             this.Info_Posto.SetToolTip(this.button113, "Settore D\r\nPosto D3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button113.UseVisualStyleBackColor = false;
@@ -984,7 +988,7 @@
             this.button114.Name = "button114";
             this.button114.Size = new System.Drawing.Size(30, 23);
             this.button114.TabIndex = 12;
-            this.button114.Tag = "Normal";
+            this.button114.Tag = "0Normal";
             this.button114.Text = "D1";
             this.Info_Posto.SetToolTip(this.button114, "Settore D\r\nPosto D1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button114.UseVisualStyleBackColor = false;
@@ -998,7 +1002,7 @@
             this.button115.Name = "button115";
             this.button115.Size = new System.Drawing.Size(30, 23);
             this.button115.TabIndex = 30;
-            this.button115.Tag = "Normal";
+            this.button115.Tag = "0Normal";
             this.button115.Text = "A3";
             this.Info_Posto.SetToolTip(this.button115, "Settore D\r\nPosto A3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button115.UseVisualStyleBackColor = false;
@@ -1012,7 +1016,7 @@
             this.button116.Name = "button116";
             this.button116.Size = new System.Drawing.Size(30, 23);
             this.button116.TabIndex = 13;
-            this.button116.Tag = "Normal";
+            this.button116.Tag = "0Normal";
             this.button116.Text = "D2";
             this.Info_Posto.SetToolTip(this.button116, "Settore D\r\nPosto D2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button116.UseVisualStyleBackColor = false;
@@ -1026,7 +1030,7 @@
             this.button117.Name = "button117";
             this.button117.Size = new System.Drawing.Size(30, 23);
             this.button117.TabIndex = 29;
-            this.button117.Tag = "Normal";
+            this.button117.Tag = "0Normal";
             this.button117.Text = "A2";
             this.Info_Posto.SetToolTip(this.button117, "Settore D\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button117.UseVisualStyleBackColor = false;
@@ -1040,7 +1044,7 @@
             this.button118.Name = "button118";
             this.button118.Size = new System.Drawing.Size(30, 23);
             this.button118.TabIndex = 15;
-            this.button118.Tag = "Normal";
+            this.button118.Tag = "0Normal";
             this.button118.Text = "D4";
             this.Info_Posto.SetToolTip(this.button118, "Settore D\r\nPosto D4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button118.UseVisualStyleBackColor = false;
@@ -1054,7 +1058,7 @@
             this.button119.Name = "button119";
             this.button119.Size = new System.Drawing.Size(30, 23);
             this.button119.TabIndex = 28;
-            this.button119.Tag = "Normal";
+            this.button119.Tag = "0Normal";
             this.button119.Text = "A1";
             this.Info_Posto.SetToolTip(this.button119, "Settore D\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button119.UseVisualStyleBackColor = false;
@@ -1068,7 +1072,7 @@
             this.button120.Name = "button120";
             this.button120.Size = new System.Drawing.Size(30, 23);
             this.button120.TabIndex = 27;
-            this.button120.Tag = "Senior";
+            this.button120.Tag = "0Senior";
             this.button120.Text = "J4";
             this.Info_Posto.SetToolTip(this.button120, "Settore D\r\nPosto J4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button120.UseVisualStyleBackColor = false;
@@ -1082,7 +1086,7 @@
             this.button121.Name = "button121";
             this.button121.Size = new System.Drawing.Size(30, 23);
             this.button121.TabIndex = 26;
-            this.button121.Tag = "Senior";
+            this.button121.Tag = "0Senior";
             this.button121.Text = "J3";
             this.Info_Posto.SetToolTip(this.button121, "Settore D\r\nPosto J3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button121.UseVisualStyleBackColor = false;
@@ -1096,7 +1100,7 @@
             this.button122.Name = "button122";
             this.button122.Size = new System.Drawing.Size(30, 23);
             this.button122.TabIndex = 25;
-            this.button122.Tag = "Senior";
+            this.button122.Tag = "0Senior";
             this.button122.Text = "J2";
             this.Info_Posto.SetToolTip(this.button122, "Settore D\r\nPosto J2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button122.UseVisualStyleBackColor = false;
@@ -1110,7 +1114,7 @@
             this.button123.Name = "button123";
             this.button123.Size = new System.Drawing.Size(30, 23);
             this.button123.TabIndex = 24;
-            this.button123.Tag = "Senior";
+            this.button123.Tag = "0Senior";
             this.button123.Text = "J1";
             this.Info_Posto.SetToolTip(this.button123, "Settore D\r\nPosto J1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button123.UseVisualStyleBackColor = false;
@@ -1124,7 +1128,7 @@
             this.button124.Name = "button124";
             this.button124.Size = new System.Drawing.Size(30, 23);
             this.button124.TabIndex = 23;
-            this.button124.Tag = "Senior";
+            this.button124.Tag = "0Senior";
             this.button124.Text = "I4";
             this.Info_Posto.SetToolTip(this.button124, "Settore D\r\nPosto I4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button124.UseVisualStyleBackColor = false;
@@ -1138,7 +1142,7 @@
             this.button125.Name = "button125";
             this.button125.Size = new System.Drawing.Size(30, 23);
             this.button125.TabIndex = 23;
-            this.button125.Tag = "Normal";
+            this.button125.Tag = "0Normal";
             this.button125.Text = "F4";
             this.Info_Posto.SetToolTip(this.button125, "Settore D\r\nPosto F4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button125.UseVisualStyleBackColor = false;
@@ -1152,7 +1156,7 @@
             this.button126.Name = "button126";
             this.button126.Size = new System.Drawing.Size(30, 23);
             this.button126.TabIndex = 22;
-            this.button126.Tag = "Senior";
+            this.button126.Tag = "0Senior";
             this.button126.Text = "I3";
             this.Info_Posto.SetToolTip(this.button126, "Settore D\r\nPosto I3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button126.UseVisualStyleBackColor = false;
@@ -1166,7 +1170,7 @@
             this.button127.Name = "button127";
             this.button127.Size = new System.Drawing.Size(30, 23);
             this.button127.TabIndex = 21;
-            this.button127.Tag = "Senior";
+            this.button127.Tag = "0Senior";
             this.button127.Text = "I2";
             this.Info_Posto.SetToolTip(this.button127, "Settore D\r\nPosto I2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button127.UseVisualStyleBackColor = false;
@@ -1180,7 +1184,7 @@
             this.button128.Name = "button128";
             this.button128.Size = new System.Drawing.Size(30, 23);
             this.button128.TabIndex = 22;
-            this.button128.Tag = "Normal";
+            this.button128.Tag = "0Normal";
             this.button128.Text = "F3";
             this.Info_Posto.SetToolTip(this.button128, "Settore D\r\nPosto F3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button128.UseVisualStyleBackColor = false;
@@ -1194,7 +1198,7 @@
             this.button129.Name = "button129";
             this.button129.Size = new System.Drawing.Size(30, 23);
             this.button129.TabIndex = 20;
-            this.button129.Tag = "Senior";
+            this.button129.Tag = "0Senior";
             this.button129.Text = "I1";
             this.Info_Posto.SetToolTip(this.button129, "Settore D\r\nPosto I1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button129.UseVisualStyleBackColor = false;
@@ -1208,7 +1212,7 @@
             this.button130.Name = "button130";
             this.button130.Size = new System.Drawing.Size(30, 23);
             this.button130.TabIndex = 21;
-            this.button130.Tag = "Normal";
+            this.button130.Tag = "0Normal";
             this.button130.Text = "F2";
             this.Info_Posto.SetToolTip(this.button130, "Settore D\r\nPosto F2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button130.UseVisualStyleBackColor = false;
@@ -1222,7 +1226,7 @@
             this.button131.Name = "button131";
             this.button131.Size = new System.Drawing.Size(30, 23);
             this.button131.TabIndex = 20;
-            this.button131.Tag = "Normal";
+            this.button131.Tag = "0Normal";
             this.button131.Text = "F1";
             this.Info_Posto.SetToolTip(this.button131, "Settore D\r\nPosto F1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button131.UseVisualStyleBackColor = false;
@@ -1236,7 +1240,7 @@
             this.button132.Name = "button132";
             this.button132.Size = new System.Drawing.Size(30, 23);
             this.button132.TabIndex = 19;
-            this.button132.Tag = "Senior";
+            this.button132.Tag = "0Senior";
             this.button132.Text = "H4";
             this.Info_Posto.SetToolTip(this.button132, "Settore D\r\nPosto H4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button132.UseVisualStyleBackColor = false;
@@ -1250,7 +1254,7 @@
             this.button133.Name = "button133";
             this.button133.Size = new System.Drawing.Size(30, 23);
             this.button133.TabIndex = 19;
-            this.button133.Tag = "Normal";
+            this.button133.Tag = "0Normal";
             this.button133.Text = "E4";
             this.Info_Posto.SetToolTip(this.button133, "Settore D\r\nPosto E4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button133.UseVisualStyleBackColor = false;
@@ -1264,7 +1268,7 @@
             this.button134.Name = "button134";
             this.button134.Size = new System.Drawing.Size(30, 23);
             this.button134.TabIndex = 18;
-            this.button134.Tag = "Senior";
+            this.button134.Tag = "0Senior";
             this.button134.Text = "H3";
             this.Info_Posto.SetToolTip(this.button134, "Settore D\r\nPosto H3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button134.UseVisualStyleBackColor = false;
@@ -1278,7 +1282,7 @@
             this.button135.Name = "button135";
             this.button135.Size = new System.Drawing.Size(30, 23);
             this.button135.TabIndex = 18;
-            this.button135.Tag = "Normal";
+            this.button135.Tag = "0Normal";
             this.button135.Text = "E3";
             this.Info_Posto.SetToolTip(this.button135, "Settore D\r\nPosto E3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button135.UseVisualStyleBackColor = false;
@@ -1292,7 +1296,7 @@
             this.button136.Name = "button136";
             this.button136.Size = new System.Drawing.Size(30, 23);
             this.button136.TabIndex = 17;
-            this.button136.Tag = "Senior";
+            this.button136.Tag = "0Senior";
             this.button136.Text = "H2";
             this.Info_Posto.SetToolTip(this.button136, "Settore D\r\nPosto H2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button136.UseVisualStyleBackColor = false;
@@ -1306,7 +1310,7 @@
             this.button137.Name = "button137";
             this.button137.Size = new System.Drawing.Size(30, 23);
             this.button137.TabIndex = 16;
-            this.button137.Tag = "Senior";
+            this.button137.Tag = "0Senior";
             this.button137.Text = "H1";
             this.Info_Posto.SetToolTip(this.button137, "Settore D\r\nPosto H1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button137.UseVisualStyleBackColor = false;
@@ -1320,7 +1324,7 @@
             this.button138.Name = "button138";
             this.button138.Size = new System.Drawing.Size(30, 23);
             this.button138.TabIndex = 17;
-            this.button138.Tag = "Normal";
+            this.button138.Tag = "0Normal";
             this.button138.Text = "E2";
             this.Info_Posto.SetToolTip(this.button138, "Settore D\r\nPosto E2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button138.UseVisualStyleBackColor = false;
@@ -1334,7 +1338,7 @@
             this.button139.Name = "button139";
             this.button139.Size = new System.Drawing.Size(30, 23);
             this.button139.TabIndex = 15;
-            this.button139.Tag = "Normal";
+            this.button139.Tag = "0Normal";
             this.button139.Text = "G4";
             this.Info_Posto.SetToolTip(this.button139, "Settore D \r\nPosto G4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button139.UseVisualStyleBackColor = false;
@@ -1348,7 +1352,7 @@
             this.button140.Name = "button140";
             this.button140.Size = new System.Drawing.Size(30, 23);
             this.button140.TabIndex = 16;
-            this.button140.Tag = "Normal";
+            this.button140.Tag = "0Normal";
             this.button140.Text = "E1";
             this.Info_Posto.SetToolTip(this.button140, "Settore D\r\nPosto E1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button140.UseVisualStyleBackColor = false;
@@ -1362,7 +1366,7 @@
             this.button141.Name = "button141";
             this.button141.Size = new System.Drawing.Size(30, 23);
             this.button141.TabIndex = 14;
-            this.button141.Tag = "Normal";
+            this.button141.Tag = "0Normal";
             this.button141.Text = "G3";
             this.Info_Posto.SetToolTip(this.button141, "Settore D\r\nPosto G3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button141.UseVisualStyleBackColor = false;
@@ -1376,7 +1380,7 @@
             this.button142.Name = "button142";
             this.button142.Size = new System.Drawing.Size(30, 23);
             this.button142.TabIndex = 13;
-            this.button142.Tag = "Normal";
+            this.button142.Tag = "0Normal";
             this.button142.Text = "G2";
             this.Info_Posto.SetToolTip(this.button142, "Settore D\r\nPosto G2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button142.UseVisualStyleBackColor = false;
@@ -1390,7 +1394,7 @@
             this.button143.Name = "button143";
             this.button143.Size = new System.Drawing.Size(30, 23);
             this.button143.TabIndex = 12;
-            this.button143.Tag = "Normal";
+            this.button143.Tag = "0Normal";
             this.button143.Text = "G1";
             this.Info_Posto.SetToolTip(this.button143, "Settore D \r\nPosto G1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button143.UseVisualStyleBackColor = false;
@@ -1404,7 +1408,7 @@
             this.button144.Name = "button144";
             this.button144.Size = new System.Drawing.Size(30, 23);
             this.button144.TabIndex = 11;
-            this.button144.Tag = "Normal";
+            this.button144.Tag = "0Normal";
             this.button144.Text = "C4";
             this.Info_Posto.SetToolTip(this.button144, "Settore D\r\nPosto C4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button144.UseVisualStyleBackColor = false;
@@ -1418,7 +1422,7 @@
             this.button145.Name = "button145";
             this.button145.Size = new System.Drawing.Size(30, 23);
             this.button145.TabIndex = 10;
-            this.button145.Tag = "Normal";
+            this.button145.Tag = "0Normal";
             this.button145.Text = "C3";
             this.Info_Posto.SetToolTip(this.button145, "Settore D\r\nPosto C3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button145.UseVisualStyleBackColor = false;
@@ -1432,7 +1436,7 @@
             this.button146.Name = "button146";
             this.button146.Size = new System.Drawing.Size(30, 23);
             this.button146.TabIndex = 9;
-            this.button146.Tag = "Normal";
+            this.button146.Tag = "0Normal";
             this.button146.Text = "C2";
             this.Info_Posto.SetToolTip(this.button146, "Settore D\r\nPosto C2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button146.UseVisualStyleBackColor = false;
@@ -1446,7 +1450,7 @@
             this.button147.Name = "button147";
             this.button147.Size = new System.Drawing.Size(30, 23);
             this.button147.TabIndex = 8;
-            this.button147.Tag = "Normal";
+            this.button147.Tag = "0Normal";
             this.button147.Text = "C1";
             this.Info_Posto.SetToolTip(this.button147, "Settore D\r\nPosto C1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button147.UseVisualStyleBackColor = false;
@@ -1507,7 +1511,7 @@
             this.button68.Name = "button68";
             this.button68.Size = new System.Drawing.Size(30, 23);
             this.button68.TabIndex = 27;
-            this.button68.Tag = "Normal";
+            this.button68.Tag = "0Normal";
             this.button68.Text = "D0";
             this.Info_Posto.SetToolTip(this.button68, "Settore C\r\nPosto D0\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button68.UseVisualStyleBackColor = false;
@@ -1521,7 +1525,7 @@
             this.button69.Name = "button69";
             this.button69.Size = new System.Drawing.Size(30, 23);
             this.button69.TabIndex = 26;
-            this.button69.Tag = "Normal";
+            this.button69.Tag = "0Normal";
             this.button69.Text = "C0";
             this.Info_Posto.SetToolTip(this.button69, "Settore C\r\nPosto C0\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button69.UseVisualStyleBackColor = false;
@@ -1535,7 +1539,7 @@
             this.button70.Name = "button70";
             this.button70.Size = new System.Drawing.Size(30, 23);
             this.button70.TabIndex = 25;
-            this.button70.Tag = "Normal";
+            this.button70.Tag = "0Normal";
             this.button70.Text = "B0";
             this.Info_Posto.SetToolTip(this.button70, "Settore C\r\nPosto B0\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button70.UseVisualStyleBackColor = false;
@@ -1549,7 +1553,7 @@
             this.button71.Name = "button71";
             this.button71.Size = new System.Drawing.Size(30, 23);
             this.button71.TabIndex = 24;
-            this.button71.Tag = "Normal";
+            this.button71.Tag = "0Normal";
             this.button71.Text = "A0";
             this.Info_Posto.SetToolTip(this.button71, "Settore C\r\nPosto A0\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button71.UseVisualStyleBackColor = false;
@@ -1563,7 +1567,7 @@
             this.button72.Name = "button72";
             this.button72.Size = new System.Drawing.Size(30, 23);
             this.button72.TabIndex = 23;
-            this.button72.Tag = "Normal";
+            this.button72.Tag = "0Normal";
             this.button72.Text = "D9";
             this.Info_Posto.SetToolTip(this.button72, "Settore C\r\nPosto D9\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button72.UseVisualStyleBackColor = false;
@@ -1577,7 +1581,7 @@
             this.button73.Name = "button73";
             this.button73.Size = new System.Drawing.Size(30, 23);
             this.button73.TabIndex = 23;
-            this.button73.Tag = "Normal";
+            this.button73.Tag = "0Normal";
             this.button73.Text = "D6";
             this.Info_Posto.SetToolTip(this.button73, "Settore C \r\nPosto D6\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button73.UseVisualStyleBackColor = false;
@@ -1591,7 +1595,7 @@
             this.button74.Name = "button74";
             this.button74.Size = new System.Drawing.Size(30, 23);
             this.button74.TabIndex = 22;
-            this.button74.Tag = "Normal";
+            this.button74.Tag = "0Normal";
             this.button74.Text = "C9";
             this.Info_Posto.SetToolTip(this.button74, "Settore C\r\nPosto C9\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button74.UseVisualStyleBackColor = false;
@@ -1605,7 +1609,7 @@
             this.button75.Name = "button75";
             this.button75.Size = new System.Drawing.Size(30, 23);
             this.button75.TabIndex = 22;
-            this.button75.Tag = "Normal";
+            this.button75.Tag = "0Normal";
             this.button75.Text = "C6";
             this.Info_Posto.SetToolTip(this.button75, "Settore C\r\nPosto C6\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button75.UseVisualStyleBackColor = false;
@@ -1619,7 +1623,7 @@
             this.button76.Name = "button76";
             this.button76.Size = new System.Drawing.Size(30, 23);
             this.button76.TabIndex = 21;
-            this.button76.Tag = "Normal";
+            this.button76.Tag = "0Normal";
             this.button76.Text = "B9";
             this.Info_Posto.SetToolTip(this.button76, "Settore C\r\nPosto B9\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button76.UseVisualStyleBackColor = false;
@@ -1633,7 +1637,7 @@
             this.button77.Name = "button77";
             this.button77.Size = new System.Drawing.Size(30, 23);
             this.button77.TabIndex = 21;
-            this.button77.Tag = "Normal";
+            this.button77.Tag = "0Normal";
             this.button77.Text = "B6";
             this.Info_Posto.SetToolTip(this.button77, "Settore C\r\nPosto B6\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button77.UseVisualStyleBackColor = false;
@@ -1647,7 +1651,7 @@
             this.button78.Name = "button78";
             this.button78.Size = new System.Drawing.Size(30, 23);
             this.button78.TabIndex = 20;
-            this.button78.Tag = "Normal";
+            this.button78.Tag = "0Normal";
             this.button78.Text = "A9";
             this.Info_Posto.SetToolTip(this.button78, "Settore C\r\nPosto A9\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button78.UseVisualStyleBackColor = false;
@@ -1661,7 +1665,7 @@
             this.button79.Name = "button79";
             this.button79.Size = new System.Drawing.Size(30, 23);
             this.button79.TabIndex = 20;
-            this.button79.Tag = "Normal";
+            this.button79.Tag = "0Normal";
             this.button79.Text = "A6";
             this.Info_Posto.SetToolTip(this.button79, "Settore C \r\nPosto A6\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button79.UseVisualStyleBackColor = false;
@@ -1675,7 +1679,7 @@
             this.button80.Name = "button80";
             this.button80.Size = new System.Drawing.Size(30, 23);
             this.button80.TabIndex = 19;
-            this.button80.Tag = "Normal";
+            this.button80.Tag = "0Normal";
             this.button80.Text = "D8";
             this.Info_Posto.SetToolTip(this.button80, "Settore C \r\nPosto D8\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button80.UseVisualStyleBackColor = false;
@@ -1689,7 +1693,7 @@
             this.button81.Name = "button81";
             this.button81.Size = new System.Drawing.Size(30, 23);
             this.button81.TabIndex = 19;
-            this.button81.Tag = "Normal";
+            this.button81.Tag = "0Normal";
             this.button81.Text = "D5";
             this.Info_Posto.SetToolTip(this.button81, "Settore C \r\nPosto D5 \r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button81.UseVisualStyleBackColor = false;
@@ -1703,7 +1707,7 @@
             this.button82.Name = "button82";
             this.button82.Size = new System.Drawing.Size(30, 23);
             this.button82.TabIndex = 18;
-            this.button82.Tag = "Normal";
+            this.button82.Tag = "0Normal";
             this.button82.Text = "C8";
             this.Info_Posto.SetToolTip(this.button82, "Settore C \r\nPosto C8\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button82.UseVisualStyleBackColor = false;
@@ -1717,7 +1721,7 @@
             this.button83.Name = "button83";
             this.button83.Size = new System.Drawing.Size(30, 23);
             this.button83.TabIndex = 18;
-            this.button83.Tag = "Normal";
+            this.button83.Tag = "0Normal";
             this.button83.Text = "C5";
             this.Info_Posto.SetToolTip(this.button83, "Settore C\r\nPosto C5\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button83.UseVisualStyleBackColor = false;
@@ -1731,7 +1735,7 @@
             this.button84.Name = "button84";
             this.button84.Size = new System.Drawing.Size(30, 23);
             this.button84.TabIndex = 17;
-            this.button84.Tag = "Normal";
+            this.button84.Tag = "0Normal";
             this.button84.Text = "B8";
             this.Info_Posto.SetToolTip(this.button84, "Settore C\r\nPosto B8\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button84.UseVisualStyleBackColor = false;
@@ -1745,7 +1749,7 @@
             this.button85.Name = "button85";
             this.button85.Size = new System.Drawing.Size(30, 23);
             this.button85.TabIndex = 16;
-            this.button85.Tag = "Normal";
+            this.button85.Tag = "0Normal";
             this.button85.Text = "A8";
             this.Info_Posto.SetToolTip(this.button85, "Settore C\r\nPosto A8\r\n\r\nTipologia - Senior\r\nCosto - 20€");
             this.button85.UseVisualStyleBackColor = false;
@@ -1759,7 +1763,7 @@
             this.button86.Name = "button86";
             this.button86.Size = new System.Drawing.Size(30, 23);
             this.button86.TabIndex = 17;
-            this.button86.Tag = "Normal";
+            this.button86.Tag = "0Normal";
             this.button86.Text = "B5";
             this.Info_Posto.SetToolTip(this.button86, "Settore C\r\nPosto B5\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button86.UseVisualStyleBackColor = false;
@@ -1773,7 +1777,7 @@
             this.button87.Name = "button87";
             this.button87.Size = new System.Drawing.Size(30, 23);
             this.button87.TabIndex = 15;
-            this.button87.Tag = "Normal";
+            this.button87.Tag = "0Normal";
             this.button87.Text = "D7";
             this.Info_Posto.SetToolTip(this.button87, "Settore C \r\nPosto D7\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button87.UseVisualStyleBackColor = false;
@@ -1787,7 +1791,7 @@
             this.button88.Name = "button88";
             this.button88.Size = new System.Drawing.Size(30, 23);
             this.button88.TabIndex = 16;
-            this.button88.Tag = "Normal";
+            this.button88.Tag = "0Normal";
             this.button88.Text = "A5";
             this.Info_Posto.SetToolTip(this.button88, "Settore C\r\nPosto A5\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button88.UseVisualStyleBackColor = false;
@@ -1801,7 +1805,7 @@
             this.button89.Name = "button89";
             this.button89.Size = new System.Drawing.Size(30, 23);
             this.button89.TabIndex = 14;
-            this.button89.Tag = "Normal";
+            this.button89.Tag = "0Normal";
             this.button89.Text = "C7";
             this.Info_Posto.SetToolTip(this.button89, "Settore C\r\nPosto C7\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button89.UseVisualStyleBackColor = false;
@@ -1815,7 +1819,7 @@
             this.button90.Name = "button90";
             this.button90.Size = new System.Drawing.Size(30, 23);
             this.button90.TabIndex = 15;
-            this.button90.Tag = "Normal";
+            this.button90.Tag = "0Normal";
             this.button90.Text = "D4";
             this.Info_Posto.SetToolTip(this.button90, "Settore C\r\nPosto D4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button90.UseVisualStyleBackColor = false;
@@ -1829,7 +1833,7 @@
             this.button91.Name = "button91";
             this.button91.Size = new System.Drawing.Size(30, 23);
             this.button91.TabIndex = 13;
-            this.button91.Tag = "Normal";
+            this.button91.Tag = "0Normal";
             this.button91.Text = "B7";
             this.Info_Posto.SetToolTip(this.button91, "Settore C\r\nPosto B7\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button91.UseVisualStyleBackColor = false;
@@ -1843,7 +1847,7 @@
             this.button92.Name = "button92";
             this.button92.Size = new System.Drawing.Size(30, 23);
             this.button92.TabIndex = 14;
-            this.button92.Tag = "Normal";
+            this.button92.Tag = "0Normal";
             this.button92.Text = "C4";
             this.Info_Posto.SetToolTip(this.button92, "Settore C\r\nPosto C4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button92.UseVisualStyleBackColor = false;
@@ -1857,7 +1861,7 @@
             this.button93.Name = "button93";
             this.button93.Size = new System.Drawing.Size(30, 23);
             this.button93.TabIndex = 12;
-            this.button93.Tag = "Normal";
+            this.button93.Tag = "0Normal";
             this.button93.Text = "A7";
             this.Info_Posto.SetToolTip(this.button93, "Settore C\r\nPosto A7\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button93.UseVisualStyleBackColor = false;
@@ -1871,7 +1875,7 @@
             this.button94.Name = "button94";
             this.button94.Size = new System.Drawing.Size(30, 23);
             this.button94.TabIndex = 13;
-            this.button94.Tag = "Normal";
+            this.button94.Tag = "0Normal";
             this.button94.Text = "B4";
             this.Info_Posto.SetToolTip(this.button94, "Settore C\r\nPosto B4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button94.UseVisualStyleBackColor = false;
@@ -1885,7 +1889,7 @@
             this.button95.Name = "button95";
             this.button95.Size = new System.Drawing.Size(30, 23);
             this.button95.TabIndex = 12;
-            this.button95.Tag = "Normal";
+            this.button95.Tag = "0Normal";
             this.button95.Text = "A4";
             this.Info_Posto.SetToolTip(this.button95, "Settore C\r\nPosto A4\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button95.UseVisualStyleBackColor = false;
@@ -1899,7 +1903,7 @@
             this.button96.Name = "button96";
             this.button96.Size = new System.Drawing.Size(30, 23);
             this.button96.TabIndex = 11;
-            this.button96.Tag = "Normal";
+            this.button96.Tag = "0Normal";
             this.button96.Text = "D3";
             this.Info_Posto.SetToolTip(this.button96, "Settore C\r\nPosto D3 \r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button96.UseVisualStyleBackColor = false;
@@ -1913,7 +1917,7 @@
             this.button97.Name = "button97";
             this.button97.Size = new System.Drawing.Size(30, 23);
             this.button97.TabIndex = 10;
-            this.button97.Tag = "Normal";
+            this.button97.Tag = "0Normal";
             this.button97.Text = "C3";
             this.Info_Posto.SetToolTip(this.button97, "Settore C\r\nPosto C3\r\nTipologia - Normale\r\nCosto - 20€");
             this.button97.UseVisualStyleBackColor = false;
@@ -1927,7 +1931,7 @@
             this.button98.Name = "button98";
             this.button98.Size = new System.Drawing.Size(30, 23);
             this.button98.TabIndex = 9;
-            this.button98.Tag = "Normal";
+            this.button98.Tag = "0Normal";
             this.button98.Text = "B3";
             this.Info_Posto.SetToolTip(this.button98, "Settore C\r\nPosto B3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button98.UseVisualStyleBackColor = false;
@@ -1941,7 +1945,7 @@
             this.button99.Name = "button99";
             this.button99.Size = new System.Drawing.Size(30, 23);
             this.button99.TabIndex = 8;
-            this.button99.Tag = "Normal";
+            this.button99.Tag = "0Normal";
             this.button99.Text = "A3";
             this.Info_Posto.SetToolTip(this.button99, "Settore C\r\nPosto A3\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button99.UseVisualStyleBackColor = false;
@@ -1955,7 +1959,7 @@
             this.button100.Name = "button100";
             this.button100.Size = new System.Drawing.Size(30, 23);
             this.button100.TabIndex = 7;
-            this.button100.Tag = "Normal";
+            this.button100.Tag = "0Normal";
             this.button100.Text = "D2";
             this.Info_Posto.SetToolTip(this.button100, "Settore C\r\nPosto D2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button100.UseVisualStyleBackColor = false;
@@ -1969,7 +1973,7 @@
             this.button101.Name = "button101";
             this.button101.Size = new System.Drawing.Size(30, 23);
             this.button101.TabIndex = 6;
-            this.button101.Tag = "Normal";
+            this.button101.Tag = "0Normal";
             this.button101.Text = "C2";
             this.Info_Posto.SetToolTip(this.button101, "Settore C\r\nPosto C2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button101.UseVisualStyleBackColor = false;
@@ -1983,7 +1987,7 @@
             this.button102.Name = "button102";
             this.button102.Size = new System.Drawing.Size(30, 23);
             this.button102.TabIndex = 5;
-            this.button102.Tag = "Normal";
+            this.button102.Tag = "0Normal";
             this.button102.Text = "B2";
             this.Info_Posto.SetToolTip(this.button102, "Settore C\r\nPosto B2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button102.UseVisualStyleBackColor = false;
@@ -1997,7 +2001,7 @@
             this.button103.Name = "button103";
             this.button103.Size = new System.Drawing.Size(30, 23);
             this.button103.TabIndex = 4;
-            this.button103.Tag = "Normal";
+            this.button103.Tag = "0Normal";
             this.button103.Text = "A2";
             this.Info_Posto.SetToolTip(this.button103, "Settore C\r\nPosto A2\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button103.UseVisualStyleBackColor = false;
@@ -2011,7 +2015,7 @@
             this.button104.Name = "button104";
             this.button104.Size = new System.Drawing.Size(30, 23);
             this.button104.TabIndex = 3;
-            this.button104.Tag = "Normal";
+            this.button104.Tag = "0Normal";
             this.button104.Text = "D1";
             this.Info_Posto.SetToolTip(this.button104, "Settore C\r\nPosto A4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button104.UseVisualStyleBackColor = false;
@@ -2025,7 +2029,7 @@
             this.button105.Name = "button105";
             this.button105.Size = new System.Drawing.Size(30, 23);
             this.button105.TabIndex = 2;
-            this.button105.Tag = "Normal";
+            this.button105.Tag = "0Normal";
             this.button105.Text = "C1";
             this.Info_Posto.SetToolTip(this.button105, "Settore C\r\nPosto C1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button105.UseVisualStyleBackColor = false;
@@ -2039,7 +2043,7 @@
             this.button106.Name = "button106";
             this.button106.Size = new System.Drawing.Size(30, 23);
             this.button106.TabIndex = 1;
-            this.button106.Tag = "Normal";
+            this.button106.Tag = "0Normal";
             this.button106.Text = "B1";
             this.Info_Posto.SetToolTip(this.button106, "Settore C\r\nPosto A2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button106.UseVisualStyleBackColor = false;
@@ -2053,7 +2057,7 @@
             this.button107.Name = "button107";
             this.button107.Size = new System.Drawing.Size(30, 23);
             this.button107.TabIndex = 0;
-            this.button107.Tag = "Normal";
+            this.button107.Tag = "0Normal";
             this.button107.Text = "A1";
             this.Info_Posto.SetToolTip(this.button107, "Settore C\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button107.UseVisualStyleBackColor = false;
@@ -2114,7 +2118,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 23);
             this.button2.TabIndex = 27;
-            this.button2.Tag = "Senior";
+            this.button2.Tag = "0Senior";
             this.button2.Text = "J4";
             this.Info_Posto.SetToolTip(this.button2, "Settore B\r\nPosto J4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button2.UseVisualStyleBackColor = false;
@@ -2128,7 +2132,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(30, 23);
             this.button3.TabIndex = 26;
-            this.button3.Tag = "Senior";
+            this.button3.Tag = "0Senior";
             this.button3.Text = "J3";
             this.Info_Posto.SetToolTip(this.button3, "Settore B\r\nPosto J3 \n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button3.UseVisualStyleBackColor = false;
@@ -2142,7 +2146,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(30, 23);
             this.button4.TabIndex = 25;
-            this.button4.Tag = "Senior";
+            this.button4.Tag = "0Senior";
             this.button4.Text = "J2";
             this.Info_Posto.SetToolTip(this.button4, "Settore B\r\nPosto J2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button4.UseVisualStyleBackColor = false;
@@ -2156,7 +2160,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(30, 23);
             this.button6.TabIndex = 24;
-            this.button6.Tag = "Senior";
+            this.button6.Tag = "0Senior";
             this.button6.Text = "J1";
             this.Info_Posto.SetToolTip(this.button6, "Settore B\r\nPosto J1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button6.UseVisualStyleBackColor = false;
@@ -2170,7 +2174,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(30, 23);
             this.button7.TabIndex = 23;
-            this.button7.Tag = "Senior";
+            this.button7.Tag = "0Senior";
             this.button7.Text = "I4";
             this.Info_Posto.SetToolTip(this.button7, "Settore B\r\nPosto I4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button7.UseVisualStyleBackColor = false;
@@ -2184,7 +2188,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(30, 23);
             this.button8.TabIndex = 23;
-            this.button8.Tag = "Normal";
+            this.button8.Tag = "0Normal";
             this.button8.Text = "F4";
             this.Info_Posto.SetToolTip(this.button8, "Settore B\r\nPosto F4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button8.UseVisualStyleBackColor = false;
@@ -2198,7 +2202,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(30, 23);
             this.button9.TabIndex = 22;
-            this.button9.Tag = "Senior";
+            this.button9.Tag = "0Senior";
             this.button9.Text = "I3";
             this.Info_Posto.SetToolTip(this.button9, "Settore B\r\nPosto I3 \r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button9.UseVisualStyleBackColor = false;
@@ -2212,7 +2216,7 @@
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(30, 23);
             this.button19.TabIndex = 22;
-            this.button19.Tag = "Normal";
+            this.button19.Tag = "0Normal";
             this.button19.Text = "F3";
             this.Info_Posto.SetToolTip(this.button19, "Settore B\r\nPosto F3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button19.UseVisualStyleBackColor = false;
@@ -2226,7 +2230,7 @@
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(30, 23);
             this.button20.TabIndex = 21;
-            this.button20.Tag = "Senior";
+            this.button20.Tag = "0Senior";
             this.button20.Text = "I2";
             this.Info_Posto.SetToolTip(this.button20, "Settore B\r\nPosto I2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button20.UseVisualStyleBackColor = false;
@@ -2240,7 +2244,7 @@
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(30, 23);
             this.button37.TabIndex = 21;
-            this.button37.Tag = "Normal";
+            this.button37.Tag = "0Normal";
             this.button37.Text = "F2";
             this.Info_Posto.SetToolTip(this.button37, "Settore B\r\nPosto F2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button37.UseVisualStyleBackColor = false;
@@ -2254,7 +2258,7 @@
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(30, 23);
             this.button38.TabIndex = 20;
-            this.button38.Tag = "Senior";
+            this.button38.Tag = "0Senior";
             this.button38.Text = "I1";
             this.Info_Posto.SetToolTip(this.button38, "Settore B\r\nPosto I1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button38.UseVisualStyleBackColor = false;
@@ -2268,7 +2272,7 @@
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(30, 23);
             this.button39.TabIndex = 20;
-            this.button39.Tag = "Normal";
+            this.button39.Tag = "0Normal";
             this.button39.Text = "F1";
             this.Info_Posto.SetToolTip(this.button39, "Settore B \r\nPosto F1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button39.UseVisualStyleBackColor = false;
@@ -2282,7 +2286,7 @@
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(30, 23);
             this.button40.TabIndex = 19;
-            this.button40.Tag = "Senior";
+            this.button40.Tag = "0Senior";
             this.button40.Text = "H4";
             this.Info_Posto.SetToolTip(this.button40, "Settore B\r\nPosto H4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button40.UseVisualStyleBackColor = false;
@@ -2296,7 +2300,7 @@
             this.button41.Name = "button41";
             this.button41.Size = new System.Drawing.Size(30, 23);
             this.button41.TabIndex = 19;
-            this.button41.Tag = "Normal";
+            this.button41.Tag = "0Normal";
             this.button41.Text = "E4";
             this.Info_Posto.SetToolTip(this.button41, "Settore B \r\nPosto E4 \r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button41.UseVisualStyleBackColor = false;
@@ -2310,7 +2314,7 @@
             this.button42.Name = "button42";
             this.button42.Size = new System.Drawing.Size(30, 23);
             this.button42.TabIndex = 18;
-            this.button42.Tag = "Senior";
+            this.button42.Tag = "0Senior";
             this.button42.Text = "H3";
             this.Info_Posto.SetToolTip(this.button42, "Settore B \r\nPosto H3 \r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button42.UseVisualStyleBackColor = false;
@@ -2324,7 +2328,7 @@
             this.button43.Name = "button43";
             this.button43.Size = new System.Drawing.Size(30, 23);
             this.button43.TabIndex = 18;
-            this.button43.Tag = "Normal";
+            this.button43.Tag = "0Normal";
             this.button43.Text = "E3";
             this.Info_Posto.SetToolTip(this.button43, "Settore B\r\nPosto E3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button43.UseVisualStyleBackColor = false;
@@ -2338,7 +2342,7 @@
             this.button44.Name = "button44";
             this.button44.Size = new System.Drawing.Size(30, 23);
             this.button44.TabIndex = 17;
-            this.button44.Tag = "Senior";
+            this.button44.Tag = "0Senior";
             this.button44.Text = "H2";
             this.Info_Posto.SetToolTip(this.button44, "Settore B\r\nPosto H2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button44.UseVisualStyleBackColor = false;
@@ -2352,7 +2356,7 @@
             this.button45.Name = "button45";
             this.button45.Size = new System.Drawing.Size(30, 23);
             this.button45.TabIndex = 16;
-            this.button45.Tag = "Senior";
+            this.button45.Tag = "0Senior";
             this.button45.Text = "H1";
             this.Info_Posto.SetToolTip(this.button45, "Settore B\r\nPosto H1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button45.UseVisualStyleBackColor = false;
@@ -2366,7 +2370,7 @@
             this.button46.Name = "button46";
             this.button46.Size = new System.Drawing.Size(30, 23);
             this.button46.TabIndex = 17;
-            this.button46.Tag = "Normal";
+            this.button46.Tag = "0Normal";
             this.button46.Text = "E2";
             this.Info_Posto.SetToolTip(this.button46, "Settore B\r\nPosto E2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button46.UseVisualStyleBackColor = false;
@@ -2380,7 +2384,7 @@
             this.button47.Name = "button47";
             this.button47.Size = new System.Drawing.Size(30, 23);
             this.button47.TabIndex = 15;
-            this.button47.Tag = "Normal";
+            this.button47.Tag = "0Normal";
             this.button47.Text = "G4";
             this.Info_Posto.SetToolTip(this.button47, "Settore B\r\nPosto G4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button47.UseVisualStyleBackColor = false;
@@ -2394,7 +2398,7 @@
             this.button48.Name = "button48";
             this.button48.Size = new System.Drawing.Size(30, 23);
             this.button48.TabIndex = 16;
-            this.button48.Tag = "Normal";
+            this.button48.Tag = "0Normal";
             this.button48.Text = "E1";
             this.Info_Posto.SetToolTip(this.button48, "Settore B\r\nPosto E1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button48.UseVisualStyleBackColor = false;
@@ -2408,7 +2412,7 @@
             this.button49.Name = "button49";
             this.button49.Size = new System.Drawing.Size(30, 23);
             this.button49.TabIndex = 14;
-            this.button49.Tag = "Normal";
+            this.button49.Tag = "0Normal";
             this.button49.Text = "G3";
             this.Info_Posto.SetToolTip(this.button49, "Settore B\r\nPosto G3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button49.UseVisualStyleBackColor = false;
@@ -2422,7 +2426,7 @@
             this.button50.Name = "button50";
             this.button50.Size = new System.Drawing.Size(30, 23);
             this.button50.TabIndex = 15;
-            this.button50.Tag = "Normal";
+            this.button50.Tag = "0Normal";
             this.button50.Text = "D4";
             this.Info_Posto.SetToolTip(this.button50, "Settore B\r\nPosto D4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button50.UseVisualStyleBackColor = false;
@@ -2436,7 +2440,7 @@
             this.button51.Name = "button51";
             this.button51.Size = new System.Drawing.Size(30, 23);
             this.button51.TabIndex = 13;
-            this.button51.Tag = "Normal";
+            this.button51.Tag = "0Normal";
             this.button51.Text = "G2";
             this.Info_Posto.SetToolTip(this.button51, "Settore B\r\nPosto G2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button51.UseVisualStyleBackColor = false;
@@ -2450,7 +2454,7 @@
             this.button52.Name = "button52";
             this.button52.Size = new System.Drawing.Size(30, 23);
             this.button52.TabIndex = 14;
-            this.button52.Tag = "Normal";
+            this.button52.Tag = "0Normal";
             this.button52.Text = "D3";
             this.Info_Posto.SetToolTip(this.button52, "Settore B\r\nPosto D3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button52.UseVisualStyleBackColor = false;
@@ -2464,7 +2468,7 @@
             this.button53.Name = "button53";
             this.button53.Size = new System.Drawing.Size(30, 23);
             this.button53.TabIndex = 12;
-            this.button53.Tag = "Normal";
+            this.button53.Tag = "0Normal";
             this.button53.Text = "G1";
             this.Info_Posto.SetToolTip(this.button53, "Settore B Posto G1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button53.UseVisualStyleBackColor = false;
@@ -2478,7 +2482,7 @@
             this.button54.Name = "button54";
             this.button54.Size = new System.Drawing.Size(30, 23);
             this.button54.TabIndex = 13;
-            this.button54.Tag = "Normal";
+            this.button54.Tag = "0Normal";
             this.button54.Text = "D2";
             this.Info_Posto.SetToolTip(this.button54, "Settore B\r\nPosto D2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button54.UseVisualStyleBackColor = false;
@@ -2492,7 +2496,7 @@
             this.button55.Name = "button55";
             this.button55.Size = new System.Drawing.Size(30, 23);
             this.button55.TabIndex = 12;
-            this.button55.Tag = "Normal";
+            this.button55.Tag = "0Normal";
             this.button55.Text = "D1";
             this.Info_Posto.SetToolTip(this.button55, "Settore B\r\nPosto D1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button55.UseVisualStyleBackColor = false;
@@ -2506,7 +2510,7 @@
             this.button56.Name = "button56";
             this.button56.Size = new System.Drawing.Size(30, 23);
             this.button56.TabIndex = 11;
-            this.button56.Tag = "Normal";
+            this.button56.Tag = "0Normal";
             this.button56.Text = "C4";
             this.Info_Posto.SetToolTip(this.button56, "Settore B\r\nPosto C4 \r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button56.UseVisualStyleBackColor = false;
@@ -2520,7 +2524,7 @@
             this.button57.Name = "button57";
             this.button57.Size = new System.Drawing.Size(30, 23);
             this.button57.TabIndex = 10;
-            this.button57.Tag = "Normal";
+            this.button57.Tag = "0Normal";
             this.button57.Text = "C3";
             this.Info_Posto.SetToolTip(this.button57, "Settore B\r\nPosto C3\nTipologia - Normale\r\nCosto - 20€");
             this.button57.UseVisualStyleBackColor = false;
@@ -2534,7 +2538,7 @@
             this.button58.Name = "button58";
             this.button58.Size = new System.Drawing.Size(30, 23);
             this.button58.TabIndex = 9;
-            this.button58.Tag = "Normal";
+            this.button58.Tag = "0Normal";
             this.button58.Text = "C2";
             this.Info_Posto.SetToolTip(this.button58, "Settore B\r\nPosto C2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button58.UseVisualStyleBackColor = false;
@@ -2548,7 +2552,7 @@
             this.button59.Name = "button59";
             this.button59.Size = new System.Drawing.Size(30, 23);
             this.button59.TabIndex = 8;
-            this.button59.Tag = "Normal";
+            this.button59.Tag = "0Normal";
             this.button59.Text = "C1";
             this.Info_Posto.SetToolTip(this.button59, "Settore B\r\nPosto C1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button59.UseVisualStyleBackColor = false;
@@ -2562,7 +2566,7 @@
             this.button60.Name = "button60";
             this.button60.Size = new System.Drawing.Size(30, 23);
             this.button60.TabIndex = 7;
-            this.button60.Tag = "Normal";
+            this.button60.Tag = "0Normal";
             this.button60.Text = "B4";
             this.Info_Posto.SetToolTip(this.button60, "Settore B\r\nPosto B4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button60.UseVisualStyleBackColor = false;
@@ -2576,7 +2580,7 @@
             this.button61.Name = "button61";
             this.button61.Size = new System.Drawing.Size(30, 23);
             this.button61.TabIndex = 6;
-            this.button61.Tag = "Normal";
+            this.button61.Tag = "0Normal";
             this.button61.Text = "B3";
             this.Info_Posto.SetToolTip(this.button61, "Settore B\r\nPosto B3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button61.UseVisualStyleBackColor = false;
@@ -2590,7 +2594,7 @@
             this.button62.Name = "button62";
             this.button62.Size = new System.Drawing.Size(30, 23);
             this.button62.TabIndex = 5;
-            this.button62.Tag = "Normal";
+            this.button62.Tag = "0Normal";
             this.button62.Text = "B2";
             this.Info_Posto.SetToolTip(this.button62, "Settore B\r\nPosto B2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button62.UseVisualStyleBackColor = false;
@@ -2604,7 +2608,7 @@
             this.button63.Name = "button63";
             this.button63.Size = new System.Drawing.Size(30, 23);
             this.button63.TabIndex = 4;
-            this.button63.Tag = "Normal";
+            this.button63.Tag = "0Normal";
             this.button63.Text = "B1";
             this.Info_Posto.SetToolTip(this.button63, "Settore B\r\nPosto B1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button63.UseVisualStyleBackColor = false;
@@ -2618,7 +2622,7 @@
             this.button64.Name = "button64";
             this.button64.Size = new System.Drawing.Size(30, 23);
             this.button64.TabIndex = 3;
-            this.button64.Tag = "Normal";
+            this.button64.Tag = "0Normal";
             this.button64.Text = "A4";
             this.Info_Posto.SetToolTip(this.button64, "Settore B\r\nPosto A4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button64.UseVisualStyleBackColor = false;
@@ -2632,7 +2636,7 @@
             this.button65.Name = "button65";
             this.button65.Size = new System.Drawing.Size(30, 23);
             this.button65.TabIndex = 2;
-            this.button65.Tag = "Normal";
+            this.button65.Tag = "0Normal";
             this.button65.Text = "A3";
             this.Info_Posto.SetToolTip(this.button65, "Settore B\r\nPosto A3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button65.UseVisualStyleBackColor = false;
@@ -2646,7 +2650,7 @@
             this.button66.Name = "button66";
             this.button66.Size = new System.Drawing.Size(30, 23);
             this.button66.TabIndex = 1;
-            this.button66.Tag = "Normal";
+            this.button66.Tag = "0Normal";
             this.button66.Text = "A2";
             this.Info_Posto.SetToolTip(this.button66, "Settore B\r\nPosto A2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button66.UseVisualStyleBackColor = false;
@@ -2660,7 +2664,7 @@
             this.button67.Name = "button67";
             this.button67.Size = new System.Drawing.Size(30, 23);
             this.button67.TabIndex = 0;
-            this.button67.Tag = "Normal";
+            this.button67.Tag = "0Normal";
             this.button67.Text = "A1";
             this.Info_Posto.SetToolTip(this.button67, "Settore B\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button67.UseVisualStyleBackColor = false;
@@ -2734,7 +2738,7 @@
             this.button157.Name = "button157";
             this.button157.Size = new System.Drawing.Size(30, 23);
             this.button157.TabIndex = 35;
-            this.button157.Tag = "Normal";
+            this.button157.Tag = "0Normal";
             this.button157.Text = "B4";
             this.Info_Posto.SetToolTip(this.button157, "Settore E\r\nPosto B4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button157.UseVisualStyleBackColor = false;
@@ -2748,7 +2752,7 @@
             this.button158.Name = "button158";
             this.button158.Size = new System.Drawing.Size(30, 23);
             this.button158.TabIndex = 34;
-            this.button158.Tag = "Normal";
+            this.button158.Tag = "0Normal";
             this.button158.Text = "B3";
             this.Info_Posto.SetToolTip(this.button158, "Settore E\r\nPosto B3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button158.UseVisualStyleBackColor = false;
@@ -2762,7 +2766,7 @@
             this.button159.Name = "button159";
             this.button159.Size = new System.Drawing.Size(30, 23);
             this.button159.TabIndex = 33;
-            this.button159.Tag = "Normal";
+            this.button159.Tag = "0Normal";
             this.button159.Text = "B2";
             this.Info_Posto.SetToolTip(this.button159, "Settore E\r\nPosto A2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button159.UseVisualStyleBackColor = false;
@@ -2776,7 +2780,7 @@
             this.button160.Name = "button160";
             this.button160.Size = new System.Drawing.Size(30, 23);
             this.button160.TabIndex = 32;
-            this.button160.Tag = "Normal";
+            this.button160.Tag = "0Normal";
             this.button160.Text = "B1";
             this.Info_Posto.SetToolTip(this.button160, "Settore E\r\nPosto B1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button160.UseVisualStyleBackColor = false;
@@ -2790,7 +2794,7 @@
             this.button161.Name = "button161";
             this.button161.Size = new System.Drawing.Size(30, 23);
             this.button161.TabIndex = 31;
-            this.button161.Tag = "Normal";
+            this.button161.Tag = "0Normal";
             this.button161.Text = "A4";
             this.Info_Posto.SetToolTip(this.button161, "Settore E\r\nPosto A4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button161.UseVisualStyleBackColor = false;
@@ -2804,7 +2808,7 @@
             this.button162.Name = "button162";
             this.button162.Size = new System.Drawing.Size(30, 23);
             this.button162.TabIndex = 14;
-            this.button162.Tag = "Normal";
+            this.button162.Tag = "0Normal";
             this.button162.Text = "D3";
             this.Info_Posto.SetToolTip(this.button162, "Settore E\r\nPosto D3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button162.UseVisualStyleBackColor = false;
@@ -2818,7 +2822,7 @@
             this.button163.Name = "button163";
             this.button163.Size = new System.Drawing.Size(30, 23);
             this.button163.TabIndex = 12;
-            this.button163.Tag = "Normal";
+            this.button163.Tag = "0Normal";
             this.button163.Text = "D1";
             this.Info_Posto.SetToolTip(this.button163, "Settore E\r\nPosto D1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button163.UseVisualStyleBackColor = false;
@@ -2832,7 +2836,7 @@
             this.button164.Name = "button164";
             this.button164.Size = new System.Drawing.Size(30, 23);
             this.button164.TabIndex = 30;
-            this.button164.Tag = "Normal";
+            this.button164.Tag = "0Normal";
             this.button164.Text = "A3";
             this.Info_Posto.SetToolTip(this.button164, "Settore E\r\nPosto A3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button164.UseVisualStyleBackColor = false;
@@ -2846,7 +2850,7 @@
             this.button165.Name = "button165";
             this.button165.Size = new System.Drawing.Size(30, 23);
             this.button165.TabIndex = 13;
-            this.button165.Tag = "Normal";
+            this.button165.Tag = "0Normal";
             this.button165.Text = "D2";
             this.Info_Posto.SetToolTip(this.button165, "Settore E\r\nPosto D2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button165.UseVisualStyleBackColor = false;
@@ -2860,7 +2864,7 @@
             this.button166.Name = "button166";
             this.button166.Size = new System.Drawing.Size(30, 23);
             this.button166.TabIndex = 29;
-            this.button166.Tag = "Normal";
+            this.button166.Tag = "0Normal";
             this.button166.Text = "A2";
             this.Info_Posto.SetToolTip(this.button166, "Settore E\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button166.UseVisualStyleBackColor = false;
@@ -2874,7 +2878,7 @@
             this.button167.Name = "button167";
             this.button167.Size = new System.Drawing.Size(30, 23);
             this.button167.TabIndex = 15;
-            this.button167.Tag = "Normal";
+            this.button167.Tag = "0Normal";
             this.button167.Text = "D4";
             this.Info_Posto.SetToolTip(this.button167, "Settore E\r\nPosto D4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button167.UseVisualStyleBackColor = false;
@@ -2888,7 +2892,7 @@
             this.button168.Name = "button168";
             this.button168.Size = new System.Drawing.Size(30, 23);
             this.button168.TabIndex = 28;
-            this.button168.Tag = "Normal";
+            this.button168.Tag = "0Normal";
             this.button168.Text = "A1";
             this.Info_Posto.SetToolTip(this.button168, "Settore E\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button168.UseVisualStyleBackColor = false;
@@ -2902,7 +2906,7 @@
             this.button169.Name = "button169";
             this.button169.Size = new System.Drawing.Size(30, 23);
             this.button169.TabIndex = 27;
-            this.button169.Tag = "Senior";
+            this.button169.Tag = "0Senior";
             this.button169.Text = "J4";
             this.Info_Posto.SetToolTip(this.button169, "Settore E\r\nPosto J4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button169.UseVisualStyleBackColor = false;
@@ -2916,7 +2920,7 @@
             this.button170.Name = "button170";
             this.button170.Size = new System.Drawing.Size(30, 23);
             this.button170.TabIndex = 26;
-            this.button170.Tag = "Senior";
+            this.button170.Tag = "0Senior";
             this.button170.Text = "J3";
             this.Info_Posto.SetToolTip(this.button170, "Settore E\r\nPosto J3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button170.UseVisualStyleBackColor = false;
@@ -2930,7 +2934,7 @@
             this.button171.Name = "button171";
             this.button171.Size = new System.Drawing.Size(30, 23);
             this.button171.TabIndex = 25;
-            this.button171.Tag = "Senior";
+            this.button171.Tag = "0Senior";
             this.button171.Text = "J2";
             this.Info_Posto.SetToolTip(this.button171, "Settore E\r\nPosto J2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button171.UseVisualStyleBackColor = false;
@@ -2944,7 +2948,7 @@
             this.button172.Name = "button172";
             this.button172.Size = new System.Drawing.Size(30, 23);
             this.button172.TabIndex = 24;
-            this.button172.Tag = "Senior";
+            this.button172.Tag = "0Senior";
             this.button172.Text = "J1";
             this.Info_Posto.SetToolTip(this.button172, "Settore E\r\nPosto J1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button172.UseVisualStyleBackColor = false;
@@ -2958,7 +2962,7 @@
             this.button173.Name = "button173";
             this.button173.Size = new System.Drawing.Size(30, 23);
             this.button173.TabIndex = 23;
-            this.button173.Tag = "Senior";
+            this.button173.Tag = "0Senior";
             this.button173.Text = "I4";
             this.Info_Posto.SetToolTip(this.button173, "Settore E\r\nPosto I4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button173.UseVisualStyleBackColor = false;
@@ -2972,7 +2976,7 @@
             this.button174.Name = "button174";
             this.button174.Size = new System.Drawing.Size(30, 23);
             this.button174.TabIndex = 23;
-            this.button174.Tag = "Normal";
+            this.button174.Tag = "0Normal";
             this.button174.Text = "F4";
             this.Info_Posto.SetToolTip(this.button174, "Settore E\r\nPosto F4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button174.UseVisualStyleBackColor = false;
@@ -2986,7 +2990,7 @@
             this.button175.Name = "button175";
             this.button175.Size = new System.Drawing.Size(30, 23);
             this.button175.TabIndex = 22;
-            this.button175.Tag = "Senior";
+            this.button175.Tag = "0Senior";
             this.button175.Text = "I3";
             this.Info_Posto.SetToolTip(this.button175, "Settore E\r\nPosto I3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button175.UseVisualStyleBackColor = false;
@@ -3000,7 +3004,7 @@
             this.button176.Name = "button176";
             this.button176.Size = new System.Drawing.Size(30, 23);
             this.button176.TabIndex = 21;
-            this.button176.Tag = "Senior";
+            this.button176.Tag = "0Senior";
             this.button176.Text = "I2";
             this.Info_Posto.SetToolTip(this.button176, "Settore E\r\nPosto I2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button176.UseVisualStyleBackColor = false;
@@ -3014,7 +3018,7 @@
             this.button177.Name = "button177";
             this.button177.Size = new System.Drawing.Size(30, 23);
             this.button177.TabIndex = 22;
-            this.button177.Tag = "Normal";
+            this.button177.Tag = "0Normal";
             this.button177.Text = "F3";
             this.Info_Posto.SetToolTip(this.button177, "Settore E\r\nPosto F3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button177.UseVisualStyleBackColor = false;
@@ -3028,7 +3032,7 @@
             this.button178.Name = "button178";
             this.button178.Size = new System.Drawing.Size(30, 23);
             this.button178.TabIndex = 20;
-            this.button178.Tag = "Senior";
+            this.button178.Tag = "0Senior";
             this.button178.Text = "I1";
             this.Info_Posto.SetToolTip(this.button178, "Settore E\r\nPosto I1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button178.UseVisualStyleBackColor = false;
@@ -3042,7 +3046,7 @@
             this.button179.Name = "button179";
             this.button179.Size = new System.Drawing.Size(30, 23);
             this.button179.TabIndex = 21;
-            this.button179.Tag = "Normal";
+            this.button179.Tag = "0Normal";
             this.button179.Text = "F2";
             this.Info_Posto.SetToolTip(this.button179, "Settore E\r\nPosto F2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button179.UseVisualStyleBackColor = false;
@@ -3056,7 +3060,7 @@
             this.button180.Name = "button180";
             this.button180.Size = new System.Drawing.Size(30, 23);
             this.button180.TabIndex = 20;
-            this.button180.Tag = "Normal";
+            this.button180.Tag = "0Normal";
             this.button180.Text = "F1";
             this.Info_Posto.SetToolTip(this.button180, "Settore E\r\nPosto F1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button180.UseVisualStyleBackColor = false;
@@ -3070,7 +3074,7 @@
             this.button181.Name = "button181";
             this.button181.Size = new System.Drawing.Size(30, 23);
             this.button181.TabIndex = 19;
-            this.button181.Tag = "Senior";
+            this.button181.Tag = "0Senior";
             this.button181.Text = "H4";
             this.Info_Posto.SetToolTip(this.button181, "Settore E\r\nPosto H4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button181.UseVisualStyleBackColor = false;
@@ -3084,7 +3088,7 @@
             this.button182.Name = "button182";
             this.button182.Size = new System.Drawing.Size(30, 23);
             this.button182.TabIndex = 19;
-            this.button182.Tag = "Normal";
+            this.button182.Tag = "0Normal";
             this.button182.Text = "E4";
             this.Info_Posto.SetToolTip(this.button182, "Settore E\r\nPosto E4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button182.UseVisualStyleBackColor = false;
@@ -3098,7 +3102,7 @@
             this.button183.Name = "button183";
             this.button183.Size = new System.Drawing.Size(30, 23);
             this.button183.TabIndex = 18;
-            this.button183.Tag = "Senior";
+            this.button183.Tag = "0Senior";
             this.button183.Text = "H3";
             this.Info_Posto.SetToolTip(this.button183, "Settore E\r\nPosto H3\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button183.UseVisualStyleBackColor = false;
@@ -3112,7 +3116,7 @@
             this.button184.Name = "button184";
             this.button184.Size = new System.Drawing.Size(30, 23);
             this.button184.TabIndex = 18;
-            this.button184.Tag = "Normal";
+            this.button184.Tag = "0Normal";
             this.button184.Text = "E3";
             this.Info_Posto.SetToolTip(this.button184, "Settore E\r\nPosto E3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button184.UseVisualStyleBackColor = false;
@@ -3126,7 +3130,7 @@
             this.button185.Name = "button185";
             this.button185.Size = new System.Drawing.Size(30, 23);
             this.button185.TabIndex = 17;
-            this.button185.Tag = "Senior";
+            this.button185.Tag = "0Senior";
             this.button185.Text = "H2";
             this.Info_Posto.SetToolTip(this.button185, "Settore E\r\nPosto H2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button185.UseVisualStyleBackColor = false;
@@ -3140,7 +3144,7 @@
             this.button186.Name = "button186";
             this.button186.Size = new System.Drawing.Size(30, 23);
             this.button186.TabIndex = 16;
-            this.button186.Tag = "Senior";
+            this.button186.Tag = "0Senior";
             this.button186.Text = "H1";
             this.Info_Posto.SetToolTip(this.button186, "Settore E\r\nPosto H1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button186.UseVisualStyleBackColor = false;
@@ -3154,7 +3158,7 @@
             this.button187.Name = "button187";
             this.button187.Size = new System.Drawing.Size(30, 23);
             this.button187.TabIndex = 17;
-            this.button187.Tag = "Normal";
+            this.button187.Tag = "0Normal";
             this.button187.Text = "E2";
             this.Info_Posto.SetToolTip(this.button187, "Settore E\r\nPosto E2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button187.UseVisualStyleBackColor = false;
@@ -3168,7 +3172,7 @@
             this.button188.Name = "button188";
             this.button188.Size = new System.Drawing.Size(30, 23);
             this.button188.TabIndex = 15;
-            this.button188.Tag = "Normal";
+            this.button188.Tag = "0Normal";
             this.button188.Text = "G4";
             this.Info_Posto.SetToolTip(this.button188, "Settore E\r\nPosto G4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button188.UseVisualStyleBackColor = false;
@@ -3182,7 +3186,7 @@
             this.button189.Name = "button189";
             this.button189.Size = new System.Drawing.Size(30, 23);
             this.button189.TabIndex = 16;
-            this.button189.Tag = "Normal";
+            this.button189.Tag = "0Normal";
             this.button189.Text = "E1";
             this.Info_Posto.SetToolTip(this.button189, "Settore E\r\nPosto E1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button189.UseVisualStyleBackColor = false;
@@ -3196,7 +3200,7 @@
             this.button190.Name = "button190";
             this.button190.Size = new System.Drawing.Size(30, 23);
             this.button190.TabIndex = 14;
-            this.button190.Tag = "Normal";
+            this.button190.Tag = "0Normal";
             this.button190.Text = "G3";
             this.Info_Posto.SetToolTip(this.button190, "Settore E\r\nPosto G3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button190.UseVisualStyleBackColor = false;
@@ -3210,7 +3214,7 @@
             this.button191.Name = "button191";
             this.button191.Size = new System.Drawing.Size(30, 23);
             this.button191.TabIndex = 13;
-            this.button191.Tag = "Normal";
+            this.button191.Tag = "0Normal";
             this.button191.Text = "G2";
             this.Info_Posto.SetToolTip(this.button191, "Settore E\r\nPosto G2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button191.UseVisualStyleBackColor = false;
@@ -3224,7 +3228,7 @@
             this.button192.Name = "button192";
             this.button192.Size = new System.Drawing.Size(30, 23);
             this.button192.TabIndex = 12;
-            this.button192.Tag = "Normal";
+            this.button192.Tag = "0Normal";
             this.button192.Text = "G1";
             this.Info_Posto.SetToolTip(this.button192, "Settore E\r\nPosto G1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button192.UseVisualStyleBackColor = false;
@@ -3238,7 +3242,7 @@
             this.button193.Name = "button193";
             this.button193.Size = new System.Drawing.Size(30, 23);
             this.button193.TabIndex = 11;
-            this.button193.Tag = "Normal";
+            this.button193.Tag = "0Normal";
             this.button193.Text = "C4";
             this.Info_Posto.SetToolTip(this.button193, "Settore E\r\nPosto C4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button193.UseVisualStyleBackColor = false;
@@ -3252,7 +3256,7 @@
             this.button194.Name = "button194";
             this.button194.Size = new System.Drawing.Size(30, 23);
             this.button194.TabIndex = 10;
-            this.button194.Tag = "Normal";
+            this.button194.Tag = "0Normal";
             this.button194.Text = "C3";
             this.Info_Posto.SetToolTip(this.button194, "Settore E\r\nPosto C3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button194.UseVisualStyleBackColor = false;
@@ -3266,7 +3270,7 @@
             this.button195.Name = "button195";
             this.button195.Size = new System.Drawing.Size(30, 23);
             this.button195.TabIndex = 9;
-            this.button195.Tag = "Normal";
+            this.button195.Tag = "0Normal";
             this.button195.Text = "C2";
             this.Info_Posto.SetToolTip(this.button195, "Settore E\r\nPosto C2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button195.UseVisualStyleBackColor = false;
@@ -3280,7 +3284,7 @@
             this.button196.Name = "button196";
             this.button196.Size = new System.Drawing.Size(30, 23);
             this.button196.TabIndex = 8;
-            this.button196.Tag = "Normal";
+            this.button196.Tag = "0Normal";
             this.button196.Text = "C1";
             this.Info_Posto.SetToolTip(this.button196, "Settore E\r\nPosto C1\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button196.UseVisualStyleBackColor = false;
@@ -3341,7 +3345,7 @@
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(30, 23);
             this.button33.TabIndex = 27;
-            this.button33.Tag = "Senior";
+            this.button33.Tag = "0Senior";
             this.button33.Text = "J4";
             this.Info_Posto.SetToolTip(this.button33, "Settore A\r\nPosto J4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button33.UseVisualStyleBackColor = false;
@@ -3355,7 +3359,7 @@
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(30, 23);
             this.button34.TabIndex = 26;
-            this.button34.Tag = "Senior";
+            this.button34.Tag = "0Senior";
             this.button34.Text = "J3";
             this.Info_Posto.SetToolTip(this.button34, "Settore A\r\nPosto J3 \n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button34.UseVisualStyleBackColor = false;
@@ -3369,7 +3373,7 @@
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(30, 23);
             this.button35.TabIndex = 25;
-            this.button35.Tag = "Senior";
+            this.button35.Tag = "0Senior";
             this.button35.Text = "J2";
             this.Info_Posto.SetToolTip(this.button35, "Settore A\r\nPosto J2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button35.UseVisualStyleBackColor = false;
@@ -3383,7 +3387,7 @@
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(30, 23);
             this.button36.TabIndex = 24;
-            this.button36.Tag = "Senior";
+            this.button36.Tag = "0Senior";
             this.button36.Text = "J1";
             this.Info_Posto.SetToolTip(this.button36, "Settore A\r\nPosto J1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button36.UseVisualStyleBackColor = false;
@@ -3397,7 +3401,7 @@
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(30, 23);
             this.button21.TabIndex = 23;
-            this.button21.Tag = "Senior";
+            this.button21.Tag = "0Senior";
             this.button21.Text = "I4";
             this.Info_Posto.SetToolTip(this.button21, "Settore A\r\nPosto I4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button21.UseVisualStyleBackColor = false;
@@ -3411,7 +3415,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(30, 23);
             this.button5.TabIndex = 23;
-            this.button5.Tag = "Normal";
+            this.button5.Tag = "0Normal";
             this.button5.Text = "F4";
             this.Info_Posto.SetToolTip(this.button5, "Settore A\r\nPosto F4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button5.UseVisualStyleBackColor = false;
@@ -3425,7 +3429,7 @@
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(30, 23);
             this.button22.TabIndex = 22;
-            this.button22.Tag = "Senior";
+            this.button22.Tag = "0Senior";
             this.button22.Text = "I3";
             this.Info_Posto.SetToolTip(this.button22, "Settore A\r\nPosto I3 \r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button22.UseVisualStyleBackColor = false;
@@ -3439,7 +3443,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(30, 23);
             this.button10.TabIndex = 22;
-            this.button10.Tag = "Normal";
+            this.button10.Tag = "0Normal";
             this.button10.Text = "F3";
             this.Info_Posto.SetToolTip(this.button10, "Settore A\r\nPosto F3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button10.UseVisualStyleBackColor = false;
@@ -3453,7 +3457,7 @@
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(30, 23);
             this.button23.TabIndex = 21;
-            this.button23.Tag = "Senior";
+            this.button23.Tag = "0Senior";
             this.button23.Text = "I2";
             this.Info_Posto.SetToolTip(this.button23, "Settore A\r\nPosto I2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button23.UseVisualStyleBackColor = false;
@@ -3467,7 +3471,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(30, 23);
             this.button11.TabIndex = 21;
-            this.button11.Tag = "Normal";
+            this.button11.Tag = "0Normal";
             this.button11.Text = "F2";
             this.Info_Posto.SetToolTip(this.button11, "Settore A\r\nPosto F2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button11.UseVisualStyleBackColor = false;
@@ -3481,7 +3485,7 @@
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(30, 23);
             this.button24.TabIndex = 20;
-            this.button24.Tag = "Senior";
+            this.button24.Tag = "0Senior";
             this.button24.Text = "I1";
             this.Info_Posto.SetToolTip(this.button24, "Settore A\r\nPosto I1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button24.UseVisualStyleBackColor = false;
@@ -3495,7 +3499,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(30, 23);
             this.button12.TabIndex = 20;
-            this.button12.Tag = "Normal";
+            this.button12.Tag = "0Normal";
             this.button12.Text = "F1";
             this.Info_Posto.SetToolTip(this.button12, "Settore A\r\nPosto F1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button12.UseVisualStyleBackColor = false;
@@ -3509,7 +3513,7 @@
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(30, 23);
             this.button25.TabIndex = 19;
-            this.button25.Tag = "Senior";
+            this.button25.Tag = "0Senior";
             this.button25.Text = "H4";
             this.Info_Posto.SetToolTip(this.button25, "Settore A\r\nPosto H4\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button25.UseVisualStyleBackColor = false;
@@ -3523,7 +3527,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(30, 23);
             this.button13.TabIndex = 19;
-            this.button13.Tag = "Normal";
+            this.button13.Tag = "0Normal";
             this.button13.Text = "E4";
             this.Info_Posto.SetToolTip(this.button13, "Settore A\r\nPosto E4 \r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button13.UseVisualStyleBackColor = false;
@@ -3537,7 +3541,7 @@
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(30, 23);
             this.button26.TabIndex = 18;
-            this.button26.Tag = "Senior";
+            this.button26.Tag = "0Senior";
             this.button26.Text = "H3";
             this.Info_Posto.SetToolTip(this.button26, "Settore A\r\nPosto H3 \r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button26.UseVisualStyleBackColor = false;
@@ -3551,7 +3555,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(30, 23);
             this.button14.TabIndex = 18;
-            this.button14.Tag = "Normal";
+            this.button14.Tag = "0Normal";
             this.button14.Text = "E3";
             this.Info_Posto.SetToolTip(this.button14, "Settore A\r\nPosto E3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button14.UseVisualStyleBackColor = false;
@@ -3565,7 +3569,7 @@
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(30, 23);
             this.button27.TabIndex = 17;
-            this.button27.Tag = "Senior";
+            this.button27.Tag = "0Senior";
             this.button27.Text = "H2";
             this.Info_Posto.SetToolTip(this.button27, "Settore A\r\nPosto H2\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button27.UseVisualStyleBackColor = false;
@@ -3579,7 +3583,7 @@
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(30, 23);
             this.button28.TabIndex = 16;
-            this.button28.Tag = "Senior";
+            this.button28.Tag = "0Senior";
             this.button28.Text = "H1";
             this.Info_Posto.SetToolTip(this.button28, "Settore A\r\nPosto H1\r\n\r\nTipologia - Senior\r\nCosto - 30€");
             this.button28.UseVisualStyleBackColor = false;
@@ -3593,7 +3597,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(30, 23);
             this.button15.TabIndex = 17;
-            this.button15.Tag = "Normal";
+            this.button15.Tag = "0Normal";
             this.button15.Text = "E2";
             this.Info_Posto.SetToolTip(this.button15, "Settore A\r\nPosto E2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button15.UseVisualStyleBackColor = false;
@@ -3607,10 +3611,11 @@
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(30, 23);
             this.button29.TabIndex = 15;
-            this.button29.Tag = "Normal";
+            this.button29.Tag = "0Normal";
             this.button29.Text = "G4";
             this.Info_Posto.SetToolTip(this.button29, "Settore A\r\nPosto G4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button16
             // 
@@ -3620,7 +3625,7 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(30, 23);
             this.button16.TabIndex = 16;
-            this.button16.Tag = "Normal";
+            this.button16.Tag = "0Normal";
             this.button16.Text = "E1";
             this.Info_Posto.SetToolTip(this.button16, "Settore A\r\nPosto E1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button16.UseVisualStyleBackColor = false;
@@ -3634,10 +3639,11 @@
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(30, 23);
             this.button30.TabIndex = 14;
-            this.button30.Tag = "Normal";
+            this.button30.Tag = "0Normal";
             this.button30.Text = "G3";
             this.Info_Posto.SetToolTip(this.button30, "Settore A\r\nPosto G3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // button17
             // 
@@ -3647,7 +3653,7 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(30, 23);
             this.button17.TabIndex = 15;
-            this.button17.Tag = "Normal";
+            this.button17.Tag = "0Normal";
             this.button17.Text = "D4";
             this.Info_Posto.SetToolTip(this.button17, "Settore A\r\nPosto D4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button17.UseVisualStyleBackColor = false;
@@ -3661,7 +3667,7 @@
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(30, 23);
             this.button31.TabIndex = 13;
-            this.button31.Tag = "Normal";
+            this.button31.Tag = "0Normal";
             this.button31.Text = "G2";
             this.Info_Posto.SetToolTip(this.button31, "Settore A\r\nPosto G2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button31.UseVisualStyleBackColor = false;
@@ -3675,7 +3681,7 @@
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(30, 23);
             this.button18.TabIndex = 14;
-            this.button18.Tag = "Normal";
+            this.button18.Tag = "0Normal";
             this.button18.Text = "D3";
             this.Info_Posto.SetToolTip(this.button18, "Settore A\r\nPosto D3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.button18.UseVisualStyleBackColor = false;
@@ -3689,7 +3695,7 @@
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(30, 23);
             this.button32.TabIndex = 12;
-            this.button32.Tag = "Normal";
+            this.button32.Tag = "0Normal";
             this.button32.Text = "G1";
             this.Info_Posto.SetToolTip(this.button32, "Settore A\r\nPosto G1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.button32.UseVisualStyleBackColor = false;
@@ -3703,7 +3709,7 @@
             this.A_D2.Name = "A_D2";
             this.A_D2.Size = new System.Drawing.Size(30, 23);
             this.A_D2.TabIndex = 13;
-            this.A_D2.Tag = "Normal";
+            this.A_D2.Tag = "0Normal";
             this.A_D2.Text = "D2";
             this.Info_Posto.SetToolTip(this.A_D2, "Settore A\r\nPosto D2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.A_D2.UseVisualStyleBackColor = false;
@@ -3717,7 +3723,7 @@
             this.A_D1.Name = "A_D1";
             this.A_D1.Size = new System.Drawing.Size(30, 23);
             this.A_D1.TabIndex = 12;
-            this.A_D1.Tag = "Normal";
+            this.A_D1.Tag = "0Normal";
             this.A_D1.Text = "D1";
             this.Info_Posto.SetToolTip(this.A_D1, "Settore A\r\nPosto D1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.A_D1.UseVisualStyleBackColor = false;
@@ -3731,7 +3737,7 @@
             this.A_C4.Name = "A_C4";
             this.A_C4.Size = new System.Drawing.Size(30, 23);
             this.A_C4.TabIndex = 11;
-            this.A_C4.Tag = "Normal";
+            this.A_C4.Tag = "0Normal";
             this.A_C4.Text = "C4";
             this.Info_Posto.SetToolTip(this.A_C4, "Settore A\r\nPosto C4 \r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.A_C4.UseVisualStyleBackColor = false;
@@ -3745,7 +3751,7 @@
             this.A_C3.Name = "A_C3";
             this.A_C3.Size = new System.Drawing.Size(30, 23);
             this.A_C3.TabIndex = 10;
-            this.A_C3.Tag = "Normal";
+            this.A_C3.Tag = "0Normal";
             this.A_C3.Text = "C3";
             this.Info_Posto.SetToolTip(this.A_C3, "Settore A\r\nPosto C3\nTipologia - Normale\r\nCosto - 20€");
             this.A_C3.UseVisualStyleBackColor = false;
@@ -3759,7 +3765,7 @@
             this.A_C2.Name = "A_C2";
             this.A_C2.Size = new System.Drawing.Size(30, 23);
             this.A_C2.TabIndex = 9;
-            this.A_C2.Tag = "Normal";
+            this.A_C2.Tag = "0Normal";
             this.A_C2.Text = "C2";
             this.Info_Posto.SetToolTip(this.A_C2, "Settore A\r\nPosto C2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.A_C2.UseVisualStyleBackColor = false;
@@ -3773,7 +3779,7 @@
             this.A_C1.Name = "A_C1";
             this.A_C1.Size = new System.Drawing.Size(30, 23);
             this.A_C1.TabIndex = 8;
-            this.A_C1.Tag = "Normal";
+            this.A_C1.Tag = "0Normal";
             this.A_C1.Text = "C1";
             this.Info_Posto.SetToolTip(this.A_C1, "Settore A\r\nPosto C1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.A_C1.UseVisualStyleBackColor = false;
@@ -3787,7 +3793,7 @@
             this.A_B4.Name = "A_B4";
             this.A_B4.Size = new System.Drawing.Size(30, 23);
             this.A_B4.TabIndex = 7;
-            this.A_B4.Tag = "Normal";
+            this.A_B4.Tag = "0Normal";
             this.A_B4.Text = "B4";
             this.Info_Posto.SetToolTip(this.A_B4, "Settore A\r\nPosto B4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.A_B4.UseVisualStyleBackColor = false;
@@ -3801,7 +3807,7 @@
             this.A_B3.Name = "A_B3";
             this.A_B3.Size = new System.Drawing.Size(30, 23);
             this.A_B3.TabIndex = 6;
-            this.A_B3.Tag = "Normal";
+            this.A_B3.Tag = "0Normal";
             this.A_B3.Text = "B3";
             this.Info_Posto.SetToolTip(this.A_B3, "Settore A\r\nPosto B3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.A_B3.UseVisualStyleBackColor = false;
@@ -3815,7 +3821,7 @@
             this.A_B2.Name = "A_B2";
             this.A_B2.Size = new System.Drawing.Size(30, 23);
             this.A_B2.TabIndex = 5;
-            this.A_B2.Tag = "Normal";
+            this.A_B2.Tag = "0Normal";
             this.A_B2.Text = "B2";
             this.Info_Posto.SetToolTip(this.A_B2, "Settore A\r\nPosto B2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.A_B2.UseVisualStyleBackColor = false;
@@ -3829,7 +3835,7 @@
             this.A__B1.Name = "A__B1";
             this.A__B1.Size = new System.Drawing.Size(30, 23);
             this.A__B1.TabIndex = 4;
-            this.A__B1.Tag = "Normal";
+            this.A__B1.Tag = "0Normal";
             this.A__B1.Text = "B1";
             this.Info_Posto.SetToolTip(this.A__B1, "Settore A\r\nPosto B1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.A__B1.UseVisualStyleBackColor = false;
@@ -3843,7 +3849,7 @@
             this.A_A4.Name = "A_A4";
             this.A_A4.Size = new System.Drawing.Size(30, 23);
             this.A_A4.TabIndex = 3;
-            this.A_A4.Tag = "Normal";
+            this.A_A4.Tag = "0Normal";
             this.A_A4.Text = "A4";
             this.Info_Posto.SetToolTip(this.A_A4, "Settore A\r\nPosto A4\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.A_A4.UseVisualStyleBackColor = false;
@@ -3856,7 +3862,7 @@
             this.A_A3.Name = "A_A3";
             this.A_A3.Size = new System.Drawing.Size(30, 23);
             this.A_A3.TabIndex = 2;
-            this.A_A3.Tag = "Normal";
+            this.A_A3.Tag = "0Normal";
             this.A_A3.Text = "A3";
             this.Info_Posto.SetToolTip(this.A_A3, "Settore A\r\nPosto A3\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.A_A3.UseVisualStyleBackColor = false;
@@ -3870,7 +3876,7 @@
             this.A_A2.Name = "A_A2";
             this.A_A2.Size = new System.Drawing.Size(30, 23);
             this.A_A2.TabIndex = 1;
-            this.A_A2.Tag = "Normal";
+            this.A_A2.Tag = "0Normal";
             this.A_A2.Text = "A2";
             this.Info_Posto.SetToolTip(this.A_A2, "Settore A\r\nPosto A2\r\n\r\nTipologia - Normale\r\nCosto - 20€");
             this.A_A2.UseVisualStyleBackColor = false;
@@ -3884,7 +3890,7 @@
             this.A_A1.Name = "A_A1";
             this.A_A1.Size = new System.Drawing.Size(30, 23);
             this.A_A1.TabIndex = 0;
-            this.A_A1.Tag = "Normal";
+            this.A_A1.Tag = "0Normal";
             this.A_A1.Text = "A1";
             this.Info_Posto.SetToolTip(this.A_A1, "Settore A\r\nPosto A1\r\n\r\nTipologia - Normale\r\nCosto - 20€\r\n");
             this.A_A1.UseVisualStyleBackColor = false;
@@ -4121,14 +4127,35 @@
             this.Login_Btn.UseVisualStyleBackColor = true;
             this.Login_Btn.Click += new System.EventHandler(this.Login_Register);
             // 
+            // Pannello_Pagamento
+            // 
+            this.Pannello_Pagamento.BackColor = System.Drawing.SystemColors.Control;
+            this.Pannello_Pagamento.Controls.Add(this.Btn_Pagamento);
+            this.Pannello_Pagamento.Location = new System.Drawing.Point(0, 495);
+            this.Pannello_Pagamento.Name = "Pannello_Pagamento";
+            this.Pannello_Pagamento.Size = new System.Drawing.Size(1151, 434);
+            this.Pannello_Pagamento.TabIndex = 14;
+            this.Pannello_Pagamento.Visible = false;
+            // 
+            // Btn_Pagamento
+            // 
+            this.Btn_Pagamento.Location = new System.Drawing.Point(468, 307);
+            this.Btn_Pagamento.Name = "Btn_Pagamento";
+            this.Btn_Pagamento.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Pagamento.TabIndex = 0;
+            this.Btn_Pagamento.Text = "Paga Ora";
+            this.Btn_Pagamento.UseVisualStyleBackColor = true;
+            this.Btn_Pagamento.Click += new System.EventHandler(this.Btn_Pagamento_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
-            this.Controls.Add(this.Pannello_Login);
             this.Controls.Add(this.Pannello_Posti);
+            this.Controls.Add(this.Pannello_Pagamento);
+            this.Controls.Add(this.Pannello_Login);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.Pannello_Principale);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -4183,6 +4210,7 @@
             this.Group_Gender.ResumeLayout(false);
             this.Group_Gender.PerformLayout();
             this.Pgn_Login.ResumeLayout(false);
+            this.Pannello_Pagamento.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4424,7 +4452,6 @@
         private System.Windows.Forms.Button button146;
         private System.Windows.Forms.Button button147;
         private System.Windows.Forms.Button Prato_VIP;
-        private System.Windows.Forms.Label Info_Error;
         private System.Windows.Forms.GroupBox TitoloArtista;
         private System.Windows.Forms.Label Artista_Lbl;
         private System.Windows.Forms.Label TitoloSpettacolo_Lbl;
@@ -4462,6 +4489,9 @@
         private System.Windows.Forms.GroupBox Group_Gender;
         private System.Windows.Forms.RadioButton Female_Rdb;
         private System.Windows.Forms.RadioButton Male_Rdb;
+        private System.Windows.Forms.Panel Pannello_Pagamento;
+        private System.Windows.Forms.Button Btn_ConfemaPosti;
+        private System.Windows.Forms.Button Btn_Pagamento;
     }
 }
 
