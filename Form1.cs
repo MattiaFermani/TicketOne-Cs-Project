@@ -683,14 +683,6 @@ namespace Biglietti_concerto
 
         private void Pannello_Posti_MouseMove(object sender, MouseEventArgs e)
         {
-            if (Login == true)
-            {
-                Info_Error.Visible = false;
-            }
-            else
-            {
-                Info_Error.Visible = true;
-            }
         }
 
         private void Pgn_Register_Click(object sender, EventArgs e)
