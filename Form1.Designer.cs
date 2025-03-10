@@ -4001,6 +4001,7 @@
             this.txt_codicefiscale.Name = "txt_codicefiscale";
             this.txt_codicefiscale.Size = new System.Drawing.Size(253, 22);
             this.txt_codicefiscale.TabIndex = 15;
+            this.txt_codicefiscale.TextChanged += new System.EventHandler(this.txt_codicefiscale_TextChanged);
             // 
             // label8
             // 
