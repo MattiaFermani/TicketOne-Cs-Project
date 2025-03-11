@@ -69,10 +69,6 @@
             this.Pgn_SelezionePosti = new System.Windows.Forms.TabPage();
             this.Panel_Seats = new System.Windows.Forms.Panel();
             this.Btn_ConfemaPosti = new System.Windows.Forms.Button();
-            this.PratoPostiNum_Lbl = new System.Windows.Forms.Label();
-            this.PratoPiu = new System.Windows.Forms.Button();
-            this.PratoMeno = new System.Windows.Forms.Button();
-            this.Prato_VIP = new System.Windows.Forms.Button();
             this.Settore_D = new System.Windows.Forms.Panel();
             this.button108 = new System.Windows.Forms.Button();
             this.button109 = new System.Windows.Forms.Button();
@@ -196,7 +192,6 @@
             this.button65 = new System.Windows.Forms.Button();
             this.button66 = new System.Windows.Forms.Button();
             this.button67 = new System.Windows.Forms.Button();
-            this.Prato = new System.Windows.Forms.Button();
             this.Settore_E = new System.Windows.Forms.Panel();
             this.button157 = new System.Windows.Forms.Button();
             this.button158 = new System.Windows.Forms.Button();
@@ -707,10 +702,10 @@
             this.Pgn_Informazioni.Controls.Add(this.groupBox1);
             this.Pgn_Informazioni.Controls.Add(this.Img_Info);
             this.Pgn_Informazioni.Controls.Add(this.TitoloArtista);
-            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(1175, 437);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(1175, 440);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -733,7 +728,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(284, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 25);
+            this.label2.Size = new System.Drawing.Size(44, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Data";
             // 
@@ -743,7 +738,7 @@
             this.Data_Lst.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Data_Lst.FormattingEnabled = true;
             this.Data_Lst.HorizontalScrollbar = true;
-            this.Data_Lst.ItemHeight = 25;
+            this.Data_Lst.ItemHeight = 20;
             this.Data_Lst.Location = new System.Drawing.Point(288, 55);
             this.Data_Lst.Name = "Data_Lst";
             this.Data_Lst.Size = new System.Drawing.Size(184, 100);
@@ -755,7 +750,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 25);
+            this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Luogo";
             // 
@@ -765,7 +760,7 @@
             this.Luogo_Lst.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Luogo_Lst.FormattingEnabled = true;
             this.Luogo_Lst.HorizontalScrollbar = true;
-            this.Luogo_Lst.ItemHeight = 25;
+            this.Luogo_Lst.ItemHeight = 20;
             this.Luogo_Lst.Location = new System.Drawing.Point(13, 55);
             this.Luogo_Lst.Name = "Luogo_Lst";
             this.Luogo_Lst.Size = new System.Drawing.Size(281, 100);
@@ -808,7 +803,7 @@
             this.Artista_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Artista_Lbl.Location = new System.Drawing.Point(9, 71);
             this.Artista_Lbl.Name = "Artista_Lbl";
-            this.Artista_Lbl.Size = new System.Drawing.Size(67, 25);
+            this.Artista_Lbl.Size = new System.Drawing.Size(55, 20);
             this.Artista_Lbl.TabIndex = 1;
             this.Artista_Lbl.Text = "Artista";
             // 
@@ -818,17 +813,17 @@
             this.TitoloSpettacolo_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitoloSpettacolo_Lbl.Location = new System.Drawing.Point(7, 26);
             this.TitoloSpettacolo_Lbl.Name = "TitoloSpettacolo_Lbl";
-            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(115, 42);
+            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(95, 36);
             this.TitoloSpettacolo_Lbl.TabIndex = 0;
             this.TitoloSpettacolo_Lbl.Text = "Titolo";
             // 
             // Pgn_SelezionePosti
             // 
             this.Pgn_SelezionePosti.Controls.Add(this.Panel_Seats);
-            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1175, 437);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(1175, 440);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
@@ -837,14 +832,9 @@
             // Panel_Seats
             // 
             this.Panel_Seats.Controls.Add(this.Btn_ConfemaPosti);
-            this.Panel_Seats.Controls.Add(this.PratoPostiNum_Lbl);
-            this.Panel_Seats.Controls.Add(this.PratoPiu);
-            this.Panel_Seats.Controls.Add(this.PratoMeno);
-            this.Panel_Seats.Controls.Add(this.Prato_VIP);
             this.Panel_Seats.Controls.Add(this.Settore_D);
             this.Panel_Seats.Controls.Add(this.Settore_C);
             this.Panel_Seats.Controls.Add(this.Settore_B);
-            this.Panel_Seats.Controls.Add(this.Prato);
             this.Panel_Seats.Controls.Add(this.Settore_E);
             this.Panel_Seats.Controls.Add(this.Settore_A);
             this.Panel_Seats.Controls.Add(this.Palco);
@@ -862,54 +852,6 @@
             this.Btn_ConfemaPosti.Text = "Conferma Posti";
             this.Btn_ConfemaPosti.UseVisualStyleBackColor = true;
             this.Btn_ConfemaPosti.Click += new System.EventHandler(this.Btn_ConfemaPosti_Click);
-            // 
-            // PratoPostiNum_Lbl
-            // 
-            this.PratoPostiNum_Lbl.AutoSize = true;
-            this.PratoPostiNum_Lbl.Location = new System.Drawing.Point(575, 172);
-            this.PratoPostiNum_Lbl.Name = "PratoPostiNum_Lbl";
-            this.PratoPostiNum_Lbl.Size = new System.Drawing.Size(35, 16);
-            this.PratoPostiNum_Lbl.TabIndex = 54;
-            this.PratoPostiNum_Lbl.Text = "NaN";
-            this.PratoPostiNum_Lbl.Visible = false;
-            // 
-            // PratoPiu
-            // 
-            this.PratoPiu.FlatAppearance.BorderSize = 0;
-            this.PratoPiu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PratoPiu.Location = new System.Drawing.Point(611, 162);
-            this.PratoPiu.Name = "PratoPiu";
-            this.PratoPiu.Size = new System.Drawing.Size(34, 23);
-            this.PratoPiu.TabIndex = 53;
-            this.PratoPiu.Text = "+1";
-            this.PratoPiu.UseVisualStyleBackColor = true;
-            this.PratoPiu.Visible = false;
-            // 
-            // PratoMeno
-            // 
-            this.PratoMeno.FlatAppearance.BorderSize = 0;
-            this.PratoMeno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PratoMeno.Location = new System.Drawing.Point(502, 162);
-            this.PratoMeno.Name = "PratoMeno";
-            this.PratoMeno.Size = new System.Drawing.Size(34, 23);
-            this.PratoMeno.TabIndex = 52;
-            this.PratoMeno.Text = "- 1";
-            this.PratoMeno.UseMnemonic = false;
-            this.PratoMeno.UseVisualStyleBackColor = true;
-            this.PratoMeno.Visible = false;
-            // 
-            // Prato_VIP
-            // 
-            this.Prato_VIP.BackColor = System.Drawing.Color.Gold;
-            this.Prato_VIP.Location = new System.Drawing.Point(469, 104);
-            this.Prato_VIP.Name = "Prato_VIP";
-            this.Prato_VIP.Size = new System.Drawing.Size(212, 27);
-            this.Prato_VIP.TabIndex = 51;
-            this.Prato_VIP.Tag = "VIP";
-            this.Prato_VIP.Text = "Sotto Palco";
-            this.Info_Posto.SetToolTip(this.Prato_VIP, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - VIP\r\nCosto - 60€");
-            this.Prato_VIP.UseVisualStyleBackColor = false;
-            this.Prato_VIP.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
             // Settore_D
             // 
@@ -2732,19 +2674,6 @@
             this.button67.UseVisualStyleBackColor = false;
             this.button67.Click += new System.EventHandler(this.PostoSelezionato_Click);
             // 
-            // Prato
-            // 
-            this.Prato.BackColor = System.Drawing.Color.PaleGreen;
-            this.Prato.Location = new System.Drawing.Point(469, 154);
-            this.Prato.Name = "Prato";
-            this.Prato.Size = new System.Drawing.Size(212, 120);
-            this.Prato.TabIndex = 50;
-            this.Prato.Tag = "Prato";
-            this.Prato.Text = "Prato";
-            this.Info_Posto.SetToolTip(this.Prato, "Settore F\r\nPosto In Piedi\r\n\r\nTipologia - Prato\r\nCosto - 15€");
-            this.Prato.UseVisualStyleBackColor = false;
-            this.Prato.Click += new System.EventHandler(this.PostoSelezionato_Click);
-            // 
             // Settore_E
             // 
             this.Settore_E.Controls.Add(this.button157);
@@ -3963,9 +3892,9 @@
             // 
             this.Palco.BackColor = System.Drawing.Color.Silver;
             this.Palco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Palco.Location = new System.Drawing.Point(469, 7);
+            this.Palco.Location = new System.Drawing.Point(466, 7);
             this.Palco.Name = "Palco";
-            this.Palco.Size = new System.Drawing.Size(212, 94);
+            this.Palco.Size = new System.Drawing.Size(212, 277);
             this.Palco.TabIndex = 44;
             this.Palco.Text = "Palco";
             this.Palco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4011,10 +3940,10 @@
             this.Pgn_Login.Controls.Add(this.txt_L_Password);
             this.Pgn_Login.Controls.Add(this.txt_L_Email);
             this.Pgn_Login.Controls.Add(this.Login_Btn);
-            this.Pgn_Login.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Login.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Login.Name = "Pgn_Login";
             this.Pgn_Login.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Login.Size = new System.Drawing.Size(1143, 405);
+            this.Pgn_Login.Size = new System.Drawing.Size(1143, 408);
             this.Pgn_Login.TabIndex = 1;
             this.Pgn_Login.Text = "Login";
             this.Pgn_Login.UseVisualStyleBackColor = true;
@@ -4025,7 +3954,7 @@
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(482, 38);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(133, 44);
+            this.label16.Size = new System.Drawing.Size(105, 35);
             this.label16.TabIndex = 24;
             this.label16.Text = "Log In";
             // 
@@ -4036,7 +3965,7 @@
             this.Lbl_register.ForeColor = System.Drawing.Color.RoyalBlue;
             this.Lbl_register.Location = new System.Drawing.Point(457, 287);
             this.Lbl_register.Name = "Lbl_register";
-            this.Lbl_register.Size = new System.Drawing.Size(232, 17);
+            this.Lbl_register.Size = new System.Drawing.Size(176, 13);
             this.Lbl_register.TabIndex = 23;
             this.Lbl_register.Text = "Non hai un Account? Registrati ora!";
             this.Lbl_register.Click += new System.EventHandler(this.Lbl_register_Click);
@@ -4046,7 +3975,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(418, 155);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(170, 16);
+            this.label15.Size = new System.Drawing.Size(134, 13);
             this.label15.TabIndex = 22;
             this.label15.Text = "Email, Username, Telefono";
             // 
@@ -4055,7 +3984,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(418, 208);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 16);
+            this.label10.Size = new System.Drawing.Size(53, 13);
             this.label10.TabIndex = 21;
             this.label10.Text = "Password";
             // 
@@ -4064,7 +3993,7 @@
             this.txt_L_Password.Location = new System.Drawing.Point(421, 224);
             this.txt_L_Password.Name = "txt_L_Password";
             this.txt_L_Password.PasswordChar = '*';
-            this.txt_L_Password.Size = new System.Drawing.Size(253, 22);
+            this.txt_L_Password.Size = new System.Drawing.Size(253, 20);
             this.txt_L_Password.TabIndex = 18;
             this.txt_L_Password.UseSystemPasswordChar = true;
             this.txt_L_Password.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_L_Password_PreviewKeyDown);
@@ -4073,7 +4002,7 @@
             // 
             this.txt_L_Email.Location = new System.Drawing.Point(421, 171);
             this.txt_L_Email.Name = "txt_L_Email";
-            this.txt_L_Email.Size = new System.Drawing.Size(253, 22);
+            this.txt_L_Email.Size = new System.Drawing.Size(253, 20);
             this.txt_L_Email.TabIndex = 14;
             // 
             // Login_Btn
@@ -4112,10 +4041,10 @@
             this.Pgn_Register.Controls.Add(this.label4);
             this.Pgn_Register.Controls.Add(this.txt_nome);
             this.Pgn_Register.Controls.Add(this.label3);
-            this.Pgn_Register.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Register.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Register.Name = "Pgn_Register";
             this.Pgn_Register.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Register.Size = new System.Drawing.Size(1143, 405);
+            this.Pgn_Register.Size = new System.Drawing.Size(1143, 408);
             this.Pgn_Register.TabIndex = 0;
             this.Pgn_Register.Text = "Registrazione";
             this.Pgn_Register.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pgn_Register_MouseMove);
@@ -4136,7 +4065,7 @@
             this.lbl_admin.AutoSize = true;
             this.lbl_admin.Location = new System.Drawing.Point(618, 310);
             this.lbl_admin.Name = "lbl_admin";
-            this.lbl_admin.Size = new System.Drawing.Size(159, 16);
+            this.lbl_admin.Size = new System.Drawing.Size(124, 13);
             this.lbl_admin.TabIndex = 21;
             this.lbl_admin.Text = "Password Amministratore";
             this.lbl_admin.Visible = false;
@@ -4146,7 +4075,7 @@
             this.txb_psw_admin.Location = new System.Drawing.Point(621, 326);
             this.txb_psw_admin.Name = "txb_psw_admin";
             this.txb_psw_admin.PasswordChar = '*';
-            this.txb_psw_admin.Size = new System.Drawing.Size(253, 22);
+            this.txb_psw_admin.Size = new System.Drawing.Size(253, 20);
             this.txb_psw_admin.TabIndex = 28;
             this.txb_psw_admin.UseSystemPasswordChar = true;
             this.txb_psw_admin.Visible = false;
@@ -4156,7 +4085,7 @@
             this.Chk_IsAdmin.AutoSize = true;
             this.Chk_IsAdmin.Location = new System.Drawing.Point(621, 273);
             this.Chk_IsAdmin.Name = "Chk_IsAdmin";
-            this.Chk_IsAdmin.Size = new System.Drawing.Size(87, 20);
+            this.Chk_IsAdmin.Size = new System.Drawing.Size(72, 17);
             this.Chk_IsAdmin.TabIndex = 27;
             this.Chk_IsAdmin.Text = "Is Admin?";
             this.Chk_IsAdmin.UseVisualStyleBackColor = true;
@@ -4168,7 +4097,7 @@
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(474, 21);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(147, 44);
+            this.label17.Size = new System.Drawing.Size(117, 35);
             this.label17.TabIndex = 26;
             this.label17.Text = "Sign In";
             // 
@@ -4177,7 +4106,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(658, 91);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 16);
+            this.label14.Size = new System.Drawing.Size(55, 13);
             this.label14.TabIndex = 25;
             this.label14.Text = "Username";
             // 
@@ -4185,7 +4114,7 @@
             // 
             this.txt_nome_visualizzato.Location = new System.Drawing.Point(661, 107);
             this.txt_nome_visualizzato.Name = "txt_nome_visualizzato";
-            this.txt_nome_visualizzato.Size = new System.Drawing.Size(204, 22);
+            this.txt_nome_visualizzato.Size = new System.Drawing.Size(204, 20);
             this.txt_nome_visualizzato.TabIndex = 24;
             // 
             // label12
@@ -4193,7 +4122,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(545, 216);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(173, 16);
+            this.label12.Size = new System.Drawing.Size(137, 13);
             this.label12.TabIndex = 23;
             this.label12.Text = "Telefono - Non Obbligatorio";
             // 
@@ -4201,7 +4130,7 @@
             // 
             this.txt_telefono.Location = new System.Drawing.Point(548, 232);
             this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(204, 22);
+            this.txt_telefono.Size = new System.Drawing.Size(204, 20);
             this.txt_telefono.TabIndex = 22;
             // 
             // groupBox2
@@ -4222,7 +4151,7 @@
             this.txt_password.Location = new System.Drawing.Point(6, 19);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
-            this.txt_password.Size = new System.Drawing.Size(253, 22);
+            this.txt_password.Size = new System.Drawing.Size(253, 20);
             this.txt_password.TabIndex = 17;
             this.txt_password.UseSystemPasswordChar = true;
             // 
@@ -4231,7 +4160,7 @@
             this.txt_confermapsw.Location = new System.Drawing.Point(6, 72);
             this.txt_confermapsw.Name = "txt_confermapsw";
             this.txt_confermapsw.PasswordChar = '*';
-            this.txt_confermapsw.Size = new System.Drawing.Size(253, 22);
+            this.txt_confermapsw.Size = new System.Drawing.Size(253, 20);
             this.txt_confermapsw.TabIndex = 18;
             this.txt_confermapsw.UseSystemPasswordChar = true;
             this.txt_confermapsw.TextChanged += new System.EventHandler(this.txt_confermapsw_TextChanged);
@@ -4241,7 +4170,7 @@
             this.Lbl_ConfermaPsw.AutoSize = true;
             this.Lbl_ConfermaPsw.Location = new System.Drawing.Point(6, 56);
             this.Lbl_ConfermaPsw.Name = "Lbl_ConfermaPsw";
-            this.Lbl_ConfermaPsw.Size = new System.Drawing.Size(128, 16);
+            this.Lbl_ConfermaPsw.Size = new System.Drawing.Size(101, 13);
             this.Lbl_ConfermaPsw.TabIndex = 20;
             this.Lbl_ConfermaPsw.Text = "Conferma Password";
             // 
@@ -4261,7 +4190,7 @@
             this.Female_Rdb.AutoSize = true;
             this.Female_Rdb.Location = new System.Drawing.Point(119, 14);
             this.Female_Rdb.Name = "Female_Rdb";
-            this.Female_Rdb.Size = new System.Drawing.Size(84, 20);
+            this.Female_Rdb.Size = new System.Drawing.Size(67, 17);
             this.Female_Rdb.TabIndex = 1;
             this.Female_Rdb.TabStop = true;
             this.Female_Rdb.Text = "Femmina";
@@ -4272,7 +4201,7 @@
             this.Male_Rdb.AutoSize = true;
             this.Male_Rdb.Location = new System.Drawing.Point(22, 14);
             this.Male_Rdb.Name = "Male_Rdb";
-            this.Male_Rdb.Size = new System.Drawing.Size(79, 20);
+            this.Male_Rdb.Size = new System.Drawing.Size(65, 17);
             this.Male_Rdb.TabIndex = 0;
             this.Male_Rdb.TabStop = true;
             this.Male_Rdb.Text = "Maschio";
@@ -4282,7 +4211,7 @@
             // 
             this.txt_codicefiscale.Location = new System.Drawing.Point(547, 192);
             this.txt_codicefiscale.Name = "txt_codicefiscale";
-            this.txt_codicefiscale.Size = new System.Drawing.Size(204, 22);
+            this.txt_codicefiscale.Size = new System.Drawing.Size(204, 20);
             this.txt_codicefiscale.TabIndex = 15;
             this.txt_codicefiscale.TextChanged += new System.EventHandler(this.txt_codicefiscale_TextChanged);
             // 
@@ -4291,7 +4220,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(544, 176);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 16);
+            this.label8.Size = new System.Drawing.Size(73, 13);
             this.label8.TabIndex = 14;
             this.label8.Text = "Codice fiscale";
             // 
@@ -4299,7 +4228,7 @@
             // 
             this.txt_email.Location = new System.Drawing.Point(338, 232);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(204, 22);
+            this.txt_email.Size = new System.Drawing.Size(204, 20);
             this.txt_email.TabIndex = 13;
             // 
             // label7
@@ -4307,7 +4236,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(335, 216);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 16);
+            this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "Email";
             // 
@@ -4328,7 +4257,7 @@
             this.Comuni_Lst.FormattingEnabled = true;
             this.Comuni_Lst.Location = new System.Drawing.Point(338, 146);
             this.Comuni_Lst.Name = "Comuni_Lst";
-            this.Comuni_Lst.Size = new System.Drawing.Size(204, 24);
+            this.Comuni_Lst.Size = new System.Drawing.Size(204, 21);
             this.Comuni_Lst.TabIndex = 10;
             // 
             // label6
@@ -4336,7 +4265,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(335, 130);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 16);
+            this.label6.Size = new System.Drawing.Size(94, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "Comune di nascita";
             // 
@@ -4345,7 +4274,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(545, 130);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 16);
+            this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Data di nascita";
             // 
@@ -4354,14 +4283,14 @@
             this.dtp_nascita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_nascita.Location = new System.Drawing.Point(548, 146);
             this.dtp_nascita.Name = "dtp_nascita";
-            this.dtp_nascita.Size = new System.Drawing.Size(204, 22);
+            this.dtp_nascita.Size = new System.Drawing.Size(204, 20);
             this.dtp_nascita.TabIndex = 6;
             // 
             // txt_cognome
             // 
             this.txt_cognome.Location = new System.Drawing.Point(450, 107);
             this.txt_cognome.Name = "txt_cognome";
-            this.txt_cognome.Size = new System.Drawing.Size(205, 22);
+            this.txt_cognome.Size = new System.Drawing.Size(205, 20);
             this.txt_cognome.TabIndex = 3;
             // 
             // label4
@@ -4369,7 +4298,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(449, 91);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 16);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Cognome";
             // 
@@ -4377,7 +4306,7 @@
             // 
             this.txt_nome.Location = new System.Drawing.Point(242, 107);
             this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(204, 22);
+            this.txt_nome.Size = new System.Drawing.Size(204, 20);
             this.txt_nome.TabIndex = 1;
             // 
             // label3
@@ -4385,7 +4314,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(240, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Nome";
             // 
@@ -4442,10 +4371,10 @@
             this.Pgn_Profilo.Controls.Add(this.label11);
             this.Pgn_Profilo.Controls.Add(this.label9);
             this.Pgn_Profilo.Controls.Add(this.Btn_Logout);
-            this.Pgn_Profilo.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Profilo.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Profilo.Name = "Pgn_Profilo";
             this.Pgn_Profilo.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Profilo.Size = new System.Drawing.Size(1147, 454);
+            this.Pgn_Profilo.Size = new System.Drawing.Size(1147, 457);
             this.Pgn_Profilo.TabIndex = 0;
             this.Pgn_Profilo.Text = "Profilo";
             this.Pgn_Profilo.UseVisualStyleBackColor = true;
@@ -4466,7 +4395,7 @@
             this.txt_A_Password.Location = new System.Drawing.Point(110, 197);
             this.txt_A_Password.Name = "txt_A_Password";
             this.txt_A_Password.PasswordChar = '*';
-            this.txt_A_Password.Size = new System.Drawing.Size(165, 15);
+            this.txt_A_Password.Size = new System.Drawing.Size(165, 13);
             this.txt_A_Password.TabIndex = 25;
             this.txt_A_Password.UseSystemPasswordChar = true;
             // 
@@ -4495,7 +4424,7 @@
             this.txt_A_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_A_Telefono.Location = new System.Drawing.Point(110, 167);
             this.txt_A_Telefono.Name = "txt_A_Telefono";
-            this.txt_A_Telefono.Size = new System.Drawing.Size(165, 15);
+            this.txt_A_Telefono.Size = new System.Drawing.Size(165, 13);
             this.txt_A_Telefono.TabIndex = 7;
             this.txt_A_Telefono.Text = "telefono";
             // 
@@ -4514,7 +4443,7 @@
             this.txt_A_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_A_Email.Location = new System.Drawing.Point(110, 131);
             this.txt_A_Email.Name = "txt_A_Email";
-            this.txt_A_Email.Size = new System.Drawing.Size(165, 15);
+            this.txt_A_Email.Size = new System.Drawing.Size(165, 13);
             this.txt_A_Email.TabIndex = 5;
             this.txt_A_Email.Text = "email";
             // 
@@ -4523,7 +4452,7 @@
             this.txt_A_Nome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_A_Nome.Location = new System.Drawing.Point(110, 100);
             this.txt_A_Nome.Name = "txt_A_Nome";
-            this.txt_A_Nome.Size = new System.Drawing.Size(165, 15);
+            this.txt_A_Nome.Size = new System.Drawing.Size(165, 13);
             this.txt_A_Nome.TabIndex = 3;
             this.txt_A_Nome.Text = "nome visualizzato";
             // 
@@ -4559,19 +4488,19 @@
             // 
             // Pgn_Sicurezza
             // 
-            this.Pgn_Sicurezza.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Sicurezza.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Sicurezza.Name = "Pgn_Sicurezza";
             this.Pgn_Sicurezza.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Sicurezza.Size = new System.Drawing.Size(1147, 454);
+            this.Pgn_Sicurezza.Size = new System.Drawing.Size(1147, 457);
             this.Pgn_Sicurezza.TabIndex = 1;
             this.Pgn_Sicurezza.Text = "Sicurezza";
             this.Pgn_Sicurezza.UseVisualStyleBackColor = true;
             // 
             // Pgn_Personalizza
             // 
-            this.Pgn_Personalizza.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Personalizza.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Personalizza.Name = "Pgn_Personalizza";
-            this.Pgn_Personalizza.Size = new System.Drawing.Size(1147, 454);
+            this.Pgn_Personalizza.Size = new System.Drawing.Size(1147, 457);
             this.Pgn_Personalizza.TabIndex = 2;
             this.Pgn_Personalizza.Text = "Personalizzazione";
             this.Pgn_Personalizza.UseVisualStyleBackColor = true;
@@ -4628,7 +4557,6 @@
             this.TitoloArtista.PerformLayout();
             this.Pgn_SelezionePosti.ResumeLayout(false);
             this.Panel_Seats.ResumeLayout(false);
-            this.Panel_Seats.PerformLayout();
             this.Settore_D.ResumeLayout(false);
             this.Settore_C.ResumeLayout(false);
             this.Settore_B.ResumeLayout(false);
@@ -4755,10 +4683,6 @@
         private System.Windows.Forms.TextBox txt_A_Password;
         private System.Windows.Forms.Panel Panel_Seats;
         private System.Windows.Forms.Button Btn_ConfemaPosti;
-        private System.Windows.Forms.Label PratoPostiNum_Lbl;
-        private System.Windows.Forms.Button PratoPiu;
-        private System.Windows.Forms.Button PratoMeno;
-        private System.Windows.Forms.Button Prato_VIP;
         private System.Windows.Forms.Panel Settore_D;
         private System.Windows.Forms.Button button108;
         private System.Windows.Forms.Button button109;
@@ -4882,7 +4806,6 @@
         private System.Windows.Forms.Button button65;
         private System.Windows.Forms.Button button66;
         private System.Windows.Forms.Button button67;
-        private System.Windows.Forms.Button Prato;
         private System.Windows.Forms.Panel Settore_E;
         private System.Windows.Forms.Button button157;
         private System.Windows.Forms.Button button158;
