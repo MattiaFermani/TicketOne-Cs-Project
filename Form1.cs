@@ -546,21 +546,23 @@ namespace Biglietti_concerto
                 {
                     string data = spettacolo.Dizionario[spettacolo.Titolo].date[i];
                     Dictionary<string, List<Button>> Settori = new Dictionary<string, List<Button>>();
-                    foreach (Panel Settore in Panel_Seats.Controls)
+                    foreach (Control control in Panel_Seats.Controls)
                     {
-                        List<Button> Posti = new List<Button>();
-                        foreach (Button Posto in Settore.Controls)
+                        if (control is Panel Settore)
                         {
-                            Posti.Add(Posto);
+                            List<Button> Posti = new List<Button>();
+                            foreach (Button Posto in Settore.Controls)
+                            {
+                                Posti.Add(Posto);
+                            }
+                            Settori.Add(Settore.Name, Posti);
                         }
-                        Settori.Add(Settore.Name, Posti);
                     }
                     NewPosti.Add((luogo, data), Settori);
                     i++;
                 }
                 SalavataggioPosti.Add(spettacolo.Titolo, NewPosti);
                 TempSalavataggioPosti.Add(spettacolo.Titolo, NewPosti);
-
             }
         }
 
@@ -576,6 +578,10 @@ namespace Biglietti_concerto
             Pannello_Acc_User.Size = new Size(1151, 434);
             Pannello_Acc_User.Location = new Point(0, 54);
             Pannello_Acc_User.Visible = false;
+            AggiornaDisponibilitaTooltip();
+            spettacoliToolTip.AutoPopDelay = 5000;
+            spettacoliToolTip.InitialDelay = 300;
+            spettacoliToolTip.ReshowDelay = 500;
         }
 
 
@@ -695,26 +701,64 @@ namespace Biglietti_concerto
 
         private void Btn_ConfemaPosti_Click(object sender, EventArgs e)
         {
-            if(PostiSelezionati != 0)
+            if (PostiSelezionati != 0)
             {
-                foreach (var settore in TempSalavataggioPosti[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString())])
+                // Reset di tutti i posti temporanei
+                foreach (var settore in TempSalavataggioPosti[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(),
+                    Data_Lst.SelectedItem.ToString())])
                 {
-                    foreach (var posto in settore.Value)
+                    foreach (var posto in settore.Value.Where(p => p.BackColor == Color.Yellow))
                     {
-                        foreach (var button in posto.Value)
-                        {
-                            if (button.BackColor == Color.Yellow)
-                            {
-                                button.BackColor = Color.Gray;
-                            }
-                        }
+                        posto.BackColor = Color.Gray; // Posto confermato e non più disponibile
                     }
                 }
-                SalavataggioPosti[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString())][button.Parent.Name] = TempSalavataggioPosti[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString())][button.Parent.Name];
+
+                // Aggiornamento stato permanente
+                SalavataggioPosti[TitoloSpettacolo_Lbl.Text] = new Dictionary<(string, string),
+                    Dictionary<string, List<Button>>>(TempSalavataggioPosti[TitoloSpettacolo_Lbl.Text]);
+
+                // Reset contatore e feedback utente
                 PostiSelezionati = 0;
+                MessageBox.Show($"{PostiSelezionati} posti confermati con successo!");
+                AggiornaDisponibilitaTooltip();
+            }
+            else
+            {
+                MessageBox.Show("Nessun posto selezionato");
             }
         }
 
+        private ToolTip spettacoliToolTip = new ToolTip();
+
+        private void AggiornaDisponibilitaTooltip()
+        {
+            foreach (Control c in Pannello_Principale.Controls)
+            {
+                if (c is PictureBox pb && pb.Tag != null)
+                {
+                    var spettacolo = Spettacoli.FirstOrDefault(s => s.Titolo == pb.Tag.ToString());
+                    int postiTotali = 0;
+                    int postiOccupati = 0;
+
+                    if (spettacolo.Dizionario != null)
+                    {
+                        foreach (var evento in spettacolo.Dizionario[spettacolo.Titolo].luoghi)
+                        {
+                            var postiEvento = SalavataggioPosti[spettacolo.Titolo][(evento,
+                                spettacolo.Dizionario[spettacolo.Titolo].date[spettacolo.Dizionario[spettacolo.Titolo].luoghi.IndexOf(evento)])];
+                            postiTotali += postiEvento.Values.Sum(list => list.Count);
+                            postiOccupati += postiEvento.Values.Sum(list => list.Count(p => p.BackColor == Color.Gray));
+                        }
+                    }
+
+                    string disponibilita = (postiTotali - postiOccupati) < 20 ?
+                        "ULTIMI POSTI DISPONIBILI!" : "Disponibilità normale";
+
+                    spettacoliToolTip.SetToolTip(pb,
+                        $"{spettacolo.Titolo}\nPosti liberi: {postiTotali - postiOccupati}/{postiTotali}\n{disponibilita}");
+                }
+            }
+        }
         private void TickeTlon_Click(object sender, EventArgs e)
         {
             Pannello_Principale.Visible = true;
