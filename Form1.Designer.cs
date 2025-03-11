@@ -665,7 +665,7 @@
             this.Pannello_Posti.AutoScroll = true;
             this.Pannello_Posti.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Posti.Controls.Add(this.Tab_Info_Posti);
-            this.Pannello_Posti.Location = new System.Drawing.Point(608, 66);
+            this.Pannello_Posti.Location = new System.Drawing.Point(383, 510);
             this.Pannello_Posti.Name = "Pannello_Posti";
             this.Pannello_Posti.Size = new System.Drawing.Size(1183, 466);
             this.Pannello_Posti.TabIndex = 12;
@@ -4005,10 +4005,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Coiny", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(482, 38);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(116, 31);
+            this.label16.Size = new System.Drawing.Size(105, 35);
             this.label16.TabIndex = 24;
             this.label16.Text = "Log In";
             // 
@@ -4148,10 +4148,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Coiny", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(474, 21);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(128, 31);
+            this.label17.Size = new System.Drawing.Size(117, 35);
             this.label17.TabIndex = 26;
             this.label17.Text = "Sign In";
             // 
