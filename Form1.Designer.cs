@@ -845,6 +845,7 @@
             this.Btn_ConfemaPosti.TabIndex = 55;
             this.Btn_ConfemaPosti.Text = "Conferma Posti";
             this.Btn_ConfemaPosti.UseVisualStyleBackColor = true;
+            this.Btn_ConfemaPosti.Click += new System.EventHandler(this.Btn_ConfemaPosti_Click);
             // 
             // PratoPostiNum_Lbl
             // 
