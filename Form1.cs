@@ -537,6 +537,11 @@ namespace Biglietti_concerto
             InitializeComponent();
             CreaAdminPassword("Cisco123");
             ComuniITA();
+
+            if (Luogo_Lst.SelectedItem != null && Data_Lst.SelectedItem != null)
+            {
+                LoadSeatsForEvent(Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString());
+            }
         }
 
         
@@ -678,20 +683,14 @@ namespace Biglietti_concerto
         }
         private void Luogo_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Data_Lst.SelectedIndex = Luogo_Lst.SelectedIndex; 
+            Data_Lst.SelectedIndex = Luogo_Lst.SelectedIndex;
             string selectedLuogo = Luogo_Lst.SelectedItem.ToString();
             string selectedData = Data_Lst.SelectedItem.ToString();
 
-            if (Eventi.ContainsKey(selectedLuogo))
-            {
-                var evento = Eventi[selectedLuogo];
-                if (evento.date.Contains(selectedData))
-                {
-                    LoadSeatsForEvent(selectedLuogo, selectedData);
-                }
-            }
+            LoadSeatsForEvent(selectedLuogo, selectedData);
         }
-        
+
+
 
 
         bool Login = false;
@@ -996,10 +995,16 @@ namespace Biglietti_concerto
         {
             foreach (string seatId in selectedSeats)
             {
-                Button btn = Pgn_SelezionePosti.Controls.OfType<Button>().FirstOrDefault(b => b.Text == seatId);
-                if (btn != null)
+                foreach (Panel panel in Pannello_Posti.Controls.OfType<Panel>())
                 {
-                    btn.BackColor = Color.Red;
+                    foreach (Button b in panel.Controls.OfType<Button>())
+                    {
+                        if (b.Text == seatId)
+                        {
+                            b.BackColor = Color.Red;
+                            b.Enabled = false;
+                        }
+                    }
                 }
             }
             SaveSeats();
@@ -1007,12 +1012,13 @@ namespace Biglietti_concerto
         }
 
 
+
         private void SaveSeats()
         {
             string selectedLuogo = Luogo_Lst.SelectedItem.ToString();
             string selectedData = Data_Lst.SelectedItem.ToString();
             string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SeatsData");
-            string fileName = $"{selectedLuogo}_{selectedData}_seats.txt";
+            string fileName = $"{selectedLuogo}_{selectedData.Replace("/", "-")}_seats.json";
             string filePath = Path.Combine(directoryPath, fileName);
 
             // Creare la directory se non esiste
@@ -1021,42 +1027,61 @@ namespace Biglietti_concerto
                 Directory.CreateDirectory(directoryPath);
             }
 
-            using (StreamWriter writer = new StreamWriter(filePath))
+            JArray seatsArray = new JArray();
+
+            foreach (Panel panel in Pannello_Posti.Controls.OfType<Panel>())
             {
-                foreach (Button btn in Panel_Seats.Controls.OfType<Button>())
+                foreach (Button btn in panel.Controls.OfType<Button>())
                 {
-                    writer.WriteLine($"{btn.Text},{btn.BackColor.ToArgb()}");
+                    JObject seatObject = new JObject
+                    {
+                        ["SeatId"] = btn.Text,
+                        ["Color"] = btn.BackColor.ToArgb(),
+                        ["Sector"] = panel.Name
+                    };
+                    seatsArray.Add(seatObject);
                 }
             }
+
+            File.WriteAllText(filePath, seatsArray.ToString());
         }
+
+
+
 
 
 
         private void LoadSeatsForEvent(string luogo, string data)
         {
             // Pulisci i pulsanti esistenti
-            foreach (Button btn in Panel_Seats.Controls.OfType<Button>())
+            foreach (Panel panel in Pannello_Posti.Controls.OfType<Panel>())
             {
-                btn.BackColor = SystemColors.Control;
-                btn.Enabled = true;
+                foreach (Button btn in panel.Controls.OfType<Button>())
+                {
+                    btn.BackColor = SystemColors.Control;
+                    btn.Enabled = true;
+                }
             }
 
             // Carica i posti per l'evento selezionato
             string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SeatsData");
-            string fileName = $"{luogo}_{data}_seats.txt";
+            string fileName = $"{luogo}_{data.Replace("/", "-")}_seats.json";
             string filePath = Path.Combine(directoryPath, fileName);
 
             if (File.Exists(filePath))
             {
-                using (StreamReader reader = new StreamReader(filePath))
+                JArray seatsArray = JArray.Parse(File.ReadAllText(filePath));
+
+                foreach (JObject seatObject in seatsArray)
                 {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
+                    string seatId = seatObject["SeatId"].ToString();
+                    Color color = Color.FromArgb((int)seatObject["Color"]);
+                    string sector = seatObject["Sector"].ToString();
+
+                    Panel panel = Pannello_Posti.Controls.OfType<Panel>().FirstOrDefault(p => p.Name == sector);
+                    if (panel != null)
                     {
-                        string[] parts = line.Split(',');
-                        string seatId = parts[0];
-                        Color color = Color.FromArgb(int.Parse(parts[1]));
-                        Button btn = Panel_Seats.Controls.OfType<Button>().FirstOrDefault(b => b.Text == seatId);
+                        Button btn = panel.Controls.OfType<Button>().FirstOrDefault(b => b.Text == seatId);
                         if (btn != null)
                         {
                             btn.BackColor = color;
@@ -1066,6 +1091,8 @@ namespace Biglietti_concerto
                 }
             }
         }
+
+
 
     }
 }
