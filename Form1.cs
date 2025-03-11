@@ -681,7 +681,7 @@ namespace Biglietti_concerto
                         int index = TempSalavataggioPosti[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString())][btn.Parent.Name].IndexOf(btn);
                         TempSalavataggioPosti[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString())][btn.Parent.Name][index].BackColor = Color.Yellow;
                         btn.BackColor = Color.Yellow;
-                        PostiSelezionati++;
+                        PostiSelezionati++; 
                     }
 
                 }
