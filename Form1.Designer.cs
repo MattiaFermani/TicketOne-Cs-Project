@@ -676,7 +676,7 @@
             this.Pannello_Posti.AutoScroll = true;
             this.Pannello_Posti.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Posti.Controls.Add(this.Tab_Info_Posti);
-            this.Pannello_Posti.Location = new System.Drawing.Point(391, 515);
+            this.Pannello_Posti.Location = new System.Drawing.Point(274, 499);
             this.Pannello_Posti.Name = "Pannello_Posti";
             this.Pannello_Posti.Size = new System.Drawing.Size(1183, 466);
             this.Pannello_Posti.TabIndex = 12;
@@ -736,14 +736,14 @@
             // 
             this.Data_Lst.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Data_Lst.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Data_Lst.Enabled = false;
             this.Data_Lst.FormattingEnabled = true;
-            this.Data_Lst.HorizontalScrollbar = true;
             this.Data_Lst.ItemHeight = 20;
             this.Data_Lst.Location = new System.Drawing.Point(288, 55);
             this.Data_Lst.Name = "Data_Lst";
             this.Data_Lst.Size = new System.Drawing.Size(184, 100);
             this.Data_Lst.TabIndex = 2;
-            this.Data_Lst.SelectedIndexChanged += new System.EventHandler(this.Data_Lst_SelectedIndexChanged);
+            this.Data_Lst.TabStop = false;
             // 
             // label1
             // 
@@ -765,7 +765,7 @@
             this.Luogo_Lst.Name = "Luogo_Lst";
             this.Luogo_Lst.Size = new System.Drawing.Size(281, 100);
             this.Luogo_Lst.TabIndex = 0;
-            this.Luogo_Lst.SelectedIndexChanged += new System.EventHandler(this.Luogo_Lst_SelectedIndexChanged);
+            this.Luogo_Lst.SelectedIndexChanged += new System.EventHandler(this.Data_Luogo_Lst_SelectedIndexChanged);
             // 
             // Img_Info
             // 

@@ -1,4 +1,5 @@
 ﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Drawing.Charts;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -32,10 +33,6 @@ namespace Biglietti_concerto
         static Random rand = new Random();
         static List<string> Comuni = new List<string>();
         static List<string> CodiciBelfiore = new List<string>();
-
-        private Dictionary<string, Dictionary<(string, string), Dictionary<string, List<Button>>>> TempSalavataggioPosti = new Dictionary<string, Dictionary<(string, string), Dictionary<string, List<Button>>>>();
-
-        private Dictionary<string, Dictionary<(string, string), Dictionary<string, List<Button>>>> SalavataggioPosti = new Dictionary<string, Dictionary<(string, string), Dictionary<string, List<Button>>>>();
 
 
         readonly static List<string> Luoghi = new List<string>
@@ -397,24 +394,24 @@ namespace Biglietti_concerto
             return null;
         }
 
-        static Dictionary<string, (List<string> luoghi, List<string> date)> Eventi = new Dictionary<string, (List<string>, List<string>)>
+        static Dictionary<string, (List<string> luoghi, List<string> date, Dictionary<(string luogo, string data), Dictionary<string, List<Button>>> buttons)> Eventi = new Dictionary<string, (List<string>, List<string>, Dictionary<(string, string), Dictionary<string, List<Button>>>)>
         {
-            { "Intelligenza Naturale", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "Marcus Miller", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "LRDL Summer Tour 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "PalaJova", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "Sophie and The Giants", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "Damme na mano Roma e Milano", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "Games in Concert", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "FASK tour estivo 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "Prova A Prendermi", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "Vita Bassa", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "Estate 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "Jimmy Sax and Symphonic Dance Orchestra", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "2025 World Tour - Milano", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) },
-            { "AC/DC - Powerup Tour", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand)) }
+            { "Intelligenza Naturale", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "Marcus Miller", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "LRDL Summer Tour 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "PalaJova", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "Sophie and The Giants", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "Damme na mano Roma e Milano", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "Games in Concert", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "FASK tour estivo 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "Prova A Prendermi", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "Vita Bassa", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "Estate 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "Jimmy Sax and Symphonic Dance Orchestra", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "2025 World Tour - Milano", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "AC/DC - Powerup Tour", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) }
         };
-        List<(string Titolo, string Artista, string Descrizione, Dictionary<string, (List<string> luoghi, List<string> date)> Dizionario)> Spettacoli = new List<(string, string, string, Dictionary<string, (List<string>, List<string>)>)>
+        List<(string Titolo, string Artista, string Descrizione, Dictionary<string, (List<string> luoghi, List<string> date, Dictionary<(string luogo, string data), Dictionary<string, List<Button>>> buttons)> Dizionario)> Spettacoli = new List<(string, string, string, Dictionary<string, (List<string> luoghi, List<string> date, Dictionary<(string luogo, string data), Dictionary<string, List<Button>>> buttons)>)>
         {
             ("Intelligenza Naturale", "Andrea Pezzi", "Uno spettacolo sull'intelligenza umana", Eventi),
             ("Marcus Miller", "Marcus Miller", "Il maestro del basso funk torna in Italia", Eventi),
@@ -533,18 +530,22 @@ namespace Biglietti_concerto
             InitializeComponent();
             CreaAdminPassword("Cisco123");
             ComuniITA();
-            creaposti();
+            CaricaPostiEventi();
         }
 
-        private void creaposti()
+        
+
+        private void CaricaPostiEventi()
         {
-            foreach (var spettacolo in Spettacoli)
+            // Per ogni evento del dizionario, si crea una mappa dei Posti in base a Luogo e Data
+            foreach (var key in Eventi.Keys.ToList())
             {
+                var evento = Eventi[key];
                 Dictionary<(string, string), Dictionary<string, List<Button>>> NewPosti = new Dictionary<(string, string), Dictionary<string, List<Button>>>();
                 int i = 0;
-                foreach (var luogo in spettacolo.Dizionario[spettacolo.Titolo].luoghi)
+                foreach (var luogo in evento.luoghi)
                 {
-                    string data = spettacolo.Dizionario[spettacolo.Titolo].date[i];
+                    string data = evento.date[i];
                     Dictionary<string, List<Button>> Settori = new Dictionary<string, List<Button>>();
                     foreach (Control control in Panel_Seats.Controls)
                     {
@@ -561,21 +562,19 @@ namespace Biglietti_concerto
                     NewPosti.Add((luogo, data), Settori);
                     i++;
                 }
-                SalavataggioPosti.Add(spettacolo.Titolo, NewPosti);
-                TempSalavataggioPosti.Add(spettacolo.Titolo, NewPosti);
+                Eventi[key] = (evento.luoghi, evento.date, NewPosti);
             }
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(1150, 485);
-            Pannello_Principale.Size = new Size(1151, 434);
+            this.Size = new System.Drawing.Size(1150, 485);
+            Pannello_Principale.Size = new System.Drawing.Size(1151, 434);
             Pannello_Principale.Location = new Point(0, 54);
-            Pannello_Posti.Size = new Size(1151, 434);
-            Pannello_Login.Size = new Size(1151, 434);
+            Pannello_Posti.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Login.Size = new System.Drawing.Size(1151, 434);
             Pannello_Login.Location = new Point(0, 54);
             Pannello_Login.Visible = false;
-            Pannello_Acc_User.Size = new Size(1151, 434);
+            Pannello_Acc_User.Size = new System.Drawing.Size(1151, 434);
             Pannello_Acc_User.Location = new Point(0, 54);
             Pannello_Acc_User.Visible = false;
             AggiornaDisponibilitaTooltip();
@@ -673,58 +672,228 @@ namespace Biglietti_concerto
         }
 
         int PostiSelezionati;
+        private Dictionary<(string luogo, string data), List<Button>> postiSelezionati = new Dictionary<(string, string), List<Button>>();
+
         private void PostoSelezionato_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             button = btn;
             if (btn.BackColor != Color.Yellow)
             {
-
                 if (PostiSelezionati < 4)
                 {
-                    if (TempSalavataggioPosti[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString())][btn.Parent.Name].Contains(btn))
-                    {
-                        int index = TempSalavataggioPosti[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString())][btn.Parent.Name].IndexOf(btn);
-                        TempSalavataggioPosti[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString())][btn.Parent.Name][index].BackColor = Color.Yellow;
-                        btn.BackColor = Color.Yellow;
-                        PostiSelezionati++; 
-                    }
-
+                    btn.BackColor = Color.Yellow;
+                    PostiSelezionati++;
                 }
                 else
                 {
                     MessageBox.Show("Hai già selezionato 4 posti");
                 }
             }
+            else
+            {
+                switch (btn.Tag)
+                {
+                    case "0Normal":
+                        btn.BackColor = Color.LightSalmon;
+                        break;
+                    case "0Senior":
+                        btn.BackColor = Color.Violet;
+                        break;
+                    case "0Vip":
+                        btn.BackColor = Color.Gold;
+                        break;
+                }
+                PostiSelezionati--;
+            }
 
+            string luogo = Luogo_Lst.SelectedItem.ToString();
+            string data = Data_Lst.SelectedItem.ToString();
+            var key = (luogo, data);
+
+            if (!postiSelezionati.ContainsKey(key))
+            {
+                postiSelezionati[key] = new List<Button>();
+            }
+
+            if (btn.BackColor == Color.Yellow)
+            {
+                postiSelezionati[key].Add(btn);
+            }
+            else
+            {
+                postiSelezionati[key].Remove(btn);
+            }
         }
 
         private void Btn_ConfemaPosti_Click(object sender, EventArgs e)
         {
             if (PostiSelezionati != 0)
             {
-                // Reset di tutti i posti temporanei
-                foreach (var settore in TempSalavataggioPosti[TitoloSpettacolo_Lbl.Text][(Luogo_Lst.SelectedItem.ToString(),
-                    Data_Lst.SelectedItem.ToString())])
+                foreach (var entry in postiSelezionati)
                 {
-                    foreach (var posto in settore.Value.Where(p => p.BackColor == Color.Yellow))
+                    var eventKey = entry.Key;
+                    foreach (var btn in entry.Value)
                     {
-                        posto.BackColor = Color.Gray; // Posto confermato e non più disponibile
+                        btn.BackColor = Color.Gray;
+                        btn.Enabled = false;
+
+                        string settore = ((Panel)btn.Parent).Name;
+                        var currentEvent = Eventi[TitoloSpettacolo_Lbl.Text];
+
+                        if (!currentEvent.buttons.ContainsKey(eventKey))
+                        {
+                            currentEvent.buttons[eventKey] = new Dictionary<string, List<Button>>();
+                        }
+                        if (!currentEvent.buttons[eventKey].ContainsKey(settore))
+                        {
+                            currentEvent.buttons[eventKey][settore] = new List<Button>();
+                        }
+                        var buttonList = currentEvent.buttons[eventKey][settore];
+
+                        var existingButton = buttonList.FirstOrDefault(b => b.Name == btn.Name);
+                        if (existingButton != null)
+                        {
+                            buttonList.Remove(existingButton);
+                        }
+                        buttonList.Add(btn);
                     }
                 }
-
-                // Aggiornamento stato permanente
-                SalavataggioPosti[TitoloSpettacolo_Lbl.Text] = new Dictionary<(string, string),
-                    Dictionary<string, List<Button>>>(TempSalavataggioPosti[TitoloSpettacolo_Lbl.Text]);
-
-                // Reset contatore e feedback utente
+                postiSelezionati.Clear();
+                MessageBox.Show($"{PostiSelezionati} Posti acquistati con successo!");
                 PostiSelezionati = 0;
-                MessageBox.Show($"{PostiSelezionati} posti confermati con successo!");
                 AggiornaDisponibilitaTooltip();
             }
             else
             {
                 MessageBox.Show("Nessun posto selezionato");
+            }
+
+            Pannello_Principale.Visible = true;
+            Pannello_Principale.Location = new Point(0, 54);
+            Pannello_Posti.Visible = false;
+
+            foreach (Control settore in Panel_Seats.Controls)
+            {
+                if (settore is Panel panelSettore)
+                {
+                    foreach (Button posto in panelSettore.Controls)
+                    {
+                        if (posto.BackColor == Color.Gray)
+                        {
+                            switch (posto.Tag)
+                            {
+                                case "0Normal":
+                                    posto.BackColor = Color.LightSalmon;
+                                    break;
+                                case "0Senior":
+                                    posto.BackColor = Color.Violet;
+                                    break;
+                                case "0Vip":
+                                    posto.BackColor = Color.Gold;
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void CaricaPosti()
+        {
+            string eventTitle = TitoloSpettacolo_Lbl.Text;
+            string selectedLuogo = Luogo_Lst.SelectedItem.ToString();
+            string selectedData = Data_Lst.SelectedItem.ToString();
+
+            if (!Eventi.ContainsKey(eventTitle))
+                return;
+
+            var eventData = Eventi[eventTitle];
+            var key = (selectedLuogo, selectedData);
+
+            // Se non ci sono posti salvati per la chiave, assegna i colori di default
+            if (!eventData.buttons.ContainsKey(key))
+            {
+                foreach (Control settore in Panel_Seats.Controls)
+                {
+                    if (settore is Panel panelSettore)
+                    {
+                        foreach (Button posto in panelSettore.Controls)
+                        {
+                            switch (posto.Tag)
+                            {
+                                case "0Normal":
+                                    posto.BackColor = Color.LightSalmon;
+                                    break;
+                                case "0Senior":
+                                    posto.BackColor = Color.Violet;
+                                    break;
+                                case "0Vip":
+                                    posto.BackColor = Color.Gold;
+                                    break;
+                            }
+                        }
+                    }
+                }
+                return;
+            }
+
+            var savedSectors = eventData.buttons[key];
+
+            // Per ogni settore, aggiorna i button trovati nella lista salvata in base al nome
+            foreach (Control settore in Panel_Seats.Controls)
+            {
+                if (settore is Panel panelSettore)
+                {
+                    if (savedSectors.TryGetValue(panelSettore.Name, out List<Button> savedButtons))
+                    {
+                        foreach (Button posto in panelSettore.Controls)
+                        {
+                            // Cerca il bottone salvato con lo stesso nome
+                            var savedButton = savedButtons.FirstOrDefault(b => b.Name == posto.Name);
+                            if (savedButton != null)
+                            {
+                                posto.BackColor = savedButton.BackColor;
+                                posto.Enabled = savedButton.Enabled;
+                            }
+                            else
+                            {
+                                // Se non trovato, assegna il colore di default in base al Tag
+                                switch (posto.Tag)
+                                {
+                                    case "0Normal":
+                                        posto.BackColor = Color.LightSalmon;
+                                        break;
+                                    case "0Senior":
+                                        posto.BackColor = Color.Violet;
+                                        break;
+                                    case "0Vip":
+                                        posto.BackColor = Color.Gold;
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        // Nessun bottone salvato per questo settore, assegna i colori di default
+                        foreach (Button posto in panelSettore.Controls)
+                        {
+                            switch (posto.Tag)
+                            {
+                                case "0Normal":
+                                    posto.BackColor = Color.LightSalmon;
+                                    break;
+                                case "0Senior":
+                                    posto.BackColor = Color.Violet;
+                                    break;
+                                case "0Vip":
+                                    posto.BackColor = Color.Gold;
+                                    break;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -742,12 +911,18 @@ namespace Biglietti_concerto
 
                     if (spettacolo.Dizionario != null)
                     {
-                        foreach (var evento in spettacolo.Dizionario[spettacolo.Titolo].luoghi)
+                        var eventoTuple = spettacolo.Dizionario[spettacolo.Titolo];
+                        for (int i = 0; i < eventoTuple.luoghi.Count; i++)
                         {
-                            var postiEvento = SalavataggioPosti[spettacolo.Titolo][(evento,
-                                spettacolo.Dizionario[spettacolo.Titolo].date[spettacolo.Dizionario[spettacolo.Titolo].luoghi.IndexOf(evento)])];
-                            postiTotali += postiEvento.Values.Sum(list => list.Count);
-                            postiOccupati += postiEvento.Values.Sum(list => list.Count(p => p.BackColor == Color.Gray));
+                            string luogo = eventoTuple.luoghi[i];
+                            string data = eventoTuple.date[i];
+                            var key = (luogo, data);
+                            if (eventoTuple.buttons.ContainsKey(key))
+                            {
+                                var postiEvento = eventoTuple.buttons[key];
+                                postiTotali += postiEvento.Values.Sum(list => list.Count);
+                                postiOccupati += postiEvento.Values.Sum(list => list.Count(p => p.BackColor == Color.Gray));
+                            }
                         }
                     }
 
@@ -768,20 +943,11 @@ namespace Biglietti_concerto
             Pannello_Acc_User.Visible = false;
             Pannello_Pagamento.Visible = false;
         }
-        private void Data_Lst_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Luogo_Lst.SelectedIndex = Data_Lst.SelectedIndex;
-        }
-        private void Luogo_Lst_SelectedIndexChanged(object sender, EventArgs e)
+        private void Data_Luogo_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
             Data_Lst.SelectedIndex = Luogo_Lst.SelectedIndex;
-            string selectedLuogo = Luogo_Lst.SelectedItem.ToString();
-            string selectedData = Data_Lst.SelectedItem.ToString();
-
-            LoadSeatsForEvent(selectedLuogo, selectedData);
+            CaricaPosti();
         }
-
-
 
 
         bool Login = false;
@@ -1083,10 +1249,6 @@ namespace Biglietti_concerto
             }
         }
 
-        private void LoadSeatsForEvent(string luogo, string data)
-        {
-
-        }
 
 
 
