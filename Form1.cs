@@ -691,37 +691,7 @@ namespace Biglietti_concerto
                 }
             }
         }
-        private void LoadSeatsForEvent(string luogo, string data)
-        {
-            // Pulisci i pulsanti esistenti
-            foreach (Button btn in Panel_Seats.Controls.OfType<Button>())
-            {
-                btn.BackColor = SystemColors.Control;
-                btn.Enabled = true;
-            }
-
-            // Carica i posti per l'evento selezionato
-            string fileName = $"{luogo}_{data}_seats.txt";
-            if (File.Exists(fileName))
-            {
-                using (StreamReader reader = new StreamReader(fileName))
-                {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        string[] parts = line.Split(',');
-                        string seatId = parts[0];
-                        Color color = Color.FromArgb(int.Parse(parts[1]));
-                        Button btn = Panel_Seats.Controls.OfType<Button>().FirstOrDefault(b => b.Text == seatId);
-                        if (btn != null)
-                        {
-                            btn.BackColor = color;
-                            btn.Enabled = color == SystemColors.Control; // Disabilita i pulsanti già prenotati
-                        }
-                    }
-                }
-            }
-        }
+        
 
 
         bool Login = false;
@@ -1041,9 +1011,17 @@ namespace Biglietti_concerto
         {
             string selectedLuogo = Luogo_Lst.SelectedItem.ToString();
             string selectedData = Data_Lst.SelectedItem.ToString();
+            string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SeatsData");
             string fileName = $"{selectedLuogo}_{selectedData}_seats.txt";
+            string filePath = Path.Combine(directoryPath, fileName);
 
-            using (StreamWriter writer = new StreamWriter(fileName))
+            // Creare la directory se non esiste
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+
+            using (StreamWriter writer = new StreamWriter(filePath))
             {
                 foreach (Button btn in Panel_Seats.Controls.OfType<Button>())
                 {
@@ -1053,11 +1031,24 @@ namespace Biglietti_concerto
         }
 
 
-        private void LoadSeats()
+
+        private void LoadSeatsForEvent(string luogo, string data)
         {
-            if (File.Exists("seats.txt"))
+            // Pulisci i pulsanti esistenti
+            foreach (Button btn in Panel_Seats.Controls.OfType<Button>())
             {
-                using (StreamReader reader = new StreamReader("seats.txt"))
+                btn.BackColor = SystemColors.Control;
+                btn.Enabled = true;
+            }
+
+            // Carica i posti per l'evento selezionato
+            string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SeatsData");
+            string fileName = $"{luogo}_{data}_seats.txt";
+            string filePath = Path.Combine(directoryPath, fileName);
+
+            if (File.Exists(filePath))
+            {
+                using (StreamReader reader = new StreamReader(filePath))
                 {
                     string line;
                     while ((line = reader.ReadLine()) != null)
@@ -1065,14 +1056,16 @@ namespace Biglietti_concerto
                         string[] parts = line.Split(',');
                         string seatId = parts[0];
                         Color color = Color.FromArgb(int.Parse(parts[1]));
-                        Button btn = Pgn_SelezionePosti.Controls.OfType<Button>().FirstOrDefault(b => b.Text == seatId);
+                        Button btn = Panel_Seats.Controls.OfType<Button>().FirstOrDefault(b => b.Text == seatId);
                         if (btn != null)
                         {
                             btn.BackColor = color;
+                            btn.Enabled = color == SystemColors.Control; // Disabilita i pulsanti già prenotati
                         }
                     }
                 }
             }
         }
+
     }
 }
