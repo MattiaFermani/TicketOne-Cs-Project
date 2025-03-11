@@ -4341,9 +4341,9 @@
             // 
             this.Pannello_Acc_User.BackColor = System.Drawing.SystemColors.Control;
             this.Pannello_Acc_User.Controls.Add(this.tabControl1);
-            this.Pannello_Acc_User.Location = new System.Drawing.Point(12, 560);
+            this.Pannello_Acc_User.Location = new System.Drawing.Point(22, 508);
             this.Pannello_Acc_User.Name = "Pannello_Acc_User";
-            this.Pannello_Acc_User.Size = new System.Drawing.Size(73, 444);
+            this.Pannello_Acc_User.Size = new System.Drawing.Size(1161, 444);
             this.Pannello_Acc_User.TabIndex = 15;
             this.Pannello_Acc_User.Visible = false;
             // 
@@ -4352,7 +4352,7 @@
             this.tabControl1.Controls.Add(this.Pgn_Profilo);
             this.tabControl1.Controls.Add(this.Pgn_Sicurezza);
             this.tabControl1.Controls.Add(this.Pgn_Personalizza);
-            this.tabControl1.Location = new System.Drawing.Point(0, 4);
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1155, 483);

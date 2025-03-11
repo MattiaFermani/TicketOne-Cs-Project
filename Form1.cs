@@ -1,5 +1,4 @@
 ﻿using ClosedXML.Excel;
-using DocumentFormat.OpenXml.Drawing.Charts;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -530,10 +529,9 @@ namespace Biglietti_concerto
             InitializeComponent();
             CreaAdminPassword("Cisco123");
             ComuniITA();
-            CaricaPostiEventi();
         }
 
-        
+
 
         private void CaricaPostiEventi()
         {
@@ -581,6 +579,7 @@ namespace Biglietti_concerto
             spettacoliToolTip.AutoPopDelay = 5000;
             spettacoliToolTip.InitialDelay = 300;
             spettacoliToolTip.ReshowDelay = 500;
+            CaricaPostiEventi();
         }
 
 
@@ -735,30 +734,37 @@ namespace Biglietti_concerto
                     var eventKey = entry.Key;
                     foreach (var btn in entry.Value)
                     {
-                        btn.BackColor = Color.Gray;
-                        btn.Enabled = false;
 
                         string settore = ((Panel)btn.Parent).Name;
-                        var currentEvent = Eventi[TitoloSpettacolo_Lbl.Text];
 
-                        if (!currentEvent.buttons.ContainsKey(eventKey))
+                        if (!Eventi[TitoloSpettacolo_Lbl.Text].buttons.ContainsKey(eventKey))
                         {
-                            currentEvent.buttons[eventKey] = new Dictionary<string, List<Button>>();
+                            Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey] = new Dictionary<string, List<Button>>();
                         }
-                        if (!currentEvent.buttons[eventKey].ContainsKey(settore))
+                        if (!Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey].ContainsKey(settore))
                         {
-                            currentEvent.buttons[eventKey][settore] = new List<Button>();
+                            Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore] = new List<Button>();
                         }
-                        var buttonList = currentEvent.buttons[eventKey][settore];
 
-                        var existingButton = buttonList.FirstOrDefault(b => b.Name == btn.Name);
-                        if (existingButton != null)
+                        foreach (Button b in Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore])
                         {
-                            buttonList.Remove(existingButton);
+                            if (b.Name == btn.Name)
+                            {
+                                int index = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].IndexOf(b);
+                                Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].BackColor = Color.Gray;
+                                Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].Enabled = false;
+                                break;
+                            }
                         }
-                        buttonList.Add(btn);
+                        //var existingButton = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].FirstOrDefault(b => b.Name == btn.Name);
+
+                        //int index = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].IndexOf(existingButton);
+                        //Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].BackColor = Color.Gray;
+                        //Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].Enabled = false;
+
                     }
                 }
+
                 postiSelezionati.Clear();
                 MessageBox.Show($"{PostiSelezionati} Posti acquistati con successo!");
                 PostiSelezionati = 0;
@@ -771,8 +777,15 @@ namespace Biglietti_concerto
 
             Pannello_Principale.Visible = true;
             Pannello_Principale.Location = new Point(0, 54);
+            Tab_Info_Posti.SelectedIndex = 0;
+            Data_Lst.SelectedIndex = -1;
+            Luogo_Lst.SelectedIndex = -1;
             Pannello_Posti.Visible = false;
+            ResetPostiColori();
+        }
 
+        private void ResetPostiColori()
+        {
             foreach (Control settore in Panel_Seats.Controls)
             {
                 if (settore is Panel panelSettore)
@@ -781,6 +794,7 @@ namespace Biglietti_concerto
                     {
                         if (posto.BackColor == Color.Gray)
                         {
+                            posto.Enabled = true;
                             switch (posto.Tag)
                             {
                                 case "0Normal":
@@ -811,7 +825,6 @@ namespace Biglietti_concerto
             var eventData = Eventi[eventTitle];
             var key = (selectedLuogo, selectedData);
 
-            // Se non ci sono posti salvati per la chiave, assegna i colori di default
             if (!eventData.buttons.ContainsKey(key))
             {
                 foreach (Control settore in Panel_Seats.Controls)
@@ -840,7 +853,7 @@ namespace Biglietti_concerto
 
             var savedSectors = eventData.buttons[key];
 
-            // Per ogni settore, aggiorna i button trovati nella lista salvata in base al nome
+
             foreach (Control settore in Panel_Seats.Controls)
             {
                 if (settore is Panel panelSettore)
@@ -849,7 +862,7 @@ namespace Biglietti_concerto
                     {
                         foreach (Button posto in panelSettore.Controls)
                         {
-                            // Cerca il bottone salvato con lo stesso nome
+
                             var savedButton = savedButtons.FirstOrDefault(b => b.Name == posto.Name);
                             if (savedButton != null)
                             {
@@ -876,7 +889,6 @@ namespace Biglietti_concerto
                     }
                     else
                     {
-                        // Nessun bottone salvato per questo settore, assegna i colori di default
                         foreach (Button posto in panelSettore.Controls)
                         {
                             switch (posto.Tag)
@@ -946,6 +958,7 @@ namespace Biglietti_concerto
         private void Data_Luogo_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
             Data_Lst.SelectedIndex = Luogo_Lst.SelectedIndex;
+            if (Luogo_Lst.SelectedIndex == -1) return;
             CaricaPosti();
         }
 
