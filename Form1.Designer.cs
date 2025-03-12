@@ -322,32 +322,32 @@
             this.Pannello_Acc_User = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Pgn_Profilo = new System.Windows.Forms.TabPage();
+            this.Pnl_ModPswVer = new System.Windows.Forms.Panel();
+            this.Btn_CkPsw = new System.Windows.Forms.Button();
+            this.txt_VerPsw = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.Password = new System.Windows.Forms.Panel();
+            this.button149 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.txt_A_Password = new System.Windows.Forms.TextBox();
-            this.Lbl_Role = new System.Windows.Forms.Label();
-            this.Modifica_Info_A = new System.Windows.Forms.Button();
-            this.txt_A_Telefono = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.Telefono = new System.Windows.Forms.Panel();
+            this.button148 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.txt_A_Email = new System.Windows.Forms.TextBox();
-            this.txt_A_Nome = new System.Windows.Forms.TextBox();
+            this.txt_A_Telefono = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.txt_A_Email = new System.Windows.Forms.TextBox();
+            this.Nome = new System.Windows.Forms.Panel();
+            this.Modifica_Info_A = new System.Windows.Forms.Button();
+            this.txt_A_Nome = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.Lbl_Role = new System.Windows.Forms.Label();
             this.Btn_Logout = new System.Windows.Forms.Button();
             this.Pgn_Sicurezza = new System.Windows.Forms.TabPage();
             this.Pgn_Personalizza = new System.Windows.Forms.TabPage();
-            this.label19 = new System.Windows.Forms.Label();
-            this.Nome = new System.Windows.Forms.Panel();
-            this.Email = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Telefono = new System.Windows.Forms.Panel();
-            this.button148 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.Password = new System.Windows.Forms.Panel();
-            this.button149 = new System.Windows.Forms.Button();
-            this.Pnl_ModPswVer = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txt_VerPsw = new System.Windows.Forms.TextBox();
-            this.Btn_CkPsw = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -393,11 +393,11 @@
             this.Pannello_Acc_User.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Pgn_Profilo.SuspendLayout();
-            this.Nome.SuspendLayout();
-            this.Email.SuspendLayout();
-            this.Telefono.SuspendLayout();
-            this.Password.SuspendLayout();
             this.Pnl_ModPswVer.SuspendLayout();
+            this.Password.SuspendLayout();
+            this.Telefono.SuspendLayout();
+            this.Email.SuspendLayout();
+            this.Nome.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -614,7 +614,7 @@
             this.Pannello_Principale.Controls.Add(this.panel2);
             this.Pannello_Principale.Location = new System.Drawing.Point(1284, 66);
             this.Pannello_Principale.Name = "Pannello_Principale";
-            this.Pannello_Principale.Size = new System.Drawing.Size(330, 455);
+            this.Pannello_Principale.Size = new System.Drawing.Size(98, 455);
             this.Pannello_Principale.TabIndex = 11;
             // 
             // Pannello_InEvidenza
@@ -694,9 +694,9 @@
             this.Pannello_Posti.AutoScroll = true;
             this.Pannello_Posti.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Posti.Controls.Add(this.Tab_Info_Posti);
-            this.Pannello_Posti.Location = new System.Drawing.Point(274, 499);
+            this.Pannello_Posti.Location = new System.Drawing.Point(1170, 66);
             this.Pannello_Posti.Name = "Pannello_Posti";
-            this.Pannello_Posti.Size = new System.Drawing.Size(1183, 466);
+            this.Pannello_Posti.Size = new System.Drawing.Size(108, 455);
             this.Pannello_Posti.TabIndex = 12;
             this.Pannello_Posti.Visible = false;
             // 
@@ -710,7 +710,7 @@
             this.Tab_Info_Posti.Location = new System.Drawing.Point(0, 0);
             this.Tab_Info_Posti.Name = "Tab_Info_Posti";
             this.Tab_Info_Posti.SelectedIndex = 0;
-            this.Tab_Info_Posti.Size = new System.Drawing.Size(1183, 466);
+            this.Tab_Info_Posti.Size = new System.Drawing.Size(108, 455);
             this.Tab_Info_Posti.TabIndex = 0;
             // 
             // Pgn_Informazioni
@@ -723,7 +723,7 @@
             this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(1175, 440);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(100, 429);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -4147,6 +4147,7 @@
             // txt_telefono
             // 
             this.txt_telefono.Location = new System.Drawing.Point(548, 232);
+            this.txt_telefono.MaxLength = 10;
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(204, 20);
             this.txt_telefono.TabIndex = 22;
@@ -4227,6 +4228,7 @@
             // 
             // txt_codicefiscale
             // 
+            this.txt_codicefiscale.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_codicefiscale.Location = new System.Drawing.Point(547, 192);
             this.txt_codicefiscale.Name = "txt_codicefiscale";
             this.txt_codicefiscale.Size = new System.Drawing.Size(204, 20);
@@ -4359,9 +4361,9 @@
             // 
             this.Pannello_Acc_User.BackColor = System.Drawing.SystemColors.Control;
             this.Pannello_Acc_User.Controls.Add(this.tabControl1);
-            this.Pannello_Acc_User.Location = new System.Drawing.Point(22, 508);
+            this.Pannello_Acc_User.Location = new System.Drawing.Point(1400, 66);
             this.Pannello_Acc_User.Name = "Pannello_Acc_User";
-            this.Pannello_Acc_User.Size = new System.Drawing.Size(1161, 444);
+            this.Pannello_Acc_User.Size = new System.Drawing.Size(107, 444);
             this.Pannello_Acc_User.TabIndex = 15;
             this.Pannello_Acc_User.Visible = false;
             // 
@@ -4395,198 +4397,46 @@
             this.Pgn_Profilo.Text = "0";
             this.Pgn_Profilo.UseVisualStyleBackColor = true;
             // 
-            // label18
+            // Pnl_ModPswVer
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(-3, 5);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(89, 22);
-            this.label18.TabIndex = 26;
-            this.label18.Text = "Password";
+            this.Pnl_ModPswVer.Controls.Add(this.Btn_CkPsw);
+            this.Pnl_ModPswVer.Controls.Add(this.txt_VerPsw);
+            this.Pnl_ModPswVer.Controls.Add(this.label20);
+            this.Pnl_ModPswVer.Location = new System.Drawing.Point(514, 200);
+            this.Pnl_ModPswVer.Name = "Pnl_ModPswVer";
+            this.Pnl_ModPswVer.Size = new System.Drawing.Size(376, 34);
+            this.Pnl_ModPswVer.TabIndex = 33;
+            this.Pnl_ModPswVer.Visible = false;
             // 
-            // txt_A_Password
+            // Btn_CkPsw
             // 
-            this.txt_A_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_A_Password.Location = new System.Drawing.Point(119, 9);
-            this.txt_A_Password.Name = "txt_A_Password";
-            this.txt_A_Password.PasswordChar = '*';
-            this.txt_A_Password.Size = new System.Drawing.Size(165, 13);
-            this.txt_A_Password.TabIndex = 25;
-            this.txt_A_Password.UseSystemPasswordChar = true;
+            this.Btn_CkPsw.Location = new System.Drawing.Point(311, 5);
+            this.Btn_CkPsw.Name = "Btn_CkPsw";
+            this.Btn_CkPsw.Size = new System.Drawing.Size(62, 25);
+            this.Btn_CkPsw.TabIndex = 28;
+            this.Btn_CkPsw.Text = "Check";
+            this.Btn_CkPsw.UseVisualStyleBackColor = true;
+            this.Btn_CkPsw.Click += new System.EventHandler(this.Btn_CkPsw_Click);
             // 
-            // Lbl_Role
+            // txt_VerPsw
             // 
-            this.Lbl_Role.AutoSize = true;
-            this.Lbl_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.Lbl_Role.Location = new System.Drawing.Point(1059, 425);
-            this.Lbl_Role.Name = "Lbl_Role";
-            this.Lbl_Role.Size = new System.Drawing.Size(57, 22);
-            this.Lbl_Role.TabIndex = 9;
-            this.Lbl_Role.Text = "Ruolo";
+            this.txt_VerPsw.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_VerPsw.Location = new System.Drawing.Point(140, 11);
+            this.txt_VerPsw.Name = "txt_VerPsw";
+            this.txt_VerPsw.PasswordChar = '*';
+            this.txt_VerPsw.Size = new System.Drawing.Size(165, 13);
+            this.txt_VerPsw.TabIndex = 28;
+            this.txt_VerPsw.UseSystemPasswordChar = true;
             // 
-            // Modifica_Info_A
+            // label20
             // 
-            this.Modifica_Info_A.Location = new System.Drawing.Point(290, 4);
-            this.Modifica_Info_A.Name = "Modifica_Info_A";
-            this.Modifica_Info_A.Size = new System.Drawing.Size(137, 25);
-            this.Modifica_Info_A.TabIndex = 8;
-            this.Modifica_Info_A.Text = "Modifica";
-            this.Modifica_Info_A.UseVisualStyleBackColor = true;
-            this.Modifica_Info_A.Click += new System.EventHandler(this.Modifica_Info);
-            // 
-            // txt_A_Telefono
-            // 
-            this.txt_A_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_A_Telefono.Location = new System.Drawing.Point(119, 9);
-            this.txt_A_Telefono.Name = "txt_A_Telefono";
-            this.txt_A_Telefono.Size = new System.Drawing.Size(165, 13);
-            this.txt_A_Telefono.TabIndex = 7;
-            this.txt_A_Telefono.Text = "telefono";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(4, 5);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 22);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Telefono";
-            // 
-            // txt_A_Email
-            // 
-            this.txt_A_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_A_Email.Location = new System.Drawing.Point(119, 9);
-            this.txt_A_Email.Name = "txt_A_Email";
-            this.txt_A_Email.Size = new System.Drawing.Size(165, 13);
-            this.txt_A_Email.TabIndex = 5;
-            this.txt_A_Email.Text = "email";
-            // 
-            // txt_A_Nome
-            // 
-            this.txt_A_Nome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_A_Nome.Location = new System.Drawing.Point(119, 9);
-            this.txt_A_Nome.Name = "txt_A_Nome";
-            this.txt_A_Nome.Size = new System.Drawing.Size(165, 13);
-            this.txt_A_Nome.TabIndex = 3;
-            this.txt_A_Nome.Text = "nome visualizzato";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(30, 5);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 22);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Email";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(27, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 22);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Nome";
-            // 
-            // Btn_Logout
-            // 
-            this.Btn_Logout.Location = new System.Drawing.Point(125, 398);
-            this.Btn_Logout.Name = "Btn_Logout";
-            this.Btn_Logout.Size = new System.Drawing.Size(137, 32);
-            this.Btn_Logout.TabIndex = 0;
-            this.Btn_Logout.Text = "Logout";
-            this.Btn_Logout.UseVisualStyleBackColor = true;
-            this.Btn_Logout.Click += new System.EventHandler(this.Btn_Logout_Click);
-            // 
-            // Pgn_Sicurezza
-            // 
-            this.Pgn_Sicurezza.Location = new System.Drawing.Point(4, 22);
-            this.Pgn_Sicurezza.Name = "Pgn_Sicurezza";
-            this.Pgn_Sicurezza.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Sicurezza.Size = new System.Drawing.Size(1147, 457);
-            this.Pgn_Sicurezza.TabIndex = 1;
-            this.Pgn_Sicurezza.Text = "Sicurezza";
-            this.Pgn_Sicurezza.UseVisualStyleBackColor = true;
-            // 
-            // Pgn_Personalizza
-            // 
-            this.Pgn_Personalizza.Location = new System.Drawing.Point(4, 22);
-            this.Pgn_Personalizza.Name = "Pgn_Personalizza";
-            this.Pgn_Personalizza.Size = new System.Drawing.Size(1147, 457);
-            this.Pgn_Personalizza.TabIndex = 2;
-            this.Pgn_Personalizza.Text = "Personalizzazione";
-            this.Pgn_Personalizza.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Berlin Sans FB Demi", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(421, 31);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(228, 35);
-            this.label19.TabIndex = 27;
-            this.label19.Text = "Pagina Account";
-            // 
-            // Nome
-            // 
-            this.Nome.Controls.Add(this.Modifica_Info_A);
-            this.Nome.Controls.Add(this.txt_A_Nome);
-            this.Nome.Controls.Add(this.label9);
-            this.Nome.Location = new System.Drawing.Point(66, 95);
-            this.Nome.Name = "Nome";
-            this.Nome.Size = new System.Drawing.Size(430, 33);
-            this.Nome.TabIndex = 28;
-            // 
-            // Email
-            // 
-            this.Email.Controls.Add(this.button1);
-            this.Email.Controls.Add(this.label11);
-            this.Email.Controls.Add(this.txt_A_Email);
-            this.Email.Location = new System.Drawing.Point(66, 130);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(430, 33);
-            this.Email.TabIndex = 29;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(290, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 25);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Modifica";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Modifica_Info);
-            // 
-            // Telefono
-            // 
-            this.Telefono.Controls.Add(this.button148);
-            this.Telefono.Controls.Add(this.label13);
-            this.Telefono.Controls.Add(this.txt_A_Telefono);
-            this.Telefono.Location = new System.Drawing.Point(66, 165);
-            this.Telefono.Name = "Telefono";
-            this.Telefono.Size = new System.Drawing.Size(430, 33);
-            this.Telefono.TabIndex = 30;
-            // 
-            // button148
-            // 
-            this.button148.Location = new System.Drawing.Point(290, 4);
-            this.button148.Name = "button148";
-            this.button148.Size = new System.Drawing.Size(137, 25);
-            this.button148.TabIndex = 10;
-            this.button148.Text = "Modifica";
-            this.button148.UseVisualStyleBackColor = true;
-            this.button148.Click += new System.EventHandler(this.Modifica_Info);
-            // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(66, 239);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(0, 0);
-            this.panel4.TabIndex = 31;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(5, 8);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(123, 18);
+            this.label20.TabIndex = 27;
+            this.label20.Text = "Password Attuale";
             // 
             // Password
             // 
@@ -4608,46 +4458,204 @@
             this.button149.UseVisualStyleBackColor = true;
             this.button149.Click += new System.EventHandler(this.Modifica_Info);
             // 
-            // Pnl_ModPswVer
+            // label18
             // 
-            this.Pnl_ModPswVer.Controls.Add(this.Btn_CkPsw);
-            this.Pnl_ModPswVer.Controls.Add(this.txt_VerPsw);
-            this.Pnl_ModPswVer.Controls.Add(this.label20);
-            this.Pnl_ModPswVer.Location = new System.Drawing.Point(514, 200);
-            this.Pnl_ModPswVer.Name = "Pnl_ModPswVer";
-            this.Pnl_ModPswVer.Size = new System.Drawing.Size(376, 34);
-            this.Pnl_ModPswVer.TabIndex = 33;
-            this.Pnl_ModPswVer.Visible = false;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(-3, 5);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(89, 22);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "Password";
             // 
-            // label20
+            // txt_A_Password
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(5, 8);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(123, 18);
-            this.label20.TabIndex = 27;
-            this.label20.Text = "Password Attuale";
+            this.txt_A_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_A_Password.Location = new System.Drawing.Point(119, 9);
+            this.txt_A_Password.Name = "txt_A_Password";
+            this.txt_A_Password.PasswordChar = '*';
+            this.txt_A_Password.Size = new System.Drawing.Size(165, 13);
+            this.txt_A_Password.TabIndex = 25;
+            this.txt_A_Password.UseSystemPasswordChar = true;
             // 
-            // txt_VerPsw
+            // panel4
             // 
-            this.txt_VerPsw.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_VerPsw.Location = new System.Drawing.Point(140, 11);
-            this.txt_VerPsw.Name = "txt_VerPsw";
-            this.txt_VerPsw.PasswordChar = '*';
-            this.txt_VerPsw.Size = new System.Drawing.Size(165, 13);
-            this.txt_VerPsw.TabIndex = 28;
-            this.txt_VerPsw.UseSystemPasswordChar = true;
+            this.panel4.Location = new System.Drawing.Point(66, 239);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(0, 0);
+            this.panel4.TabIndex = 31;
             // 
-            // Btn_CkPsw
+            // Telefono
             // 
-            this.Btn_CkPsw.Location = new System.Drawing.Point(311, 5);
-            this.Btn_CkPsw.Name = "Btn_CkPsw";
-            this.Btn_CkPsw.Size = new System.Drawing.Size(62, 25);
-            this.Btn_CkPsw.TabIndex = 28;
-            this.Btn_CkPsw.Text = "Check";
-            this.Btn_CkPsw.UseVisualStyleBackColor = true;
-            this.Btn_CkPsw.Click += new System.EventHandler(this.Btn_CkPsw_Click);
+            this.Telefono.Controls.Add(this.button148);
+            this.Telefono.Controls.Add(this.label13);
+            this.Telefono.Controls.Add(this.txt_A_Telefono);
+            this.Telefono.Location = new System.Drawing.Point(66, 165);
+            this.Telefono.Name = "Telefono";
+            this.Telefono.Size = new System.Drawing.Size(430, 33);
+            this.Telefono.TabIndex = 30;
+            // 
+            // button148
+            // 
+            this.button148.Location = new System.Drawing.Point(290, 4);
+            this.button148.Name = "button148";
+            this.button148.Size = new System.Drawing.Size(137, 25);
+            this.button148.TabIndex = 10;
+            this.button148.Text = "Modifica";
+            this.button148.UseVisualStyleBackColor = true;
+            this.button148.Click += new System.EventHandler(this.Modifica_Info);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(4, 5);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 22);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Telefono";
+            // 
+            // txt_A_Telefono
+            // 
+            this.txt_A_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_A_Telefono.Location = new System.Drawing.Point(119, 9);
+            this.txt_A_Telefono.MaxLength = 10;
+            this.txt_A_Telefono.Name = "txt_A_Telefono";
+            this.txt_A_Telefono.Size = new System.Drawing.Size(165, 13);
+            this.txt_A_Telefono.TabIndex = 7;
+            this.txt_A_Telefono.Text = "telefono";
+            // 
+            // Email
+            // 
+            this.Email.Controls.Add(this.button1);
+            this.Email.Controls.Add(this.label11);
+            this.Email.Controls.Add(this.txt_A_Email);
+            this.Email.Location = new System.Drawing.Point(66, 130);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(430, 33);
+            this.Email.TabIndex = 29;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(290, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 25);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Modifica";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Modifica_Info);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(30, 5);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 22);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Email";
+            // 
+            // txt_A_Email
+            // 
+            this.txt_A_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_A_Email.Location = new System.Drawing.Point(119, 9);
+            this.txt_A_Email.Name = "txt_A_Email";
+            this.txt_A_Email.Size = new System.Drawing.Size(165, 13);
+            this.txt_A_Email.TabIndex = 5;
+            this.txt_A_Email.Text = "email";
+            // 
+            // Nome
+            // 
+            this.Nome.Controls.Add(this.Modifica_Info_A);
+            this.Nome.Controls.Add(this.txt_A_Nome);
+            this.Nome.Controls.Add(this.label9);
+            this.Nome.Location = new System.Drawing.Point(66, 95);
+            this.Nome.Name = "Nome";
+            this.Nome.Size = new System.Drawing.Size(430, 33);
+            this.Nome.TabIndex = 28;
+            // 
+            // Modifica_Info_A
+            // 
+            this.Modifica_Info_A.Location = new System.Drawing.Point(290, 4);
+            this.Modifica_Info_A.Name = "Modifica_Info_A";
+            this.Modifica_Info_A.Size = new System.Drawing.Size(137, 25);
+            this.Modifica_Info_A.TabIndex = 8;
+            this.Modifica_Info_A.Text = "Modifica";
+            this.Modifica_Info_A.UseVisualStyleBackColor = true;
+            this.Modifica_Info_A.Click += new System.EventHandler(this.Modifica_Info);
+            // 
+            // txt_A_Nome
+            // 
+            this.txt_A_Nome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_A_Nome.Location = new System.Drawing.Point(119, 9);
+            this.txt_A_Nome.Name = "txt_A_Nome";
+            this.txt_A_Nome.Size = new System.Drawing.Size(165, 13);
+            this.txt_A_Nome.TabIndex = 3;
+            this.txt_A_Nome.Text = "nome visualizzato";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(27, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 22);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Nome";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Berlin Sans FB Demi", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(429, 31);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(228, 35);
+            this.label19.TabIndex = 27;
+            this.label19.Text = "Pagina Account";
+            // 
+            // Lbl_Role
+            // 
+            this.Lbl_Role.AutoSize = true;
+            this.Lbl_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Lbl_Role.Location = new System.Drawing.Point(670, 42);
+            this.Lbl_Role.Name = "Lbl_Role";
+            this.Lbl_Role.Size = new System.Drawing.Size(57, 22);
+            this.Lbl_Role.TabIndex = 9;
+            this.Lbl_Role.Text = "Ruolo";
+            // 
+            // Btn_Logout
+            // 
+            this.Btn_Logout.FlatAppearance.BorderSize = 0;
+            this.Btn_Logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Btn_Logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Logout.Font = new System.Drawing.Font("Berlin Sans FB Demi", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Btn_Logout.Location = new System.Drawing.Point(461, 378);
+            this.Btn_Logout.Name = "Btn_Logout";
+            this.Btn_Logout.Size = new System.Drawing.Size(181, 46);
+            this.Btn_Logout.TabIndex = 0;
+            this.Btn_Logout.Text = "Logout";
+            this.Btn_Logout.UseVisualStyleBackColor = true;
+            this.Btn_Logout.Click += new System.EventHandler(this.Btn_Logout_Click);
+            // 
+            // Pgn_Sicurezza
+            // 
+            this.Pgn_Sicurezza.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Sicurezza.Name = "Pgn_Sicurezza";
+            this.Pgn_Sicurezza.Padding = new System.Windows.Forms.Padding(3);
+            this.Pgn_Sicurezza.Size = new System.Drawing.Size(1147, 497);
+            this.Pgn_Sicurezza.TabIndex = 1;
+            this.Pgn_Sicurezza.Text = "Sicurezza";
+            this.Pgn_Sicurezza.UseVisualStyleBackColor = true;
+            // 
+            // Pgn_Personalizza
+            // 
+            this.Pgn_Personalizza.Location = new System.Drawing.Point(4, 22);
+            this.Pgn_Personalizza.Name = "Pgn_Personalizza";
+            this.Pgn_Personalizza.Size = new System.Drawing.Size(1147, 497);
+            this.Pgn_Personalizza.TabIndex = 2;
+            this.Pgn_Personalizza.Text = "Personalizzazione";
+            this.Pgn_Personalizza.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -4721,16 +4729,16 @@
             this.tabControl1.ResumeLayout(false);
             this.Pgn_Profilo.ResumeLayout(false);
             this.Pgn_Profilo.PerformLayout();
-            this.Nome.ResumeLayout(false);
-            this.Nome.PerformLayout();
-            this.Email.ResumeLayout(false);
-            this.Email.PerformLayout();
-            this.Telefono.ResumeLayout(false);
-            this.Telefono.PerformLayout();
-            this.Password.ResumeLayout(false);
-            this.Password.PerformLayout();
             this.Pnl_ModPswVer.ResumeLayout(false);
             this.Pnl_ModPswVer.PerformLayout();
+            this.Password.ResumeLayout(false);
+            this.Password.PerformLayout();
+            this.Telefono.ResumeLayout(false);
+            this.Telefono.PerformLayout();
+            this.Email.ResumeLayout(false);
+            this.Email.PerformLayout();
+            this.Nome.ResumeLayout(false);
+            this.Nome.PerformLayout();
             this.ResumeLayout(false);
 
         }
