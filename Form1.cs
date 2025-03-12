@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Biglietti_concerto
@@ -408,7 +409,8 @@ namespace Biglietti_concerto
             { "Estate 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
             { "Jimmy Sax and Symphonic Dance Orchestra", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
             { "2025 World Tour - Milano", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "AC/DC - Powerup Tour", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) }
+            { "AC/DC - Powerup Tour", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "Default", (new List<string> { "Default" }, new List<string> { "Default" }, new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
         };
         List<(string Titolo, string Artista, string Descrizione, Dictionary<string, (List<string> luoghi, List<string> date, Dictionary<(string luogo, string data), Dictionary<string, List<Button>>> buttons)> Dizionario)> Spettacoli = new List<(string, string, string, Dictionary<string, (List<string> luoghi, List<string> date, Dictionary<(string luogo, string data), Dictionary<string, List<Button>>> buttons)>)>
         {
@@ -535,7 +537,6 @@ namespace Biglietti_concerto
 
         private void CaricaPostiEventi()
         {
-            // Per ogni evento del dizionario, si crea una mappa dei Posti in base a Luogo e Data
             foreach (var key in Eventi.Keys.ToList())
             {
                 var evento = Eventi[key];
@@ -764,6 +765,7 @@ namespace Biglietti_concerto
 
                     }
                 }
+                CaricaPosti("Default", "Default", "Default");
 
                 postiSelezionati.Clear();
                 MessageBox.Show($"{PostiSelezionati} Posti acquistati con successo!");
@@ -813,11 +815,8 @@ namespace Biglietti_concerto
             }
         }
 
-        private void CaricaPosti()
+        private void CaricaPosti(string eventTitle, string selectedLuogo, string selectedData)
         {
-            string eventTitle = TitoloSpettacolo_Lbl.Text;
-            string selectedLuogo = Luogo_Lst.SelectedItem.ToString();
-            string selectedData = Data_Lst.SelectedItem.ToString();
 
             if (!Eventi.ContainsKey(eventTitle))
                 return;
@@ -959,7 +958,7 @@ namespace Biglietti_concerto
         {
             Data_Lst.SelectedIndex = Luogo_Lst.SelectedIndex;
             if (Luogo_Lst.SelectedIndex == -1) return;
-            CaricaPosti();
+            CaricaPosti(TitoloSpettacolo_Lbl.Text, Luogo_Lst.SelectedItem.ToString(), Data_Lst.SelectedItem.ToString());
         }
 
 
@@ -971,8 +970,8 @@ namespace Biglietti_concerto
                 Pannello_Acc_User.Visible = true;
                 txt_A_Nome.Text = loggedNome;
                 txt_A_Email.Text = loggedEmail;
-                txt_A_Telefono.Text = loggedTelefono;
                 Lbl_Role.Text = loggedRole;
+                txt_A_Telefono.Text =  string.IsNullOrEmpty(loggedTelefono) ? "Nessun Telefono Impostato" : loggedTelefono;
 
             }
             else
@@ -1185,20 +1184,6 @@ namespace Biglietti_concerto
 
         private void Modifica_Vis_Name_Click(object sender, EventArgs e)
         {
-            string jsonContent = File.ReadAllText(filePath);
-            JArray jsonArray = JArray.Parse(jsonContent);
-
-            JObject user = jsonArray
-                .Children<JObject>()
-                .FirstOrDefault(u =>
-                    (u["Email"]?.ToString() == loggedEmail));
-            if (user != null)
-            {
-                user["Nome Visualizzato"] = txt_A_Nome.Text;
-                File.WriteAllText(filePath, jsonArray.ToString());
-                loggedNome = txt_A_Nome.Text;
-                MessageBox.Show("Username Modificato");
-            }
 
         }
 
@@ -1262,9 +1247,63 @@ namespace Biglietti_concerto
             }
         }
 
+        private void Modifica_Info(object sender, EventArgs e)
+        {
+            string InfodaModicare = ((Button)sender).Parent.Name;
 
+            JArray jsonArray = JArray.Parse(File.ReadAllText(filePath));
+            JObject user = jsonArray
+                .Children<JObject>()
+                .FirstOrDefault(u =>
+                    (u["Email"]?.ToString() == loggedEmail));
 
+            switch (InfodaModicare)
+            {
+                case "Nome":
+                    user["Nome"] = txt_A_Nome.Text;
+                    loggedNome = txt_A_Nome.Text;
+                    break;
+                case "Email":
+                    user["Email"] = txt_A_Email.Text;
+                    loggedEmail = txt_A_Email.Text;
+                    break;
+                case "Telefono":
+                    user["Telefono"] = txt_A_Telefono.Text;
+                    loggedTelefono = txt_A_Telefono.Text;
+                    break;
+                case "Password":
+                    Pnl_ModPswVer.Visible = true;
+                    break;
+            }
 
+            File.WriteAllText(filePath, jsonArray.ToString());
+        }
 
+        private void Btn_CkPsw_Click(object sender, EventArgs e)
+        {
+
+            JArray jsonArray = JArray.Parse(File.ReadAllText(filePath));
+            JObject user = jsonArray
+                .Children<JObject>()
+                .FirstOrDefault(u =>
+                    (u["Email"]?.ToString() == loggedEmail));
+
+            if (user["Password"]?.ToString() == MascheraPassword(txt_VerPsw.Text))
+            {
+                txt_VerPsw.BackColor = Color.PaleGreen;
+                user["Password"] = MascheraPassword(txt_A_Password.Text);
+                Thread.Sleep(200);
+                Pnl_ModPswVer.Visible = false;
+                txt_VerPsw.Clear();
+                txt_VerPsw.BackColor = Color.White;
+            }
+            else
+            {
+                txt_VerPsw.BackColor = Color.IndianRed;
+                txt_VerPsw.Clear();
+            }
+
+            File.WriteAllText(filePath, jsonArray.ToString());
+        }
     }
 }
