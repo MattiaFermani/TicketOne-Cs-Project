@@ -1677,6 +1677,57 @@ namespace Biglietti_concerto
                     }
                 }
             }
+            if(e.Node.Level == 2)
+            {
+                Pannello_Prenotazione_A.Visible = true;
+                Pannello_Prenotazione_A.BringToFront();
+                ListaPostiBuy_A.SelectedIndex = -1;
+                string jsonContent = File.ReadAllText(filePrenotazioni);
+                JArray prenotazioni = JArray.Parse(jsonContent);
+                foreach (JObject pren in prenotazioni)
+                {
+                    if (pren["CodicePrenotazione"]?.ToString() == e.Node.Text)
+                    {
+                        Lbl_CodicePrenotazione_A.Text = pren["CodicePrenotazione"]?.ToString() ?? "";
+                        TitoloEvento_A_Lbl.Text = pren["TitoloSpettacolo"]?.ToString() ?? "";
+                        ArtistaSpettacolo_A_Lbl.Text = pren["Evento"]?.ToString() ?? "";
+                        foreach (Control control in Pannello_Principale.Controls)
+                        {
+                            if (control is Panel)
+                            {
+                                foreach (Control img in control.Controls)
+                                {
+                                    if (img is PictureBox && img.Tag.ToString() == TitoloEvento_U_Lbl.Text)
+                                    {
+                                        SpettacoloImg_A_Pbox.Image = ((PictureBox)img).Image;
+                                        if (SpettacoloImg_A_Pbox.Size == SpettacoloImg_A_Pbox.MinimumSize)
+                                        {
+                                            Group_Posti_A.Location = new Point(185, 136);
+                                        }
+                                        else
+                                        {
+                                            Group_Posti_A.Location = new Point(338, 136);
+                                        }
+                                    }
+                                }
+                            }
+                            else if (control is PictureBox && control.Tag.ToString() == TitoloEvento_A_Lbl.Text)
+                            {
+                                SpettacoloImg_A_Pbox.Image = ((PictureBox)control).Image;
+                            }
+                        }
+                        ListaPostiBuy_A.Items.Clear();
+                        if (pren["Posti"] is JArray postiArray && postiArray.Count > 0)
+                        {
+                            foreach (JObject posto in postiArray)
+                            {
+                                string descrizione = posto["Descrizione"]?.ToString() ?? "";
+                                ListaPostiBuy_A.Items.Add($"{descrizione}");
+                            }
+                        }
+                    }
+                }
+            }
         }
         private void Albero_Prenotazioni_User_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
@@ -1795,6 +1846,56 @@ namespace Biglietti_concerto
             else
             {
                 InfoPosto_U.Visible = false;
+            }
+        }
+
+        private void ListaPostiBuy_A_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ListaPostiBuy.SelectedIndex != -1)
+            {
+                InfoPosto_A.Visible = true;
+                string jsonContent = File.ReadAllText(filePrenotazioni);
+                JArray prenotazioni = JArray.Parse(jsonContent);
+                foreach (JObject pren in prenotazioni)
+                {
+                    if (pren["Email"] != null && pren["Email"].ToString().Equals(loggedEmail, StringComparison.OrdinalIgnoreCase))
+                    {
+                        if (pren["Posti"] is JArray postiArray && postiArray.Count > 0)
+                        {
+                            foreach (JObject posto in postiArray)
+                            {
+                                string descrizione = posto["Descrizione"]?.ToString() ?? "";
+                                if (ListaPostiBuy_A.SelectedItem.ToString().Contains(descrizione))
+                                {
+                                    string settore = posto["Settore"]?.ToString() ?? "Settore Sconosciuto";
+                                    string nomePosto = posto["Descrizione"]?.ToString() ?? "Posto Sconosciuto";
+                                    string tipologia = posto["Tipologia"]?.ToString() ?? "Tipologia Sconosciuta";
+                                    string prezzo = posto["Prezzo"]?.ToString() ?? "Prezzo Sconosciuto";
+                                    Lbl_A_Settore.Text = settore;
+                                    Lbl_A_Posto.Text = nomePosto;
+                                    Lbl_A_Tipologia.Text = tipologia;
+                                    Lbl_A_Prezzo.Text = prezzo;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                InfoPosto_A.Visible = false;
+            }
+        }
+
+        private void Tab_Info_Posti_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(Tab_Info_Posti.SelectedIndex == 1)
+            {
+                if(Luogo_Lst.SelectedIndex == -1)
+                {
+                    Tab_Info_Posti.SelectedIndex = 0;
+                    MessageBox.Show("Seleziona un luogo e una data per procedere con l'acquisto dei posti");
+                }
             }
         }
     }

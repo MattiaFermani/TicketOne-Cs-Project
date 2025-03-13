@@ -37,5 +37,44 @@
         "Prezzo": "15€"
       }
     ]
+  },
+  {
+    "TitoloSpettacolo": "Estate 2025",
+    "CodicePrenotazione": "PRE0002",
+    "Evento": "Siena - Stadio Artemio Franchi -> 05/05/2025",
+    "Nome": "Viviana",
+    "Cognome": "Pirani",
+    "Telefono": "",
+    "Email": "12345678890",
+    "Posti": [
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button132",
+        "Descrizione": "H4",
+        "Tipologia": "Senior",
+        "Prezzo": "15€"
+      },
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button135",
+        "Descrizione": "E3",
+        "Tipologia": "Normale",
+        "Prezzo": "20€"
+      },
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button133",
+        "Descrizione": "E4",
+        "Tipologia": "Normale",
+        "Prezzo": "20€"
+      },
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button134",
+        "Descrizione": "H3",
+        "Tipologia": "Senior",
+        "Prezzo": "15€"
+      }
+    ]
   }
 ]

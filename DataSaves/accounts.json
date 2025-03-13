@@ -12,15 +12,15 @@
     "Password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
   },
   {
-    "Nome": "Viviana",
-    "Cognome": "Pirani",
-    "Nome Visualizzato": "Vivi",
-    "Data di nascita": "02/05/1975",
-    "Comune": "ANCONA (AN)",
-    "Codice Fiscale": "PRNVVN75E42A271G",
+    "Nome": "Utente",
+    "Cognome": "1",
+    "Nome Visualizzato": "User",
+    "Data di nascita": "00/00/0000",
+    "Comune": "",
+    "Codice Fiscale": "",
     "Telefono": "",
-    "Email": "12345678890",
+    "Email": "email@dominio.xyz",
     "Role": "User",
-    "Password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
+    "Password": "c775e7b757ede630cd0aa1113bd102661ab38829ca52a6422ab782862f268646"
   }
 ]
