@@ -23,13 +23,11 @@ namespace Biglietti_concerto
         static string loggedRole = "";
 
         static string adminFilePath = "admin.dat";
-        static string encryptionKey = "abcabc"; // 🔑 Chiave di cifratura (NON salvarla nel codice in produzione!)
+        static string encryptionKey = "abcabc";
 
 
         static readonly string filePath = "accounts.json";
 
-        private Button button;
-        private Panel panel;
         static Random rand = new Random();
         static List<string> Comuni = new List<string>();
         static List<string> CodiciBelfiore = new List<string>();
@@ -531,9 +529,22 @@ namespace Biglietti_concerto
             InitializeComponent();
             CreaAdminPassword("Cisco123");
             ComuniITA();
+            AlberoEventiLoad();
         }
 
-
+        private void AlberoEventiLoad()
+        {
+            foreach (var spettacolo in Spettacoli)
+            {
+                TreeNode node = new TreeNode(spettacolo.Titolo);
+                foreach (var luogo in spettacolo.Dizionario[spettacolo.Titolo].luoghi)
+                {
+                    TreeNode child = new TreeNode(luogo);
+                    node.Nodes.Add(child);
+                }
+                Albero_Eventi.Nodes.Add(node);
+            }
+        }
 
         private void CaricaPostiEventi()
         {
@@ -553,7 +564,14 @@ namespace Biglietti_concerto
                             List<Button> Posti = new List<Button>();
                             foreach (Button Posto in Settore.Controls)
                             {
-                                Posti.Add(Posto);
+                                string Name = Posto.Name;
+                                string Text = Posto.Text;
+                                Color Color = Posto.BackColor;
+                                Button bottone = new Button();
+                                bottone.Name = Name;
+                                bottone.Text = Text;
+                                bottone.BackColor = Color;
+                                Posti.Add(bottone);
                             }
                             Settori.Add(Settore.Name, Posti);
                         }
@@ -569,13 +587,15 @@ namespace Biglietti_concerto
             this.Size = new System.Drawing.Size(1150, 485);
             Pannello_Principale.Size = new System.Drawing.Size(1151, 434);
             Pannello_Principale.Location = new Point(0, 54);
+            Pannello_Principale.BringToFront();
             Pannello_Posti.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Posti.Location = new Point(0, 54);
             Pannello_Login.Size = new System.Drawing.Size(1151, 434);
             Pannello_Login.Location = new Point(0, 54);
-            Pannello_Login.Visible = false;
             Pannello_Acc_User.Size = new System.Drawing.Size(1151, 434);
             Pannello_Acc_User.Location = new Point(0, 54);
-            Pannello_Acc_User.Visible = false;
+            Pannello_Admin.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Admin.Location = new Point(0, 54);
             AggiornaDisponibilitaTooltip();
             spettacoliToolTip.AutoPopDelay = 5000;
             spettacoliToolTip.InitialDelay = 300;
@@ -663,9 +683,8 @@ namespace Biglietti_concerto
                     break;
                 }
             }
-            Pannello_Principale.Visible = false;
-            Pannello_Posti.Location = new Point(0, 54);
             Pannello_Posti.Visible = true;
+            Pannello_Posti.BringToFront();
 
             Img_Info.Image = pb.Image;
             Img_Info.SizeMode = PictureBoxSizeMode.Zoom;
@@ -677,7 +696,6 @@ namespace Biglietti_concerto
         private void PostoSelezionato_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            button = btn;
             if (btn.BackColor != Color.Yellow)
             {
                 if (PostiSelezionati < 4)
@@ -870,7 +888,6 @@ namespace Biglietti_concerto
                             }
                             else
                             {
-                                // Se non trovato, assegna il colore di default in base al Tag
                                 switch (posto.Tag)
                                 {
                                     case "0Normal":
@@ -948,11 +965,7 @@ namespace Biglietti_concerto
         private void TickeTlon_Click(object sender, EventArgs e)
         {
             Pannello_Principale.Visible = true;
-            Pannello_Principale.Location = new Point(0, 54);
-            Pannello_Posti.Visible = false;
-            Pannello_Login.Visible = false;
-            Pannello_Acc_User.Visible = false;
-            Pannello_Pagamento.Visible = false;
+            Pannello_Principale.BringToFront();
         }
         private void Data_Luogo_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -967,20 +980,18 @@ namespace Biglietti_concerto
         {
             if (Login)
             {
+                Pannello_Acc_User.BringToFront();
                 Pannello_Acc_User.Visible = true;
                 txt_A_Nome.Text = loggedNome;
                 txt_A_Email.Text = loggedEmail;
                 Lbl_Role.Text = loggedRole;
-                txt_A_Telefono.Text =  string.IsNullOrEmpty(loggedTelefono) ? "Nessun Telefono Impostato" : loggedTelefono;
+                txt_A_Telefono.Text = string.IsNullOrEmpty(loggedTelefono) ? "Nessun Telefono Impostato" : loggedTelefono;
 
             }
             else
             {
-                Pannello_Principale.Visible = false;
-                Pannello_Posti.Visible = false;
-                Pannello_Login.Visible = true;
+                Pannello_Login.BringToFront();
                 Pannello_Login.Enabled = true;
-                Pannello_Login.Location = new Point(0, 54);
             }
         }
         private string MascheraPassword(string password)
@@ -1182,16 +1193,11 @@ namespace Biglietti_concerto
             }
         }
 
-        private void Modifica_Vis_Name_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Btn_Logout_Click(object sender, EventArgs e)
         {
             Login = false;
-            Pannello_Acc_User.Visible = false;
-            Pannello_Acc_User.Enabled = false;
+            Pannello_Login.BringToFront();
             Pannello_Login.Visible = true;
             Pannello_Login.Enabled = true;
 
@@ -1305,5 +1311,77 @@ namespace Biglietti_concerto
 
             File.WriteAllText(filePath, jsonArray.ToString());
         }
+
+        private void Btn_AdminPanel_Click(object sender, EventArgs e)
+        {
+            Pannello_Admin.BringToFront();
+            Pannello_Admin.Visible = true;
+        }
+
+        private void Albero_Eventi_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Node.Level == 0)
+            {
+                Pannello_Spettacolo_Info.Visible = true;
+                Pannello_Spettacolo_Info.BringToFront();
+                foreach (var spettacolo in Spettacoli)
+                {
+                    if (spettacolo.Titolo == e.Node.Text)
+                    {
+                        SpettacoloTitolo_Lbl.Text = spettacolo.Titolo;
+                        SpettacoloArtista_Lbl.Text = spettacolo.Artista;
+                        foreach (Control control in Pannello_Principale.Controls)
+                        {
+                            if (control is Panel)
+                            {
+                                foreach (Control img in control.Controls)
+                                {
+                                    if (img is PictureBox && img.Tag.ToString() == spettacolo.Titolo)
+                                    {
+                                        SpettacoloImg_Pbox.Image = ((PictureBox)img).Image;
+                                        if(SpettacoloImg_Pbox.Size == SpettacoloImg_Pbox.MinimumSize){
+                                            Group_IncassoSpett.Location = new Point(185, 136);
+                                        }
+                                        else 
+                                        {
+                                            Group_IncassoSpett.Location = new Point(338, 136);
+                                        }
+                                    }
+                                }
+                            }
+                            else if (control is PictureBox && control.Tag.ToString() == spettacolo.Titolo)
+                            {
+                                SpettacoloImg_Pbox.Image = ((PictureBox)control).Image;
+                            }
+                        }
+                    }
+                }
+            }
+            if (e.Node.Level == 1)
+            {
+                Pannello_Evento_Info.Visible = true;
+                Pannello_Evento_Info.BringToFront();
+                foreach (var spettacolo in Spettacoli)
+                {
+                    foreach (var evento in Eventi)
+                    {
+                        if (evento.Key == e.Node.Parent.Text)
+                        {
+                            SpettacoloEvento_Lbl.Text = evento.Key;
+                            SpettacoloEventoArtista_Lbl.Text = spettacolo.Artista;
+                            foreach (var luogo in evento.Value.luoghi)
+                            {
+                                if (luogo == e.Node.Text)
+                                {
+                                    SpettacoloEventoLuogo_Lbl.Text = luogo;
+                                    SpettacoloEventoData_Lbl.Text = evento.Value.date[evento.Value.luoghi.IndexOf(luogo)];
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
