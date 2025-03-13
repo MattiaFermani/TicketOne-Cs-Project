@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -477,72 +478,7 @@ namespace Biglietti_concerto
             ("AC/DC - Powerup Tour", "AC/DC", "Annunciata una data estiva del POWER UP Tour. Scopri i dettagli!", Eventi),
         };
 
-        private void Prenotazioni(string TitoloSpettacolo, string Evento, List<Button> posti)
-        {
-            JArray jsonArray;
-            if (File.Exists(filePrenotazioni))
-            {
-                string jsonContent = File.ReadAllText(filePrenotazioni);
-                jsonArray = JArray.Parse(jsonContent);
-            }
-            else
-            {
-                jsonArray = new JArray();
-            }
-
-            // Crea un array per memorizzare le informazioni dei posti prenotati
-            JArray postiArray = new JArray();
-            if (posti != null && posti.Count > 0)
-            {
-                foreach (Button btn in posti)
-                {
-                    // Ottieni il nome del settore 
-                    string settore = (btn.Parent is Panel panel) ? panel.Name : "Sconosciuto";
-
-                    JObject postoObj = new JObject
-                    {
-                        ["Settore"] = settore,
-                        ["NomePosto"] = btn.Name,
-                        ["Descrizione"] = btn.Text
-                    };
-                    postiArray.Add(postoObj);
-                }
-            }
-
-            // Crea l'oggetto prenotazione con le informazioni dell'utente e della prenotazione
-            // Ottieni Nome e Cognome dall'account in accounts.json tramite l'email corrispondente
-            string nome = "";
-            string cognome = "";
-            if (File.Exists(filePath))
-            {
-                string accountsContent = File.ReadAllText(filePath);
-                JArray accounts = JArray.Parse(accountsContent);
-                JObject account = accounts
-                    .Children<JObject>()
-                    .FirstOrDefault(u => u["Email"] != null && u["Email"].ToString() == loggedEmail);
-                if (account != null)
-                {
-                    nome = account["Nome"]?.ToString() ?? "";
-                    cognome = account["Cognome"]?.ToString() ?? "";
-                }
-            }
-
-            JObject newPrenotazione = new JObject
-            {
-                ["TitoloSpettacolo"] = TitoloSpettacolo,
-                ["Evento"] = Evento,
-                ["Nome"] = nome,
-                ["Cognome"] = cognome,
-                ["Nome Visualizzato"] = loggedNome,
-                ["Telefono"] = loggedTelefono,
-                ["Email"] = loggedEmail,
-                ["Password"] = MascheraPassword(txt_password.Text),
-                ["Posti"] = postiArray
-            };
-
-            jsonArray.Add(newPrenotazione);
-            File.WriteAllText(filePrenotazioni, jsonArray.ToString());
-        }
+        
 
         private void SalvaEventiSpettacoli()
         {
@@ -676,18 +612,127 @@ namespace Biglietti_concerto
 
         private void AlberoEventiLoad()
         {
+            Albero_Eventi.Nodes.Clear();
+
+            JArray prenotazioniArray = null;
+            if (File.Exists(filePrenotazioni))
+            {
+                try
+                {
+                    string prenContent = File.ReadAllText(filePrenotazioni);
+                    prenotazioniArray = JArray.Parse(prenContent);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Errore nel caricamento delle prenotazioni: {ex.Message}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
             foreach (var spettacolo in Spettacoli)
             {
                 TreeNode node = new TreeNode(spettacolo.Titolo);
+
                 foreach (var luogo in spettacolo.Dizionario[spettacolo.Titolo].luoghi)
                 {
-                    TreeNode child = new TreeNode(luogo);
-                    node.Nodes.Add(child);
+                    TreeNode luogoNode = new TreeNode(luogo);
+                    node.Nodes.Add(luogoNode);
                 }
+
+
+                if (prenotazioniArray != null)
+                {
+                    var prenList = prenotazioniArray.Children<JObject>()
+                        .Where(p => p["TitoloSpettacolo"] != null && p["TitoloSpettacolo"].ToString() == spettacolo.Titolo);
+                    foreach (var pren in prenList)
+                    {
+                        string eventoCompleto = pren["Evento"]?.ToString() ?? "Luogo Sconosciuto - Data Sconosciuta";
+                        string codiceprenotazione = pren["CodicePrenotazione"]?.ToString() ?? "CodicePrenotazione";
+
+                        string[] parti = eventoCompleto.Split(new string[] { " -> " }, StringSplitOptions.None);
+                        string luogoPren = parti.Length > 0 ? parti[0] : "Luogo Sconosciuto";
+
+                        string infoPren = $"{codiceprenotazione}";
+                        TreeNode prenNode = new TreeNode(infoPren);
+                        TreeNode luogoNode = node.Nodes
+                            .Cast<TreeNode>()
+                            .FirstOrDefault(n => n.Text.Equals(luogoPren, StringComparison.OrdinalIgnoreCase));
+                        if (luogoNode != null)
+                        {
+                            luogoNode.Nodes.Add(prenNode);
+                        }
+                    }
+                }
+
                 Albero_Eventi.Nodes.Add(node);
             }
         }
 
+        private void ApplicaPrenotazioniSuEventi()
+        {
+            if (!File.Exists(filePrenotazioni))
+                return;
+
+            try
+            {
+                string prenContent = File.ReadAllText(filePrenotazioni);
+                JArray prenotazioniArray = JArray.Parse(prenContent);
+
+                foreach (JObject prenotazione in prenotazioniArray)
+                {
+                    string titoloSpettacolo = prenotazione["TitoloSpettacolo"]?.ToString();
+                    string eventoCompleto = prenotazione["Evento"]?.ToString();
+                    if (string.IsNullOrEmpty(titoloSpettacolo) || string.IsNullOrEmpty(eventoCompleto))
+                        continue;
+
+                    string[] parti = eventoCompleto.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
+                    if (parti.Length != 2)
+                        continue;
+
+                    string luogo = parti[0].Trim();
+                    string data = parti[1].Trim();
+
+                    if (!Eventi.ContainsKey(titoloSpettacolo))
+                        continue;
+
+                    var eventoTuple = Eventi[titoloSpettacolo];
+                    var key = (luogo, data);
+                    if (!eventoTuple.buttons.ContainsKey(key))
+                        continue;
+
+                    Dictionary<string, List<Button>> settoriButtons = eventoTuple.buttons[key];
+
+                    JArray postiPrenotati = prenotazione["Posti"] as JArray;
+                    if (postiPrenotati == null)
+                        continue;
+
+                    foreach (JObject postoObj in postiPrenotati)
+                    {
+                        string settore = postoObj["Settore"]?.ToString();
+                        string nomePosto = postoObj["NomePosto"]?.ToString();
+                        if (string.IsNullOrEmpty(settore) || string.IsNullOrEmpty(nomePosto))
+                            continue;
+
+                        if (settoriButtons.ContainsKey(settore))
+                        {
+                            List<Button> buttonsList = settoriButtons[settore];
+                            foreach (Button btn in buttonsList)
+                            {
+                                if (btn.Name.Equals(nomePosto, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    btn.BackColor = Color.Gray;
+                                    btn.Enabled = false;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Errore durante l'applicazione delle prenotazioni: {ex.Message}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void CaricaPostiEventi()
         {
             foreach (var key in Eventi.Keys.ToList())
@@ -723,6 +768,7 @@ namespace Biglietti_concerto
                 }
                 Eventi[key] = (evento.luoghi, evento.date, NewPosti);
             }
+            ApplicaPrenotazioniSuEventi();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -920,10 +966,11 @@ namespace Biglietti_concerto
                 }
 
                 MessageBox.Show($"{PostiSelezionati} Posti acquistati con successo!");
-                Prenotazioni(TitoloSpettacolo_Lbl.Text, $"{Luogo_Lst.SelectedItem.ToString()} - {Data_Lst.SelectedItem.ToString()}", postiSelezionati.Values.SelectMany(list => list).ToList());
+                Prenotazioni(TitoloSpettacolo_Lbl.Text, $"{Luogo_Lst.SelectedItem.ToString()} -> {Data_Lst.SelectedItem.ToString()}", postiSelezionati.Values.SelectMany(list => list).ToList());
                 postiSelezionati.Clear();
                 PostiSelezionati = 0;
                 AggiornaDisponibilitaTooltip();
+                AlberoEventiLoad();
             }
             else
             {
@@ -937,6 +984,81 @@ namespace Biglietti_concerto
             Pannello_Posti.Visible = false;
             CaricaPosti("Default", "Default", "Default");
         }
+        private void Prenotazioni(string TitoloSpettacolo, string Evento, List<Button> posti)
+        {
+            JArray jsonArray;
+            if (File.Exists(filePrenotazioni))
+            {
+                string jsonContent = File.ReadAllText(filePrenotazioni);
+                jsonArray = JArray.Parse(jsonContent);
+            }
+            else
+            {
+                jsonArray = new JArray();
+            }
+
+            JArray postiArray = new JArray();
+            if (posti != null && posti.Count > 0)
+            {
+                foreach (Button btn in posti)
+                {
+                    string settore = (btn.Parent is Panel panel) ? panel.Name : "Sconosciuto";
+
+                    JObject postoObj = new JObject
+                    {
+                        ["Settore"] = settore,
+                        ["NomePosto"] = btn.Name,
+                        ["Descrizione"] = btn.Text
+                    };
+                    postiArray.Add(postoObj);
+                }
+            }
+
+            string nome = "";
+            string cognome = "";
+            if (File.Exists(filePath))
+            {
+                string accountsContent = File.ReadAllText(filePath);
+                JArray accounts = JArray.Parse(accountsContent);
+                JObject account = accounts
+                    .Children<JObject>()
+                    .FirstOrDefault(u => u["Email"] != null && u["Email"].ToString() == loggedEmail);
+                if (account != null)
+                {
+                    nome = account["Nome"]?.ToString() ?? "";
+                    cognome = account["Cognome"]?.ToString() ?? "";
+                }
+            }
+            string codicePrenotazione = CodicePrenotazione();
+
+            JObject newPrenotazione = new JObject
+            {
+                ["TitoloSpettacolo"] = TitoloSpettacolo,
+                ["CodicePrenotazione"] = codicePrenotazione,
+                ["Evento"] = Evento,
+                ["Nome"] = nome,
+                ["Cognome"] = cognome,
+                ["Telefono"] = loggedTelefono,
+                ["Email"] = loggedEmail,
+                ["Posti"] = postiArray
+            };
+            jsonArray.Add(newPrenotazione);
+            File.WriteAllText(filePrenotazioni, jsonArray.ToString());
+        }
+        private string CodicePrenotazione()
+        {
+            string fileName = "lastBookingNumber.txt";
+            int lastNumber = 0;
+            if (File.Exists(fileName))
+            {
+                string content = File.ReadAllText(fileName);
+                int.TryParse(content, out lastNumber);
+            }
+            lastNumber++;
+            File.WriteAllText(fileName, lastNumber.ToString());
+            return "PRE" + lastNumber.ToString("D4");
+        }
+
         private void CaricaPosti(string eventTitle, string selectedLuogo, string selectedData)
         {
 
@@ -1030,7 +1152,6 @@ namespace Biglietti_concerto
         }
 
         private ToolTip spettacoliToolTip = new ToolTip();
-
         private void AggiornaDisponibilitaTooltip()
         {
             foreach (Control c in Pannello_Principale.Controls)
@@ -1327,12 +1448,10 @@ namespace Biglietti_concerto
             loggedEmail = "";
             loggedRole = "";
         }
-
         private void Lbl_register_Click(object sender, EventArgs e)
         {
             Tab_Login_Register.SelectedIndex = 1;
         }
-
         private void Chk_IsAdmin_CheckedChanged(object sender, EventArgs e)
         {
             if (Chk_IsAdmin.Checked)
@@ -1348,12 +1467,10 @@ namespace Biglietti_concerto
                 btn_Admin_Check.Visible = false;
             }
         }
-
         private void btn_Admin_Check_Click(object sender, EventArgs e)
         {
             PswAdmin();
         }
-
         private bool PswAdmin()
         {
             string savedPassword = LeggiAdminPassword();

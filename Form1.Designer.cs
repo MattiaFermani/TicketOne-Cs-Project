@@ -352,7 +352,6 @@
             this.Pannello_Admin = new System.Windows.Forms.Panel();
             this.Pannello_Evento_Info = new System.Windows.Forms.Panel();
             this.Grup_InfoEvento = new System.Windows.Forms.GroupBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.SpettacoloEventoData_Lbl = new System.Windows.Forms.Label();
             this.SpettacoloEventoLuogo_Lbl = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -4737,7 +4736,6 @@
             // 
             // Grup_InfoEvento
             // 
-            this.Grup_InfoEvento.Controls.Add(this.label33);
             this.Grup_InfoEvento.Controls.Add(this.SpettacoloEventoData_Lbl);
             this.Grup_InfoEvento.Controls.Add(this.SpettacoloEventoLuogo_Lbl);
             this.Grup_InfoEvento.Controls.Add(this.label34);
@@ -4750,25 +4748,15 @@
             this.Grup_InfoEvento.TabStop = false;
             this.Grup_InfoEvento.Text = "Info Evento";
             // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(179, 40);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(51, 20);
-            this.label33.TabIndex = 17;
-            this.label33.Text = "Luogo";
-            // 
             // SpettacoloEventoData_Lbl
             // 
             this.SpettacoloEventoData_Lbl.AutoSize = true;
             this.SpettacoloEventoData_Lbl.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.SpettacoloEventoData_Lbl.Location = new System.Drawing.Point(63, 65);
             this.SpettacoloEventoData_Lbl.Name = "SpettacoloEventoData_Lbl";
-            this.SpettacoloEventoData_Lbl.Size = new System.Drawing.Size(51, 20);
+            this.SpettacoloEventoData_Lbl.Size = new System.Drawing.Size(41, 20);
             this.SpettacoloEventoData_Lbl.TabIndex = 16;
-            this.SpettacoloEventoData_Lbl.Text = "Luogo";
+            this.SpettacoloEventoData_Lbl.Text = "Data";
             // 
             // SpettacoloEventoLuogo_Lbl
             // 
@@ -5548,7 +5536,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label SpettacoloEventoData_Lbl;
-        private System.Windows.Forms.Label label33;
     }
 }
 
