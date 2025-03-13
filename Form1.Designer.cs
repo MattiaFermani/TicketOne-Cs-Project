@@ -350,6 +350,24 @@
             this.Pgn_Sicurezza = new System.Windows.Forms.TabPage();
             this.Pgn_Personalizza = new System.Windows.Forms.TabPage();
             this.Pannello_Admin = new System.Windows.Forms.Panel();
+            this.Pannello_Evento_Info = new System.Windows.Forms.Panel();
+            this.Grup_InfoEvento = new System.Windows.Forms.GroupBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.SpettacoloEventoData_Lbl = new System.Windows.Forms.Label();
+            this.SpettacoloEventoLuogo_Lbl = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.Group_IncassiEvento = new System.Windows.Forms.GroupBox();
+            this.Group_IncassiTOTEvento = new System.Windows.Forms.GroupBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.SpettacoloEventoArtista_Lbl = new System.Windows.Forms.Label();
+            this.SpettacoloEvento_Lbl = new System.Windows.Forms.Label();
             this.Pannello_Spettacolo_Info = new System.Windows.Forms.Panel();
             this.Group_IncassoSpett = new System.Windows.Forms.GroupBox();
             this.Group_IncassoTOTSpett = new System.Windows.Forms.GroupBox();
@@ -366,23 +384,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.Albero_Eventi = new System.Windows.Forms.TreeView();
             this.label21 = new System.Windows.Forms.Label();
-            this.Pannello_Evento_Info = new System.Windows.Forms.Panel();
-            this.Group_IncassiEvento = new System.Windows.Forms.GroupBox();
-            this.Group_IncassiTOTEvento = new System.Windows.Forms.GroupBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.SpettacoloEventoArtista_Lbl = new System.Windows.Forms.Label();
-            this.SpettacoloEvento_Lbl = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.Grup_InfoEvento = new System.Windows.Forms.GroupBox();
-            this.SpettacoloEventoLuogo_Lbl = new System.Windows.Forms.Label();
-            this.SpettacoloEventoData_Lbl = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -434,14 +435,14 @@
             this.Email.SuspendLayout();
             this.Nome.SuspendLayout();
             this.Pannello_Admin.SuspendLayout();
+            this.Pannello_Evento_Info.SuspendLayout();
+            this.Grup_InfoEvento.SuspendLayout();
+            this.Group_IncassiEvento.SuspendLayout();
+            this.Group_IncassiTOTEvento.SuspendLayout();
             this.Pannello_Spettacolo_Info.SuspendLayout();
             this.Group_IncassoSpett.SuspendLayout();
             this.Group_IncassoTOTSpett.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpettacoloImg_Pbox)).BeginInit();
-            this.Pannello_Evento_Info.SuspendLayout();
-            this.Group_IncassiEvento.SuspendLayout();
-            this.Group_IncassiTOTEvento.SuspendLayout();
-            this.Grup_InfoEvento.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -738,9 +739,9 @@
             this.Pannello_Posti.AutoScroll = true;
             this.Pannello_Posti.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Posti.Controls.Add(this.Tab_Info_Posti);
-            this.Pannello_Posti.Location = new System.Drawing.Point(1170, 66);
+            this.Pannello_Posti.Location = new System.Drawing.Point(390, 494);
             this.Pannello_Posti.Name = "Pannello_Posti";
-            this.Pannello_Posti.Size = new System.Drawing.Size(108, 455);
+            this.Pannello_Posti.Size = new System.Drawing.Size(773, 455);
             this.Pannello_Posti.TabIndex = 12;
             // 
             // Tab_Info_Posti
@@ -753,7 +754,7 @@
             this.Tab_Info_Posti.Location = new System.Drawing.Point(0, 0);
             this.Tab_Info_Posti.Name = "Tab_Info_Posti";
             this.Tab_Info_Posti.SelectedIndex = 0;
-            this.Tab_Info_Posti.Size = new System.Drawing.Size(108, 455);
+            this.Tab_Info_Posti.Size = new System.Drawing.Size(773, 455);
             this.Tab_Info_Posti.TabIndex = 0;
             // 
             // Pgn_Informazioni
@@ -766,7 +767,7 @@
             this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(100, 429);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(765, 429);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -884,7 +885,7 @@
             this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(100, 429);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(765, 429);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
@@ -4721,6 +4722,201 @@
             this.Pannello_Admin.Size = new System.Drawing.Size(1151, 434);
             this.Pannello_Admin.TabIndex = 16;
             // 
+            // Pannello_Evento_Info
+            // 
+            this.Pannello_Evento_Info.Controls.Add(this.Grup_InfoEvento);
+            this.Pannello_Evento_Info.Controls.Add(this.Group_IncassiEvento);
+            this.Pannello_Evento_Info.Controls.Add(this.SpettacoloEventoArtista_Lbl);
+            this.Pannello_Evento_Info.Controls.Add(this.SpettacoloEvento_Lbl);
+            this.Pannello_Evento_Info.Location = new System.Drawing.Point(263, 50);
+            this.Pannello_Evento_Info.Name = "Pannello_Evento_Info";
+            this.Pannello_Evento_Info.Size = new System.Drawing.Size(885, 381);
+            this.Pannello_Evento_Info.TabIndex = 29;
+            this.Pannello_Evento_Info.Visible = false;
+            // 
+            // Grup_InfoEvento
+            // 
+            this.Grup_InfoEvento.Controls.Add(this.label33);
+            this.Grup_InfoEvento.Controls.Add(this.SpettacoloEventoData_Lbl);
+            this.Grup_InfoEvento.Controls.Add(this.SpettacoloEventoLuogo_Lbl);
+            this.Grup_InfoEvento.Controls.Add(this.label34);
+            this.Grup_InfoEvento.Controls.Add(this.label35);
+            this.Grup_InfoEvento.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Grup_InfoEvento.Location = new System.Drawing.Point(12, 118);
+            this.Grup_InfoEvento.Name = "Grup_InfoEvento";
+            this.Grup_InfoEvento.Size = new System.Drawing.Size(409, 100);
+            this.Grup_InfoEvento.TabIndex = 15;
+            this.Grup_InfoEvento.TabStop = false;
+            this.Grup_InfoEvento.Text = "Info Evento";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(179, 40);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(51, 20);
+            this.label33.TabIndex = 17;
+            this.label33.Text = "Luogo";
+            // 
+            // SpettacoloEventoData_Lbl
+            // 
+            this.SpettacoloEventoData_Lbl.AutoSize = true;
+            this.SpettacoloEventoData_Lbl.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.SpettacoloEventoData_Lbl.Location = new System.Drawing.Point(63, 65);
+            this.SpettacoloEventoData_Lbl.Name = "SpettacoloEventoData_Lbl";
+            this.SpettacoloEventoData_Lbl.Size = new System.Drawing.Size(51, 20);
+            this.SpettacoloEventoData_Lbl.TabIndex = 16;
+            this.SpettacoloEventoData_Lbl.Text = "Luogo";
+            // 
+            // SpettacoloEventoLuogo_Lbl
+            // 
+            this.SpettacoloEventoLuogo_Lbl.AutoSize = true;
+            this.SpettacoloEventoLuogo_Lbl.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.SpettacoloEventoLuogo_Lbl.Location = new System.Drawing.Point(63, 33);
+            this.SpettacoloEventoLuogo_Lbl.Name = "SpettacoloEventoLuogo_Lbl";
+            this.SpettacoloEventoLuogo_Lbl.Size = new System.Drawing.Size(51, 20);
+            this.SpettacoloEventoLuogo_Lbl.TabIndex = 15;
+            this.SpettacoloEventoLuogo_Lbl.Text = "Luogo";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(6, 33);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(51, 20);
+            this.label34.TabIndex = 13;
+            this.label34.Text = "Luogo";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(16, 65);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(41, 20);
+            this.label35.TabIndex = 14;
+            this.label35.Text = "Data";
+            // 
+            // Group_IncassiEvento
+            // 
+            this.Group_IncassiEvento.Controls.Add(this.Group_IncassiTOTEvento);
+            this.Group_IncassiEvento.Controls.Add(this.label27);
+            this.Group_IncassiEvento.Controls.Add(this.label28);
+            this.Group_IncassiEvento.Controls.Add(this.label29);
+            this.Group_IncassiEvento.Controls.Add(this.label30);
+            this.Group_IncassiEvento.Controls.Add(this.label31);
+            this.Group_IncassiEvento.Controls.Add(this.label32);
+            this.Group_IncassiEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Group_IncassiEvento.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Group_IncassiEvento.Location = new System.Drawing.Point(427, 118);
+            this.Group_IncassiEvento.Name = "Group_IncassiEvento";
+            this.Group_IncassiEvento.Size = new System.Drawing.Size(258, 172);
+            this.Group_IncassiEvento.TabIndex = 12;
+            this.Group_IncassiEvento.TabStop = false;
+            this.Group_IncassiEvento.Text = "Incassi";
+            // 
+            // Group_IncassiTOTEvento
+            // 
+            this.Group_IncassiTOTEvento.Controls.Add(this.label23);
+            this.Group_IncassiTOTEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Group_IncassiTOTEvento.Location = new System.Drawing.Point(9, 97);
+            this.Group_IncassiTOTEvento.Name = "Group_IncassiTOTEvento";
+            this.Group_IncassiTOTEvento.Size = new System.Drawing.Size(224, 60);
+            this.Group_IncassiTOTEvento.TabIndex = 9;
+            this.Group_IncassiTOTEvento.TabStop = false;
+            this.Group_IncassiTOTEvento.Text = "Incasso Totale";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 26);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(16, 18);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "0";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(6, 31);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(113, 17);
+            this.label27.TabIndex = 3;
+            this.label27.Text = "Posti Normali -->";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label28.Location = new System.Drawing.Point(125, 33);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(13, 13);
+            this.label28.TabIndex = 6;
+            this.label28.Text = "0";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(5, 54);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(114, 17);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "Posti Senior   -->";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label30.Location = new System.Drawing.Point(125, 56);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(13, 13);
+            this.label30.TabIndex = 7;
+            this.label30.Text = "0";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label31.Location = new System.Drawing.Point(125, 78);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(13, 13);
+            this.label31.TabIndex = 8;
+            this.label31.Text = "0";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(6, 76);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(114, 17);
+            this.label32.TabIndex = 5;
+            this.label32.Text = "Posti VIP        -->";
+            // 
+            // SpettacoloEventoArtista_Lbl
+            // 
+            this.SpettacoloEventoArtista_Lbl.AutoSize = true;
+            this.SpettacoloEventoArtista_Lbl.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpettacoloEventoArtista_Lbl.Location = new System.Drawing.Point(7, 50);
+            this.SpettacoloEventoArtista_Lbl.Name = "SpettacoloEventoArtista_Lbl";
+            this.SpettacoloEventoArtista_Lbl.Size = new System.Drawing.Size(183, 30);
+            this.SpettacoloEventoArtista_Lbl.TabIndex = 11;
+            this.SpettacoloEventoArtista_Lbl.Text = "Artista Spettacolo";
+            // 
+            // SpettacoloEvento_Lbl
+            // 
+            this.SpettacoloEvento_Lbl.AutoSize = true;
+            this.SpettacoloEvento_Lbl.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpettacoloEvento_Lbl.Location = new System.Drawing.Point(5, 12);
+            this.SpettacoloEvento_Lbl.Name = "SpettacoloEvento_Lbl";
+            this.SpettacoloEvento_Lbl.Size = new System.Drawing.Size(178, 38);
+            this.SpettacoloEvento_Lbl.TabIndex = 0;
+            this.SpettacoloEvento_Lbl.Text = "Titolo Evento";
+            // 
             // Pannello_Spettacolo_Info
             // 
             this.Pannello_Spettacolo_Info.Controls.Add(this.Group_IncassoSpett);
@@ -4879,8 +5075,6 @@
             this.Albero_Eventi.Name = "Albero_Eventi";
             this.Albero_Eventi.Size = new System.Drawing.Size(254, 378);
             this.Albero_Eventi.TabIndex = 26;
-            this.Albero_Eventi.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.Albero_Eventi_AfterCheck);
-            this.Albero_Eventi.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.Albero_Eventi_AfterSelect);
             this.Albero_Eventi.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Eventi_NodeMouseClick);
             // 
             // label21
@@ -4892,190 +5086,6 @@
             this.label21.Size = new System.Drawing.Size(271, 40);
             this.label21.TabIndex = 25;
             this.label21.Text = "Pannello Admin";
-            // 
-            // Pannello_Evento_Info
-            // 
-            this.Pannello_Evento_Info.Controls.Add(this.Grup_InfoEvento);
-            this.Pannello_Evento_Info.Controls.Add(this.Group_IncassiEvento);
-            this.Pannello_Evento_Info.Controls.Add(this.SpettacoloEventoArtista_Lbl);
-            this.Pannello_Evento_Info.Controls.Add(this.SpettacoloEvento_Lbl);
-            this.Pannello_Evento_Info.Location = new System.Drawing.Point(263, 50);
-            this.Pannello_Evento_Info.Name = "Pannello_Evento_Info";
-            this.Pannello_Evento_Info.Size = new System.Drawing.Size(885, 381);
-            this.Pannello_Evento_Info.TabIndex = 29;
-            this.Pannello_Evento_Info.Visible = false;
-            // 
-            // Group_IncassiEvento
-            // 
-            this.Group_IncassiEvento.Controls.Add(this.Group_IncassiTOTEvento);
-            this.Group_IncassiEvento.Controls.Add(this.label27);
-            this.Group_IncassiEvento.Controls.Add(this.label28);
-            this.Group_IncassiEvento.Controls.Add(this.label29);
-            this.Group_IncassiEvento.Controls.Add(this.label30);
-            this.Group_IncassiEvento.Controls.Add(this.label31);
-            this.Group_IncassiEvento.Controls.Add(this.label32);
-            this.Group_IncassiEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Group_IncassiEvento.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Group_IncassiEvento.Location = new System.Drawing.Point(427, 118);
-            this.Group_IncassiEvento.Name = "Group_IncassiEvento";
-            this.Group_IncassiEvento.Size = new System.Drawing.Size(258, 172);
-            this.Group_IncassiEvento.TabIndex = 12;
-            this.Group_IncassiEvento.TabStop = false;
-            this.Group_IncassiEvento.Text = "Incassi";
-            // 
-            // Group_IncassiTOTEvento
-            // 
-            this.Group_IncassiTOTEvento.Controls.Add(this.label23);
-            this.Group_IncassiTOTEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Group_IncassiTOTEvento.Location = new System.Drawing.Point(9, 97);
-            this.Group_IncassiTOTEvento.Name = "Group_IncassiTOTEvento";
-            this.Group_IncassiTOTEvento.Size = new System.Drawing.Size(224, 60);
-            this.Group_IncassiTOTEvento.TabIndex = 9;
-            this.Group_IncassiTOTEvento.TabStop = false;
-            this.Group_IncassiTOTEvento.Text = "Incasso Totale";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 26);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(16, 18);
-            this.label23.TabIndex = 10;
-            this.label23.Text = "0";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(6, 31);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(113, 17);
-            this.label27.TabIndex = 3;
-            this.label27.Text = "Posti Normali -->";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label28.Location = new System.Drawing.Point(125, 33);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(13, 13);
-            this.label28.TabIndex = 6;
-            this.label28.Text = "0";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(5, 54);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(114, 17);
-            this.label29.TabIndex = 4;
-            this.label29.Text = "Posti Senior   -->";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label30.Location = new System.Drawing.Point(125, 56);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(13, 13);
-            this.label30.TabIndex = 7;
-            this.label30.Text = "0";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label31.Location = new System.Drawing.Point(125, 78);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(13, 13);
-            this.label31.TabIndex = 8;
-            this.label31.Text = "0";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(6, 76);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(114, 17);
-            this.label32.TabIndex = 5;
-            this.label32.Text = "Posti VIP        -->";
-            // 
-            // SpettacoloEventoArtista_Lbl
-            // 
-            this.SpettacoloEventoArtista_Lbl.AutoSize = true;
-            this.SpettacoloEventoArtista_Lbl.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpettacoloEventoArtista_Lbl.Location = new System.Drawing.Point(7, 50);
-            this.SpettacoloEventoArtista_Lbl.Name = "SpettacoloEventoArtista_Lbl";
-            this.SpettacoloEventoArtista_Lbl.Size = new System.Drawing.Size(183, 30);
-            this.SpettacoloEventoArtista_Lbl.TabIndex = 11;
-            this.SpettacoloEventoArtista_Lbl.Text = "Artista Spettacolo";
-            // 
-            // SpettacoloEvento_Lbl
-            // 
-            this.SpettacoloEvento_Lbl.AutoSize = true;
-            this.SpettacoloEvento_Lbl.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpettacoloEvento_Lbl.Location = new System.Drawing.Point(5, 12);
-            this.SpettacoloEvento_Lbl.Name = "SpettacoloEvento_Lbl";
-            this.SpettacoloEvento_Lbl.Size = new System.Drawing.Size(178, 38);
-            this.SpettacoloEvento_Lbl.TabIndex = 0;
-            this.SpettacoloEvento_Lbl.Text = "Titolo Evento";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(6, 33);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(51, 20);
-            this.label34.TabIndex = 13;
-            this.label34.Text = "Luogo";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(16, 65);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(41, 20);
-            this.label35.TabIndex = 14;
-            this.label35.Text = "Data";
-            // 
-            // Grup_InfoEvento
-            // 
-            this.Grup_InfoEvento.Controls.Add(this.SpettacoloEventoData_Lbl);
-            this.Grup_InfoEvento.Controls.Add(this.SpettacoloEventoLuogo_Lbl);
-            this.Grup_InfoEvento.Controls.Add(this.label34);
-            this.Grup_InfoEvento.Controls.Add(this.label35);
-            this.Grup_InfoEvento.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.Grup_InfoEvento.Location = new System.Drawing.Point(12, 118);
-            this.Grup_InfoEvento.Name = "Grup_InfoEvento";
-            this.Grup_InfoEvento.Size = new System.Drawing.Size(409, 100);
-            this.Grup_InfoEvento.TabIndex = 15;
-            this.Grup_InfoEvento.TabStop = false;
-            this.Grup_InfoEvento.Text = "Info Evento";
-            // 
-            // SpettacoloEventoLuogo_Lbl
-            // 
-            this.SpettacoloEventoLuogo_Lbl.AutoSize = true;
-            this.SpettacoloEventoLuogo_Lbl.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.SpettacoloEventoLuogo_Lbl.Location = new System.Drawing.Point(63, 33);
-            this.SpettacoloEventoLuogo_Lbl.Name = "SpettacoloEventoLuogo_Lbl";
-            this.SpettacoloEventoLuogo_Lbl.Size = new System.Drawing.Size(51, 20);
-            this.SpettacoloEventoLuogo_Lbl.TabIndex = 15;
-            this.SpettacoloEventoLuogo_Lbl.Text = "Luogo";
-            // 
-            // SpettacoloEventoData_Lbl
-            // 
-            this.SpettacoloEventoData_Lbl.AutoSize = true;
-            this.SpettacoloEventoData_Lbl.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.SpettacoloEventoData_Lbl.Location = new System.Drawing.Point(63, 65);
-            this.SpettacoloEventoData_Lbl.Name = "SpettacoloEventoData_Lbl";
-            this.SpettacoloEventoData_Lbl.Size = new System.Drawing.Size(51, 20);
-            this.SpettacoloEventoData_Lbl.TabIndex = 16;
-            this.SpettacoloEventoData_Lbl.Text = "Luogo";
             // 
             // Form1
             // 
@@ -5162,6 +5172,14 @@
             this.Nome.PerformLayout();
             this.Pannello_Admin.ResumeLayout(false);
             this.Pannello_Admin.PerformLayout();
+            this.Pannello_Evento_Info.ResumeLayout(false);
+            this.Pannello_Evento_Info.PerformLayout();
+            this.Grup_InfoEvento.ResumeLayout(false);
+            this.Grup_InfoEvento.PerformLayout();
+            this.Group_IncassiEvento.ResumeLayout(false);
+            this.Group_IncassiEvento.PerformLayout();
+            this.Group_IncassiTOTEvento.ResumeLayout(false);
+            this.Group_IncassiTOTEvento.PerformLayout();
             this.Pannello_Spettacolo_Info.ResumeLayout(false);
             this.Pannello_Spettacolo_Info.PerformLayout();
             this.Group_IncassoSpett.ResumeLayout(false);
@@ -5169,14 +5187,6 @@
             this.Group_IncassoTOTSpett.ResumeLayout(false);
             this.Group_IncassoTOTSpett.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpettacoloImg_Pbox)).EndInit();
-            this.Pannello_Evento_Info.ResumeLayout(false);
-            this.Pannello_Evento_Info.PerformLayout();
-            this.Group_IncassiEvento.ResumeLayout(false);
-            this.Group_IncassiEvento.PerformLayout();
-            this.Group_IncassiTOTEvento.ResumeLayout(false);
-            this.Group_IncassiTOTEvento.PerformLayout();
-            this.Grup_InfoEvento.ResumeLayout(false);
-            this.Grup_InfoEvento.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -5537,6 +5547,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label SpettacoloEventoData_Lbl;
+        private System.Windows.Forms.Label label33;
     }
 }
 

@@ -23,7 +23,7 @@ namespace Biglietti_concerto
         static string loggedRole = "";
 
         static string adminFilePath = "admin.dat";
-        static string encryptionKey = "abcabc"; // 🔑 Chiave di cifratura (NON salvarla nel codice in produzione!)
+        static string encryptionKey = "abcabc";
 
 
         static readonly string filePath = "accounts.json";
@@ -564,7 +564,14 @@ namespace Biglietti_concerto
                             List<Button> Posti = new List<Button>();
                             foreach (Button Posto in Settore.Controls)
                             {
-                                Posti.Add(Posto);
+                                string Name = Posto.Name;
+                                string Text = Posto.Text;
+                                Color Color = Posto.BackColor;
+                                Button bottone = new Button();
+                                bottone.Name = Name;
+                                bottone.Text = Text;
+                                bottone.BackColor = Color;
+                                Posti.Add(bottone);
                             }
                             Settori.Add(Settore.Name, Posti);
                         }
@@ -881,7 +888,6 @@ namespace Biglietti_concerto
                             }
                             else
                             {
-                                // Se non trovato, assegna il colore di default in base al Tag
                                 switch (posto.Tag)
                                 {
                                     case "0Normal":
@@ -1312,14 +1318,6 @@ namespace Biglietti_concerto
             Pannello_Admin.Visible = true;
         }
 
-        private void Albero_Eventi_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-        }
-
-        private void Albero_Eventi_AfterCheck(object sender, TreeViewEventArgs e)
-        {
-        }
-
         private void Albero_Eventi_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             if (e.Node.Level == 0)
@@ -1384,5 +1382,6 @@ namespace Biglietti_concerto
                 }
             }
         }
+
     }
 }
