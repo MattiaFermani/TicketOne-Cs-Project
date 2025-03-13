@@ -22,5 +22,17 @@
     "Email": "email@dominio.xyz",
     "Role": "User",
     "Password": "c775e7b757ede630cd0aa1113bd102661ab38829ca52a6422ab782862f268646"
+  },
+  {
+    "Nome": "Giovanni",
+    "Cognome": "Sebastiani",
+    "Nome Visualizzato": "Leone Marianna",
+    "Data di nascita": "26/07/2007",
+    "Comune": "ANCONA (AN)",
+    "Codice Fiscale": "SBSGNN07L26A271B",
+    "Telefono": "",
+    "Email": "leonemarianna@ritardata.scimmis",
+    "Role": "Admin",
+    "Password": "b7f070f2ac10d66282888435c59478bf2b2e53931710d5b62e0eb7950579a812"
   }
 ]

@@ -2,7 +2,6 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -478,8 +477,6 @@ namespace Biglietti_concerto
             ("AC/DC - Powerup Tour", "AC/DC", "Annunciata una data estiva del POWER UP Tour. Scopri i dettagli!", Eventi),
         };
 
-        
-
         private void SalvaEventiSpettacoli()
         {
             // Se il file esiste già, non fare nulla
@@ -536,6 +533,7 @@ namespace Biglietti_concerto
 
         private string CalcCodiceFiscale(string nome, string cognome, string dataNascita, string sesso, string comune)
         {
+            if (comune == "") return "";
             string cf = "";
             string consonanti = "", vocali = "";
             foreach (char c in cognome)
@@ -1230,7 +1228,7 @@ namespace Biglietti_concerto
                 txt_A_Email.Text = loggedEmail;
                 Lbl_Role.Text = loggedRole;
                 txt_A_Telefono.Text = string.IsNullOrEmpty(loggedTelefono) ? "Nessun Telefono Impostato" : loggedTelefono;
-                if(loggedRole == "Admin") Btn_AdminPanel.Visible = true;
+                if (loggedRole == "Admin") Btn_AdminPanel.Visible = true;
                 else Btn_AdminPanel.Visible = false;
                 CaricaPrenotazioniUtente();
 
@@ -1392,6 +1390,7 @@ namespace Biglietti_concerto
             string cognome = txt_cognome.Text;
             string dataNascita = dtp_nascita.Text;
             string sesso = "";
+            string comune = "";
             if (Female_Rdb.Checked)
             {
                 sesso = "F";
@@ -1400,9 +1399,11 @@ namespace Biglietti_concerto
             {
                 sesso = "M";
             }
-            string comune = Comuni_Lst.SelectedItem.ToString();
-
-
+            try
+            {
+                comune = Comuni_Lst.SelectedItem.ToString();
+            }
+            catch{}
             if (string.Equals(txt_codicefiscale.Text, CalcCodiceFiscale(nome.ToUpper(), cognome.ToUpper(), dataNascita, sesso.ToUpper(), comune), StringComparison.OrdinalIgnoreCase))
             {
                 txt_codicefiscale.BackColor = Color.PaleGreen;
@@ -1663,7 +1664,7 @@ namespace Biglietti_concerto
                 {
                     foreach (var evento in Eventi)
                     {
-                        foreach(JObject pren in prenotazioni)
+                        foreach (JObject pren in prenotazioni)
                         {
                             if (pren["TitoloSpettacolo"]?.ToString() == e.Node.Parent.Text && pren["Evento"]?.ToString() == e.Node.Text && e.Node.Text == evento.Key)
                             {
@@ -1700,7 +1701,7 @@ namespace Biglietti_concerto
                     }
                 }
             }
-            if(e.Node.Level == 2)
+            if (e.Node.Level == 2)
             {
                 Pannello_Prenotazione_A.Visible = true;
                 Pannello_Prenotazione_A.BringToFront();
@@ -1910,9 +1911,9 @@ namespace Biglietti_concerto
 
         private void Tab_Info_Posti_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(Tab_Info_Posti.SelectedIndex == 1)
+            if (Tab_Info_Posti.SelectedIndex == 1)
             {
-                if(Luogo_Lst.SelectedIndex == -1)
+                if (Luogo_Lst.SelectedIndex == -1)
                 {
                     Tab_Info_Posti.SelectedIndex = 0;
                     MessageBox.Show("Seleziona un luogo e una data per procedere con l'acquisto dei posti");
