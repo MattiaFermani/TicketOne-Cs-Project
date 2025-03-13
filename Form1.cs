@@ -1325,6 +1325,7 @@ namespace Biglietti_concerto
             if (e.Node.Level == 0)
             {
                 Pannello_Spettacolo_Info.Visible = true;
+                Pannello_Spettacolo_Info.BringToFront();
                 foreach (var spettacolo in Spettacoli)
                 {
                     if (spettacolo.Titolo == e.Node.Text)
@@ -1353,6 +1354,30 @@ namespace Biglietti_concerto
                             else if (control is PictureBox && control.Tag.ToString() == spettacolo.Titolo)
                             {
                                 SpettacoloImg_Pbox.Image = ((PictureBox)control).Image;
+                            }
+                        }
+                    }
+                }
+            }
+            if (e.Node.Level == 1)
+            {
+                Pannello_Evento_Info.Visible = true;
+                Pannello_Evento_Info.BringToFront();
+                foreach (var spettacolo in Spettacoli)
+                {
+                    foreach (var evento in Eventi)
+                    {
+                        if (evento.Key == e.Node.Parent.Text)
+                        {
+                            SpettacoloEvento_Lbl.Text = evento.Key;
+                            SpettacoloEventoArtista_Lbl.Text = spettacolo.Artista;
+                            foreach (var luogo in evento.Value.luoghi)
+                            {
+                                if (luogo == e.Node.Text)
+                                {
+                                    SpettacoloEventoLuogo_Lbl.Text = luogo;
+                                    SpettacoloEventoData_Lbl.Text = evento.Value.date[evento.Value.luoghi.IndexOf(luogo)];
+                                }
                             }
                         }
                     }
