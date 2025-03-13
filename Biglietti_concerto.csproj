@@ -211,5 +211,8 @@
   <ItemGroup>
     <None Include="Resources\fask-summer-biglietti.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataSaves\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

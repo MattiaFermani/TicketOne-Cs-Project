@@ -27,9 +27,11 @@ namespace Biglietti_concerto
         static string encryptionKey = "abcabc";
 
 
-        const string filePath = "accounts.json";
-        const string filePrenotazioni = "Prenotazioni.json";
-        const string fileEventiSpettacoli = "EventiSpettacoli.json";
+
+        static readonly string dataSavesFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"../../DataSaves");
+        readonly string filePath = Path.Combine(dataSavesFolder, "accounts.json");
+        readonly string filePrenotazioni = Path.Combine(dataSavesFolder, "Prenotazioni.json");
+        static readonly string fileEventiSpettacoli = Path.Combine(dataSavesFolder, "EventiSpettacoli.json");
 
         static Random rand = new Random();
         static List<string> Comuni = new List<string>();
@@ -1002,13 +1004,32 @@ namespace Biglietti_concerto
             {
                 foreach (Button btn in posti)
                 {
+                    string Tipologia = null;
+                    string Prezzo = null;
+                    switch (btn.Tag)
+                    {
+                        case "0Normal":
+                            Tipologia = "Normale";
+                            Prezzo = "20€";
+                            break;
+                        case "0Senior":
+                            Tipologia = "Senior";
+                            Prezzo = "15€";
+                            break;
+                        case "0Vip":
+                            Tipologia = "VIP";
+                            Prezzo = "50€";
+                            break;
+                    }
                     string settore = (btn.Parent is Panel panel) ? panel.Name : "Sconosciuto";
 
                     JObject postoObj = new JObject
                     {
                         ["Settore"] = settore,
                         ["NomePosto"] = btn.Name,
-                        ["Descrizione"] = btn.Text
+                        ["Descrizione"] = btn.Text,
+                        ["Tipologia"] = Tipologia,
+                        ["Prezzo"] = Prezzo
                     };
                     postiArray.Add(postoObj);
                 }
@@ -1211,12 +1232,14 @@ namespace Biglietti_concerto
                 txt_A_Email.Text = loggedEmail;
                 Lbl_Role.Text = loggedRole;
                 txt_A_Telefono.Text = string.IsNullOrEmpty(loggedTelefono) ? "Nessun Telefono Impostato" : loggedTelefono;
+                if(loggedRole == "Admin") Btn_AdminPanel.Visible = true;
+                else Btn_AdminPanel.Visible = false;
+                CaricaPrenotazioniUtente();
 
             }
             else
             {
                 Pannello_Login.BringToFront();
-                Pannello_Login.Enabled = true;
             }
         }
         private string MascheraPassword(string password)
@@ -1653,6 +1676,125 @@ namespace Biglietti_concerto
                         }
                     }
                 }
+            }
+        }
+        private void Albero_Prenotazioni_User_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            Pannello_Prenotazione.Visible = true;
+            ListaPostiBuy.SelectedIndex = -1;
+            string jsonContent = File.ReadAllText(filePrenotazioni);
+            JArray prenotazioni = JArray.Parse(jsonContent);
+            foreach (JObject pren in prenotazioni)
+            {
+                if (pren["CodicePrenotazione"]?.ToString() == e.Node.Text)
+                {
+                    Lbl_CodicePrenotazione_U.Text = pren["CodicePrenotazione"]?.ToString() ?? "";
+                    TitoloEvento_U_Lbl.Text = pren["TitoloSpettacolo"]?.ToString() ?? "";
+                    ArtistaSpettacolo_U_Lbl.Text = pren["Evento"]?.ToString() ?? "";
+                    foreach (Control control in Pannello_Principale.Controls)
+                    {
+                        if (control is Panel)
+                        {
+                            foreach (Control img in control.Controls)
+                            {
+                                if (img is PictureBox && img.Tag.ToString() == TitoloEvento_U_Lbl.Text)
+                                {
+                                    SpettacoloImg_U_Pbox.Image = ((PictureBox)img).Image;
+                                    if (SpettacoloImg_U_Pbox.Size == SpettacoloImg_U_Pbox.MinimumSize)
+                                    {
+                                        Group_Posti_U.Location = new Point(185, 136);
+                                    }
+                                    else
+                                    {
+                                        Group_Posti_U.Location = new Point(338, 136);
+                                    }
+                                }
+                            }
+                        }
+                        else if (control is PictureBox && control.Tag.ToString() == TitoloEvento_U_Lbl.Text)
+                        {
+                            SpettacoloImg_U_Pbox.Image = ((PictureBox)control).Image;
+                        }
+                    }
+                    ListaPostiBuy.Items.Clear();
+                    if (pren["Posti"] is JArray postiArray && postiArray.Count > 0)
+                    {
+                        foreach (JObject posto in postiArray)
+                        {
+                            string descrizione = posto["Descrizione"]?.ToString() ?? "";
+                            ListaPostiBuy.Items.Add($"{descrizione}");
+                        }
+                    }
+                }
+            }
+        }
+        private void CaricaPrenotazioniUtente()
+        {
+            Albero_Prenotazioni_User.Nodes.Clear();
+            if (!File.Exists(filePrenotazioni))
+            {
+                MessageBox.Show("Nessuna prenotazione trovata.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            try
+            {
+                string jsonContent = File.ReadAllText(filePrenotazioni);
+                JArray prenotazioni = JArray.Parse(jsonContent);
+
+                foreach (JObject pren in prenotazioni)
+                {
+                    if (pren["Email"] != null && pren["Email"].ToString().Equals(loggedEmail, StringComparison.OrdinalIgnoreCase))
+                    {
+                        string codice = pren["CodicePrenotazione"]?.ToString() ?? "";
+                        string titoloSpettacolo = pren["TitoloSpettacolo"]?.ToString() ?? "";
+                        string evento = pren["Evento"]?.ToString() ?? "";
+
+                        TreeNode prenNode = new TreeNode($"{codice}");
+                        Albero_Prenotazioni_User.Nodes.Add(prenNode);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore nel caricamento delle prenotazioni utente: " + ex.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ListaPostiBuy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ListaPostiBuy.SelectedIndex != -1)
+            {
+                InfoPosto_U.Visible = true;
+                string jsonContent = File.ReadAllText(filePrenotazioni);
+                JArray prenotazioni = JArray.Parse(jsonContent);
+                foreach (JObject pren in prenotazioni)
+                {
+                    if (pren["Email"] != null && pren["Email"].ToString().Equals(loggedEmail, StringComparison.OrdinalIgnoreCase))
+                    {
+                        if (pren["Posti"] is JArray postiArray && postiArray.Count > 0)
+                        {
+                            foreach (JObject posto in postiArray)
+                            {
+                                string descrizione = posto["Descrizione"]?.ToString() ?? "";
+                                if (ListaPostiBuy.SelectedItem.ToString().Contains(descrizione))
+                                {
+                                    string settore = posto["Settore"]?.ToString() ?? "Settore Sconosciuto";
+                                    string nomePosto = posto["Descrizione"]?.ToString() ?? "Posto Sconosciuto";
+                                    string tipologia = posto["Tipologia"]?.ToString() ?? "Tipologia Sconosciuta";
+                                    string prezzo = posto["Prezzo"]?.ToString() ?? "Prezzo Sconosciuto";
+                                    Lbl_U_Settore.Text = settore;
+                                    Lbl_U_Posto.Text = nomePosto;
+                                    Lbl_U_Tipologia.Text = tipologia;
+                                    Lbl_U_Prezzo.Text = prezzo;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                InfoPosto_U.Visible = false;
             }
         }
     }
