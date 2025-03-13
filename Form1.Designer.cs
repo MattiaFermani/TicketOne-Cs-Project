@@ -3976,9 +3976,9 @@
             // 
             this.Pannello_Login.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Login.Controls.Add(this.Tab_Login_Register);
-            this.Pannello_Login.Location = new System.Drawing.Point(1397, 66);
+            this.Pannello_Login.Location = new System.Drawing.Point(1169, 66);
             this.Pannello_Login.Name = "Pannello_Login";
-            this.Pannello_Login.Size = new System.Drawing.Size(126, 434);
+            this.Pannello_Login.Size = new System.Drawing.Size(546, 434);
             this.Pannello_Login.TabIndex = 13;
             // 
             // Tab_Login_Register
@@ -3989,7 +3989,7 @@
             this.Tab_Login_Register.Location = new System.Drawing.Point(0, 0);
             this.Tab_Login_Register.Name = "Tab_Login_Register";
             this.Tab_Login_Register.SelectedIndex = 0;
-            this.Tab_Login_Register.Size = new System.Drawing.Size(126, 434);
+            this.Tab_Login_Register.Size = new System.Drawing.Size(546, 434);
             this.Tab_Login_Register.TabIndex = 0;
             // 
             // Pgn_Login
@@ -4004,7 +4004,7 @@
             this.Pgn_Login.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Login.Name = "Pgn_Login";
             this.Pgn_Login.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Login.Size = new System.Drawing.Size(118, 408);
+            this.Pgn_Login.Size = new System.Drawing.Size(538, 408);
             this.Pgn_Login.TabIndex = 1;
             this.Pgn_Login.Text = "Login";
             this.Pgn_Login.UseVisualStyleBackColor = true;
@@ -4065,6 +4065,7 @@
             this.txt_L_Email.Name = "txt_L_Email";
             this.txt_L_Email.Size = new System.Drawing.Size(253, 20);
             this.txt_L_Email.TabIndex = 14;
+            this.txt_L_Email.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_L_Email_PreviewKeyDown);
             // 
             // Login_Btn
             // 
@@ -4105,7 +4106,7 @@
             this.Pgn_Register.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Register.Name = "Pgn_Register";
             this.Pgn_Register.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Register.Size = new System.Drawing.Size(118, 408);
+            this.Pgn_Register.Size = new System.Drawing.Size(538, 408);
             this.Pgn_Register.TabIndex = 0;
             this.Pgn_Register.Text = "Registrazione";
             this.Pgn_Register.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pgn_Register_MouseMove);
@@ -4201,7 +4202,7 @@
             this.groupBox2.Controls.Add(this.txt_password);
             this.groupBox2.Controls.Add(this.txt_confermapsw);
             this.groupBox2.Controls.Add(this.Lbl_ConfermaPsw);
-            this.groupBox2.Location = new System.Drawing.Point(-174, 254);
+            this.groupBox2.Location = new System.Drawing.Point(36, 254);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(265, 98);
             this.groupBox2.TabIndex = 21;

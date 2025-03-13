@@ -26,7 +26,9 @@ namespace Biglietti_concerto
         static string encryptionKey = "abcabc";
 
 
-        static readonly string filePath = "accounts.json";
+        const string filePath = "accounts.json";
+        const string filePrenotazioni = "Prenotazioni.json";
+        const string fileEventiSpettacoli = "EventiSpettacoli.json";
 
         static Random rand = new Random();
         static List<string> Comuni = new List<string>();
@@ -355,61 +357,108 @@ namespace Biglietti_concerto
             "Pinerolo - Stadio Luigi Barbieri",
             "Pinerolo - Stadio Luigi Barbieri",
         };
-        static List<string> Date_Luoghi_Random(int cosa, Random rand)
+
+        static List<string> Carica_Luoghi_Date(int cosa, Random rand, string eventKey)
         {
-            switch (cosa)
+            if (File.Exists(fileEventiSpettacoli))
             {
-                case 0:
-                    List<string> luoghi = new List<string>();
-                    for (int i = 0; i < 4; i++)
+                try
+                {
+                    string jsonContent = File.ReadAllText(fileEventiSpettacoli);
+                    JObject jsonEventi = JObject.Parse(jsonContent);
+                    if (jsonEventi[eventKey] != null)
                     {
-                        int index = rand.Next(0, Luoghi.Count);
-                        luoghi.Add(Luoghi[index]);
+                        string key = cosa == 0 ? "luoghi" : "date";
+                        JArray arr = jsonEventi[eventKey][key] as JArray;
+                        List<string> list = arr?.ToObject<List<string>>() ?? new List<string>();
+
+                        if (cosa == 1)
+                        {
+                            list = list.Where(dateStr =>
+                            {
+                                DateTime dt;
+                                if (DateTime.TryParseExact(dateStr, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dt))
+                                    return dt > DateTime.Today;
+                                return false;
+                            }).ToList();
+                        }
+
+                        if (list.Count == 4)
+                            return list;
                     }
-                    return luoghi;
-                case 1:
-                    List<string> dates = new List<string>();
-                    for (int i = 0; i < 4; i++)
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Errore nel caricamento dei dati per {eventKey}: {ex.Message}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            List<string> result = new List<string>();
+            if (cosa == 0)
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    int index = rand.Next(0, Luoghi.Count);
+                    result.Add(Luoghi[index]);
+                }
+            }
+            else if (cosa == 1)
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    DateTime dt;
+                    do
                     {
                         int day = rand.Next(1, 29);
-                        int month = rand.Next(4, 13);
+                        int month = rand.Next(1, 13);
                         int year = 2025 + rand.Next(0, 2);
-                        dates.Add($"{year:D4}/{month:D2}/{day:D2}");
+                        dt = new DateTime(year, month, day);
                     }
-
-                    dates.Sort();
-                    dates.Reverse();
-
-                    for (int i = 0; i < dates.Count; i++)
-                    {
-                        DateTime dt = DateTime.ParseExact(dates[i], "yyyy/MM/dd", null);
-                        dates[i] = dt.ToString("dd/MM/yyyy");
-                    }
-
-                    dates.Reverse();
-                    return dates;
+                    while (dt <= DateTime.Today);
+                    result.Add(dt.ToString("dd/MM/yyyy"));
+                }
+                result.Sort();
             }
-            return null;
+            return result;
         }
+
+
 
         static Dictionary<string, (List<string> luoghi, List<string> date, Dictionary<(string luogo, string data), Dictionary<string, List<Button>>> buttons)> Eventi = new Dictionary<string, (List<string>, List<string>, Dictionary<(string, string), Dictionary<string, List<Button>>>)>
         {
-            { "Intelligenza Naturale", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "Marcus Miller", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "LRDL Summer Tour 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "PalaJova", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "Sophie and The Giants", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "Damme na mano Roma e Milano", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "Games in Concert", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "FASK tour estivo 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "Prova A Prendermi", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "Vita Bassa", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "Estate 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "Jimmy Sax and Symphonic Dance Orchestra", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "2025 World Tour - Milano", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "AC/DC - Powerup Tour", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-            { "Default", (new List<string> { "Default" }, new List<string> { "Default" }, new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+            { "Intelligenza Naturale", ( Carica_Luoghi_Date(0, rand, "Intelligenza Naturale"), Carica_Luoghi_Date(1, rand, "Intelligenza Naturale"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "Marcus Miller", ( Carica_Luoghi_Date(0, rand, "Marcus Miller"), Carica_Luoghi_Date(1, rand, "Marcus Miller"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "LRDL Summer Tour 2025", ( Carica_Luoghi_Date(0, rand, "LRDL Summer Tour 2025"), Carica_Luoghi_Date(1, rand, "LRDL Summer Tour 2025"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "PalaJova", ( Carica_Luoghi_Date(0, rand, "PalaJova"), Carica_Luoghi_Date(1, rand, "PalaJova"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "Sophie and The Giants", ( Carica_Luoghi_Date(0, rand, "Sophie and The Giants"), Carica_Luoghi_Date(1, rand, "Sophie and The Giants"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "Damme na mano Roma e Milano", ( Carica_Luoghi_Date(0, rand, "Damme na mano Roma e Milano"), Carica_Luoghi_Date(1, rand, "Damme na mano Roma e Milano"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "Games in Concert", ( Carica_Luoghi_Date(0, rand, "Games in Concert"), Carica_Luoghi_Date(1, rand, "Games in Concert"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "FASK tour estivo 2025", ( Carica_Luoghi_Date(0, rand, "FASK tour estivo 2025"), Carica_Luoghi_Date(1, rand, "FASK tour estivo 2025"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "Prova A Prendermi", ( Carica_Luoghi_Date(0, rand, "Prova A Prendermi"), Carica_Luoghi_Date(1, rand, "Prova A Prendermi"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "Vita Bassa", ( Carica_Luoghi_Date(0, rand, "Vita Bassa"), Carica_Luoghi_Date(1, rand, "Vita Bassa"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "Estate 2025", ( Carica_Luoghi_Date(0, rand, "Estate 2025"), Carica_Luoghi_Date(1, rand, "Estate 2025"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "Jimmy Sax and Symphonic Dance Orchestra", ( Carica_Luoghi_Date(0, rand, "Jimmy Sax and Symphonic Dance Orchestra"), Carica_Luoghi_Date(1, rand, "Jimmy Sax and Symphonic Dance Orchestra"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "2025 World Tour - Milano", ( Carica_Luoghi_Date(0, rand, "2025 World Tour - Milano"), Carica_Luoghi_Date(1, rand, "2025 World Tour - Milano"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "AC/DC - Powerup Tour", ( Carica_Luoghi_Date(0, rand, "AC/DC - Powerup Tour"), Carica_Luoghi_Date(1, rand, "AC/DC - Powerup Tour"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
+            { "Default", ( new List<string> { "Default" }, new List<string> { "Default" }, new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
         };
+        //{
+        //    { "Intelligenza Naturale", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "Marcus Miller", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "LRDL Summer Tour 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "PalaJova", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "Sophie and The Giants", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "Damme na mano Roma e Milano", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "Games in Concert", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "FASK tour estivo 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "Prova A Prendermi", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "Vita Bassa", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "Estate 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "Jimmy Sax and Symphonic Dance Orchestra", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "2025 World Tour - Milano", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "AC/DC - Powerup Tour", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //    { "Default", (new List<string> { "Default" }, new List<string> { "Default" }, new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
+        //};
         List<(string Titolo, string Artista, string Descrizione, Dictionary<string, (List<string> luoghi, List<string> date, Dictionary<(string luogo, string data), Dictionary<string, List<Button>>> buttons)> Dizionario)> Spettacoli = new List<(string, string, string, Dictionary<string, (List<string> luoghi, List<string> date, Dictionary<(string luogo, string data), Dictionary<string, List<Button>>> buttons)>)>
         {
             ("Intelligenza Naturale", "Andrea Pezzi", "Uno spettacolo sull'intelligenza umana", Eventi),
@@ -427,6 +476,98 @@ namespace Biglietti_concerto
             ("2025 World Tour - Milano", "Black Pink", "Le Blackpink, star mondiali del K-POP, arrivano in Italia per la prima volta.\nScopri i dettagli!", Eventi),
             ("AC/DC - Powerup Tour", "AC/DC", "Annunciata una data estiva del POWER UP Tour. Scopri i dettagli!", Eventi),
         };
+
+        private void Prenotazioni(string TitoloSpettacolo, string Evento, List<Button> posti)
+        {
+            JArray jsonArray;
+            if (File.Exists(filePrenotazioni))
+            {
+                string jsonContent = File.ReadAllText(filePrenotazioni);
+                jsonArray = JArray.Parse(jsonContent);
+            }
+            else
+            {
+                jsonArray = new JArray();
+            }
+
+            // Crea un array per memorizzare le informazioni dei posti prenotati
+            JArray postiArray = new JArray();
+            if (posti != null && posti.Count > 0)
+            {
+                foreach (Button btn in posti)
+                {
+                    // Ottieni il nome del settore 
+                    string settore = (btn.Parent is Panel panel) ? panel.Name : "Sconosciuto";
+
+                    JObject postoObj = new JObject
+                    {
+                        ["Settore"] = settore,
+                        ["NomePosto"] = btn.Name,
+                        ["Descrizione"] = btn.Text
+                    };
+                    postiArray.Add(postoObj);
+                }
+            }
+
+            // Crea l'oggetto prenotazione con le informazioni dell'utente e della prenotazione
+            // Ottieni Nome e Cognome dall'account in accounts.json tramite l'email corrispondente
+            string nome = "";
+            string cognome = "";
+            if (File.Exists(filePath))
+            {
+                string accountsContent = File.ReadAllText(filePath);
+                JArray accounts = JArray.Parse(accountsContent);
+                JObject account = accounts
+                    .Children<JObject>()
+                    .FirstOrDefault(u => u["Email"] != null && u["Email"].ToString() == loggedEmail);
+                if (account != null)
+                {
+                    nome = account["Nome"]?.ToString() ?? "";
+                    cognome = account["Cognome"]?.ToString() ?? "";
+                }
+            }
+
+            JObject newPrenotazione = new JObject
+            {
+                ["TitoloSpettacolo"] = TitoloSpettacolo,
+                ["Evento"] = Evento,
+                ["Nome"] = nome,
+                ["Cognome"] = cognome,
+                ["Nome Visualizzato"] = loggedNome,
+                ["Telefono"] = loggedTelefono,
+                ["Email"] = loggedEmail,
+                ["Password"] = MascheraPassword(txt_password.Text),
+                ["Posti"] = postiArray
+            };
+
+            jsonArray.Add(newPrenotazione);
+            File.WriteAllText(filePrenotazioni, jsonArray.ToString());
+        }
+
+        private void SalvaEventiSpettacoli()
+        {
+            // Se il file esiste già, non fare nulla
+            if (File.Exists(fileEventiSpettacoli))
+                return;
+
+            // Creiamo un JObject per salvare gli eventi di ogni spettacolo
+            JObject jsonEventi = new JObject();
+
+            foreach (var spettacolo in Spettacoli)
+            {
+                // Prendiamo i dati eventi relativi allo spettacolo
+                var eventoData = spettacolo.Dizionario[spettacolo.Titolo];
+                // Creiamo un oggetto JSON con le liste di luoghi e date
+                JObject jsonDettagli = new JObject
+                {
+                    ["luoghi"] = new JArray(eventoData.luoghi),
+                    ["date"] = new JArray(eventoData.date)
+                };
+                jsonEventi[spettacolo.Titolo] = jsonDettagli;
+            }
+
+            File.WriteAllText(fileEventiSpettacoli, jsonEventi.ToString());
+        }
 
 
         private void ComuniITA()
@@ -530,6 +671,7 @@ namespace Biglietti_concerto
             CreaAdminPassword("Cisco123");
             ComuniITA();
             AlberoEventiLoad();
+            SalvaEventiSpettacoli();
         }
 
         private void AlberoEventiLoad()
@@ -602,7 +744,6 @@ namespace Biglietti_concerto
             spettacoliToolTip.ReshowDelay = 500;
             CaricaPostiEventi();
         }
-
 
         private void CreaAdminPassword(string password)
         {
@@ -743,7 +884,6 @@ namespace Biglietti_concerto
                 postiSelezionati[key].Remove(btn);
             }
         }
-
         private void Btn_ConfemaPosti_Click(object sender, EventArgs e)
         {
             if (PostiSelezionati != 0)
@@ -753,7 +893,8 @@ namespace Biglietti_concerto
                     var eventKey = entry.Key;
                     foreach (var btn in entry.Value)
                     {
-
+                        btn.BackColor = Color.Gray;
+                        btn.Enabled = false;
                         string settore = ((Panel)btn.Parent).Name;
 
                         if (!Eventi[TitoloSpettacolo_Lbl.Text].buttons.ContainsKey(eventKey))
@@ -775,18 +916,12 @@ namespace Biglietti_concerto
                                 break;
                             }
                         }
-                        //var existingButton = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].FirstOrDefault(b => b.Name == btn.Name);
-
-                        //int index = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].IndexOf(existingButton);
-                        //Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].BackColor = Color.Gray;
-                        //Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].Enabled = false;
-
                     }
                 }
-                CaricaPosti("Default", "Default", "Default");
 
-                postiSelezionati.Clear();
                 MessageBox.Show($"{PostiSelezionati} Posti acquistati con successo!");
+                Prenotazioni(TitoloSpettacolo_Lbl.Text, $"{Luogo_Lst.SelectedItem.ToString()} - {Data_Lst.SelectedItem.ToString()}", postiSelezionati.Values.SelectMany(list => list).ToList());
+                postiSelezionati.Clear();
                 PostiSelezionati = 0;
                 AggiornaDisponibilitaTooltip();
             }
@@ -795,44 +930,13 @@ namespace Biglietti_concerto
                 MessageBox.Show("Nessun posto selezionato");
             }
 
-            Pannello_Principale.Visible = true;
-            Pannello_Principale.Location = new Point(0, 54);
+            Pannello_Principale.BringToFront();
             Tab_Info_Posti.SelectedIndex = 0;
             Data_Lst.SelectedIndex = -1;
             Luogo_Lst.SelectedIndex = -1;
             Pannello_Posti.Visible = false;
-            ResetPostiColori();
+            CaricaPosti("Default", "Default", "Default");
         }
-
-        private void ResetPostiColori()
-        {
-            foreach (Control settore in Panel_Seats.Controls)
-            {
-                if (settore is Panel panelSettore)
-                {
-                    foreach (Button posto in panelSettore.Controls)
-                    {
-                        if (posto.BackColor == Color.Gray)
-                        {
-                            posto.Enabled = true;
-                            switch (posto.Tag)
-                            {
-                                case "0Normal":
-                                    posto.BackColor = Color.LightSalmon;
-                                    break;
-                                case "0Senior":
-                                    posto.BackColor = Color.Violet;
-                                    break;
-                                case "0Vip":
-                                    posto.BackColor = Color.Gold;
-                                    break;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         private void CaricaPosti(string eventTitle, string selectedLuogo, string selectedData)
         {
 
@@ -964,8 +1068,8 @@ namespace Biglietti_concerto
         }
         private void TickeTlon_Click(object sender, EventArgs e)
         {
-            Pannello_Principale.Visible = true;
             Pannello_Principale.BringToFront();
+            Tab_Info_Posti.SelectedIndex = 0;
         }
         private void Data_Luogo_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1017,7 +1121,6 @@ namespace Biglietti_concerto
                 Pannello_Login.Enabled = false;
                 Pannello_Posti.Visible = false;
                 Pannello_Principale.Visible = true;
-                string filePath = "accounts.json";
 
                 JArray jsonArray;
                 if (File.Exists(filePath))
@@ -1053,6 +1156,18 @@ namespace Biglietti_concerto
                 loggedRole = newProfile["Role"].ToString();
 
                 MessageBox.Show("Registrazione Completata");
+
+                txt_nome.Clear();
+                txt_cognome.Clear();
+                txt_nome_visualizzato.Clear();
+                dtp_nascita.Value = DateTime.Now;
+                Comuni_Lst.SelectedIndex = -1;
+                txt_codicefiscale.Clear();
+                txt_telefono.Clear();
+                txt_email.Clear();
+                txt_password.Clear();
+                txt_confermapsw.Clear();
+                Chk_IsAdmin.Checked = false;
 
                 Login = true;
                 txb_psw_admin.Clear();
@@ -1184,7 +1299,13 @@ namespace Biglietti_concerto
                 Lbl_ConfermaPsw.Text = "Conferma Password - Le Password non Corrispondono";
             }
         }
-
+        private void txt_L_Email_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_L_Password.Focus();
+            }
+        }
         private void txt_L_Password_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -1255,6 +1376,8 @@ namespace Biglietti_concerto
 
         private void Modifica_Info(object sender, EventArgs e)
         {
+            // Salva l'email prima della modifica per aggiornare anche Prenotazioni.json
+            string oldEmail = loggedEmail;
             string InfodaModicare = ((Button)sender).Parent.Name;
 
             JArray jsonArray = JArray.Parse(File.ReadAllText(filePath));
@@ -1266,7 +1389,7 @@ namespace Biglietti_concerto
             switch (InfodaModicare)
             {
                 case "Nome":
-                    user["Nome"] = txt_A_Nome.Text;
+                    user["Nome Visualizzato"] = txt_A_Nome.Text;
                     loggedNome = txt_A_Nome.Text;
                     break;
                 case "Email":
@@ -1280,6 +1403,38 @@ namespace Biglietti_concerto
                 case "Password":
                     Pnl_ModPswVer.Visible = true;
                     break;
+            }
+
+            // Aggiorna i dati corrispondenti nel file Prenotazioni.json
+            if (File.Exists(filePrenotazioni))
+            {
+                JArray prenJson = JArray.Parse(File.ReadAllText(filePrenotazioni));
+                bool prenUpdate = false;
+                foreach (JObject prenotazione in prenJson)
+                {
+                    if (prenotazione["Email"] != null && prenotazione["Email"].ToString() == oldEmail)
+                    {
+                        switch (InfodaModicare)
+                        {
+                            case "Nome":
+                                prenotazione["Nome Visualizzato"] = txt_A_Nome.Text;
+                                prenUpdate = true;
+                                break;
+                            case "Email":
+                                prenotazione["Email"] = txt_A_Email.Text;
+                                prenUpdate = true;
+                                break;
+                            case "Telefono":
+                                prenotazione["Telefono"] = txt_A_Telefono.Text;
+                                prenUpdate = true;
+                                break;
+                        }
+                    }
+                }
+                if (prenUpdate)
+                {
+                    File.WriteAllText(filePrenotazioni, prenJson.ToString());
+                }
             }
 
             File.WriteAllText(filePath, jsonArray.ToString());
@@ -1339,10 +1494,11 @@ namespace Biglietti_concerto
                                     if (img is PictureBox && img.Tag.ToString() == spettacolo.Titolo)
                                     {
                                         SpettacoloImg_Pbox.Image = ((PictureBox)img).Image;
-                                        if(SpettacoloImg_Pbox.Size == SpettacoloImg_Pbox.MinimumSize){
+                                        if (SpettacoloImg_Pbox.Size == SpettacoloImg_Pbox.MinimumSize)
+                                        {
                                             Group_IncassoSpett.Location = new Point(185, 136);
                                         }
-                                        else 
+                                        else
                                         {
                                             Group_IncassoSpett.Location = new Point(338, 136);
                                         }
@@ -1382,6 +1538,5 @@ namespace Biglietti_concerto
                 }
             }
         }
-
     }
 }
