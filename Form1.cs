@@ -26,8 +26,6 @@ namespace Biglietti_concerto
         static string adminFilePath = "admin.dat";
         static string encryptionKey = "abcabc";
 
-
-
         static readonly string dataSavesFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"../../DataSaves");
         readonly string filePath = Path.Combine(dataSavesFolder, "accounts.json");
         readonly string filePrenotazioni = Path.Combine(dataSavesFolder, "Prenotazioni.json");
@@ -1010,11 +1008,11 @@ namespace Biglietti_concerto
                     {
                         case "0Normal":
                             Tipologia = "Normale";
-                            Prezzo = "20€";
+                            Prezzo = "30€";
                             break;
                         case "0Senior":
                             Tipologia = "Senior";
-                            Prezzo = "15€";
+                            Prezzo = "25€";
                             break;
                         case "0Vip":
                             Tipologia = "VIP";
@@ -1458,7 +1456,6 @@ namespace Biglietti_concerto
             }
         }
 
-
         private void Btn_Logout_Click(object sender, EventArgs e)
         {
             Login = false;
@@ -1615,6 +1612,8 @@ namespace Biglietti_concerto
 
         private void Albero_Eventi_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            string jsonContent = File.ReadAllText(filePrenotazioni);
+            JArray prenotazioni = JArray.Parse(jsonContent);
             if (e.Node.Level == 0)
             {
                 Pannello_Spettacolo_Info.Visible = true;
@@ -1657,10 +1656,34 @@ namespace Biglietti_concerto
             {
                 Pannello_Evento_Info.Visible = true;
                 Pannello_Evento_Info.BringToFront();
+                int normale = 0;
+                int senior = 0;
+                int vip = 0;
                 foreach (var spettacolo in Spettacoli)
                 {
                     foreach (var evento in Eventi)
                     {
+                        foreach(JObject pren in prenotazioni)
+                        {
+                            if (pren["TitoloSpettacolo"]?.ToString() == e.Node.Parent.Text && pren["Evento"]?.ToString() == e.Node.Text && e.Node.Text == evento.Key)
+                            {
+                                foreach (var posto in pren["Posti"])
+                                {
+                                    switch (posto["Tipologia"]?.ToString())
+                                    {
+                                        case "Normale":
+                                            normale++;
+                                            break;
+                                        case "Senior":
+                                            senior++;
+                                            break;
+                                        case "VIP":
+                                            vip++;
+                                            break;
+                                    }
+                                }
+                            }
+                        }
                         if (evento.Key == e.Node.Parent.Text)
                         {
                             SpettacoloEvento_Lbl.Text = evento.Key;
@@ -1682,8 +1705,6 @@ namespace Biglietti_concerto
                 Pannello_Prenotazione_A.Visible = true;
                 Pannello_Prenotazione_A.BringToFront();
                 ListaPostiBuy_A.SelectedIndex = -1;
-                string jsonContent = File.ReadAllText(filePrenotazioni);
-                JArray prenotazioni = JArray.Parse(jsonContent);
                 foreach (JObject pren in prenotazioni)
                 {
                     if (pren["CodicePrenotazione"]?.ToString() == e.Node.Text)
