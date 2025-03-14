@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Biglietti_concerto
 {
@@ -21,6 +22,8 @@ namespace Biglietti_concerto
         static string loggedTelefono = "";
         static string loggedEmail = "";
         static string loggedRole = "";
+        static bool PswA = false;
+        JObject EUser;
 
         static string adminFilePath = "admin.dat";
         static string encryptionKey = "abcabc";
@@ -477,6 +480,35 @@ namespace Biglietti_concerto
             ("AC/DC - Powerup Tour", "AC/DC", "Annunciata una data estiva del POWER UP Tour. Scopri i dettagli!", Eventi),
         };
 
+        public Form1()
+        {
+            InitializeComponent();
+            CreaAdminPassword("Cisco123");
+            ComuniITA();
+            AlberoEventiLoad();
+            SalvaEventiSpettacoli();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.Size = new System.Drawing.Size(1150, 485);
+            Pannello_Principale.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Principale.Location = new Point(0, 54);
+            Pannello_Principale.BringToFront();
+            Pannello_Posti.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Posti.Location = new Point(0, 54);
+            Pannello_Login.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Login.Location = new Point(0, 54);
+            Pannello_Acc_User.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Acc_User.Location = new Point(0, 54);
+            Pannello_Admin.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Admin.Location = new Point(0, 54);
+            AggiornaDisponibilitaTooltip();
+            spettacoliToolTip.AutoPopDelay = 5000;
+            spettacoliToolTip.InitialDelay = 300;
+            spettacoliToolTip.ReshowDelay = 500;
+            CaricaPostiEventi();
+            CaricaAccounts();
+        }
         private void SalvaEventiSpettacoli()
         {
             // Se il file esiste già, non fare nulla
@@ -503,6 +535,36 @@ namespace Biglietti_concerto
         }
 
 
+        // Aggiungere il seguente metodo nella classe Form1
+        private void CaricaAccounts()
+        {
+            // Verifica se il file degli account esiste
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Il file accounts.json non esiste.", "Informazione", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            try
+            {
+                // Leggi il contenuto del file
+                string jsonContent = File.ReadAllText(filePath);
+                JArray accounts = JArray.Parse(jsonContent);
+
+                // Pulire la ListBox esistente
+                Lista_Utenti.Items.Clear();
+
+                // Aggiunge ogni account alla ListBox Lista_Utenti utilizzando il campo "Nome Visualizzato"
+                foreach (JObject account in accounts)
+                {
+                    string displayName = account["Nome Visualizzato"]?.ToString() ?? "Sconosciuto";
+                    Lista_Utenti.Items.Add(displayName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Errore nel caricamento degli account: {ex.Message}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void ComuniITA()
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\Resources", "T4_codicicatastali_comuni_20_01_2020.xlsx");
@@ -599,14 +661,6 @@ namespace Biglietti_concerto
             return cf;
         }
 
-        public Form1()
-        {
-            InitializeComponent();
-            CreaAdminPassword("Cisco123");
-            ComuniITA();
-            AlberoEventiLoad();
-            SalvaEventiSpettacoli();
-        }
 
         private void AlberoEventiLoad()
         {
@@ -664,7 +718,6 @@ namespace Biglietti_concerto
                 Albero_Eventi.Nodes.Add(node);
             }
         }
-
         private void ApplicaPrenotazioniSuEventi()
         {
             if (!File.Exists(filePrenotazioni))
@@ -767,26 +820,6 @@ namespace Biglietti_concerto
                 Eventi[key] = (evento.luoghi, evento.date, NewPosti);
             }
             ApplicaPrenotazioniSuEventi();
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.Size = new System.Drawing.Size(1150, 485);
-            Pannello_Principale.Size = new System.Drawing.Size(1151, 434);
-            Pannello_Principale.Location = new Point(0, 54);
-            Pannello_Principale.BringToFront();
-            Pannello_Posti.Size = new System.Drawing.Size(1151, 434);
-            Pannello_Posti.Location = new Point(0, 54);
-            Pannello_Login.Size = new System.Drawing.Size(1151, 434);
-            Pannello_Login.Location = new Point(0, 54);
-            Pannello_Acc_User.Size = new System.Drawing.Size(1151, 434);
-            Pannello_Acc_User.Location = new Point(0, 54);
-            Pannello_Admin.Size = new System.Drawing.Size(1151, 434);
-            Pannello_Admin.Location = new Point(0, 54);
-            AggiornaDisponibilitaTooltip();
-            spettacoliToolTip.AutoPopDelay = 5000;
-            spettacoliToolTip.InitialDelay = 300;
-            spettacoliToolTip.ReshowDelay = 500;
-            CaricaPostiEventi();
         }
 
         private void CreaAdminPassword(string password)
@@ -1283,7 +1316,7 @@ namespace Biglietti_concerto
                     ["Codice Fiscale"] = txt_codicefiscale.Text,
                     ["Telefono"] = txt_telefono.Text,
                     ["Email"] = txt_email.Text,
-                    ["Role"] = Chk_IsAdmin.Checked ? (PswAdmin() ? "Admin" : "User") : "User",
+                    ["Role"] = Chk_IsAdmin.Checked ? (PswAdmin(((Button)sender).Parent.Name) ? "Admin" : "User") : "User",
                     ["Password"] = MascheraPassword(txt_password.Text),
                 };
                 jsonArray.Add(newProfile);
@@ -1490,13 +1523,37 @@ namespace Biglietti_concerto
         }
         private void btn_Admin_Check_Click(object sender, EventArgs e)
         {
-            PswAdmin();
+            PswA = PswAdmin(((Button)sender).Parent.Name); 
+            if (((Button)sender).Parent.Name == "Admin")
+            {
+                if (PswA)
+                {
+                    string oldEmail = Txt_Email_A.Text;
+                    string InfodaModicare = Txt_PswNew_A.Parent.Name;
+                    Txt_PswAdmin.BackColor = Color.PaleGreen;
+                    EUser["Password"] = MascheraPassword(Txt_PswNew_A.Text);
+                    AggiornaPrenotazioni(InfodaModicare, oldEmail);
+                }
+                else
+                {
+                    Txt_PswAdmin.BackColor = Color.IndianRed;
+                }
+                Thread.Sleep(200);
+                Admin.Hide();
+                Txt_PswAdmin.Clear();
+                Txt_PswAdmin.BackColor = Color.White;
+                EUser = null;
+                PswA = false;
+            }
         }
-        private bool PswAdmin()
+        private bool PswAdmin(string parent)
         {
             string savedPassword = LeggiAdminPassword();
-            string inputPassword = txb_psw_admin.Text;
-
+            string inputPassword = parent == "Admin" ? Txt_PswAdmin.Text : txb_psw_admin.Text;
+            if (parent == "Admin" && savedPassword == inputPassword)
+            {
+                return true;
+            }
             if (savedPassword != null && savedPassword == inputPassword)
             {
                 Chk_IsAdmin.Checked = true;
@@ -1514,15 +1571,16 @@ namespace Biglietti_concerto
 
         private void Modifica_Info(object sender, EventArgs e)
         {
-            // Salva l'email prima della modifica per aggiornare anche Prenotazioni.json
-            string oldEmail = loggedEmail;
+            string oldEmail = ((Button)sender).Parent.Parent.Name == Pannello_A_Utente.Name ? Txt_Email_A.Text : loggedEmail;
             string InfodaModicare = ((Button)sender).Parent.Name;
 
             JArray jsonArray = JArray.Parse(File.ReadAllText(filePath));
             JObject user = jsonArray
                 .Children<JObject>()
                 .FirstOrDefault(u =>
-                    (u["Email"]?.ToString() == loggedEmail));
+                    (u["Email"]?.ToString() == oldEmail));
+
+            EUser = user;
 
             switch (InfodaModicare)
             {
@@ -1530,20 +1588,42 @@ namespace Biglietti_concerto
                     user["Nome Visualizzato"] = txt_A_Nome.Text;
                     loggedNome = txt_A_Nome.Text;
                     break;
+                case "Nome_A":
+                    user["Nome"] = txt_A_Nome.Text;
+                    break;
                 case "Email":
                     user["Email"] = txt_A_Email.Text;
                     loggedEmail = txt_A_Email.Text;
+                    break;
+                case "Email_A":
+                    user["Email"] = txt_A_Email.Text;
                     break;
                 case "Telefono":
                     user["Telefono"] = txt_A_Telefono.Text;
                     loggedTelefono = txt_A_Telefono.Text;
                     break;
+                case "Telefono_A":
+                    user["Telefono"] = txt_A_Telefono.Text;
+                    break;
                 case "Password":
-                    Pnl_ModPswVer.Visible = true;
+                    Pnl_ModPswVer.Show();
+                    break;
+                case "Password_A":
+                    Admin.Show();
                     break;
             }
+            if (InfodaModicare == "Password_A") InfodaModicare = "";
+            AggiornaPrenotazioni(InfodaModicare, oldEmail);
+        }
 
-            // Aggiorna i dati corrispondenti nel file Prenotazioni.json
+        private void AggiornaPrenotazioni(string InfodaModificare, string oldEmail)
+        {
+            JArray jsonArray = JArray.Parse(File.ReadAllText(filePath));
+            JObject user = jsonArray
+                .Children<JObject>()
+                .FirstOrDefault(u =>
+                    (u["Email"]?.ToString() == oldEmail));
+
             if (File.Exists(filePrenotazioni))
             {
                 JArray prenJson = JArray.Parse(File.ReadAllText(filePrenotazioni));
@@ -1552,7 +1632,7 @@ namespace Biglietti_concerto
                 {
                     if (prenotazione["Email"] != null && prenotazione["Email"].ToString() == oldEmail)
                     {
-                        switch (InfodaModicare)
+                        switch (InfodaModificare)
                         {
                             case "Nome":
                                 prenotazione["Nome Visualizzato"] = txt_A_Nome.Text;
@@ -1566,6 +1646,10 @@ namespace Biglietti_concerto
                                 prenotazione["Telefono"] = txt_A_Telefono.Text;
                                 prenUpdate = true;
                                 break;
+                            case "Password_A":
+                                user = EUser;
+                                prenUpdate = true;
+                                break;
                         }
                     }
                 }
@@ -1574,10 +1658,9 @@ namespace Biglietti_concerto
                     File.WriteAllText(filePrenotazioni, prenJson.ToString());
                 }
             }
-
+            
             File.WriteAllText(filePath, jsonArray.ToString());
         }
-
         private void Btn_CkPsw_Click(object sender, EventArgs e)
         {
 
@@ -1873,7 +1956,7 @@ namespace Biglietti_concerto
 
         private void ListaPostiBuy_A_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ListaPostiBuy.SelectedIndex != -1)
+            if (ListaPostiBuy_A.SelectedIndex != -1)
             {
                 InfoPosto_A.Visible = true;
                 string jsonContent = File.ReadAllText(filePrenotazioni);
@@ -1918,6 +2001,93 @@ namespace Biglietti_concerto
                     Tab_Info_Posti.SelectedIndex = 0;
                     MessageBox.Show("Seleziona un luogo e una data per procedere con l'acquisto dei posti");
                 }
+            }
+        }
+
+        private void Lbl_A_Eventi_Click(object sender, EventArgs e)
+        {
+            Lbl_A_Eventi.BackColor = Color.White;
+            Lbl_A_Utenti.BackColor = Color.Gainsboro;
+            Tab_EventiUtenti.SelectedIndex = 0;
+        }
+        private void Lbll_A_Utenti_Click(object sender, EventArgs e)
+        {
+            Lbl_A_Utenti.BackColor = Color.White;
+            Lbl_A_Eventi.BackColor = Color.Gainsboro;
+            Tab_EventiUtenti.SelectedIndex = 1;
+        }
+        private void Lista_Utenti_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Lista_Utenti.SelectedIndex != -1)
+            {
+                Pannello_A_Utente.Show();
+                Pannello_A_Utente.BringToFront();
+                JArray jsonArray = JArray.Parse(File.ReadAllText(filePath));
+                JObject user = jsonArray
+                    .Children<JObject>()
+                    .FirstOrDefault(u =>
+                        (u["Nome Visualizzato"]?.ToString() == Lista_Utenti.SelectedItem.ToString()));
+                Txt_Username_A.Text = user["Nome Visualizzato"]?.ToString();
+                Txt_Email_A.Text = user["Email"]?.ToString();
+                Txt_Telefono_A.Text = user["Telefono"]?.ToString();
+                Lbl_NomeCognome_A.Text = user["Nome"]?.ToString() + " " + user["Cognome"]?.ToString();
+            }
+            else
+            {
+                Pannello_A_Utente.Hide();
+            }
+        }
+
+        private void Elimina_Btn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sei sicuro di voler eliminare l'account?", "Attenzione", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (DialogResult == DialogResult.No) return;
+            if (Lista_Utenti.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleziona un utente da eliminare.", "Informazione", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            string selectedDisplayName = Lista_Utenti.SelectedItem.ToString();
+
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Il file accounts.json non esiste.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                string jsonContent = File.ReadAllText(filePath);
+                JArray accounts = JArray.Parse(jsonContent);
+                bool accountFound = false;
+
+                for (int i = accounts.Count - 1; i >= 0; i--)
+                {
+                    JObject account = (JObject)accounts[i];
+                    string displayName = account["Nome Visualizzato"]?.ToString() ?? "";
+                    if (displayName.Equals(selectedDisplayName, StringComparison.OrdinalIgnoreCase))
+                    {
+                        accounts.RemoveAt(i);
+                        accountFound = true;
+                    }
+                }
+
+                if (accountFound)
+                {
+                    File.WriteAllText(filePath, accounts.ToString());
+                    MessageBox.Show("Account eliminato con successo.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Lista_Utenti.SelectedIndex = -1;
+                    CaricaAccounts();
+                }
+                else
+                {
+                    MessageBox.Show("Account non trovato.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Errore durante l'eliminazione dell'account: {ex.Message}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
