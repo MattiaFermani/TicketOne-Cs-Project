@@ -211,5 +211,47 @@
   <ItemGroup>
     <None Include="Resources\fask-summer-biglietti.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mastercard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\postepay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\googlepay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applepay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banconota 500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banconota 200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100 euro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banconota 50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banconota 20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banconota 10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banconota 5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banconota 51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banconota 201.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

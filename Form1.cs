@@ -8,7 +8,10 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
+using System.Net;
+using System.Net.Mail;
 using System.Windows.Forms;
+
 
 namespace Biglietti_concerto
 {
@@ -576,6 +579,9 @@ namespace Biglietti_concerto
             Pannello_Acc_User.Size = new System.Drawing.Size(1151, 434);
             Pannello_Acc_User.Location = new Point(0, 54);
             Pannello_Acc_User.Visible = false;
+            l.Size = new System.Drawing.Size(1151, 434);
+            l.Location = new Point(0, 54);
+            l.Visible = false;
             AggiornaDisponibilitaTooltip();
             spettacoliToolTip.AutoPopDelay = 5000;
             spettacoliToolTip.InitialDelay = 300;
@@ -666,7 +672,6 @@ namespace Biglietti_concerto
             Pannello_Principale.Visible = false;
             Pannello_Posti.Location = new Point(0, 54);
             Pannello_Posti.Visible = true;
-
             Img_Info.Image = pb.Image;
             Img_Info.SizeMode = PictureBoxSizeMode.Zoom;
         }
@@ -680,7 +685,7 @@ namespace Biglietti_concerto
             button = btn;
             if (btn.BackColor != Color.Yellow)
             {
-                if (PostiSelezionati < 4)
+                if (PostiSelezionati < 4) 
                 {
                     btn.BackColor = Color.Yellow;
                     PostiSelezionati++;
@@ -728,62 +733,10 @@ namespace Biglietti_concerto
 
         private void Btn_ConfemaPosti_Click(object sender, EventArgs e)
         {
-            if (PostiSelezionati != 0)
-            {
-                foreach (var entry in postiSelezionati)
-                {
-                    var eventKey = entry.Key;
-                    foreach (var btn in entry.Value)
-                    {
 
-                        string settore = ((Panel)btn.Parent).Name;
-
-                        if (!Eventi[TitoloSpettacolo_Lbl.Text].buttons.ContainsKey(eventKey))
-                        {
-                            Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey] = new Dictionary<string, List<Button>>();
-                        }
-                        if (!Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey].ContainsKey(settore))
-                        {
-                            Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore] = new List<Button>();
-                        }
-
-                        foreach (Button b in Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore])
-                        {
-                            if (b.Name == btn.Name)
-                            {
-                                int index = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].IndexOf(b);
-                                Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].BackColor = Color.Gray;
-                                Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].Enabled = false;
-                                break;
-                            }
-                        }
-                        //var existingButton = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].FirstOrDefault(b => b.Name == btn.Name);
-
-                        //int index = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].IndexOf(existingButton);
-                        //Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].BackColor = Color.Gray;
-                        //Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].Enabled = false;
-
-                    }
-                }
-                CaricaPosti("Default", "Default", "Default");
-
-                postiSelezionati.Clear();
-                MessageBox.Show($"{PostiSelezionati} Posti acquistati con successo!");
-                PostiSelezionati = 0;
-                AggiornaDisponibilitaTooltip();
-            }
-            else
-            {
-                MessageBox.Show("Nessun posto selezionato");
-            }
-
-            Pannello_Principale.Visible = true;
-            Pannello_Principale.Location = new Point(0, 54);
-            Tab_Info_Posti.SelectedIndex = 0;
-            Data_Lst.SelectedIndex = -1;
-            Luogo_Lst.SelectedIndex = -1;
             Pannello_Posti.Visible = false;
-            ResetPostiColori();
+            l.Visible = true;
+            
         }
 
         private void ResetPostiColori()
@@ -952,7 +905,7 @@ namespace Biglietti_concerto
             Pannello_Posti.Visible = false;
             Pannello_Login.Visible = false;
             Pannello_Acc_User.Visible = false;
-            Pannello_Pagamento.Visible = false;
+            l.Visible = false;
         }
         private void Data_Luogo_Lst_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1047,7 +1000,6 @@ namespace Biglietti_concerto
                 txb_psw_admin.Clear();
                 Pannello_Login.Visible = false;
                 Pannello_Login.Enabled = false;
-                Pannello_Posti.Visible = false;
                 Pannello_Principale.Visible = true;
             }
             else
@@ -1305,5 +1257,70 @@ namespace Biglietti_concerto
 
             File.WriteAllText(filePath, jsonArray.ToString());
         }
+
+        private void Btn_Pagamento_Click(object sender, EventArgs e)
+        {
+            if (PostiSelezionati != 0)
+            {
+                foreach (var entry in postiSelezionati)
+                {
+                    var eventKey = entry.Key;
+                    foreach (var btn in entry.Value)
+                    {
+
+                        string settore = ((Panel)btn.Parent).Name;
+
+                        if (!Eventi[TitoloSpettacolo_Lbl.Text].buttons.ContainsKey(eventKey))
+                        {
+                            Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey] = new Dictionary<string, List<Button>>();
+                        }
+                        if (!Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey].ContainsKey(settore))
+                        {
+                            Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore] = new List<Button>();
+                        }
+
+                        foreach (Button b in Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore])
+                        {
+                            if (b.Name == btn.Name)
+                            {
+                                int index = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].IndexOf(b);
+                                Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].BackColor = Color.Gray;
+                                Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].Enabled = false;
+                                break;
+                            }
+                        }
+                        //var existingButton = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].FirstOrDefault(b => b.Name == btn.Name);
+
+                        //int index = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].IndexOf(existingButton);
+                        //Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].BackColor = Color.Gray;
+                        //Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].Enabled = false;
+
+                    }
+                }
+                CaricaPosti("Default", "Default", "Default");
+
+                postiSelezionati.Clear();
+                MessageBox.Show($"{PostiSelezionati} Posti acquistati con successo!");
+                PostiSelezionati = 0;
+                AggiornaDisponibilitaTooltip();
+            }
+            else
+            {
+                MessageBox.Show("Nessun posto selezionato");
+            }
+
+            Pannello_Principale.Visible = true;
+            Pannello_Principale.Location = new Point(0, 54);
+            Tab_Info_Posti.SelectedIndex = 0;
+            Data_Lst.SelectedIndex = -1;
+            Luogo_Lst.SelectedIndex = -1;
+            Pannello_Posti.Visible = false;
+            l.Visible = false;
+            ResetPostiColori();
+        }
+
+
+
+      
     }
 }
