@@ -477,6 +477,7 @@ namespace Biglietti_concerto
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Size = new System.Drawing.Size(1150, 485);
+            MessageBox.Show(Pannello_Principale.Location.ToString());
             Pannello_Principale.Size = new System.Drawing.Size(1151, 434);
             Pannello_Principale.Location = new Point(0, 54);
             Pannello_Principale.BringToFront();
@@ -950,7 +951,6 @@ namespace Biglietti_concerto
         {
             //DA AGGIORNARE
             Pannello_Posti.Visible = false;
-            l.Visible = true;
             if (PostiSelezionati != 0)
             {
                 foreach (var entry in postiSelezionati)
@@ -1739,7 +1739,6 @@ namespace Biglietti_concerto
             Data_Lst.SelectedIndex = -1;
             Luogo_Lst.SelectedIndex = -1;
             Pannello_Posti.Visible = false;
-            l.Visible = false;
         }
         private void Btn_AdminPanel_Click(object sender, EventArgs e)
         {

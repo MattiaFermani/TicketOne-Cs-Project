@@ -36,7 +36,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Account = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.FormClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Img_MarcusMiller = new System.Windows.Forms.PictureBox();
@@ -320,28 +319,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.l = new System.Windows.Forms.Panel();
-            this.grb_Contanti = new System.Windows.Forms.GroupBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lbl_tipopagamento = new System.Windows.Forms.Label();
-            this.rbtn_carta = new System.Windows.Forms.RadioButton();
-            this.rbtn_contanti = new System.Windows.Forms.RadioButton();
-            this.Btn_Pagamento = new System.Windows.Forms.Button();
-            this.button150 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lbl_intestatario = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Pannello_Acc_User = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Pgn_Profilo = new System.Windows.Forms.TabPage();
@@ -394,6 +371,7 @@
             this.Admin = new System.Windows.Forms.Panel();
             this.button151 = new System.Windows.Forms.Button();
             this.Txt_PswAdmin = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.Password_A = new System.Windows.Forms.Panel();
             this.button152 = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
@@ -438,6 +416,7 @@
             this.Group_IncassoSpett = new System.Windows.Forms.GroupBox();
             this.Group_IncassoTOTSpett = new System.Windows.Forms.GroupBox();
             this.Lbl_TOT_Spettacolo = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.Lbl_TOT_P_Normali = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.Lbl_TOT_P_Senior = new System.Windows.Forms.Label();
@@ -446,6 +425,7 @@
             this.SpettacoloArtista_Lbl = new System.Windows.Forms.Label();
             this.SpettacoloImg_Pbox = new System.Windows.Forms.PictureBox();
             this.SpettacoloTitolo_Lbl = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.Pannello_Evento_Info = new System.Windows.Forms.Panel();
             this.Grup_InfoEvento = new System.Windows.Forms.GroupBox();
             this.SpettacoloEventoData_Lbl = new System.Windows.Forms.Label();
@@ -454,6 +434,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.Group_IncassiEvento = new System.Windows.Forms.GroupBox();
             this.Group_IncassiTOTEvento = new System.Windows.Forms.GroupBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -462,13 +443,11 @@
             this.label32 = new System.Windows.Forms.Label();
             this.SpettacoloEventoArtista_Lbl = new System.Windows.Forms.Label();
             this.SpettacoloEvento_Lbl = new System.Windows.Forms.Label();
-            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Account)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).BeginInit();
@@ -505,15 +484,6 @@
             this.Pgn_Register.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Group_Gender.SuspendLayout();
-            this.l.SuspendLayout();
-            this.grb_Contanti.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Pannello_Acc_User.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Pgn_Profilo.SuspendLayout();
@@ -548,6 +518,7 @@
             this.Pannello_Evento_Info.SuspendLayout();
             this.Grup_InfoEvento.SuspendLayout();
             this.Group_IncassiEvento.SuspendLayout();
+            this.Group_IncassiTOTEvento.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -567,7 +538,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1924, 94);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1924, 60);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // TickeTlon
@@ -576,7 +547,7 @@
             this.TickeTlon.Image = global::Biglietti_concerto.Properties.Resources.TickeTlon;
             this.TickeTlon.Location = new System.Drawing.Point(364, 3);
             this.TickeTlon.Name = "TickeTlon";
-            this.TickeTlon.Size = new System.Drawing.Size(441, 88);
+            this.TickeTlon.Size = new System.Drawing.Size(441, 54);
             this.TickeTlon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.TickeTlon.TabIndex = 0;
             this.TickeTlon.TabStop = false;
@@ -603,21 +574,12 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.FormClose);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(355, 88);
+            this.panel3.Size = new System.Drawing.Size(355, 54);
             this.panel3.TabIndex = 6;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(60, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 45);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // FormClose
             // 
@@ -647,17 +609,17 @@
             this.panel2.Controls.Add(this.Img_PROVAAPRENDERMI);
             this.panel2.Controls.Add(this.Img_ACDC);
             this.panel2.Controls.Add(this.Img_TIMBURTON);
-            this.panel2.Location = new System.Drawing.Point(2555, 0);
+            this.panel2.Location = new System.Drawing.Point(647, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(203, 175);
+            this.panel2.Size = new System.Drawing.Size(498, 429);
             this.panel2.TabIndex = 9;
             // 
             // Img_MarcusMiller
             // 
             this.Img_MarcusMiller.Image = global::Biglietti_concerto.Properties.Resources.marcus_miller_biglietti;
-            this.Img_MarcusMiller.Location = new System.Drawing.Point(68, 3);
+            this.Img_MarcusMiller.Location = new System.Drawing.Point(166, 6);
             this.Img_MarcusMiller.Name = "Img_MarcusMiller";
-            this.Img_MarcusMiller.Size = new System.Drawing.Size(65, 82);
+            this.Img_MarcusMiller.Size = new System.Drawing.Size(157, 200);
             this.Img_MarcusMiller.TabIndex = 19;
             this.Img_MarcusMiller.TabStop = false;
             this.Img_MarcusMiller.Tag = "Marcus Miller";
@@ -667,9 +629,9 @@
             // Img_BLACKPINK
             // 
             this.Img_BLACKPINK.Image = global::Biglietti_concerto.Properties.Resources.blackpink_biglietti;
-            this.Img_BLACKPINK.Location = new System.Drawing.Point(335, 87);
+            this.Img_BLACKPINK.Location = new System.Drawing.Point(818, 212);
             this.Img_BLACKPINK.Name = "Img_BLACKPINK";
-            this.Img_BLACKPINK.Size = new System.Drawing.Size(65, 82);
+            this.Img_BLACKPINK.Size = new System.Drawing.Size(157, 200);
             this.Img_BLACKPINK.TabIndex = 18;
             this.Img_BLACKPINK.TabStop = false;
             this.Img_BLACKPINK.Tag = "2025 World Tour - Milano";
@@ -680,9 +642,9 @@
             // Img_JIMMYSAX
             // 
             this.Img_JIMMYSAX.Image = global::Biglietti_concerto.Properties.Resources.jimmy_sax_biglietti;
-            this.Img_JIMMYSAX.Location = new System.Drawing.Point(268, 87);
+            this.Img_JIMMYSAX.Location = new System.Drawing.Point(655, 212);
             this.Img_JIMMYSAX.Name = "Img_JIMMYSAX";
-            this.Img_JIMMYSAX.Size = new System.Drawing.Size(65, 82);
+            this.Img_JIMMYSAX.Size = new System.Drawing.Size(157, 200);
             this.Img_JIMMYSAX.TabIndex = 17;
             this.Img_JIMMYSAX.TabStop = false;
             this.Img_JIMMYSAX.Tag = "Jimmy Sax and Symphonic Dance Orchestra";
@@ -693,9 +655,9 @@
             // Img_MORRISSEY
             // 
             this.Img_MORRISSEY.Image = global::Biglietti_concerto.Properties.Resources.morrissey_biglietti;
-            this.Img_MORRISSEY.Location = new System.Drawing.Point(268, 3);
+            this.Img_MORRISSEY.Location = new System.Drawing.Point(655, 6);
             this.Img_MORRISSEY.Name = "Img_MORRISSEY";
-            this.Img_MORRISSEY.Size = new System.Drawing.Size(131, 82);
+            this.Img_MORRISSEY.Size = new System.Drawing.Size(320, 200);
             this.Img_MORRISSEY.TabIndex = 16;
             this.Img_MORRISSEY.TabStop = false;
             this.Img_MORRISSEY.Tag = "Estate 2025";
@@ -705,9 +667,9 @@
             // Img_INTELLIGENZANATURALE
             // 
             this.Img_INTELLIGENZANATURALE.Image = global::Biglietti_concerto.Properties.Resources.andrea_pezzi_intelligenza_naturale_2;
-            this.Img_INTELLIGENZANATURALE.Location = new System.Drawing.Point(202, 87);
+            this.Img_INTELLIGENZANATURALE.Location = new System.Drawing.Point(492, 212);
             this.Img_INTELLIGENZANATURALE.Name = "Img_INTELLIGENZANATURALE";
-            this.Img_INTELLIGENZANATURALE.Size = new System.Drawing.Size(65, 82);
+            this.Img_INTELLIGENZANATURALE.Size = new System.Drawing.Size(157, 200);
             this.Img_INTELLIGENZANATURALE.TabIndex = 15;
             this.Img_INTELLIGENZANATURALE.TabStop = false;
             this.Img_INTELLIGENZANATURALE.Tag = "Intelligenza Naturale";
@@ -717,9 +679,9 @@
             // img_GIORGIAFUMO
             // 
             this.img_GIORGIAFUMO.Image = global::Biglietti_concerto.Properties.Resources.giorgia_fumo_biglietti;
-            this.img_GIORGIAFUMO.Location = new System.Drawing.Point(135, 87);
+            this.img_GIORGIAFUMO.Location = new System.Drawing.Point(329, 212);
             this.img_GIORGIAFUMO.Name = "img_GIORGIAFUMO";
-            this.img_GIORGIAFUMO.Size = new System.Drawing.Size(65, 82);
+            this.img_GIORGIAFUMO.Size = new System.Drawing.Size(157, 200);
             this.img_GIORGIAFUMO.TabIndex = 14;
             this.img_GIORGIAFUMO.TabStop = false;
             this.img_GIORGIAFUMO.Tag = "Vita Bassa";
@@ -729,9 +691,9 @@
             // Img_PROVAAPRENDERMI
             // 
             this.Img_PROVAAPRENDERMI.Image = global::Biglietti_concerto.Properties.Resources.prova_prendermi_biglietti;
-            this.Img_PROVAAPRENDERMI.Location = new System.Drawing.Point(135, 3);
+            this.Img_PROVAAPRENDERMI.Location = new System.Drawing.Point(329, 6);
             this.Img_PROVAAPRENDERMI.Name = "Img_PROVAAPRENDERMI";
-            this.Img_PROVAAPRENDERMI.Size = new System.Drawing.Size(131, 82);
+            this.Img_PROVAAPRENDERMI.Size = new System.Drawing.Size(320, 200);
             this.Img_PROVAAPRENDERMI.TabIndex = 13;
             this.Img_PROVAAPRENDERMI.TabStop = false;
             this.Img_PROVAAPRENDERMI.Tag = "Prova A Prendermi";
@@ -742,9 +704,9 @@
             // Img_ACDC
             // 
             this.Img_ACDC.Image = global::Biglietti_concerto.Properties.Resources.acdc_biglietti;
-            this.Img_ACDC.Location = new System.Drawing.Point(2, 87);
+            this.Img_ACDC.Location = new System.Drawing.Point(3, 212);
             this.Img_ACDC.Name = "Img_ACDC";
-            this.Img_ACDC.Size = new System.Drawing.Size(131, 82);
+            this.Img_ACDC.Size = new System.Drawing.Size(320, 200);
             this.Img_ACDC.TabIndex = 12;
             this.Img_ACDC.TabStop = false;
             this.Img_ACDC.Tag = "AC/DC - Powerup Tour";
@@ -755,9 +717,9 @@
             // Img_TIMBURTON
             // 
             this.Img_TIMBURTON.Image = global::Biglietti_concerto.Properties.Resources.fask_summer_biglietti;
-            this.Img_TIMBURTON.Location = new System.Drawing.Point(2, 3);
+            this.Img_TIMBURTON.Location = new System.Drawing.Point(3, 6);
             this.Img_TIMBURTON.Name = "Img_TIMBURTON";
-            this.Img_TIMBURTON.Size = new System.Drawing.Size(65, 82);
+            this.Img_TIMBURTON.Size = new System.Drawing.Size(157, 200);
             this.Img_TIMBURTON.TabIndex = 10;
             this.Img_TIMBURTON.TabStop = false;
             this.Img_TIMBURTON.Tag = "FASK tour estivo 2025";
@@ -771,7 +733,7 @@
             this.Pannello_Principale.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Principale.Controls.Add(this.Pannello_InEvidenza);
             this.Pannello_Principale.Controls.Add(this.panel2);
-            this.Pannello_Principale.Location = new System.Drawing.Point(1560, 66);
+            this.Pannello_Principale.Location = new System.Drawing.Point(1179, 66);
             this.Pannello_Principale.Name = "Pannello_Principale";
             this.Pannello_Principale.Size = new System.Drawing.Size(98, 434);
             this.Pannello_Principale.TabIndex = 11;
@@ -783,9 +745,9 @@
             this.Pannello_InEvidenza.Controls.Add(this.Img_TONYEFFE);
             this.Pannello_InEvidenza.Controls.Add(this.Img_GAMESINCONCERT);
             this.Pannello_InEvidenza.Controls.Add(this.Img_PALAJOVA);
-            this.Pannello_InEvidenza.Location = new System.Drawing.Point(2292, 2);
+            this.Pannello_InEvidenza.Location = new System.Drawing.Point(3, 3);
             this.Pannello_InEvidenza.Name = "Pannello_InEvidenza";
-            this.Pannello_InEvidenza.Size = new System.Drawing.Size(262, 167);
+            this.Pannello_InEvidenza.Size = new System.Drawing.Size(641, 408);
             this.Pannello_InEvidenza.TabIndex = 0;
             // 
             // Img_LRDL
@@ -893,9 +855,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Luogo_Lst);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(25, 177);
+            this.groupBox1.Location = new System.Drawing.Point(31, 221);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(436, 145);
+            this.groupBox1.Size = new System.Drawing.Size(545, 181);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Date ed Eventi";
@@ -946,9 +908,9 @@
             // 
             // Img_Info
             // 
-            this.Img_Info.Location = new System.Drawing.Point(465, 20);
+            this.Img_Info.Location = new System.Drawing.Point(582, 25);
             this.Img_Info.Name = "Img_Info";
-            this.Img_Info.Size = new System.Drawing.Size(435, 281);
+            this.Img_Info.Size = new System.Drawing.Size(544, 351);
             this.Img_Info.TabIndex = 1;
             this.Img_Info.TabStop = false;
             // 
@@ -958,9 +920,9 @@
             this.TitoloArtista.Controls.Add(this.Artista_Lbl);
             this.TitoloArtista.Controls.Add(this.TitoloSpettacolo_Lbl);
             this.TitoloArtista.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitoloArtista.Location = new System.Drawing.Point(25, 25);
+            this.TitoloArtista.Location = new System.Drawing.Point(31, 31);
             this.TitoloArtista.Name = "TitoloArtista";
-            this.TitoloArtista.Size = new System.Drawing.Size(436, 146);
+            this.TitoloArtista.Size = new System.Drawing.Size(545, 183);
             this.TitoloArtista.TabIndex = 0;
             this.TitoloArtista.TabStop = false;
             this.TitoloArtista.Text = "Titolo e Artista";
@@ -4497,224 +4459,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Nome";
             // 
-            // l
-            // 
-            this.l.BackColor = System.Drawing.SystemColors.Control;
-            this.l.Controls.Add(this.grb_Contanti);
-            this.l.Controls.Add(this.groupBox3);
-            this.l.Controls.Add(this.lbl_tipopagamento);
-            this.l.Controls.Add(this.rbtn_carta);
-            this.l.Controls.Add(this.rbtn_contanti);
-            this.l.Controls.Add(this.Btn_Pagamento);
-            this.l.Location = new System.Drawing.Point(1291, 100);
-            this.l.Name = "l";
-            this.l.Size = new System.Drawing.Size(653, 460);
-            this.l.TabIndex = 14;
-            this.l.Visible = false;
-            // 
-            // grb_Contanti
-            // 
-            this.grb_Contanti.Controls.Add(this.pictureBox8);
-            this.grb_Contanti.Controls.Add(this.pictureBox7);
-            this.grb_Contanti.Controls.Add(this.pictureBox6);
-            this.grb_Contanti.Controls.Add(this.pictureBox5);
-            this.grb_Contanti.Controls.Add(this.pictureBox4);
-            this.grb_Contanti.Controls.Add(this.pictureBox3);
-            this.grb_Contanti.Controls.Add(this.pictureBox2);
-            this.grb_Contanti.Location = new System.Drawing.Point(654, 15);
-            this.grb_Contanti.Name = "grb_Contanti";
-            this.grb_Contanti.Size = new System.Drawing.Size(503, 425);
-            this.grb_Contanti.TabIndex = 5;
-            this.grb_Contanti.TabStop = false;
-            this.grb_Contanti.Text = "Contanti";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_200;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(132, 35);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(91, 48);
-            this.pictureBox8.TabIndex = 6;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::Biglietti_concerto.Properties.Resources._100_euro;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(243, 35);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(91, 48);
-            this.pictureBox7.TabIndex = 5;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_50;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(350, 35);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(91, 48);
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_201;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(19, 104);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(91, 48);
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_10;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(132, 104);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(91, 48);
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_51;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(243, 104);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(91, 48);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_500;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 35);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(91, 48);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(275, 30);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 100);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
-            // 
-            // lbl_tipopagamento
-            // 
-            this.lbl_tipopagamento.AutoSize = true;
-            this.lbl_tipopagamento.Location = new System.Drawing.Point(34, 45);
-            this.lbl_tipopagamento.Name = "lbl_tipopagamento";
-            this.lbl_tipopagamento.Size = new System.Drawing.Size(119, 13);
-            this.lbl_tipopagamento.TabIndex = 3;
-            this.lbl_tipopagamento.Text = "Come desidare pagare?";
-            // 
-            // rbtn_carta
-            // 
-            this.rbtn_carta.AutoSize = true;
-            this.rbtn_carta.Location = new System.Drawing.Point(50, 102);
-            this.rbtn_carta.Name = "rbtn_carta";
-            this.rbtn_carta.Size = new System.Drawing.Size(50, 17);
-            this.rbtn_carta.TabIndex = 2;
-            this.rbtn_carta.TabStop = true;
-            this.rbtn_carta.Text = "Carta";
-            this.rbtn_carta.UseVisualStyleBackColor = true;
-            // 
-            // rbtn_contanti
-            // 
-            this.rbtn_contanti.AutoSize = true;
-            this.rbtn_contanti.Location = new System.Drawing.Point(50, 68);
-            this.rbtn_contanti.Name = "rbtn_contanti";
-            this.rbtn_contanti.Size = new System.Drawing.Size(64, 17);
-            this.rbtn_contanti.TabIndex = 1;
-            this.rbtn_contanti.TabStop = true;
-            this.rbtn_contanti.Text = "Contanti";
-            this.rbtn_contanti.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Pagamento
-            // 
-            this.Btn_Pagamento.Location = new System.Drawing.Point(80, 128);
-            this.Btn_Pagamento.Name = "Btn_Pagamento";
-            this.Btn_Pagamento.Size = new System.Drawing.Size(86, 27);
-            this.Btn_Pagamento.TabIndex = 0;
-            this.Btn_Pagamento.Text = "Paga Ora";
-            this.Btn_Pagamento.UseVisualStyleBackColor = true;
-            this.Btn_Pagamento.Click += new System.EventHandler(this.Btn_Pagamento_Click);
-            // 
-            // button150
-            // 
-            this.button150.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Logo_visa;
-            this.button150.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button150.Location = new System.Drawing.Point(21, 30);
-            this.button150.Name = "button150";
-            this.button150.Size = new System.Drawing.Size(71, 47);
-            this.button150.TabIndex = 10;
-            this.button150.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(32, 259);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(173, 20);
-            this.textBox4.TabIndex = 8;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(32, 208);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(168, 20);
-            this.dateTimePicker1.TabIndex = 6;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(5, 8);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(120, 18);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "Password Admin";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(32, 303);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(173, 20);
-            this.textBox3.TabIndex = 4;
-            // 
-            // lbl_intestatario
-            // 
-            this.lbl_intestatario.AutoSize = true;
-            this.lbl_intestatario.Location = new System.Drawing.Point(36, 82);
-            this.lbl_intestatario.Name = "lbl_intestatario";
-            this.lbl_intestatario.Size = new System.Drawing.Size(112, 16);
-            this.lbl_intestatario.TabIndex = 2;
-            this.lbl_intestatario.Text = "Nome intestatario";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(32, 155);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(32, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 20);
-            this.textBox1.TabIndex = 0;
-            // 
             // Pannello_Acc_User
             // 
             this.Pannello_Acc_User.BackColor = System.Drawing.SystemColors.Control;
@@ -5209,6 +4953,7 @@
             this.Pannello_Admin.Controls.Add(this.Tab_EventiUtenti);
             this.Pannello_Admin.Controls.Add(this.Pannello_Prenotazione_A);
             this.Pannello_Admin.Controls.Add(this.Pannello_Spettacolo_Info);
+            this.Pannello_Admin.Controls.Add(this.label21);
             this.Pannello_Admin.Controls.Add(this.Pannello_Evento_Info);
             this.Pannello_Admin.Location = new System.Drawing.Point(0, 54);
             this.Pannello_Admin.Name = "Pannello_Admin";
@@ -5257,7 +5002,6 @@
             // 
             // button151
             // 
-            this.button151.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button151.Location = new System.Drawing.Point(311, 5);
             this.button151.Name = "button151";
             this.button151.Size = new System.Drawing.Size(62, 25);
@@ -5275,6 +5019,16 @@
             this.Txt_PswAdmin.Size = new System.Drawing.Size(165, 13);
             this.Txt_PswAdmin.TabIndex = 28;
             this.Txt_PswAdmin.UseSystemPasswordChar = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(5, 8);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(120, 18);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "Password Admin";
             // 
             // Password_A
             // 
@@ -5336,7 +5090,6 @@
             // 
             // button153
             // 
-            this.button153.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button153.Location = new System.Drawing.Point(290, 4);
             this.button153.Name = "button153";
             this.button153.Size = new System.Drawing.Size(137, 25);
@@ -5377,7 +5130,6 @@
             // 
             // button154
             // 
-            this.button154.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button154.Location = new System.Drawing.Point(290, 4);
             this.button154.Name = "button154";
             this.button154.Size = new System.Drawing.Size(137, 25);
@@ -5417,7 +5169,6 @@
             // 
             // button155
             // 
-            this.button155.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button155.Location = new System.Drawing.Point(290, 4);
             this.button155.Name = "button155";
             this.button155.Size = new System.Drawing.Size(137, 25);
@@ -5449,7 +5200,7 @@
             // 
             this.Lbl_NomeCognome_A.AutoSize = true;
             this.Lbl_NomeCognome_A.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_NomeCognome_A.Location = new System.Drawing.Point(15, 12);
+            this.Lbl_NomeCognome_A.Location = new System.Drawing.Point(5, 12);
             this.Lbl_NomeCognome_A.Name = "Lbl_NomeCognome_A";
             this.Lbl_NomeCognome_A.Size = new System.Drawing.Size(221, 38);
             this.Lbl_NomeCognome_A.TabIndex = 0;
@@ -5459,7 +5210,6 @@
             // 
             this.Lbl_A_Utenti.AutoSize = true;
             this.Lbl_A_Utenti.BackColor = System.Drawing.Color.Gainsboro;
-            this.Lbl_A_Utenti.Enabled = false;
             this.Lbl_A_Utenti.Font = new System.Drawing.Font("Berlin Sans FB Demi", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Lbl_A_Utenti.Location = new System.Drawing.Point(110, 11);
             this.Lbl_A_Utenti.Name = "Lbl_A_Utenti";
@@ -5710,6 +5460,7 @@
             // Group_IncassoSpett
             // 
             this.Group_IncassoSpett.Controls.Add(this.Group_IncassoTOTSpett);
+            this.Group_IncassoSpett.Controls.Add(this.label24);
             this.Group_IncassoSpett.Controls.Add(this.Lbl_TOT_P_Normali);
             this.Group_IncassoSpett.Controls.Add(this.label25);
             this.Group_IncassoSpett.Controls.Add(this.Lbl_TOT_P_Senior);
@@ -5743,6 +5494,16 @@
             this.Lbl_TOT_Spettacolo.Size = new System.Drawing.Size(16, 18);
             this.Lbl_TOT_Spettacolo.TabIndex = 10;
             this.Lbl_TOT_Spettacolo.Text = "0";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(6, 31);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(113, 17);
+            this.label24.TabIndex = 3;
+            this.label24.Text = "Posti Normali -->";
             // 
             // Lbl_TOT_P_Normali
             // 
@@ -5825,6 +5586,16 @@
             this.SpettacoloTitolo_Lbl.Size = new System.Drawing.Size(225, 38);
             this.SpettacoloTitolo_Lbl.TabIndex = 0;
             this.SpettacoloTitolo_Lbl.Text = "Titolo Spettacolo";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Berlin Sans FB Demi", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label21.Location = new System.Drawing.Point(557, 12);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(271, 40);
+            this.label21.TabIndex = 25;
+            this.label21.Text = "Pannello Admin";
             // 
             // Pannello_Evento_Info
             // 
@@ -5912,11 +5683,23 @@
             // 
             // Group_IncassiTOTEvento
             // 
-            this.Group_IncassiTOTEvento.Location = new System.Drawing.Point(0, 0);
+            this.Group_IncassiTOTEvento.Controls.Add(this.label23);
+            this.Group_IncassiTOTEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Group_IncassiTOTEvento.Location = new System.Drawing.Point(9, 97);
             this.Group_IncassiTOTEvento.Name = "Group_IncassiTOTEvento";
-            this.Group_IncassiTOTEvento.Size = new System.Drawing.Size(200, 100);
-            this.Group_IncassiTOTEvento.TabIndex = 0;
+            this.Group_IncassiTOTEvento.Size = new System.Drawing.Size(224, 60);
+            this.Group_IncassiTOTEvento.TabIndex = 9;
             this.Group_IncassiTOTEvento.TabStop = false;
+            this.Group_IncassiTOTEvento.Text = "Incasso Totale";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 26);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(16, 18);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "0";
             // 
             // label27
             // 
@@ -6004,12 +5787,12 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
-            this.Controls.Add(this.l);
             this.Controls.Add(this.Pannello_Admin);
             this.Controls.Add(this.Pannello_Acc_User);
             this.Controls.Add(this.Pannello_Posti);
             this.Controls.Add(this.Pannello_Login);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.Pannello_Principale);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.MaximizeBox = false;
@@ -6023,7 +5806,6 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Account)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).EndInit();
@@ -6066,16 +5848,6 @@
             this.groupBox2.PerformLayout();
             this.Group_Gender.ResumeLayout(false);
             this.Group_Gender.PerformLayout();
-            this.l.ResumeLayout(false);
-            this.l.PerformLayout();
-            this.grb_Contanti.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.Pannello_Acc_User.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.Pgn_Profilo.ResumeLayout(false);
@@ -6134,6 +5906,8 @@
             this.Grup_InfoEvento.PerformLayout();
             this.Group_IncassiEvento.ResumeLayout(false);
             this.Group_IncassiEvento.PerformLayout();
+            this.Group_IncassiTOTEvento.ResumeLayout(false);
+            this.Group_IncassiTOTEvento.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6201,8 +5975,6 @@
         private System.Windows.Forms.GroupBox Group_Gender;
         private System.Windows.Forms.RadioButton Female_Rdb;
         private System.Windows.Forms.RadioButton Male_Rdb;
-        private System.Windows.Forms.Panel l;
-        private System.Windows.Forms.Button Btn_Pagamento;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.TextBox txt_confermapsw;
         private System.Windows.Forms.Label Lbl_ConfermaPsw;
@@ -6457,43 +6229,16 @@
         private System.Windows.Forms.TextBox txt_VerPsw;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button Btn_CkPsw;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RadioButton rbtn_carta;
-        private System.Windows.Forms.RadioButton rbtn_contanti;
-        private System.Windows.Forms.Label lbl_tipopagamento;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label lbl_intestatario;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button150;
-        private System.Windows.Forms.Button button155;
-        private System.Windows.Forms.Button button154;
-        private System.Windows.Forms.Button button153;
-        private System.Windows.Forms.Button button151;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.GroupBox grb_Contanti;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel Pannello_Admin;
         private System.Windows.Forms.TreeView Albero_Eventi;
+        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button Btn_AdminPanel;
         private System.Windows.Forms.Label Lbl_A_Eventi;
         private System.Windows.Forms.Panel Pannello_Spettacolo_Info;
         private System.Windows.Forms.PictureBox SpettacoloImg_Pbox;
         private System.Windows.Forms.Label SpettacoloTitolo_Lbl;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label Lbl_TOT_Spettacolo;
         private System.Windows.Forms.Label Lbl_TOT_P_VIP;
         private System.Windows.Forms.Label Lbl_TOT_P_Senior;
@@ -6505,6 +6250,7 @@
         private System.Windows.Forms.Panel Pannello_Evento_Info;
         private System.Windows.Forms.GroupBox Group_IncassiEvento;
         private System.Windows.Forms.GroupBox Group_IncassiTOTEvento;
+        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
@@ -6559,22 +6305,26 @@
         private System.Windows.Forms.Panel Pannello_A_Utente;
         private System.Windows.Forms.Label Lbl_NomeCognome_A;
         private System.Windows.Forms.Panel Admin;
+        private System.Windows.Forms.Button button151;
         private System.Windows.Forms.TextBox Txt_PswAdmin;
+        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel Password_A;
         private System.Windows.Forms.Button button152;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox Txt_PswNew_A;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel Telefono_A;
+        private System.Windows.Forms.Button button153;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox Txt_Telefono_A;
         private System.Windows.Forms.Panel Email_A;
+        private System.Windows.Forms.Button button154;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox Txt_Email_A;
         private System.Windows.Forms.Panel Nome_A;
+        private System.Windows.Forms.Button button155;
         private System.Windows.Forms.TextBox Txt_Username_A;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Button Elimina_Btn;
-        private System.Windows.Forms.ColorDialog colorDialog2;
     }
 }
