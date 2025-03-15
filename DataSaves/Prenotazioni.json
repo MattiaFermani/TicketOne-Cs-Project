@@ -1,0 +1,80 @@
+[
+  {
+    "TitoloSpettacolo": "LRDL Summer Tour 2025",
+    "CodicePrenotazione": "PRE0001",
+    "Evento": "Ascoli Piceno - Stadio Cino e Lillo Del Duca -> 18/08/2026",
+    "Nome": "Mattia",
+    "Cognome": "Fermani",
+    "Telefono": "",
+    "Email": "s24909@iisve.it",
+    "Posti": [
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button120",
+        "Descrizione": "J4",
+        "Tipologia": "Senior",
+        "Prezzo": "15€"
+      },
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button126",
+        "Descrizione": "I3",
+        "Tipologia": "Senior",
+        "Prezzo": "15€"
+      },
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button122",
+        "Descrizione": "J2",
+        "Tipologia": "Senior",
+        "Prezzo": "15€"
+      },
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button129",
+        "Descrizione": "I1",
+        "Tipologia": "Senior",
+        "Prezzo": "15€"
+      }
+    ]
+  },
+  {
+    "TitoloSpettacolo": "Estate 2025",
+    "CodicePrenotazione": "PRE0002",
+    "Evento": "Siena - Stadio Artemio Franchi -> 05/05/2025",
+    "Nome": "Viviana",
+    "Cognome": "Pirani",
+    "Telefono": "",
+    "Email": "12345678890",
+    "Posti": [
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button132",
+        "Descrizione": "H4",
+        "Tipologia": "Senior",
+        "Prezzo": "15€"
+      },
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button135",
+        "Descrizione": "E3",
+        "Tipologia": "Normale",
+        "Prezzo": "20€"
+      },
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button133",
+        "Descrizione": "E4",
+        "Tipologia": "Normale",
+        "Prezzo": "20€"
+      },
+      {
+        "Settore": "Settore_D",
+        "NomePosto": "button134",
+        "Descrizione": "H3",
+        "Tipologia": "Senior",
+        "Prezzo": "15€"
+      }
+    ]
+  }
+]

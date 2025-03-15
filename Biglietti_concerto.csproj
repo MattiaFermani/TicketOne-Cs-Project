@@ -212,7 +212,7 @@
     <None Include="Resources\fask-summer-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+    <Folder Include="DataSaves\" />
     <None Include="Resources\Logo visa.png" />
   </ItemGroup>
   <ItemGroup>
@@ -222,7 +222,6 @@
     <None Include="Resources\googlepay.png" />
 =======
     <Folder Include="DataSaves\" />
->>>>>>> 14e2f2141dd62b0bd455d91a37ffd2e54fbe1be8
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
