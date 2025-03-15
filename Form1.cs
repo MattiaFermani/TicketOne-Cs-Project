@@ -163,7 +163,6 @@ namespace Biglietti_concerto
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Size = new System.Drawing.Size(1150, 485);
-            MessageBox.Show(Pannello_Principale.Location.ToString());
             Pannello_Principale.Size = new System.Drawing.Size(1151, 434);
             Pannello_Principale.Location = new Point(0, 54);
             Pannello_Principale.BringToFront();
