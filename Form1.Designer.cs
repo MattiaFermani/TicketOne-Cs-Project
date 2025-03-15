@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("test");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("test");
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TickeTlon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -5193,10 +5193,10 @@
             this.Albero_Prenotazioni_User.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Albero_Prenotazioni_User.Location = new System.Drawing.Point(0, 76);
             this.Albero_Prenotazioni_User.Name = "Albero_Prenotazioni_User";
-            treeNode3.Name = "Nodo0";
-            treeNode3.Text = "test";
+            treeNode1.Name = "Nodo0";
+            treeNode1.Text = "test";
             this.Albero_Prenotazioni_User.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            treeNode1});
             this.Albero_Prenotazioni_User.Size = new System.Drawing.Size(250, 326);
             this.Albero_Prenotazioni_User.TabIndex = 0;
             this.Albero_Prenotazioni_User.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Prenotazioni_User_NodeMouseClick);
@@ -5449,7 +5449,7 @@
             // 
             this.Lbl_NomeCognome_A.AutoSize = true;
             this.Lbl_NomeCognome_A.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_NomeCognome_A.Location = new System.Drawing.Point(5, 12);
+            this.Lbl_NomeCognome_A.Location = new System.Drawing.Point(15, 12);
             this.Lbl_NomeCognome_A.Name = "Lbl_NomeCognome_A";
             this.Lbl_NomeCognome_A.Size = new System.Drawing.Size(221, 38);
             this.Lbl_NomeCognome_A.TabIndex = 0;
@@ -5506,10 +5506,10 @@
             this.Albero_Eventi.Indent = 12;
             this.Albero_Eventi.Location = new System.Drawing.Point(0, 1);
             this.Albero_Eventi.Name = "Albero_Eventi";
-            treeNode4.Name = "Nodo0";
-            treeNode4.Text = "test";
+            treeNode2.Name = "Nodo0";
+            treeNode2.Text = "test";
             this.Albero_Eventi.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4});
+            treeNode2});
             this.Albero_Eventi.Size = new System.Drawing.Size(254, 381);
             this.Albero_Eventi.TabIndex = 26;
             this.Albero_Eventi.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Eventi_NodeMouseClick);
