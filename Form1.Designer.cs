@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("test");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("test");
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TickeTlon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -733,7 +733,7 @@
             this.Pannello_Principale.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Principale.Controls.Add(this.Pannello_InEvidenza);
             this.Pannello_Principale.Controls.Add(this.panel2);
-            this.Pannello_Principale.Location = new System.Drawing.Point(1179, 66);
+            this.Pannello_Principale.Location = new System.Drawing.Point(1810, 66);
             this.Pannello_Principale.Name = "Pannello_Principale";
             this.Pannello_Principale.Size = new System.Drawing.Size(98, 434);
             this.Pannello_Principale.TabIndex = 11;
@@ -815,9 +815,9 @@
             this.Pannello_Posti.AutoScroll = true;
             this.Pannello_Posti.BackColor = System.Drawing.Color.SkyBlue;
             this.Pannello_Posti.Controls.Add(this.Tab_Info_Posti);
-            this.Pannello_Posti.Location = new System.Drawing.Point(1800, 66);
+            this.Pannello_Posti.Location = new System.Drawing.Point(1548, 506);
             this.Pannello_Posti.Name = "Pannello_Posti";
-            this.Pannello_Posti.Size = new System.Drawing.Size(152, 434);
+            this.Pannello_Posti.Size = new System.Drawing.Size(110, 434);
             this.Pannello_Posti.TabIndex = 12;
             // 
             // Tab_Info_Posti
@@ -830,7 +830,7 @@
             this.Tab_Info_Posti.Location = new System.Drawing.Point(0, 0);
             this.Tab_Info_Posti.Name = "Tab_Info_Posti";
             this.Tab_Info_Posti.SelectedIndex = 0;
-            this.Tab_Info_Posti.Size = new System.Drawing.Size(152, 434);
+            this.Tab_Info_Posti.Size = new System.Drawing.Size(110, 434);
             this.Tab_Info_Posti.TabIndex = 0;
             this.Tab_Info_Posti.SelectedIndexChanged += new System.EventHandler(this.Tab_Info_Posti_SelectedIndexChanged);
             // 
@@ -844,7 +844,7 @@
             this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(144, 408);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(102, 408);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -4463,9 +4463,9 @@
             // 
             this.Pannello_Acc_User.BackColor = System.Drawing.SystemColors.Control;
             this.Pannello_Acc_User.Controls.Add(this.tabControl1);
-            this.Pannello_Acc_User.Location = new System.Drawing.Point(711, 519);
+            this.Pannello_Acc_User.Location = new System.Drawing.Point(1668, 506);
             this.Pannello_Acc_User.Name = "Pannello_Acc_User";
-            this.Pannello_Acc_User.Size = new System.Drawing.Size(933, 444);
+            this.Pannello_Acc_User.Size = new System.Drawing.Size(119, 444);
             this.Pannello_Acc_User.TabIndex = 15;
             // 
             // tabControl1
@@ -4937,10 +4937,10 @@
             this.Albero_Prenotazioni_User.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Albero_Prenotazioni_User.Location = new System.Drawing.Point(0, 76);
             this.Albero_Prenotazioni_User.Name = "Albero_Prenotazioni_User";
-            treeNode1.Name = "Nodo0";
-            treeNode1.Text = "test";
+            treeNode7.Name = "Nodo0";
+            treeNode7.Text = "test";
             this.Albero_Prenotazioni_User.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            treeNode7});
             this.Albero_Prenotazioni_User.Size = new System.Drawing.Size(250, 326);
             this.Albero_Prenotazioni_User.TabIndex = 0;
             this.Albero_Prenotazioni_User.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Prenotazioni_User_NodeMouseClick);
@@ -4955,9 +4955,9 @@
             this.Pannello_Admin.Controls.Add(this.Pannello_Spettacolo_Info);
             this.Pannello_Admin.Controls.Add(this.label21);
             this.Pannello_Admin.Controls.Add(this.Pannello_Evento_Info);
-            this.Pannello_Admin.Location = new System.Drawing.Point(0, 54);
+            this.Pannello_Admin.Location = new System.Drawing.Point(1548, 66);
             this.Pannello_Admin.Name = "Pannello_Admin";
-            this.Pannello_Admin.Size = new System.Drawing.Size(1151, 434);
+            this.Pannello_Admin.Size = new System.Drawing.Size(109, 434);
             this.Pannello_Admin.TabIndex = 16;
             // 
             // Pannello_A_Utente
@@ -5256,10 +5256,10 @@
             this.Albero_Eventi.Indent = 12;
             this.Albero_Eventi.Location = new System.Drawing.Point(0, 1);
             this.Albero_Eventi.Name = "Albero_Eventi";
-            treeNode2.Name = "Nodo0";
-            treeNode2.Text = "test";
+            treeNode8.Name = "Nodo0";
+            treeNode8.Text = "test";
             this.Albero_Eventi.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode8});
             this.Albero_Eventi.Size = new System.Drawing.Size(254, 381);
             this.Albero_Eventi.TabIndex = 26;
             this.Albero_Eventi.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Eventi_NodeMouseClick);
