@@ -144,6 +144,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+    <Folder Include="DataSaves\" />
   <ItemGroup>
     <None Include="Resources\LRDL-summertour-biglietti.jpg" />
   </ItemGroup>
@@ -212,7 +213,6 @@
     <None Include="Resources\fask-summer-biglietti.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataSaves\" />
     <None Include="Resources\Logo visa.png" />
   </ItemGroup>
   <ItemGroup>
