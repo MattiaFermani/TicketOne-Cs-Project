@@ -901,7 +901,7 @@ namespace Biglietti_concerto
             Button btn = (Button)sender;
             if (btn.BackColor != Color.Yellow)
             {
-                if (PostiSelezionati < 4) 
+                if (PostiSelezionati < 4)
                 {
                     btn.BackColor = Color.Yellow;
                     PostiSelezionati++;
@@ -948,7 +948,7 @@ namespace Biglietti_concerto
         }
         private void Btn_ConfemaPosti_Click(object sender, EventArgs e)
         {
-//DA AGGIORNARE
+            //DA AGGIORNARE
             Pannello_Posti.Visible = false;
             l.Visible = true;
             if (PostiSelezionati != 0)
@@ -1423,7 +1423,7 @@ namespace Biglietti_concerto
             {
                 comune = Comuni_Lst.SelectedItem.ToString();
             }
-            catch{}
+            catch { }
             if (string.Equals(txt_codicefiscale.Text, CalcCodiceFiscale(nome.ToUpper(), cognome.ToUpper(), dataNascita, sesso.ToUpper(), comune), StringComparison.OrdinalIgnoreCase))
             {
                 txt_codicefiscale.BackColor = Color.PaleGreen;
@@ -1510,7 +1510,7 @@ namespace Biglietti_concerto
         }
         private void btn_Admin_Check_Click(object sender, EventArgs e)
         {
-            PswA = PswAdmin(((Button)sender).Parent.Name); 
+            PswA = PswAdmin(((Button)sender).Parent.Name);
             if (((Button)sender).Parent.Name == "Admin")
             {
                 if (PswA)
@@ -1654,7 +1654,7 @@ namespace Biglietti_concerto
                     File.WriteAllText(filePrenotazioni, prenJson.ToString());
                 }
             }
-            
+
             File.WriteAllText(filePath, jsonArray.ToString());
         }
         private void Btn_CkPsw_Click(object sender, EventArgs e)
@@ -1895,8 +1895,8 @@ namespace Biglietti_concerto
         private void Albero_Prenotazioni_User_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             Pannello_Prenotazione.Visible = true;
-            ListaPostiBuy.SelectedIndex = -1; 
-            
+            ListaPostiBuy.SelectedIndex = -1;
+
             if (!File.Exists(filePrenotazioni))
             {
                 MessageBox.Show("Nessuna prenotazione.");

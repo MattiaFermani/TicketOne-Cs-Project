@@ -6578,4 +6578,3 @@
         private System.Windows.Forms.ColorDialog colorDialog2;
     }
 }
-
