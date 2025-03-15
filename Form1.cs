@@ -1573,7 +1573,11 @@ namespace Biglietti_concerto
         {
             string oldEmail = ((Button)sender).Parent.Parent.Name == Pannello_A_Utente.Name ? Txt_Email_A.Text : loggedEmail;
             string InfodaModicare = ((Button)sender).Parent.Name;
-
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Nessun account registrato.");
+                return;
+            }
             JArray jsonArray = JArray.Parse(File.ReadAllText(filePath));
             JObject user = jsonArray
                 .Children<JObject>()
@@ -1618,6 +1622,11 @@ namespace Biglietti_concerto
 
         private void AggiornaPrenotazioni(string InfodaModificare, string oldEmail)
         {
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Nessun account registrato.");
+                return;
+            }
             JArray jsonArray = JArray.Parse(File.ReadAllText(filePath));
             JObject user = jsonArray
                 .Children<JObject>()
@@ -1663,7 +1672,11 @@ namespace Biglietti_concerto
         }
         private void Btn_CkPsw_Click(object sender, EventArgs e)
         {
-
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Nessun account registrato.");
+                return;
+            }
             JArray jsonArray = JArray.Parse(File.ReadAllText(filePath));
             JObject user = jsonArray
                 .Children<JObject>()
@@ -1696,6 +1709,11 @@ namespace Biglietti_concerto
 
         private void Albero_Eventi_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            if (!File.Exists(filePrenotazioni))
+            {
+                MessageBox.Show("Nessuna prenotazione.");
+                return;
+            }
             string jsonContent = File.ReadAllText(filePrenotazioni);
             JArray prenotazioni = JArray.Parse(jsonContent);
             if (e.Node.Level == 0)
@@ -1837,7 +1855,13 @@ namespace Biglietti_concerto
         private void Albero_Prenotazioni_User_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             Pannello_Prenotazione.Visible = true;
-            ListaPostiBuy.SelectedIndex = -1;
+            ListaPostiBuy.SelectedIndex = -1; 
+            
+            if (!File.Exists(filePrenotazioni))
+            {
+                MessageBox.Show("Nessuna prenotazione.");
+                return;
+            }
             string jsonContent = File.ReadAllText(filePrenotazioni);
             JArray prenotazioni = JArray.Parse(jsonContent);
             foreach (JObject pren in prenotazioni)
@@ -1921,6 +1945,11 @@ namespace Biglietti_concerto
             if (ListaPostiBuy.SelectedIndex != -1)
             {
                 InfoPosto_U.Visible = true;
+                if (!File.Exists(filePrenotazioni))
+                {
+                    MessageBox.Show("Nessuna prenotazione.");
+                    return;
+                }
                 string jsonContent = File.ReadAllText(filePrenotazioni);
                 JArray prenotazioni = JArray.Parse(jsonContent);
                 foreach (JObject pren in prenotazioni)
@@ -1959,6 +1988,11 @@ namespace Biglietti_concerto
             if (ListaPostiBuy_A.SelectedIndex != -1)
             {
                 InfoPosto_A.Visible = true;
+                if (!File.Exists(filePrenotazioni))
+                {
+                    MessageBox.Show("Nessuna prenotazione.");
+                    return;
+                }
                 string jsonContent = File.ReadAllText(filePrenotazioni);
                 JArray prenotazioni = JArray.Parse(jsonContent);
                 foreach (JObject pren in prenotazioni)
@@ -2022,6 +2056,11 @@ namespace Biglietti_concerto
             {
                 Pannello_A_Utente.Show();
                 Pannello_A_Utente.BringToFront();
+                if (!File.Exists(filePath))
+                {
+                    MessageBox.Show("Nessun account registrato.");
+                    return;
+                }
                 JArray jsonArray = JArray.Parse(File.ReadAllText(filePath));
                 JObject user = jsonArray
                     .Children<JObject>()
