@@ -777,12 +777,13 @@ namespace Biglietti_concerto
                 MessageBox.Show("Nessun posto selezionato");
             }
 
-            Pannello_Principale.Visible = true;
+            Pannello_Principale.Visible = false;
             Pannello_Principale.Location = new Point(0, 54);
             Tab_Info_Posti.SelectedIndex = 0;
             Data_Lst.SelectedIndex = -1;
             Luogo_Lst.SelectedIndex = -1;
             Pannello_Posti.Visible = false;
+            Pannello_Pagamento.Visible = true;
             ResetPostiColori();
         }
 
@@ -1304,6 +1305,11 @@ namespace Biglietti_concerto
             }
 
             File.WriteAllText(filePath, jsonArray.ToString());
+        }
+
+        private void button155_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

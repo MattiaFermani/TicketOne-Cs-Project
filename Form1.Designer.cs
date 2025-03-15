@@ -29,29 +29,13 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.TickeTlon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Account = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.FormClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Img_MarcusMiller = new System.Windows.Forms.PictureBox();
-            this.Img_BLACKPINK = new System.Windows.Forms.PictureBox();
-            this.Img_JIMMYSAX = new System.Windows.Forms.PictureBox();
-            this.Img_MORRISSEY = new System.Windows.Forms.PictureBox();
-            this.Img_INTELLIGENZANATURALE = new System.Windows.Forms.PictureBox();
-            this.img_GIORGIAFUMO = new System.Windows.Forms.PictureBox();
-            this.Img_PROVAAPRENDERMI = new System.Windows.Forms.PictureBox();
-            this.Img_ACDC = new System.Windows.Forms.PictureBox();
-            this.Img_TIMBURTON = new System.Windows.Forms.PictureBox();
             this.Pannello_Principale = new System.Windows.Forms.Panel();
             this.Pannello_InEvidenza = new System.Windows.Forms.Panel();
-            this.Img_LRDL = new System.Windows.Forms.PictureBox();
-            this.Img_SOPHIE = new System.Windows.Forms.PictureBox();
-            this.Img_TONYEFFE = new System.Windows.Forms.PictureBox();
-            this.Img_GAMESINCONCERT = new System.Windows.Forms.PictureBox();
-            this.Img_PALAJOVA = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.Pannello_Posti = new System.Windows.Forms.Panel();
             this.Tab_Info_Posti = new System.Windows.Forms.TabControl();
@@ -61,7 +45,6 @@
             this.Data_Lst = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Luogo_Lst = new System.Windows.Forms.ListBox();
-            this.Img_Info = new System.Windows.Forms.PictureBox();
             this.TitoloArtista = new System.Windows.Forms.GroupBox();
             this.Descrizione_Lbl = new System.Windows.Forms.Label();
             this.Artista_Lbl = new System.Windows.Forms.Label();
@@ -317,6 +300,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+<<<<<<< Updated upstream
             this.l = new System.Windows.Forms.Panel();
             this.grb_Contanti = new System.Windows.Forms.GroupBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -346,6 +330,8 @@
             this.rbtn_carta = new System.Windows.Forms.RadioButton();
             this.rbtn_contanti = new System.Windows.Forms.RadioButton();
             this.Btn_Pagamento = new System.Windows.Forms.Button();
+=======
+>>>>>>> Stashed changes
             this.Pannello_Acc_User = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Pgn_Profilo = new System.Windows.Forms.TabPage();
@@ -375,35 +361,67 @@
             this.Btn_Logout = new System.Windows.Forms.Button();
             this.Pgn_Sicurezza = new System.Windows.Forms.TabPage();
             this.Pgn_Personalizza = new System.Windows.Forms.TabPage();
+<<<<<<< Updated upstream
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+=======
+            this.Pannello_Pagamento = new System.Windows.Forms.Panel();
+            this.grb_Contanti = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button151 = new System.Windows.Forms.Button();
+            this.button154 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lbl_intestatario = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbl_tipopagamento = new System.Windows.Forms.Label();
+            this.rbtn_carta = new System.Windows.Forms.RadioButton();
+            this.rbtn_contanti = new System.Windows.Forms.RadioButton();
+            this.button152 = new System.Windows.Forms.Button();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button155 = new System.Windows.Forms.Button();
+            this.button153 = new System.Windows.Forms.Button();
+            this.button150 = new System.Windows.Forms.Button();
+            this.Img_Info = new System.Windows.Forms.PictureBox();
+            this.TickeTlon = new System.Windows.Forms.PictureBox();
+            this.Account = new System.Windows.Forms.PictureBox();
+            this.Img_LRDL = new System.Windows.Forms.PictureBox();
+            this.Img_SOPHIE = new System.Windows.Forms.PictureBox();
+            this.Img_TONYEFFE = new System.Windows.Forms.PictureBox();
+            this.Img_GAMESINCONCERT = new System.Windows.Forms.PictureBox();
+            this.Img_PALAJOVA = new System.Windows.Forms.PictureBox();
+            this.Img_MarcusMiller = new System.Windows.Forms.PictureBox();
+            this.Img_BLACKPINK = new System.Windows.Forms.PictureBox();
+            this.Img_JIMMYSAX = new System.Windows.Forms.PictureBox();
+            this.Img_MORRISSEY = new System.Windows.Forms.PictureBox();
+            this.Img_INTELLIGENZANATURALE = new System.Windows.Forms.PictureBox();
+            this.img_GIORGIAFUMO = new System.Windows.Forms.PictureBox();
+            this.Img_PROVAAPRENDERMI = new System.Windows.Forms.PictureBox();
+            this.Img_ACDC = new System.Windows.Forms.PictureBox();
+            this.Img_TIMBURTON = new System.Windows.Forms.PictureBox();
+>>>>>>> Stashed changes
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Account)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_JIMMYSAX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_MORRISSEY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_INTELLIGENZANATURALE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_GIORGIAFUMO)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_PROVAAPRENDERMI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_ACDC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_TIMBURTON)).BeginInit();
             this.Pannello_Principale.SuspendLayout();
             this.Pannello_InEvidenza.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_LRDL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_SOPHIE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_TONYEFFE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_GAMESINCONCERT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).BeginInit();
             this.Pannello_Posti.SuspendLayout();
             this.Tab_Info_Posti.SuspendLayout();
             this.Pgn_Informazioni.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).BeginInit();
             this.TitoloArtista.SuspendLayout();
             this.Pgn_SelezionePosti.SuspendLayout();
             this.Panel_Seats.SuspendLayout();
@@ -418,6 +436,7 @@
             this.Pgn_Register.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Group_Gender.SuspendLayout();
+<<<<<<< Updated upstream
             this.l.SuspendLayout();
             this.grb_Contanti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -428,6 +447,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox3.SuspendLayout();
+=======
+>>>>>>> Stashed changes
             this.Pannello_Acc_User.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Pgn_Profilo.SuspendLayout();
@@ -436,6 +457,36 @@
             this.Telefono.SuspendLayout();
             this.Email.SuspendLayout();
             this.Nome.SuspendLayout();
+<<<<<<< Updated upstream
+=======
+            this.Pannello_Pagamento.SuspendLayout();
+            this.grb_Contanti.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Account)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_LRDL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_SOPHIE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_TONYEFFE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_GAMESINCONCERT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_JIMMYSAX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_MORRISSEY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_INTELLIGENZANATURALE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_GIORGIAFUMO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_PROVAAPRENDERMI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_ACDC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_TIMBURTON)).BeginInit();
+>>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -458,6 +509,7 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1942, 94);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+<<<<<<< Updated upstream
             // TickeTlon
             // 
             this.TickeTlon.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -470,6 +522,8 @@
             this.TickeTlon.TabStop = false;
             this.TickeTlon.Click += new System.EventHandler(this.TickeTlon_Click);
             // 
+=======
+>>>>>>> Stashed changes
             // panel1
             // 
             this.panel1.Controls.Add(this.Account);
@@ -477,17 +531,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 54);
             this.panel1.TabIndex = 5;
-            // 
-            // Account
-            // 
-            this.Account.Image = global::Biglietti_concerto.Properties.Resources.AccountImg;
-            this.Account.Location = new System.Drawing.Point(-1, 6);
-            this.Account.Name = "Account";
-            this.Account.Size = new System.Drawing.Size(170, 45);
-            this.Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Account.TabIndex = 4;
-            this.Account.TabStop = false;
-            this.Account.Click += new System.EventHandler(this.Account_Click);
             // 
             // panel3
             // 
@@ -540,6 +583,7 @@
             this.panel2.Size = new System.Drawing.Size(203, 175);
             this.panel2.TabIndex = 9;
             // 
+<<<<<<< Updated upstream
             // Img_MarcusMiller
             // 
             this.Img_MarcusMiller.Image = global::Biglietti_concerto.Properties.Resources.marcus_miller_biglietti;
@@ -653,6 +697,8 @@
         "po Gigliotti  e Alessandro Guercini \r\n\r\nPosti: 350\r\n\r\n");
             this.Img_TIMBURTON.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
+=======
+>>>>>>> Stashed changes
             // Pannello_Principale
             // 
             this.Pannello_Principale.AutoScroll = true;
@@ -675,66 +721,6 @@
             this.Pannello_InEvidenza.Name = "Pannello_InEvidenza";
             this.Pannello_InEvidenza.Size = new System.Drawing.Size(262, 167);
             this.Pannello_InEvidenza.TabIndex = 0;
-            // 
-            // Img_LRDL
-            // 
-            this.Img_LRDL.Image = global::Biglietti_concerto.Properties.Resources.LRDL_summertour_biglietti;
-            this.Img_LRDL.Location = new System.Drawing.Point(0, 3);
-            this.Img_LRDL.Name = "Img_LRDL";
-            this.Img_LRDL.Size = new System.Drawing.Size(320, 198);
-            this.Img_LRDL.TabIndex = 4;
-            this.Img_LRDL.TabStop = false;
-            this.Img_LRDL.Tag = "LRDL Summer Tour 2025";
-            this.Info_Spettacolo.SetToolTip(this.Img_LRDL, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nPosti: 350");
-            this.Img_LRDL.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_SOPHIE
-            // 
-            this.Img_SOPHIE.Image = global::Biglietti_concerto.Properties.Resources.sophie_giants_biglietti;
-            this.Img_SOPHIE.Location = new System.Drawing.Point(323, 3);
-            this.Img_SOPHIE.Name = "Img_SOPHIE";
-            this.Img_SOPHIE.Size = new System.Drawing.Size(157, 200);
-            this.Img_SOPHIE.TabIndex = 6;
-            this.Img_SOPHIE.TabStop = false;
-            this.Img_SOPHIE.Tag = "Sophie and The Giants";
-            this.Info_Posto.SetToolTip(this.Img_SOPHIE, "Nome: Sophie and the Giants\r\nArtista: Sophie Louise Scott\r\n\r\nPosti: 350\r\n");
-            this.Img_SOPHIE.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_TONYEFFE
-            // 
-            this.Img_TONYEFFE.Image = global::Biglietti_concerto.Properties.Resources.tony_effe_roma_milano_2;
-            this.Img_TONYEFFE.Location = new System.Drawing.Point(320, 207);
-            this.Img_TONYEFFE.Name = "Img_TONYEFFE";
-            this.Img_TONYEFFE.Size = new System.Drawing.Size(318, 200);
-            this.Img_TONYEFFE.TabIndex = 7;
-            this.Img_TONYEFFE.TabStop = false;
-            this.Img_TONYEFFE.Tag = "Damme na mano Roma e Milano";
-            this.Info_Posto.SetToolTip(this.Img_TONYEFFE, "Nome: Damme \'na mano\r\nArtista: Tony Effe\r\n\r\nPosti: 350\r\n\r\n");
-            this.Img_TONYEFFE.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_GAMESINCONCERT
-            // 
-            this.Img_GAMESINCONCERT.Image = global::Biglietti_concerto.Properties.Resources.games_concert_biglietti;
-            this.Img_GAMESINCONCERT.Location = new System.Drawing.Point(481, 3);
-            this.Img_GAMESINCONCERT.Name = "Img_GAMESINCONCERT";
-            this.Img_GAMESINCONCERT.Size = new System.Drawing.Size(157, 200);
-            this.Img_GAMESINCONCERT.TabIndex = 8;
-            this.Img_GAMESINCONCERT.TabStop = false;
-            this.Img_GAMESINCONCERT.Tag = "Games in Concert";
-            this.Info_Posto.SetToolTip(this.Img_GAMESINCONCERT, "Nome: Games in Concert\r\nArtista: Eimear Noone\r\n\r\nPosti: 350\r\n");
-            this.Img_GAMESINCONCERT.Click += new System.EventHandler(this.Spettacolo_Click);
-            // 
-            // Img_PALAJOVA
-            // 
-            this.Img_PALAJOVA.Image = global::Biglietti_concerto.Properties.Resources.palajova2025_biglietti;
-            this.Img_PALAJOVA.Location = new System.Drawing.Point(3, 207);
-            this.Img_PALAJOVA.Name = "Img_PALAJOVA";
-            this.Img_PALAJOVA.Size = new System.Drawing.Size(320, 200);
-            this.Img_PALAJOVA.TabIndex = 5;
-            this.Img_PALAJOVA.TabStop = false;
-            this.Img_PALAJOVA.Tag = "PalaJova";
-            this.Info_Spettacolo.SetToolTip(this.Img_PALAJOVA, "Nome: Palajova\r\nArtista: Lorenzo Jovanotti\r\n\r\nPosti: 350\r\n");
-            this.Img_PALAJOVA.Click += new System.EventHandler(this.Spettacolo_Click);
             // 
             // Pannello_Posti
             // 
@@ -832,6 +818,7 @@
             this.Luogo_Lst.TabIndex = 0;
             this.Luogo_Lst.SelectedIndexChanged += new System.EventHandler(this.Data_Luogo_Lst_SelectedIndexChanged);
             // 
+<<<<<<< Updated upstream
             // Img_Info
             // 
             this.Img_Info.Location = new System.Drawing.Point(465, 20);
@@ -840,6 +827,8 @@
             this.Img_Info.TabIndex = 1;
             this.Img_Info.TabStop = false;
             // 
+=======
+>>>>>>> Stashed changes
             // TitoloArtista
             // 
             this.TitoloArtista.Controls.Add(this.Descrizione_Lbl);
@@ -4383,6 +4372,7 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Nome";
             // 
+<<<<<<< Updated upstream
             // l
             // 
             this.l.BackColor = System.Drawing.SystemColors.Control;
@@ -4682,6 +4672,8 @@
             this.Btn_Pagamento.UseVisualStyleBackColor = true;
             this.Btn_Pagamento.Click += new System.EventHandler(this.Btn_Pagamento_Click);
             // 
+=======
+>>>>>>> Stashed changes
             // Pannello_Acc_User
             // 
             this.Pannello_Acc_User.BackColor = System.Drawing.SystemColors.Control;
@@ -4975,17 +4967,521 @@
             this.Pgn_Personalizza.TabIndex = 2;
             this.Pgn_Personalizza.Text = "Personalizzazione";
             this.Pgn_Personalizza.UseVisualStyleBackColor = true;
+<<<<<<< Updated upstream
+=======
+            // 
+            // Pannello_Pagamento
+            // 
+            this.Pannello_Pagamento.BackColor = System.Drawing.SystemColors.Control;
+            this.Pannello_Pagamento.Controls.Add(this.grb_Contanti);
+            this.Pannello_Pagamento.Controls.Add(this.groupBox3);
+            this.Pannello_Pagamento.Controls.Add(this.lbl_tipopagamento);
+            this.Pannello_Pagamento.Controls.Add(this.rbtn_carta);
+            this.Pannello_Pagamento.Controls.Add(this.rbtn_contanti);
+            this.Pannello_Pagamento.Controls.Add(this.button152);
+            this.Pannello_Pagamento.Location = new System.Drawing.Point(1172, 317);
+            this.Pannello_Pagamento.Name = "Pannello_Pagamento";
+            this.Pannello_Pagamento.Size = new System.Drawing.Size(765, 460);
+            this.Pannello_Pagamento.TabIndex = 16;
+            this.Pannello_Pagamento.Visible = false;
+            // 
+            // grb_Contanti
+            // 
+            this.grb_Contanti.Controls.Add(this.pictureBox8);
+            this.grb_Contanti.Controls.Add(this.pictureBox7);
+            this.grb_Contanti.Controls.Add(this.pictureBox6);
+            this.grb_Contanti.Controls.Add(this.pictureBox5);
+            this.grb_Contanti.Controls.Add(this.pictureBox4);
+            this.grb_Contanti.Controls.Add(this.pictureBox3);
+            this.grb_Contanti.Controls.Add(this.pictureBox2);
+            this.grb_Contanti.Location = new System.Drawing.Point(654, 15);
+            this.grb_Contanti.Name = "grb_Contanti";
+            this.grb_Contanti.Size = new System.Drawing.Size(503, 425);
+            this.grb_Contanti.TabIndex = 5;
+            this.grb_Contanti.TabStop = false;
+            this.grb_Contanti.Text = "Contanti";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button151);
+            this.groupBox3.Controls.Add(this.button155);
+            this.groupBox3.Controls.Add(this.button154);
+            this.groupBox3.Controls.Add(this.button153);
+            this.groupBox3.Controls.Add(this.button150);
+            this.groupBox3.Controls.Add(this.label24);
+            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.label23);
+            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.label22);
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.lbl_intestatario);
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Location = new System.Drawing.Point(212, 15);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(415, 425);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Carta";
+            // 
+            // button151
+            // 
+            this.button151.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button151.Location = new System.Drawing.Point(331, 30);
+            this.button151.Name = "button151";
+            this.button151.Size = new System.Drawing.Size(71, 47);
+            this.button151.TabIndex = 16;
+            this.button151.UseVisualStyleBackColor = true;
+            // 
+            // button154
+            // 
+            this.button154.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button154.Location = new System.Drawing.Point(254, 30);
+            this.button154.Name = "button154";
+            this.button154.Size = new System.Drawing.Size(71, 47);
+            this.button154.TabIndex = 14;
+            this.button154.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(36, 240);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(88, 16);
+            this.label24.TabIndex = 9;
+            this.label24.Text = "Numero carta";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(32, 259);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(173, 22);
+            this.textBox4.TabIndex = 8;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(36, 185);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(112, 16);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "Data di scadenza";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "MM/yy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(32, 208);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowUpDown = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(168, 22);
+            this.dateTimePicker1.TabIndex = 6;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(36, 284);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(34, 16);
+            this.label22.TabIndex = 5;
+            this.label22.Text = "CVV";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(32, 303);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(173, 22);
+            this.textBox3.TabIndex = 4;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(36, 136);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(134, 16);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "Cognome intestatario";
+            // 
+            // lbl_intestatario
+            // 
+            this.lbl_intestatario.AutoSize = true;
+            this.lbl_intestatario.Location = new System.Drawing.Point(36, 82);
+            this.lbl_intestatario.Name = "lbl_intestatario";
+            this.lbl_intestatario.Size = new System.Drawing.Size(112, 16);
+            this.lbl_intestatario.TabIndex = 2;
+            this.lbl_intestatario.Text = "Nome intestatario";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(32, 155);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(173, 22);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(32, 101);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(173, 22);
+            this.textBox1.TabIndex = 0;
+            // 
+            // lbl_tipopagamento
+            // 
+            this.lbl_tipopagamento.AutoSize = true;
+            this.lbl_tipopagamento.Location = new System.Drawing.Point(34, 45);
+            this.lbl_tipopagamento.Name = "lbl_tipopagamento";
+            this.lbl_tipopagamento.Size = new System.Drawing.Size(154, 16);
+            this.lbl_tipopagamento.TabIndex = 3;
+            this.lbl_tipopagamento.Text = "Come desidare pagare?";
+            // 
+            // rbtn_carta
+            // 
+            this.rbtn_carta.AutoSize = true;
+            this.rbtn_carta.Location = new System.Drawing.Point(50, 102);
+            this.rbtn_carta.Name = "rbtn_carta";
+            this.rbtn_carta.Size = new System.Drawing.Size(60, 20);
+            this.rbtn_carta.TabIndex = 2;
+            this.rbtn_carta.TabStop = true;
+            this.rbtn_carta.Text = "Carta";
+            this.rbtn_carta.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_contanti
+            // 
+            this.rbtn_contanti.AutoSize = true;
+            this.rbtn_contanti.Location = new System.Drawing.Point(50, 68);
+            this.rbtn_contanti.Name = "rbtn_contanti";
+            this.rbtn_contanti.Size = new System.Drawing.Size(76, 20);
+            this.rbtn_contanti.TabIndex = 1;
+            this.rbtn_contanti.TabStop = true;
+            this.rbtn_contanti.Text = "Contanti";
+            this.rbtn_contanti.UseVisualStyleBackColor = true;
+            // 
+            // button152
+            // 
+            this.button152.Location = new System.Drawing.Point(80, 128);
+            this.button152.Name = "button152";
+            this.button152.Size = new System.Drawing.Size(86, 27);
+            this.button152.TabIndex = 0;
+            this.button152.Text = "Paga Ora";
+            this.button152.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(132, 35);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(91, 48);
+            this.pictureBox8.TabIndex = 6;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(243, 35);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(91, 48);
+            this.pictureBox7.TabIndex = 5;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(350, 35);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(91, 48);
+            this.pictureBox6.TabIndex = 4;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(19, 104);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(91, 48);
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(132, 104);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(91, 48);
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(243, 104);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(91, 48);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(19, 35);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(91, 48);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button155
+            // 
+            this.button155.BackgroundImage = global::Biglietti_concerto.Properties.Resources.googlepay;
+            this.button155.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button155.Location = new System.Drawing.Point(177, 30);
+            this.button155.Name = "button155";
+            this.button155.Size = new System.Drawing.Size(71, 47);
+            this.button155.TabIndex = 15;
+            this.button155.UseVisualStyleBackColor = true;
+            this.button155.Click += new System.EventHandler(this.button155_Click);
+            // 
+            // button153
+            // 
+            this.button153.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Mastercard;
+            this.button153.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button153.Location = new System.Drawing.Point(100, 30);
+            this.button153.Name = "button153";
+            this.button153.Size = new System.Drawing.Size(71, 47);
+            this.button153.TabIndex = 13;
+            this.button153.UseVisualStyleBackColor = true;
+            // 
+            // button150
+            // 
+            this.button150.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Logo_visa;
+            this.button150.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button150.Location = new System.Drawing.Point(21, 30);
+            this.button150.Name = "button150";
+            this.button150.Size = new System.Drawing.Size(71, 47);
+            this.button150.TabIndex = 10;
+            this.button150.UseVisualStyleBackColor = true;
+            // 
+            // Img_Info
+            // 
+            this.Img_Info.Location = new System.Drawing.Point(582, 25);
+            this.Img_Info.Name = "Img_Info";
+            this.Img_Info.Size = new System.Drawing.Size(544, 351);
+            this.Img_Info.TabIndex = 1;
+            this.Img_Info.TabStop = false;
+            // 
+            // TickeTlon
+            // 
+            this.TickeTlon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TickeTlon.Image = global::Biglietti_concerto.Properties.Resources.TickeTlon;
+            this.TickeTlon.Location = new System.Drawing.Point(364, 3);
+            this.TickeTlon.Name = "TickeTlon";
+            this.TickeTlon.Size = new System.Drawing.Size(441, 54);
+            this.TickeTlon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TickeTlon.TabIndex = 0;
+            this.TickeTlon.TabStop = false;
+            this.TickeTlon.Click += new System.EventHandler(this.TickeTlon_Click);
+            // 
+            // Account
+            // 
+            this.Account.Image = global::Biglietti_concerto.Properties.Resources.AccountImg;
+            this.Account.Location = new System.Drawing.Point(-1, 6);
+            this.Account.Name = "Account";
+            this.Account.Size = new System.Drawing.Size(170, 45);
+            this.Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Account.TabIndex = 4;
+            this.Account.TabStop = false;
+            this.Account.Click += new System.EventHandler(this.Account_Click);
+            // 
+            // Img_LRDL
+            // 
+            this.Img_LRDL.Image = global::Biglietti_concerto.Properties.Resources.LRDL_summertour_biglietti;
+            this.Img_LRDL.Location = new System.Drawing.Point(0, 3);
+            this.Img_LRDL.Name = "Img_LRDL";
+            this.Img_LRDL.Size = new System.Drawing.Size(320, 198);
+            this.Img_LRDL.TabIndex = 4;
+            this.Img_LRDL.TabStop = false;
+            this.Img_LRDL.Tag = "LRDL Summer Tour 2025";
+            this.Info_Spettacolo.SetToolTip(this.Img_LRDL, "Nome: LRDL Summer Tour\r\nArtista: La Rappresentante Di Lista\r\n\r\nPosti: 350");
+            this.Img_LRDL.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_SOPHIE
+            // 
+            this.Img_SOPHIE.Image = global::Biglietti_concerto.Properties.Resources.sophie_giants_biglietti;
+            this.Img_SOPHIE.Location = new System.Drawing.Point(323, 3);
+            this.Img_SOPHIE.Name = "Img_SOPHIE";
+            this.Img_SOPHIE.Size = new System.Drawing.Size(157, 200);
+            this.Img_SOPHIE.TabIndex = 6;
+            this.Img_SOPHIE.TabStop = false;
+            this.Img_SOPHIE.Tag = "Sophie and The Giants";
+            this.Info_Posto.SetToolTip(this.Img_SOPHIE, "Nome: Sophie and the Giants\r\nArtista: Sophie Louise Scott\r\n\r\nPosti: 350\r\n");
+            this.Img_SOPHIE.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_TONYEFFE
+            // 
+            this.Img_TONYEFFE.Image = global::Biglietti_concerto.Properties.Resources.tony_effe_roma_milano_2;
+            this.Img_TONYEFFE.Location = new System.Drawing.Point(320, 207);
+            this.Img_TONYEFFE.Name = "Img_TONYEFFE";
+            this.Img_TONYEFFE.Size = new System.Drawing.Size(318, 200);
+            this.Img_TONYEFFE.TabIndex = 7;
+            this.Img_TONYEFFE.TabStop = false;
+            this.Img_TONYEFFE.Tag = "Damme na mano Roma e Milano";
+            this.Info_Posto.SetToolTip(this.Img_TONYEFFE, "Nome: Damme \'na mano\r\nArtista: Tony Effe\r\n\r\nPosti: 350\r\n\r\n");
+            this.Img_TONYEFFE.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_GAMESINCONCERT
+            // 
+            this.Img_GAMESINCONCERT.Image = global::Biglietti_concerto.Properties.Resources.games_concert_biglietti;
+            this.Img_GAMESINCONCERT.Location = new System.Drawing.Point(481, 3);
+            this.Img_GAMESINCONCERT.Name = "Img_GAMESINCONCERT";
+            this.Img_GAMESINCONCERT.Size = new System.Drawing.Size(157, 200);
+            this.Img_GAMESINCONCERT.TabIndex = 8;
+            this.Img_GAMESINCONCERT.TabStop = false;
+            this.Img_GAMESINCONCERT.Tag = "Games in Concert";
+            this.Info_Posto.SetToolTip(this.Img_GAMESINCONCERT, "Nome: Games in Concert\r\nArtista: Eimear Noone\r\n\r\nPosti: 350\r\n");
+            this.Img_GAMESINCONCERT.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_PALAJOVA
+            // 
+            this.Img_PALAJOVA.Image = global::Biglietti_concerto.Properties.Resources.palajova2025_biglietti;
+            this.Img_PALAJOVA.Location = new System.Drawing.Point(3, 207);
+            this.Img_PALAJOVA.Name = "Img_PALAJOVA";
+            this.Img_PALAJOVA.Size = new System.Drawing.Size(320, 200);
+            this.Img_PALAJOVA.TabIndex = 5;
+            this.Img_PALAJOVA.TabStop = false;
+            this.Img_PALAJOVA.Tag = "PalaJova";
+            this.Info_Spettacolo.SetToolTip(this.Img_PALAJOVA, "Nome: Palajova\r\nArtista: Lorenzo Jovanotti\r\n\r\nPosti: 350\r\n");
+            this.Img_PALAJOVA.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_MarcusMiller
+            // 
+            this.Img_MarcusMiller.Image = global::Biglietti_concerto.Properties.Resources.marcus_miller_biglietti;
+            this.Img_MarcusMiller.Location = new System.Drawing.Point(166, 6);
+            this.Img_MarcusMiller.Name = "Img_MarcusMiller";
+            this.Img_MarcusMiller.Size = new System.Drawing.Size(157, 200);
+            this.Img_MarcusMiller.TabIndex = 19;
+            this.Img_MarcusMiller.TabStop = false;
+            this.Img_MarcusMiller.Tag = "Marcus Miller";
+            this.Info_Posto.SetToolTip(this.Img_MarcusMiller, "Nome: Marcus Miller\r\nArtista: Marcus MIller\r\n\r\nPosti: 350\r\n\r\n\r\n\r\n");
+            this.Img_MarcusMiller.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_BLACKPINK
+            // 
+            this.Img_BLACKPINK.Image = global::Biglietti_concerto.Properties.Resources.blackpink_biglietti;
+            this.Img_BLACKPINK.Location = new System.Drawing.Point(818, 212);
+            this.Img_BLACKPINK.Name = "Img_BLACKPINK";
+            this.Img_BLACKPINK.Size = new System.Drawing.Size(157, 200);
+            this.Img_BLACKPINK.TabIndex = 18;
+            this.Img_BLACKPINK.TabStop = false;
+            this.Img_BLACKPINK.Tag = "2025 World Tour - Milano";
+            this.Info_Posto.SetToolTip(this.Img_BLACKPINK, "Nome: Blackpink 2025 World Tour\r\nArtisti:  Jisoo, Jennie, Rosé e Lisa\r\n\r\nPosti: 3" +
+        "50\r\n\r\n\r\n\r\n\r\n\r\n\r\n");
+            this.Img_BLACKPINK.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_JIMMYSAX
+            // 
+            this.Img_JIMMYSAX.Image = global::Biglietti_concerto.Properties.Resources.jimmy_sax_biglietti;
+            this.Img_JIMMYSAX.Location = new System.Drawing.Point(655, 212);
+            this.Img_JIMMYSAX.Name = "Img_JIMMYSAX";
+            this.Img_JIMMYSAX.Size = new System.Drawing.Size(157, 200);
+            this.Img_JIMMYSAX.TabIndex = 17;
+            this.Img_JIMMYSAX.TabStop = false;
+            this.Img_JIMMYSAX.Tag = "Jimmy Sax and Symphonic Dance Orchestra";
+            this.Info_Posto.SetToolTip(this.Img_JIMMYSAX, "Nome: Jimmy Sax and Symphonic Dance Orchestra\r\nArtisti: Jimmy Sax and Symphonic D" +
+        "ance Orchestra\r\n\r\nPosti: 350\r\n\r\n\r\n\r\n\r\n\r\n");
+            this.Img_JIMMYSAX.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_MORRISSEY
+            // 
+            this.Img_MORRISSEY.Image = global::Biglietti_concerto.Properties.Resources.morrissey_biglietti;
+            this.Img_MORRISSEY.Location = new System.Drawing.Point(655, 6);
+            this.Img_MORRISSEY.Name = "Img_MORRISSEY";
+            this.Img_MORRISSEY.Size = new System.Drawing.Size(320, 200);
+            this.Img_MORRISSEY.TabIndex = 16;
+            this.Img_MORRISSEY.TabStop = false;
+            this.Img_MORRISSEY.Tag = "Estate 2025";
+            this.Info_Posto.SetToolTip(this.Img_MORRISSEY, "Nome: Estate 2025\r\nArtista: Morissey\r\n\r\nPosti: 350\r\n\r\n\r\n\r\n\r\n\r\n");
+            this.Img_MORRISSEY.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_INTELLIGENZANATURALE
+            // 
+            this.Img_INTELLIGENZANATURALE.Image = global::Biglietti_concerto.Properties.Resources.andrea_pezzi_intelligenza_naturale_2;
+            this.Img_INTELLIGENZANATURALE.Location = new System.Drawing.Point(492, 212);
+            this.Img_INTELLIGENZANATURALE.Name = "Img_INTELLIGENZANATURALE";
+            this.Img_INTELLIGENZANATURALE.Size = new System.Drawing.Size(157, 200);
+            this.Img_INTELLIGENZANATURALE.TabIndex = 15;
+            this.Img_INTELLIGENZANATURALE.TabStop = false;
+            this.Img_INTELLIGENZANATURALE.Tag = "Intelligenza Naturale";
+            this.Info_Posto.SetToolTip(this.Img_INTELLIGENZANATURALE, "Nome: Intelligenza Naturale\r\nArtista:  Andrea pizzi\r\n\r\nPosti: 350\r\n\r\n\r\n\r\n\r\n\r\n");
+            this.Img_INTELLIGENZANATURALE.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // img_GIORGIAFUMO
+            // 
+            this.img_GIORGIAFUMO.Image = global::Biglietti_concerto.Properties.Resources.giorgia_fumo_biglietti;
+            this.img_GIORGIAFUMO.Location = new System.Drawing.Point(329, 212);
+            this.img_GIORGIAFUMO.Name = "img_GIORGIAFUMO";
+            this.img_GIORGIAFUMO.Size = new System.Drawing.Size(157, 200);
+            this.img_GIORGIAFUMO.TabIndex = 14;
+            this.img_GIORGIAFUMO.TabStop = false;
+            this.img_GIORGIAFUMO.Tag = "Vita Bassa";
+            this.Info_Posto.SetToolTip(this.img_GIORGIAFUMO, "Nome: Vita Bassa\r\nArtista:  Giorgia fumo\r\n\r\nPosti: 350\r\n\r\n\r\n\r\n\r\n");
+            this.img_GIORGIAFUMO.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_PROVAAPRENDERMI
+            // 
+            this.Img_PROVAAPRENDERMI.Image = global::Biglietti_concerto.Properties.Resources.prova_prendermi_biglietti;
+            this.Img_PROVAAPRENDERMI.Location = new System.Drawing.Point(329, 6);
+            this.Img_PROVAAPRENDERMI.Name = "Img_PROVAAPRENDERMI";
+            this.Img_PROVAAPRENDERMI.Size = new System.Drawing.Size(320, 200);
+            this.Img_PROVAAPRENDERMI.TabIndex = 13;
+            this.Img_PROVAAPRENDERMI.TabStop = false;
+            this.Img_PROVAAPRENDERMI.Tag = "Prova A Prendermi";
+            this.Info_Posto.SetToolTip(this.Img_PROVAAPRENDERMI, "Nome: Prova a prendermi il musical \r\nArtisti:  Claudio Castrogiovanni , Tommaso C" +
+        "assissa e Simone Montedoro\r\n\r\nPosti: 350\r\n\r\n\r\n\r\n");
+            this.Img_PROVAAPRENDERMI.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_ACDC
+            // 
+            this.Img_ACDC.Image = global::Biglietti_concerto.Properties.Resources.acdc_biglietti;
+            this.Img_ACDC.Location = new System.Drawing.Point(3, 212);
+            this.Img_ACDC.Name = "Img_ACDC";
+            this.Img_ACDC.Size = new System.Drawing.Size(320, 200);
+            this.Img_ACDC.TabIndex = 12;
+            this.Img_ACDC.TabStop = false;
+            this.Img_ACDC.Tag = "AC/DC - Powerup Tour";
+            this.Info_Posto.SetToolTip(this.Img_ACDC, "Nome: AC DC POWER UP Tour\r\nArtisti: Angus Young, Brian Johnson, Stevie Young, Mat" +
+        "t Laug  e Chris Chaney \r\n\r\nPosti: 350\r\n\r\n\r\n");
+            this.Img_ACDC.Click += new System.EventHandler(this.Spettacolo_Click);
+            // 
+            // Img_TIMBURTON
+            // 
+            this.Img_TIMBURTON.Image = global::Biglietti_concerto.Properties.Resources.fask_summer_biglietti;
+            this.Img_TIMBURTON.Location = new System.Drawing.Point(3, 6);
+            this.Img_TIMBURTON.Name = "Img_TIMBURTON";
+            this.Img_TIMBURTON.Size = new System.Drawing.Size(157, 200);
+            this.Img_TIMBURTON.TabIndex = 10;
+            this.Img_TIMBURTON.TabStop = false;
+            this.Img_TIMBURTON.Tag = "FASK tour estivo 2025";
+            this.Info_Posto.SetToolTip(this.Img_TIMBURTON, "Nome: Fask Animals and Slow Kids\r\nArtisti: Aimone Romizi , Alessio Mingoli , Jaco" +
+        "po Gigliotti  e Alessandro Guercini \r\n\r\nPosti: 350\r\n\r\n");
+            this.Img_TIMBURTON.Click += new System.EventHandler(this.Spettacolo_Click);
+>>>>>>> Stashed changes
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1942, 1055);
             this.Controls.Add(this.l);
             this.Controls.Add(this.Pannello_Acc_User);
             this.Controls.Add(this.Pannello_Posti);
             this.Controls.Add(this.Pannello_Principale);
+=======
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.Pannello_Pagamento);
+            this.Controls.Add(this.Pannello_Acc_User);
+            this.Controls.Add(this.Pannello_Posti);
+>>>>>>> Stashed changes
             this.Controls.Add(this.Pannello_Login);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -4997,34 +5493,17 @@
             this.Text = "6++";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Account)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_JIMMYSAX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_MORRISSEY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_INTELLIGENZANATURALE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_GIORGIAFUMO)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_PROVAAPRENDERMI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_ACDC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_TIMBURTON)).EndInit();
             this.Pannello_Principale.ResumeLayout(false);
             this.Pannello_InEvidenza.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Img_LRDL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_SOPHIE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_TONYEFFE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_GAMESINCONCERT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).EndInit();
             this.Pannello_Posti.ResumeLayout(false);
             this.Tab_Info_Posti.ResumeLayout(false);
             this.Pgn_Informazioni.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).EndInit();
             this.TitoloArtista.ResumeLayout(false);
             this.TitoloArtista.PerformLayout();
             this.Pgn_SelezionePosti.ResumeLayout(false);
@@ -5044,6 +5523,7 @@
             this.groupBox2.PerformLayout();
             this.Group_Gender.ResumeLayout(false);
             this.Group_Gender.PerformLayout();
+<<<<<<< Updated upstream
             this.l.ResumeLayout(false);
             this.l.PerformLayout();
             this.grb_Contanti.ResumeLayout(false);
@@ -5056,6 +5536,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+=======
+>>>>>>> Stashed changes
             this.Pannello_Acc_User.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.Pgn_Profilo.ResumeLayout(false);
@@ -5070,6 +5552,38 @@
             this.Email.PerformLayout();
             this.Nome.ResumeLayout(false);
             this.Nome.PerformLayout();
+<<<<<<< Updated upstream
+=======
+            this.Pannello_Pagamento.ResumeLayout(false);
+            this.Pannello_Pagamento.PerformLayout();
+            this.grb_Contanti.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_Info)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Account)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_LRDL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_SOPHIE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_TONYEFFE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_GAMESINCONCERT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_PALAJOVA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_MarcusMiller)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_BLACKPINK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_JIMMYSAX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_MORRISSEY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_INTELLIGENZANATURALE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_GIORGIAFUMO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_PROVAAPRENDERMI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_ACDC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_TIMBURTON)).EndInit();
+>>>>>>> Stashed changes
             this.ResumeLayout(false);
 
         }
@@ -5137,8 +5651,11 @@
         private System.Windows.Forms.GroupBox Group_Gender;
         private System.Windows.Forms.RadioButton Female_Rdb;
         private System.Windows.Forms.RadioButton Male_Rdb;
+<<<<<<< Updated upstream
         private System.Windows.Forms.Panel l;
         private System.Windows.Forms.Button Btn_Pagamento;
+=======
+>>>>>>> Stashed changes
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.TextBox txt_confermapsw;
         private System.Windows.Forms.Label Lbl_ConfermaPsw;
@@ -5395,6 +5912,7 @@
         private System.Windows.Forms.TextBox txt_VerPsw;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button Btn_CkPsw;
+<<<<<<< Updated upstream
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton rbtn_carta;
         private System.Windows.Forms.RadioButton rbtn_contanti;
@@ -5418,12 +5936,40 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox grb_Contanti;
         private System.Windows.Forms.PictureBox pictureBox2;
+=======
+        private System.Windows.Forms.Panel Pannello_Pagamento;
+        private System.Windows.Forms.GroupBox grb_Contanti;
+>>>>>>> Stashed changes
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+<<<<<<< Updated upstream
+=======
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button151;
+        private System.Windows.Forms.Button button155;
+        private System.Windows.Forms.Button button154;
+        private System.Windows.Forms.Button button153;
+        private System.Windows.Forms.Button button150;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lbl_intestatario;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbl_tipopagamento;
+        private System.Windows.Forms.RadioButton rbtn_carta;
+        private System.Windows.Forms.RadioButton rbtn_contanti;
+        private System.Windows.Forms.Button button152;
+>>>>>>> Stashed changes
     }
 }
 

@@ -153,6 +153,16 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap googlepay {
+            get {
+                object obj = ResourceManager.GetObject("googlepay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jimmy_sax_biglietti {
             get {
                 object obj = ResourceManager.GetObject("jimmy-sax-biglietti", resourceCulture);
@@ -173,6 +183,16 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_visa {
+            get {
+                object obj = ResourceManager.GetObject("Logo visa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LRDL_summertour_biglietti {
             get {
                 object obj = ResourceManager.GetObject("LRDL-summertour-biglietti", resourceCulture);
@@ -186,6 +206,16 @@ namespace Biglietti_concerto.Properties {
         internal static System.Drawing.Bitmap marcus_miller_biglietti {
             get {
                 object obj = ResourceManager.GetObject("marcus-miller-biglietti", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mastercard {
+            get {
+                object obj = ResourceManager.GetObject("Mastercard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
