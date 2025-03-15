@@ -63,6 +63,16 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _100_euro {
+            get {
+                object obj = ResourceManager.GetObject("100 euro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AccountImg {
             get {
                 object obj = ResourceManager.GetObject("AccountImg", resourceCulture);
@@ -93,9 +103,99 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap applepay {
+            get {
+                object obj = ResourceManager.GetObject("applepay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap balloon_roma_biglietti_3 {
             get {
                 object obj = ResourceManager.GetObject("balloon-roma-biglietti-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Banconota_10 {
+            get {
+                object obj = ResourceManager.GetObject("Banconota 10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Banconota_20 {
+            get {
+                object obj = ResourceManager.GetObject("Banconota 20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Banconota_200 {
+            get {
+                object obj = ResourceManager.GetObject("Banconota 200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Banconota_201 {
+            get {
+                object obj = ResourceManager.GetObject("Banconota 201", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Banconota_5 {
+            get {
+                object obj = ResourceManager.GetObject("Banconota 5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Banconota_50 {
+            get {
+                object obj = ResourceManager.GetObject("Banconota 50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Banconota_500 {
+            get {
+                object obj = ResourceManager.GetObject("Banconota 500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Banconota_51 {
+            get {
+                object obj = ResourceManager.GetObject("Banconota 51", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +253,16 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap googlepay {
+            get {
+                object obj = ResourceManager.GetObject("googlepay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jimmy_sax_biglietti {
             get {
                 object obj = ResourceManager.GetObject("jimmy-sax-biglietti", resourceCulture);
@@ -173,6 +283,16 @@ namespace Biglietti_concerto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_visa {
+            get {
+                object obj = ResourceManager.GetObject("Logo visa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LRDL_summertour_biglietti {
             get {
                 object obj = ResourceManager.GetObject("LRDL-summertour-biglietti", resourceCulture);
@@ -186,6 +306,16 @@ namespace Biglietti_concerto.Properties {
         internal static System.Drawing.Bitmap marcus_miller_biglietti {
             get {
                 object obj = ResourceManager.GetObject("marcus-miller-biglietti", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mastercard {
+            get {
+                object obj = ResourceManager.GetObject("Mastercard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +346,16 @@ namespace Biglietti_concerto.Properties {
         internal static System.Drawing.Bitmap pinkfloydlegend_thedarksideofthemoon_biglietti {
             get {
                 object obj = ResourceManager.GetObject("pinkfloydlegend-thedarksideofthemoon-biglietti", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap postepay {
+            get {
+                object obj = ResourceManager.GetObject("postepay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
