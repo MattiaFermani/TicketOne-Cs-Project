@@ -807,30 +807,6 @@ namespace Biglietti_concerto
             }
             ApplicaPrenotazioniSuEventi();
         }
-private void Form1_Load(object sender, EventArgs e)
-        {
-            this.Size = new System.Drawing.Size(1150, 485);
-            Pannello_Principale.Size = new System.Drawing.Size(1151, 434);
-            Pannello_Principale.Location = new Point(0, 54);
-            Pannello_Principale.BringToFront();
-            Pannello_Posti.Size = new System.Drawing.Size(1151, 434);
-            Pannello_Posti.Location = new Point(0, 54);
-            Pannello_Login.Size = new System.Drawing.Size(1151, 434);
-            Pannello_Login.Location = new Point(0, 54);
-            Pannello_Acc_User.Size = new System.Drawing.Size(1151, 434);
-            Pannello_Acc_User.Location = new Point(0, 54);
-            Pannello_Admin.Size = new System.Drawing.Size(1151, 434);
-            Pannello_Admin.Location = new Point(0, 54);
-            l.Size = new System.Drawing.Size(1151, 434);
-            l.Location = new Point(0, 54);
-            l.Visible = false;
-            AggiornaDisponibilitaTooltip();
-            spettacoliToolTip.AutoPopDelay = 5000;
-            spettacoliToolTip.InitialDelay = 300;
-            spettacoliToolTip.ReshowDelay = 500;
-            CaricaPostiEventi();
-            CaricaAccounts();
-        }
 
         private void CreaAdminPassword(string password)
         {
@@ -1764,7 +1740,6 @@ private void Form1_Load(object sender, EventArgs e)
             Luogo_Lst.SelectedIndex = -1;
             Pannello_Posti.Visible = false;
             l.Visible = false;
-            ResetPostiColori();
         }
         private void Btn_AdminPanel_Click(object sender, EventArgs e)
         {
@@ -2193,6 +2168,11 @@ private void Form1_Load(object sender, EventArgs e)
             {
                 MessageBox.Show($"Errore durante l'eliminazione dell'account: {ex.Message}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
