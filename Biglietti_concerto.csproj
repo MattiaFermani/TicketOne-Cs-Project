@@ -213,6 +213,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataSaves\" />
+    <None Include="Resources\Logo visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mastercard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\googlepay.png" />
+=======
+    <Folder Include="DataSaves\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

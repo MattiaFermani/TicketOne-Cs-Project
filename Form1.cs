@@ -8,8 +8,11 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
+using System.Net;
+using System.Net.Mail;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+
 
 namespace Biglietti_concerto
 {
@@ -445,23 +448,6 @@ namespace Biglietti_concerto
             { "AC/DC - Powerup Tour", ( Carica_Luoghi_Date(0, rand, "AC/DC - Powerup Tour"), Carica_Luoghi_Date(1, rand, "AC/DC - Powerup Tour"), new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
             { "Default", ( new List<string> { "Default" }, new List<string> { "Default" }, new Dictionary<(string, string), Dictionary<string, List<Button>>>() ) },
         };
-        //{
-        //    { "Intelligenza Naturale", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "Marcus Miller", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "LRDL Summer Tour 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "PalaJova", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "Sophie and The Giants", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "Damme na mano Roma e Milano", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "Games in Concert", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "FASK tour estivo 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "Prova A Prendermi", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "Vita Bassa", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "Estate 2025", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "Jimmy Sax and Symphonic Dance Orchestra", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "2025 World Tour - Milano", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "AC/DC - Powerup Tour", (Date_Luoghi_Random(0, rand), Date_Luoghi_Random(1, rand), new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //    { "Default", (new List<string> { "Default" }, new List<string> { "Default" }, new Dictionary<(string, string), Dictionary<string, List<Button>>>()) },
-        //};
         List<(string Titolo, string Artista, string Descrizione, Dictionary<string, (List<string> luoghi, List<string> date, Dictionary<(string luogo, string data), Dictionary<string, List<Button>>> buttons)> Dizionario)> Spettacoli = new List<(string, string, string, Dictionary<string, (List<string> luoghi, List<string> date, Dictionary<(string luogo, string data), Dictionary<string, List<Button>>> buttons)>)>
         {
             ("Intelligenza Naturale", "Andrea Pezzi", "Uno spettacolo sull'intelligenza umana", Eventi),
@@ -821,6 +807,30 @@ namespace Biglietti_concerto
             }
             ApplicaPrenotazioniSuEventi();
         }
+private void Form1_Load(object sender, EventArgs e)
+        {
+            this.Size = new System.Drawing.Size(1150, 485);
+            Pannello_Principale.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Principale.Location = new Point(0, 54);
+            Pannello_Principale.BringToFront();
+            Pannello_Posti.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Posti.Location = new Point(0, 54);
+            Pannello_Login.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Login.Location = new Point(0, 54);
+            Pannello_Acc_User.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Acc_User.Location = new Point(0, 54);
+            Pannello_Admin.Size = new System.Drawing.Size(1151, 434);
+            Pannello_Admin.Location = new Point(0, 54);
+            l.Size = new System.Drawing.Size(1151, 434);
+            l.Location = new Point(0, 54);
+            l.Visible = false;
+            AggiornaDisponibilitaTooltip();
+            spettacoliToolTip.AutoPopDelay = 5000;
+            spettacoliToolTip.InitialDelay = 300;
+            spettacoliToolTip.ReshowDelay = 500;
+            CaricaPostiEventi();
+            CaricaAccounts();
+        }
 
         private void CreaAdminPassword(string password)
         {
@@ -903,7 +913,6 @@ namespace Biglietti_concerto
             }
             Pannello_Posti.Visible = true;
             Pannello_Posti.BringToFront();
-
             Img_Info.Image = pb.Image;
             Img_Info.SizeMode = PictureBoxSizeMode.Zoom;
         }
@@ -916,7 +925,7 @@ namespace Biglietti_concerto
             Button btn = (Button)sender;
             if (btn.BackColor != Color.Yellow)
             {
-                if (PostiSelezionati < 4)
+                if (PostiSelezionati < 4) 
                 {
                     btn.BackColor = Color.Yellow;
                     PostiSelezionati++;
@@ -963,6 +972,9 @@ namespace Biglietti_concerto
         }
         private void Btn_ConfemaPosti_Click(object sender, EventArgs e)
         {
+//DA AGGIORNARE
+            Pannello_Posti.Visible = false;
+            l.Visible = true;
             if (PostiSelezionati != 0)
             {
                 foreach (var entry in postiSelezionati)
@@ -1346,7 +1358,6 @@ namespace Biglietti_concerto
                 txb_psw_admin.Clear();
                 Pannello_Login.Visible = false;
                 Pannello_Login.Enabled = false;
-                Pannello_Posti.Visible = false;
                 Pannello_Principale.Visible = true;
             }
             else
@@ -1687,7 +1698,61 @@ namespace Biglietti_concerto
 
             File.WriteAllText(filePath, jsonArray.ToString());
         }
+        private void Btn_Pagamento_Click(object sender, EventArgs e)
+        {
+            if (PostiSelezionati != 0)
+            {
+                foreach (var entry in postiSelezionati)
+                {
+                    var eventKey = entry.Key;
+                    foreach (var btn in entry.Value)
+                    {
 
+                        string settore = ((Panel)btn.Parent).Name;
+
+                        if (!Eventi[TitoloSpettacolo_Lbl.Text].buttons.ContainsKey(eventKey))
+                        {
+                            Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey] = new Dictionary<string, List<Button>>();
+                        }
+                        if (!Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey].ContainsKey(settore))
+                        {
+                            Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore] = new List<Button>();
+                        }
+
+                        foreach (Button b in Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore])
+                        {
+                            if (b.Name == btn.Name)
+                            {
+                                int index = Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore].IndexOf(b);
+                                Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].BackColor = Color.Gray;
+                                Eventi[TitoloSpettacolo_Lbl.Text].buttons[eventKey][settore][index].Enabled = false;
+                                break;
+                            }
+                        }
+
+                    }
+                }
+                CaricaPosti("Default", "Default", "Default");
+
+                postiSelezionati.Clear();
+                MessageBox.Show($"{PostiSelezionati} Posti acquistati con successo!");
+                PostiSelezionati = 0;
+                AggiornaDisponibilitaTooltip();
+            }
+            else
+            {
+                MessageBox.Show("Nessun posto selezionato");
+            }
+
+            Pannello_Principale.Visible = true;
+            Pannello_Principale.Location = new Point(0, 54);
+            Tab_Info_Posti.SelectedIndex = 0;
+            Data_Lst.SelectedIndex = -1;
+            Luogo_Lst.SelectedIndex = -1;
+            Pannello_Posti.Visible = false;
+            l.Visible = false;
+            ResetPostiColori();
+        }
         private void Btn_AdminPanel_Click(object sender, EventArgs e)
         {
             Pannello_Admin.BringToFront();
