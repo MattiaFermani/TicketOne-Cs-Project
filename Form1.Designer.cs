@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("test");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("test");
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TickeTlon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -366,6 +366,30 @@
             this.TitoloEvento_U_Lbl = new System.Windows.Forms.Label();
             this.Albero_Prenotazioni_User = new System.Windows.Forms.TreeView();
             this.Pannello_Admin = new System.Windows.Forms.Panel();
+            this.Pannello_A_Utente = new System.Windows.Forms.Panel();
+            this.Elimina_Btn = new System.Windows.Forms.Button();
+            this.Admin = new System.Windows.Forms.Panel();
+            this.button151 = new System.Windows.Forms.Button();
+            this.Txt_PswAdmin = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.Password_A = new System.Windows.Forms.Panel();
+            this.button152 = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.Txt_PswNew_A = new System.Windows.Forms.TextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.Telefono_A = new System.Windows.Forms.Panel();
+            this.button153 = new System.Windows.Forms.Button();
+            this.label41 = new System.Windows.Forms.Label();
+            this.Txt_Telefono_A = new System.Windows.Forms.TextBox();
+            this.Email_A = new System.Windows.Forms.Panel();
+            this.button154 = new System.Windows.Forms.Button();
+            this.label43 = new System.Windows.Forms.Label();
+            this.Txt_Email_A = new System.Windows.Forms.TextBox();
+            this.Nome_A = new System.Windows.Forms.Panel();
+            this.button155 = new System.Windows.Forms.Button();
+            this.Txt_Username_A = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.Lbl_NomeCognome_A = new System.Windows.Forms.Label();
             this.Lbl_A_Utenti = new System.Windows.Forms.Label();
             this.Lbl_A_Eventi = new System.Windows.Forms.Label();
             this.Tab_EventiUtenti = new System.Windows.Forms.TabControl();
@@ -374,8 +398,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Lista_Utenti = new System.Windows.Forms.ListBox();
             this.Pannello_Prenotazione_A = new System.Windows.Forms.Panel();
-            this.Pannello_A_Utente = new System.Windows.Forms.Panel();
-            this.Lbl_NomeCognome_A = new System.Windows.Forms.Label();
             this.Lbl_CodicePrenotazione_A = new System.Windows.Forms.Label();
             this.Group_Posti_A = new System.Windows.Forms.GroupBox();
             this.ListaPostiBuy_A = new System.Windows.Forms.ComboBox();
@@ -421,28 +443,6 @@
             this.label32 = new System.Windows.Forms.Label();
             this.SpettacoloEventoArtista_Lbl = new System.Windows.Forms.Label();
             this.SpettacoloEvento_Lbl = new System.Windows.Forms.Label();
-            this.Admin = new System.Windows.Forms.Panel();
-            this.button151 = new System.Windows.Forms.Button();
-            this.Txt_PswAdmin = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.Password_A = new System.Windows.Forms.Panel();
-            this.button152 = new System.Windows.Forms.Button();
-            this.label39 = new System.Windows.Forms.Label();
-            this.Txt_PswNew_A = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.Telefono_A = new System.Windows.Forms.Panel();
-            this.button153 = new System.Windows.Forms.Button();
-            this.label41 = new System.Windows.Forms.Label();
-            this.Txt_Telefono_A = new System.Windows.Forms.TextBox();
-            this.Email_A = new System.Windows.Forms.Panel();
-            this.button154 = new System.Windows.Forms.Button();
-            this.label43 = new System.Windows.Forms.Label();
-            this.Txt_Email_A = new System.Windows.Forms.TextBox();
-            this.Nome_A = new System.Windows.Forms.Panel();
-            this.button155 = new System.Windows.Forms.Button();
-            this.Txt_Username_A = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.Elimina_Btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -498,11 +498,16 @@
             this.InfoPosto_U.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpettacoloImg_U_Pbox)).BeginInit();
             this.Pannello_Admin.SuspendLayout();
+            this.Pannello_A_Utente.SuspendLayout();
+            this.Admin.SuspendLayout();
+            this.Password_A.SuspendLayout();
+            this.Telefono_A.SuspendLayout();
+            this.Email_A.SuspendLayout();
+            this.Nome_A.SuspendLayout();
             this.Tab_EventiUtenti.SuspendLayout();
             this.tabpage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.Pannello_Prenotazione_A.SuspendLayout();
-            this.Pannello_A_Utente.SuspendLayout();
             this.Group_Posti_A.SuspendLayout();
             this.InfoPosto_A.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpettacoloImg_A_Pbox)).BeginInit();
@@ -514,11 +519,6 @@
             this.Grup_InfoEvento.SuspendLayout();
             this.Group_IncassiEvento.SuspendLayout();
             this.Group_IncassiTOTEvento.SuspendLayout();
-            this.Admin.SuspendLayout();
-            this.Password_A.SuspendLayout();
-            this.Telefono_A.SuspendLayout();
-            this.Email_A.SuspendLayout();
-            this.Nome_A.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -4937,10 +4937,10 @@
             this.Albero_Prenotazioni_User.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Albero_Prenotazioni_User.Location = new System.Drawing.Point(0, 76);
             this.Albero_Prenotazioni_User.Name = "Albero_Prenotazioni_User";
-            treeNode3.Name = "Nodo0";
-            treeNode3.Text = "test";
+            treeNode1.Name = "Nodo0";
+            treeNode1.Text = "test";
             this.Albero_Prenotazioni_User.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            treeNode1});
             this.Albero_Prenotazioni_User.Size = new System.Drawing.Size(250, 326);
             this.Albero_Prenotazioni_User.TabIndex = 0;
             this.Albero_Prenotazioni_User.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Prenotazioni_User_NodeMouseClick);
@@ -4960,10 +4960,257 @@
             this.Pannello_Admin.Size = new System.Drawing.Size(1151, 434);
             this.Pannello_Admin.TabIndex = 16;
             // 
+            // Pannello_A_Utente
+            // 
+            this.Pannello_A_Utente.Controls.Add(this.Elimina_Btn);
+            this.Pannello_A_Utente.Controls.Add(this.Admin);
+            this.Pannello_A_Utente.Controls.Add(this.Password_A);
+            this.Pannello_A_Utente.Controls.Add(this.panel7);
+            this.Pannello_A_Utente.Controls.Add(this.Telefono_A);
+            this.Pannello_A_Utente.Controls.Add(this.Email_A);
+            this.Pannello_A_Utente.Controls.Add(this.Nome_A);
+            this.Pannello_A_Utente.Controls.Add(this.Lbl_NomeCognome_A);
+            this.Pannello_A_Utente.Location = new System.Drawing.Point(263, 50);
+            this.Pannello_A_Utente.Name = "Pannello_A_Utente";
+            this.Pannello_A_Utente.Size = new System.Drawing.Size(885, 381);
+            this.Pannello_A_Utente.TabIndex = 30;
+            this.Pannello_A_Utente.Visible = false;
+            // 
+            // Elimina_Btn
+            // 
+            this.Elimina_Btn.BackColor = System.Drawing.Color.IndianRed;
+            this.Elimina_Btn.FlatAppearance.BorderSize = 0;
+            this.Elimina_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Elimina_Btn.Location = new System.Drawing.Point(806, 355);
+            this.Elimina_Btn.Name = "Elimina_Btn";
+            this.Elimina_Btn.Size = new System.Drawing.Size(75, 23);
+            this.Elimina_Btn.TabIndex = 41;
+            this.Elimina_Btn.Text = "Elimina";
+            this.Elimina_Btn.UseVisualStyleBackColor = false;
+            this.Elimina_Btn.Click += new System.EventHandler(this.Elimina_Btn_Click);
+            // 
+            // Admin
+            // 
+            this.Admin.Controls.Add(this.button151);
+            this.Admin.Controls.Add(this.Txt_PswAdmin);
+            this.Admin.Controls.Add(this.label22);
+            this.Admin.Location = new System.Drawing.Point(478, 212);
+            this.Admin.Name = "Admin";
+            this.Admin.Size = new System.Drawing.Size(376, 34);
+            this.Admin.TabIndex = 40;
+            this.Admin.Visible = false;
+            // 
+            // button151
+            // 
+            this.button151.Location = new System.Drawing.Point(311, 5);
+            this.button151.Name = "button151";
+            this.button151.Size = new System.Drawing.Size(62, 25);
+            this.button151.TabIndex = 28;
+            this.button151.Text = "Check";
+            this.button151.UseVisualStyleBackColor = true;
+            this.button151.Click += new System.EventHandler(this.btn_Admin_Check_Click);
+            // 
+            // Txt_PswAdmin
+            // 
+            this.Txt_PswAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_PswAdmin.Location = new System.Drawing.Point(140, 11);
+            this.Txt_PswAdmin.Name = "Txt_PswAdmin";
+            this.Txt_PswAdmin.PasswordChar = '*';
+            this.Txt_PswAdmin.Size = new System.Drawing.Size(165, 13);
+            this.Txt_PswAdmin.TabIndex = 28;
+            this.Txt_PswAdmin.UseSystemPasswordChar = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(5, 8);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(120, 18);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "Password Admin";
+            // 
+            // Password_A
+            // 
+            this.Password_A.Controls.Add(this.button152);
+            this.Password_A.Controls.Add(this.label39);
+            this.Password_A.Controls.Add(this.Txt_PswNew_A);
+            this.Password_A.Location = new System.Drawing.Point(30, 212);
+            this.Password_A.Name = "Password_A";
+            this.Password_A.Size = new System.Drawing.Size(430, 33);
+            this.Password_A.TabIndex = 39;
+            // 
+            // button152
+            // 
+            this.button152.Enabled = false;
+            this.button152.Location = new System.Drawing.Point(290, 4);
+            this.button152.Name = "button152";
+            this.button152.Size = new System.Drawing.Size(137, 25);
+            this.button152.TabIndex = 27;
+            this.button152.Text = "Modifica";
+            this.button152.UseVisualStyleBackColor = true;
+            this.button152.Click += new System.EventHandler(this.Modifica_Info);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(6, 5);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(89, 22);
+            this.label39.TabIndex = 26;
+            this.label39.Text = "Password";
+            // 
+            // Txt_PswNew_A
+            // 
+            this.Txt_PswNew_A.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_PswNew_A.Location = new System.Drawing.Point(119, 9);
+            this.Txt_PswNew_A.Name = "Txt_PswNew_A";
+            this.Txt_PswNew_A.PasswordChar = '*';
+            this.Txt_PswNew_A.Size = new System.Drawing.Size(165, 13);
+            this.Txt_PswNew_A.TabIndex = 25;
+            this.Txt_PswNew_A.UseSystemPasswordChar = true;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(30, 251);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(0, 0);
+            this.panel7.TabIndex = 38;
+            // 
+            // Telefono_A
+            // 
+            this.Telefono_A.Controls.Add(this.button153);
+            this.Telefono_A.Controls.Add(this.label41);
+            this.Telefono_A.Controls.Add(this.Txt_Telefono_A);
+            this.Telefono_A.Location = new System.Drawing.Point(30, 177);
+            this.Telefono_A.Name = "Telefono_A";
+            this.Telefono_A.Size = new System.Drawing.Size(430, 33);
+            this.Telefono_A.TabIndex = 37;
+            // 
+            // button153
+            // 
+            this.button153.Location = new System.Drawing.Point(290, 4);
+            this.button153.Name = "button153";
+            this.button153.Size = new System.Drawing.Size(137, 25);
+            this.button153.TabIndex = 10;
+            this.button153.Text = "Modifica";
+            this.button153.UseVisualStyleBackColor = true;
+            this.button153.Click += new System.EventHandler(this.Modifica_Info);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(14, 4);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(81, 22);
+            this.label41.TabIndex = 6;
+            this.label41.Text = "Telefono";
+            // 
+            // Txt_Telefono_A
+            // 
+            this.Txt_Telefono_A.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Telefono_A.Location = new System.Drawing.Point(119, 9);
+            this.Txt_Telefono_A.MaxLength = 10;
+            this.Txt_Telefono_A.Name = "Txt_Telefono_A";
+            this.Txt_Telefono_A.Size = new System.Drawing.Size(165, 13);
+            this.Txt_Telefono_A.TabIndex = 7;
+            this.Txt_Telefono_A.Text = "telefono";
+            // 
+            // Email_A
+            // 
+            this.Email_A.Controls.Add(this.button154);
+            this.Email_A.Controls.Add(this.label43);
+            this.Email_A.Controls.Add(this.Txt_Email_A);
+            this.Email_A.Location = new System.Drawing.Point(30, 142);
+            this.Email_A.Name = "Email_A";
+            this.Email_A.Size = new System.Drawing.Size(430, 33);
+            this.Email_A.TabIndex = 36;
+            // 
+            // button154
+            // 
+            this.button154.Location = new System.Drawing.Point(290, 4);
+            this.button154.Name = "button154";
+            this.button154.Size = new System.Drawing.Size(137, 25);
+            this.button154.TabIndex = 9;
+            this.button154.Text = "Modifica";
+            this.button154.UseVisualStyleBackColor = true;
+            this.button154.Click += new System.EventHandler(this.Modifica_Info);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(41, 5);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(54, 22);
+            this.label43.TabIndex = 2;
+            this.label43.Text = "Email";
+            // 
+            // Txt_Email_A
+            // 
+            this.Txt_Email_A.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Email_A.Location = new System.Drawing.Point(119, 9);
+            this.Txt_Email_A.Name = "Txt_Email_A";
+            this.Txt_Email_A.Size = new System.Drawing.Size(165, 13);
+            this.Txt_Email_A.TabIndex = 5;
+            this.Txt_Email_A.Text = "email";
+            // 
+            // Nome_A
+            // 
+            this.Nome_A.Controls.Add(this.button155);
+            this.Nome_A.Controls.Add(this.Txt_Username_A);
+            this.Nome_A.Controls.Add(this.label45);
+            this.Nome_A.Location = new System.Drawing.Point(30, 107);
+            this.Nome_A.Name = "Nome_A";
+            this.Nome_A.Size = new System.Drawing.Size(430, 33);
+            this.Nome_A.TabIndex = 35;
+            // 
+            // button155
+            // 
+            this.button155.Location = new System.Drawing.Point(290, 4);
+            this.button155.Name = "button155";
+            this.button155.Size = new System.Drawing.Size(137, 25);
+            this.button155.TabIndex = 8;
+            this.button155.Text = "Modifica";
+            this.button155.UseVisualStyleBackColor = true;
+            this.button155.Click += new System.EventHandler(this.Modifica_Info);
+            // 
+            // Txt_Username_A
+            // 
+            this.Txt_Username_A.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_Username_A.Location = new System.Drawing.Point(119, 9);
+            this.Txt_Username_A.Name = "Txt_Username_A";
+            this.Txt_Username_A.Size = new System.Drawing.Size(165, 13);
+            this.Txt_Username_A.TabIndex = 3;
+            this.Txt_Username_A.Text = "nome visualizzato";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(3, 7);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(92, 22);
+            this.label45.TabIndex = 0;
+            this.label45.Text = "Username";
+            // 
+            // Lbl_NomeCognome_A
+            // 
+            this.Lbl_NomeCognome_A.AutoSize = true;
+            this.Lbl_NomeCognome_A.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_NomeCognome_A.Location = new System.Drawing.Point(5, 12);
+            this.Lbl_NomeCognome_A.Name = "Lbl_NomeCognome_A";
+            this.Lbl_NomeCognome_A.Size = new System.Drawing.Size(221, 38);
+            this.Lbl_NomeCognome_A.TabIndex = 0;
+            this.Lbl_NomeCognome_A.Text = "Nome Cognome";
+            // 
             // Lbl_A_Utenti
             // 
             this.Lbl_A_Utenti.AutoSize = true;
             this.Lbl_A_Utenti.BackColor = System.Drawing.Color.Gainsboro;
+            this.Lbl_A_Utenti.Enabled = false;
             this.Lbl_A_Utenti.Font = new System.Drawing.Font("Berlin Sans FB Demi", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Lbl_A_Utenti.Location = new System.Drawing.Point(110, 11);
             this.Lbl_A_Utenti.Name = "Lbl_A_Utenti";
@@ -5010,10 +5257,10 @@
             this.Albero_Eventi.Indent = 12;
             this.Albero_Eventi.Location = new System.Drawing.Point(0, 1);
             this.Albero_Eventi.Name = "Albero_Eventi";
-            treeNode4.Name = "Nodo0";
-            treeNode4.Text = "test";
+            treeNode2.Name = "Nodo0";
+            treeNode2.Text = "test";
             this.Albero_Eventi.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4});
+            treeNode2});
             this.Albero_Eventi.Size = new System.Drawing.Size(254, 381);
             this.Albero_Eventi.TabIndex = 26;
             this.Albero_Eventi.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Eventi_NodeMouseClick);
@@ -5052,32 +5299,6 @@
             this.Pannello_Prenotazione_A.Size = new System.Drawing.Size(885, 381);
             this.Pannello_Prenotazione_A.TabIndex = 29;
             this.Pannello_Prenotazione_A.Visible = false;
-            // 
-            // Pannello_A_Utente
-            // 
-            this.Pannello_A_Utente.Controls.Add(this.Elimina_Btn);
-            this.Pannello_A_Utente.Controls.Add(this.Admin);
-            this.Pannello_A_Utente.Controls.Add(this.Password_A);
-            this.Pannello_A_Utente.Controls.Add(this.panel7);
-            this.Pannello_A_Utente.Controls.Add(this.Telefono_A);
-            this.Pannello_A_Utente.Controls.Add(this.Email_A);
-            this.Pannello_A_Utente.Controls.Add(this.Nome_A);
-            this.Pannello_A_Utente.Controls.Add(this.Lbl_NomeCognome_A);
-            this.Pannello_A_Utente.Location = new System.Drawing.Point(263, 50);
-            this.Pannello_A_Utente.Name = "Pannello_A_Utente";
-            this.Pannello_A_Utente.Size = new System.Drawing.Size(885, 381);
-            this.Pannello_A_Utente.TabIndex = 30;
-            this.Pannello_A_Utente.Visible = false;
-            // 
-            // Lbl_NomeCognome_A
-            // 
-            this.Lbl_NomeCognome_A.AutoSize = true;
-            this.Lbl_NomeCognome_A.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_NomeCognome_A.Location = new System.Drawing.Point(5, 12);
-            this.Lbl_NomeCognome_A.Name = "Lbl_NomeCognome_A";
-            this.Lbl_NomeCognome_A.Size = new System.Drawing.Size(221, 38);
-            this.Lbl_NomeCognome_A.TabIndex = 0;
-            this.Lbl_NomeCognome_A.Text = "Nome Cognome";
             // 
             // Lbl_CodicePrenotazione_A
             // 
@@ -5561,226 +5782,6 @@
             this.SpettacoloEvento_Lbl.TabIndex = 0;
             this.SpettacoloEvento_Lbl.Text = "Titolo Evento";
             // 
-            // Admin
-            // 
-            this.Admin.Controls.Add(this.button151);
-            this.Admin.Controls.Add(this.Txt_PswAdmin);
-            this.Admin.Controls.Add(this.label22);
-            this.Admin.Location = new System.Drawing.Point(478, 212);
-            this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(376, 34);
-            this.Admin.TabIndex = 40;
-            this.Admin.Visible = false;
-            // 
-            // button151
-            // 
-            this.button151.Location = new System.Drawing.Point(311, 5);
-            this.button151.Name = "button151";
-            this.button151.Size = new System.Drawing.Size(62, 25);
-            this.button151.TabIndex = 28;
-            this.button151.Text = "Check";
-            this.button151.UseVisualStyleBackColor = true;
-            this.button151.Click += new System.EventHandler(this.btn_Admin_Check_Click);
-            // 
-            // Txt_PswAdmin
-            // 
-            this.Txt_PswAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_PswAdmin.Location = new System.Drawing.Point(140, 11);
-            this.Txt_PswAdmin.Name = "Txt_PswAdmin";
-            this.Txt_PswAdmin.PasswordChar = '*';
-            this.Txt_PswAdmin.Size = new System.Drawing.Size(165, 13);
-            this.Txt_PswAdmin.TabIndex = 28;
-            this.Txt_PswAdmin.UseSystemPasswordChar = true;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(5, 8);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(120, 18);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "Password Admin";
-            // 
-            // Password_A
-            // 
-            this.Password_A.Controls.Add(this.button152);
-            this.Password_A.Controls.Add(this.label39);
-            this.Password_A.Controls.Add(this.Txt_PswNew_A);
-            this.Password_A.Location = new System.Drawing.Point(30, 212);
-            this.Password_A.Name = "Password_A";
-            this.Password_A.Size = new System.Drawing.Size(430, 33);
-            this.Password_A.TabIndex = 39;
-            // 
-            // button152
-            // 
-            this.button152.Enabled = false;
-            this.button152.Location = new System.Drawing.Point(290, 4);
-            this.button152.Name = "button152";
-            this.button152.Size = new System.Drawing.Size(137, 25);
-            this.button152.TabIndex = 27;
-            this.button152.Text = "Modifica";
-            this.button152.UseVisualStyleBackColor = true;
-            this.button152.Click += new System.EventHandler(this.Modifica_Info);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(6, 5);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(89, 22);
-            this.label39.TabIndex = 26;
-            this.label39.Text = "Password";
-            // 
-            // Txt_PswNew_A
-            // 
-            this.Txt_PswNew_A.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_PswNew_A.Location = new System.Drawing.Point(119, 9);
-            this.Txt_PswNew_A.Name = "Txt_PswNew_A";
-            this.Txt_PswNew_A.PasswordChar = '*';
-            this.Txt_PswNew_A.Size = new System.Drawing.Size(165, 13);
-            this.Txt_PswNew_A.TabIndex = 25;
-            this.Txt_PswNew_A.UseSystemPasswordChar = true;
-            // 
-            // panel7
-            // 
-            this.panel7.Location = new System.Drawing.Point(30, 251);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(0, 0);
-            this.panel7.TabIndex = 38;
-            // 
-            // Telefono_A
-            // 
-            this.Telefono_A.Controls.Add(this.button153);
-            this.Telefono_A.Controls.Add(this.label41);
-            this.Telefono_A.Controls.Add(this.Txt_Telefono_A);
-            this.Telefono_A.Location = new System.Drawing.Point(30, 177);
-            this.Telefono_A.Name = "Telefono_A";
-            this.Telefono_A.Size = new System.Drawing.Size(430, 33);
-            this.Telefono_A.TabIndex = 37;
-            // 
-            // button153
-            // 
-            this.button153.Location = new System.Drawing.Point(290, 4);
-            this.button153.Name = "button153";
-            this.button153.Size = new System.Drawing.Size(137, 25);
-            this.button153.TabIndex = 10;
-            this.button153.Text = "Modifica";
-            this.button153.UseVisualStyleBackColor = true;
-            this.button153.Click += new System.EventHandler(this.Modifica_Info);
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(14, 4);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(81, 22);
-            this.label41.TabIndex = 6;
-            this.label41.Text = "Telefono";
-            // 
-            // Txt_Telefono_A
-            // 
-            this.Txt_Telefono_A.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Telefono_A.Location = new System.Drawing.Point(119, 9);
-            this.Txt_Telefono_A.MaxLength = 10;
-            this.Txt_Telefono_A.Name = "Txt_Telefono_A";
-            this.Txt_Telefono_A.Size = new System.Drawing.Size(165, 13);
-            this.Txt_Telefono_A.TabIndex = 7;
-            this.Txt_Telefono_A.Text = "telefono";
-            // 
-            // Email_A
-            // 
-            this.Email_A.Controls.Add(this.button154);
-            this.Email_A.Controls.Add(this.label43);
-            this.Email_A.Controls.Add(this.Txt_Email_A);
-            this.Email_A.Location = new System.Drawing.Point(30, 142);
-            this.Email_A.Name = "Email_A";
-            this.Email_A.Size = new System.Drawing.Size(430, 33);
-            this.Email_A.TabIndex = 36;
-            // 
-            // button154
-            // 
-            this.button154.Location = new System.Drawing.Point(290, 4);
-            this.button154.Name = "button154";
-            this.button154.Size = new System.Drawing.Size(137, 25);
-            this.button154.TabIndex = 9;
-            this.button154.Text = "Modifica";
-            this.button154.UseVisualStyleBackColor = true;
-            this.button154.Click += new System.EventHandler(this.Modifica_Info);
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(41, 5);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(54, 22);
-            this.label43.TabIndex = 2;
-            this.label43.Text = "Email";
-            // 
-            // Txt_Email_A
-            // 
-            this.Txt_Email_A.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Email_A.Location = new System.Drawing.Point(119, 9);
-            this.Txt_Email_A.Name = "Txt_Email_A";
-            this.Txt_Email_A.Size = new System.Drawing.Size(165, 13);
-            this.Txt_Email_A.TabIndex = 5;
-            this.Txt_Email_A.Text = "email";
-            // 
-            // Nome_A
-            // 
-            this.Nome_A.Controls.Add(this.button155);
-            this.Nome_A.Controls.Add(this.Txt_Username_A);
-            this.Nome_A.Controls.Add(this.label45);
-            this.Nome_A.Location = new System.Drawing.Point(30, 107);
-            this.Nome_A.Name = "Nome_A";
-            this.Nome_A.Size = new System.Drawing.Size(430, 33);
-            this.Nome_A.TabIndex = 35;
-            // 
-            // button155
-            // 
-            this.button155.Location = new System.Drawing.Point(290, 4);
-            this.button155.Name = "button155";
-            this.button155.Size = new System.Drawing.Size(137, 25);
-            this.button155.TabIndex = 8;
-            this.button155.Text = "Modifica";
-            this.button155.UseVisualStyleBackColor = true;
-            this.button155.Click += new System.EventHandler(this.Modifica_Info);
-            // 
-            // Txt_Username_A
-            // 
-            this.Txt_Username_A.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Username_A.Location = new System.Drawing.Point(119, 9);
-            this.Txt_Username_A.Name = "Txt_Username_A";
-            this.Txt_Username_A.Size = new System.Drawing.Size(165, 13);
-            this.Txt_Username_A.TabIndex = 3;
-            this.Txt_Username_A.Text = "nome visualizzato";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(3, 7);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(92, 22);
-            this.label45.TabIndex = 0;
-            this.label45.Text = "Username";
-            // 
-            // Elimina_Btn
-            // 
-            this.Elimina_Btn.BackColor = System.Drawing.Color.IndianRed;
-            this.Elimina_Btn.FlatAppearance.BorderSize = 0;
-            this.Elimina_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Elimina_Btn.Location = new System.Drawing.Point(806, 355);
-            this.Elimina_Btn.Name = "Elimina_Btn";
-            this.Elimina_Btn.Size = new System.Drawing.Size(75, 23);
-            this.Elimina_Btn.TabIndex = 41;
-            this.Elimina_Btn.Text = "Elimina";
-            this.Elimina_Btn.UseVisualStyleBackColor = false;
-            this.Elimina_Btn.Click += new System.EventHandler(this.Elimina_Btn_Click);
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -5872,13 +5873,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpettacoloImg_U_Pbox)).EndInit();
             this.Pannello_Admin.ResumeLayout(false);
             this.Pannello_Admin.PerformLayout();
+            this.Pannello_A_Utente.ResumeLayout(false);
+            this.Pannello_A_Utente.PerformLayout();
+            this.Admin.ResumeLayout(false);
+            this.Admin.PerformLayout();
+            this.Password_A.ResumeLayout(false);
+            this.Password_A.PerformLayout();
+            this.Telefono_A.ResumeLayout(false);
+            this.Telefono_A.PerformLayout();
+            this.Email_A.ResumeLayout(false);
+            this.Email_A.PerformLayout();
+            this.Nome_A.ResumeLayout(false);
+            this.Nome_A.PerformLayout();
             this.Tab_EventiUtenti.ResumeLayout(false);
             this.tabpage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.Pannello_Prenotazione_A.ResumeLayout(false);
             this.Pannello_Prenotazione_A.PerformLayout();
-            this.Pannello_A_Utente.ResumeLayout(false);
-            this.Pannello_A_Utente.PerformLayout();
             this.Group_Posti_A.ResumeLayout(false);
             this.InfoPosto_A.ResumeLayout(false);
             this.InfoPosto_A.PerformLayout();
@@ -5898,16 +5909,6 @@
             this.Group_IncassiEvento.PerformLayout();
             this.Group_IncassiTOTEvento.ResumeLayout(false);
             this.Group_IncassiTOTEvento.PerformLayout();
-            this.Admin.ResumeLayout(false);
-            this.Admin.PerformLayout();
-            this.Password_A.ResumeLayout(false);
-            this.Password_A.PerformLayout();
-            this.Telefono_A.ResumeLayout(false);
-            this.Telefono_A.PerformLayout();
-            this.Email_A.ResumeLayout(false);
-            this.Email_A.PerformLayout();
-            this.Nome_A.ResumeLayout(false);
-            this.Nome_A.PerformLayout();
             this.ResumeLayout(false);
 
         }
