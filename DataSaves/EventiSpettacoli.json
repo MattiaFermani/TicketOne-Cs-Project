@@ -1,0 +1,198 @@
+{
+  "Intelligenza Naturale": {
+    "luoghi": [
+      "Napoli - Stadio San Paolo",
+      "Bari - Stadio San Nicola",
+      "Bra - Stadio Attilio Bravi",
+      "Ivrea - Stadio Gino Pistoni"
+    ],
+    "date": [
+      "20/05/2025",
+      "05/08/2025",
+      "22/08/2025",
+      "11/09/2025"
+    ]
+  },
+  "Marcus Miller": {
+    "luoghi": [
+      "Lucca - Piazza Napoleone",
+      "Trieste - Teatro Lirico Giuseppe Verdi",
+      "Livorno - Stadio Armando Picchi",
+      "Novara - Stadio Silvio Piola"
+    ],
+    "date": [
+      "12/04/2025",
+      "08/07/2025",
+      "04/11/2025",
+      "14/09/2026"
+    ]
+  },
+  "LRDL Summer Tour 2025": {
+    "luoghi": [
+      "Mazara del Vallo - Stadio Nino Vaccara",
+      "Sciacca - Stadio Luigi Riccardo Gurrera",
+      "Ascoli Piceno - Stadio Cino e Lillo Del Duca",
+      "Latina - Stadio Domenico Francioni"
+    ],
+    "date": [
+      "24/08/2025",
+      "17/09/2025",
+      "18/08/2026",
+      "23/10/2026"
+    ]
+  },
+  "PalaJova": {
+    "luoghi": [
+      "Tortona - Stadio Fausto Coppi",
+      "Rimini - 105 Stadium",
+      "Piacenza - Stadio Leonardo Garilli",
+      "Gallipoli - Stadio Antonio Bianco"
+    ],
+    "date": [
+      "09/05/2025",
+      "02/06/2025",
+      "18/07/2025",
+      "26/12/2025"
+    ]
+  },
+  "Sophie and The Giants": {
+    "luoghi": [
+      "Savigliano - Stadio Comunale",
+      "Olbia - Stadio Bruno Nespoli",
+      "Ventimiglia - Stadio Simone Rizzato",
+      "Albenga - Stadio Annibale Riva"
+    ],
+    "date": [
+      "11/07/2025",
+      "16/07/2025",
+      "02/08/2025",
+      "03/04/2026"
+    ]
+  },
+  "Damme na mano Roma e Milano": {
+    "luoghi": [
+      "Tortona - Stadio Fausto Coppi",
+      "Tortona - Stadio Fausto Coppi",
+      "Foggia - Stadio Pino Zaccheria",
+      "Messina - Stadio San Filippo"
+    ],
+    "date": [
+      "15/06/2025",
+      "20/06/2025",
+      "28/08/2025",
+      "15/09/2025"
+    ]
+  },
+  "Games in Concert": {
+    "luoghi": [
+      "Novara - Stadio Silvio Piola",
+      "Frosinone - Stadio Benito Stirpe",
+      "Bra - Stadio Attilio Bravi",
+      "Alessandria - Stadio Giuseppe Moccagatta"
+    ],
+    "date": [
+      "24/08/2025",
+      "03/04/2026",
+      "10/09/2026",
+      "27/10/2026"
+    ]
+  },
+  "FASK tour estivo 2025": {
+    "luoghi": [
+      "Catanzaro - Stadio Nicola Ceravolo",
+      "Biella - Stadio Lamarmora",
+      "Savigliano - Stadio Comunale",
+      "Fossano - Stadio Angelo Pochissimo"
+    ],
+    "date": [
+      "07/05/2025",
+      "21/11/2025",
+      "05/07/2026",
+      "13/09/2026"
+    ]
+  },
+  "Prova A Prendermi": {
+    "luoghi": [
+      "Savona - Stadio Valerio Bacigalupo",
+      "Imperia - Stadio Nino Ciccione",
+      "Ivrea - Stadio Gino Pistoni",
+      "Bra - Stadio Attilio Bravi"
+    ],
+    "date": [
+      "18/12/2025",
+      "05/06/2026",
+      "22/07/2026",
+      "16/12/2026"
+    ]
+  },
+  "Vita Bassa": {
+    "luoghi": [
+      "Tortona - Stadio Fausto Coppi",
+      "Rende - Stadio Marco Lorenzon",
+      "Casale Monferrato - Stadio Natale Palli",
+      "Alghero - Stadio Mariotti"
+    ],
+    "date": [
+      "05/09/2025",
+      "26/04/2026",
+      "17/11/2026",
+      "01/12/2026"
+    ]
+  },
+  "Estate 2025": {
+    "luoghi": [
+      "Siena - Stadio Artemio Franchi",
+      "Parma - Teatro Regio",
+      "Cuneo - Stadio Fratelli Paschiero",
+      "Alba - Stadio Comunale"
+    ],
+    "date": [
+      "05/05/2025",
+      "09/10/2025",
+      "20/10/2025",
+      "27/10/2026"
+    ]
+  },
+  "Jimmy Sax and Symphonic Dance Orchestra": {
+    "luoghi": [
+      "San Marino - Stadio Olimpico",
+      "Palermo - Stadio Renzo Barbera",
+      "Savona - Stadio Valerio Bacigalupo",
+      "San Vito dei Normanni - Stadio Comunale"
+    ],
+    "date": [
+      "14/06/2026",
+      "26/08/2026",
+      "09/12/2026",
+      "20/12/2026"
+    ]
+  },
+  "2025 World Tour - Milano": {
+    "luoghi": [
+      "Corigliano Calabro - Stadio Comunale",
+      "Altamura - Stadio Tonino D'Angelo",
+      "San Marino - Stadio Olimpico",
+      "Sciacca - Stadio Luigi Riccardo Gurrera"
+    ],
+    "date": [
+      "14/07/2025",
+      "11/11/2025",
+      "07/06/2026",
+      "28/12/2026"
+    ]
+  },
+  "AC/DC - Powerup Tour": {
+    "luoghi": [
+      "Alba - Stadio Comunale",
+      "Verona - Arena di Verona",
+      "Cuneo - Stadio Fratelli Paschiero",
+      "Domodossola - Stadio Comunale"
+    ],
+    "date": [
+      "15/06/2025",
+      "19/08/2025",
+      "07/04/2026",
+      "09/11/2026"
+    ]
+  }
+}
