@@ -13,14 +13,10 @@ using System.Net.Mail;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
-
 namespace Biglietti_concerto
 {
-
-
     public partial class Form1 : Form
     {
-
         static string loggedNome = "";
         static string loggedTelefono = "";
         static string loggedEmail = "";
