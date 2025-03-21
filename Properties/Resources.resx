@@ -121,6 +121,9 @@
   <data name="Banconota 50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banconota 50.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="postepay1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\postepay1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Banconota 500" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banconota 500.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,17 +136,14 @@
   <data name="Banconota 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banconota 5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LRDL-summertour-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LRDL-summertour-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pinkfloydlegend-thedarksideofthemoon-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pinkfloydlegend-thedarksideofthemoon-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tony-effe-roma-milano-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tony-effe-roma-milano-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="andrea-pezzi-intelligenza-naturale-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\andrea-pezzi-intelligenza-naturale-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo visa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo visa1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blackpink-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blackpink-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,11 +163,17 @@
   <data name="palajova2025-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\palajova2025-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Mastercard1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mastercard1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="postepay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\postepay.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="jovanotti-biglietti-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jovanotti-biglietti-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Banconota 201" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banconota 201.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="prova-prendermi-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\prova-prendermi-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,6 +187,9 @@
   <data name="fask-summer-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fask-summer-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sophie_giants_biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sophie_giants_biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="jimmy-sax-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jimmy-sax-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,14 +202,20 @@
   <data name="marcus-miller-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marcus-miller-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="andrea-pezzi-intelligenza-naturale-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\andrea-pezzi-intelligenza-naturale-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Default_Img_Profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Default_Img_Profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Banconota 20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banconota 20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sophie_giants_biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sophie_giants_biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="googlepay1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\googlepay1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LRDL-summertour-biglietti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LRDL-summertour-biglietti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tim-burton-milano" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tim-burton-milano.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +235,7 @@
   <data name="applepay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\applepay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Banconota 201" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Banconota 201.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="applepay1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\applepay1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

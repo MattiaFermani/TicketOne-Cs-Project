@@ -10,5 +10,29 @@
     "Email": "s24909@iisve.it",
     "Role": "Admin",
     "Password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
+  },
+  {
+    "Nome": "Noemi",
+    "Cognome": "Burini",
+    "Nome Visualizzato": "noee15",
+    "Data di nascita": "15/04/2008",
+    "Comune": "ANCONA (AN)",
+    "Codice Fiscale": "BRNNMO08D55A271Y",
+    "Telefono": "3515706775",
+    "Email": "noemiburo15@gmail.com",
+    "Role": "Admin",
+    "Password": "3ec13115817a014a621e22b052993c86ed03ed69114f8413888f302d70e2d216"
+  },
+  {
+    "Nome": "Matteo",
+    "Cognome": "Scoccianti",
+    "Nome Visualizzato": "Scoccy",
+    "Data di nascita": "19/04/2008",
+    "Comune": "ANCONA (AN)",
+    "Codice Fiscale": "SCCMTT08D19A271K",
+    "Telefono": "",
+    "Email": "matteo@gmail.com",
+    "Role": "User",
+    "Password": "efca12869a209687583bef664c480b9016dfeafe337226de9f90174522b1b5ff"
   }
 ]
