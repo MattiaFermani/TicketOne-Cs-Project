@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("test");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("test");
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TickeTlon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -444,6 +444,7 @@
             this.SpettacoloEventoArtista_Lbl = new System.Windows.Forms.Label();
             this.SpettacoloEvento_Lbl = new System.Windows.Forms.Label();
             this.Pagamento_panel = new System.Windows.Forms.Panel();
+            this.btn_confermapagamento = new System.Windows.Forms.Button();
             this.group_contanti = new System.Windows.Forms.GroupBox();
             this.btn_20 = new System.Windows.Forms.Button();
             this.btn_10 = new System.Windows.Forms.Button();
@@ -453,7 +454,6 @@
             this.btn_50 = new System.Windows.Forms.Button();
             this.btn_500 = new System.Windows.Forms.Button();
             this.group_Carta = new System.Windows.Forms.GroupBox();
-            this.btn_confermapagamento = new System.Windows.Forms.Button();
             this.label49 = new System.Windows.Forms.Label();
             this.dtp_scadenzacarta = new System.Windows.Forms.DateTimePicker();
             this.txt_cvv = new System.Windows.Forms.TextBox();
@@ -470,6 +470,9 @@
             this.lbl_modalitàpagamento = new System.Windows.Forms.Label();
             this.rbtn_contanti = new System.Windows.Forms.RadioButton();
             this.rbtn_carta = new System.Windows.Forms.RadioButton();
+            this.Importo_Lbl = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblCountdown = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -549,6 +552,7 @@
             this.Pagamento_panel.SuspendLayout();
             this.group_contanti.SuspendLayout();
             this.group_Carta.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -560,6 +564,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.TickeTlon, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
@@ -4967,10 +4972,10 @@
             this.Albero_Prenotazioni_User.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Albero_Prenotazioni_User.Location = new System.Drawing.Point(0, 76);
             this.Albero_Prenotazioni_User.Name = "Albero_Prenotazioni_User";
-            treeNode3.Name = "Nodo0";
-            treeNode3.Text = "test";
+            treeNode7.Name = "Nodo0";
+            treeNode7.Text = "test";
             this.Albero_Prenotazioni_User.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            treeNode7});
             this.Albero_Prenotazioni_User.Size = new System.Drawing.Size(250, 326);
             this.Albero_Prenotazioni_User.TabIndex = 0;
             this.Albero_Prenotazioni_User.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Prenotazioni_User_NodeMouseClick);
@@ -5287,10 +5292,10 @@
             this.Albero_Eventi.Indent = 12;
             this.Albero_Eventi.Location = new System.Drawing.Point(0, 1);
             this.Albero_Eventi.Name = "Albero_Eventi";
-            treeNode4.Name = "Nodo0";
-            treeNode4.Text = "test";
+            treeNode8.Name = "Nodo0";
+            treeNode8.Text = "test";
             this.Albero_Eventi.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4});
+            treeNode8});
             this.Albero_Eventi.Size = new System.Drawing.Size(254, 381);
             this.Albero_Eventi.TabIndex = 26;
             this.Albero_Eventi.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Eventi_NodeMouseClick);
@@ -5815,6 +5820,7 @@
             // Pagamento_panel
             // 
             this.Pagamento_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pagamento_panel.Controls.Add(this.Importo_Lbl);
             this.Pagamento_panel.Controls.Add(this.btn_confermapagamento);
             this.Pagamento_panel.Controls.Add(this.group_contanti);
             this.Pagamento_panel.Controls.Add(this.group_Carta);
@@ -5825,7 +5831,16 @@
             this.Pagamento_panel.Name = "Pagamento_panel";
             this.Pagamento_panel.Size = new System.Drawing.Size(1469, 1055);
             this.Pagamento_panel.TabIndex = 17;
-            this.Pagamento_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Pagamento_panel_Paint);
+            // 
+            // btn_confermapagamento
+            // 
+            this.btn_confermapagamento.Location = new System.Drawing.Point(784, 361);
+            this.btn_confermapagamento.Name = "btn_confermapagamento";
+            this.btn_confermapagamento.Size = new System.Drawing.Size(169, 28);
+            this.btn_confermapagamento.TabIndex = 13;
+            this.btn_confermapagamento.Text = "Conferma pagamento";
+            this.btn_confermapagamento.UseVisualStyleBackColor = true;
+            this.btn_confermapagamento.Click += new System.EventHandler(this.btn_confermapagamento_Click);
             // 
             // group_contanti
             // 
@@ -5854,6 +5869,7 @@
             this.btn_20.Size = new System.Drawing.Size(78, 38);
             this.btn_20.TabIndex = 6;
             this.btn_20.UseVisualStyleBackColor = true;
+            this.btn_20.Click += new System.EventHandler(this.btn_Soldi);
             // 
             // btn_10
             // 
@@ -5865,6 +5881,7 @@
             this.btn_10.Size = new System.Drawing.Size(78, 38);
             this.btn_10.TabIndex = 5;
             this.btn_10.UseVisualStyleBackColor = true;
+            this.btn_10.Click += new System.EventHandler(this.btn_Soldi);
             // 
             // btn_5
             // 
@@ -5876,6 +5893,7 @@
             this.btn_5.Size = new System.Drawing.Size(78, 38);
             this.btn_5.TabIndex = 4;
             this.btn_5.UseVisualStyleBackColor = true;
+            this.btn_5.Click += new System.EventHandler(this.btn_Soldi);
             // 
             // btn_200
             // 
@@ -5887,6 +5905,7 @@
             this.btn_200.Size = new System.Drawing.Size(78, 38);
             this.btn_200.TabIndex = 3;
             this.btn_200.UseVisualStyleBackColor = true;
+            this.btn_200.Click += new System.EventHandler(this.btn_Soldi);
             // 
             // btn_100
             // 
@@ -5898,6 +5917,7 @@
             this.btn_100.Size = new System.Drawing.Size(78, 38);
             this.btn_100.TabIndex = 2;
             this.btn_100.UseVisualStyleBackColor = true;
+            this.btn_100.Click += new System.EventHandler(this.btn_Soldi);
             // 
             // btn_50
             // 
@@ -5909,6 +5929,7 @@
             this.btn_50.Size = new System.Drawing.Size(78, 38);
             this.btn_50.TabIndex = 1;
             this.btn_50.UseVisualStyleBackColor = true;
+            this.btn_50.Click += new System.EventHandler(this.btn_Soldi);
             // 
             // btn_500
             // 
@@ -5920,6 +5941,7 @@
             this.btn_500.Size = new System.Drawing.Size(78, 38);
             this.btn_500.TabIndex = 0;
             this.btn_500.UseVisualStyleBackColor = true;
+            this.btn_500.Click += new System.EventHandler(this.btn_Soldi);
             // 
             // group_Carta
             // 
@@ -5942,16 +5964,6 @@
             this.group_Carta.TabIndex = 3;
             this.group_Carta.TabStop = false;
             this.group_Carta.Text = "Carta";
-            // 
-            // btn_confermapagamento
-            // 
-            this.btn_confermapagamento.Location = new System.Drawing.Point(784, 361);
-            this.btn_confermapagamento.Name = "btn_confermapagamento";
-            this.btn_confermapagamento.Size = new System.Drawing.Size(169, 28);
-            this.btn_confermapagamento.TabIndex = 13;
-            this.btn_confermapagamento.Text = "Conferma pagamento";
-            this.btn_confermapagamento.UseVisualStyleBackColor = true;
-            this.btn_confermapagamento.Click += new System.EventHandler(this.btn_confermapagamento_Click);
             // 
             // label49
             // 
@@ -6005,7 +6017,6 @@
             this.label47.Size = new System.Drawing.Size(72, 13);
             this.label47.TabIndex = 7;
             this.label47.Text = "Numero Carta";
-            this.label47.Click += new System.EventHandler(this.label47_Click);
             // 
             // txt_nomeintestatario
             // 
@@ -6104,6 +6115,33 @@
             this.rbtn_carta.Text = "Carta";
             this.rbtn_carta.UseVisualStyleBackColor = true;
             this.rbtn_carta.CheckedChanged += new System.EventHandler(this.rbtn_carta_CheckedChanged);
+            // 
+            // Importo_Lbl
+            // 
+            this.Importo_Lbl.AutoSize = true;
+            this.Importo_Lbl.Location = new System.Drawing.Point(26, 152);
+            this.Importo_Lbl.Name = "Importo_Lbl";
+            this.Importo_Lbl.Size = new System.Drawing.Size(54, 13);
+            this.Importo_Lbl.TabIndex = 13;
+            this.Importo_Lbl.Text = "Importo = ";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.lblCountdown);
+            this.panel5.Location = new System.Drawing.Point(811, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(159, 54);
+            this.panel5.TabIndex = 14;
+            // 
+            // lblCountdown
+            // 
+            this.lblCountdown.AutoSize = true;
+            this.lblCountdown.Location = new System.Drawing.Point(33, 19);
+            this.lblCountdown.Name = "lblCountdown";
+            this.lblCountdown.Size = new System.Drawing.Size(41, 13);
+            this.lblCountdown.TabIndex = 0;
+            this.lblCountdown.Text = "label50";
+            this.lblCountdown.Visible = false;
             // 
             // Form1
             // 
@@ -6238,6 +6276,8 @@
             this.group_contanti.ResumeLayout(false);
             this.group_Carta.ResumeLayout(false);
             this.group_Carta.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6683,5 +6723,8 @@
         private System.Windows.Forms.Button btn_200;
         private System.Windows.Forms.Button btn_100;
         private System.Windows.Forms.Button btn_50;
+        private System.Windows.Forms.Label Importo_Lbl;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lblCountdown;
     }
 }
