@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading;
+using System.Threading; 
 using System.Net;
 using System.Net.Mail;
 using System.Windows.Forms;
@@ -161,7 +161,6 @@ namespace Biglietti_concerto
             this.Size = new System.Drawing.Size(1150, 485);
             Pannello_Principale.Size = new System.Drawing.Size(1151, 434);
             Pannello_Principale.Location = new Point(0, 54);
-            Pannello_Principale.BringToFront();
             Pannello_Posti.Size = new System.Drawing.Size(1151, 434);
             Pannello_Posti.Location = new Point(0, 54);
             Pannello_Login.Size = new System.Drawing.Size(1151, 434);
@@ -170,6 +169,9 @@ namespace Biglietti_concerto
             Pannello_Acc_User.Location = new Point(0, 54);
             Pannello_Admin.Size = new System.Drawing.Size(1151, 434);
             Pannello_Admin.Location = new Point(0, 54);
+            Pagamento_panel.Size = new System.Drawing.Size(1151, 434);
+            Pagamento_panel.Location = new Point(0, 54);
+            Pannello_Principale.BringToFront();
             AggiornaDisponibilitaTooltip();
             spettacoliToolTip.AutoPopDelay = 5000;
             spettacoliToolTip.InitialDelay = 300;
@@ -665,7 +667,7 @@ namespace Biglietti_concerto
                     }
                 }
 
-                MessageBox.Show($"{PostiSelezionati} Posti acquistati con successo!");
+               // MessageBox.Show($"{PostiSelezionati} Posti acquistati con successo!");
                 Prenotazioni(TitoloSpettacolo_Lbl.Text, $"{Luogo_Lst.SelectedItem.ToString()} -> {Data_Lst.SelectedItem.ToString()}", postiSelezionati.Values.SelectMany(list => list).ToList());
                 postiSelezionati.Clear();
                 PostiSelezionati = 0;
@@ -677,11 +679,10 @@ namespace Biglietti_concerto
                 MessageBox.Show("Nessun posto selezionato");
             }
 
-            Pannello_Principale.BringToFront();
             Tab_Info_Posti.SelectedIndex = 0;
             Data_Lst.SelectedIndex = -1;
             Luogo_Lst.SelectedIndex = -1;
-            Pannello_Posti.Visible = false;
+            Pagamento_panel.BringToFront();
             CaricaPosti("Default", "Default", "Default");
         }
         private void Prenotazioni(string TitoloSpettacolo, string Evento, List<Button> posti)
@@ -1100,11 +1101,8 @@ namespace Biglietti_concerto
             {
                 sesso = "M";
             }
-            try
-            {
+            if(Comuni_Lst.SelectedIndex != -1)
                 comune = Comuni_Lst.SelectedItem.ToString();
-            }
-            catch { }
             if (string.Equals(txt_codicefiscale.Text, CalcCodiceFiscale(nome.ToUpper(), cognome.ToUpper(), dataNascita, sesso.ToUpper(), comune), StringComparison.OrdinalIgnoreCase))
             {
                 txt_codicefiscale.BackColor = Color.PaleGreen;
@@ -1850,5 +1848,9 @@ namespace Biglietti_concerto
             }
         }
 
+        private void Pagamento_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

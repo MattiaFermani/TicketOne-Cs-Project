@@ -218,5 +218,20 @@
   <ItemGroup>
     <None Include="Resources\googlepay.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo visa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mastercard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\postepay1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\googlepay1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applepay1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
