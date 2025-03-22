@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("test");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("test");
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TickeTlon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -444,13 +444,23 @@
             this.SpettacoloEventoArtista_Lbl = new System.Windows.Forms.Label();
             this.SpettacoloEvento_Lbl = new System.Windows.Forms.Label();
             this.Pagamento_panel = new System.Windows.Forms.Panel();
+            this.group_contanti = new System.Windows.Forms.GroupBox();
+            this.btn_20 = new System.Windows.Forms.Button();
+            this.btn_10 = new System.Windows.Forms.Button();
+            this.btn_5 = new System.Windows.Forms.Button();
+            this.btn_200 = new System.Windows.Forms.Button();
+            this.btn_100 = new System.Windows.Forms.Button();
+            this.btn_50 = new System.Windows.Forms.Button();
+            this.btn_500 = new System.Windows.Forms.Button();
             this.group_Carta = new System.Windows.Forms.GroupBox();
+            this.btn_confermapagamento = new System.Windows.Forms.Button();
+            this.label49 = new System.Windows.Forms.Label();
             this.dtp_scadenzacarta = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_cvv = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_numcarta = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_nomeintestatario = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.btn_applepay = new System.Windows.Forms.Button();
             this.btn_mastercard = new System.Windows.Forms.Button();
@@ -537,6 +547,7 @@
             this.Group_IncassiEvento.SuspendLayout();
             this.Group_IncassiTOTEvento.SuspendLayout();
             this.Pagamento_panel.SuspendLayout();
+            this.group_contanti.SuspendLayout();
             this.group_Carta.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -860,10 +871,10 @@
             this.Pgn_Informazioni.Controls.Add(this.groupBox1);
             this.Pgn_Informazioni.Controls.Add(this.Img_Info);
             this.Pgn_Informazioni.Controls.Add(this.TitoloArtista);
-            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Informazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Informazioni.Name = "Pgn_Informazioni";
             this.Pgn_Informazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Informazioni.Size = new System.Drawing.Size(102, 405);
+            this.Pgn_Informazioni.Size = new System.Drawing.Size(102, 408);
             this.Pgn_Informazioni.TabIndex = 0;
             this.Pgn_Informazioni.Text = "Informazioni";
             // 
@@ -886,7 +897,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(284, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 25);
+            this.label2.Size = new System.Drawing.Size(44, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Data";
             // 
@@ -896,7 +907,7 @@
             this.Data_Lst.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Data_Lst.Enabled = false;
             this.Data_Lst.FormattingEnabled = true;
-            this.Data_Lst.ItemHeight = 25;
+            this.Data_Lst.ItemHeight = 20;
             this.Data_Lst.Location = new System.Drawing.Point(288, 55);
             this.Data_Lst.Name = "Data_Lst";
             this.Data_Lst.Size = new System.Drawing.Size(184, 100);
@@ -908,7 +919,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 25);
+            this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Luogo";
             // 
@@ -918,7 +929,7 @@
             this.Luogo_Lst.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Luogo_Lst.FormattingEnabled = true;
             this.Luogo_Lst.HorizontalScrollbar = true;
-            this.Luogo_Lst.ItemHeight = 25;
+            this.Luogo_Lst.ItemHeight = 20;
             this.Luogo_Lst.Location = new System.Drawing.Point(13, 55);
             this.Luogo_Lst.Name = "Luogo_Lst";
             this.Luogo_Lst.Size = new System.Drawing.Size(281, 100);
@@ -961,7 +972,7 @@
             this.Artista_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Artista_Lbl.Location = new System.Drawing.Point(9, 71);
             this.Artista_Lbl.Name = "Artista_Lbl";
-            this.Artista_Lbl.Size = new System.Drawing.Size(67, 25);
+            this.Artista_Lbl.Size = new System.Drawing.Size(55, 20);
             this.Artista_Lbl.TabIndex = 1;
             this.Artista_Lbl.Text = "Artista";
             // 
@@ -971,17 +982,17 @@
             this.TitoloSpettacolo_Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitoloSpettacolo_Lbl.Location = new System.Drawing.Point(7, 26);
             this.TitoloSpettacolo_Lbl.Name = "TitoloSpettacolo_Lbl";
-            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(115, 42);
+            this.TitoloSpettacolo_Lbl.Size = new System.Drawing.Size(95, 36);
             this.TitoloSpettacolo_Lbl.TabIndex = 0;
             this.TitoloSpettacolo_Lbl.Text = "Titolo";
             // 
             // Pgn_SelezionePosti
             // 
             this.Pgn_SelezionePosti.Controls.Add(this.Panel_Seats);
-            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_SelezionePosti.Location = new System.Drawing.Point(4, 22);
             this.Pgn_SelezionePosti.Name = "Pgn_SelezionePosti";
             this.Pgn_SelezionePosti.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(102, 405);
+            this.Pgn_SelezionePosti.Size = new System.Drawing.Size(102, 408);
             this.Pgn_SelezionePosti.TabIndex = 1;
             this.Pgn_SelezionePosti.Tag = "Normal";
             this.Pgn_SelezionePosti.Text = "Selezione Posti";
@@ -4097,10 +4108,10 @@
             this.Pgn_Login.Controls.Add(this.txt_L_Password);
             this.Pgn_Login.Controls.Add(this.txt_L_Email);
             this.Pgn_Login.Controls.Add(this.Login_Btn);
-            this.Pgn_Login.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Login.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Login.Name = "Pgn_Login";
             this.Pgn_Login.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Login.Size = new System.Drawing.Size(119, 405);
+            this.Pgn_Login.Size = new System.Drawing.Size(119, 408);
             this.Pgn_Login.TabIndex = 1;
             this.Pgn_Login.Text = "Login";
             this.Pgn_Login.UseVisualStyleBackColor = true;
@@ -4122,7 +4133,7 @@
             this.Lbl_register.ForeColor = System.Drawing.Color.RoyalBlue;
             this.Lbl_register.Location = new System.Drawing.Point(457, 287);
             this.Lbl_register.Name = "Lbl_register";
-            this.Lbl_register.Size = new System.Drawing.Size(232, 17);
+            this.Lbl_register.Size = new System.Drawing.Size(176, 13);
             this.Lbl_register.TabIndex = 23;
             this.Lbl_register.Text = "Non hai un Account? Registrati ora!";
             this.Lbl_register.Click += new System.EventHandler(this.Lbl_register_Click);
@@ -4132,7 +4143,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(418, 155);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(170, 16);
+            this.label15.Size = new System.Drawing.Size(134, 13);
             this.label15.TabIndex = 22;
             this.label15.Text = "Email, Username, Telefono";
             // 
@@ -4141,7 +4152,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(418, 208);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 16);
+            this.label10.Size = new System.Drawing.Size(53, 13);
             this.label10.TabIndex = 21;
             this.label10.Text = "Password";
             // 
@@ -4150,7 +4161,7 @@
             this.txt_L_Password.Location = new System.Drawing.Point(421, 224);
             this.txt_L_Password.Name = "txt_L_Password";
             this.txt_L_Password.PasswordChar = '*';
-            this.txt_L_Password.Size = new System.Drawing.Size(253, 22);
+            this.txt_L_Password.Size = new System.Drawing.Size(253, 20);
             this.txt_L_Password.TabIndex = 18;
             this.txt_L_Password.UseSystemPasswordChar = true;
             this.txt_L_Password.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_L_Password_PreviewKeyDown);
@@ -4159,7 +4170,7 @@
             // 
             this.txt_L_Email.Location = new System.Drawing.Point(421, 171);
             this.txt_L_Email.Name = "txt_L_Email";
-            this.txt_L_Email.Size = new System.Drawing.Size(253, 22);
+            this.txt_L_Email.Size = new System.Drawing.Size(253, 20);
             this.txt_L_Email.TabIndex = 14;
             this.txt_L_Email.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_L_Email_PreviewKeyDown);
             // 
@@ -4199,10 +4210,10 @@
             this.Pgn_Register.Controls.Add(this.label4);
             this.Pgn_Register.Controls.Add(this.txt_nome);
             this.Pgn_Register.Controls.Add(this.label3);
-            this.Pgn_Register.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Register.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Register.Name = "Pgn_Register";
             this.Pgn_Register.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Register.Size = new System.Drawing.Size(119, 405);
+            this.Pgn_Register.Size = new System.Drawing.Size(119, 408);
             this.Pgn_Register.TabIndex = 0;
             this.Pgn_Register.Text = "Registrazione";
             this.Pgn_Register.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pgn_Register_MouseMove);
@@ -4223,7 +4234,7 @@
             this.lbl_admin.AutoSize = true;
             this.lbl_admin.Location = new System.Drawing.Point(618, 310);
             this.lbl_admin.Name = "lbl_admin";
-            this.lbl_admin.Size = new System.Drawing.Size(159, 16);
+            this.lbl_admin.Size = new System.Drawing.Size(124, 13);
             this.lbl_admin.TabIndex = 21;
             this.lbl_admin.Text = "Password Amministratore";
             this.lbl_admin.Visible = false;
@@ -4233,7 +4244,7 @@
             this.txb_psw_admin.Location = new System.Drawing.Point(621, 326);
             this.txb_psw_admin.Name = "txb_psw_admin";
             this.txb_psw_admin.PasswordChar = '*';
-            this.txb_psw_admin.Size = new System.Drawing.Size(253, 22);
+            this.txb_psw_admin.Size = new System.Drawing.Size(253, 20);
             this.txb_psw_admin.TabIndex = 28;
             this.txb_psw_admin.UseSystemPasswordChar = true;
             this.txb_psw_admin.Visible = false;
@@ -4243,7 +4254,7 @@
             this.Chk_IsAdmin.AutoSize = true;
             this.Chk_IsAdmin.Location = new System.Drawing.Point(621, 273);
             this.Chk_IsAdmin.Name = "Chk_IsAdmin";
-            this.Chk_IsAdmin.Size = new System.Drawing.Size(87, 20);
+            this.Chk_IsAdmin.Size = new System.Drawing.Size(72, 17);
             this.Chk_IsAdmin.TabIndex = 27;
             this.Chk_IsAdmin.Text = "Is Admin?";
             this.Chk_IsAdmin.UseVisualStyleBackColor = true;
@@ -4264,7 +4275,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(658, 91);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 16);
+            this.label14.Size = new System.Drawing.Size(55, 13);
             this.label14.TabIndex = 25;
             this.label14.Text = "Username";
             // 
@@ -4272,7 +4283,7 @@
             // 
             this.txt_nome_visualizzato.Location = new System.Drawing.Point(661, 107);
             this.txt_nome_visualizzato.Name = "txt_nome_visualizzato";
-            this.txt_nome_visualizzato.Size = new System.Drawing.Size(204, 22);
+            this.txt_nome_visualizzato.Size = new System.Drawing.Size(204, 20);
             this.txt_nome_visualizzato.TabIndex = 24;
             // 
             // label12
@@ -4280,7 +4291,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(545, 216);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(173, 16);
+            this.label12.Size = new System.Drawing.Size(137, 13);
             this.label12.TabIndex = 23;
             this.label12.Text = "Telefono - Non Obbligatorio";
             // 
@@ -4289,7 +4300,7 @@
             this.txt_telefono.Location = new System.Drawing.Point(548, 232);
             this.txt_telefono.MaxLength = 10;
             this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(204, 22);
+            this.txt_telefono.Size = new System.Drawing.Size(204, 20);
             this.txt_telefono.TabIndex = 22;
             // 
             // groupBox2
@@ -4310,7 +4321,7 @@
             this.txt_password.Location = new System.Drawing.Point(6, 19);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
-            this.txt_password.Size = new System.Drawing.Size(253, 22);
+            this.txt_password.Size = new System.Drawing.Size(253, 20);
             this.txt_password.TabIndex = 17;
             this.txt_password.UseSystemPasswordChar = true;
             // 
@@ -4319,7 +4330,7 @@
             this.txt_confermapsw.Location = new System.Drawing.Point(6, 72);
             this.txt_confermapsw.Name = "txt_confermapsw";
             this.txt_confermapsw.PasswordChar = '*';
-            this.txt_confermapsw.Size = new System.Drawing.Size(253, 22);
+            this.txt_confermapsw.Size = new System.Drawing.Size(253, 20);
             this.txt_confermapsw.TabIndex = 18;
             this.txt_confermapsw.UseSystemPasswordChar = true;
             this.txt_confermapsw.TextChanged += new System.EventHandler(this.txt_confermapsw_TextChanged);
@@ -4329,7 +4340,7 @@
             this.Lbl_ConfermaPsw.AutoSize = true;
             this.Lbl_ConfermaPsw.Location = new System.Drawing.Point(6, 56);
             this.Lbl_ConfermaPsw.Name = "Lbl_ConfermaPsw";
-            this.Lbl_ConfermaPsw.Size = new System.Drawing.Size(128, 16);
+            this.Lbl_ConfermaPsw.Size = new System.Drawing.Size(101, 13);
             this.Lbl_ConfermaPsw.TabIndex = 20;
             this.Lbl_ConfermaPsw.Text = "Conferma Password";
             // 
@@ -4349,7 +4360,7 @@
             this.Female_Rdb.AutoSize = true;
             this.Female_Rdb.Location = new System.Drawing.Point(119, 14);
             this.Female_Rdb.Name = "Female_Rdb";
-            this.Female_Rdb.Size = new System.Drawing.Size(84, 20);
+            this.Female_Rdb.Size = new System.Drawing.Size(67, 17);
             this.Female_Rdb.TabIndex = 1;
             this.Female_Rdb.TabStop = true;
             this.Female_Rdb.Text = "Femmina";
@@ -4360,7 +4371,7 @@
             this.Male_Rdb.AutoSize = true;
             this.Male_Rdb.Location = new System.Drawing.Point(22, 14);
             this.Male_Rdb.Name = "Male_Rdb";
-            this.Male_Rdb.Size = new System.Drawing.Size(79, 20);
+            this.Male_Rdb.Size = new System.Drawing.Size(65, 17);
             this.Male_Rdb.TabIndex = 0;
             this.Male_Rdb.TabStop = true;
             this.Male_Rdb.Text = "Maschio";
@@ -4371,7 +4382,7 @@
             this.txt_codicefiscale.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_codicefiscale.Location = new System.Drawing.Point(547, 192);
             this.txt_codicefiscale.Name = "txt_codicefiscale";
-            this.txt_codicefiscale.Size = new System.Drawing.Size(204, 22);
+            this.txt_codicefiscale.Size = new System.Drawing.Size(204, 20);
             this.txt_codicefiscale.TabIndex = 15;
             this.txt_codicefiscale.TextChanged += new System.EventHandler(this.txt_codicefiscale_TextChanged);
             // 
@@ -4380,7 +4391,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(544, 176);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 16);
+            this.label8.Size = new System.Drawing.Size(73, 13);
             this.label8.TabIndex = 14;
             this.label8.Text = "Codice fiscale";
             // 
@@ -4388,7 +4399,7 @@
             // 
             this.txt_email.Location = new System.Drawing.Point(338, 232);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(204, 22);
+            this.txt_email.Size = new System.Drawing.Size(204, 20);
             this.txt_email.TabIndex = 13;
             // 
             // label7
@@ -4396,7 +4407,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(335, 216);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 16);
+            this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "Email";
             // 
@@ -4417,7 +4428,7 @@
             this.Comuni_Lst.FormattingEnabled = true;
             this.Comuni_Lst.Location = new System.Drawing.Point(338, 146);
             this.Comuni_Lst.Name = "Comuni_Lst";
-            this.Comuni_Lst.Size = new System.Drawing.Size(204, 24);
+            this.Comuni_Lst.Size = new System.Drawing.Size(204, 21);
             this.Comuni_Lst.TabIndex = 10;
             // 
             // label6
@@ -4425,7 +4436,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(335, 130);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 16);
+            this.label6.Size = new System.Drawing.Size(94, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "Comune di nascita";
             // 
@@ -4434,7 +4445,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(545, 130);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 16);
+            this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Data di nascita";
             // 
@@ -4443,14 +4454,14 @@
             this.dtp_nascita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_nascita.Location = new System.Drawing.Point(548, 146);
             this.dtp_nascita.Name = "dtp_nascita";
-            this.dtp_nascita.Size = new System.Drawing.Size(204, 22);
+            this.dtp_nascita.Size = new System.Drawing.Size(204, 20);
             this.dtp_nascita.TabIndex = 6;
             // 
             // txt_cognome
             // 
             this.txt_cognome.Location = new System.Drawing.Point(450, 107);
             this.txt_cognome.Name = "txt_cognome";
-            this.txt_cognome.Size = new System.Drawing.Size(205, 22);
+            this.txt_cognome.Size = new System.Drawing.Size(205, 20);
             this.txt_cognome.TabIndex = 3;
             // 
             // label4
@@ -4458,7 +4469,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(449, 91);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 16);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Cognome";
             // 
@@ -4466,7 +4477,7 @@
             // 
             this.txt_nome.Location = new System.Drawing.Point(242, 107);
             this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(204, 22);
+            this.txt_nome.Size = new System.Drawing.Size(204, 20);
             this.txt_nome.TabIndex = 1;
             // 
             // label3
@@ -4474,7 +4485,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(240, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Nome";
             // 
@@ -4509,10 +4520,10 @@
             this.Pgn_Profilo.Controls.Add(this.label19);
             this.Pgn_Profilo.Controls.Add(this.Lbl_Role);
             this.Pgn_Profilo.Controls.Add(this.Btn_Logout);
-            this.Pgn_Profilo.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Profilo.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Profilo.Name = "Pgn_Profilo";
             this.Pgn_Profilo.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Profilo.Size = new System.Drawing.Size(1147, 422);
+            this.Pgn_Profilo.Size = new System.Drawing.Size(1147, 425);
             this.Pgn_Profilo.TabIndex = 0;
             this.Pgn_Profilo.Text = "Profilo";
             this.Pgn_Profilo.UseVisualStyleBackColor = true;
@@ -4554,7 +4565,7 @@
             this.txt_VerPsw.Location = new System.Drawing.Point(140, 11);
             this.txt_VerPsw.Name = "txt_VerPsw";
             this.txt_VerPsw.PasswordChar = '*';
-            this.txt_VerPsw.Size = new System.Drawing.Size(165, 15);
+            this.txt_VerPsw.Size = new System.Drawing.Size(165, 13);
             this.txt_VerPsw.TabIndex = 28;
             this.txt_VerPsw.UseSystemPasswordChar = true;
             // 
@@ -4604,7 +4615,7 @@
             this.txt_A_Password.Location = new System.Drawing.Point(119, 9);
             this.txt_A_Password.Name = "txt_A_Password";
             this.txt_A_Password.PasswordChar = '*';
-            this.txt_A_Password.Size = new System.Drawing.Size(165, 15);
+            this.txt_A_Password.Size = new System.Drawing.Size(165, 13);
             this.txt_A_Password.TabIndex = 25;
             this.txt_A_Password.UseSystemPasswordChar = true;
             // 
@@ -4651,7 +4662,7 @@
             this.txt_A_Telefono.Location = new System.Drawing.Point(119, 9);
             this.txt_A_Telefono.MaxLength = 10;
             this.txt_A_Telefono.Name = "txt_A_Telefono";
-            this.txt_A_Telefono.Size = new System.Drawing.Size(165, 15);
+            this.txt_A_Telefono.Size = new System.Drawing.Size(165, 13);
             this.txt_A_Telefono.TabIndex = 7;
             this.txt_A_Telefono.Text = "telefono";
             // 
@@ -4690,7 +4701,7 @@
             this.txt_A_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_A_Email.Location = new System.Drawing.Point(119, 9);
             this.txt_A_Email.Name = "txt_A_Email";
-            this.txt_A_Email.Size = new System.Drawing.Size(165, 15);
+            this.txt_A_Email.Size = new System.Drawing.Size(165, 13);
             this.txt_A_Email.TabIndex = 5;
             this.txt_A_Email.Text = "email";
             // 
@@ -4719,7 +4730,7 @@
             this.txt_A_Nome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_A_Nome.Location = new System.Drawing.Point(119, 9);
             this.txt_A_Nome.Name = "txt_A_Nome";
-            this.txt_A_Nome.Size = new System.Drawing.Size(165, 15);
+            this.txt_A_Nome.Size = new System.Drawing.Size(165, 13);
             this.txt_A_Nome.TabIndex = 3;
             this.txt_A_Nome.Text = "nome visualizzato";
             // 
@@ -4774,10 +4785,10 @@
             this.Pgn_Prenotazioni.Controls.Add(this.label33);
             this.Pgn_Prenotazioni.Controls.Add(this.Pannello_Prenotazione);
             this.Pgn_Prenotazioni.Controls.Add(this.Albero_Prenotazioni_User);
-            this.Pgn_Prenotazioni.Location = new System.Drawing.Point(4, 25);
+            this.Pgn_Prenotazioni.Location = new System.Drawing.Point(4, 22);
             this.Pgn_Prenotazioni.Name = "Pgn_Prenotazioni";
             this.Pgn_Prenotazioni.Padding = new System.Windows.Forms.Padding(3);
-            this.Pgn_Prenotazioni.Size = new System.Drawing.Size(1147, 422);
+            this.Pgn_Prenotazioni.Size = new System.Drawing.Size(1147, 425);
             this.Pgn_Prenotazioni.TabIndex = 1;
             this.Pgn_Prenotazioni.Text = "Prenotazioni";
             this.Pgn_Prenotazioni.UseVisualStyleBackColor = true;
@@ -4915,7 +4926,7 @@
             this.Lbl_CodicePrenotazione_U.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_CodicePrenotazione_U.Location = new System.Drawing.Point(669, 8);
             this.Lbl_CodicePrenotazione_U.Name = "Lbl_CodicePrenotazione_U";
-            this.Lbl_CodicePrenotazione_U.Size = new System.Drawing.Size(126, 47);
+            this.Lbl_CodicePrenotazione_U.Size = new System.Drawing.Size(101, 38);
             this.Lbl_CodicePrenotazione_U.TabIndex = 16;
             this.Lbl_CodicePrenotazione_U.Text = "Codice";
             // 
@@ -4937,7 +4948,7 @@
             this.ArtistaSpettacolo_U_Lbl.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ArtistaSpettacolo_U_Lbl.Location = new System.Drawing.Point(17, 49);
             this.ArtistaSpettacolo_U_Lbl.Name = "ArtistaSpettacolo_U_Lbl";
-            this.ArtistaSpettacolo_U_Lbl.Size = new System.Drawing.Size(227, 37);
+            this.ArtistaSpettacolo_U_Lbl.Size = new System.Drawing.Size(183, 30);
             this.ArtistaSpettacolo_U_Lbl.TabIndex = 12;
             this.ArtistaSpettacolo_U_Lbl.Text = "Artista Spettacolo";
             // 
@@ -4947,7 +4958,7 @@
             this.TitoloEvento_U_Lbl.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitoloEvento_U_Lbl.Location = new System.Drawing.Point(15, 11);
             this.TitoloEvento_U_Lbl.Name = "TitoloEvento_U_Lbl";
-            this.TitoloEvento_U_Lbl.Size = new System.Drawing.Size(224, 47);
+            this.TitoloEvento_U_Lbl.Size = new System.Drawing.Size(178, 38);
             this.TitoloEvento_U_Lbl.TabIndex = 1;
             this.TitoloEvento_U_Lbl.Text = "Titolo Evento";
             // 
@@ -4956,10 +4967,10 @@
             this.Albero_Prenotazioni_User.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Albero_Prenotazioni_User.Location = new System.Drawing.Point(0, 76);
             this.Albero_Prenotazioni_User.Name = "Albero_Prenotazioni_User";
-            treeNode1.Name = "Nodo0";
-            treeNode1.Text = "test";
+            treeNode3.Name = "Nodo0";
+            treeNode3.Text = "test";
             this.Albero_Prenotazioni_User.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            treeNode3});
             this.Albero_Prenotazioni_User.Size = new System.Drawing.Size(250, 326);
             this.Albero_Prenotazioni_User.TabIndex = 0;
             this.Albero_Prenotazioni_User.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Prenotazioni_User_NodeMouseClick);
@@ -5035,7 +5046,7 @@
             this.Txt_PswAdmin.Location = new System.Drawing.Point(140, 11);
             this.Txt_PswAdmin.Name = "Txt_PswAdmin";
             this.Txt_PswAdmin.PasswordChar = '*';
-            this.Txt_PswAdmin.Size = new System.Drawing.Size(165, 15);
+            this.Txt_PswAdmin.Size = new System.Drawing.Size(165, 13);
             this.Txt_PswAdmin.TabIndex = 28;
             this.Txt_PswAdmin.UseSystemPasswordChar = true;
             // 
@@ -5086,7 +5097,7 @@
             this.Txt_PswNew_A.Location = new System.Drawing.Point(119, 9);
             this.Txt_PswNew_A.Name = "Txt_PswNew_A";
             this.Txt_PswNew_A.PasswordChar = '*';
-            this.Txt_PswNew_A.Size = new System.Drawing.Size(165, 15);
+            this.Txt_PswNew_A.Size = new System.Drawing.Size(165, 13);
             this.Txt_PswNew_A.TabIndex = 25;
             this.Txt_PswNew_A.UseSystemPasswordChar = true;
             // 
@@ -5133,7 +5144,7 @@
             this.Txt_Telefono_A.Location = new System.Drawing.Point(119, 9);
             this.Txt_Telefono_A.MaxLength = 10;
             this.Txt_Telefono_A.Name = "Txt_Telefono_A";
-            this.Txt_Telefono_A.Size = new System.Drawing.Size(165, 15);
+            this.Txt_Telefono_A.Size = new System.Drawing.Size(165, 13);
             this.Txt_Telefono_A.TabIndex = 7;
             this.Txt_Telefono_A.Text = "telefono";
             // 
@@ -5172,7 +5183,7 @@
             this.Txt_Email_A.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Email_A.Location = new System.Drawing.Point(119, 9);
             this.Txt_Email_A.Name = "Txt_Email_A";
-            this.Txt_Email_A.Size = new System.Drawing.Size(165, 15);
+            this.Txt_Email_A.Size = new System.Drawing.Size(165, 13);
             this.Txt_Email_A.TabIndex = 5;
             this.Txt_Email_A.Text = "email";
             // 
@@ -5201,7 +5212,7 @@
             this.Txt_Username_A.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Username_A.Location = new System.Drawing.Point(119, 9);
             this.Txt_Username_A.Name = "Txt_Username_A";
-            this.Txt_Username_A.Size = new System.Drawing.Size(165, 15);
+            this.Txt_Username_A.Size = new System.Drawing.Size(165, 13);
             this.Txt_Username_A.TabIndex = 3;
             this.Txt_Username_A.Text = "nome visualizzato";
             // 
@@ -5221,7 +5232,7 @@
             this.Lbl_NomeCognome_A.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_NomeCognome_A.Location = new System.Drawing.Point(5, 12);
             this.Lbl_NomeCognome_A.Name = "Lbl_NomeCognome_A";
-            this.Lbl_NomeCognome_A.Size = new System.Drawing.Size(278, 47);
+            this.Lbl_NomeCognome_A.Size = new System.Drawing.Size(221, 38);
             this.Lbl_NomeCognome_A.TabIndex = 0;
             this.Lbl_NomeCognome_A.Text = "Nome Cognome";
             // 
@@ -5262,10 +5273,10 @@
             // tabpage1
             // 
             this.tabpage1.Controls.Add(this.Albero_Eventi);
-            this.tabpage1.Location = new System.Drawing.Point(4, 25);
+            this.tabpage1.Location = new System.Drawing.Point(4, 22);
             this.tabpage1.Name = "tabpage1";
             this.tabpage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpage1.Size = new System.Drawing.Size(250, 378);
+            this.tabpage1.Size = new System.Drawing.Size(250, 381);
             this.tabpage1.TabIndex = 0;
             this.tabpage1.Text = "tabPage1";
             this.tabpage1.UseVisualStyleBackColor = true;
@@ -5276,10 +5287,10 @@
             this.Albero_Eventi.Indent = 12;
             this.Albero_Eventi.Location = new System.Drawing.Point(0, 1);
             this.Albero_Eventi.Name = "Albero_Eventi";
-            treeNode2.Name = "Nodo0";
-            treeNode2.Text = "test";
+            treeNode4.Name = "Nodo0";
+            treeNode4.Text = "test";
             this.Albero_Eventi.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode4});
             this.Albero_Eventi.Size = new System.Drawing.Size(254, 381);
             this.Albero_Eventi.TabIndex = 26;
             this.Albero_Eventi.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Eventi_NodeMouseClick);
@@ -5287,10 +5298,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.Lista_Utenti);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(250, 378);
+            this.tabPage2.Size = new System.Drawing.Size(250, 381);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -5325,7 +5336,7 @@
             this.Lbl_CodicePrenotazione_A.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_CodicePrenotazione_A.Location = new System.Drawing.Point(765, 12);
             this.Lbl_CodicePrenotazione_A.Name = "Lbl_CodicePrenotazione_A";
-            this.Lbl_CodicePrenotazione_A.Size = new System.Drawing.Size(126, 47);
+            this.Lbl_CodicePrenotazione_A.Size = new System.Drawing.Size(101, 38);
             this.Lbl_CodicePrenotazione_A.TabIndex = 19;
             this.Lbl_CodicePrenotazione_A.Text = "Codice";
             // 
@@ -5439,7 +5450,7 @@
             this.ArtistaSpettacolo_A_Lbl.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ArtistaSpettacolo_A_Lbl.Location = new System.Drawing.Point(7, 50);
             this.ArtistaSpettacolo_A_Lbl.Name = "ArtistaSpettacolo_A_Lbl";
-            this.ArtistaSpettacolo_A_Lbl.Size = new System.Drawing.Size(227, 37);
+            this.ArtistaSpettacolo_A_Lbl.Size = new System.Drawing.Size(183, 30);
             this.ArtistaSpettacolo_A_Lbl.TabIndex = 11;
             this.ArtistaSpettacolo_A_Lbl.Text = "Artista Spettacolo";
             // 
@@ -5461,7 +5472,7 @@
             this.TitoloEvento_A_Lbl.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitoloEvento_A_Lbl.Location = new System.Drawing.Point(5, 12);
             this.TitoloEvento_A_Lbl.Name = "TitoloEvento_A_Lbl";
-            this.TitoloEvento_A_Lbl.Size = new System.Drawing.Size(284, 47);
+            this.TitoloEvento_A_Lbl.Size = new System.Drawing.Size(225, 38);
             this.TitoloEvento_A_Lbl.TabIndex = 0;
             this.TitoloEvento_A_Lbl.Text = "Titolo Spettacolo";
             // 
@@ -5521,7 +5532,7 @@
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(6, 31);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(137, 20);
+            this.label24.Size = new System.Drawing.Size(113, 17);
             this.label24.TabIndex = 3;
             this.label24.Text = "Posti Normali -->";
             // 
@@ -5531,7 +5542,7 @@
             this.Lbl_TOT_P_Normali.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Lbl_TOT_P_Normali.Location = new System.Drawing.Point(125, 33);
             this.Lbl_TOT_P_Normali.Name = "Lbl_TOT_P_Normali";
-            this.Lbl_TOT_P_Normali.Size = new System.Drawing.Size(16, 17);
+            this.Lbl_TOT_P_Normali.Size = new System.Drawing.Size(13, 13);
             this.Lbl_TOT_P_Normali.TabIndex = 6;
             this.Lbl_TOT_P_Normali.Text = "0";
             // 
@@ -5541,7 +5552,7 @@
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(5, 54);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(137, 20);
+            this.label25.Size = new System.Drawing.Size(114, 17);
             this.label25.TabIndex = 4;
             this.label25.Text = "Posti Senior   -->";
             // 
@@ -5551,7 +5562,7 @@
             this.Lbl_TOT_P_Senior.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Lbl_TOT_P_Senior.Location = new System.Drawing.Point(125, 56);
             this.Lbl_TOT_P_Senior.Name = "Lbl_TOT_P_Senior";
-            this.Lbl_TOT_P_Senior.Size = new System.Drawing.Size(16, 17);
+            this.Lbl_TOT_P_Senior.Size = new System.Drawing.Size(13, 13);
             this.Lbl_TOT_P_Senior.TabIndex = 7;
             this.Lbl_TOT_P_Senior.Text = "0";
             // 
@@ -5561,7 +5572,7 @@
             this.Lbl_TOT_P_VIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Lbl_TOT_P_VIP.Location = new System.Drawing.Point(125, 78);
             this.Lbl_TOT_P_VIP.Name = "Lbl_TOT_P_VIP";
-            this.Lbl_TOT_P_VIP.Size = new System.Drawing.Size(16, 17);
+            this.Lbl_TOT_P_VIP.Size = new System.Drawing.Size(13, 13);
             this.Lbl_TOT_P_VIP.TabIndex = 8;
             this.Lbl_TOT_P_VIP.Text = "0";
             // 
@@ -5571,7 +5582,7 @@
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(6, 76);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(140, 20);
+            this.label26.Size = new System.Drawing.Size(114, 17);
             this.label26.TabIndex = 5;
             this.label26.Text = "Posti VIP        -->";
             // 
@@ -5581,7 +5592,7 @@
             this.SpettacoloArtista_Lbl.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpettacoloArtista_Lbl.Location = new System.Drawing.Point(7, 50);
             this.SpettacoloArtista_Lbl.Name = "SpettacoloArtista_Lbl";
-            this.SpettacoloArtista_Lbl.Size = new System.Drawing.Size(227, 37);
+            this.SpettacoloArtista_Lbl.Size = new System.Drawing.Size(183, 30);
             this.SpettacoloArtista_Lbl.TabIndex = 11;
             this.SpettacoloArtista_Lbl.Text = "Artista Spettacolo";
             // 
@@ -5603,7 +5614,7 @@
             this.SpettacoloTitolo_Lbl.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpettacoloTitolo_Lbl.Location = new System.Drawing.Point(5, 12);
             this.SpettacoloTitolo_Lbl.Name = "SpettacoloTitolo_Lbl";
-            this.SpettacoloTitolo_Lbl.Size = new System.Drawing.Size(284, 47);
+            this.SpettacoloTitolo_Lbl.Size = new System.Drawing.Size(225, 38);
             this.SpettacoloTitolo_Lbl.TabIndex = 0;
             this.SpettacoloTitolo_Lbl.Text = "Titolo Spettacolo";
             // 
@@ -5727,7 +5738,7 @@
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Location = new System.Drawing.Point(6, 31);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(137, 20);
+            this.label27.Size = new System.Drawing.Size(113, 17);
             this.label27.TabIndex = 3;
             this.label27.Text = "Posti Normali -->";
             // 
@@ -5737,7 +5748,7 @@
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label28.Location = new System.Drawing.Point(125, 33);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(16, 17);
+            this.label28.Size = new System.Drawing.Size(13, 13);
             this.label28.TabIndex = 6;
             this.label28.Text = "0";
             // 
@@ -5747,7 +5758,7 @@
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(5, 54);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(137, 20);
+            this.label29.Size = new System.Drawing.Size(114, 17);
             this.label29.TabIndex = 4;
             this.label29.Text = "Posti Senior   -->";
             // 
@@ -5757,7 +5768,7 @@
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label30.Location = new System.Drawing.Point(125, 56);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(16, 17);
+            this.label30.Size = new System.Drawing.Size(13, 13);
             this.label30.TabIndex = 7;
             this.label30.Text = "0";
             // 
@@ -5767,7 +5778,7 @@
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label31.Location = new System.Drawing.Point(125, 78);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(16, 17);
+            this.label31.Size = new System.Drawing.Size(13, 13);
             this.label31.TabIndex = 8;
             this.label31.Text = "0";
             // 
@@ -5777,7 +5788,7 @@
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(6, 76);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(140, 20);
+            this.label32.Size = new System.Drawing.Size(114, 17);
             this.label32.TabIndex = 5;
             this.label32.Text = "Posti VIP        -->";
             // 
@@ -5787,7 +5798,7 @@
             this.SpettacoloEventoArtista_Lbl.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpettacoloEventoArtista_Lbl.Location = new System.Drawing.Point(7, 50);
             this.SpettacoloEventoArtista_Lbl.Name = "SpettacoloEventoArtista_Lbl";
-            this.SpettacoloEventoArtista_Lbl.Size = new System.Drawing.Size(227, 37);
+            this.SpettacoloEventoArtista_Lbl.Size = new System.Drawing.Size(183, 30);
             this.SpettacoloEventoArtista_Lbl.TabIndex = 11;
             this.SpettacoloEventoArtista_Lbl.Text = "Artista Spettacolo";
             // 
@@ -5797,99 +5808,218 @@
             this.SpettacoloEvento_Lbl.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpettacoloEvento_Lbl.Location = new System.Drawing.Point(5, 12);
             this.SpettacoloEvento_Lbl.Name = "SpettacoloEvento_Lbl";
-            this.SpettacoloEvento_Lbl.Size = new System.Drawing.Size(224, 47);
+            this.SpettacoloEvento_Lbl.Size = new System.Drawing.Size(178, 38);
             this.SpettacoloEvento_Lbl.TabIndex = 0;
             this.SpettacoloEvento_Lbl.Text = "Titolo Evento";
             // 
             // Pagamento_panel
             // 
             this.Pagamento_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pagamento_panel.Controls.Add(this.btn_confermapagamento);
+            this.Pagamento_panel.Controls.Add(this.group_contanti);
             this.Pagamento_panel.Controls.Add(this.group_Carta);
             this.Pagamento_panel.Controls.Add(this.lbl_modalitàpagamento);
             this.Pagamento_panel.Controls.Add(this.rbtn_contanti);
             this.Pagamento_panel.Controls.Add(this.rbtn_carta);
-            this.Pagamento_panel.Location = new System.Drawing.Point(784, 97);
+            this.Pagamento_panel.Location = new System.Drawing.Point(29, 91);
             this.Pagamento_panel.Name = "Pagamento_panel";
             this.Pagamento_panel.Size = new System.Drawing.Size(1469, 1055);
             this.Pagamento_panel.TabIndex = 17;
             this.Pagamento_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Pagamento_panel_Paint);
             // 
+            // group_contanti
+            // 
+            this.group_contanti.Controls.Add(this.btn_20);
+            this.group_contanti.Controls.Add(this.btn_10);
+            this.group_contanti.Controls.Add(this.btn_5);
+            this.group_contanti.Controls.Add(this.btn_200);
+            this.group_contanti.Controls.Add(this.btn_100);
+            this.group_contanti.Controls.Add(this.btn_50);
+            this.group_contanti.Controls.Add(this.btn_500);
+            this.group_contanti.Location = new System.Drawing.Point(683, 26);
+            this.group_contanti.Name = "group_contanti";
+            this.group_contanti.Size = new System.Drawing.Size(369, 363);
+            this.group_contanti.TabIndex = 4;
+            this.group_contanti.TabStop = false;
+            this.group_contanti.Text = "Contanti";
+            this.group_contanti.Visible = false;
+            // 
+            // btn_20
+            // 
+            this.btn_20.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_201;
+            this.btn_20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_20.Location = new System.Drawing.Point(135, 126);
+            this.btn_20.Name = "btn_20";
+            this.btn_20.Size = new System.Drawing.Size(78, 38);
+            this.btn_20.TabIndex = 6;
+            this.btn_20.UseVisualStyleBackColor = true;
+            // 
+            // btn_10
+            // 
+            this.btn_10.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_10;
+            this.btn_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_10.Location = new System.Drawing.Point(238, 126);
+            this.btn_10.Name = "btn_10";
+            this.btn_10.Size = new System.Drawing.Size(78, 38);
+            this.btn_10.TabIndex = 5;
+            this.btn_10.UseVisualStyleBackColor = true;
+            // 
+            // btn_5
+            // 
+            this.btn_5.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_5;
+            this.btn_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_5.Location = new System.Drawing.Point(30, 198);
+            this.btn_5.Name = "btn_5";
+            this.btn_5.Size = new System.Drawing.Size(78, 38);
+            this.btn_5.TabIndex = 4;
+            this.btn_5.UseVisualStyleBackColor = true;
+            // 
+            // btn_200
+            // 
+            this.btn_200.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_200;
+            this.btn_200.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_200.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_200.Location = new System.Drawing.Point(135, 50);
+            this.btn_200.Name = "btn_200";
+            this.btn_200.Size = new System.Drawing.Size(78, 38);
+            this.btn_200.TabIndex = 3;
+            this.btn_200.UseVisualStyleBackColor = true;
+            // 
+            // btn_100
+            // 
+            this.btn_100.BackgroundImage = global::Biglietti_concerto.Properties.Resources._100_euro;
+            this.btn_100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_100.Location = new System.Drawing.Point(238, 50);
+            this.btn_100.Name = "btn_100";
+            this.btn_100.Size = new System.Drawing.Size(78, 38);
+            this.btn_100.TabIndex = 2;
+            this.btn_100.UseVisualStyleBackColor = true;
+            // 
+            // btn_50
+            // 
+            this.btn_50.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_50;
+            this.btn_50.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_50.Location = new System.Drawing.Point(30, 126);
+            this.btn_50.Name = "btn_50";
+            this.btn_50.Size = new System.Drawing.Size(78, 38);
+            this.btn_50.TabIndex = 1;
+            this.btn_50.UseVisualStyleBackColor = true;
+            // 
+            // btn_500
+            // 
+            this.btn_500.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_500;
+            this.btn_500.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_500.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_500.Location = new System.Drawing.Point(30, 49);
+            this.btn_500.Name = "btn_500";
+            this.btn_500.Size = new System.Drawing.Size(78, 38);
+            this.btn_500.TabIndex = 0;
+            this.btn_500.UseVisualStyleBackColor = true;
+            // 
             // group_Carta
             // 
+            this.group_Carta.Controls.Add(this.label49);
             this.group_Carta.Controls.Add(this.dtp_scadenzacarta);
-            this.group_Carta.Controls.Add(this.textBox3);
+            this.group_Carta.Controls.Add(this.txt_cvv);
             this.group_Carta.Controls.Add(this.label48);
-            this.group_Carta.Controls.Add(this.textBox2);
+            this.group_Carta.Controls.Add(this.txt_numcarta);
             this.group_Carta.Controls.Add(this.label47);
-            this.group_Carta.Controls.Add(this.textBox1);
+            this.group_Carta.Controls.Add(this.txt_nomeintestatario);
             this.group_Carta.Controls.Add(this.label46);
             this.group_Carta.Controls.Add(this.btn_applepay);
             this.group_Carta.Controls.Add(this.btn_mastercard);
             this.group_Carta.Controls.Add(this.btn_postepay);
             this.group_Carta.Controls.Add(this.btn_googlepay);
             this.group_Carta.Controls.Add(this.btn_visa);
-            this.group_Carta.Location = new System.Drawing.Point(213, 26);
+            this.group_Carta.Location = new System.Drawing.Point(212, 26);
             this.group_Carta.Name = "group_Carta";
-            this.group_Carta.Size = new System.Drawing.Size(409, 532);
+            this.group_Carta.Size = new System.Drawing.Size(409, 361);
             this.group_Carta.TabIndex = 3;
             this.group_Carta.TabStop = false;
             this.group_Carta.Text = "Carta";
+            // 
+            // btn_confermapagamento
+            // 
+            this.btn_confermapagamento.Location = new System.Drawing.Point(784, 361);
+            this.btn_confermapagamento.Name = "btn_confermapagamento";
+            this.btn_confermapagamento.Size = new System.Drawing.Size(169, 28);
+            this.btn_confermapagamento.TabIndex = 13;
+            this.btn_confermapagamento.Text = "Conferma pagamento";
+            this.btn_confermapagamento.UseVisualStyleBackColor = true;
+            this.btn_confermapagamento.Click += new System.EventHandler(this.btn_confermapagamento_Click);
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(16, 256);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(90, 13);
+            this.label49.TabIndex = 12;
+            this.label49.Text = "Data di scadenza";
             // 
             // dtp_scadenzacarta
             // 
             this.dtp_scadenzacarta.CustomFormat = "MM/yy";
             this.dtp_scadenzacarta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_scadenzacarta.Location = new System.Drawing.Point(29, 268);
+            this.dtp_scadenzacarta.Location = new System.Drawing.Point(29, 275);
             this.dtp_scadenzacarta.Name = "dtp_scadenzacarta";
             this.dtp_scadenzacarta.ShowUpDown = true;
-            this.dtp_scadenzacarta.Size = new System.Drawing.Size(182, 22);
+            this.dtp_scadenzacarta.Size = new System.Drawing.Size(182, 20);
             this.dtp_scadenzacarta.TabIndex = 11;
             // 
-            // textBox3
+            // txt_cvv
             // 
-            this.textBox3.Location = new System.Drawing.Point(61, 354);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 22);
-            this.textBox3.TabIndex = 10;
+            this.txt_cvv.Location = new System.Drawing.Point(231, 215);
+            this.txt_cvv.MaxLength = 3;
+            this.txt_cvv.Name = "txt_cvv";
+            this.txt_cvv.Size = new System.Drawing.Size(60, 20);
+            this.txt_cvv.TabIndex = 10;
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(48, 330);
+            this.label48.Location = new System.Drawing.Point(228, 198);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(183, 16);
+            this.label48.Size = new System.Drawing.Size(28, 13);
             this.label48.TabIndex = 9;
-            this.label48.Text = "Nome e cognome Intestatario";
+            this.label48.Text = "CVV";
             // 
-            // textBox2
+            // txt_numcarta
             // 
-            this.textBox2.Location = new System.Drawing.Point(29, 220);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 22);
-            this.textBox2.TabIndex = 8;
+            this.txt_numcarta.Location = new System.Drawing.Point(29, 215);
+            this.txt_numcarta.MaxLength = 16;
+            this.txt_numcarta.Name = "txt_numcarta";
+            this.txt_numcarta.Size = new System.Drawing.Size(183, 20);
+            this.txt_numcarta.TabIndex = 8;
             // 
             // label47
             // 
             this.label47.AutoSize = true;
             this.label47.Location = new System.Drawing.Point(16, 196);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(90, 16);
+            this.label47.Size = new System.Drawing.Size(72, 13);
             this.label47.TabIndex = 7;
             this.label47.Text = "Numero Carta";
+            this.label47.Click += new System.EventHandler(this.label47_Click);
             // 
-            // textBox1
+            // txt_nomeintestatario
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 22);
-            this.textBox1.TabIndex = 6;
+            this.txt_nomeintestatario.Location = new System.Drawing.Point(29, 156);
+            this.txt_nomeintestatario.Name = "txt_nomeintestatario";
+            this.txt_nomeintestatario.Size = new System.Drawing.Size(183, 20);
+            this.txt_nomeintestatario.TabIndex = 6;
             // 
             // label46
             // 
             this.label46.AutoSize = true;
             this.label46.Location = new System.Drawing.Point(16, 137);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(183, 16);
+            this.label46.Size = new System.Drawing.Size(146, 13);
             this.label46.TabIndex = 5;
             this.label46.Text = "Nome e cognome Intestatario";
             // 
@@ -5948,7 +6078,7 @@
             this.lbl_modalitàpagamento.AutoSize = true;
             this.lbl_modalitàpagamento.Location = new System.Drawing.Point(26, 39);
             this.lbl_modalitàpagamento.Name = "lbl_modalitàpagamento";
-            this.lbl_modalitàpagamento.Size = new System.Drawing.Size(154, 16);
+            this.lbl_modalitàpagamento.Size = new System.Drawing.Size(119, 13);
             this.lbl_modalitàpagamento.TabIndex = 2;
             this.lbl_modalitàpagamento.Text = "Come desidera pagare?";
             // 
@@ -5957,22 +6087,23 @@
             this.rbtn_contanti.AutoSize = true;
             this.rbtn_contanti.Location = new System.Drawing.Point(29, 82);
             this.rbtn_contanti.Name = "rbtn_contanti";
-            this.rbtn_contanti.Size = new System.Drawing.Size(76, 20);
+            this.rbtn_contanti.Size = new System.Drawing.Size(64, 17);
             this.rbtn_contanti.TabIndex = 1;
-            this.rbtn_contanti.TabStop = true;
             this.rbtn_contanti.Text = "Contanti";
             this.rbtn_contanti.UseVisualStyleBackColor = true;
             // 
             // rbtn_carta
             // 
             this.rbtn_carta.AutoSize = true;
+            this.rbtn_carta.Checked = true;
             this.rbtn_carta.Location = new System.Drawing.Point(29, 108);
             this.rbtn_carta.Name = "rbtn_carta";
-            this.rbtn_carta.Size = new System.Drawing.Size(60, 20);
+            this.rbtn_carta.Size = new System.Drawing.Size(50, 17);
             this.rbtn_carta.TabIndex = 0;
             this.rbtn_carta.TabStop = true;
             this.rbtn_carta.Text = "Carta";
             this.rbtn_carta.UseVisualStyleBackColor = true;
+            this.rbtn_carta.CheckedChanged += new System.EventHandler(this.rbtn_carta_CheckedChanged);
             // 
             // Form1
             // 
@@ -6104,6 +6235,7 @@
             this.Group_IncassiTOTEvento.PerformLayout();
             this.Pagamento_panel.ResumeLayout(false);
             this.Pagamento_panel.PerformLayout();
+            this.group_contanti.ResumeLayout(false);
             this.group_Carta.ResumeLayout(false);
             this.group_Carta.PerformLayout();
             this.ResumeLayout(false);
@@ -6535,11 +6667,21 @@
         private System.Windows.Forms.Button btn_googlepay;
         private System.Windows.Forms.Button btn_applepay;
         private System.Windows.Forms.DateTimePicker dtp_scadenzacarta;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_cvv;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_numcarta;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_nomeintestatario;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.GroupBox group_contanti;
+        private System.Windows.Forms.Button btn_confermapagamento;
+        private System.Windows.Forms.Button btn_500;
+        private System.Windows.Forms.Button btn_20;
+        private System.Windows.Forms.Button btn_10;
+        private System.Windows.Forms.Button btn_5;
+        private System.Windows.Forms.Button btn_200;
+        private System.Windows.Forms.Button btn_100;
+        private System.Windows.Forms.Button btn_50;
     }
 }

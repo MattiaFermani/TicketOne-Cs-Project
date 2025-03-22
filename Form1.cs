@@ -171,6 +171,7 @@ namespace Biglietti_concerto
             Pannello_Admin.Location = new Point(0, 54);
             Pagamento_panel.Size = new System.Drawing.Size(1151, 434);
             Pagamento_panel.Location = new Point(0, 54);
+            group_contanti.Location = new Point(212, 26);
             Pannello_Principale.BringToFront();
             AggiornaDisponibilitaTooltip();
             spettacoliToolTip.AutoPopDelay = 5000;
@@ -1850,7 +1851,141 @@ namespace Biglietti_concerto
 
         private void Pagamento_panel_Paint(object sender, PaintEventArgs e)
         {
+        }
 
+        private void label47_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label48_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public bool IsValidCardNumber(string cardNumber)
+        {
+            int sum = 0;
+            bool alternate = false;
+            cardNumber = cardNumber.Replace(" ", "");
+            for (int i = cardNumber.Length - 1; i >= 0; i--)
+            {
+                if (!char.IsDigit(cardNumber[i])) return false;
+                int digit = cardNumber[i] - '0';
+                if (alternate)
+                {
+                    digit *= 2;
+                    if (digit > 9) digit -= 9;
+                }
+                sum += digit;
+                alternate = !alternate;
+            }
+            return (sum % 10 == 0);
+        }
+
+        public bool IsValidCVV(string cvv, string cardType)
+        {
+            if (!cvv.All(char.IsDigit)) return false;
+            if (cardType == "American Express") return cvv.Length == 4;
+            return cvv.Length == 3;
+        }
+
+        public bool IsValidExpiryDate(int month, int year)
+        {
+            DateTime now = DateTime.Now;
+            if (year < now.Year || (year == now.Year && month < now.Month))
+                return false;
+            return month >= 1 && month <= 12;
+        }
+
+        public string GetCardType(string cardNumber)
+        {
+            if (cardNumber.StartsWith("4")) return "Visa";
+            if (cardNumber.StartsWith("34") || cardNumber.StartsWith("37")) return "American Express";
+            if (cardNumber.StartsWith("51") || cardNumber.StartsWith("52") ||
+                cardNumber.StartsWith("53") || cardNumber.StartsWith("54") ||
+                cardNumber.StartsWith("55") || (cardNumber.StartsWith("222") && cardNumber.Length >= 4))
+                return "Mastercard";
+            return "Unknown";
+        }
+
+        public bool numcartavalida(string cardNumber)
+        {
+            int sum = 0;
+            bool alternate = false;
+            cardNumber = cardNumber.Replace(" ", "");
+            for (int i = cardNumber.Length - 1; i >= 0; i--)
+            {
+                if (!char.IsDigit(cardNumber[i])) return false;
+                int digit = cardNumber[i] - '0';
+                if (alternate)
+                {
+                    digit *= 2;
+                    if (digit > 9) digit -= 9;
+                }
+                sum += digit;
+                alternate = !alternate;
+            }
+            return (sum % 10 == 0);
+        }
+
+        public bool cvvValido(string cvv, string cardType)
+        {
+            if (!cvv.All(char.IsDigit)) return false;
+            if (cardType == "American Express") return cvv.Length == 4;
+            return cvv.Length == 3;
+        }
+
+        public bool IsValidExpiryDate(DateTime expiryDate)
+        {
+            DateTime now = DateTime.Now;
+            return expiryDate > now;
+        }
+
+        public string tipocarta(string cardNumber)
+        {
+            if (cardNumber.StartsWith("4")) return "Visa";
+            if (cardNumber.StartsWith("34") || cardNumber.StartsWith("37")) return "American Express";
+            if (cardNumber.StartsWith("51") || cardNumber.StartsWith("52") ||
+                cardNumber.StartsWith("53") || cardNumber.StartsWith("54") ||
+                cardNumber.StartsWith("55") || (cardNumber.StartsWith("222") && cardNumber.Length >= 4))
+                return "Mastercard";
+            return "Unknown";
+        }
+
+        private void btn_confermapagamento_Click(object sender, EventArgs e)
+        {
+            string cardNumber = txt_numcarta.Text.Trim();
+            string cvv = txt_cvv.Text.Trim();
+            DateTime expiryDate = dtp_scadenzacarta.Value;
+
+            string cardType = GetCardType(cardNumber);
+
+            if (!IsValidCardNumber(cardNumber))
+            {
+                MessageBox.Show("Numero di carta non valido!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!IsValidCVV(cvv, cardType))
+            {
+                MessageBox.Show("CVV non valido!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!IsValidExpiryDate(expiryDate))
+            {
+                MessageBox.Show("Data di scadenza non valida!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MessageBox.Show("Carta valida!", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void rbtn_carta_CheckedChanged(object sender, EventArgs e)
+        {
+            group_Carta.Visible = rbtn_carta.Checked;
+            group_contanti.Visible = rbtn_contanti.Checked;
         }
     }
 }
