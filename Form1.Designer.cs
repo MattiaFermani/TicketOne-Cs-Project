@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("test");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("test");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("test");
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TickeTlon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -444,13 +444,15 @@
             this.SpettacoloEventoArtista_Lbl = new System.Windows.Forms.Label();
             this.SpettacoloEvento_Lbl = new System.Windows.Forms.Label();
             this.Pagamento_panel = new System.Windows.Forms.Panel();
+            this.group_contanti = new System.Windows.Forms.GroupBox();
             this.group_Carta = new System.Windows.Forms.GroupBox();
+            this.label49 = new System.Windows.Forms.Label();
             this.dtp_scadenzacarta = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_cvv = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_numcarta = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_nomeintestatario = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.btn_applepay = new System.Windows.Forms.Button();
             this.btn_mastercard = new System.Windows.Forms.Button();
@@ -460,6 +462,14 @@
             this.lbl_modalitàpagamento = new System.Windows.Forms.Label();
             this.rbtn_contanti = new System.Windows.Forms.RadioButton();
             this.rbtn_carta = new System.Windows.Forms.RadioButton();
+            this.btn_confermapagamento = new System.Windows.Forms.Button();
+            this.btn_500 = new System.Windows.Forms.Button();
+            this.btn_50 = new System.Windows.Forms.Button();
+            this.btn_100 = new System.Windows.Forms.Button();
+            this.btn_200 = new System.Windows.Forms.Button();
+            this.btn_5 = new System.Windows.Forms.Button();
+            this.btn_10 = new System.Windows.Forms.Button();
+            this.btn_20 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -537,6 +547,7 @@
             this.Group_IncassiEvento.SuspendLayout();
             this.Group_IncassiTOTEvento.SuspendLayout();
             this.Pagamento_panel.SuspendLayout();
+            this.group_contanti.SuspendLayout();
             this.group_Carta.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -4956,10 +4967,10 @@
             this.Albero_Prenotazioni_User.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Albero_Prenotazioni_User.Location = new System.Drawing.Point(0, 76);
             this.Albero_Prenotazioni_User.Name = "Albero_Prenotazioni_User";
-            treeNode1.Name = "Nodo0";
-            treeNode1.Text = "test";
+            treeNode3.Name = "Nodo0";
+            treeNode3.Text = "test";
             this.Albero_Prenotazioni_User.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            treeNode3});
             this.Albero_Prenotazioni_User.Size = new System.Drawing.Size(250, 326);
             this.Albero_Prenotazioni_User.TabIndex = 0;
             this.Albero_Prenotazioni_User.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Prenotazioni_User_NodeMouseClick);
@@ -5276,10 +5287,10 @@
             this.Albero_Eventi.Indent = 12;
             this.Albero_Eventi.Location = new System.Drawing.Point(0, 1);
             this.Albero_Eventi.Name = "Albero_Eventi";
-            treeNode2.Name = "Nodo0";
-            treeNode2.Text = "test";
+            treeNode4.Name = "Nodo0";
+            treeNode4.Text = "test";
             this.Albero_Eventi.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode4});
             this.Albero_Eventi.Size = new System.Drawing.Size(254, 381);
             this.Albero_Eventi.TabIndex = 26;
             this.Albero_Eventi.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Albero_Eventi_NodeMouseClick);
@@ -5804,24 +5815,43 @@
             // Pagamento_panel
             // 
             this.Pagamento_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pagamento_panel.Controls.Add(this.group_contanti);
             this.Pagamento_panel.Controls.Add(this.group_Carta);
             this.Pagamento_panel.Controls.Add(this.lbl_modalitàpagamento);
             this.Pagamento_panel.Controls.Add(this.rbtn_contanti);
             this.Pagamento_panel.Controls.Add(this.rbtn_carta);
-            this.Pagamento_panel.Location = new System.Drawing.Point(784, 97);
+            this.Pagamento_panel.Location = new System.Drawing.Point(29, 91);
             this.Pagamento_panel.Name = "Pagamento_panel";
             this.Pagamento_panel.Size = new System.Drawing.Size(1469, 1055);
             this.Pagamento_panel.TabIndex = 17;
             this.Pagamento_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Pagamento_panel_Paint);
             // 
+            // group_contanti
+            // 
+            this.group_contanti.Controls.Add(this.btn_20);
+            this.group_contanti.Controls.Add(this.btn_10);
+            this.group_contanti.Controls.Add(this.btn_5);
+            this.group_contanti.Controls.Add(this.btn_200);
+            this.group_contanti.Controls.Add(this.btn_100);
+            this.group_contanti.Controls.Add(this.btn_50);
+            this.group_contanti.Controls.Add(this.btn_500);
+            this.group_contanti.Location = new System.Drawing.Point(683, 26);
+            this.group_contanti.Name = "group_contanti";
+            this.group_contanti.Size = new System.Drawing.Size(409, 485);
+            this.group_contanti.TabIndex = 4;
+            this.group_contanti.TabStop = false;
+            this.group_contanti.Text = "Contanti";
+            // 
             // group_Carta
             // 
+            this.group_Carta.Controls.Add(this.btn_confermapagamento);
+            this.group_Carta.Controls.Add(this.label49);
             this.group_Carta.Controls.Add(this.dtp_scadenzacarta);
-            this.group_Carta.Controls.Add(this.textBox3);
+            this.group_Carta.Controls.Add(this.txt_cvv);
             this.group_Carta.Controls.Add(this.label48);
-            this.group_Carta.Controls.Add(this.textBox2);
+            this.group_Carta.Controls.Add(this.txt_numcarta);
             this.group_Carta.Controls.Add(this.label47);
-            this.group_Carta.Controls.Add(this.textBox1);
+            this.group_Carta.Controls.Add(this.txt_nomeintestatario);
             this.group_Carta.Controls.Add(this.label46);
             this.group_Carta.Controls.Add(this.btn_applepay);
             this.group_Carta.Controls.Add(this.btn_mastercard);
@@ -5830,43 +5860,53 @@
             this.group_Carta.Controls.Add(this.btn_visa);
             this.group_Carta.Location = new System.Drawing.Point(213, 26);
             this.group_Carta.Name = "group_Carta";
-            this.group_Carta.Size = new System.Drawing.Size(409, 532);
+            this.group_Carta.Size = new System.Drawing.Size(409, 485);
             this.group_Carta.TabIndex = 3;
             this.group_Carta.TabStop = false;
             this.group_Carta.Text = "Carta";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(16, 256);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(112, 16);
+            this.label49.TabIndex = 12;
+            this.label49.Text = "Data di scadenza";
             // 
             // dtp_scadenzacarta
             // 
             this.dtp_scadenzacarta.CustomFormat = "MM/yy";
             this.dtp_scadenzacarta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_scadenzacarta.Location = new System.Drawing.Point(29, 268);
+            this.dtp_scadenzacarta.Location = new System.Drawing.Point(29, 275);
             this.dtp_scadenzacarta.Name = "dtp_scadenzacarta";
             this.dtp_scadenzacarta.ShowUpDown = true;
             this.dtp_scadenzacarta.Size = new System.Drawing.Size(182, 22);
             this.dtp_scadenzacarta.TabIndex = 11;
             // 
-            // textBox3
+            // txt_cvv
             // 
-            this.textBox3.Location = new System.Drawing.Point(61, 354);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 22);
-            this.textBox3.TabIndex = 10;
+            this.txt_cvv.Location = new System.Drawing.Point(29, 339);
+            this.txt_cvv.Name = "txt_cvv";
+            this.txt_cvv.Size = new System.Drawing.Size(183, 22);
+            this.txt_cvv.TabIndex = 10;
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(48, 330);
+            this.label48.Location = new System.Drawing.Point(16, 320);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(183, 16);
+            this.label48.Size = new System.Drawing.Size(34, 16);
             this.label48.TabIndex = 9;
-            this.label48.Text = "Nome e cognome Intestatario";
+            this.label48.Text = "CVV";
+            this.label48.Click += new System.EventHandler(this.label48_Click);
             // 
-            // textBox2
+            // txt_numcarta
             // 
-            this.textBox2.Location = new System.Drawing.Point(29, 220);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 22);
-            this.textBox2.TabIndex = 8;
+            this.txt_numcarta.Location = new System.Drawing.Point(29, 215);
+            this.txt_numcarta.Name = "txt_numcarta";
+            this.txt_numcarta.Size = new System.Drawing.Size(183, 22);
+            this.txt_numcarta.TabIndex = 8;
             // 
             // label47
             // 
@@ -5876,13 +5916,14 @@
             this.label47.Size = new System.Drawing.Size(90, 16);
             this.label47.TabIndex = 7;
             this.label47.Text = "Numero Carta";
+            this.label47.Click += new System.EventHandler(this.label47_Click);
             // 
-            // textBox1
+            // txt_nomeintestatario
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 22);
-            this.textBox1.TabIndex = 6;
+            this.txt_nomeintestatario.Location = new System.Drawing.Point(29, 156);
+            this.txt_nomeintestatario.Name = "txt_nomeintestatario";
+            this.txt_nomeintestatario.Size = new System.Drawing.Size(183, 22);
+            this.txt_nomeintestatario.TabIndex = 6;
             // 
             // label46
             // 
@@ -5973,6 +6014,93 @@
             this.rbtn_carta.TabStop = true;
             this.rbtn_carta.Text = "Carta";
             this.rbtn_carta.UseVisualStyleBackColor = true;
+            this.rbtn_carta.CheckedChanged += new System.EventHandler(this.rbtn_carta_CheckedChanged);
+            // 
+            // btn_confermapagamento
+            // 
+            this.btn_confermapagamento.Location = new System.Drawing.Point(122, 389);
+            this.btn_confermapagamento.Name = "btn_confermapagamento";
+            this.btn_confermapagamento.Size = new System.Drawing.Size(169, 28);
+            this.btn_confermapagamento.TabIndex = 13;
+            this.btn_confermapagamento.Text = "Conferma pagamento";
+            this.btn_confermapagamento.UseVisualStyleBackColor = true;
+            // 
+            // btn_500
+            // 
+            this.btn_500.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_500;
+            this.btn_500.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_500.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_500.Location = new System.Drawing.Point(30, 49);
+            this.btn_500.Name = "btn_500";
+            this.btn_500.Size = new System.Drawing.Size(78, 38);
+            this.btn_500.TabIndex = 0;
+            this.btn_500.UseVisualStyleBackColor = true;
+            // 
+            // btn_50
+            // 
+            this.btn_50.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_50;
+            this.btn_50.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_50.Location = new System.Drawing.Point(30, 126);
+            this.btn_50.Name = "btn_50";
+            this.btn_50.Size = new System.Drawing.Size(78, 38);
+            this.btn_50.TabIndex = 1;
+            this.btn_50.UseVisualStyleBackColor = true;
+            // 
+            // btn_100
+            // 
+            this.btn_100.BackgroundImage = global::Biglietti_concerto.Properties.Resources._100_euro;
+            this.btn_100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_100.Location = new System.Drawing.Point(238, 50);
+            this.btn_100.Name = "btn_100";
+            this.btn_100.Size = new System.Drawing.Size(78, 38);
+            this.btn_100.TabIndex = 2;
+            this.btn_100.UseVisualStyleBackColor = true;
+            // 
+            // btn_200
+            // 
+            this.btn_200.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_200;
+            this.btn_200.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_200.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_200.Location = new System.Drawing.Point(135, 50);
+            this.btn_200.Name = "btn_200";
+            this.btn_200.Size = new System.Drawing.Size(78, 38);
+            this.btn_200.TabIndex = 3;
+            this.btn_200.UseVisualStyleBackColor = true;
+            // 
+            // btn_5
+            // 
+            this.btn_5.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_5;
+            this.btn_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_5.Location = new System.Drawing.Point(30, 198);
+            this.btn_5.Name = "btn_5";
+            this.btn_5.Size = new System.Drawing.Size(78, 38);
+            this.btn_5.TabIndex = 4;
+            this.btn_5.UseVisualStyleBackColor = true;
+            // 
+            // btn_10
+            // 
+            this.btn_10.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_10;
+            this.btn_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_10.Location = new System.Drawing.Point(238, 126);
+            this.btn_10.Name = "btn_10";
+            this.btn_10.Size = new System.Drawing.Size(78, 38);
+            this.btn_10.TabIndex = 5;
+            this.btn_10.UseVisualStyleBackColor = true;
+            // 
+            // btn_20
+            // 
+            this.btn_20.BackgroundImage = global::Biglietti_concerto.Properties.Resources.Banconota_201;
+            this.btn_20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_20.Location = new System.Drawing.Point(135, 126);
+            this.btn_20.Name = "btn_20";
+            this.btn_20.Size = new System.Drawing.Size(78, 38);
+            this.btn_20.TabIndex = 6;
+            this.btn_20.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -6104,6 +6232,7 @@
             this.Group_IncassiTOTEvento.PerformLayout();
             this.Pagamento_panel.ResumeLayout(false);
             this.Pagamento_panel.PerformLayout();
+            this.group_contanti.ResumeLayout(false);
             this.group_Carta.ResumeLayout(false);
             this.group_Carta.PerformLayout();
             this.ResumeLayout(false);
@@ -6535,11 +6664,21 @@
         private System.Windows.Forms.Button btn_googlepay;
         private System.Windows.Forms.Button btn_applepay;
         private System.Windows.Forms.DateTimePicker dtp_scadenzacarta;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_cvv;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_numcarta;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_nomeintestatario;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.GroupBox group_contanti;
+        private System.Windows.Forms.Button btn_confermapagamento;
+        private System.Windows.Forms.Button btn_500;
+        private System.Windows.Forms.Button btn_20;
+        private System.Windows.Forms.Button btn_10;
+        private System.Windows.Forms.Button btn_5;
+        private System.Windows.Forms.Button btn_200;
+        private System.Windows.Forms.Button btn_100;
+        private System.Windows.Forms.Button btn_50;
     }
 }
