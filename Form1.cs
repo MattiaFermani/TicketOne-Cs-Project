@@ -12,6 +12,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using Timer = System.Windows.Forms.Timer;
 
 namespace Biglietti_concerto
 {
@@ -22,6 +23,8 @@ namespace Biglietti_concerto
         static string loggedEmail = "";
         static string loggedRole = "";
         static bool PswA = false;
+        int Prezzo = 0;
+        int Pagato = 0;
         JObject EUser;
 
         static string adminFilePath = "admin.dat";
@@ -633,7 +636,40 @@ namespace Biglietti_concerto
         }
         private void Btn_ConfemaPosti_Click(object sender, EventArgs e)
         {
-            //DA AGGIORNARE
+            if (PostiSelezionati != 0)
+            {
+                foreach (var entry in postiSelezionati)
+                {
+                    var eventKey = entry.Key;
+                    foreach (var btn in entry.Value)
+                    {
+                        switch(btn.Tag)
+                        {
+                            case "0Normal":
+                                Prezzo += 30;
+                                break;
+                            case "0Senior":
+                                Prezzo += 40;
+                                break;
+                            case "0Vip":
+                                Prezzo += 50;
+                                break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nessun posto selezionato");
+                return;
+            }
+            lblCountdown.Show();
+            Timer();
+            Pagamento_panel.BringToFront();
+        }
+
+        private void PostiConfermati()
+        {
             Pannello_Posti.Visible = false;
             if (PostiSelezionati != 0)
             {
@@ -668,7 +704,6 @@ namespace Biglietti_concerto
                     }
                 }
 
-               // MessageBox.Show($"{PostiSelezionati} Posti acquistati con successo!");
                 Prenotazioni(TitoloSpettacolo_Lbl.Text, $"{Luogo_Lst.SelectedItem.ToString()} -> {Data_Lst.SelectedItem.ToString()}", postiSelezionati.Values.SelectMany(list => list).ToList());
                 postiSelezionati.Clear();
                 PostiSelezionati = 0;
@@ -683,9 +718,9 @@ namespace Biglietti_concerto
             Tab_Info_Posti.SelectedIndex = 0;
             Data_Lst.SelectedIndex = -1;
             Luogo_Lst.SelectedIndex = -1;
-            Pagamento_panel.BringToFront();
             CaricaPosti("Default", "Default", "Default");
         }
+
         private void Prenotazioni(string TitoloSpettacolo, string Evento, List<Button> posti)
         {
             JArray jsonArray;
@@ -1849,19 +1884,7 @@ namespace Biglietti_concerto
             }
         }
 
-        private void Pagamento_panel_Paint(object sender, PaintEventArgs e)
-        {
-        }
 
-        private void label47_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label48_Click(object sender, EventArgs e)
-        {
-
-        }
 
         public bool IsValidCardNumber(string cardNumber)
         {
@@ -1955,31 +1978,48 @@ namespace Biglietti_concerto
 
         private void btn_confermapagamento_Click(object sender, EventArgs e)
         {
-            string cardNumber = txt_numcarta.Text.Trim();
-            string cvv = txt_cvv.Text.Trim();
-            DateTime expiryDate = dtp_scadenzacarta.Value;
-
-            string cardType = GetCardType(cardNumber);
-
-            if (!IsValidCardNumber(cardNumber))
+            if (rbtn_contanti.Checked && (Prezzo - Pagato) <= 0)
             {
-                MessageBox.Show("Numero di carta non valido!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Pagamento in contanti effettuato con successo!\n\nResto: {-(Prezzo - Pagato)} euro", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (Prezzo - Pagato > 0)
+            {
+                MessageBox.Show($"Pagamento non effettuato, mancano {Prezzo - Pagato} euro.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            if (!IsValidCVV(cvv, cardType))
+            else if (rbtn_carta.Checked)
             {
-                MessageBox.Show("CVV non valido!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                string cardNumber = txt_numcarta.Text.Trim();
+                string cvv = txt_cvv.Text.Trim();
+                DateTime expiryDate = dtp_scadenzacarta.Value;
 
-            if (!IsValidExpiryDate(expiryDate))
-            {
-                MessageBox.Show("Data di scadenza non valida!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                string cardType = GetCardType(cardNumber);
 
-            MessageBox.Show("Carta valida!", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (!IsValidCardNumber(cardNumber))
+                {
+                    MessageBox.Show("Numero di carta non valido!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!IsValidCVV(cvv, cardType))
+                {
+                    MessageBox.Show("CVV non valido!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!IsValidExpiryDate(expiryDate))
+                {
+                    MessageBox.Show("Data di scadenza non valida!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                MessageBox.Show("Carta valida!", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            countdownTimer.Stop();
+            lblCountdown.Hide();
+            Prezzo = 0;
+            Pagato = 0;
+            PostiConfermati();
+            Pannello_Principale.BringToFront();
         }
 
         private void rbtn_carta_CheckedChanged(object sender, EventArgs e)
@@ -1987,5 +2027,100 @@ namespace Biglietti_concerto
             group_Carta.Visible = rbtn_carta.Checked;
             group_contanti.Visible = rbtn_contanti.Checked;
         }
+
+        private void btn_Soldi(object sender, EventArgs e)
+        {
+            switch (((Button)sender).Name.Substring(4))
+            {
+                case "5":
+                    Pagato += 5;
+                    break;
+                case "10":
+                    Pagato += 10;
+                    break;
+                case "20":
+                    Pagato += 20;
+                    break;
+                case "50":
+                    Pagato += 50;
+                    break;
+                case "100":
+                    Pagato += 100;
+                    break;
+                case "200":
+                    Pagato += 200;
+                    break;
+                case "500":
+                    Pagato += 500;
+                    break;
+            }
+        }
+
+        private int countdownSeconds;
+        private Timer countdownTimer;
+
+        private void Timer()
+        {
+            countdownSeconds = 60;
+            countdownTimer = new Timer();
+            countdownTimer.Interval = 1000;
+            countdownTimer.Tick += CountdownTimer_Tick;
+            countdownTimer.Start();
+        }
+
+        private void CountdownTimer_Tick(object sender, EventArgs e)
+        {
+            countdownSeconds--;
+            Importo_Lbl.Text = $"Importo: {Prezzo - Pagato} €";
+            lblCountdown.Text = $"Tempo rimanente: {countdownSeconds} s";
+
+            if (countdownSeconds <= 0)
+            {
+                countdownTimer.Stop();
+                MessageBox.Show("E' scaduto il tempo per poter acquistare i biglietti", "Pagamento", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Pannello_Principale.BringToFront();
+                RESET();
+            }
+        }
+        
+        private void RESET()
+        {
+            foreach (var entry in postiSelezionati)
+            {
+                var eventKey = entry.Key;
+                foreach (var btn in entry.Value)
+                {
+                    switch (btn.Tag)
+                    {
+                        case "0Normal":
+                            btn.BackColor = Color.LightSalmon;
+                            break;
+                        case "0Senior":
+                            btn.BackColor = Color.Violet;
+                            break;
+                        case "0Vip":
+                            btn.BackColor = Color.Gold;
+                            break;
+                    }
+                }
+            }
+            postiSelezionati.Clear();
+            Prezzo = 0;
+            Pagato = 0;
+            PostiSelezionati = 0;
+            txt_nomeintestatario.Clear();
+            txt_numcarta.Clear();
+            txt_cvv.Clear();
+            dtp_scadenzacarta.Value = DateTime.Now;
+            rbtn_contanti.Checked = false;
+            rbtn_carta.Checked = true;
+            group_Carta.Visible = true;
+            lblCountdown.Hide();
+            Tab_Info_Posti.SelectedIndex = 0;
+            Data_Lst.SelectedIndex = -1;
+            Luogo_Lst.SelectedIndex = -1;
+            CaricaPosti("Default", "Default", "Default");
+        }
+
     }
 }
