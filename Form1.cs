@@ -171,6 +171,7 @@ namespace Biglietti_concerto
             Pannello_Admin.Location = new Point(0, 54);
             Pagamento_panel.Size = new System.Drawing.Size(1151, 434);
             Pagamento_panel.Location = new Point(0, 54);
+            group_contanti.Location = new Point(212, 26);
             Pannello_Principale.BringToFront();
             AggiornaDisponibilitaTooltip();
             spettacoliToolTip.AutoPopDelay = 5000;
@@ -1850,18 +1851,6 @@ namespace Biglietti_concerto
 
         private void Pagamento_panel_Paint(object sender, PaintEventArgs e)
         {
-            group_Carta.Visible = false;
-
-            if (rbtn_carta.Checked)
-            {
-                group_Carta.Visible = true;
-                group_contanti.Visible = false;
-            }
-            if  (rbtn_contanti.Checked)
-            {
-                group_contanti.Visible = true;
-                group_Carta.Visible = false;
-            }
         }
 
         private void label47_Click(object sender, EventArgs e)
@@ -1940,7 +1929,7 @@ namespace Biglietti_concerto
             return (sum % 10 == 0);
         }
 
-        public bool cvvvalido(string cvv, string cardType)
+        public bool cvvValido(string cvv, string cardType)
         {
             if (!cvv.All(char.IsDigit)) return false;
             if (cardType == "American Express") return cvv.Length == 4;
@@ -1995,11 +1984,8 @@ namespace Biglietti_concerto
 
         private void rbtn_carta_CheckedChanged(object sender, EventArgs e)
         {
-            if(rbtn_carta.Checked)
-            {
-                group_Carta.Visible = true;
-                group_contanti.Visible = false;
-            }
+            group_Carta.Visible = rbtn_carta.Checked;
+            group_contanti.Visible = rbtn_contanti.Checked;
         }
     }
 }
