@@ -32,8 +32,10 @@ namespace Biglietti_concerto
         static string loggedEmail = "";
         static string loggedRole = "";
         static bool PswA = false;
-        int Prezzo = 0;
-        int Pagato = 0;
+        static double Prezzo = 0;
+        double Pagato = 0;
+        double Sconto3Posti = 0;
+        double ScontoNoRimborso = 0;
         JObject EUser;
 
         static string adminFilePath = "admin.dat";
@@ -185,18 +187,14 @@ namespace Biglietti_concerto
         }
         private void SalvaEventiSpettacoli()
         {
-            // Se il file esiste già, non fare nulla
             if (File.Exists(fileEventiSpettacoli))
                 return;
 
-            // Creiamo un JObject per salvare gli eventi di ogni spettacolo
             JObject jsonEventi = new JObject();
 
             foreach (var spettacolo in Spettacoli)
             {
-                // Prendiamo i dati eventi relativi allo spettacolo
                 var eventoData = spettacolo.Dizionario[spettacolo.Titolo];
-                // Creiamo un oggetto JSON con le liste di luoghi e date
                 JObject jsonDettagli = new JObject
                 {
                     ["luoghi"] = new JArray(eventoData.luoghi),
@@ -609,7 +607,7 @@ namespace Biglietti_concerto
                     case "0Senior":
                         btn.BackColor = Color.Violet;
                         break;
-                    case "0Vip":
+                    case "0VIP":
                         btn.BackColor = Color.Gold;
                         break;
                 }
@@ -651,7 +649,7 @@ namespace Biglietti_concerto
                             case "0Senior":
                                 Prezzo += 40;
                                 break;
-                            case "0Vip":
+                            case "0VIP":
                                 Prezzo += 50;
                                 break;
                         }
@@ -670,7 +668,6 @@ namespace Biglietti_concerto
 
         private void PostiConfermati()
         {
-            Pannello_Posti.Visible = false;
             if (PostiSelezionati != 0)
             {
                 foreach (var entry in postiSelezionati)
@@ -710,10 +707,6 @@ namespace Biglietti_concerto
                 AggiornaDisponibilitaTooltip();
                 AlberoEventiLoad();
             }
-            else
-            {
-                MessageBox.Show("Nessun posto selezionato");
-            }
 
             Tab_Info_Posti.SelectedIndex = 0;
             Data_Lst.SelectedIndex = -1;
@@ -749,9 +742,9 @@ namespace Biglietti_concerto
                             break;
                         case "0Senior":
                             Tipologia = "Senior";
-                            Prezzo = "25€";
+                            Prezzo = "40€";
                             break;
-                        case "0Vip":
+                        case "0VIP":
                             Tipologia = "VIP";
                             Prezzo = "50€";
                             break;
@@ -768,6 +761,21 @@ namespace Biglietti_concerto
                     };
                     postiArray.Add(postoObj);
                 }
+            }
+
+            Sconto3Posti = (5 * Prezzo) / 100;
+            ScontoNoRimborso = (10 * Prezzo) / 100;
+            if (!Chk_Rimborso.Checked && PostiSelezionati == 3)
+            {
+                Prezzo = Prezzo - Sconto3Posti - ScontoNoRimborso;
+            }
+            else if (Chk_Rimborso.Checked && PostiSelezionati == 3)
+            {
+                Prezzo = Prezzo - Sconto3Posti;
+            }
+            else if (!Chk_Rimborso.Checked && PostiSelezionati != 3)
+            {
+                Prezzo = Prezzo - ScontoNoRimborso;
             }
 
             string nome = "";
@@ -796,7 +804,9 @@ namespace Biglietti_concerto
                 ["Cognome"] = cognome,
                 ["Telefono"] = loggedTelefono,
                 ["Email"] = loggedEmail,
-                ["Posti"] = postiArray
+                ["Posti"] = postiArray,
+                ["Rimborsabile?"] = Chk_Rimborso.Checked ? "Sì" : "No",
+                ["PrezzoTotale"] = Prezzo.ToString()
             };
             jsonArray.Add(newPrenotazione);
             File.WriteAllText(filePrenotazioni, jsonArray.ToString());
@@ -840,7 +850,7 @@ namespace Biglietti_concerto
                                 case "0Senior":
                                     posto.BackColor = Color.Violet;
                                     break;
-                                case "0Vip":
+                                case "0VIP":
                                     posto.BackColor = Color.Gold;
                                     break;
                             }
@@ -878,7 +888,7 @@ namespace Biglietti_concerto
                                     case "0Senior":
                                         posto.BackColor = Color.Violet;
                                         break;
-                                    case "0Vip":
+                                    case "0VIP":
                                         posto.BackColor = Color.Gold;
                                         break;
                                 }
@@ -897,7 +907,7 @@ namespace Biglietti_concerto
                                 case "0Senior":
                                     posto.BackColor = Color.Violet;
                                     break;
-                                case "0Vip":
+                                case "0VIP":
                                     posto.BackColor = Color.Gold;
                                     break;
                             }
@@ -1625,6 +1635,10 @@ namespace Biglietti_concerto
                     Lbl_CodicePrenotazione_U.Text = pren["CodicePrenotazione"]?.ToString() ?? "";
                     TitoloEvento_U_Lbl.Text = pren["TitoloSpettacolo"]?.ToString() ?? "";
                     ArtistaSpettacolo_U_Lbl.Text = pren["Evento"]?.ToString() ?? "";
+                    if(pren["Rimborsabile?"]?.ToString() == "Sì")
+                        Btn_Rimborso.Enabled = true;
+                    else
+                        Btn_Rimborso.Enabled = false;
                     foreach (Control control in Pannello_Principale.Controls)
                     {
                         if (control is Panel)
@@ -1664,6 +1678,7 @@ namespace Biglietti_concerto
         }
         private void CaricaPrenotazioniUtente()
         {
+            Pannello_Prenotazione.Visible = false;
             Albero_Prenotazioni_User.Nodes.Clear();
             if (!File.Exists(filePrenotazioni))
             {
@@ -1976,16 +1991,17 @@ namespace Biglietti_concerto
 
         private void btn_confermapagamento_Click(object sender, EventArgs e)
         {
-            if (rbtn_contanti.Checked && (Prezzo - Pagato) <= 0)
-            {
-                MessageBox.Show($"Pagamento in contanti effettuato con successo!\n\nResto: {-(Prezzo - Pagato)} euro", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (Prezzo - Pagato > 0)
-            {
-                MessageBox.Show($"Pagamento non effettuato, mancano {Prezzo - Pagato} euro.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (rbtn_carta.Checked)
+            //if (rbtn_contanti.Checked && (Prezzo - Pagato) <= 0)
+            //{
+            //    MessageBox.Show($"Pagamento in contanti effettuato con successo!\n\nResto: {-(Prezzo - Pagato)} euro", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //else if (Prezzo - Pagato > 0)
+            //{
+            //    MessageBox.Show($"Pagamento non effettuato, mancano {Prezzo - Pagato} euro.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
+            //else
+            if (rbtn_carta.Checked)
             {
                 string cardNumber = txt_numcarta.Text.Trim();
                 string cvv = txt_cvv.Text.Trim();
@@ -2010,12 +2026,9 @@ namespace Biglietti_concerto
                     MessageBox.Show("Data di scadenza non valida!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                MessageBox.Show("Carta valida!", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             countdownTimer.Stop();
             lblCountdown.Hide();
-            Prezzo = 0;
-            Pagato = 0;
             PostiConfermati();
             Pannello_Principale.BringToFront();
         }
@@ -2028,30 +2041,30 @@ namespace Biglietti_concerto
 
         private void btn_Soldi(object sender, EventArgs e)
         {
-            switch (((Button)sender).Name.Substring(4))
-            {
-                case "5":
-                    Pagato += 5;
-                    break;
-                case "10":
-                    Pagato += 10;
-                    break;
-                case "20":
-                    Pagato += 20;
-                    break;
-                case "50":
-                    Pagato += 50;
-                    break;
-                case "100":
-                    Pagato += 100;
-                    break;
-                case "200":
-                    Pagato += 200;
-                    break;
-                case "500":
-                    Pagato += 500;
-                    break;
-            }
+            //switch (((Button)sender).Name.Substring(4))
+            //{
+            //    case "5":
+            //        Pagato += 5;
+            //        break;
+            //    case "10":
+            //        Pagato += 10;
+            //        break;
+            //    case "20":
+            //        Pagato += 20;
+            //        break;
+            //    case "50":
+            //        Pagato += 50;
+            //        break;
+            //    case "100":
+            //        Pagato += 100;
+            //        break;
+            //    case "200":
+            //        Pagato += 200;
+            //        break;
+            //    case "500":
+            //        Pagato += 500;
+            //        break;
+            //}
         }
 
         private int countdownSeconds;
@@ -2069,8 +2082,40 @@ namespace Biglietti_concerto
         private void CountdownTimer_Tick(object sender, EventArgs e)
         {
             countdownSeconds--;
-            Importo_Lbl.Text = $"Importo: {Prezzo - Pagato} €";
-            lblCountdown.Text = $"Tempo rimanente: {countdownSeconds} s";
+
+            Sconto3Posti = (5 * Prezzo) / 100;
+            ScontoNoRimborso = (10 * Prezzo) / 100;
+
+            if (!Chk_Rimborso.Checked && PostiSelezionati == 3)
+            {
+                Importo_Lbl.Text = 
+                    $"Importo:  {Prezzo - Pagato - ScontoNoRimborso - Sconto3Posti} € \n" +
+                    $"ScontoNoRimborso: Si\n" +
+                    $"Sconto Gruppo: Si";
+            }
+            else if (Chk_Rimborso.Checked && PostiSelezionati == 3)
+            {
+                Importo_Lbl.Text =
+                    $"Importo:  {Prezzo - Pagato - Sconto3Posti} € \n" +
+                    $"ScontoNoRimborso: No\n" +
+                    $"Sconto Gruppo: Si";
+            }
+            else if (!Chk_Rimborso.Checked && PostiSelezionati != 3)
+            {
+                Importo_Lbl.Text =
+                    $"Importo:  {Prezzo - Pagato - ScontoNoRimborso} € \n" +
+                    $"ScontoNoRimborso: Si\n" +
+                    $"Sconto Gruppo: No";
+            }
+            else
+            {
+                Importo_Lbl.Text =
+                    $"Importo:  {Prezzo - Pagato} € \n" +
+                    $"ScontoNoRimborso: No\n" +
+                    $"Sconto Gruppo: No";
+            }
+
+                lblCountdown.Text = $"Tempo rimanente: {countdownSeconds} s";
 
             if (countdownSeconds <= 0)
             {
@@ -2096,7 +2141,7 @@ namespace Biglietti_concerto
                         case "0Senior":
                             btn.BackColor = Color.Violet;
                             break;
-                        case "0Vip":
+                        case "0VIP":
                             btn.BackColor = Color.Gold;
                             break;
                     }
@@ -2120,5 +2165,54 @@ namespace Biglietti_concerto
             CaricaPosti("Default", "Default", "Default");
         }
 
+        private void Btn_Rimborso_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Sei sicuro di voler richiedere il rimborso per questo biglietto?", "Conferma rimborso",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            {
+                return;
+            }
+
+            string codicePrenotazione = Lbl_CodicePrenotazione_U.Text.Trim();
+            if (string.IsNullOrEmpty(codicePrenotazione))
+            {
+                MessageBox.Show("Nessuna prenotazione selezionata.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!File.Exists(filePrenotazioni))
+            {
+                MessageBox.Show("Nessuna prenotazione trovata.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string jsonContent = File.ReadAllText(filePrenotazioni);
+            JArray prenotazioni = JArray.Parse(jsonContent);
+            bool trovato = false;
+
+            for (int i = prenotazioni.Count - 1; i >= 0; i--)
+            {
+                JObject pren = (JObject)prenotazioni[i];
+                if (pren["CodicePrenotazione"] != null && pren["CodicePrenotazione"].ToString()
+                    .Equals(codicePrenotazione, StringComparison.OrdinalIgnoreCase))
+                {
+                    prenotazioni.Remove(pren);
+                    trovato = true;
+                }
+            }
+
+            if (trovato)
+            {
+                File.WriteAllText(filePrenotazioni, prenotazioni.ToString());
+                MessageBox.Show("Rimborso effettuato con successo!", "Rimborso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CaricaPostiEventi();
+                CaricaPrenotazioniUtente();
+                AlberoEventiLoad();
+            }
+            else
+            {
+                MessageBox.Show("Prenotazione non trovata.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

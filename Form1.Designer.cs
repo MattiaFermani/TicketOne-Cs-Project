@@ -32,6 +32,8 @@
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("test");
             System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("test");
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblCountdown = new System.Windows.Forms.Label();
             this.TickeTlon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Account = new System.Windows.Forms.PictureBox();
@@ -444,6 +446,8 @@
             this.SpettacoloEventoArtista_Lbl = new System.Windows.Forms.Label();
             this.SpettacoloEvento_Lbl = new System.Windows.Forms.Label();
             this.Pagamento_panel = new System.Windows.Forms.Panel();
+            this.Chk_Rimborso = new System.Windows.Forms.CheckBox();
+            this.Importo_Lbl = new System.Windows.Forms.Label();
             this.btn_confermapagamento = new System.Windows.Forms.Button();
             this.group_contanti = new System.Windows.Forms.GroupBox();
             this.btn_20 = new System.Windows.Forms.Button();
@@ -470,10 +474,9 @@
             this.lbl_modalitàpagamento = new System.Windows.Forms.Label();
             this.rbtn_contanti = new System.Windows.Forms.RadioButton();
             this.rbtn_carta = new System.Windows.Forms.RadioButton();
-            this.Importo_Lbl = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lblCountdown = new System.Windows.Forms.Label();
+            this.Btn_Rimborso = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Account)).BeginInit();
@@ -552,7 +555,6 @@
             this.Pagamento_panel.SuspendLayout();
             this.group_contanti.SuspendLayout();
             this.group_Carta.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -575,6 +577,24 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1924, 60);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.lblCountdown);
+            this.panel5.Location = new System.Drawing.Point(811, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(159, 54);
+            this.panel5.TabIndex = 14;
+            // 
+            // lblCountdown
+            // 
+            this.lblCountdown.AutoSize = true;
+            this.lblCountdown.Location = new System.Drawing.Point(33, 19);
+            this.lblCountdown.Name = "lblCountdown";
+            this.lblCountdown.Size = new System.Drawing.Size(41, 13);
+            this.lblCountdown.TabIndex = 0;
+            this.lblCountdown.Text = "label50";
+            this.lblCountdown.Visible = false;
             // 
             // TickeTlon
             // 
@@ -4498,9 +4518,9 @@
             // 
             this.Pannello_Acc_User.BackColor = System.Drawing.SystemColors.Control;
             this.Pannello_Acc_User.Controls.Add(this.tabControl1);
-            this.Pannello_Acc_User.Location = new System.Drawing.Point(1668, 506);
+            this.Pannello_Acc_User.Location = new System.Drawing.Point(1671, 506);
             this.Pannello_Acc_User.Name = "Pannello_Acc_User";
-            this.Pannello_Acc_User.Size = new System.Drawing.Size(119, 444);
+            this.Pannello_Acc_User.Size = new System.Drawing.Size(120, 444);
             this.Pannello_Acc_User.TabIndex = 15;
             // 
             // tabControl1
@@ -4810,6 +4830,7 @@
             // 
             // Pannello_Prenotazione
             // 
+            this.Pannello_Prenotazione.Controls.Add(this.Btn_Rimborso);
             this.Pannello_Prenotazione.Controls.Add(this.Group_Posti_U);
             this.Pannello_Prenotazione.Controls.Add(this.Lbl_CodicePrenotazione_U);
             this.Pannello_Prenotazione.Controls.Add(this.SpettacoloImg_U_Pbox);
@@ -5820,6 +5841,7 @@
             // Pagamento_panel
             // 
             this.Pagamento_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pagamento_panel.Controls.Add(this.Chk_Rimborso);
             this.Pagamento_panel.Controls.Add(this.Importo_Lbl);
             this.Pagamento_panel.Controls.Add(this.btn_confermapagamento);
             this.Pagamento_panel.Controls.Add(this.group_contanti);
@@ -5827,10 +5849,29 @@
             this.Pagamento_panel.Controls.Add(this.lbl_modalitàpagamento);
             this.Pagamento_panel.Controls.Add(this.rbtn_contanti);
             this.Pagamento_panel.Controls.Add(this.rbtn_carta);
-            this.Pagamento_panel.Location = new System.Drawing.Point(29, 91);
+            this.Pagamento_panel.Location = new System.Drawing.Point(1810, 508);
             this.Pagamento_panel.Name = "Pagamento_panel";
-            this.Pagamento_panel.Size = new System.Drawing.Size(1469, 1055);
+            this.Pagamento_panel.Size = new System.Drawing.Size(67, 422);
             this.Pagamento_panel.TabIndex = 17;
+            // 
+            // Chk_Rimborso
+            // 
+            this.Chk_Rimborso.AutoSize = true;
+            this.Chk_Rimborso.Location = new System.Drawing.Point(26, 148);
+            this.Chk_Rimborso.Name = "Chk_Rimborso";
+            this.Chk_Rimborso.Size = new System.Drawing.Size(92, 17);
+            this.Chk_Rimborso.TabIndex = 14;
+            this.Chk_Rimborso.Text = "Rimborsabile?";
+            this.Chk_Rimborso.UseVisualStyleBackColor = true;
+            // 
+            // Importo_Lbl
+            // 
+            this.Importo_Lbl.AutoSize = true;
+            this.Importo_Lbl.Location = new System.Drawing.Point(26, 168);
+            this.Importo_Lbl.Name = "Importo_Lbl";
+            this.Importo_Lbl.Size = new System.Drawing.Size(54, 13);
+            this.Importo_Lbl.TabIndex = 13;
+            this.Importo_Lbl.Text = "Importo = ";
             // 
             // btn_confermapagamento
             // 
@@ -5851,6 +5892,7 @@
             this.group_contanti.Controls.Add(this.btn_100);
             this.group_contanti.Controls.Add(this.btn_50);
             this.group_contanti.Controls.Add(this.btn_500);
+            this.group_contanti.Enabled = false;
             this.group_contanti.Location = new System.Drawing.Point(683, 26);
             this.group_contanti.Name = "group_contanti";
             this.group_contanti.Size = new System.Drawing.Size(369, 363);
@@ -6096,12 +6138,14 @@
             // rbtn_contanti
             // 
             this.rbtn_contanti.AutoSize = true;
+            this.rbtn_contanti.Enabled = false;
             this.rbtn_contanti.Location = new System.Drawing.Point(29, 82);
             this.rbtn_contanti.Name = "rbtn_contanti";
             this.rbtn_contanti.Size = new System.Drawing.Size(64, 17);
             this.rbtn_contanti.TabIndex = 1;
             this.rbtn_contanti.Text = "Contanti";
             this.rbtn_contanti.UseVisualStyleBackColor = true;
+            this.rbtn_contanti.Visible = false;
             // 
             // rbtn_carta
             // 
@@ -6116,32 +6160,15 @@
             this.rbtn_carta.UseVisualStyleBackColor = true;
             this.rbtn_carta.CheckedChanged += new System.EventHandler(this.rbtn_carta_CheckedChanged);
             // 
-            // Importo_Lbl
+            // Btn_Rimborso
             // 
-            this.Importo_Lbl.AutoSize = true;
-            this.Importo_Lbl.Location = new System.Drawing.Point(26, 152);
-            this.Importo_Lbl.Name = "Importo_Lbl";
-            this.Importo_Lbl.Size = new System.Drawing.Size(54, 13);
-            this.Importo_Lbl.TabIndex = 13;
-            this.Importo_Lbl.Text = "Importo = ";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.lblCountdown);
-            this.panel5.Location = new System.Drawing.Point(811, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(159, 54);
-            this.panel5.TabIndex = 14;
-            // 
-            // lblCountdown
-            // 
-            this.lblCountdown.AutoSize = true;
-            this.lblCountdown.Location = new System.Drawing.Point(33, 19);
-            this.lblCountdown.Name = "lblCountdown";
-            this.lblCountdown.Size = new System.Drawing.Size(41, 13);
-            this.lblCountdown.TabIndex = 0;
-            this.lblCountdown.Text = "label50";
-            this.lblCountdown.Visible = false;
+            this.Btn_Rimborso.Location = new System.Drawing.Point(685, 48);
+            this.Btn_Rimborso.Name = "Btn_Rimborso";
+            this.Btn_Rimborso.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Rimborso.TabIndex = 18;
+            this.Btn_Rimborso.Text = "Rimborsa";
+            this.Btn_Rimborso.UseVisualStyleBackColor = true;
+            this.Btn_Rimborso.Click += new System.EventHandler(this.Btn_Rimborso_Click);
             // 
             // Form1
             // 
@@ -6165,6 +6192,8 @@
             this.Text = "6++";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TickeTlon)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Account)).EndInit();
@@ -6276,8 +6305,6 @@
             this.group_contanti.ResumeLayout(false);
             this.group_Carta.ResumeLayout(false);
             this.group_Carta.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6726,5 +6753,7 @@
         private System.Windows.Forms.Label Importo_Lbl;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblCountdown;
+        private System.Windows.Forms.CheckBox Chk_Rimborso;
+        private System.Windows.Forms.Button Btn_Rimborso;
     }
 }
